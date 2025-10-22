@@ -1,0 +1,151 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /home/froa/.config/fish
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 191
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 53
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 344
+    content: "bash: /home/froa/.atuin/bin/env: No such file or directory\r\n"
+  - delay: 797
+    content: "\e[?2004h\r\n\e[38;2;163;174;210m░▒▓\e[48;2;163;174;210;38;2;9;12;12m \U000F0CED \e[48;2;118;159;240;38;2;163;174;210m\e[38;2;227;229;229m ~/.config/fish \e[48;2;57;66;96;38;2;118;159;240m\e[48;2;33;39;54;38;2;57;66;96m\e[48;2;29;34;48;38;2;33;39;54m\e[38;2;160;169;203m  11:14 \e[0m\e[38;2;29;34;48m \e[2;32m\U000F10FE \e[0m \e[34mkind-kind (default)\e[0m \r\n\e[1;32m❯\e[0m "
+  - delay: 3892
+    content: l
+  - delay: 144
+    content: s
+  - delay: 416
+    content: "\b\e[K"
+  - delay: 160
+    content: "\b\e[K"
+  - delay: 126
+    content: "\a"
+  - delay: 1008
+    content: a
+  - delay: 96
+    content: s
+  - delay: 52
+    content: d
+  - delay: 64
+    content: f
+  - delay: 236
+    content: "\r\n\e[?2004l\r"
+  - delay: 33
+    content: "version: v-dev\r\n\r\nMANAGE PLUGINS\r\nasdf plugin add <name> [<git-url>]      Add a plugin from the plugin repo OR,\r\n                                        add a Git repo as a plugin by\r\n                                        specifying the name and repo url\r\nasdf plugin list [--urls] [--refs]      List installed plugins. Optionally show\r\n                                        git urls and git-ref\r\nasdf plugin list all                    List plugins registered on asdf-plugins\r\n                                        repository with URLs\r\nasdf plugin remove <name>               Remove plugin and package versions\r\nasdf plugin update <name> [<git-ref>]   Update a plugin to latest commit on\r\n                                        default branch or a particular git-ref\r\nasdf plugin update --all                Update all plugins to latest commit on\r\n                                        default branch\r\n\r\n\r\nMANAGE TOOLS\r\nasdf current                            Display current version set or being\r\n                                        used for all packages\r\nasdf current <name>                     Display current version set or being\r\n                                        used for package\r\nasdf help <name> [<version>]            Output documentation for plugin and tool\r\nasdf install                            Install all the package versions listed\r\n                                        in the .tool-versions file\r\nasdf install <name>                     Install one tool at the version\r\n                                        specified in the .tool-versions file\r\nasdf install <name> <version>           Install a specific version of a package\r\nasdf install <name> latest[:<version>]  Install the latest stable version of a\r\n                                        package, or with optional version,\r\n                                        install the latest stable version that\r\n                                        begins with the given string\r\nasdf latest <name> [<version>]          Show latest stable version of a package\r\nasdf latest --all                       Show latest stable version of all the\r\n                                        packages and if they are installed\r\nasdf list <name> [version]              List installed versions of a package and\r\n                                        optionally filter the versions\r\nasdf list all <name> [<version>]        List all versions of a package and\r\n                                        optionally filter the returned versions\r\nasdf set [-h] [-p] <name> <versions...> Set a tool version in a .tool-version in\r\n                                        the current directory, or a parent\r\n                                        directory.\r\nasdf uninstall <name> <version>         Remove a specific version of a package\r\nasdf where <name> [<version>]           Display install path for an installed\r\n                                        or current version\r\nasdf which <command>                    Display the path to an executable\r\n\r\n\r\nUTILS\r\nasdf exec <command> [args...]           Executes the command shim for current version\r\nasdf env <command> [util]               Runs util (default: `env`) inside the\r\n                                        environment used for command shim execution.\r\nasdf info                               Print OS, Shell and ASDF debug information.\r\nasdf version                            Print the currently installed version of ASDF\r\nasdf reshim <name> <version>            Recreate shims for version of a package\r\nasdf shim-versions <command>            List the plugins and versions that\r\n                                        provide a command\r\n\r\nRESOURCES\r\nGitHub: https://github.com/asdf-vm/asdf\r\nDocs:   https://asdf-vm.com\r\n\r\n\r\n\"Late but latest\"\r\n-- Rajinikanth\r\n"
+  - delay: 8
+    content: "\e[?2004h\r\n\e[38;2;163;174;210m░▒▓\e[48;2;163;174;210;38;2;9;12;12m \U000F0CED \e[48;2;118;159;240;38;2;163;174;210m\e[38;2;227;229;229m ~/.config/fish \e[48;2;57;66;96;38;2;118;159;240m\e[48;2;33;39;54;38;2;57;66;96m\e[48;2;29;34;48;38;2;33;39;54m\e[38;2;160;169;203m  11:14 \e[0m\e[38;2;29;34;48m \e[2;32m\U000F10FE \e[0m \e[34mkind-kind (default)\e[0m \r\n\e[1;32m❯\e[0m "
+  - delay: 933
+    content: e
+  - delay: 185
+    content: x
+  - delay: 120
+    content: i
+  - delay: 129
+    content: t
+  - delay: 106
+    content: "\r\n\e[?2004l\rlogout\r\n"

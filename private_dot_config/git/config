@@ -1,0 +1,37 @@
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    ; light = false
+    side-by-side = false
+    line-numbers = true
+    map-styles = "bold purple => #bb9af7, bold cyan => #7dcfff"
+    ; zero-style = "#c0caf5"
+    ; file-style = "#7aa2f7" bold
+    ; file-decoration-style = "#7aa2f7" ul
+    hunk-header-style = "#bb9af7" bold
+    hunk-header-decoration-style = "#bb9af7" ul
+    minus-style                   = syntax "#52313f"
+    minus-non-emph-style          = syntax "#52313f"
+    minus-emph-style              = syntax "#763842"
+    minus-empty-line-marker-style = syntax "#52313f"
+    line-numbers-minus-style      = "#914c54"
+    plus-style                    = syntax "#2b485a"
+    plus-non-emph-style           = syntax "#2b485a"
+    plus-emph-style               = syntax "#316172"
+    plus-empty-line-marker-style  = syntax "#2b485a"
+    line-numbers-plus-style       = "#449dab"
+    line-numbers-zero-style       = "#3b4261"
+
+[diff]
+    colorMoved = default
+
+[color "diff"]
+    context = 250
+
+[merge]
+    conflictstyle = diff3

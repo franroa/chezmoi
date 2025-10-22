@@ -1,0 +1,36 @@
+tags
+*.class
+coverage/
+backend
+*GITIGNORE*
+# *.envrc
+
+# ignore IDE specific files
+.idea/
+.vscode/
+*.sw*
+.neotest 
+
+.DS_Store
+.gitlab_local
+.nvim_project.env
+.env
+.gitlab.nvim
+.gitlab-ci-local/
+# *.editorconfig
+
+.vectorcode/
+.aider*
+*codecompanion-workspace.json
+
+.pre-commit-config.yaml
+.devcontainer/*
+git-conventional-commits.yaml
+
+signals_faker/
+FRAN_docker-compose.yml
+.FRAN_envrc
+
+gl-sast-report.json
+gl-secret-detection-report.json
+# .gitlab-ci-local.yml

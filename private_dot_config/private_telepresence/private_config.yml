@@ -1,0 +1,4 @@
+images:
+    registry: docker.io/datawire
+client:
+    callerType: blackbird-cli

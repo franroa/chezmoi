@@ -1,0 +1,12 @@
+database:
+    database_path: /home/froa/.local/share/kanban-tui/database.db
+category.colors: {}
+kanban.settings:
+    tasks_always_expanded: false
+    active_board: 1
+    no_category_task_color: '#004578'
+    work_hours:
+        start_hour: '00'
+        start_min: '00'
+        end_hour: '00'
+        end_min: '00'

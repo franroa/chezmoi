@@ -1,0 +1,95 @@
+version: '3'
+
+tasks:
+  
+  os-version:
+    vars:
+      VERSION:
+        sh: cat /etc/os-release | grep "VERSION_ID" | cut -d "=" -f2
+    cmds:
+    - echo "OS version is {{.VERSION}}"
+  msg:
+    cmds:
+      - 'echo "Home directory is: $HOME"'
+      - 'echo "Message is: {{.MESSAGE}}"'
+    vars:
+      MESSAGE: '{{ .MESSAGE | default "Testing123" }}'
+  hello:
+    dotenv:
+      - '.env'
+    cmds:
+      - 'echo "Endpoint is: $ENDPOINT, Stage is: $STAGE"'
+
+-----------------------------------------------------------------------------------------------------
+
+
+version: '3'
+includes:
+  common: task-templates/docker-task.yml
+
+tasks:
+  app:build:
+    cmds:
+      - task: common:docker:build
+        vars:
+          SRC_DIR: "app"
+          NAME: "app"
+
+  app1:build:
+    cmds:
+      - task: common:docker:build
+        vars:
+          SRC_DIR: "app1"
+          NAME: "app1"
+
+  app2:build:
+    cmds:
+      - task: common:docker:build
+        vars:
+          SRC_DIR: "app2"
+          NAME: "app2"
+
+----------------------------------------------------------------------------------------------------------
+
+version: '3'
+
+tasks:
+  node:install:
+    cmds:
+      - cmd: |-
+          echo "Installing nodejs and npm on linux"
+          sudo apt-get update && sudo apt install -y nodejs npm
+        platforms:
+        - linux
+      - cmd: |-
+          echo "Installing nodejs and npm on darwin"
+          brew install nodejs
+          brew install npm
+        platforms:
+        - darwin
+    desc: "Install nodejs and npm based on the OS"
+
+
+  npm:build:
+    deps:
+      - npm:install
+    requires:
+      vars:
+        - SRC_DIR
+    dir: "{{.SRC_DIR}}"
+    sources:
+      - '**/*.js'
+    cmds:
+      - npm run build
+    desc: "Build the npm project in the specified source directory"
+
+  npm:install:
+    requires:
+      vars:
+        - SRC_DIR
+    dir: "{{.SRC_DIR}}"
+    cmds:
+      - npm install
+    sources:
+      - package.json
+    desc: "Install npm dependencies for the project in the specified source directory"

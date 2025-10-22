@@ -1,0 +1,1 @@
+source "/home/froa/.deno/env.fish"

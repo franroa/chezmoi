@@ -1,0 +1,9 @@
+{
+  "embedding_function": "OllamaEmbeddingFunction",
+  "embedding_params": {
+    "url": "http://localhost:11434/api/embeddings",
+    "model_name": "qwen2.5-coder:7b"
+  },
+  "host": "localhost",
+  "port": "8000"
+}

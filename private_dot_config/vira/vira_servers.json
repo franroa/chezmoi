@@ -1,0 +1,11 @@
+{
+  "https://synaos.atlassian.net": {
+    "username": "francisco.roa.prieto@synaos.com",
+    "password_cmd": "cat /home/francisco/.JIRA_API_KEY"
+  },
+  "https://franroa.atlassian.net": {
+    "username": "mike",
+    "password": "SuperSecretPassword",
+    "skip_cert_verify": true
+  }
+}

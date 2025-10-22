@@ -1,0 +1,5 @@
+#env
+LESS = -i -R -Ps?L%lm/%L ?P(%Pm).:%bm
+
+#command
+ß forw-search

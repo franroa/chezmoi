@@ -1,0 +1,132 @@
+format = """
+[░▒▓](#a3aed2)\
+[ ✠ ](bg:#a3aed2 fg:#090c0c)\
+[](bg:#769ff0 fg:#a3aed2)\
+$directory\
+[](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+[](fg:#394260 bg:#212736)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#212736 bg:#1d2230)\
+$time\
+[ ](fg:#1d2230)\
+$kubernetes\
+$azure\
+$battery\
+\n$character
+"""
+
+# ~/.config/starship.toml
+[direnv]
+disabled = false
+
+[custom.azure_sandbox]
+disabled = false
+format = "[azure_sandbox](bg:#33658A)[](fg:#33658A)"
+symbol = '󰠅 '
+when = '[ "$subscription" == "1e6b6440-9433-4a64-8d9a-c37426b18d97" ]'
+
+
+[custom.azure_live]
+disabled = false
+format = "[azure_live](bg:#4c873f)[](fg:#4c873f)"
+symbol = '󰠅 '
+when = '[ "$subscription" == "19d93633-fbae-477e-aaa0-d9bf157fda78" ]'
+
+[azure]
+disabled = false
+format = '[$symbol($subscription)]($style) '
+symbol = '󰠅 '
+style = 'blue bold'
+
+# https://starship.rs/config/#kubernetes
+[kubernetes]
+# format = 'on [󱃾 ](green)[($user on )($cluster in )$context \($namespace\)](blue) '
+format = '([([󱃾 ](dimmed green) [$context](blue) \($namespace\))](blue) - )'
+disabled = false
+contexts = [
+  { context_pattern = "kind-kind" },
+  { context_pattern = "__None__", context_alias = "" },
+]
+# If statement to handle Kubernetes context being "__None__"
+# [custom.kubernetes_none]
+# command = "kubectl config current-context"
+# # Specify the format for the prompt when the Kubernetes context is "__None__"
+# shell = """
+# if [ "$output" == "__None__" ]; then
+#   echo "⛵ No Kubernetes context │ $__config__"
+# fi
+# """
+
+# '__None__' = ''
+# 'dev.local.cluster.k8s' = 'dev'
+# '.*/openshift-cluster/.*' = 'openshift'
+# 'gke_.*_(?P<var_cluster>[\w-]+)' = 'gke-$var_cluster'
+# [kubernetes.user_aliases]
+# 'dev.local.cluster.k8s' = 'dev'
+# 'home/froa/.*' = 'home/froa'
+
+
+[directory]
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[golang]
+symbol = "ﳑ"
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"                                      # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '󰂄 '
+discharging_symbol = '󰁻 '
+
+[[battery.display]]
+threshold = 10
+style = 'bold red'
+
+[[battery.display]]
+threshold = 30
+style = 'bold yellow'

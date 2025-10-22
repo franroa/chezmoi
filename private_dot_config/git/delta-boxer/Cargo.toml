@@ -1,0 +1,8 @@
+[package]
+name = "delta-boxer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ansi_term = "0.12"
+regex = "1.10"

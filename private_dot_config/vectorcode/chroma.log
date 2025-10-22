@@ -1,0 +1,15 @@
+INFO:     [05-03-2025 11:28:06] Set chroma_server_nofile to 65535
+DEBUG:    [05-03-2025 11:28:06] Starting component System
+DEBUG:    [05-03-2025 11:28:06] Starting component OpenTelemetryClient
+DEBUG:    [05-03-2025 11:28:06] Starting component SqliteDB
+DEBUG:    [05-03-2025 11:28:06] Starting component SimpleQuotaEnforcer
+DEBUG:    [05-03-2025 11:28:06] Starting component Posthog
+DEBUG:    [05-03-2025 11:28:06] Starting component SimpleRateLimitEnforcer
+DEBUG:    [05-03-2025 11:28:06] Starting component LocalSegmentManager
+DEBUG:    [05-03-2025 11:28:06] Starting component LocalExecutor
+DEBUG:    [05-03-2025 11:28:06] Starting component SegmentAPI
+DEBUG:    [05-03-2025 11:28:06] Starting component SimpleAsyncRateLimitEnforcer
+INFO:     [05-03-2025 11:28:06] Started server process [3281]
+INFO:     [05-03-2025 11:28:06] Waiting for application startup.
+INFO:     [05-03-2025 11:28:06] Application startup complete.
+INFO:     [05-03-2025 11:28:06] Uvicorn running on http://localhost:45433 (Press CTRL+C to quit)

@@ -1,0 +1,16 @@
+ai:
+    providers:
+        - name: ollama
+          model: hf.co/lmstudio-community/Qwen2.5-Coder-7B-Instruct-GGUF:Q8_0
+          baseurl: http://localhost:11434
+          temperature: 0.7
+          topp: 0.5
+          topk: 50
+          maxtokens: 2048
+          customheaders: []
+    defaultprovider: ollama
+commit: e14c3da
+date: unknown
+kubeconfig: ""
+kubecontext: ""
+version: 0.4.0

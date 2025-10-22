@@ -1,0 +1,159 @@
+plugin:
+  argocd:
+    shortCut: Ctrl-S
+    confirm: true
+    description: Sync Argo Application
+    scopes:
+      - applications
+    command: argocd
+    background: false
+    args:
+      - app
+      - sync
+      - $NAME
+  #get all resources in a namespace using the krew get-all plugin
+  get-all:
+    shortCut: g
+    confirm: false
+    description: get-all
+    scopes:
+    - all
+    command: sh
+    background: false
+    args:
+    - -c
+    - "kubectl get all -n $NAMESPACE | less"
+  stern:
+    shortCut: Ctrl-L
+    confirm: false
+    description: "Logs <Stern>"
+    scopes:
+      - pods
+    command: stern
+    background: false
+    args:
+      - --tail
+      - 50
+      - $FILTER
+      - -n
+      - $NAMESPACE
+      - --context
+      - $CONTEXT
+  dive:
+    shortCut: Shift-D 
+    confirm: false
+    description: "Dive image"
+    scopes:
+      - containers
+    command: dive
+    background: false
+    args:
+      - $COL-IMAGE
+  helm-default-values:
+    shortCut: Shift-V
+    confirm: false
+    description: Chart Default Values
+    scopes:
+      - helm
+    command: sh
+    background: false
+    args:
+      - -c
+      - "kubectl get secrets --context $CONTEXT -n $NAMESPACE sh.helm.release.v1.$COL-NAME.v$(helm history -n $NAMESPACE --kube-context $CONTEXT $COL-NAME | grep deployed | cut -d$'\\t' -f1 | tr -d ' \\t') -o yaml | yq e '.data.release' - | base64 -d | base64 -d | gunzip | jq -r '.chart.values' | yq -P | less"
+  helm-purge:
+    shortCut: Ctrl-P
+    description: Helm Purge
+    scopes:
+    - po
+    command: kubectl
+    background: true
+    args:
+    - purge
+    - $NAMESPACE
+    - $NAME
+  helm-values:
+    shortCut: v
+    confirm: false
+    description: Values
+    scopes:
+    - helm
+    command: sh
+    background: false
+    args:
+    - -c
+    - "helm get values $COL-NAME -n $NAMESPACE --kube-context $CONTEXT | less"
+  jqlogs:
+    shortCut: Ctrl-J
+    confirm: false
+    description: "Logs (jq)"
+    scopes:
+      - po
+    command: sh
+    background: false
+    args:
+    - -c
+    - "kubectl jq pod $NAME | less"
+  toggleCronjob:
+    shortCut: Ctrl-S
+    confirm: true
+    scopes:
+      - cj
+    description: Toggle to suspend or resume a running cronjob
+    command: kubectl
+    background: true
+    args:
+      - patch
+      - cronjobs
+      - $NAME
+      - -n
+      - $NAMESPACE
+      - --context
+      - $CONTEXT
+      - -p
+      - '{"spec" : {"suspend" : $!COL-SUSPEND }}'
+  flame:
+    shortCut: Shift-U
+    confirm: true
+    description: Execute flame
+    scopes:
+    - po
+    command: kubectl
+    background: false
+    args:
+      - flame
+      - $NAME
+      - -l
+      - java
+  watch-events:
+    shortCut: Shift-E
+    confirm: false
+    description: Get Events
+    scopes:
+    - all
+    command: sh
+    background: false
+    args:
+    - -c
+    - "watch -n 5 kubectl get events --context $CONTEXT --namespace $NAMESPACE --field-selector involvedObject.name=$NAME"
+  ktop:
+    shortCut: Shift-K
+    confirm: true
+    description: Get Top with advance visualization
+    scopes:
+    - all
+    command: sh
+    background: false
+    args:
+    - -c
+    - "kubectl ktop | less"
+  score:
+    shortCut: Shift-Y
+    confirm: true
+    description: Score on given namespace
+    scopes:
+    - all
+    command: sh
+    background: false
+    args:
+    - -c
+    - "kubectl get pods -n $NAMESPACE -o yaml | kubectl score score - | less"

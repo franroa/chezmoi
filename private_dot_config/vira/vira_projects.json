@@ -1,0 +1,17 @@
+{
+  "__default__": {
+    "server": "https://synaos.atlassian.net",
+    "filter": {
+      "project": "INFRA"
+    }
+  },
+  "synaos": {
+    "server": "https://synaos.atlassian.net",
+    "filter": {
+      "project": "INFRA"
+    }
+  },
+  "franroa": {
+    "server": "https://franroa.atlassian.net"
+  }
+}

@@ -1,0 +1,171 @@
+### Added by Codeium. These lines cannot be automatically removed if modified
+if command -v termium > /dev/null 2>&1; then
+  eval "$(termium shell-hook show pre)"
+fi
+### End of Codeium integration
+
+# export PATH=$PATH:/usr/local/go/bin
+# function ctx() {
+# 	rm "/home/francisco/.kube/$1-$2-config.yaml"
+# 	aws eks update-kubeconfig --name "$2" --profile "$1" --kubeconfig "~/.kube/$1-$2-config.yaml"
+# 	USER=$(kubectl config get-users --kubeconfig "/home/francisco/.kube/$1-$2-config.yaml" | tail -n +2)
+# 	kubectl config set-credentials "$USER" --kubeconfig "/home/francisco/.kube/$1-$2-config.yaml" --exec-env AWS_EC2_METADATA_DISABLED="true"
+# 	kubectl --kubeconfig "/home/francisco/.kube/$1-$2-config.yaml" config rename-context "$(kubectl --kubeconfig "/home/francisco/.kube/$1-$2-config.yaml" config current-context)" "$1-$2"
+# 	kubie ctx "$1-$2"
+# }
+#
+# . "$HOME/.asdf/asdf.sh"
+# . "$HOME/.asdf/completions/asdf.bash"
+# export PATH=/home/francisco/.cargo/bin:$PATH
+# export PATH=/home/francisco/go/bin:$PATH
+# export PATH=/home/francisco/.local/share/gem/ruby/3.0.0/bin:$PATH
+# export PATH=/home/francisco/.local/bin:$PATH
+# # export TERM=iterm2
+# # env SHELL=nu zellij setup --clean
+#
+# # TODO: tmux
+# # _tmux_send_keys_all_panes_() {
+# # 	for _pane in $(tmux list-panes -F '#P'); do
+# # 		tmux send-keys -t ${_pane} "$@"
+# # 	done
+# # }
+# # _tmux_send_keys_all_panes_ ":! kubie ctx __None__" Enter
+#
+# function blastoff() {
+# 	K8S_CLUSTER="$(kubectl config current-context 2>&1)"
+#
+# 	# TODO: general
+# 	if [ "$K8S_CLUSTER" == "__None__" ]; then
+# 		printf '\033]11;#222436\007'
+# 		# sed -ir "s/^[#]*\s*ColorBackground=.*/ColorBackground=#4C566A/" /home/francisco/.config/xfce4/terminal/terminalrc
+# 	fi
+#
+# 	if [[ "$K8S_CLUSTER" == *"kind"* ]]; then
+# 		printf '\033]11;#303b33\007'
+# 		# sed -ir "s/^[#]*\s*ColorBackground=.*/ColorBackground=#3B4252/" /home/francisco/.config/xfce4/terminal/terminalrc
+# 	fi
+#
+# 	if [[ "$K8S_CLUSTER" == *"fran"* ]]; then
+# 		printf '\033]11;#3a4633\007'
+# 		# sed -ir "s/^[#]*\s*ColorBackground=.*/ColorBackground=Green/" /home/francisco/.config/xfce4/terminal/terminalrc
+# 	fi
+#
+# 	if [[ "$K8S_CLUSTER" == *"dev"* ]]; then
+# 		RED='\033[1;31m'
+# 		NC='\033[0m' # No Color
+# 		echo -e "${RED}          YOU ARE ON A SHARED CLUSTER!          ${NC}"
+# 		printf '\033]11;#182f6d\007'
+# 		# sed -ir "s/^[#]*\s*ColorBackground=.*/ColorBackground=Blue/" /home/francisco/.config/xfce4/terminal/terminalrc
+# 	fi
+#
+# 	if [[ "$K8S_CLUSTER" == *"stg"* ]]; then
+# 		RED='\033[1;33m'
+# 		NC='\033[0m' # No Color
+# 		echo -e "${RED}          YOU ARE ON A SHARED CLUSTER!          ${NC}"
+# 		printf '\033]11;#ff0000\007'
+# 		# sed -ir "s/^[#]*\s*ColorBackground=.*/ColorBackground=Red/" /home/francisco/.config/xfce4/terminal/terminalrc
+# 	fi
+#
+# 	if [[ "$K8S_CLUSTER" == *"prd"* ]]; then
+# 		RED='\033[1;33m'
+# 		NC='\033[0m' # No Color
+# 		echo -e "${RED}          YOU ARE ON A SHARED CLUSTER!          ${NC}"
+# 		printf '\033]11;#ff0000\007'
+# 		# sed -ir "s/^[#]*\s*ColorBackground=.*/ColorBackground=Red/" /home/francisco/.config/xfce4/terminal/terminalrc
+# 	fi
+# 	# TODO: wezterm
+# 	# set_user_var K8S_CLUSTER "$K8S_CLUSTER"
+# }
+#
+# # # TODO: wezterm
+# # function set_user_var() {
+# # 	printf "\033]1337;SetUserVar=%s=%s\007" "$1" "$(echo -n "$2" | base64)"
+# # }
+#
+# starship_precmd_user_func="blastoff"
+eval "$(starship init bash)"
+# eval "$(zoxide init bash)"
+#
+# export VISUAL=nvim
+# export EDITOR=nvim
+# export AWS_PROFILE="iam-admin"
+#
+# source /home/francisco/.aliases
+# source <(kubectl completion bash)
+# source "$(dirname "$(gem which colorls)")"/tab_complete.sh
+#
+# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+# 	. /etc/bash_completion
+# fi
+# if [ "$CLUSTER" = "" ]; then
+# 	kubie ctx "__None__"
+# else
+# 	if [ "$NAMESPACE" = "" ]; then
+# 		export NAMESPACE="default"
+# 	fi
+# 	export K8S_NAMESPACE="$NAMESPACE"
+# 	# export K8S_CLUSTER="$CLUSTER"
+# 	kubie ctx -n "$NAMESPACE" "$CLUSTER"
+# fi
+# source <(kubectl completion bash)
+# # https://github.com/rupa/z
+# # . /home/francisco/.dotfiles/scripts/z/z.sh # TODO: use zoxide
+# # . "$HOME/.cargo/env"
+# export BW_SESSION="$(cat /home/francisco/.BW_SESSION)"
+# export OPENAI_API_KEY="$(cat /home/francisco/.OPENAI_API_KEY)"
+# export JIRA_API_KEY="$(cat /home/francisco/.JIRA_API_KEY)"
+# export GITLAB_TOKEN="$(cat /home/francisco/.GITLAB_TOKEN)"
+#
+#
+# [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+# eval "$(atuin init bash)"
+
+
+### Added by Codeium. These lines cannot be automatically removed if modified
+if command -v termium > /dev/null 2>&1; then
+  eval "$(termium shell-hook show post)"
+fi
+### End of Codeium integration
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+. "$HOME/.atuin/bin/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export DISPLAY=172.19.96.1:0.0
+export DISPLAY=172.19.96.1:0.0
+export DISPLAY=172.19.96.1:0.0
+export DISPLAY=172.19.96.1:0.0
+export DISPLAY=172.19.96.1:0.0
+export DISPLAY=172.19.96.1:0.0
+export DISPLAY=172.19.96.1:0.0
+
+# Shell-GPT integration BASH v0.2
+_sgpt_bash() {
+if [[ -n "$READLINE_LINE" ]]; then
+    READLINE_LINE=$(sgpt --shell <<< "$READLINE_LINE" --no-interaction)
+    READLINE_POINT=${#READLINE_LINE}
+fi
+}
+bind -x '"\C-l": _sgpt_bash'
+# Shell-GPT integration BASH v0.2
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/froa/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/froa/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/froa/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/froa/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

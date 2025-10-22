@@ -1,0 +1,11 @@
+plugins:
+  logfmt:
+    shortCut: Shift-D
+    confirm: false
+    description: "logfmt"
+    scopes:
+      - pods
+    command: sh
+    background: false
+    args:
+      - "kubectl logs $NAME"
