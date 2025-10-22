@@ -1,0 +1,78 @@
+return {
+  {
+    "milanglacier/minuet-ai.nvim",
+    config = function()
+      -- This uses the async cache to accelerate the prompt construction.
+      -- There's also the require('vectorcode').query API, which provides
+      -- more up-to-date information, but at the cost of blocking the main UI.
+      -- local has_vc, vectorcode_config = pcall(require, "vectorcode.config")
+      -- local vectorcode_cacher = nil
+      -- if has_vc then
+      --   vectorcode_cacher = vectorcode_config.get_cacher_backend()
+      -- end
+      --
+      -- vim.api.nvim_create_autocmd("LspAttach", {
+      --   callback = function()
+      --     cacher = vectorcode_config.get_cacher_backend()
+      --     local bufnr = vim.api.nvim_get_current_buf()
+      --     cacher.async_check("config", function()
+      --       cacher.register_buffer(bufnr, {
+      --         n_query = 10,
+      --       })
+      --     end, nil)
+      --   end,
+      --   desc = "Register buffer for VectorCode",
+      -- })
+      --
+      --
+      local vectorcode_cacher = require("vectorcode.config").get_cacher_backend()
+
+      -- vim.api.nvim_create_autocmd("LspAttach", {
+      --   callback = function()
+      --     local bufnr = vim.api.nvim_get_current_buf()
+      --     vectorcode_cacher.async_check("config", function()
+      --       vectorcode_cacher.register_buffer(bufnr, { n_query = 10 })
+      --     end, nil)
+      --   end,
+      --   desc = "Register buffer for VectorCode",
+      -- })
+      require("minuet").setup({
+        add_single_line_entry = true,
+        n_completions = 1,
+        -- I recommend you start with a small context window firstly, and gradually
+        -- increase it based on your local computing power.
+        context_window = 360,
+        request_timeout = 100,
+        notify = "debug",
+        -- context_window = 4096,
+        after_cursor_filter_length = 30,
+        provider = "openai_fim_compatible",
+        provider_options = {
+          openai_fim_compatible = {
+            api_key = "TERM",
+            name = "Ollama",
+            stream = true,
+            end_point = "http://localhost:11434/v1/completions",
+            -- model = "codellama:7b",
+            model = "hf.co/lmstudio-community/Qwen2.5-Coder-7B-Instruct-GGUF:Q3_K_L",
+            -- model = "qwen2.5-coder:1.5b",
+            optional = {
+              max_tokens = 56,
+              top_p = 0.9,
+            },
+            -- template = {
+            --   prompt = function(pref, suff)
+            --     local prompt_message = ""
+            --     for _, file in ipairs(vectorcode_cacher.query_from_cache(0)) do
+            --       prompt_message = prompt_message .. "<|file_sep|>" .. file.path .. "\n" .. file.document
+            --     end
+            --     return prompt_message .. "<|fim_prefix|>" .. pref .. "<|fim_suffix|>" .. suff .. "<|fim_middle|>"
+            --   end,
+            --   suffix = false,
+            -- },
+          },
+        },
+      })
+    end,
+  },
+}

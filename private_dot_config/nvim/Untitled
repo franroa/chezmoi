@@ -1,0 +1,6 @@
+   ╭─  loki.write "to_loki" ─╮  
+  
+  --- Pipeline Branch 1 ---
+     local.file_match (app_logs)
+     loki.source.file (read_logs)
+  ▶ ✍ loki.write (to_loki)

@@ -1,0 +1,9 @@
+return {
+  {
+    "chrisgrieser/nvim-scissors",
+    -- dependencies = "nvim-telescope/telescope.nvim",
+    opts = {
+      snippetDir = vim.fn.expand("$HOME/.config/nvim/snippets"),
+    },
+  },
+}

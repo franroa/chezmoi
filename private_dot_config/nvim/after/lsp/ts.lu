@@ -1,0 +1,21 @@
+-- The issue is that the ts LSP (typescript-go) doesn't understand .vue file imports. Now that vue_ls is also attached (which DOES understand .vue imports), the
+-- diagnostics are coming from ts LSP only.
+-- Don't configure ts server for Vue files - let vtsls handle them
+local current_file = vim.fn.expand('%:p')
+if current_file:match("%.vue$") then
+  return nil
+end
+
+return {
+  cmd = { "/home/froa/Projects/tools/typescript-go/built/local/tsgo", "--lsp", "-stdio" },
+  name = "ts",
+  filetypes = {
+    "javascript",
+    "javascriptreact", 
+    "javascript.jsx",
+    "typescript",
+    "typescriptreact",
+    "typescript.tsx",
+  },
+  root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
+}

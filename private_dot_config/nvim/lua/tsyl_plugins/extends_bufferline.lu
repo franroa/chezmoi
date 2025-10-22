@@ -1,0 +1,52 @@
+return {
+  {
+    "akinsho/bufferline.nvim",
+    event = "VeryLazy",
+    opts = function()
+      -- local colors = require("base16-colorscheme").colors
+      -- local colors = require("colors.tokyodark-terminal")
+      local colors = require("tokyonight.colors").setup()
+      -- vim.api.nvim_set_hl(0, "MyBufferSelected", { fg = colors.base01, bg = colors.base09 })
+      -- vim.api.nvim_set_hl(0, "MyHarpoonSelected", { fg = colors.base01, bg = colors.base0B })
+      return {
+        highlights = {
+          fill = {
+            fg = colors.fg_dark,
+            bg = colors.bg_dark,
+          },
+          -- buffer_selected = {
+          --   fg = "green",
+          --   bg = "red",
+          --   bold = true,
+          --   italic = true,
+          -- },
+        },
+        options = {
+
+          -- custom_areas = {
+          --   left = function()
+          --     local result = {}
+          --     local items = require("harpoon"):list().items
+          --     -- for i = 1, #items do
+          --     --   local fn = items[i].value
+          --     --   local fullpath = vim.fn.fnamemodify(fn, ":p")
+          --     --   local name = " " .. i .. "> " .. vim.fn.fnamemodify(fn, ":t") .. " "
+          --     --   local activename = " " .. i .. ">* " .. vim.fn.fnamemodify(fn, ":t") .. " "
+          --     --   if fullpath == vim.fn.expand("%:p") then
+          --     --     -- table.insert(result, { text = '│', link = 'BufferLineIndicatorSelected' })
+          --     --     -- table.insert(result, { text = name, link = 'MyHarpoonSelected' })
+          --     --     table.insert(result, { text = activename, link = "BufferLineBufferVisible" })
+          --     --     -- table.insert(result, { text = '│', link = 'BufferLineIndicatorSelected' })
+          --     --   else
+          --     --     -- print('inactive: ' .. name)
+          --     --     table.insert(result, { text = name, link = "BufferLineBufferVisible" })
+          --     --   end
+          --     -- end
+          --     return result
+          --   end,
+          -- },
+        },
+      }
+    end,
+  },
+}

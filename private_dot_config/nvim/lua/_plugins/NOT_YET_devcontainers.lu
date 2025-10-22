@@ -1,0 +1,9 @@
+return {
+  {
+    'https://codeberg.org/esensar/nvim-dev-container',
+    dependencies = 'nvim-treesitter/nvim-treesitter'
+  }
+
+}
+
+https://www.reddit.com/r/neovim/comments/16rii0y/nvim_inside_vscode_devcontainer/

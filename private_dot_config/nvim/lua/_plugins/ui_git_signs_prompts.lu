@@ -1,0 +1,15 @@
+return {
+  {
+    "mikesmithgh/git-prompt-string-lualine.nvim",
+    enabled = true,
+    lazy = false,
+
+    config = function()
+      require("lualine").setup({
+        sections = {
+          lualine_b = { "git_prompt_string", "diff", "diagnostics" },
+        },
+      })
+    end,
+  },
+}

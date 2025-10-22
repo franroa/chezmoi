@@ -1,0 +1,150 @@
+return {
+  -- {
+  --   "seblj/roslyn.nvim",
+  --   ft = "cs",
+  --   config = function(_, opts)
+  --     require("mason").setup({
+  --       registries = {
+  --         "github:mason-org/mason-registry",
+  --         "github:Crashdummyy/mason-registry",
+  --       },
+  --     })
+  --     vim.api.nvim_set_keymap("n", "<leader>co", ":lua vim.cmd('CSFixUsings')<CR>", { noremap = true, silent = true })
+  --     -- require("roslyn").setup({
+  --     --   on_init = function(client)
+  --     --     client.offset_encoding = "utf-8"
+  --     --   end,
+  --     --   handlers = { -- this is what matters
+  --     --     ["textDocument/hover"] = function(err, result, ctx, config)
+  --     --       if result and result.contents and result.contents.value then
+  --     --         result.contents.value = result.contents.value:gsub("\\([^%w])", "%1")
+  --     --       end
+  --     --       vim.lsp.handlers["textDocument/hover"](err, result, ctx, config)
+  --     --     end,
+  --     --   },
+  --     --   -- Optional. Will use `vim.lsp.protocol.make_client_capabilities()`,
+  --     --   -- and it will also try to merge that with `nvim-cmp` LSP capabilities
+  --     --   --
+  --     --   config = {
+  --     --     capabilities = {
+  --     --       textDocument = {},
+  --     --     },
+  --     --     settings = {
+  --     --       -- ["csharp|navigation"] = {
+  --     --       --   dotnet_navigate_to_decompiled_sources = true,
+  --     --       -- },
+  --     --       -- ["csharp|symbol_search"] = {
+  --     --       --   dotnet_search_reference_assemblies = true,
+  --     --       -- },
+  --     --       -- ["csharp|quick_info"] = {
+  --     --       --   dotnet_show_remarks_in_quick_info = true,
+  --     --       -- },
+  --     --       -- ["csharp|implement_type"] = {
+  --     --       --   dotnet_insertion_behavior = true,
+  --     --       --   dotnet_property_generation_behavior = true,
+  --     --       -- },
+  --     --       -- ["csharp|highlighting"] = {
+  --     --       --   dotnet_highlight_related_json_components = true,
+  --     --       --   dotnet_highlight_related_regex_components = true,
+  --     --       -- },
+  --     --       -- ["csharp|completion"] = {
+  --     --       --   dotnet_provide_regex_completions = true,
+  --     --       --   dotnet_show_completion_items_from_unimported_namespaces = true,
+  --     --       --   dotnet_show_name_completion_suggestions = true,
+  --     --       -- },
+  --     --       -- -- ["csharp|backgrolulnd_analysis"] = {
+  --     --       -- --   dotnet_analyzer_diagnostics_scope = "fullSolution",
+  --     --       -- --   dotnet_compiler_diagnostics_scope = "fullSolution",
+  --     --       -- -- },
+  --     --       -- ["csharp|code_lens"] = {
+  --     --       --   dotnet_enable_references_code_lens = true,
+  --     --       --   dotnet_enable_tests_code_lens = true,
+  --     --       -- },
+  --     --       -- ["csharp|inlay_hints"] = {
+  --     --       --   csharp_enable_inlay_hints_for_implicit_object_creation = true,
+  --     --       --   csharp_enable_inlay_hints_for_implicit_variable_types = true,
+  --     --       --   csharp_enable_inlay_hints_for_lambda_parameter_types = true,
+  --     --       --   csharp_enable_inlay_hints_for_types = true,
+  --     --       --   dotnet_enable_inlay_hints_for_indexer_parameters = true,
+  --     --       --   dotnet_enable_inlay_hints_for_literal_parameters = true,
+  --     --       --   dotnet_enable_inlay_hints_for_object_creation_parameters = true,
+  --     --       --   dotnet_enable_inlay_hints_for_other_parameters = true,
+  --     --       --   dotnet_enable_inlay_hints_for_parameters = true,
+  --     --       --   dotnet_suppress_inlay_hints_for_parameters_that_differ_only_by_suffix = true,
+  --     --       --   dotnet_suppress_inlay_hints_for_parameters_that_match_argument_name = true,
+  --     --       --   dotnet_suppress_inlay_hints_for_parameters_that_match_method_intent = true,
+  --     --       -- },
+  --     --       -- ["csharp|code_style.formatting.indentation_and_spacing"] = {
+  --     --       --   indent_size = 4, -- replace with your preferred indent size
+  --     --       --   indent_style = "space", -- replace with your preferred indent style: "space" or "tab"
+  --     --       --   tab_width = 4, -- replace with your preferred tab width
+  --     --       -- },
+  --     --       -- ["csharp|code_style.formatting.new_line"] = {
+  --     --       --   end_of_line = "lf", -- replace with your preferred end of line character: "lf" or "crlf"
+  --     --       -- },
+  --     --     },
+  --     --   },
+  --     --   -- NOTE: Set `filewatching` to false if you experience performance problems.
+  --     --   -- Defaults to true, since turning it off is a hack.
+  --     --   -- If you notice that the server is _super_ slow, it is probably because of file watching
+  --     --   -- I noticed that neovim became super unresponsive on some large codebases, and that was because
+  --     --   -- it schedules the file watching on the event loop.
+  --     --   -- This issue went away by disabling that capability. However, roslyn will fallback to its own
+  --     --   -- file watching, which can make the server super slow to initialize.
+  --     --   -- Setting this option to false will indicate to the server that neovim will do the file watching.
+  --     --   -- However, in `hacks.lua` I will also just don't start off any watchers, which seems to make the server
+  --     --   -- a lot faster to initialize.
+  --     --   filewatching = true,
+  --     -- })
+  --   end,
+  -- },
+
+  {
+    "seblyng/roslyn.nvim",
+    ft = "cs",
+    ---@module 'roslyn.config'
+    ---@type RoslynNvimConfig
+    opts = {
+      -- "auto" | "roslyn" | "off"
+      --
+      -- - "auto": Does nothing for filewatching, leaving everything as default
+      -- - "roslyn": Turns off neovim filewatching which will make roslyn do the filewatching
+      -- - "off": Hack to turn off all filewatching. (Can be used if you notice performance issues)
+      filewatching = "auto",
+
+      -- Optional function that takes an array of targets as the only argument. Return the target you
+      -- want to use. If it returns `nil`, then it falls back to guessing the target like normal
+      -- Example:
+      --
+      -- choose_target = function(target)
+      --     return vim.iter(target):find(function(item)
+      --         if string.match(item, "Foo.sln") then
+      --             return item
+      --         end
+      --     end)
+      -- end
+      choose_target = nil,
+
+      -- Optional function that takes the selected target as the only argument.
+      -- Returns a boolean of whether it should be ignored to attach to or not
+      --
+      -- I am for example using this to disable a solution with a lot of .NET Framework code on mac
+      -- Example:
+      --
+      -- ignore_target = function(target)
+      --     return string.match(target, "Foo.sln") ~= nil
+      -- end
+      ignore_target = nil,
+
+      -- Whether or not to look for solution files in the child of the (root).
+      -- Set this to true if you have some projects that are not a child of the
+      -- directory with the solution file
+      broad_search = true,
+
+      -- Whether or not to lock the solution target after the first attach.
+      -- This will always attach to the target in `vim.g.roslyn_nvim_selected_solution`.
+      -- NOTE: You can use `:Roslyn target` to change the target
+      lock_target = false,
+    },
+  },
+}

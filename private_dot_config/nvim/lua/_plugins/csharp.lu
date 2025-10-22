@@ -1,0 +1,14 @@
+return {
+  "jmederosalvarado/roslyn.nvim",
+  config = function()
+    require("roslyn").setup({
+      cmd = {
+        "dotnet",
+      },
+      on_attach = function(client)
+        require("lspconfig").on_attach(client)
+      end,
+      capabilities = require("lspconfig").capabilities,
+    })
+  end,
+}

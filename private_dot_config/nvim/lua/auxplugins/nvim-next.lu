@@ -1,0 +1,45 @@
+return {
+  "ghostbuster91/nvim-next",
+  config = function()
+    -- first initialize intgration module
+    require("nvim-next.integrations").treesitter_textobjects()
+    -- setup treesitter
+    require("nvim-treesitter.configs").setup({
+      textobjects = {
+        swap = {
+          enable = true,
+          swap_next = {
+            ["<leader>a"] = "@parameter.inner",
+          },
+          swap_previous = {
+            ["<leader>A"] = "@parameter.inner",
+          },
+        },
+      },
+      nvim_next = {
+        enable = true,
+        textobjects = {
+          --instead of defining the move section in the textobjects scope we move it under nvim_next
+          move = {
+            goto_next_start = {
+              ["]m"] = "@function.outer",
+              ["]]"] = { query = "@class.outer", desc = "Next class start" },
+            },
+            goto_next_end = {
+              ["]M"] = "@function.outer",
+              ["]["] = "@class.outer",
+            },
+            goto_previous_start = {
+              ["[m"] = "@function.outer",
+              ["[["] = "@class.outer",
+            },
+            goto_previous_end = {
+              ["[M"] = "@function.outer",
+              ["[]"] = "@class.outer",
+            },
+          },
+        },
+      },
+    })
+  end,
+}

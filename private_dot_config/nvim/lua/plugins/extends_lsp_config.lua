@@ -1,0 +1,727 @@
+return {
+  "neovim/nvim-lspconfig",
+  opts = function(_, opts)
+    opts.diagnostics.virtual_text = false
+  end,
+}
+-- return {
+--   {
+--     "neovim/nvim-lspconfig",
+--     event = { "BufReadPre", "BufNewFile" },
+--     opts = {
+--       servers = {
+--         bashls = {},
+--         dockerls = {},
+--         gopls = {
+--           settings = {
+--             gofumpt = true,
+--             codelenses = {
+--               gc_details = false,
+--               generate = true,
+--               regenerate_cgo = true,
+--               run_govulncheck = true,
+--               test = true,
+--               tidy = true,
+--               upgrade_dependency = true,
+--               vendor = true,
+--             },
+--             hints = {
+--               assignVariableTypes = true,
+--               compositeLiteralFields = true,
+--               compositeLiteralTypes = true,
+--               constantValues = true,
+--               functionTypeParameters = true,
+--               parameterNames = true,
+--               rangeVariableTypes = true,
+--             },
+--             analyses = {
+--               fieldalignment = true,
+--               nilness = true,
+--               unusedparams = true,
+--               unusedwrite = true,
+--               useany = true,
+--             },
+--             usePlaceholders = true,
+--             completeUnimported = true,
+--             staticcheck = true,
+--             directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
+--             semanticTokens = true,
+--           },
+--         },
+--         lua_ls = {
+--           -- cmd = { ... },
+--           -- filetypes = { ... },
+--           -- capabilities = {},
+--           settings = {
+--             format = {
+--               enable = false, -- let conform handle the formatting
+--             },
+--             diagnostics = { globals = { "vim" } },
+--             telemetry = { enable = false },
+--             hint = { enable = true },
+--             Lua = {
+--               workspace = {
+--                 checkThirdParty = false,
+--               },
+--               codeLens = {
+--                 enable = true,
+--               },
+--               doc = {
+--                 privateName = { "^_" },
+--               },
+--               hint = {
+--                 enable = true,
+--                 setType = false,
+--                 paramType = true,
+--                 paramName = "Disable",
+--                 semicolon = "Disable",
+--                 arrayIndex = "Disable",
+--               },
+--               completion = {
+--                 callSnippet = "Replace",
+--               },
+--               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+--               -- diagnostics = { disable = { 'missing-fields' } },
+--             },
+--           },
+--         },
+--         marksman = {},
+--         pyright = {},
+--         templ = {},
+--         terraformls = {
+--           filetypes = { "terraform", "terraform-vars", "tf" },
+--         },
+--         tinymist = {},
+--         ts_ls = {},
+--         yamlls = {
+--           capabilities = {
+--             textDocument = {
+--               foldingRange = {
+--                 dynamicRegistration = false,
+--                 lineFoldingOnly = true,
+--               },
+--             },
+--           },
+--           settings = {
+--             redhat = { telemetry = { enabled = false } },
+--             yaml = {
+--               schemaStore = {
+--                 enable = true,
+--                 url = "https://www.schemastore.org/api/json/catalog.json",
+--               },
+--               format = { enabled = false },
+--               -- enabling this conflicts between Kubernetes resources, kustomization.yaml, and Helmreleases
+--               validate = false,
+--               schemas = {
+--                 kubernetes = "*.yaml",
+--                 ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+--                 ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+--                 ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = "azure-pipelines*.{yml,yaml}",
+--                 ["https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks"] = "roles/tasks/*.{yml,yaml}",
+--                 ["https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/playbook"] = "*play*.{yml,yaml}",
+--                 ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
+--                 ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
+--                 ["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+--                 ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
+--                 ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = "*gitlab-ci*.{yml,yaml}",
+--                 ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json"] = "*api*.{yml,yaml}",
+--                 ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
+--                 ["https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json"] = "*flow*.{yml,yaml}",
+--               },
+--             },
+--           },
+--         },
+--       },
+--     },
+--     config = function(_, opts)
+--       vim.api.nvim_create_autocmd("LspAttach", {
+--         group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
+--         callback = function(event)
+--           local map = function(keys, func, desc, mode)
+--             mode = mode or "n"
+--             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = desc })
+--           end
+--
+--           map("<leader>lk", vim.lsp.buf.hover, "Hover")
+--           map("<leader>lR", vim.lsp.buf.rename, "Rename")
+--           map("<leader>la", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
+--           map("<leader>lD", vim.lsp.buf.declaration, "Declaration")
+--
+--           -- The following two autocommands are used to highlight references of the
+--           -- word under your cursor when your cursor rests there for a little while.
+--           --    See `:help CursorHold` for information about when this is executed
+--           --
+--           -- When you move your cursor, the highlights will be cleared (the second autocommand).
+--           local client = vim.lsp.get_client_by_id(event.data.client_id)
+--           if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+--             local highlight_augroup = vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
+--             vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+--               buffer = event.buf,
+--               group = highlight_augroup,
+--               callback = vim.lsp.buf.document_highlight,
+--             })
+--
+--             vim.api.nvim_create_autocmd({ "CursorMoved", "CursorMovedI" }, {
+--               buffer = event.buf,
+--               group = highlight_augroup,
+--               callback = vim.lsp.buf.clear_references,
+--             })
+--
+--             vim.api.nvim_create_autocmd("LspDetach", {
+--               group = vim.api.nvim_create_augroup("kickstart-lsp-detach", { clear = true }),
+--               callback = function(event2)
+--                 vim.lsp.buf.clear_references()
+--                 vim.api.nvim_clear_autocmds({ group = "kickstart-lsp-highlight", buffer = event2.buf })
+--               end,
+--             })
+--           end
+--         end,
+--       })
+--
+--       local lspconfig = require("lspconfig")
+--       local capabilities = vim.lsp.protocol.make_client_capabilities()
+--       capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
+--       for server, server_opts in pairs(opts.servers) do
+--         server_opts.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server_opts.capabilities or {})
+--         lspconfig[server].setup(server_opts)
+--       end
+--     end,
+--   },
+-- }
+-- -- -- https://github.com/SwayKh/dotfiles/blob/main/nvim/lua/plugins/lsp.lua
+-- -- vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+-- --   pattern = "*.gitlab-ci*.{yml,yaml}",
+-- --   callback = function()
+-- --     vim.bo.filetype = "yaml.gitlab"
+-- --   end,
+-- -- })
+-- -- --
+-- -- -- Autoformat setting
+-- -- local set_autoformat = function(pattern, bool_val)
+-- --   vim.api.nvim_create_autocmd({ "FileType" }, {
+-- --     pattern = pattern,
+-- --     callback = function()
+-- --       vim.b.autoformat = bool_val
+-- --     end,
+-- --   })
+-- -- end
+-- --
+-- -- set_autoformat({ "angular.html" }, false)
+-- -- set_autoformat({ "typescript" }, false)
+-- -- set_autoformat({ "cs" }, false)
+-- --
+-- -- local ok, util = pcall(require, "lspconfig.util")
+-- -- if not ok then
+-- --   vim.notify("lspconfig.util could not be loaded")
+-- --   return
+-- -- end
+-- -- --
+-- -- -- -- https://github.com/typescript-language-server/typescript-language-server/blob/master/docs/configuration.md
+-- -- -- local tsserver_config = {
+-- -- --   root_dir = util.root_pattern("package.json"),
+-- -- --   single_file_support = false,
+-- -- --   settings = {
+-- -- --     diagnostics = {
+-- -- --       ignoredCodes = { 80001 },
+-- -- --     },
+-- -- --     javascript = {
+-- -- --       inlayHints = {
+-- -- --         includeInlayEnumMemberValueHints = true,
+-- -- --         includeInlayFunctionLikeReturnTypeHints = true,
+-- -- --         includeInlayFunctionParameterTypeHints = true,
+-- -- --         --- @type 'none' | 'literals' | 'all'
+-- -- --         includeInlayParameterNameHints = "all",
+-- -- --         includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+-- -- --         includeInlayPropertyDeclarationTypeHints = true,
+-- -- --         includeInlayVariableTypeHints = true,
+-- -- --         includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+-- -- --       },
+-- -- --     },
+-- -- --     typescript = {
+-- -- --       inlayHints = {
+-- -- --         includeInlayEnumMemberValueHints = true,
+-- -- --         includeInlayFunctionLikeReturnTypeHints = true,
+-- -- --         includeInlayFunctionParameterTypeHints = true,
+-- -- --         --- @type 'none' | 'literals' | 'all'
+-- -- --         includeInlayParameterNameHints = "all",
+-- -- --         includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+-- -- --         includeInlayPropertyDeclarationTypeHints = true,
+-- -- --         includeInlayVariableTypeHints = true,
+-- -- --         includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+-- -- --       },
+-- -- --     },
+-- -- --   },
+-- -- -- }
+-- --
+-- -- -- Specify how the border looks like
+-- -- local border = {
+-- --   { "┌", "FloatBorder" },
+-- --   { "─", "FloatBorder" },
+-- --   { "┐", "FloatBorder" },
+-- --   { "│", "FloatBorder" },
+-- --   { "┘", "FloatBorder" },
+-- --   { "─", "FloatBorder" },
+-- --   { "└", "FloatBorder" },
+-- --   { "│", "FloatBorder" },
+-- -- }
+-- --
+-- -- -- Add the border on hover and on signature help popup window
+-- -- local handlers_luals = {
+-- --   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+-- --   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+-- -- }
+-- --
+-- -- return {
+-- --   {
+-- --     "neovim/nvim-lspconfig",
+-- --     keys = {
+-- --       -- {
+-- --       --   "<leader>ca",
+-- --       --   function()
+-- --       --     require("tiny-code-action").code_action()
+-- --       --   end,
+-- --       --   desc = "Code Actions",
+-- --       --   { noremap = true, silent = true },
+-- --       -- },
+-- --       {
+-- --         "<leader>Ca",
+-- --         function()
+-- --           require("fzf-lua").lsp_code_actions({
+-- --
+-- --             -- previewer = "codeaction_native",
+-- --             -- preview_pager = "delta --side-by-side --width=$FZF_PREVIEW_COLUMNS",
+-- --             preview_pager = "delta --width=$FZF_PREVIEW_COLUMNS",
+-- --             -- context = {
+-- --             --   diagnostics = get_diagnostic_at_cursor(),
+-- --             -- },
+-- --             winopts = {
+-- --               relative = "editor",
+-- --               width = 0.95,
+-- --               height = 0.95,
+-- --               row = 1,
+-- --               preview = { vertical = "up:80%" },
+-- --             },
+-- --           })
+-- --         end,
+-- --         "Code actions",
+-- --         { "n", "v" },
+-- --       },
+-- --       {
+-- --         "<leader>cH",
+-- --         function()
+-- --           require("lsp-format-modifications").format_modifications(
+-- --             get_lsp_client_by_name("vtsls"),
+-- --             vim.api.nvim_get_current_buf()
+-- --           )
+-- --         end,
+-- --         desc = "Format changed code",
+-- --       },
+-- --       {
+-- --         "<leader>uN",
+-- --         function()
+-- --           require("nvim-navbuddy").open()
+-- --         end,
+-- --         desc = "Navbuddy",
+-- --       },
+-- --     },
+-- --     dependencies = {
+-- --       {
+-- --         "SmiteshP/nvim-navbuddy",
+-- --         dependencies = {
+-- --           "SmiteshP/nvim-navic",
+-- --           "MunifTanjim/nui.nvim",
+-- --         },
+-- --         opts = { lsp = { auto_attach = true } },
+-- --       },
+-- --     },
+-- --     opts = function(_, opts)
+-- --       local keys = require("lazyvim.plugins.lsp.keymaps").get()
+-- --       keys[#keys + 1] = { "<leader>ca", require("actions-preview").code_actions }
+-- --       -- keys[#keys + 1] = { "<leader>ca", require("tiny-code-action").code_action }
+-- --       -- keys[#keys + 1] = { "<leader>ca", false }
+-- --
+-- --       local angularls_path = require("mason-registry").get_package("angular-language-server"):get_install_path()
+-- --
+-- --       local cmd = {
+-- --         "ngserver",
+-- --         "--stdio",
+-- --         "--tsProbeLocations",
+-- --         table.concat({
+-- --           angularls_path,
+-- --           vim.uv.cwd(),
+-- --         }, ","),
+-- --         "--ngProbeLocations",
+-- --         table.concat({
+-- --           angularls_path .. "/node_modules/@angular/language-server",
+-- --           vim.uv.cwd(),
+-- --         }, ","),
+-- --       }
+-- --
+-- --       local angular_config = {
+-- --         cmd = cmd,
+-- --         filetypes = {
+-- --           "javascript",
+-- --           "javascriptreact",
+-- --           "javascript.jsx",
+-- --           "typescript",
+-- --           "typescriptreact",
+-- --           "typescript.tsx",
+-- --           "angular.html",
+-- --           "htmlangular",
+-- --         },
+-- --         on_new_config = function(new_config, new_root_dir)
+-- --           new_config.cmd = cmd
+-- --         end,
+-- --       }
+-- --
+-- --       -- vim.diagnostic.config({
+-- --       --   signs = { priority = 9999 },
+-- --       --   underline = true,
+-- --       --   update_in_insert = false, -- false so diags are updated on InsertLeave
+-- --       --   virtual_text = { current_line = true, severity = { min = "INFO", max = "WARN" } },
+-- --       --   virtual_lines = { current_line = true, severity = { min = "ERROR" } },
+-- --       --   severity_sort = true,
+-- --       --   float = {
+-- --       --     focusable = false,
+-- --       --     style = "minimal",
+-- --       --     border = "rounded",
+-- --       --     source = true,
+-- --       --     header = "",
+-- --       --   },
+-- --       -- })
+-- --
+-- --       -- vim.keymap.set("n", "<leader>K", function()
+-- --       --   vim.diagnostic.config({ virtual_lines = { current_line = true }, virtual_text = false })
+-- --       --
+-- --       --   vim.api.nvim_create_autocmd("CursorMoved", {
+-- --       --     group = vim.api.nvim_create_augroup("line-diagnostics", { clear = true }),
+-- --       --     callback = function()
+-- --       --       vim.diagnostic.config({ virtual_lines = false, virtual_text = true })
+-- --       --       return true
+-- --       --     end,
+-- --       --   })
+-- --       -- end)
+-- --       --
+-- --       -- ---@param jumpCount number
+-- --       -- local function jumpWithVirtLineDiags(jumpCount)
+-- --       --   pcall(vim.api.nvim_del_augroup_by_name, "jumpWithVirtLineDiags") -- prevent autocmd for repeated jumps
+-- --       --
+-- --       --   vim.diagnostic.jump({ count = jumpCount })
+-- --       --
+-- --       --   local initialVirtTextConf = vim.diagnostic.config().virtual_text
+-- --       --   vim.diagnostic.config({
+-- --       --     virtual_text = false,
+-- --       --     virtual_lines = { current_line = true },
+-- --       --   })
+-- --       --
+-- --       --   vim.defer_fn(function() -- deferred to not trigger by jump itself
+-- --       --     vim.api.nvim_create_autocmd("CursorMoved", {
+-- --       --       desc = "User(once): Reset diagnostics virtual lines",
+-- --       --       once = true,
+-- --       --       group = vim.api.nvim_create_augroup("jumpWithVirtLineDiags", {}),
+-- --       --       callback = function()
+-- --       --         vim.diagnostic.config({ virtual_lines = false, virtual_text = initialVirtTextConf })
+-- --       --       end,
+-- --       --     })
+-- --       --   end, 1)
+-- --       -- end
+-- --       --
+-- --       -- vim.keymap.set("n", "ge", function()
+-- --       --   jumpWithVirtLineDiags(1)
+-- --       -- end, { desc = "󰒕 Next diagnostic" })
+-- --       -- vim.keymap.set("n", "gE", function()
+-- --       --   jumpWithVirtLineDiags(-1)
+-- --       -- end, { desc = "󰒕 Prev diagnostic" })
+-- --       -- Keybinding to call the function
+-- --       opts.servers = vim.tbl_deep_extend("force", opts.servers, {
+-- --         -- html = {
+-- --         --   filetypes = {
+-- --         --     "angular.html",
+-- --         --     "html",
+-- --         --     "javascript",
+-- --         --     "javascriptreact",
+-- --         --     "javascript.jsx",
+-- --         --     "typescript",
+-- --         --     "typescriptreact",
+-- --         --     "typescript.tsx",
+-- --         --   },
+-- --         -- },
+-- --         -- -- -- Emmet TODO: checi if this is still needed
+-- --         --
+-- --         -- jsonls = {
+-- --         --   -- settings = {
+-- --         --
+-- --         --   -- json = {
+-- --         --   schemas = require("schemastore").json.schemas({
+-- --         --     select = {
+-- --         --       ".eslintrc",
+-- --         --       "package.json",
+-- --         --       "docker-compose.yml",
+-- --         --     },
+-- --         --     replace = {
+-- --         --       [".eslintrc"] = {
+-- --         --         description = "Custom JSON schema for ESLint configuration files",
+-- --         --         fileMatch = { ".eslintrc", ".eslintrc.json", ".eslintrc.yml", ".eslintrc.yaml" },
+-- --         --         name = ".eslintrc",
+-- --         --         url = "https://example.com/schema/eslintrc.json",
+-- --         --       },
+-- --         --       ["docker-compose.yml"] = {
+-- --         --         description = "Custom YAML schema for Docker Compose configuration files",
+-- --         --         fileMatch = { "docker-compose.yml", "docker-compose.yaml" },
+-- --         --         name = "docker-compose.yml",
+-- --         --         url = "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json",
+-- --         --       },
+-- --         --     },
+-- --         --   }),
+-- --         --   validate = { enable = true },
+-- --         --   --   },
+-- --         --   -- },
+-- --         -- },
+-- --         --
+-- --         cucumber_language_server = {
+-- --           settings = {
+-- --             cucumber = {
+-- --               features = { "**/*.feature" },
+-- --               glue = { "**/Steps/*.cs", "**/StepDefinitions/*.cs" },
+-- --             },
+-- --           },
+-- --         },
+-- --         -- yamlls = {
+-- --         --   settings = {
+-- --         --     yaml = {
+-- --         --       schemas = {
+-- --         --         ["docker-compose.yml"] = "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json",
+-- --         --         -- ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "/**/docker-compose*.yml",
+-- --         --         -- [require("kubernetes").yamlls_schema()] = "*.yaml",
+-- --         --         -- or this to only match '*.<resource>.yaml' files. ex: 'app.deployment.yaml', 'app.argocd.yaml', ...
+-- --         --         -- [require("kubernetes").yamlls_schema()] = require("kubernetes").yamlls_filetypes(),
+-- --         --         -- ["https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.22.0/all.json"] = "k8s/**",
+-- --         --         ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = {
+-- --         --           "ci/*.yml",
+-- --         --           ".gitlab-ci.yml",
+-- --         --         },
+-- --         --       },
+-- --         --     },
+-- --         --   },
+-- --         -- },
+-- --         kulala_ls = {
+-- --           filetypes = {
+-- --             "http",
+-- --           },
+-- --         },
+-- --         emmet_language_server = {
+-- --           filetypes = {
+-- --             "angular.html",
+-- --             "css",
+-- --             "eruby",
+-- --             "html",
+-- --             "javascript",
+-- --             "javascriptreact",
+-- --             "less",
+-- --             "sass",
+-- --             "scss",
+-- --             "pug",
+-- --             "typescriptreact",
+-- --           },
+-- --           --   init_options = {
+-- --           --     html = {
+-- --           --       options = {
+-- --           --         -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+-- --           --         ["bem.enabled"] = true,
+-- --           --       },
+-- --           --     },
+-- --           --   },
+-- --         },
+-- --         -- tsserver = tsserver_config,
+-- --         -- CSS
+-- --         eslint = {
+-- --           filetypes = { "html", "angular.html" },
+-- --           -- root_dir = util.root_pattern(unpack({ ".eslintrc.yaml" })),
+-- --         },
+-- --
+-- --         -- omnisharp = { -- TODO: for csharpls_extended  https://github.com/Decodetalkers/csharpls-extended-lsp.nvim
+-- --         --   handlers = {
+-- --         --     ["textDocument/definition"] = require("csharpls_extended").handler,
+-- --         --     ["textDocument/typeDefinition"] = require("csharpls_extended").handler,
+-- --         --   },
+-- --         --   cmd = { csharpls },
+-- --         --   enable_roslyn_analyzers = true,
+-- --         --   organize_imports_on_format = true,
+-- --         --   enable_import_completion = true,
+-- --         -- },
+-- --         -- cssls = {},
+-- --         gradle_ls = {
+-- --           cmd = {
+-- --             vim.env.HOME
+-- --               .. "/.local/share/nvim/vscode-gradle/gradle-language-server/build/install/gradle-language-server/bin/gradle-language-server",
+-- --           },
+-- --           root_dir = function(fname)
+-- --             return util.root_pattern(unpack({ "settings.gradle", "settings.gradle.kts" }))(fname)
+-- --               or util.root_pattern(unpack({ "build.gradle" }))(fname)
+-- --           end,
+-- --           filetypes = { "groovy", "kotlin" },
+-- --         },
+-- --         cssls = {
+-- --           filetypes = { "css", "scss", "less", "html" },
+-- --         },
+-- --         tailwindcss = {
+-- --           filetypes = {
+-- --             "html",
+-- --             "css",
+-- --             "scss",
+-- --             "javascript",
+-- --             "typescript",
+-- --             "javascriptreact",
+-- --             "typescriptreact",
+-- --           },
+-- --         },
+-- --         gopls = {
+-- --           settings = {
+-- --             gopls = {
+-- --               analyses = {
+-- --                 unusedparams = true,
+-- --               },
+-- --               hints = {
+-- --                 assignVariableTypes = true,
+-- --                 compositeLiteralFields = true,
+-- --                 compositeLiteralTypes = true,
+-- --                 constantValues = true,
+-- --                 functionTypeParameters = true,
+-- --                 parameterNames = true,
+-- --                 rangeVariableTypes = true,
+-- --               },
+-- --               staticcheck = true,
+-- --               semanticTokens = true,
+-- --             },
+-- --           },
+-- --         },
+-- --         golangci_lint_ls = {},
+-- --         jsonls = {},
+-- --         lua_ls = {
+-- --           handlers = handlers_luals,
+-- --           -- mason = false, -- set to false if you don't want this server to be installed with mason
+-- --           settings = {
+-- --             Lua = {
+-- --               hint = {
+-- --                 enable = true,
+-- --               },
+-- --               workspace = {
+-- --                 checkThirdParty = false,
+-- --               },
+-- --               completion = {
+-- --                 callSnippet = "Replace",
+-- --               },
+-- --             },
+-- --           },
+-- --         },
+-- --         helm_ls = {
+-- --           yamlls = {
+-- --             path = "yaml-language-server",
+-- --           },
+-- --         },
+-- --         lemminx = {},
+-- --         angularls = vim.tbl_deep_extend("force", {}, angular_config),
+-- --       })
+-- --       -- opts["diagnostics"] = { virtual_text = false, virtual_lines = true }
+-- --
+-- --       -- opts["document_highlight"] = { enabled = false }
+-- --       opts["inlay_hints"] = { enabled = false }
+-- --       opts["codelens"] = { enabled = false }
+-- --       opts["automatic_installation"] = true
+-- --       opts["ensure_installed"] = {
+-- --         "helm-ls",
+-- --         "gopls",
+-- --         "dockerls",
+-- --         "bashls",
+-- --         "awk_ls",
+-- --         "jsonls",
+-- --         "emmet_language_server",
+-- --         "marksman",
+-- --         "gradle_ls",
+-- --         "lua_ls",
+-- --         "golangci_lint_ls ",
+-- --         "lemminx",
+-- --         "sqlfluff",
+-- --         "cucumber_language_server",
+-- --       }
+-- --       opts["capabilities"] = {
+-- --         textDocument = {
+-- --           completion = { completionItem = { snippetSupport = true } },
+-- --           foldingRange = {
+-- --             dynamicRegistration = false,
+-- --             lineFoldingOnly = true,
+-- --           },
+-- --         },
+-- --       }
+-- --       opts["flags"] = {
+-- --         debounce_text_changes = 150,
+-- --       }
+-- --       opts["setup"] = {
+-- --
+-- --         eslint = function(_, opts)
+-- --           LazyVim.lsp.on_attach(function(client)
+-- --             if client.name == "eslint" then
+-- --               client.server_capabilities.documentformattingprovider = true
+-- --             elseif client.name == "tsserver" then
+-- --               client.server_capabilities.documentformattingprovider = false
+-- --             end
+-- --           end, "eslint")
+-- --         end,
+-- --         omnisharp = function(_, opts)
+-- --           LazyVim.lsp.on_attach(function(client)
+-- --             client.server_capabilities.documentFormattingProvider = false
+-- --             client.server_capabilities.semanticTokensProvider = false -- turn off semantic tokens
+-- --           end, "omnisharp")
+-- --         end,
+-- --
+-- --         cssls = function(_, opts)
+-- --           LazyVim.lsp.on_attach(function(client)
+-- --             client.server_capabilities.documentColor = "virtual"
+-- --             client.server_capabilities.document_color = "virtual"
+-- --           end, "cssls")
+-- --         end,
+-- --
+-- --         terraformls = function(_, opts)
+-- --           LazyVim.lsp.on_attach(function(client)
+-- --             -- client.server_capabilities.documentFormattingProvider = false
+-- --             client.server_capabilities.semanticTokensProvider = false -- turn off semantic tokens
+-- --           end, "terraformls")
+-- --         end,
+-- --         -- vtsls = function(_, opts)
+-- --         --   LazyVim.lsp.on_attach(function(client, buffer)
+-- --         --     require("lsp-format-modifications").format_modifications(client, buffer)
+-- --         --   end, "vtsls")
+-- --         -- end,
+-- --       }
+-- --     end,
+-- --   },
+-- --   {
+-- --     "rachartier/tiny-code-action.nvim",
+-- --     dependencies = {
+-- --       { "nvim-lua/plenary.nvim" },
+-- --       { "nvim-telescope/telescope.nvim" },
+-- --     },
+-- --     event = "LspAttach",
+-- --     config = function()
+-- --       require("tiny-code-action").setup()
+-- --     end,
+-- --   },
+-- -- }
+-- --
+-- -- -- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- -- -- capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- -- -- capabilities.textDocument.foldingRange = {
+-- -- --   dynamicRegistration = false,
+-- -- --   lineFoldingOnly = true,
+-- -- -- }
+-- -- -- M.capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities) -- for nvim-cmp
+-- -- --
+-- -- -- local opts = {
+-- -- --   on_attach = M.on_attach,
+-- -- --   capabilities = M.capabilities,
+-- -- --   flags = {
+-- -- --     debounce_text_changes = 150,
+-- -- --   },
+-- -- -- }
+-- -- --
+-- -- --

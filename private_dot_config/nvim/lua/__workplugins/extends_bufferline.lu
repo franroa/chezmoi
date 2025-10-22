@@ -1,0 +1,108 @@
+return {
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = function(_, opts)
+      require("bufferline").setup({
+        options = {
+          indicator_icon = " ",
+          separator_style = { "", "" },
+          tab_size = 0,
+          buffer_close_icon = "",
+          modified_icon = "",
+          close_icon = "",
+        },
+      })
+      vim.cmd([[
+ autocmd ColorScheme * highlight BufferLineFill guibg=none
+ autocmd ColorScheme * highlight BufferLineBackground guifg=#7a7c9e
+ autocmd ColorScheme * highlight BufferLineBufferSelected guifg=white gui=none
+ ]])
+
+      --   opts.options.custom_filter = function(buf_number, buf_numbers)
+      --     -- filter out filetypes you don't want to see
+      --     if
+      --       vim.bo[buf_number].filetype ~= "grug-far"
+      --       and vim.bo[buf_number].filetype ~= "easy-dotnet"
+      --       and vim.fn.bufname(buf_number) ~= "kulala://ui"
+      --     then
+      --       return true
+      --     end
+      --   end
+      --
+      --   require("bufferline").setup(opts)
+      --
+      --   local function get_tab_name()
+      --     local cwd = LazyVim.root.git()
+      --     local tab_name = cwd:match("([^/]+)$")
+      --     if tab_name == "nvim" then
+      --       return ""
+      --     end
+      --
+      --     if not (tab_name:match("GIMS") or tab_name:match("FSOC") or tab_name:match("develop")) then
+      --       return tab_name
+      --     end
+      --
+      --     local icon = ""
+      --     if tab_name:match("npm") then
+      --       icon = "󰚲"
+      --     else
+      --       icon = "󰌛"
+      --     end
+      --
+      --     local preffix = ""
+      --     local suffix = ""
+      --
+      --     if cwd:match("firesoc") then
+      --       preffix = "F"
+      --     end
+      --     if cwd:match("gims") then
+      --       preffix = "G"
+      --     end
+      --
+      --     if tab_name:match("develop") then
+      --       suffix = "dev"
+      --     end
+      --
+      --     if tab_name ~= "develop" then
+      --       suffix = tab_name:match("-[^-]*$"):sub(-2)
+      --     end
+      --
+      --     function colorize_icon(icon)
+      --       -- Define the color for the icon
+      --       local color = "#FF0000" -- Red color
+      --
+      --       -- Create a new highlight group with the specified color
+      --       vim.api.nvim_command("highlight IconColor guifg=" .. color .. " guibg=NONE")
+      --
+      --       -- Apply the highlight to the icon
+      --       local colorized_icon = "%#" .. "IconColor" .. "#" .. icon .. "%#NONE#"
+      --
+      --       -- Return the colorized icon
+      --       return colorized_icon
+      --     end
+      --
+      --     -- icon = colorize_icon(icon)
+      --     local abbreviated_name = tab_name
+      --     abbreviated_name = preffix .. "-" .. suffix
+      --     return icon .. " " .. abbreviated_name
+      --     -- elseif tab_name:match("FSOC") or tab_name:match("GIMS") then
+      --     --   local icon = ""
+      --     --   if tab_name:match("GIMS") then
+      --     --     icon = "󰄀"
+      --     --   end
+      --     --   tab_name = icon .. "-" .. tab_name:match("-[^-]*$"):sub(-2)
+      --     -- end
+      --   end
+      --   function rename_tab()
+      --     local tab_name = get_tab_name()
+      --     vim.cmd("BufferLineTabRename " .. tab_name)
+      --   end
+      --   vim.api.nvim_create_autocmd({ "TabNewEntered" }, {
+      --     callback = rename_tab,
+      --   })
+      --   vim.cmd("BufferLineTabRename " .. get_tab_name())
+    end,
+  },
+}

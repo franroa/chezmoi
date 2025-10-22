@@ -1,0 +1,117 @@
+*alloy-tools.txt*	Alloy Development and Testing Toolkit
+
+==============================================================================
+CONTENTS                                                 *alloy-tools-contents*
+
+1. Introduction.....................................|alloy-tools-intro|
+2. Project Setup....................................|alloy-tools-setup|
+3. Commands & Keymaps...............................|alloy-tools-keymaps|
+   - In .alloy Files................................|alloy-tools-keymaps-buffer|
+   - In the Horizontal Diagram......................|alloy-tools-keymaps-horizontal|
+   - In the Vertical Diagram........................|alloy-tools-keymaps-vertical|
+   - In the Test Log Window.........................|alloy-tools-keymaps-testlog|
+
+==============================================================================
+1. Introduction                                           *alloy-tools-intro*
+
+This toolkit provides an integrated development environment within Neovim for
+Grafana Alloy configurations. It combines a pipeline visualizer with an
+end-to-end test runner to create a tight feedback loop for developing,
+understanding, and validating your configurations.
+
+Key features include:
+- Interactive horizontal and vertical pipeline diagrams.
+- Smart caching to only re-parse pipeline diagrams when structure changes.
+- Bidirectional cursor-following between code and diagrams.
+- In-editor E2E test execution using floating windows.
+- Visual feedback for test overrides (🧪) and results directly on
+  the diagrams and in the code.
+- Quick creation and editing of test override files.
+
+==============================================================================
+2. Project Setup                                          *alloy-tools-setup*
+
+For the tools to work, your Alloy project must have a specific structure. At
+the root of your project, create a directory named `.alloy_tests`.
+
+- E2E test logs (`logs_input.log`, `logs_expected.log`) are placed at the
+  root of the `.alloy_tests` directory.
+- To override a component for a test, create a subdirectory within
+  `.alloy_tests` named in the format `component.type-component.label`.
+- Inside this subdirectory, place a `localtest.alloy` file containing the
+  full text of the overridden component block.
+
+EXAMPLE TREE STRUCTURE:
+>
+  my-project/
+  ├── my_config.alloy
+  └── .alloy_tests/
+      ├── loki.write-to_loki/
+      │   └── localtest.alloy
+      ├── logs_expected.log
+      └── logs_input.log
+<
+==============================================================================
+3. Commands & Keymaps                                     *alloy-tools-keymaps*
+
+------------------------------------------------------------------------------
+In .alloy Files                                     *alloy-tools-keymaps-buffer*
+
+gp                      Opens the horizontal pipeline diagram, focusing on
+                        the component under the cursor.
+p                       Opens the vertical pipeline diagram, filtered by the
+                        component under the cursor.
+<leader>k               Show a diff popup of the test override for the
+                        component under the cursor (if one exists).
+<C-j>                   Jump to the test log window *if it is visible*.
+
+<leader>tar             Run the Alloy E2E test from the current buffer.
+<leader>taR             Rerun the last Alloy E2E test.
+<leader>tas             Toggle the visibility of the last test summary report.
+<leader>tal             Toggle visibility of the test log window.
+<leader>te              Edit the `localtest.alloy` override file for the
+                        component under the cursor. Creates the file and
+                        directory if they don't exist.
+<leader>toi             (Show Icons) Manually displays the 🧪 icons for all
+                        overridden components in the current buffer.
+<leader>toI             (Clear Icons) Clears all 🧪 icons from the buffer.
+
+]a / [a                Jump to the next/previous component in the pipeline flow.
+]b / [b                Jump to the next/previous component block in the file.
+
+------------------------------------------------------------------------------
+In the Horizontal Diagram (opened with `gp`)             *alloy-tools-keymaps-horizontal*
+
+<Tab> / <S-Tab>         Navigate between components or pipelines.
+p                       Toggle "focus mode" to navigate within a single
+                        pipeline and its branches.
+<leader>k               Show component code. If the component has a test
+                        override (🧪), it shows a diff view.
+<CR>                    Jump to the component's definition in the source file.
+                        If the last test failed, this opens the summary report.
+q                       Close the diagram window and its container.
+<leader>t               Run the E2E test suite.
+<leader>te              Edit the `localtest.alloy` file for the selected component.
+g?                      Show the help popup for diagram commands.
+
+------------------------------------------------------------------------------
+In the Vertical Diagram (opened with `p`)             *alloy-tools-keymaps-vertical*
+
+<Tab> / <S-Tab>         Navigate between components.
+<leader>k               Show component code.
+<CR>                    Jump to the component's definition.
+f                       Set a new filter to search for components.
+c                       Clear the current filter.
+q                       Close the diagram.
+<leader>t               Run the E2E test suite.
+<leader>te              Edit the `localtest.alloy` file for the selected component.
+g?                      Show the help popup for diagram commands.
+
+------------------------------------------------------------------------------
+In the Test Log Window                              *alloy-tools-keymaps-testlog*
+
+q                       Hide the test log window.
+<C-k>                   Jump back to the source code window that started the test.
+g?                      Show the help popup for the test runner.
+
+ vim:tw=78:ts=8:ft=help:norl:

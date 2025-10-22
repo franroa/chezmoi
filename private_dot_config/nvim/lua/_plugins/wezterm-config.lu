@@ -1,0 +1,16 @@
+return {
+  {
+    "winter-again/wezterm-config.nvim",
+    -- config = true,
+    keys = { -- Basic lazy loading
+      {
+        "<leader>wp",
+        function()
+          -- require("wezterm-config").setup()
+          require("wezterm-config").set_wezterm_user_var("font_size", "20")
+        end,
+        desc = "Put a comma at the end of the line",
+      },
+    },
+  },
+}

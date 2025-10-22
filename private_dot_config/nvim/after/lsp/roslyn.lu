@@ -1,0 +1,135 @@
+vim.lsp.config("roslyn", {
+  on_attach = function(client)
+    client.server_capabilities.diagnosticProvider = { workspaceDiagnostics = true }
+    vim.keymap.set("n", "<leader>co", "<cmd>RoslynOrganizeImports<cr>", {
+      buffer = bufnr,
+      desc = "Organize Imports",
+    })
+  end,
+
+  cmd = {
+    "dotnet",
+    "/home/froa/.local/share/nvim/mason/packages/roslyn/libexec/Microsoft.CodeAnalysis.LanguageServer.dll",
+    "--logLevel",
+    "Information",
+    "--extensionLogDirectory",
+    "/tmp/roslyn_ls/logs", -- Changed ) to ,
+    "--extension",
+    "/home/froa/global-analyzers/Roslynator.Analyzers.4.14.0/analyzers/dotnet/roslyn4.7/cs/Roslynator.CSharp.Analyzers.CodeFixes.dll",
+    "--extension",
+    "/home/froa/global-analyzers/Roslynator.Analyzers.4.14.0/analyzers/dotnet/roslyn4.7/cs/Roslynator.CSharp.Analyzers.dll",
+    "--stdio",
+  },
+  filetypes = {
+    "cs",
+  },
+  settings = {
+    ["csharp|navigation"] = {
+      dotnet_navigate_to_decompiled_sources = true,
+    },
+    ["csharp|symbol_search"] = {
+      dotnet_search_reference_assemblies = true,
+    },
+    ["csharp|quick_info"] = {
+      dotnet_show_remarks_in_quick_info = true,
+    },
+    ["csharp|implement_type"] = {
+      dotnet_insertion_behavior = true,
+      dotnet_property_generation_behavior = true,
+    },
+    ["csharp|highlighting"] = {
+      dotnet_highlight_related_json_components = true,
+      dotnet_highlight_related_regex_components = true,
+    },
+    ["csharp|completion"] = {
+      dotnet_provide_regex_completions = true,
+      dotnet_show_completion_items_from_unimported_namespaces = true,
+      dotnet_show_name_completion_suggestions = true,
+    },
+    ["csharp|background_analysis"] = {
+      dotnet_analyzer_diagnostics_scope = "fullSolution",
+      dotnet_compiler_diagnostics_scope = "fullSolution",
+    },
+    ["csharp|code_lens"] = {
+      dotnet_enable_references_code_lens = true,
+      dotnet_enable_tests_code_lens = true,
+    },
+    ["csharp|inlay_hints"] = {
+      csharp_enable_inlay_hints_for_implicit_object_creation = true,
+      csharp_enable_inlay_hints_for_implicit_variable_types = true,
+      csharp_enable_inlay_hints_for_lambda_parameter_types = true,
+      csharp_enable_inlay_hints_for_types = true,
+      dotnet_enable_inlay_hints_for_indexer_parameters = true,
+      dotnet_enable_inlay_hints_for_literal_parameters = true,
+      dotnet_enable_inlay_hints_for_object_creation_parameters = true,
+      dotnet_enable_inlay_hints_for_other_parameters = true,
+      dotnet_enable_inlay_hints_for_parameters = true,
+      dotnet_suppress_inlay_hints_for_parameters_that_differ_only_by_suffix = true,
+      dotnet_suppress_inlay_hints_for_parameters_that_match_argument_name = true,
+      dotnet_suppress_inlay_hints_for_parameters_that_match_method_intent = true,
+    },
+  },
+})
+
+vim.api.nvim_create_user_command("RoslynOrganizeImports", function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local clients = vim.lsp.get_clients({ name = "roslyn", bufnr = bufnr })
+
+  if #clients == 0 then
+    vim.notify("No Roslyn client attached", vim.log.levels.WARN)
+    return
+  end
+
+  local client = clients[1]
+  local params = {
+    textDocument = vim.lsp.util.make_text_document_params(bufnr),
+    range = {
+      ["start"] = { line = 0, character = 0 },
+      ["end"] = { line = vim.api.nvim_buf_line_count(bufnr), character = 0 },
+    },
+    context = {
+      diagnostics = vim.diagnostic.get(bufnr),
+      only = { "quickfix" },
+    },
+  }
+
+  ---@diagnostic disable-next-line: param-type-mismatch, missing-parameter
+  client.request("textDocument/codeAction", params, function(err, result)
+    if err then
+      vim.notify("Failed to get code actions: " .. vim.inspect(err), vim.log.levels.ERROR)
+      return
+    end
+
+    if not result or #result == 0 then
+      vim.notify("No code actions available", vim.log.levels.INFO)
+      return
+    end
+
+    local remove_usings_action = nil
+    for _, action in ipairs(result) do
+      if action.title and action.title:match("Remove unnecessary usings") then
+        remove_usings_action = action
+        break
+      end
+    end
+
+    if not remove_usings_action then
+      vim.notify("Remove unnecessary usings action not found", vim.log.levels.INFO)
+      return
+    end
+
+    -- Add empty table as params for codeAction/resolve
+    ---@diagnostic disable-next-line: param-type-mismatch, missing-parameter
+    client.request("codeAction/resolve", remove_usings_action, function(resolve_err, resolved_action)
+      if resolve_err then
+        vim.notify("Failed to resolve action: " .. vim.inspect(resolve_err), vim.log.levels.ERROR)
+        return
+      end
+
+      if resolved_action and resolved_action.edit then
+        vim.lsp.util.apply_workspace_edit(resolved_action.edit, client.offset_encoding)
+        vim.notify("Imports organized", vim.log.levels.INFO)
+      end
+    end, bufnr)
+  end, bufnr)
+end, {})

@@ -1,0 +1,283 @@
+*     * 18efb9b 23:31:39 12-07-2024 francisco roa prieto (HEAD -> main | origin/main | origin/HEAD)
+│               many things
+*       8463851 09:34:27 26-06-2024 francisco roa prieto
+│               [UPDATE] Updated commit hashes in lazy-lock.json [UPDATE] Refactored callback function in autocmds.lua
+*       f9a2bbf 08:31:03 26-06-2024 francisco roa prieto
+│               [main] Refactor commit message handling in autocmds.lua [WHY] To improve readability and maintainability of the code. The previous method of handling commit messages was prone to errors and difficult to understand. This change simplifies the process and makes the code easier to read and maintain.
+*       d7745b5 08:23:51 26-06-2024 francisco roa prieto
+│               [main] Update commit message template in autocmds.lua [WHY] To provide clearer instructions for commit messages
+*       7862ac6 07:57:30 26-06-2024 francisco roa prieto
+│               [main] Update plugins and improve commit message prompt [WHY] The plugins `markview.lua` and `neorg.lua` were added, and changes were made to `lazy-lock.json`, `autocmds.lua`, and `precognition.lua`. The commit message prompt in `autocmds.lua` was also improved for better clarity and formatting. These changes were made to enhance the functionality of the codebase and improve the user experience.
+*       190a9b4 18:09:07 25-06-2024 francisco roa prieto
+│               many changes
+*       0a55f96 11:08:49 18-06-2024 francisco roa prieto
+│               omnisharp and angular configuration - coverage
+*       340aa73 08:14:46 13-06-2024 francisco roa prieto
+│               prettier format configuration
+*       62d8436 09:04:56 11-06-2024 francisco roa prieto
+│               lsp configuration
+*       a6cb772 10:03:38 06-06-2024 francisco roa prieto
+│               many things
+*       88fe68c 09:50:06 28-05-2024 Francisco Roa Prieto
+│               mini.git
+*       bfd809d 10:01:26 25-05-2024 Francisco Roa Prieto
+│               solve cursor issue
+*       f324d2d 08:15:17 23-05-2024 Francisco Roa Prieto
+│               many changes
+*       51399b1 10:57:48 27-04-2024 Francisco Roa Prieto
+│               more firenvim configuration
+*       3d8e0ea 09:49:58 20-04-2024 Francisco Roa Prieto
+│               nvim for vscode y firenvim
+*       3ed777c 13:04:40 18-04-2024 Francisco Roa Prieto
+│               some changes
+*       20f07a1 18:20:08 17-04-2024 Francisco Roa Prieto
+│               add firenvim stuff
+*       c0edfdb 13:38:49 11-03-2024 Francisco Roa Prieto
+│               lots of changes
+*       996b460 13:17:27 13-02-2024 Francisco Roa Prieto
+│               toggle lsp key map added
+*       135be99 10:56:11 13-02-2024 Francisco Roa Prieto
+│               changing colorscheme
+*       f7063e8 21:13:06 12-02-2024 Francisco Roa Prieto
+│               changing colorscheme
+*       2cfc0b5 17:08:13 12-02-2024 Francisco Roa Prieto
+│               changing colorscheme
+*       f55b3aa 16:55:38 12-02-2024 Francisco Roa Prieto
+│               changing colorscheme
+*       cc9495c 10:01:00 12-02-2024 Francisco Roa Prieto
+│               added updated configurations
+*       74699a1 09:55:32 12-02-2024 Francisco Roa Prieto
+│               added updated configurations
+*       c62c3f8 15:20:45 11-02-2024 Francisco Roa Prieto
+│               small changes
+*       3721778 12:57:41 10-02-2024 Francisco Roa Prieto
+│               add kubernetes in fish
+*       f3a1943 17:59:45 09-02-2024 Francisco Roa Prieto
+│               change tokyonighjt
+*       9019d15 11:42:54 09-02-2024 Francisco Roa Prieto
+│               add native snippets - only as comment
+*       71bf0f7 20:00:38 31-01-2024 Francisco Roa Prieto
+│               security
+*       53fe6b1 20:44:58 28-01-2024 Francisco Roa Prieto
+│               add more plugins
+*       de3db08 09:12:21 11-01-2024 Francisco Roa Prieto
+│               add more plugins
+*       f798dae 14:29:50 13-12-2023 Francisco Roa Prieto
+│               added more plugins to fish
+*       d0d3480 13:48:34 07-12-2023 Francisco Roa Prieto
+│               [main] lock file
+*       22512f3 12:19:48 07-12-2023 Francisco Roa Prieto
+│               [main] more plugins
+*       c074bb1 23:14:03 12-11-2023 Francisco Roa Prieto
+│               ISSUECOMMIT_TITLE}]
+*       96b4d96 22:07:39 12-11-2023 Francisco Roa Prieto
+│               [main] monks
+*       3e4c3d2 15:38:32 12-11-2023 Francisco Roa Prieto
+│               [main] more test
+*       c5faa82 15:35:33 12-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       4175479 14:53:18 12-11-2023 Francisco Roa Prieto
+│               Test
+*       31f06cf 12:18:41 12-11-2023 Francisco Roa Prieto
+│               [main] new modules [WHY]:
+*       73539e2 23:08:26 10-11-2023 Francisco Roa Prieto
+│               [main] more modules [WHY]:
+*       bed7f28 12:46:01 08-11-2023 Francisco Roa Prieto
+│               [main] add some changes [WHY]:
+*       d498ff0 16:13:31 07-11-2023 Francisco Roa Prieto
+│               [main] change borders [WHY]:
+*       5ad85c9 09:48:52 07-11-2023 Francisco Roa Prieto
+│               [main] add gitconfig to smartcolumn's ignored files [WHY]:
+*       a874493 09:48:00 07-11-2023 Francisco Roa Prieto
+│               [main] more plugins [WHY]:
+*       a978c6d 21:57:40 06-11-2023 Francisco Roa Prieto
+│               [main] monks [WHY]:
+*       842d54e 10:42:35 06-11-2023 Francisco Roa Prieto
+│               [main] more git config [WHY]:
+*       9a09e3c 11:30:56 04-11-2023 Francisco Roa Prieto
+│               [main] change colors [WHY]:
+*       d2b2fd0 21:17:43 03-11-2023 Francisco Roa Prieto
+│               [main] more [WHY]:
+*       10633ab 16:15:53 03-11-2023 Francisco Roa Prieto
+│               [main] added worktrees [WHY]:
+*       f633522 10:26:41 03-11-2023 Francisco Roa Prieto
+│               [main] more modules [WHY]:
+*       d70ee9c 08:11:42 03-11-2023 Francisco Roa Prieto
+│               [main] more modules [WHY]:
+*       fc6fbb1 12:37:36 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       42aede2 12:36:30 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       26dbb00 12:24:27 01-11-2023 Francisco Roa Prieto
+│               [main] tests [WHY]:
+*       b4279ff 12:23:20 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       7cb19fd 12:21:05 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       8779c31 12:17:42 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       8d3af2a 12:16:45 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       5fe0a3f 12:15:04 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       d71eb48 12:13:33 01-11-2023 Francisco Roa Prieto
+│               [main] test [WHY]:
+*       f5b1285 12:04:47 01-11-2023 Francisco Roa Prieto
+│               [main] add number [WHY]:
+*       6d061a5 11:45:11 01-11-2023 Francisco Roa Prieto
+│               [main] improve command line commit [WHY]:
+*       b1d904f 11:37:25 01-11-2023 Francisco Roa Prieto
+│               [main] commits [WHY]:
+*       30dfb42 11:14:44 30-10-2023 Francisco Roa Prieto
+│               [main] add first transparent attempt [WHY]:
+*       c3ae8d2 14:41:52 29-10-2023 Francisco Roa Prieto
+│               [main] a lot of changes [WHY]:
+*       042bbd1 17:25:37 27-10-2023 Francisco Roa Prieto
+│               [main] many changes [WHY]:
+*       b9b7082 17:25:28 27-10-2023 Francisco Roa Prieto
+│               added diff-view
+*       76b65c7 12:40:57 26-10-2023 Francisco Roa Prieto
+│               [main] new git configuration [WHY]:
+*       faf3b13 08:44:27 24-10-2023 Francisco Roa Prieto
+│               [main] monk [WHY]:
+*       60ef25f 10:05:26 23-10-2023 Francisco Roa Prieto
+│               [main] scrollbar [WHY]:
+*       2f08731 09:30:46 22-10-2023 Francisco Roa Prieto
+│               [main] smartcolumn + wrapping modules [WHY]:
+*       72a4af9 19:26:48 20-10-2023 Francisco Roa Prieto
+│               [main] monk [WHY]:
+*       cfec598 17:05:56 19-10-2023 Francisco Roa Prieto
+│               [main] solve cmp issue on new lines [WHY]:
+*       38ab500 15:41:35 19-10-2023 Francisco Roa Prieto
+│               [main] lock changes [WHY]:
+*       1d1ee20 15:35:14 19-10-2023 Francisco Roa Prieto
+│               [main] add marks.nvim [WHY]:
+*       5011837 10:16:33 19-10-2023 Francisco Roa Prieto
+│               [main] solve lualine/dashboard problem [WHY]:
+*       5696d3b 12:19:48 17-10-2023 Francisco Roa Prieto
+│               [main] more plugins [WHY]:
+*       38fbe47 22:55:41 14-10-2023 Francisco Roa Prieto
+│               [main] monk [WHY]:
+*       d3696a6 22:12:35 14-10-2023 Francisco Roa Prieto
+│               [main] more modules [WHY]:
+*       f5f4b35 13:28:56 13-10-2023 Francisco Roa Prieto
+│               [main] add semantic highlighting
+*       430c5e5 09:17:26 13-10-2023 Francisco Roa Prieto
+│               [main] add codeium [WHY]:
+*       589dac9 09:08:56 13-10-2023 Francisco Roa Prieto
+│               [main] change codeium [WHY]:
+*       1d21b72 08:49:08 13-10-2023 Francisco Roa Prieto
+│               [main] update lazyvim [WHY]:
+*       86fee46 12:03:20 10-10-2023 Francisco Roa Prieto
+│               [main] add leetcode [WHY]:
+*       97840f3 13:13:58 06-10-2023 Francisco Roa Prieto
+│               [main] change tokyonigt colors [WHY]:
+*       a4095fb 15:01:51 05-10-2023 Francisco Roa Prieto
+│               [main] some changes [WHY]:
+*       7ea4fe2 11:56:59 05-10-2023 Francisco Roa Prieto
+│               [main] solve tint issue [WHY]:
+*       d30744a 11:01:08 05-10-2023 Francisco Roa Prieto
+│               [main] monk [WHY]:
+*       6473916 10:57:14 05-10-2023 Francisco Roa Prieto
+│               [main] add matchup plugin [WHY]:
+*       7d85b9c 07:30:58 05-10-2023 Francisco Roa Prieto
+│               [main] tint config [WHY]:
+*       d3f6dde 22:06:28 04-10-2023 Francisco Roa Prieto
+│               [main] added tint and removed shade [WHY]:
+*       a504e22 10:27:54 04-10-2023 Francisco Roa Prieto
+│               [main] plugin [WHY]:
+*       e95ea56 21:08:16 03-10-2023 Francisco Roa Prieto
+│               [main] add arena key [WHY]:
+*       5c95451 21:01:21 03-10-2023 Francisco Roa Prieto
+│               [main] add plugins [WHY]:
+*       5c78a46 10:46:38 02-10-2023 Francisco Roa Prieto
+│               [main] more plubins [WHY]:
+*       fee55d8 17:19:29 01-10-2023 Francisco Roa Prieto
+│               [main] add some more plugins [WHY]:
+*       3521185 11:28:55 26-09-2023 Francisco Roa Prieto
+│               [main] lsp config [WHY]:
+*       df6c3f3 15:56:30 25-09-2023 Francisco Roa Prieto
+│               [main]s  shwo borders in tokyo
+*       b1167a5 12:18:47 25-09-2023 Francisco Roa Prieto
+│               [main] add more plugins [WHY]:
+*       8f2e3bf 10:38:49 25-09-2023 Francisco Roa Prieto
+│               [main] ai coding [WHY]:
+*       241ae0a 12:28:34 19-09-2023 fran Roa Prieto
+│               [main]: some changes [WHY]:
+*       29c0523 13:13:09 07-09-2023 Francisco
+│               [main] [WHY]:
+*       0818bb5 07:46:21 07-09-2023 Francisco
+│               [main] more [WHY]:
+*       e626e52 07:42:03 06-09-2023 Francisco
+│               [main] [WHY]:
+*       bec32aa 11:00:13 04-09-2023 Francisco
+│               [main] [WHY]:
+*       4bd18a5 09:33:45 04-09-2023 Francisco
+│               [main] more plugins [WHY]: [BRANCH]: main
+M       a876bc8 08:19:39 04-09-2023 Francisco
+├─╮             Merge branch 'main' of github.com:franroa/nvim
+* │     23bf241 08:18:16 04-09-2023 Francisco
+│ │             [main]: more on git Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     049fc42 17:39:22 03-09-2023 Francisco
+│ │             [main]: Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     06ce258 22:04:38 02-09-2023 Francisco
+│ │             [main]: more to gitconfig Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     07464af 21:58:34 02-09-2023 Francisco
+│ │             [main]: some changes on git logic Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     73eeac6 21:45:25 02-09-2023 Francisco
+│ │             [main]: Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     99932da 21:30:57 02-09-2023 Francisco
+│ │             [main]: Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     bee8e94 18:13:40 02-09-2023 Francisco
+│ │             [main]: added dev-containers Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     e3a6c84 12:39:37 02-09-2023 Francisco
+│ │             [main]: more plugins Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+* │     b479b0e 15:34:21 02-09-2023 Francisco
+│ │             [main]:  plugin Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     4ac9fe1 17:39:22 03-09-2023 Francisco
+│ │             [main]: Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     bdbc465 22:04:38 02-09-2023 Francisco
+│ │             [main]: more to gitconfig Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     ce8e6f7 21:58:34 02-09-2023 Francisco
+│ │             [main]: some changes on git logic Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     846d62a 21:45:25 02-09-2023 Francisco
+│ │             [main]: Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     8ed4703 21:30:57 02-09-2023 Francisco
+│ │             [main]: Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     e6813bf 18:13:40 02-09-2023 Francisco
+│ │             [main]: added dev-containers Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     c31f66a 15:34:21 02-09-2023 Francisco
+│ │             [main]:  plugin Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+│ *     3a84312 12:39:37 02-09-2023 Francisco
+├─╯             [main]: more plugins Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       9eb7725 11:08:10 01-09-2023 Francisco
+│               [main]: add twilight Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       f3e48fb 10:20:09 01-09-2023 Francisco
+│               [main]: more Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       abfe365 10:06:13 01-09-2023 Francisco
+│               [main]: more plugins Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       c9f4786 12:50:49 31-08-2023 Francisco
+│               [main]: more plugins Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       ddada67 14:03:24 30-08-2023 Francisco
+│               [main]: added yanki Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       f30f7e8 13:19:13 30-08-2023 Francisco
+│               [main]: more stuff Author: Francisco Roa Prieto Branch: main Jira Ticket: main
+*       2fc74fa 12:34:18 30-08-2023 Francisco
+│               more
+*       a6f4d6e 17:04:50 24-08-2023 Francisco
+│               remove unneeded file
+*       7582010 17:03:39 24-08-2023 Francisco
+│               add clear contexts
+*       2ff0582 16:56:45 24-08-2023 Francisco
+│               more [${COMMIT_TITLE}]: Author: ${AUTHOR} Branch: ${BRANCH_NAME} Jira Ticket: ${JIRA_TICKET}
+*       cbec3f8 14:35:13 24-08-2023 Francisco
+│               more [${COMMIT_TITLE}]: Author: ${AUTHOR} Branch: ${BRANCH_NAME} Jira Ticket: ${JIRA_TICKET}
+*       a215322 11:22:08 24-08-2023 Francisco
+│               more [${COMMIT_TITLE}]: Author: ${AUTHOR} Branch: ${BRANCH_NAME} Jira Ticket: ${JIRA_TICKET}
+*       274f44e 09:04:31 24-08-2023 Francisco
+│               more [${COMMIT_TITLE}]:
+*       5244c24 16:16:43 23-08-2023 Francisco
+│               more [${COMMIT_TITLE}]:
+*       7c7f3da 14:43:19 23-08-2023 Francisco
+│               first commit [${COMMIT_TITLE}]:
+*       7367eb0 14:43:04 23-08-2023 Francisco

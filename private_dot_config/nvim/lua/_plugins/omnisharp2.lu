@@ -1,0 +1,152 @@
+-- https://github.com/iabdelkareem/csharp.nvim
+return {
+  -- lazy.nvim
+  {
+    "GustavEikaas/easy-dotnet.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+    config = function()
+      local function get_secret_path(secret_guid)
+        local path = ""
+        local home_dir = vim.fn.expand("~")
+        if require("easy-dotnet.extensions").isWindows() then
+          local secret_path = home_dir
+            .. "\\AppData\\Roaming\\Microsoft\\UserSecrets\\"
+            .. secret_guid
+            .. "\\secrets.json"
+          path = secret_path
+        else
+          local secret_path = home_dir .. "/.microsoft/usersecrets/" .. secret_guid .. "/secrets.json"
+          path = secret_path
+        end
+        return path
+      end
+
+      local dotnet = require("easy-dotnet")
+      -- Options are not required
+      dotnet.setup({
+        ---@param action "test"|"restore"|"build"|"run"
+        terminal = function(path, action)
+          local commands = {
+            run = function()
+              return "dotnet run --project " .. path
+            end,
+            test = function()
+              return "dotnet test " .. path
+            end,
+            restore = function()
+              return "dotnet restore " .. path
+            end,
+            build = function()
+              return "dotnet build " .. path
+            end,
+          }
+          local command = commands[action]() .. "\r"
+          vim.cmd("term")
+          vim.cmd("startinsert!")
+          vim.api.nvim_feedkeys(string.format("%s", command), "n", true)
+        end,
+        secrets = {
+          path = get_secret_path,
+        },
+      })
+
+      -- Example command
+      vim.api.nvim_create_user_command("Secrets", function()
+        dotnet.secrets()
+      end, {})
+
+      -- Example keybinding
+      vim.keymap.set("n", "<C-p>", function()
+        dotnet.run_project()
+      end)
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#omnisharp
+        omnisharp = {
+          organize_imports_on_format = true,
+          enable_import_completion = true,
+        },
+      },
+      setup = {
+        omnisharp = function()
+          local lsp_utils = LazyVim.lsp
+          lsp_utils.on_attach(function(client, bufnr)
+            if client.name == "omnisharp" then
+              local map = function(mode, lhs, rhs, desc)
+                if desc then
+                  desc = desc
+                end
+                vim.keymap.set(mode, lhs, rhs, { silent = true, desc = desc, buffer = bufnr, noremap = true })
+              end
+
+              -- https://github.com/OmniSharp/omnisharp-roslyn/issues/2483
+              local function toSnakeCase(str)
+                return string.gsub(str, "%s*[- ]%s*", "_")
+              end
+
+              local tokenModifiers = client.server_capabilities.semanticTokensProvider.legend.tokenModifiers
+              for i, v in ipairs(tokenModifiers) do
+                tokenModifiers[i] = toSnakeCase(v)
+              end
+              local tokenTypes = client.server_capabilities.semanticTokensProvider.legend.tokenTypes
+              for i, v in ipairs(tokenTypes) do
+                tokenTypes[i] = toSnakeCase(v)
+              end
+
+              -- C# keymappings
+              -- stylua: ignore
+              map("n","<leader>td","<cmd>w|lua require('neotest').run.run({vim.fn.expand('%'), strategy = require('neotest-dotnet.strategies.netcoredbg'), is_custom_dotnet_debug = true})<cr>", "Debug File")
+
+              -- stylua: ignore
+              map("n","<leader>tL","<cmd>w|lua require('neotest').run.run_last({strategy = require('neotest-dotnet.strategies.netcoredbg'), is_custom_dotnet_debug = true})<cr>", "Debug Last")
+
+              -- stylua: ignore
+              map("n","<leader>tN","<cmd>w|lua require('neotest').run.run({strategy = require('neotest-dotnet.strategies.netcoredbg'), is_custom_dotnet_debug = true})<cr>", "Debug Nearest")
+            end
+          end)
+        end,
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-dap",
+    opts = {
+      setup = {
+        netcoredbg = function(_, _)
+          local dap = require("dap")
+
+          local function get_debugger()
+            local mason_registry = require("mason-registry")
+            local debugger = mason_registry.get_package("netcoredbg")
+            return debugger:get_install_path() .. "/netcoredbg"
+          end
+
+          dap.configurations.cs = {
+            {
+              type = "coreclr",
+              name = "launch - netcoredbg",
+              request = "launch",
+              program = function()
+                return vim.fn.input("Path to dll", vim.fn.getcwd() .. "/bin/Debug/", "file")
+              end,
+            },
+          }
+          dap.adapters.coreclr = {
+            type = "executable",
+            command = get_debugger(),
+            args = { "--interpreter=vscode" },
+          }
+          dap.adapters.netcoredbg = {
+            type = "executable",
+            command = get_debugger(),
+            args = { "--interpreter=vscode" },
+          }
+        end,
+      },
+    },
+  },
+}

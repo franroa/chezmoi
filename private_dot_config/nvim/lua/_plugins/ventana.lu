@@ -1,0 +1,6 @@
+return {
+  {
+    "jyscao/ventana.nvim",
+    lazy = false,
+  },
+}

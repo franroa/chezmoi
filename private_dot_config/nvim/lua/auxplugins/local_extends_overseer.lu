@@ -1,0 +1,252 @@
+vim.g.TF_LOG = ""
+local local_plugins_path = vim.fn.stdpath("config") .. "/lua/local_plugins/"
+
+return {
+  {
+    lazy = false,
+    dir = local_plugins_path .. "overseer.nvim",
+    "stevearc/overseer.nvim",
+    -- keys = {
+    --   {
+    --     "<leader>oB",
+    --     function()
+    --       require("easy-dotnet").build_solution()
+    --     end,
+    --     desc = "Build .NET App",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>oTr",
+    --     function()
+    --       vim.cmd([[Dotnet testrunner]])
+    --     end,
+    --     desc = "Test Runner",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>oTs",
+    --     function()
+    --       require("easy-dotnet").test_solution()
+    --     end,
+    --     desc = "Test .NET Solution",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>oTp",
+    --     function()
+    --       require("easy-dotnet").test_project()
+    --     end,
+    --     desc = "Test .NET Project",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>or",
+    --     function()
+    --       require("easy-dotnet").run_project()
+    --     end,
+    --     desc = "Run .NET App",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>oR",
+    --     function()
+    --       require("easy-dotnet").restore()
+    --     end,
+    --     desc = "Restore .NET Nugets",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>oC",
+    --     function()
+    --       require("easy-dotnet").clean()
+    --     end,
+    --     desc = "Dotnet Clean",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>oS",
+    --     function()
+    --       require("easy-dotnet").secrets()
+    --     end,
+    --     desc = "Open User Secrets",
+    --   },
+    --   {
+    --     ft = "cs",
+    --     "<leader>op",
+    --     function() end,
+    --     desc = "Push local .NET Nugets",
+    --   },
+    -- },
+    config = function()
+      -- require("overseer").register_template({
+      --   name = "TaskfileVars",
+      --   params = {
+      --     module = { type = "string" },
+      --     region = { type = "string" },
+      --     tier = { type = "string" },
+      --   },
+      --   builder = function(params)
+      --     return {
+      --       cmd = vim.cmd("OverseerRun"),
+      --     }
+      --   end,
+      -- })
+
+      -- require("overseer").add_template_hook({ module = "^task$" }, function(task_defn, util)
+      --   util.add_component(task_defn, { "dependencies", task_names = { "Taskfile Vars" } })
+      --   -- util.add_params()
+      -- end)
+      --
+      --
+      --
+      -- require("overseer").add_template_hook({ module = "^task$" }, function(task_defn, util)
+      --   task_defn.params = vim.tbl_extend("keep", task_defn.params or {}, {
+      --     module = { type = "string" },
+      --     region = { type = "string" },
+      --     tier = { type = "string" },
+      --   })
+      -- end)
+      --
+      -- require("overseer").wrap_template({ module = "^task$" }, {
+      --   params = {
+      --     module = { type = "string" },
+      --     region = { type = "string" },
+      --     tier = { type = "string" },
+      --   },
+      -- }, {})
+
+      require("overseer").setup({
+        templates = {
+          "builtin",
+          "k8s.skaffold",
+          "taskfile.vars",
+          "taskfile.task",
+          "terraform.apply_target",
+          -- "terraform.plan",
+          -- "terraform.destroy",
+          -- "terraform.apply",
+          -- "db.start_on_kubernetes",
+          -- "dotnet.clear_nuget_cache",
+          -- "dotnet.push_locally",
+          -- "dotnet.pack_nugets",
+          -- "dotnet.migrations_create",
+          -- "dotnet.migrations_delete",
+          -- "dotnet.update_db",
+          -- "dotnet.reapply_TEST_migration",
+          -- "dotnet.run",
+          -- "dotnet.build",
+          -- "dotnet.clean",
+          -- "dotnet.restore",
+          -- "dotnet.start_db",
+        },
+        component_aliases = {
+          default_neotest = {
+            "on_output_summarize",
+            "on_exit_set_status",
+            "on_complete_notify",
+            "on_complete_dispose",
+            -- { "wait_for_it_if_exists", task_names = {
+            --   "Build .NET App",
+            -- } },
+          },
+        },
+        dap = false, -- TODO: make is to false and add it later manually
+        task_list = {
+          bindings = {
+            ["<S-l>"] = "IncreaseDetail",
+            ["<S-h>"] = "DecreaseDetail",
+            ["<S-k>"] = "ScrollOutputUp",
+            ["<S-j>"] = "ScrollOutputDown",
+          },
+        },
+        strategies = {
+          overseer = {
+            components = function(run_spec)
+              return {
+                {
+                  "dependencies",
+                  task_names = {
+                    { "shell", cmd = "sleep 4" },
+                  },
+                },
+                "default_neotest",
+              }
+            end,
+          },
+        },
+        -- strategy = "snacks",
+        -- strategy = {
+        --   "snacks",
+        --   -- -- load your default shell before starting the task
+        --   -- use_shell = false,
+        --   -- -- -- overwrite the default toggleterm "direction" parameter
+        --   -- direction = "horizontal",
+        --   -- -- -- overwrite the default toggleterm h"highlights"h parameter
+        --   -- -- highlights = nil,
+        --   -- -- -- overwrite the default toggleterm "auto_scroll" parameter
+        --   -- -- auto_scroll = nil,
+        --   -- -- -- have the toggleterm window close and delete the terminal buffer
+        --   -- -- -- automatically after the task exits
+        --   -- -- close_on_exit = false,
+        --   -- -- -- have the toggleterm window close without deleting the terminal buffer
+        --   -- -- -- automatically after the task exits
+        --   -- -- -- can be "never, "success", or "always". "success" will close the window
+        --   -- -- -- only if the exit code is 0.
+        --   -- -- quit_on_exit = "never",
+        --   -- -- -- open the toggleterm window when a task starts
+        --   -- open_on_start = false,
+        --   -- -- -- mirrors the toggleterm "hidden" parameter, and keeps the task from
+        --   -- -- -- being rendered in the toggleable window
+        --   -- -- hidden = true,
+        --   -- -- -- command to run when the terminal is created. Combine with `use_shell`
+        --   -- -- -- to run a terminal command before starting the task
+        --   -- -- on_create = nil,
+        -- },
+      })
+    end,
+    opts = {},
+    keys = {
+      {
+        "<leader>oL",
+        function()
+          local overseer = require("overseer")
+          local tasks = overseer.list_tasks({ recent_first = true })
+          if vim.tbl_isempty(tasks) then
+            vim.notify("No tasks found", vim.log.levels.WARN)
+          else
+            overseer.run_action(tasks[1], "restart")
+          end
+        end,
+        desc = "Run Last",
+      },
+      { "<leader>ow", "<cmd>OverseerToggle<cr>", desc = "Task list" },
+      { "<leader>oo", "<cmd>OverseerRun<cr>", desc = "Run task" },
+      { "<leader>oq", "<cmd>OverseerQuickAction<cr>", desc = "Action recent task" },
+      { "<leader>oi", "<cmd>OverseerInfo<cr>", desc = "Overseer Info" },
+      { "<leader>ob", "<cmd>OverseerBuild<cr>", desc = "Task builder" },
+      { "<leader>ot", "<cmd>OverseerTaskAction<cr>", desc = "Task action" },
+      { "<leader>oc", "<cmd>OverseerClearCache<cr>", desc = "Clear cache" },
+      {
+        "<leader>oTa",
+        function()
+          require("overseer").run_template({ name = "Terraform Apply" })
+        end,
+        desc = "Terraform Apply",
+      },
+      {
+        "<leader>oTp",
+        function()
+          require("overseer").run_template({ name = "Terraform Plan" })
+        end,
+        desc = "Terraform Plan",
+      },
+      {
+        "<leader>oTd",
+        function()
+          require("overseer").run_template({ name = "Terraform Destroy" })
+        end,
+        desc = "Terraform Destroy",
+      },
+    },
+  },
+}

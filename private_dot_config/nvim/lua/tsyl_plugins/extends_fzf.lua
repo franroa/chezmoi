@@ -1,0 +1,121 @@
+return {
+  "ibhagwan/fzf-lua",
+  opts = {
+    oldfiles = {
+      -- In Telescope, when I used <leader>fr, it would load old buffers.
+      -- fzf lua does the same, but by default buffers visited in the current
+      -- session are not included. I use <leader>fr all the time to switch
+      -- back to buffers I was just in. If you missed this from Telescope,
+      -- give it a try.
+      include_current_session = true,
+    },
+    previewers = {
+      builtin = {
+        -- fzf-lua is very fast, but it really struggled to preview a couple files
+        -- in a repo. Those files were very big JavaScript files (1MB, minified, all on a single line).
+        -- It turns out it was Treesitter having trouble parsing the files.
+        -- With this change, the previewer will not add syntax highlighting to files larger than 100KB
+        -- (Yes, I know you shouldn't have 100KB minified files in source control.)
+        syntax_limit_b = 1024 * 100, -- 100KB
+      },
+    },
+    grep = {
+      -- One thing I missed from Telescope was the ability to live_grep and the
+      -- run a filter on the filenames.
+      -- Ex: Find all occurrences of "enable" but only in the "plugins" directory.
+      -- With this change, I can sort of get the same behaviour in live_grep.
+      -- ex: > enable --*/plugins/*
+      -- I still find this a bit cumbersome. There's probably a better way of doing this.
+      rg_glob = true, -- enable glob parsing
+      glob_flag = "--iglob", -- case insensitive globs
+      glob_separator = "%s%-%-", -- query separator pattern (lua): ' --'
+    },
+  },
+  -- config = function()
+  --   local fzf = require("fzf-lua")
+  --   require("fzf-lua").setup({
+  --     hls = {
+  --       border = "FloatBorder",
+  --       preview_border = "FloatBorder",
+  --       header_text = "Comment",
+  --       header_bind = "Comment",
+  --     },
+  --     actions = {
+  --       files = {
+  --         ["default"] = fzf.actions.file_edit,
+  --         ["ctrl-v"] = fzf.actions.file_split,
+  --         ["ctrl-s"] = fzf.actions.file_vsplit,
+  --         ["alt-q"] = fzf.actions.file_sel_to_qf,
+  --       },
+  --     },
+  --     fzf_colors = {
+  --       --["bg"] = { "bg", "Normal" },
+  --       --["bg+"] = { "bg", "Normal" },
+  --       ["fg"] = { "fg", "Comment" },
+  --       ["fg+"] = { "fg", "Normal" },
+  --       ["hl"] = { "fg", "Special" },
+  --       ["hl+"] = { "fg", "Special" },
+  --       ["info"] = { "fg", "PreProc" },
+  --       ["prompt"] = { "fg", "Comment" },
+  --       ["pointer"] = { "fg", "Special" },
+  --       ["marker"] = { "fg", "Keyword" },
+  --       ["spinner"] = { "fg", "Label" },
+  --       ["header"] = { "fg", "Comment" },
+  --       ["separator"] = { "fg", "FloatBorder" },
+  --       ["scrollbar"] = { "fg", "FloatBorder" },
+  --     },
+  --     winopts = {
+  --       preview_border = "single",
+  --       border = "single",
+  --       height = 0.6,
+  --       width = 76,
+  --       row = 0,
+  --       col = 0.5,
+  --       preview = {
+  --         layout = "vertical",
+  --         vertical = "up:44%",
+  --         scrollbar = false,
+  --       },
+  --     },
+  --   })
+  --
+  --   ----keybinds
+  --   --local map = function(keys, type, desc)
+  --   --  local command = function()
+  --   --    if type == "" then
+  --   --      require("fzf-lua").builtin({
+  --   --        winopts = {
+  --   --          height = 0.2,
+  --   --          width = 40,
+  --   --          row = 0.4,
+  --   --          col = 0.48,
+  --   --        },
+  --   --      })
+  --   --    else
+  --   --      require("fzf-lua")[type]({
+  --   --        file_icons = false,
+  --   --        git_icons = false,
+  --   --        color_icons = false,
+  --   --      })
+  --   --    end
+  --   --  end
+  --   --  vim.keymap.set("n", keys, command, { desc = desc })
+  --   --end
+  --   --
+  --   --map("<leader>sa", "", "FZF")
+  --   --map("<leader>sf", "files", "Files")
+  --   --map("<leader>sh", "help_tags", "Help")
+  --   --map("<leader>sb", "buffers", "Buffers")
+  --   --map("<leader>sg", "live_grep", "Grep Word")
+  --   --map("<leader>sv", "grep_visual", "Grep Visual")
+  --   --map("<leader>sr", "oldfiles", "Recent files")
+  --   --map("<leader>sc", "grep_cword", "Current Word")
+  --   --map("<leader>sd", "diagnostics_document", "Diagnostics")
+  --   --
+  --   ----lsp
+  --   --map("<leader>lr", "lsp_references", "LSP References")
+  --   --map("<leader>ld", "lsp_definitions", "LSP Definitions")
+  --   --map("<leader>lI", "lsp_implementations", "LSP Implementations")
+  --   --map("<leader>lt", "lsp_typedefs", "LSP Type Definitions")
+  -- end,
+}

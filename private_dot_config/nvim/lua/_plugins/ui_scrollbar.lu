@@ -1,0 +1,54 @@
+local colors = require("tokyonight.colors").setup()
+
+return {
+  {
+    "petertriho/nvim-scrollbar",
+    config = function()
+      require("scrollbar").setup({
+        handle = {
+          color = "#55558F", -- "#678090", -- colors.bg_highlight,
+        },
+        marks = {
+          Search = { color = colors.orange },
+          Error = { color = colors.error },
+          Warn = { color = colors.warning },
+          Info = { color = colors.info },
+          Hint = { color = colors.hint },
+          Misc = { color = colors.purple },
+        },
+        excluded_filetypes = {
+          "cmp_docs",
+          "cmp_menu",
+          "noice",
+          "prompt",
+          "dashboard",
+          "TelescopePrompt",
+          "mason",
+          "lspinfo",
+          "lazy",
+        },
+      })
+      -- require("scrollbar.handlers.gitsigns").setup() -- TODO
+    end,
+    dependencies = {
+      { "lewis6991/gitsigns.nvim" },
+      --   {
+      --     "kevinhwang91/nvim-hlslens",
+      --     config = function()
+      --       require("hlslens").setup({
+      --         build_position_cb = function(plist, _, _, _)
+      --           require("scrollbar.handlers.search").handler.show(plist.start_pos)
+      --         end,
+      --       })
+      --
+      --       vim.cmd([[
+      --     augroup scrollbar_search_hide
+      --         autocmd!
+      --         autocmd CmdlineLeave : lua require('scrollbar.handlers.search').handler.hide()
+      --     augroup END
+      -- ]])
+      --     end,
+    },
+    -- },
+  },
+}

@@ -1,0 +1,11 @@
+return {
+  {
+    "google/vim-maktaba",
+  },
+  {
+    "google/vim-coverage",
+  },
+  {
+    "google/vim-glaive",
+  },
+}
