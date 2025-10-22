@@ -1,0 +1,327 @@
+*alloy.txt*	Alloy Development and Testing Toolkit	*alloy*
+
+==============================================================================
+CONTENTS                                                      *alloy-contents*
+
+1. Introduction.....................................|alloy-intro|
+2. Installation.....................................|alloy-installation|
+3. Configuration....................................|alloy-configuration|
+4. Commands.........................................|alloy-commands|
+5. Project Setup....................................|alloy-setup|
+6. Keymaps..........................................|alloy-keymaps|
+   - In .alloy Files................................|alloy-keymaps-buffer|
+   - In the Horizontal Diagram......................|alloy-keymaps-horizontal|
+   - In the Vertical Diagram........................|alloy-keymaps-vertical|
+   - In the Test Log Window.........................|alloy-keymaps-testlog|
+7. Health Check.....................................|alloy-health|
+8. API Reference....................................|alloy-api|
+
+==============================================================================
+1. Introduction                                            *alloy-intro*
+
+The Alloy plugin provides a comprehensive development environment within Neovim
+for Grafana Alloy configurations. It features a powerful pipeline visualizer
+and an integrated end-to-end test runner designed to streamline your Alloy
+development workflow.
+
+Version 2.0 introduces significant architectural improvements:
+- Streamlined command system with 50% less code
+- Modular parser with improved performance and caching
+- Factory-based command generation for easier extensibility
+- Enhanced configuration system with type safety
+
+Key features include:
+- Interactive horizontal and vertical pipeline diagrams
+- Smart structural caching that only re-parses when components change
+- Bidirectional cursor-following between code and diagrams
+- In-editor E2E test execution with floating windows
+- Visual feedback for test overrides (🧪) and results
+- Quick creation and editing of test override files
+- Built-in health checking and configuration validation
+
+==============================================================================
+2. Installation                                      *alloy-installation*
+
+Using lazy.nvim: >lua
+    {
+      "your-username/alloy.nvim",
+      ft = "alloy",
+      dependencies = {
+        "nvim-lua/plenary.nvim"  -- Required for some features
+      },
+      config = function()
+        require("alloy").setup({
+          -- Optional configuration (see |alloy-configuration|)
+        })
+      end
+    }
+<
+
+Using vim-plug: >vim
+    Plug 'your-username/alloy.nvim'
+<
+
+The plugin automatically loads for .alloy files. Run |:checkhealth| alloy to
+verify your installation and dependencies.
+
+==============================================================================
+3. Configuration                                    *alloy-configuration*
+
+The plugin uses a comprehensive configuration system. Call setup() to
+customize behavior: >lua
+
+    require("alloy").setup({
+      -- Core settings
+      debug = false,                    -- Enable debug logging
+      loki_url = "http://localhost:3100",
+      manage_loki = true,               -- Manage Loki container automatically
+      loki_container_name = "neovim-loki-test",
+      loki_image = "grafana/loki:3.0.0",
+      
+      -- Test configuration  
+      override_dir_name = ".alloy_tests",
+      override_file_name = "localtest.alloy",
+      
+      -- Keymap customization
+      keymaps = {
+        diagram = {
+          toggle_pipeline_focus = "P",
+          navigate_next = "<Tab>",
+          navigate_prev = "<S-Tab>",
+          go_to_definition = "<CR>",
+          close_diagram = "q",
+          show_help = "g?",
+          run_e2e_test = "<leader>t",
+          edit_override_file = "<leader>te",
+        }
+      },
+      
+      -- Tool integrations
+      tools = {
+        lualine = {
+          alloy_status = {
+            color = "Normal",
+            text = " Alloy"
+          }
+        }
+      }
+    })
+<
+
+All configuration is optional. The plugin provides sensible defaults for all
+settings.
+
+Configuration Access:~
+
+The plugin provides utilities for accessing configuration values:
+- `require("alloy._core.configuration").get(key)` - Get top-level value
+- `require("alloy._core.configuration").get_nested("keymaps.diagram.close")` 
+- `require("alloy._core.configuration").is_enabled(feature)` - Feature flags
+
+==============================================================================
+4. Commands                                              *alloy-commands*
+
+The plugin provides comprehensive command coverage with tab completion.
+All commands start with `Alloy` and can be discovered with `:Alloy<Tab>`.
+
+*:AlloyCreateDiagram*          Create an interactive pipeline diagram
+*:AlloyShowPipelineNumbers*    Show numbered steps in current buffer  
+*:AlloyRunTest*                Run E2E test for entire configuration
+*:AlloyRunPipelineTest*        Run E2E test for current pipeline
+*:AlloyRerunTest*              Rerun the last executed test
+*:AlloyToggleTestLog*          Show/hide the test log window
+*:AlloyToggleTestSummary*      Show/hide test results summary
+*:AlloyEditOverride*           Edit test override for current component
+*:AlloyShowOverrideIcons*      Show 🧪 icons for overridden components
+*:AlloyClearOverrideIcons*     Clear override icons from buffer
+*:AlloyShowDiff*               Show diff popup for current component
+*:AlloyJumpNext*               Jump to next component in pipeline
+*:AlloyJumpPrev*               Jump to previous component in pipeline
+*:AlloyJumpNextBlock*          Jump to next component block in file
+*:AlloyJumpPrevBlock*          Jump to previous component block in file
+
+Note: Commands automatically detect the current context (cursor position,
+active buffer) to provide intelligent defaults.
+
+==============================================================================
+5. Project Setup                                          *alloy-setup*
+
+For the tools to work, your Alloy project must have a specific structure. At
+the root of your project, create a directory named `.alloy_tests`.
+
+- E2E test logs (`logs_input.log`, `logs_expected.log`) are placed at the
+  root of the `.alloy_tests` directory.
+- To override a component for a test, create a subdirectory within
+  `.alloy_tests` named in the format `component.type-component.label`.
+- Inside this subdirectory, place a `localtest.alloy` file containing the
+  full text of the overridden component block.
+
+EXAMPLE TREE STRUCTURE:
+>
+  my-project/
+  ├── my_config.alloy
+  └── .alloy_tests/
+      ├── loki.write-to_loki/
+      │   └── localtest.alloy
+      ├── logs_expected.log
+      └── logs_input.log
+<
+==============================================================================
+6. Keymaps                                                *alloy-keymaps*
+
+------------------------------------------------------------------------------
+In .alloy Files                                     *alloy-keymaps-buffer*
+
+gp                      Opens the horizontal pipeline diagram, focusing on
+                        the component under the cursor.
+p                       Opens the vertical pipeline diagram, filtered by the
+                        component under the cursor.
+<leader>k               Show a diff popup of the test override for the
+                        component under the cursor (if one exists).
+<C-j>                   Jump to the test log window *if it is visible*.
+
+<leader>tar             Run the Alloy E2E test from the current buffer.
+<leader>taR             Rerun the last Alloy E2E test.
+<leader>tas             Toggle the visibility of the last test summary report.
+<leader>tal             Toggle visibility of the test log window.
+<leader>te              Edit the `localtest.alloy` override file for the
+                        component under the cursor. Creates the file and
+                        directory if they don't exist.
+<leader>toi             (Show Icons) Manually displays the 🧪 icons for all
+                        overridden components in the current buffer.
+<leader>toI             (Clear Icons) Clears all 🧪 icons from the buffer.
+
+]a / [a                Jump to the next/previous component in the pipeline flow.
+]b / [b                Jump to the next/previous component block in the file.
+
+------------------------------------------------------------------------------
+In the Horizontal Diagram (opened with `gp`)             *alloy-keymaps-horizontal*
+
+<Tab> / <S-Tab>         Cycle through components or pipelines.
+p                       Toggle "focus mode" to navigate within a single
+                        pipeline and its branches.
+<leader>k               Show component code. If the component has a test
+                        override (🧪), it shows a diff view.
+<CR>                    Jump to the component's definition in the source file.
+                        If the last test failed, this opens the summary report.
+<C-u> / <C-d>           Scroll the source code buffer up or down.
+q                       Close the diagram window and its container.
+<leader>t               Run the E2E test suite.
+<leader>te              Edit the `localtest.alloy` file for the selected component.
+g?                      Show the help popup for diagram commands.
+
+------------------------------------------------------------------------------
+In the Vertical Diagram (opened with `p`)             *alloy-keymaps-vertical*
+
+<Tab> / <S-Tab>         Cycle through components.
+<leader>k               Show component code.
+<CR>                    Jump to the component's definition.
+<C-u> / <C-d>           Scroll the source code buffer up or down.
+f                       Set a new filter to search for components.
+c                       Clear the current filter.
+q                       Close the diagram.
+<leader>t               Run the E2E test suite.
+<leader>te              Edit the `localtest.alloy` file for the selected component.
+g?                      Show the help popup for diagram commands.
+
+------------------------------------------------------------------------------
+In the Test Log Window                              *alloy-keymaps-testlog*
+
+q                       Hide the test log window.
+<C-k>                   Jump back to the source code window that started the test.
+g?                      Show the help popup for the test runner.
+
+==============================================================================
+7. Health Check                                           *alloy-health*
+
+Run `:checkhealth alloy` to verify your installation and dependencies.
+
+The health check validates:
+- Docker availability (for Loki container management)
+- Current working directory access
+- Alloy binary in PATH (for E2E testing)
+- Configuration integrity
+- Required directories and permissions
+
+Health check output provides actionable information for resolving issues.
+
+==============================================================================
+8. API Reference                                          *alloy-api*
+
+The plugin exposes a Lua API for programmatic access:
+
+Core Functions:~
+
+`require("alloy").setup(opts)`                            *alloy.setup()*
+    Initialize the plugin with configuration options.
+    Parameters: ~
+        {opts}    (table) Configuration table (see |alloy-configuration|)
+
+`require("alloy").create_pipeline_diagram()`              *alloy.create_pipeline_diagram()*
+    Create an interactive pipeline diagram for current buffer.
+
+`require("alloy").run_test(opts)`                         *alloy.run_test()*
+    Run E2E test with current Alloy configuration.
+    Parameters: ~
+        {opts}    (table) Test options (optional)
+
+`require("alloy").jump_to_next_component()`               *alloy.jump_to_next_component()*
+    Jump cursor to next component in pipeline flow.
+
+Utility Functions:~
+
+`require("core.utils").get_cursor_component(bufnr, components)`
+    Get the component under cursor in given buffer.
+    Parameters: ~
+        {bufnr}       (number) Buffer number
+        {components}  (table) Components map from parser
+    Returns: ~
+        component_key, component_data
+
+`require("core.utils").validate_buffer(bufnr)`
+    Check if buffer number is valid.
+    Parameters: ~
+        {bufnr}    (number) Buffer number to validate
+    Returns: ~
+        (boolean) True if buffer is valid
+
+Parser Functions:~
+
+`require("core.parser").get_parsed_pipeline_data(bufnr)`
+    Parse Alloy configuration and return components, chains, and start nodes.
+    Uses intelligent caching based on structural changes.
+    Parameters: ~
+        {bufnr}    (number) Buffer number to parse  
+    Returns: ~
+        components, all_chains_by_key, start_nodes
+
+Configuration Functions:~
+
+`require("alloy._core.configuration").get(key)`
+    Get configuration value by key.
+    
+`require("alloy._core.configuration").get_nested(key_path)`
+    Get nested configuration using dot notation (e.g., "keymaps.diagram.close").
+    
+`require("alloy._core.configuration").is_enabled(feature)`
+    Check if feature is enabled.
+
+Examples:~
+>lua
+    -- Create diagram programmatically
+    require("alloy").create_pipeline_diagram()
+    
+    -- Get current component
+    local bufnr = vim.api.nvim_get_current_buf()
+    local parser = require("core.parser") 
+    local components = parser.get_parsed_pipeline_data(bufnr)
+    local utils = require("core.utils")
+    local key, data = utils.get_cursor_component(bufnr, components)
+    
+    -- Access configuration
+    local config = require("alloy._core.configuration")
+    local debug_mode = config.get("debug")
+    local close_key = config.get_nested("keymaps.diagram.close_diagram")
+<
+
+ vim:tw=78:ts=8:ft=help:norl:
