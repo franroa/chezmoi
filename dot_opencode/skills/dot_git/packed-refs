@@ -1,0 +1,5 @@
+# pack-refs with: peeled fully-peeled sorted 
+939357371c601b9c5f0c7291dd9310ea50f0b8d4 refs/remotes/origin/copilot/add-mit-license-and-code-of-conduct
+4b92f177b47aa20c9cf85d54222879b3359fc9a1 refs/remotes/origin/fix-skill-run-path-resolution
+cdcd624ad3fd8026deb692e565351854569798dd refs/remotes/origin/main
+ed6aef249c73e30f7f57156ca6d792af20954fc2 refs/remotes/origin/pr-8

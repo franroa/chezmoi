@@ -1,0 +1,217 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "opencode-skills"
+  ],
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app"
+    },
+    "GitLab": {
+      "type": "local",
+      "command": [
+        "npx",
+        "mcp-remote",
+        "https://gitlab.com/api/v4/mcp",
+        "--static-oauth-client-metadata",
+        "{\"scope\": \"mcp\"}"
+      ]
+      // "chrome-devtools": {
+      //   "type": "local",
+      //   "command": [
+      //     "npx",
+      //     "chrom
+      //     "--channel=canary",
+      //     "--headless=true",
+      //     "--isolated=true"
+      //   ]
+      // },
+      // "m
+      //   "type": "loca
+      //   "command": [
+      //     "docker",
+      //     "run",
+      //     "--rm"
+      //     "-i",
+      //     "-v",
+      //     "/hom
+      //     "markitdown-mcp:latest"
+      //   ]
+      // },
+      // "s
+      //   "type": "local",
+      //   "command": [
+      //     "npx",
+      //     "-y",
+      //     "@mod
+      //   ]
+      // },
+      // "b
+      //   "type": "local
+      //   "command": [
+      //     "npx",
+      //     "mcp-r
+      //     "https://mcp.
+      //   ]
+      // },
+      // "g
+      //   "type"
+      //   "command": [
+      //     "mcp-serve
+      //     "--repository",
+      //     "$GIT_REPO"
+      //   ]
+      // },
+      // "m
+      //   "type": "local",
+      //   "command": [
+      //     "podman",
+      //     "run",
+      //     "-i",
+      //     "--rm
+      //     "-e",
+      //     "CONF
+      //     "-e",
+      //     "CONF
+      //     "-e",
+      //     "CONF
+      //     "-e",
+      //     "JIRA
+      //     "-e",
+      //     "JIRA
+      //     "-e",
+      //     "JIRA
+      //     "ghcr.io/sooperse
+      //   ]
+      // },
+      // "t
+      //   "type": "local
+      //   "command": [
+      //     "uvx",
+      //     "--dir
+      //     "$GIT_REPO",
+      //     "mcp-server-
+      //   ]
+      // },
+      // "v
+      //   "type": "local",
+      //   "command": [
+      //     "vectorcod
+      //   ]
+      // },
+      // "t
+      //   "type":
+      //   "command": [
+      //     "uvx",
+      //     "mcp-s
+      //   ]
+      // },
+      // "m
+      //   "type": "
+      //   "command": [
+      //     "npx",
+      //     "-y",
+      //     "@mod
+      //   ]
+      // },
+      // "m
+      //   "type": "loca
+      //   "command": [
+      //     "uvx",
+      //     "mcp-p
+      //   ]
+      // },
+      // "p
+      //   "type": "local",
+      //   "command": [
+      //     "uvx",
+      //     "perpl
+      //   ]
+      // },
+      // "m
+      //   "type": "local"
+      //   "command": [
+      //     "uvx",
+      //     "mcp-o
+      //   ]
+      // },
+      // "n
+      //   "type": "
+      //   "command": [
+      //     "podman",
+      //     "run",
+      //     "--rm"
+      //     "-i",
+      //     "-e",
+      //     "OPEN
+      //     "mcp/notion"
+      //   ]
+      // },
+      // "t
+      //   "type": "loc
+      //   "command": [
+      //     "podman",
+      //     "run",
+      //     "-i",
+      //     "--rm
+      //     "hashic
+      //   ]
+      // },
+      // "o
+      //   "type": "re
+      //   "url": "https://m
+      // },
+      // "g
+      //   "type": "l
+      //   "command": [
+      //     "mcp-grafa
+      //   ]
+      // },
+      // "n
+      //   "type": "local",
+      //   "comman d": [
+      //     "npx",
+      //     "-y",
+      //     "mcp-
+      //   ]
+      // },
+      // "g
+      //   "type": "
+      //   "command": [
+      //     "npx",
+      //     "-y",
+      //     "@mod
+      //   ]
+      // },
+      // "m
+      //   "type": "local",
+      //   "command": [
+      //     "npx",
+      //     "mcp-s
+      //   ]
+      // },
+      // "f
+      //   "type": "loca
+      //   "command": [
+      //     "npx",
+      //     "-y",
+      //     "@mod
+      //     "/home/froa"
+      //   ]
+      // },
+      // "s
+      //   "type": 
+      //   "command": [
+      //     "npx",
+      //     "-y",
+      //     "@mod
+      //   ]
+      // 
+    },
+  },
+}
