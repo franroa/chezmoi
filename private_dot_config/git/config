@@ -1,3 +1,12 @@
+[user]
+	email = franciscoroaprieto@gmail.com
+	name = Francisco Roa Prieto
+  excludesfile = /home/froa/.config/git/gitignore_global
+	signingkey = BF0E77C26FBBEE9B
+
+[includeIf "gitdir:~/Projects/ts/"]
+  path = ~/.gitconfig-work   # <-- Your Conditional Config
+
 [core]
     pager = delta
 
@@ -34,4 +43,16 @@
     context = 250
 
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
+
+
+[commit]
+  template = /home/froa/.config/git/commit_template
+  verbose = true
+  gpgSign = true
+
+[status]
+  short = true
+  branch = true
+  renames = true
+  submoduleSummary = true

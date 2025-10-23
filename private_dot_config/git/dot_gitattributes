@@ -4,3 +4,7 @@
 *.php text eol=lf
 *.js text eol=lf
 *.json text eol=lf
+*.tf text eol=lf
+*.alloy text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
