@@ -23,7 +23,9 @@ fish_add_path /home/froa/dotnet
 # fish_add_path /home/froa/dotnet8
 # fish_add_path /home/froa/.dotnet
 # fish_add_path ~/dotnet6
+fish_add_path /usr/local
 fish_add_path /usr/local/go/bin
+fish_add_path /home/linuxbrew/.linuxbrew/opt/node@22/bin
 fish_add_path /usr/local/go/bin/go
 fish_add_path ~/.cargo/bin
 fish_add_path ~/.local/bin
@@ -76,7 +78,6 @@ set -x OPENCV_LOG_LEVEL ERROR
 #
 # abbr -a --position anywhere --set-cursor -- -h "-h 2>&1 | bat --plain --language=help"
 
-
 # Dnf
 abbr dnfi 'sudo dnf install'
 abbr dnfs 'sudo dnf search'
@@ -92,7 +93,6 @@ abbr dnfu 'sudo dnf upgrade --refresh'
 # abbr tl 'tmux ls'
 # abbr tk 'tmux kill-session -t'
 # abbr mux tmuxinator
-
 
 alias gcl='gitlab-ci-local'
 # Kubernetes
@@ -128,7 +128,6 @@ function akg
     kubectl --kubeconfig $HOME/.kube/$domain-$tier-$region.yaml config rename-context k8s-$domain-$tier-$region $domain-$tier-$region
     kubie ctx $domain-$tier-$region
 end
-
 
 # Files & Directories
 abbr mv "mv -iv"
@@ -167,8 +166,8 @@ alias bt "coredumpctl -1 gdb -A '-ex \"bt\" -q -batch' 2>/dev/null | awk '/Progr
 # abbr tt "tn src/tt.ts"
 
 # Other
-abbr git "env DELTA_FEATURES='+side-by-side' hub"
-abbr hub "env DELTA_FEATURES='+side-by-side' hub"
+abbr git "env DELTA_FEATURES='+side-by-side' git"
+# abbr hub "env DELTA_FEATURES='+side-by-side' hub"
 abbr tg "tgpt -i"
 abbr df "grc /bin/df -h"
 abbr ntop "ultra --monitor"
@@ -270,9 +269,9 @@ function change_nvim_abbreviation
     abbr v K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
 end
 
-if not status --is-login
-    source ~/secrets.fish
-end
+# if not status --is-login
+#     source ~/secrets.fish
+# end
 
 function kubie
     set -gx IS_COMING_FROM_KUBIE TRUE
@@ -295,7 +294,6 @@ end
 #     command k9s
 # end
 
-
 # set fzf_dir_opts --bind "ctrl-o:execute($EDITOR {} &> /dev/tty)"
 # source ~/.asdf/asdf.fish
 
@@ -311,8 +309,8 @@ fzf_configure_bindings --directory=\cf --processes=\cp --git_status=\cs --git_lo
 set fzf_diff_highlighter delta --paging=never --width=200
 
 # Generated for envman. Do not edit.
-test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
-mise activate fish | source
+# test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
+# mise activate fish | source
 
 set _CONDA_ROOT /home/froa/miniconda3
 
@@ -341,15 +339,12 @@ function k --wraps kubectl
     command kubecolor $argv
 end
 
-mcfly init fish | source
-set -gx MCFLY_KEY_SCHEME vim
-set -gx MCFLY_FUZZY 2
-set -gx MCFLY_RESULTS 50
-set -gx MCFLY_PROMPT "❯"
-set -x PATH (pwd)"/git-fuzzy/bin:$PATH"
-
-
-
+# mcfly init fish | source
+# set -gx MCFLY_KEY_SCHEME vim
+# set -gx MCFLY_FUZZY 2
+# set -gx MCFLY_RESULTS 50
+# set -gx MCFLY_PROMPT "❯"
+# set -x PATH (pwd)"/git-fuzzy/bin:$PATH"
 
 # TokyoNight Color Palette
 set -l foreground c0caf5
@@ -387,7 +382,6 @@ set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
 set -g fish_pager_color_selected_background --background=$selection
 
-
 atuin init fish --disable-up-arrow | source
 set -g fish_key_bindings fish_vi_key_bindings
 
@@ -396,7 +390,6 @@ function it -d 'Run Taskfile tasks interactively'
     set -l cmd "task $argv $selected"
     commandline -r $cmd
 end
-
 
 function profile-dotnet --description 'Profile .NET app with perf for perfanno.nvim'
     # Parse arguments
@@ -434,8 +427,6 @@ function profile-dotnet --description 'Profile .NET app with perf for perfanno.n
     echo "✓ Profiling complete! Output: $output"
     echo "Open your code in nvim and press <leader>pla to load annotations"
 end
-
-
 
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
     --highlight-line \

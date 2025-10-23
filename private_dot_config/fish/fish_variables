@@ -123,7 +123,7 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR --export fish_user_paths:/home/froa/go\x1e/home/froa/go/bin\x1e/home/froa/scripts/git\x2dscripts\x1e/home/froa/scripts\x1e/usr/local/cuda\x2d12\x2e8/bin\x1e/home/froa/\x2ekrew/bin\x1e/home/froa/\x2elocal/share/nvm/v22\x2e14\x2e0/bin\x1e/home/froa/\x2efzf/bin\x1e/bin\x1e/usr/local/sbin\x1e/home/froa/\x2eluarocks/bin\x1e/home/froa/\x2elocal/bin\x1e/home/froa/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/home/froa/dotnet\x1e/home/froa/\x2eopencode/bin\x1e/home/froa/\x2edotnet/tools
+SETUVAR --export fish_user_paths:/bin\x1e/usr/local/sbin\x1e/home/froa/\x2elocal/bin\x1e/home/froa/\x2ecargo/bin\x1e/home/linuxbrew/\x2elinuxbrew/opt/node\x4022/bin\x1e/usr/local/go/bin\x1e/usr/local\x1e/home/froa/dotnet\x1e/home/froa/\x2eopencode/bin\x1e/home/froa/\x2edotnet/tools
 SETUVAR grc_plugin_execs:df\x1edig\x1eifconfig\x1emake\x1emount\x1emtr\x1enetstat\x1eping\x1eps\x1etail\x1etraceroute\x1ewdiff\x1eblkid\x1edu\x1ednf\x1eenv\x1eid\x1eip\x1eiostat\x1ejournalctl\x1ekubectl\x1elast\x1elsattr\x1elsblk\x1elspci\x1elsmod\x1elsof\x1egetfacl\x1egetsebool\x1eulimit\x1euptime\x1enmap\x1efdisk\x1efindmnt\x1efree\x1esemanage\x1esar\x1ess\x1esysctl\x1esystemctl\x1etcpdump\x1etune2fs\x1evmstat\x1ew\x1ewho\x1esockstat
 SETUVAR sponge_allow_previously_successful:true
 SETUVAR sponge_delay:2

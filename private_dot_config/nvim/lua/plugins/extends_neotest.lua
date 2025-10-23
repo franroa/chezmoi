@@ -37,18 +37,18 @@ return {
       end
       opts.adapters = adapters
     end
+
     require("neotest").setup({
       log_level = vim.log.levels.TRACE,
       adapters = {
         require("neotest-vstest")({
-          -- log_level = vim.log.levels.DEBUG,
-          -- -- sdk_path = "/home/froa/dotnet/dotnet",
-          -- sdk_path = "/home/froa/dotnet/sdk/8.0.414",
-          -- -- dotnet_executable = "/home/froa/dotnet/dotnet",
-          -- dotnet_executable = "/home/froa/dotnet/sdk/8.0.414",
-          -- solution_selector = function(solutions)
-          --   return nil
-          -- end,
+          build_opts = {
+            additional_args = {
+              "/p:CollectCoverage=true",
+              "/p:CoverletOutputFormat=lcov",
+              "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
+            },
+          },
         }),
         require("neotest-vitest")({
           vitestCommand = "npm test --",

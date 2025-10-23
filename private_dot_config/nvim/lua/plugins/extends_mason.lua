@@ -20,8 +20,8 @@ return {
         "iferr",
         "gotestsum",
         "helm-ls", -- go
-        "helm_ls", -- go
         "stylua",
+        "csharpier",
         "css-lsp",
         "css-variables-language-server",
         "cssmodules-language-server",
@@ -37,14 +37,14 @@ return {
         "csharpier",
       },
     },
-    config = function()
-      require("mason").setup({
-        registries = {
-          "github:mason-org/mason-registry",
-          "github:Crashdummyy/mason-registry",
-        },
-      })
-    end,
+    -- opts = function()
+    --   require("mason").setup({
+    --     registries = {
+    --       "github:mason-org/mason-registry",
+    --       "github:Crashdummyy/mason-registry",
+    --     },
+    --   })
+    -- end,
     -- opts = function(_, opts)
     --   local border = "none"
     --   if vim.g.transparent == true then
