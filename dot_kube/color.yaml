@@ -1,0 +1,8 @@
+preset: protanopia-dark
+# theme:
+#   data:
+#     "null": gray:italic
+#   table:
+#     header: fg=white:bold:underline
+#   stderr:
+#     error: fg=yellow:bg=red:bold

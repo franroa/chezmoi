@@ -1,0 +1,15 @@
+prompt:
+  disable: true
+configs:
+  include:
+    - ~/.kube/config
+    - ~/.kube/*.yml
+    - ~/.kube/*.yaml
+    - ~/.kube/configs/*.yml
+    - ~/.kube/configs/*.yaml
+    - ~/.kube/kubie/*.yml
+    - ~/.kube/kubie/*.yaml
+
+  exclude:
+    - ~/.kube/kubie.yaml
+    - ~/.kube/color.yaml

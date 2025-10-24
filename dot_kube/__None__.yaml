@@ -1,0 +1,37 @@
+apiVersion: v1
+clusters:
+  - cluster:
+      certificate-authority-data: ""
+      server: ""
+    name: "empty"
+contexts:
+  - context:
+      cluster: "empty"
+      user: "empty"
+    name: "__None__"
+current-context: default
+kind: Config
+preferences: {}
+users:
+  - name: empty
+    user:
+      exec:
+        apiVersion: client.authentication.k8s.io/v1beta1
+        args:
+          - --region
+          - eu-west-1
+          - eks
+          - get-token
+          - --cluster-name
+          - francisco
+          - --output
+          - json
+        command: aws
+        env:
+          - name: AWS_PROFILE
+            value: pi-sandbox
+          - name: AWS_EC2_METADATA_DISABLED
+            value: "true"
+        interactiveMode: IfAvailable
+        provideClusterInfo: false
+
