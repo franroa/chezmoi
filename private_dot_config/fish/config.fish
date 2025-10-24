@@ -53,11 +53,9 @@ fish_add_path GPG_TTY=$(tty)
 
 # Fish
 set fish_emoji_width 2
-# set -e fish_greeting
-alias fish_greeting color-test
 alias oil='~/.local/bin/oil-ssh.sh'
 alias ft='~/.local/bin/ft.sh'
-
+set -U fish_greeting ""
 # Go
 # set -x GOPATH ~/go
 fish_add_path $GOPATH $GOPATH/bin
