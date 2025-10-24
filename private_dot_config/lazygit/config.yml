@@ -1,6 +1,7 @@
 gui:
   authorColors: {}
   branchColors: {}
+  enlargedSideViewLocation: "top"
   theme:
     activeBorderColor:
       - "#ff9e64"

@@ -5,7 +5,7 @@
 	signingkey = BF0E77C26FBBEE9B
 
 [includeIf "gitdir:~/Projects/ts/"]
-  path = ~/.gitconfig-work   # <-- Your Conditional Config
+  path = ~/.gitconfig-work
 
 [core]
     pager = delta
