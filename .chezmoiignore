@@ -1,0 +1,9 @@
+**/node_modules/
+**/bin/
+
+**/package-lock.json
+**/pnpm-lock.yaml
+**/yarn.lock
+
+**/tmp/
+**/temp/
