@@ -1,0 +1,7 @@
+fix: ensure directory change succeeds with proper error handling
+
+- Uncomment vim.loop.chdir() to actually change Neovim's working directory
+- Check if worktree path exists before attempting directory change
+- Wrap vim.loop.chdir() with error handling to catch failures
+- Return early if directory change fails to prevent inconsistent state
+- Fixes issue where creating/switching worktrees did not properly change the working directory

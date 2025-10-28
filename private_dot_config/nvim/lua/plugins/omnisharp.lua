@@ -157,14 +157,21 @@ return {
 
             return method_name
           end
+          -- require("neotest").run.run({
+          --   vim.fn.expand("%"),
+          --   dotnet_additional_args = {
+          --     "--no-build",
+          --     "--filter FullyQualifiedName~" .. get_method_name(),
+          --     "/p:CollectCoverage=true",
+          --     "/p:CoverletOutputFormat=lcov",
+          --     "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
+          --   },
+          -- })
           require("neotest").run.run({
             vim.fn.expand("%"),
-            dotnet_additional_args = {
-              "--no-build",
-              "--filter FullyQualifiedName~" .. get_method_name(),
+            extra_args = {
               "/p:CollectCoverage=true",
               "/p:CoverletOutputFormat=lcov",
-              "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
             },
           })
         end,
@@ -172,17 +179,41 @@ return {
         ft = "cs",
       },
       {
+        -- WORKING!
         "<leader>tca",
         function()
+          local function find_test_project()
+            local git_worktree_root = os.getenv("GIT_WORK_TREE")
+
+            -- Search for .csproj files in test directories
+            local handle = io.popen("find " .. git_worktree_root .. " -name '*Tests.csproj' -type f 2>/dev/null")
+            local result = handle:read("*a")
+            handle:close()
+
+            -- Get the first match
+            local project_path = result:match("([^\n]+)")
+
+            if not project_path then
+              error("Could not find test project")
+            end
+
+            return project_path
+          end
+
+          local git_worktree_root = os.getenv("GIT_WORK_TREE")
+          local project_path = find_test_project()
+          local coverage_output = git_worktree_root .. "/coverage/lcov.info"
+
           local task = require("overseer").new_task({
             cmd = "dotnet test "
               .. "--no-build "
+              .. project_path
+              .. " "
               .. "/p:CollectCoverage=true "
               .. "/p:CoverletOutputFormat=lcov "
               .. "/p:CoverletOutput="
-              .. LazyVim.root.git()
-              .. "/coverage/lcov.info",
-            cwd = LazyVim.root.git(),
+              .. coverage_output,
+            cwd = git_worktree_root,
             components = {
               {
                 "on_output_quickfix",
@@ -200,45 +231,46 @@ return {
         desc = "Run ALL with coverage",
         ft = "cs",
       },
-      {
-        "<leader>tcc",
-        function()
-          local function get_class_name()
-            local line_number = vim.api.nvim_win_get_cursor(0)[1]
-            local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-            local class_name = ""
-            for i = line_number, 1, -1 do
-              local line = lines[i]
-              local match = line:match("public class ([%w_]+)")
-              if match then
-                class_name = match
-                break
-              end
-            end
-            return class_name
-          end
-          require("neotest").run.run({
-            vim.fn.expand("%"),
-            msbuild_properties = {
-              CollectCoverage = "true",
-              CoverletOutputFormat = "lcov",
-              CoverletOutput = LazyVim.root.git() .. "/coverage/lcov.info",
-            },
-          })
-          -- require("neotest").run.run({
-          --   vim.fn.expand("%"),
-          --   dotnet_args = {
-          --     "--no-build",
-          --     "--filter FullyQualifiedName~" .. get_class_name(),
-          --     "/p:CollectCoverage=true",
-          --     "/p:CoverletOutputFormat=lcov",
-          --     "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
-          --   },
-          -- })
-        end,
-        desc = "Run class with coverage",
-        ft = "cs",
-      },
+      -- {
+      --   "<leader>tcc",
+      --   function()
+      --     local function get_class_name()
+      --       local line_number = vim.api.nvim_win_get_cursor(0)[1]
+      --       local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+      --       local class_name = ""
+      --       for i = line_number, 1, -1 do
+      --         local line = lines[i]
+      --         local match = line:match("public class ([%w_]+)")
+      --         if match then
+      --           class_name = match
+      --           break
+      --         end
+      --       end
+      --       return class_name
+      --     end
+      --
+      --     require("neotest").run.run({
+      --       vim.fn.expand("%"),
+      --       additional_args = {
+      --         "/p:CollectCoverage=true",
+      --         "/p:CoverletOutputFormat=lcov",
+      --         "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
+      --       },
+      --     })
+      --     -- require("neotest").run.run({
+      --     --   vim.fn.expand("%"),
+      --     --   dotnet_args = {
+      --     --     "--no-build",
+      --     --     "--filter FullyQualifiedName~" .. get_class_name(),
+      --     --     "/p:CollectCoverage=true",
+      --     --     "/p:CoverletOutputFormat=lcov",
+      --     --     "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
+      --     --   },
+      --     -- })
+      --   end,
+      --   desc = "Run class with coverage",
+      --   ft = "cs",
+      -- },
       {
         "<leader>tce",
         function()

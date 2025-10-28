@@ -1,4 +1,6 @@
--- local opt = vim.opt
+--
+local opt = vim.opt
+opt.clipboard = "unnamedplus"
 --
 -- -- opt.wrap = true
 -- -- opt.breakindent = true

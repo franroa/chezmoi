@@ -425,8 +425,19 @@ alias kn='kubie ns'
 alias k kubectl
 alias kneat="kubectl neat get -- pod mimir-ingester-zone-b-0 -oyaml | kubecolor describe pod --kubecolor-stdin"
 alias k kubectl
+alias cat batcat
+alias bat batcat
+alias ls="eza --color=always --icons --group-directories-first"
+alias la 'eza --color=always --icons --group-directories-first --all'
+alias ll 'eza --color=always --icons --group-directories-first --all --long'
+abbr mv "mv -iv"
+abbr cp "cp -riv"
+abbr mkdir "mkdir -vp"
+abbr v nvim
+abbr bat batcat
 
 fish_add_path /usr/local
+fish_add_path /home/froa/.dotnet/tools
 fish_add_path ~/.local/share/nvm/v25.0.0/bin
 fish_add_path ~/dotnet
 set -gx DOTNET_ROOT /home/froa/dotnet
@@ -436,11 +447,13 @@ set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
 set -gx BROWSER "chrome.exe"
 set -g fish_key_bindings fish_vi_key_bindings
-abbr v nvim
+set -gx LS_COLORS (vivid generate tokyonight-storm)
+export DIRENV_LOG_FORMAT=\033\[32mdirenv:\ %s\033\[0m
 
 zoxide init fish | source
 starship init fish | source
 atuin init fish --disable-up-arrow | source
+direnv hook fish | source
 
 fish_config theme choose tokyonight
 

@@ -23,7 +23,9 @@ return {
       pattern = "*.cs",
       callback = function()
         if vim.g.is_coverage_loaded then
-          require("coverage").load_lcov(LazyVim.root.git() .. "/../../coverage/lcov.info")
+          local git_worktree_root = os.getenv("GIT_WORK_TREE")
+          local coverage_output = git_worktree_root .. "/coverage/lcov.info"
+          require("coverage").load_lcov(coverage_output)
         end
       end,
     })
@@ -32,7 +34,9 @@ return {
     {
       "<leader>Ct",
       function()
-        require("coverage").load_lcov(LazyVim.root.git() .. "/../../coverage/lcov.info")
+        local git_worktree_root = os.getenv("GIT_WORK_TREE")
+        local coverage_output = git_worktree_root .. "/coverage/lcov.info"
+        require("coverage").load_lcov(coverage_output)
         require("coverage").toggle()
         vim.g.is_coverage_loaded = not vim.g.is_coverage_loaded
       end,
@@ -43,7 +47,9 @@ return {
       "<leader>Cs",
       function()
         if not vim.g.is_coverage_loaded then
-          require("coverage").load_lcov(LazyVim.root.git() .. "/../../coverage/lcov.info")
+          local git_worktree_root = os.getenv("GIT_WORK_TREE")
+          local coverage_output = git_worktree_root .. "/coverage/lcov.info"
+          require("coverage").load_lcov(coverage_output)
           vim.g.is_coverage_loaded = false
         end
         require("coverage").summary()

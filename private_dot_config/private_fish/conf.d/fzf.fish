@@ -61,6 +61,6 @@ set fzf_diff_highlighter delta --paging=never --width=200
 
 fzf_configure_bindings --history=
 fzf_configure_bindings --directory=\cf --processes=\cp --git_status=\cs --git_log=\co
-bind \ct fzf-file-widget
-bind \ec fzf-cd-widget
+# bind \ct fzf-file-widget
+# bind \ec fzf-cd-widget
 bind \cr fzf-history-widget

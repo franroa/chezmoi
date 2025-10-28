@@ -72,6 +72,7 @@ vim.g.lazyvim_blink_main = true
 return {
   "saghen/blink.cmp",
   enabled = true,
+  build = "cargo +nightly build --release",
   dependencies = {
     -- FIX: Añadidas dependencias necesarias para snippets
     "L3MON4D3/LuaSnip",

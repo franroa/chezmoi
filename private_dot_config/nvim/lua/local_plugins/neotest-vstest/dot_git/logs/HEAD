@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 83cf9a1b6c86d7525801c2f63701ad81cea87f7c Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761561470 +0100	clone: from github.com:franroa/neotest-vstest.git
+83cf9a1b6c86d7525801c2f63701ad81cea87f7c d476659d54ff570978aa5da4dc4506ca12e9c1c7 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761562359 +0100	commit: feat(run): add support for passing additional arguments to test execution
+d476659d54ff570978aa5da4dc4506ca12e9c1c7 d476659d54ff570978aa5da4dc4506ca12e9c1c7 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761564377 +0100	reset: moving to HEAD

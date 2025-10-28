@@ -22,6 +22,7 @@
 ---    clearjumps_on_change = true,
 ---    confirm_telescope_deletions = true,
 ---    autopush = false,
+---    branches_dir = 'branches',  -- organize worktrees under 'branches' folder
 --- }
 ---<
 ---
@@ -34,6 +35,7 @@
 ---@field clearjumps_on_change boolean clear jump list on change
 ---@field confirm_telescope_deletions boolean confirm telescope deletions operations
 ---@field autopush boolean automatically push worktree to origin repo
+---@field branches_dir string|nil directory to organize all worktrees under (e.g., 'branches')
 
 ---@type (fun():GitWorktreeConfig) | GitWorktreeConfig | nil
 vim.g.git_worktree = vim.g.git_worktree
@@ -59,6 +61,10 @@ local GitWorktreeDefaultConfig = {
     -- automatically push worktree to origin repo
     --- @type boolean
     autopush = false,
+
+    -- directory to organize all worktrees under (e.g., 'branches')
+    --- @type string|nil
+    branches_dir = nil,
 }
 
 local git_worktree = vim.g.git_worktree or {}

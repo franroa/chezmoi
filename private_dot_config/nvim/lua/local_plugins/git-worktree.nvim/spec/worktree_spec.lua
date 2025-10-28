@@ -115,6 +115,98 @@ describe('[Worktree]', function()
                 -- Check to make sure directory was switched
                 assert.are.same(expected_path, vim.loop.cwd())
             end)
+            it('should throw error when creating worktree that already exists', function()
+                local wt = 'featB'
+                local input_path = '../' .. wt
+
+                -- Create the worktree first
+                require('git-worktree').create_worktree(input_path, wt)
+                vim.fn.wait(10000, function()
+                    return completed_create and completed_switch
+                end, 1000)
+
+                -- Reset flags for the second attempt
+                reset_variables()
+
+                -- Try to create the same worktree again - should fail
+                require('git-worktree').create_worktree(input_path, wt)
+
+                -- Wait a bit to ensure any callbacks are processed
+                vim.fn.wait(2000, function()
+                    return true
+                end, 500)
+
+                -- The CREATE and SWITCH hooks should not have been called
+                assert.is_false(completed_create)
+                assert.is_false(completed_switch)
+            end)
+
+            it('should throw error when creating worktree that already exists', function()
+                local wt = 'featB'
+                local input_path = '../' .. wt
+
+                -- Create the worktree first
+                require('git-worktree').create_worktree(input_path, wt)
+                vim.fn.wait(10000, function()
+                    return completed_create and completed_switch
+                end, 1000)
+
+                -- Reset flags for the second attempt
+                reset_variables()
+
+                -- Try to create the same worktree again - should fail
+                require('git-worktree').create_worktree(input_path, wt)
+
+                -- Wait a bit to ensure any callbacks are processed
+                vim.fn.wait(2000, function()
+                    return true
+                end, 500)
+
+                -- The CREATE and SWITCH hooks should not have been called
+                assert.is_false(completed_create)
+                assert.is_false(completed_switch)
+            end)
+        end)
+    end)
+            it('able to create a worktree (relative path)', function()
+                local wt = 'featB'
+                local input_path = '../' .. wt
+                local expected_path = working_dir .. Path.path.sep .. wt
+                -- local prev_path = working_dir .. Path.path.sep .. 'master'
+                require('git-worktree').create_worktree(input_path, wt)
+
+                vim.fn.wait(10000, function()
+                    return completed_create and completed_switch
+                end, 1000)
+
+                -- Check to make sure directory was switched
+                assert.are.same(expected_path, vim.loop.cwd())
+            end)
+            it('should throw error when creating worktree that already exists', function()
+                local wt = 'featB'
+                local input_path = '../' .. wt
+
+                -- Create the worktree first
+                require('git-worktree').create_worktree(input_path, wt)
+                vim.fn.wait(10000, function()
+                    return completed_create and completed_switch
+                end, 1000)
+
+                -- Reset flags for the second attempt
+                reset_variables()
+
+                -- Try to create the same worktree again - should fail
+                require('git-worktree').create_worktree(input_path, wt)
+
+                -- Wait a bit to ensure any callbacks are processed
+                vim.fn.wait(2000, function()
+                    return true
+                end, 500)
+
+                -- The CREATE and SWITCH hooks should not have been called
+                assert.is_false(completed_create)
+                assert.is_false(completed_switch)
+            end)
         end)
     end)
 

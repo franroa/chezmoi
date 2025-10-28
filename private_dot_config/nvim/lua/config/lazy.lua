@@ -26,7 +26,7 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         colorscheme = colorscheme,
-      }
+      },
     },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.ui.edgy" },
@@ -84,7 +84,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.refactoring" },
     { import = "lazyvim.plugins.extras.editor.dial" },
     { import = "lazyvim.plugins.extras.editor.mini-move" },
-    { import = "lazyvim.plugins.extras.editor.navic" },
+    -- { import = "lazyvim.plugins.extras.editor.navic" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
     -- { import = "lazyvim.plugins.extras.editor.fzf" },
     -- { import = "lazyvim.plugins.extras.lsp.none-ls" },

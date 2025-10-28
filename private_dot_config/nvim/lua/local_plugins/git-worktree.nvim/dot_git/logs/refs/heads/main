@@ -1,1 +1,7 @@
 0000000000000000000000000000000000000000 c0a3dd3d4f5e3306796b74418448821914d11e7f Francisco Roa <froa@tecnosylva.com> 1744488650 +0200	clone: from https://github.com/franroa/git-worktree.nvim.git
+c0a3dd3d4f5e3306796b74418448821914d11e7f 1a8db617b3b4bf4edae2c5b93bf12dbbc7e5f9e2 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761458639 +0100	commit (merge): merge fork
+1a8db617b3b4bf4edae2c5b93bf12dbbc7e5f9e2 2528b81f6fb40948d780c6873f3957cff61cd885 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761462166 +0100	commit: fix: ensure git operations run from repository root, not from worktree directories
+2528b81f6fb40948d780c6873f3957cff61cd885 3f1659007524847993c1b740771d98cacf1df7bb Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761462414 +0100	commit: fix: avoid sync operations in async callbacks by computing git root at entry points
+3f1659007524847993c1b740771d98cacf1df7bb b68b95fbf4c6cd3bc2adcdfa9a0f685c315936c2 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761462653 +0100	commit: feat: add branches_dir configuration to organize all worktrees in a dedicated folder
+b68b95fbf4c6cd3bc2adcdfa9a0f685c315936c2 6af12a2678eb22f1375764f1f9e78dd84e9884d8 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761462916 +0100	commit: fix: resolve branches_dir paths relative to git root, not current working directory
+6af12a2678eb22f1375764f1f9e78dd84e9884d8 f65a7cea37978147d949a61893f11488a6c3e698 Francisco Roa Prieto <franciscoroaprieto@gmail.com> 1761536014 +0100	commit: fix: ensure directory change succeeds with proper error handling

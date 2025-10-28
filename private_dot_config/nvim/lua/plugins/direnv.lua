@@ -21,6 +21,11 @@ return {
       vim.api.nvim_create_autocmd("BufEnter", {
         callback = function(args)
           vim.cmd("DirenvExport")
+          -- If GIT_WORK_TREE is set, cd into it
+          local git_work_tree = os.getenv("GIT_WORK_TREE")
+          if git_work_tree then
+            vim.cmd("cd " .. git_work_tree)
+          end
         end,
       })
     end,

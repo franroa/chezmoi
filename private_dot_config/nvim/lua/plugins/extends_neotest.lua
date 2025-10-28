@@ -3,7 +3,11 @@ return {
   dependencies = {
     "nvim-neotest/neotest-jest",
     "marilari88/neotest-vitest",
-    "Nsidorenco/neotest-vstest",
+    {
+      "Nsidorenco/neotest-vstest",
+      dir = vim.fn.expand("~/.config/nvim/lua/local_plugins/neotest-vstest"),
+      dev = true,
+    },
   },
   config = function(_, opts)
     opts.consumers = opts.consumers or {}
@@ -41,15 +45,7 @@ return {
     require("neotest").setup({
       log_level = vim.log.levels.TRACE,
       adapters = {
-        require("neotest-vstest")({
-          build_opts = {
-            additional_args = {
-              "/p:CollectCoverage=true",
-              "/p:CoverletOutputFormat=lcov",
-              "/p:CoverletOutput=" .. LazyVim.root.git() .. "/coverage/lcov.info",
-            },
-          },
-        }),
+        require("neotest-vstest")({}),
         require("neotest-vitest")({
           vitestCommand = "npm test --",
           ignoreVitestDependency = true, -- Skip vitest dependency check
