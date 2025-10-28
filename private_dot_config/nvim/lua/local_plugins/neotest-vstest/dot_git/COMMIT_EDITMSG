@@ -1,6 +1,0 @@
-feat(run): add support for passing additional arguments to test execution
-
-Add dotnet_additional_args parameter to allow users to customize test runs with
-options like --no-build, --filter, and /p: MSBuild properties. Arguments are passed
-through the entire execution pipeline from neotest adapter to test runners, with
-automatic escaping for arguments containing spaces.
