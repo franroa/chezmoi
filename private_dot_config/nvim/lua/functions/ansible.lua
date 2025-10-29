@@ -1,6 +1,20 @@
 local M = {}
 
+--- Check if ansible is installed on the system
+local function check_ansible_installation()
+  local result = vim.fn.system("which ansible-vault")
+  if vim.v.shell_error ~= 0 then
+    vim.notify("ansible-vault is not installed or not in PATH", vim.log.levels.ERROR)
+    return false
+  end
+  return true
+end
+
 function M.encrypt_value_with_vault()
+  if not check_ansible_installation() then
+    return
+  end
+
   local bufnr = vim.api.nvim_get_current_buf()
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 
@@ -112,6 +126,10 @@ function M.encrypt_value_with_vault()
 end
 
 function M.decrypt_value_with_vault()
+  if not check_ansible_installation() then
+    return
+  end
+
   local bufnr = vim.api.nvim_get_current_buf()
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 
@@ -124,7 +142,8 @@ function M.decrypt_value_with_vault()
   local current_entry = nil
 
   for i, line in ipairs(lines) do
-    local k = line:match("^([%w_]+):%s*!vault%s*|%s*$")
+    local k = line:match("^%s*([%w_]+):%s*!vault%s*|%s*$")
+
     if k then
       if current_entry then
         table.insert(vault_entries, current_entry)

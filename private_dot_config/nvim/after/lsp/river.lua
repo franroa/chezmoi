@@ -1,5 +1,5 @@
 -- Get the path to your lsp server project
-local lsp_server_path = vim.fn.expand("/home/froa/Projects/alloy/river_lsp/server")
+local lsp_server_path = vim.fn.expand("/home/froa/Projects/alloy/riverlsp/server")
 local lspconfig = require("lspconfig")
 return {
   -- root_dir = lspconfig.util.root_pattern("alloy"),

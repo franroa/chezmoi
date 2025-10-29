@@ -437,10 +437,12 @@ abbr v nvim
 abbr bat batcat
 
 fish_add_path /usr/local
-fish_add_path /home/froa/.dotnet/tools
+fish_add_path $HOME/.dotnet/tools
 fish_add_path ~/.local/share/nvm/v25.0.0/bin
 fish_add_path ~/dotnet
-set -gx DOTNET_ROOT /home/froa/dotnet
+fish_add_path $HOME/bin
+
+set -gx DOTNET_ROOT $HOME/dotnet
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 set -gx EDITOR (which nvim)
 set -gx VISUAL $EDITOR

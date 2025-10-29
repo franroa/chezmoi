@@ -5,8 +5,8 @@ return {
     "marilari88/neotest-vitest",
     {
       "Nsidorenco/neotest-vstest",
-      dir = vim.fn.expand("~/.config/nvim/lua/local_plugins/neotest-vstest"),
-      dev = true,
+      -- dir = vim.fn.expand("~/.config/nvim/lua/local_plugins/neotest-vstest"),
+      -- dev = true,
     },
   },
   config = function(_, opts)

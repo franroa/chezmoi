@@ -10,7 +10,7 @@ local tmpl = {
   builder = function(params)
     return {
       name = "tf apply",
-      cmd = "TF_LOG="
+      cmd = "env -u GIT_DIR -u GIT_WORK_TREE && TF_LOG="
         .. tostring(vim.g.TF_LOG)
         .. " ./run.sh apply "
         .. params.module

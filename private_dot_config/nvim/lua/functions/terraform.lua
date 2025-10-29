@@ -20,6 +20,7 @@ end
 
 function M.apply_action(action, apply_on_target)
   local resource = nil
+  local module = nil
 
   if apply_on_target then
     local current_node = vim.treesitter.get_node({ ignore_injections = false })
@@ -46,6 +47,23 @@ function M.apply_action(action, apply_on_target)
     end
 
     resource = resource_type .. "." .. resource_name
+
+    -- Check if the file is inside a /modules/module_name/ directory
+    local file_path = vim.api.nvim_buf_get_name(0)
+    local module_name = file_path:match("/modules/([^/]+)/")
+
+    if module_name then
+      resource = "module." .. module_name .. "." .. resource
+    end
+  end
+
+  -- Get module from env var if set, otherwise extract from file path
+  if vim.env.TSYL_MODULE then
+    module = vim.env.TSYL_MODULE
+  else
+    local file_path = vim.api.nvim_buf_get_name(0)
+    -- Extract the folder name directly under the terraform folder
+    module = file_path:match("/terraform/([^/]+)/")
   end
 
   require("overseer").run_template({
@@ -54,7 +72,7 @@ function M.apply_action(action, apply_on_target)
       region = vim.env.TSYL_REGION,
       tier = vim.env.TSYL_TIER,
       domain = vim.env.TSYL_DOMAIN,
-      module = vim.env.TSYL_MODULE,
+      module = module,
       action = action,
       target = resource,
     },
@@ -63,6 +81,7 @@ function M.apply_action(action, apply_on_target)
       require("overseer").run_action(task, "open float")
     end
   end)
+
   -- require("overseer").run_template({ name = "Terraform Apply Target" }, function(task)
   --   if task then
   --     require("overseer").run_action(task, "open float")
