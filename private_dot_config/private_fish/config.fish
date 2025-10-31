@@ -434,6 +434,7 @@ abbr mv "mv -iv"
 abbr cp "cp -riv"
 abbr mkdir "mkdir -vp"
 abbr v nvim
+abbr vim nvim
 abbr bat batcat
 
 fish_add_path /usr/local
@@ -441,7 +442,6 @@ fish_add_path $HOME/.dotnet/tools
 fish_add_path ~/.local/share/nvm/v25.0.0/bin
 fish_add_path ~/dotnet
 fish_add_path $HOME/bin
-
 set -gx DOTNET_ROOT $HOME/dotnet
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 set -gx EDITOR (which nvim)
@@ -458,6 +458,8 @@ atuin init fish --disable-up-arrow | source
 direnv hook fish | source
 
 fish_config theme choose tokyonight
+
+fish_vi_key_bindings
 
 # Source all .fish files from the fish config directory (excluding conf.d and functions)
 for file in ~/.config/fish/*.fish
