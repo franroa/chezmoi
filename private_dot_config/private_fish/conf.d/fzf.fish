@@ -64,3 +64,7 @@ fzf_configure_bindings --directory=\cf --processes=\cp --git_status=\cs --git_lo
 # bind \ct fzf-file-widget
 # bind \ec fzf-cd-widget
 bind \cr fzf-history-widget
+
+# Bind Tab to custom handler: first tab shows default completions, second shows fzf
+bind tab __fzf_tab_handler
+bind -M insert tab __fzf_tab_handler
