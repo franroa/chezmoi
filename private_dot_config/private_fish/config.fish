@@ -459,6 +459,14 @@ direnv hook fish | source
 
 fish_config theme choose tokyonight
 
+# Source all .fish files from the fish config directory (excluding conf.d and functions)
+for file in ~/.config/fish/*.fish
+    # Skip this config file itself to avoid loops
+    if not string match -q "*config.fish" $file
+        source $file 2>/dev/null
+    end
+end
+
 # Interactive pod selector with logs
 function klog
     set -l pod (kubectl get pods --all-namespaces -o wide | fzf --header-lines=1 --preview 'kubectl logs --tail=50 {2} -n {1}' --preview-window=down:50%:wrap | awk '{print $2" -n "$1}')

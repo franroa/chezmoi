@@ -171,35 +171,13 @@ if [[ $__fzf_git_fzf ]]; then
 else
   # Redefine this function to change the options
   _fzf_git_fzf() {
-    fzf --layout=reverse \
-    --height 100% \
-    --border-label-pos 2 \
-    --border \
-    --scrollbar='▐' \
-    --padding=1,1 \
-    --color=bg+:#283457 \
-    --color=bg:#24283b \
-    --color=border:#24283b \
-    --color=fg:#c0caf5 \
-    --color=gutter:#16161e \
-    --color=header:#ff9e64 \
-    --color=hl+:#2ac3de \
-    --color=hl:#2ac3de \
-    --color=info:#545c7e \
-    --color=marker:#ff007c \
-    --color=pointer:#ff007c \
-    --color=prompt:#2ac3de \
-    --color=query:#c0caf5:regular \
-    --color=scrollbar:#27a1b9 \
-    --color=separator:#ff9e64 \
-    --color=spinner:#ff007c \
-    --multi \
-    --bind 'ctrl-/:toggle-preview' \
-    --bind 'ctrl-l:clear-query' \
-    --bind 'ctrl-k:kill-line' \
-    --preview-window 'right,70%' --preview-border line \
-    --bind 'ctrl-/:change-preview-window(down,50%|hidden|)' "$@" \
-    --bind 'ctrl-w:change-preview-window(right,30%|right,70%|)'
+    fzf --height 100% \
+      --layout reverse --multi --min-height 20+ --border \
+      --no-separator --header-border horizontal \
+      --border-label-pos 2 \
+      --color 'label:blue' \
+      --preview-window 'right,50%' --preview-border line \
+      --bind 'ctrl-/:change-preview-window(down,50%|hidden|)' "$@"
   }
 fi
 
@@ -215,18 +193,30 @@ __fzf_git=$(readlink -f "$__fzf_git" 2> /dev/null || /usr/bin/ruby --disable-gem
 
 _fzf_git_files() {
   _fzf_git_check || return
-  local root query extract_file_name
-  root=$(git rev-parse --show-toplevel)
-  [[ -n "$(git rev-parse --show-prefix)" ]] && query='!../ '
+  local root query extract_file_name work_tree git_cmd
+  
+  # Check if GIT_DIR is set and use GIT_WORK_TREE
+  if [[ -n "$GIT_DIR" ]]; then
+    work_tree="$GIT_WORK_TREE"
+    # Use --git-dir and --work-tree options for git commands
+    git_cmd="git --git-dir=\"$GIT_DIR\" --work-tree=\"$work_tree\""
+  else
+    work_tree=$(git rev-parse --show-toplevel)
+    git_cmd="git"
+  fi
+  
+  root="$work_tree"
+  [[ -n "$(cd "$work_tree" && eval $git_cmd rev-parse --show-prefix)" ]] && query='!../ '
 
   read -r -d "" extract_file_name <<'EOF'
 "$(cut -c4- <<< {} | sed 's/.* -> //;s/^"//;s/"$//;s/\\"/"/g')"
 EOF
 
   (
-    git -c core.quotePath=false -c color.status=$(__fzf_git_color) status --short --no-branch --untracked-files=all
-    git -c core.quotePath=false ls-files "$root" | grep -vxFf <(
-      git -c core.quotePath=false status --short --untracked-files=no |
+    cd "$work_tree"
+    eval $git_cmd -c core.quotePath=false -c color.status=$(__fzf_git_color) status --short --no-branch --untracked-files=all
+    eval $git_cmd -c core.quotePath=false ls-files "$root" | grep -vxFf <(
+      eval $git_cmd -c core.quotePath=false status --short --untracked-files=no |
         cut -c4- | sed -e 's/.* -> //' -e '/^"[^"\\]*"$/ { s/^"//;s/"$//; }'
       echo :
     ) | sed 's/^/   /'
@@ -237,7 +227,7 @@ EOF
       --bind "ctrl-o:execute-silent:bash \"$__fzf_git\" --list file $extract_file_name" \
       --bind "alt-e:execute:${EDITOR:-vim} $extract_file_name < /dev/tty > /dev/tty" \
       --query "$query" \
-      --preview "git -c core.quotePath=false diff --no-ext-diff --color=$(__fzf_git_color .) -- $extract_file_name | $(__fzf_git_pager); $(__fzf_git_cat) $extract_file_name" "$@" |
+      --preview "cd \"$work_tree\" && eval $git_cmd -c core.quotePath=false diff --no-ext-diff --color=$(__fzf_git_color .) -- $extract_file_name | $(__fzf_git_pager); $(__fzf_git_cat) $extract_file_name" "$@" |
     cut -c4- | sed 's/.* -> //'
 }
 
