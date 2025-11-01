@@ -347,6 +347,7 @@ end
 function __which_key_exit
     set -gx __which_key_active 0
     set -gx __which_key_prefix ""
+    clear
     commandline -f repaint
 end
 
@@ -382,10 +383,11 @@ end
 # Wrapper function for vi normal mode space binding
 function __which_key_vi_normal
     # Only trigger if we're in normal mode (not insert mode)
-    if test "$fish_bind_mode" = "default"
+    # Skip which-key if fzf-git space binding is active
+    if test "$fish_bind_mode" = "default" -a -z "$__fzf_git_space_state"
         which_key
     else
-        # In insert mode or other mode, just insert a space
+        # In insert mode, other mode, or during fzf-git binding, just insert a space
         commandline -i ' '
     end
 end
