@@ -4,6 +4,7 @@ local Git = require('git-worktree.git')
 local Log = require('git-worktree.logger')
 local Hooks = require('git-worktree.hooks')
 local Config = require('git-worktree.config')
+local Jira = require('git-worktree.jira')
 
 local function get_absolute_path(path, git_root)
     -- If branches_dir is configured and path is not absolute, prepend branches_dir
@@ -100,7 +101,9 @@ end
 ---@param path string
 ---@param branch string
 ---@param upstream? string
-function M.create(path, branch, upstream)
+---@param jira_issue? string
+---@param prefix? string
+function M.create(path, branch, upstream, jira_issue, prefix)
     local root = Git.gitroot_dir()
     if root == nil then
         Log.error('Could not determine git root directory')
@@ -122,43 +125,98 @@ function M.create(path, branch, upstream)
         create_wt_job:start()
     end
 
-    Git.has_worktree(absolute_path, branch, root, function(found)
-        if found then
-            Log.error('Cannot create worktree: path "%s" or branch "%s" already exists.', path, branch)
-            vim.notify(
-                string.format('Worktree at "%s" or branch "%s" already exists', path, branch),
-                vim.log.levels.WARN
-            )
-            return
-        end
-
-        if branch == '' then
-            -- detached head
-            schedule(absolute_path, nil, false, nil, false)
-            return
-        end
-
-        if upstream == nil then
-            Git.has_branch(branch, nil, root, function(found_branch)
-                schedule(absolute_path, branch, found_branch, nil, false)
-            end)
-            return
-        end
-
-        Git.has_branch(upstream, { '--all' }, root, function(found_upstream)
-            if found_upstream and branch == upstream then
-                -- if a remote branch, default to `basename $branch` like git does
-                branch = branch:match('([^/]+)$')
+    local proceed_with_creation = function()
+        Git.has_worktree(absolute_path, branch, root, function(found)
+            if found then
+                Log.error('Cannot create worktree: path "%s" or branch "%s" already exists.', path, branch)
+                vim.notify(
+                    string.format('Worktree at "%s" or branch "%s" already exists', path, branch),
+                    vim.log.levels.WARN
+                )
+                return
             end
-            Git.has_branch(branch, nil, root, function(found_branch)
-                if found_upstream and found_branch then
-                    Log.error('Branch "%s" already exists', branch)
-                    return
+
+            if branch == '' then
+                -- detached head
+                schedule(absolute_path, nil, false, nil, false)
+                return
+            end
+
+            if upstream == nil then
+                Git.has_branch(branch, nil, root, function(found_branch)
+                    schedule(absolute_path, branch, found_branch, nil, false)
+                end)
+                return
+            end
+
+            Git.has_branch(upstream, { '--all' }, root, function(found_upstream)
+                if found_upstream and branch == upstream then
+                    -- if a remote branch, default to `basename $branch` like git does
+                    branch = branch:match('([^/]+)$')
                 end
-                schedule(absolute_path, branch, found_branch, upstream, found_upstream)
+                Git.has_branch(branch, nil, root, function(found_branch)
+                    if found_upstream and found_branch then
+                        Log.error('Branch "%s" already exists', branch)
+                        return
+                    end
+                    schedule(absolute_path, branch, found_branch, upstream, found_upstream)
+                end)
             end)
         end)
-    end)
+    end
+
+    -- Add prefix to path and branch if provided (but not for JIRA-derived names, which will be prefixed in JIRA section)
+    if not jira_issue or jira_issue == '' then
+        if prefix and prefix ~= '' then
+            path = prefix .. '/' .. path
+            branch = prefix .. '/' .. branch
+            -- Recalculate absolute_path with the new prefixed path
+            absolute_path = get_absolute_path(path, root)
+        end
+    end
+    
+    -- If JIRA issue is provided, fetch the summary and use it to generate branch/path names
+     if jira_issue and jira_issue ~= '' then
+         Log.info('Fetching JIRA issue information for: %s', jira_issue)
+         vim.notify('Fetching JIRA issue information...', vim.log.levels.INFO)
+         
+         Jira.fetch_issue_info(jira_issue, function(issue_summary, error)
+             if error then
+                 Log.error('Failed to fetch JIRA issue: %s', error)
+                 vim.notify('Failed to fetch JIRA issue: ' .. error, vim.log.levels.ERROR)
+                 -- Continue without JIRA summary
+                 proceed_with_creation()
+                 return
+             end
+             
+               if issue_summary then
+                   -- If path equals jira_issue (from create_from_jira), use JIRA summary as path/branch
+                   if path == jira_issue and branch == jira_issue then
+                       -- Create branch/path from JIRA issue key and summary
+                       path = jira_issue .. '_' .. issue_summary
+                       branch = path
+                       
+                       -- Apply prefix if provided
+                       if prefix and prefix ~= '' then
+                           path = prefix .. '/' .. path
+                           branch = prefix .. '/' .. branch
+                       end
+                       Log.info('Using JIRA-derived path/branch: %s', path)
+                   else
+                       -- Append JIRA issue key and summary to the existing path
+                       path = path .. '/' .. jira_issue .. '_' .. issue_summary
+                       Log.info('Using JIRA-enhanced path: %s', path)
+                   end
+                   vim.notify('Creating worktree: ' .. path, vim.log.levels.INFO)
+                   -- Update the absolute_path for creation
+                   absolute_path = get_absolute_path(path, root)
+               end
+              
+              proceed_with_creation()
+         end)
+     else
+         proceed_with_creation()
+     end
 end
 
 --- DELETE ---

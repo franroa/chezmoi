@@ -23,6 +23,13 @@ return {
         branches_dir = "branches",
       }
 
+      -- JIRA configuration
+      vim.g.jira_config = {
+        url = "https://technosylva.atlassian.net/",
+        email = os.getenv("JIRA_EMAIL"),
+        api_token = os.getenv("JIRA_API_TOKEN"),
+      }
+
       -- Setup hooks for automatic directory changes and notifications
       local Hooks = require("git-worktree.hooks")
 
@@ -55,7 +62,7 @@ return {
             abs_path = Path:new(git_root, path):absolute()
           end
 
-          local env_file = git_root .. "/.env"
+          local env_file = git_root .. "/.envrc"
           local worktree_root = abs_path
           -- In a git worktree, the actual git dir is in the main repo's .git/worktrees/<name>
           -- Get the worktree directory name
@@ -77,7 +84,7 @@ return {
             file:close()
             vim.fn.system("direnv allow .")
           else
-            vim.notify("Failed to create .env at: " .. env_file, vim.log.levels.WARN)
+            vim.notify("Failed to create .envrc at: " .. env_file, vim.log.levels.WARN)
           end
 
           -- Change to the new worktree directory
@@ -121,25 +128,26 @@ return {
             local cwd = vim.fs.normalize(opts and opts.cwd or uv.cwd() or ".") or nil
             cwd = Snacks.git.get_root(cwd)
             local current = Git.toplevel_dir()
-            return require("snacks.picker.source.proc").proc({
-              opts,
-              {
-                cwd = cwd,
-                cmd = "git",
-                args = args,
-                transform = function(item)
-                  item.cwd = cwd
-                  local fields = vim.split(string.gsub(item.text, "%s+", " "), " ")
-                  item.path = fields[1]
-                  item.current = current == item.path
-                  item.sha = fields[2]
-                  item.branch = fields[3]
-                  if item.sha == "(bare)" then
-                    return false
-                  end
-                end,
-              },
-            }, ctx)
+            
+            -- Merge options with proc-specific config
+            local proc_opts = vim.tbl_extend("force", opts or {}, {
+              cwd = cwd,
+              cmd = "git",
+              args = args,
+              transform = function(item)
+                item.cwd = cwd
+                local fields = vim.split(string.gsub(item.text, "%s+", " "), " ")
+                item.path = fields[1]
+                item.current = current == item.path
+                item.sha = fields[2]
+                item.branch = fields[3]
+                if item.sha == "(bare)" then
+                  return false
+                end
+              end,
+            })
+            
+            return require("snacks.picker.source.proc").proc(proc_opts, ctx)
           end
 
           local format = function(item, _)
@@ -166,14 +174,14 @@ return {
             require("git-worktree").switch_worktree(worktree_path)
           end
 
-           local config = {
-             all = false,
-             preview = "none",
-             finder = finder,
-             format = format,
-             layout = {
-               preview = false,
-             },
+          local config = {
+            all = false,
+            preview = "none",
+            finder = finder,
+            format = format,
+            layout = {
+              preview = false,
+            },
             confirm = switch_worktree,
             multiselect = true,
             actions = {
@@ -182,14 +190,14 @@ return {
                 local Snacks = require("snacks")
                 local git_worktree = require("git-worktree")
                 local current_path = Git.toplevel_dir()
-                
+
                 -- Get selected items (handles both single and multiselect)
                 local items_to_delete = picker:selected()
                 if not items_to_delete or #items_to_delete == 0 then
                   vim.notify("No worktree selected", vim.log.levels.WARN)
                   return
                 end
-                
+
                 -- Check if any selected item is the current worktree
                 for _, sel_item in ipairs(items_to_delete) do
                   if sel_item.current or sel_item.path == current_path then
@@ -197,30 +205,25 @@ return {
                     return
                   end
                 end
-                
+
                 -- Build confirmation message
                 local paths = {}
                 for _, sel_item in ipairs(items_to_delete) do
                   table.insert(paths, sel_item.path)
                 end
-                local msg = #paths == 1 
-                  and ("Delete worktree %q?"):format(paths[1])
+                local msg = #paths == 1 and ("Delete worktree %q?"):format(paths[1])
                   or ("Delete %d worktrees?"):format(#paths)
-                
-                Snacks.picker.select(
-                  { "Yes", "No" },
-                  { prompt = msg },
-                  function(_, idx)
-                    if idx ~= 1 then
-                      vim.notify("Deletion cancelled", vim.log.levels.INFO)
-                      return
-                    end
-                    picker:close()
-                    for _, sel_item in ipairs(items_to_delete) do
-                      git_worktree.delete_worktree(sel_item.path, false)
-                    end
+
+                Snacks.picker.select({ "Yes", "No" }, { prompt = msg }, function(_, idx)
+                  if idx ~= 1 then
+                    vim.notify("Deletion cancelled", vim.log.levels.INFO)
+                    return
                   end
-                )
+                  picker:close()
+                  for _, sel_item in ipairs(items_to_delete) do
+                    git_worktree.delete_worktree(sel_item.path, false)
+                  end
+                end)
               end,
             },
             win = {
@@ -258,7 +261,21 @@ return {
         function()
           require("snacks-worktree").create_worktree()
         end,
-        desc = "Create Worktree",
+        desc = "Create Worktree (from existing branch)",
+      },
+      {
+        "<leader>gwN",
+        function()
+          require("snacks-worktree").create_from_jira()
+        end,
+        desc = "Create Worktree from JIRA (requires JIRA issue)",
+      },
+      {
+        "<leader>gwn",
+        function()
+          require("snacks-worktree").create_new_worktree()
+        end,
+        desc = "Create New Worktree with new branch",
       },
       {
         "<leader>gwd",
@@ -275,32 +292,33 @@ return {
           end
 
           -- Open worktree picker to select which one to delete
-          Snacks.picker {
+          Snacks.picker({
             all = false,
             preview = "none",
             finder = function(opts, ctx)
               local args = { "worktree", "list" }
               local cwd = vim.fs.normalize(opts and opts.cwd or vim.uv.cwd() or ".") or nil
               cwd = Snacks.git.get_root(cwd)
-              return require("snacks.picker.source.proc").proc({
-                opts,
-                {
-                  cwd = cwd,
-                  cmd = "git",
-                  args = args,
-                  transform = function(item)
-                    item.cwd = cwd
-                    local fields = vim.split(string.gsub(item.text, "%s+", " "), " ")
-                    item.path = fields[1]
-                    item.current = current_path == item.path
-                    item.sha = fields[2]
-                    item.branch = fields[3]
-                    if item.sha == "(bare)" then
-                      return false
-                    end
-                  end,
-                },
-              }, ctx)
+              
+              -- Merge options with proc-specific config
+              local proc_opts = vim.tbl_extend("force", opts or {}, {
+                cwd = cwd,
+                cmd = "git",
+                args = args,
+                transform = function(item)
+                  item.cwd = cwd
+                  local fields = vim.split(string.gsub(item.text, "%s+", " "), " ")
+                  item.path = fields[1]
+                  item.current = current_path == item.path
+                  item.sha = fields[2]
+                  item.branch = fields[3]
+                  if item.sha == "(bare)" then
+                    return false
+                  end
+                end,
+              })
+              
+              return require("snacks.picker.source.proc").proc(proc_opts, ctx)
             end,
             format = function(item, _)
               local a = Snacks.picker.util.align
@@ -320,24 +338,45 @@ return {
               preview = false,
             },
             confirm = function(picker, item)
-              if item.current then
-                vim.notify("Cannot delete the current worktree", vim.log.levels.WARN)
+              -- Get selected items (handles both single and multiselect)
+              local items_to_delete = picker:selected()
+              if not items_to_delete or #items_to_delete == 0 then
+                vim.notify("No worktree selected", vim.log.levels.WARN)
                 return
               end
+
+              -- Check if any selected item is the current worktree
+              for _, sel_item in ipairs(items_to_delete) do
+                if sel_item.current or sel_item.path == current_path then
+                  vim.notify("Cannot delete the current worktree", vim.log.levels.WARN)
+                  return
+                end
+              end
+
+              -- Build confirmation message
+              local paths = {}
+              for _, sel_item in ipairs(items_to_delete) do
+                table.insert(paths, sel_item.path)
+              end
+              local msg = #paths == 1 and ("Delete worktree %q?"):format(paths[1])
+                or ("Delete %d worktrees?"):format(#paths)
+
               Snacks.picker.select(
                 { "Yes", "No" },
-                { prompt = ("Delete worktree %q?"):format(item.path) },
+                { prompt = msg },
                 function(_, idx)
                   if idx ~= 1 then
                     vim.notify("Deletion cancelled", vim.log.levels.INFO)
                     return
                   end
                   picker:close()
-                  git_worktree.delete_worktree(item.path, false)
+                  for _, sel_item in ipairs(items_to_delete) do
+                    git_worktree.delete_worktree(sel_item.path, false)
+                  end
                 end
               )
             end,
-          }
+          })
         end,
         desc = "Delete Worktree",
       },

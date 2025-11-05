@@ -107,13 +107,19 @@ local delete_worktree = function(picker, item)
     end)
 end
 
--- Create a prompt to get the path of the new worktree
+-- Create a prompt to get the path of the new worktree (for existing branch)
 -- @param cb fun(path: string): the callback to call with the path
 -- @return nil
 local create_input_prompt = function(cb)
     vim.ui.input({
         prompt = 'Path to subtree',
-    }, cb)
+    }, function(path)
+        if not path or path == '' then
+            cb(nil)
+            return
+        end
+        cb(path)
+    end)
 end
 
 -- Get existing worktrees mapped by branch
@@ -175,28 +181,101 @@ function snacks_worktree.create_worktree()
                 return
             end
             
-            create_input_prompt(function(name)
-                if name == '' then
-                    name = branch
-                end
-                
-                -- Check if the worktree path already exists in the branches directory
-                local git_root = Git.toplevel_dir()
-                if git_root then
-                    local branches_dir = git_root .. '/branches'
-                    local worktree_path = branches_dir .. '/' .. name
-                    
-                    local stat = uv.fs_stat(worktree_path)
-                    if stat and stat.type == 'directory' then
-                        Snacks.notify.warn('Worktree path already exists: ' .. worktree_path, { title = 'Worktree' })
-                        return
-                    end
-                end
-                
-                git_worktree.create_worktree(name, branch)
-            end)
+             create_input_prompt(function(name)
+                  if not name or name == '' then
+                      name = branch
+                  end
+                  
+                  -- Check if the worktree path already exists in the branches directory
+                  local git_root = Git.toplevel_dir()
+                  if git_root then
+                      local branches_dir = git_root .. '/branches'
+                      local worktree_path = branches_dir .. '/' .. name
+                      
+                      local stat = uv.fs_stat(worktree_path)
+                      if stat and stat.type == 'directory' then
+                          Snacks.notify.warn('Worktree path already exists: ' .. worktree_path, { title = 'Worktree' })
+                          return
+                      end
+                  end
+                  
+                  git_worktree.create_worktree(name, branch, nil)
+              end)
         end,
     }
+end
+
+-- Get conventional commit prefix via selection
+-- @param cb fun(prefix: string|nil): callback with selected prefix or nil if cancelled
+-- @return nil
+local function select_commit_prefix(cb)
+    local prefixes = { 'feat', 'fix', 'chore', 'docs', 'style', 'refactor', 'perf', 'test' }
+    
+    Snacks.picker.select(prefixes, {
+        prompt = 'Select conventional commit prefix (or ESC to skip)',
+    }, function(choice)
+        cb(choice)
+    end)
+end
+
+function snacks_worktree.create_new_worktree()
+    -- First, select the prefix
+    select_commit_prefix(function(prefix)
+        if prefix == nil then
+            Snacks.notify.info('Cancelled', { title = 'Create Worktree' })
+            return
+        end
+        
+        -- Then prompt for branch name
+        vim.ui.input({
+            prompt = 'New branch name (will be used as worktree path)',
+        }, function(branch)
+            if not branch or branch == '' then
+                Snacks.notify.info('Cancelled', { title = 'Create Worktree' })
+                return
+            end
+            
+            -- Check if the worktree path already exists
+            local git_root = Git.toplevel_dir()
+            if git_root then
+                local branches_dir = git_root .. '/branches'
+                local prefixed_branch = prefix .. '/' .. branch
+                local worktree_path = branches_dir .. '/' .. prefixed_branch
+                
+                local stat = uv.fs_stat(worktree_path)
+                if stat and stat.type == 'directory' then
+                    Snacks.notify.warn('Worktree path already exists: ' .. worktree_path, { title = 'Create Worktree' })
+                    return
+                end
+            end
+            
+            git_worktree.create_worktree(branch, branch, nil, nil, prefix)
+        end)
+    end)
+end
+
+function snacks_worktree.create_from_jira()
+    -- First, select the prefix
+    select_commit_prefix(function(prefix)
+        if prefix == nil then
+            Snacks.notify.info('Cancelled', { title = 'Create Worktree from JIRA' })
+            return
+        end
+        
+        -- Then prompt for JIRA issue key
+        vim.ui.input({
+            prompt = 'JIRA issue key (e.g., PROJ-123)',
+        }, function(jira_issue)
+            if not jira_issue or jira_issue == '' then
+                Snacks.notify.info('Cancelled', { title = 'Create Worktree from JIRA' })
+                return
+            end
+            
+            -- Create worktree with JIRA issue - branch name will be derived from JIRA
+            -- The create function will fetch the JIRA summary and use it to generate branch/path names
+            git_worktree.create_worktree(jira_issue, jira_issue, nil, jira_issue, prefix)
+        end)
+    end)
 end
 
 local finder = function(opts, ctx)
@@ -204,26 +283,27 @@ local finder = function(opts, ctx)
     local cwd = vim.fs.normalize(opts and opts.cwd or uv.cwd() or '.') or nil
     cwd = Snacks.git.get_root(cwd)
     local current = Git.toplevel_dir()
-    return require('snacks.picker.source.proc').proc({
-        opts,
-        {
-            cwd = cwd,
-            cmd = 'git',
-            args = args,
-            ---@param item snacks.picker.finder.Item
-            transform = function(item)
-                item.cwd = cwd
-                local fields = vim.split(string.gsub(item.text, '%s+', ' '), ' ')
-                item.path = fields[1]
-                item.current = current == item.path
-                item.sha = fields[2]
-                item.branch = fields[3]
-                if item.sha == '(bare)' then
-                    return false
-                end
-            end,
-        },
-    }, ctx)
+    
+    -- Merge options with proc-specific config
+    local proc_opts = vim.tbl_extend('force', opts or {}, {
+        cwd = cwd,
+        cmd = 'git',
+        args = args,
+        ---@param item snacks.picker.finder.Item
+        transform = function(item)
+            item.cwd = cwd
+            local fields = vim.split(string.gsub(item.text, '%s+', ' '), ' ')
+            item.path = fields[1]
+            item.current = current == item.path
+            item.sha = fields[2]
+            item.branch = fields[3]
+            if item.sha == '(bare)' then
+                return false
+            end
+        end,
+    })
+    
+    return require('snacks.picker.source.proc').proc(proc_opts, ctx)
 end
 
 local format = function(item, _)

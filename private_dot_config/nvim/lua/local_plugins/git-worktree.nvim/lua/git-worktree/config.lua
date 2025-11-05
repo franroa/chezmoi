@@ -23,6 +23,8 @@
 ---    confirm_telescope_deletions = true,
 ---    autopush = false,
 ---    branches_dir = 'branches',  -- organize worktrees under 'branches' folder
+---    jira_url = 'https://technosylva.atlassian.net',  -- JIRA instance URL
+---    jira_email = 'user@example.com',  -- JIRA email
 --- }
 ---<
 ---
@@ -36,6 +38,9 @@
 ---@field confirm_telescope_deletions boolean confirm telescope deletions operations
 ---@field autopush boolean automatically push worktree to origin repo
 ---@field branches_dir string|nil directory to organize all worktrees under (e.g., 'branches')
+---@field jira_url string|nil JIRA instance URL (e.g., 'https://technosylva.atlassian.net')
+---@field jira_email string|nil email for JIRA authentication
+---@field jira_token string|nil API token for JIRA authentication
 
 ---@type (fun():GitWorktreeConfig) | GitWorktreeConfig | nil
 vim.g.git_worktree = vim.g.git_worktree
@@ -65,6 +70,18 @@ local GitWorktreeDefaultConfig = {
     -- directory to organize all worktrees under (e.g., 'branches')
     --- @type string|nil
     branches_dir = nil,
+
+    -- JIRA instance URL (e.g., 'https://technosylva.atlassian.net')
+    --- @type string|nil
+    jira_url = nil,
+
+    -- email for JIRA authentication (defaults to $USER@tecnosylva.com if not set)
+    --- @type string|nil
+    jira_email = nil,
+
+    -- API token for JIRA authentication (defaults to JIRA_API_TOKEN env var)
+    --- @type string|nil
+    jira_token = nil,
 }
 
 local git_worktree = vim.g.git_worktree or {}

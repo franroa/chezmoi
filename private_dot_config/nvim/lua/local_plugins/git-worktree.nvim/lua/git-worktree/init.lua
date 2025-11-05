@@ -32,8 +32,10 @@ end
 ---@param path string
 ---@param branch string
 ---@param upstream? string
-function M.create_worktree(path, branch, upstream)
-    Worktree.create(path, branch, upstream)
+---@param jira_issue? string
+---@param prefix? string
+function M.create_worktree(path, branch, upstream, jira_issue, prefix)
+    Worktree.create(path, branch, upstream, jira_issue, prefix)
 end
 
 --Delete a worktree

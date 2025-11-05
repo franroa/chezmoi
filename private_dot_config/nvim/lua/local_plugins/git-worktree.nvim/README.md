@@ -144,6 +144,58 @@ if it does not run the following
 git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 ```
 
+## JIRA Integration
+
+This plugin supports optional JIRA integration that can automatically fetch issue information and include it in your worktree directory names.
+
+### Configuration
+
+To enable JIRA integration, configure the following in your Neovim setup:
+
+```lua
+vim.g.git_worktree = {
+    -- ... other config ...
+    jira_url = 'https://your-instance.atlassian.net',  -- Your JIRA instance URL
+    jira_email = 'your-email@example.com',              -- Your JIRA email (optional)
+    -- jira_token is read from JIRA_API_TOKEN environment variable or set it here
+}
+```
+
+Alternatively, set environment variables:
+
+```bash
+export JIRA_URL='https://your-instance.atlassian.net'
+export JIRA_EMAIL='your-email@example.com'
+export JIRA_API_TOKEN='your-api-token'
+```
+
+### Usage
+
+When creating a worktree via Snacks picker or direct API call, you can now optionally provide a JIRA issue key:
+
+**Via Snacks Picker:**
+1. Run `:Telescope git_worktree create_git_worktree` (or equivalent Snacks command)
+2. Select a branch
+3. Enter the worktree path (or press enter for default)
+4. Enter a JIRA issue key (e.g., `PROJ-123`) or leave blank to skip
+
+The plugin will fetch the issue summary and create a directory like:
+```
+branches/my-feature/PROJ-123_Fix_Critical_Bug
+```
+
+**Via Lua API:**
+```lua
+require('git-worktree').create_worktree('my-path', 'my-branch', nil, 'PROJ-123')
+```
+
+### How It Works
+
+1. When a JIRA issue key is provided, the plugin makes an authenticated request to your JIRA API
+2. The issue summary is fetched using the configured JIRA credentials
+3. The summary text is formatted (spaces and hyphens converted to underscores)
+4. The formatted summary is appended to the worktree directory name for easy identification
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [neovim-shield]: https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white
