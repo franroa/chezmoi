@@ -10,7 +10,7 @@ local tmpl = {
         -- "show_spinner",
         { "unique", replace = true },
       },
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

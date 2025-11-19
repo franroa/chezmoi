@@ -6,7 +6,10 @@ local tmpl = {
       cmd = "dotnet ef migrations remove --force --project ../"
         .. os.getenv("MIGRATIONS_PROJECT_PREFIX")
         .. ".Infraestructure",
-      cwd = LazyVim.root.git() .. "/src/services/" .. os.getenv("MIGRATIONS_PROJECT_PREFIX") .. ".Apply.Migrations",
+      cwd = require("functions.git_root")
+        .. "/src/services/"
+        .. os.getenv("MIGRATIONS_PROJECT_PREFIX")
+        .. ".Apply.Migrations",
     }
   end,
 }

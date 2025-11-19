@@ -4,7 +4,7 @@ local tmpl = {
     return {
       name = "Restore .NET App",
       cmd = "dotnet restore --configfile " .. os.getenv("NUGET_CONFIG"),
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

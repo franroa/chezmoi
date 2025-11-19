@@ -9,7 +9,7 @@ local tmpl = {
       -- params = {
       --   file = LazyVim.root.git() .. "/src",
       -- },
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
       components = {
         -- We don't care to keep this around as long as most tasks
         { "restart_on_save", paths = { LazyVim.root.git() } },

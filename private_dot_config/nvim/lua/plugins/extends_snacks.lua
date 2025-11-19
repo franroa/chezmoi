@@ -2,23 +2,23 @@
 -- https://linkarzu.com/posts/neovim/snacks-picker/
 --#region
 
-vim.keymap.set("n", "<leader>ap", function()
+vim.keymap.set("n", "<leader>oap", function()
   local filename = vim.fn.expand("%:t")
   if filename == "inventory.yaml" then
     require("functions.snacks_pickers").pick_playbook_with_current_host()
   else
     require("functions.snacks_pickers").pick_server()
   end
-end)
-vim.keymap.set("n", "<leader>aP", function()
+end, { desc = "Pick Ansible playbook" })
+vim.keymap.set("n", "<leader>oas", function()
   require("functions.snacks_pickers").pick_server()
-end)
-vim.keymap.set("n", "<leader>aVd", function()
+end, { desc = "Pick Ansible server" })
+vim.keymap.set("n", "<leader>oad", function()
   require("functions.ansible").decrypt_value_with_vault()
-end)
-vim.keymap.set("n", "<leader>aVe", function()
+end, { desc = "decrypt value with Ansible Vault" })
+vim.keymap.set("n", "<leader>oae", function()
   require("functions.ansible").encrypt_value_with_vault()
-end)
+end, { desc = "encrypt value with Ansible Vault" })
 --
 vim.keymap.set("n", "<leader>Ff", function()
   require("snacks").picker.lsp_workspace_symbols({

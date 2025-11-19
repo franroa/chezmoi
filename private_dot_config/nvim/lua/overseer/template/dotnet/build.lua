@@ -30,7 +30,7 @@ local tmpl = {
           close = true,
         },
       },
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

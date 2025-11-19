@@ -57,7 +57,7 @@ local tmpl = {
 
     return {
       cmd = cmd_str,
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

@@ -62,6 +62,7 @@ function M.apply_action(action, apply_on_target)
     module = vim.env.TSYL_MODULE
   else
     local file_path = vim.api.nvim_buf_get_name(0)
+    vim.notify(file_path)
     -- Extract the folder name directly under the terraform folder
     module = file_path:match("/terraform/([^/]+)/")
   end

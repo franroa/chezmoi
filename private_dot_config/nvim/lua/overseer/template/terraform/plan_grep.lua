@@ -19,7 +19,7 @@ local tmpl = {
         .. " "
         .. params.region
         .. ' 2>/dev/null | grep -E "^s*#s"',
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

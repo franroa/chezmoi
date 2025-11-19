@@ -6,7 +6,7 @@ local tmpl = {
       -- name = "Build App " .. require("easy-dotnet").get_debug_dll().relative_project_path:match("([^/]+)$"),
       name = "skaffold",
       cmd = "skaffold dev",
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

@@ -9,7 +9,7 @@ local tmpl = {
     return {
       name = "ssh tunnel",
       cmd = " ssh -N " .. params.host,
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

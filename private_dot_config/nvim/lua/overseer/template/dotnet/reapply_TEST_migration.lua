@@ -15,7 +15,10 @@ local tmpl = {
       --   .. ".Infraestructure && dotnet ef migrations add TEST --project ../"
       --   .. os.getenv("MIGRATIONS_PROJECT_PREFIX")
       --   .. ".Infraestructure  && dotnet ef database update",
-      cwd = LazyVim.root.git() .. "/src/services/" .. os.getenv("MIGRATIONS_PROJECT_PREFIX") .. ".Apply.Migrations",
+      cwd = require("functions.git_root")
+        .. "/src/services/"
+        .. os.getenv("MIGRATIONS_PROJECT_PREFIX")
+        .. ".Apply.Migrations",
     }
   end,
 }

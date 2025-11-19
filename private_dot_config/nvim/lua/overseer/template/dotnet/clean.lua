@@ -11,7 +11,7 @@ local tmpl = {
       -- params = {
       --   file = LazyVim.root.git() .. "/src",
       -- },
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
       -- components = {
       --   { "wait_for_it_if_exists", task_names = {
       --     "Clear Nuget Cache",

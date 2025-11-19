@@ -18,7 +18,7 @@ local tmpl = {
         .. params.tier
         .. " "
         .. params.region,
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }

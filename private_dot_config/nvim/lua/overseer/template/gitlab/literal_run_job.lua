@@ -11,7 +11,7 @@ local tmpl = {
       cmd = " gitlab-ci-local  "
         .. params.job
         .. ' --volume /var/run/docker.sock:/var/run/docker.sock  --variable CI_DEPLOY_USER="$CI_DEPLOY_USER" --variable CI_DEPLOY_PASSWORD="$GITLAB_TOKEN"  ',
-      cwd = LazyVim.root.git(),
+      cwd = require("functions.git_root"),
     }
   end,
 }
