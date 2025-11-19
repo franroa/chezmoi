@@ -30,7 +30,12 @@ end, { desc = "Live fuzzy search" })
 -- Dynamic keymaps for Taskfile targets
 local function create_taskfile_keymaps()
   -- Get the current working directory for task command
-  local cwd = LazyVim and LazyVim.root.git() or vim.fn.getcwd()
+  local cwd = nil
+  if os.getenv("GIT_WORK_TREE") == nil then
+    cwd = LazyVim and LazyVim.root.git() or vim.fn.getcwd()
+  else
+    cwd = os.getenv("GIT_WORK_TREE")
+  end
 
   -- Execute task --list-all to get available targets with descriptions
   local handle = io.popen("cd " .. vim.fn.shellescape(cwd) .. " && task --list-all 2>/dev/null")
@@ -82,7 +87,7 @@ local function create_taskfile_keymaps()
       used_keys[first_char] = true
 
       local key = keymap_base .. first_char
-      local desc = "󰚌 " .. target_info.name .. ": " .. target_info.description
+      local desc = " " .. target_info.name .. ": " .. target_info.description
 
       vim.keymap.set("n", key, function()
         require("overseer").run_template({
@@ -108,7 +113,7 @@ local function create_taskfile_keymaps()
       used_keys[first_char_upper] = true
 
       local key_upper = keymap_base .. first_char_upper
-      local desc_upper = "󰚌 " .. target_info.name .. ": " .. target_info.description
+      local desc_upper = " " .. target_info.name .. ": " .. target_info.description
 
       vim.keymap.set("n", key_upper, function()
         require("functions.terraform").apply_action(target_info.name, true)
