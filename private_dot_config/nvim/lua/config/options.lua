@@ -69,7 +69,7 @@ opt.clipboard = "unnamedplus"
 --
 -- -- opt.shellcmdflag = "-ic"
 -- --
--- -- opt.shell = "fish" -- TODO:make it bash
+-- opt.shell = "fish" -- TODO:make it bash
 -- opt.shell = "bash" -- TODO:make it bash
 --
 -- -- Input Sugesstion (toggle with "<leader>u<tab>")

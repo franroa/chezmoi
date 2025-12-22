@@ -9,7 +9,7 @@ vim.filetype.add({
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "htmlangular",
   callback = function()
-    vim.treesitter.language.register("angular", "angular.html", "htmlangular") -- Register the filetype with treesitter for the `angular` language/parser
+    -- vim.treesitter.language.register("angular", "angular.html", "htmlangular") -- Register the filetype with treesitter for the `angular` language/parser
   end,
 })
 

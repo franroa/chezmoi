@@ -1,0 +1,102 @@
+{"timestamp":"2025-12-22T07:20:50.404Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa"}}
+{"timestamp":"2025-12-22T07:20:50.404Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T07:20:53.200Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T07:20:53.200Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa"}}
+{"timestamp":"2025-12-22T07:20:59.757Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T07:20:59.757Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa"}}
+{"timestamp":"2025-12-22T07:21:02.353Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T07:21:02.353Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa"}}
+{"timestamp":"2025-12-22T07:38:10.537Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T07:38:10.538Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git"}}
+{"timestamp":"2025-12-22T07:58:14.558Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T07:58:14.558Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa"}}
+{"timestamp":"2025-12-22T08:56:19.076Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T08:56:19.077Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git"}}
+{"timestamp":"2025-12-22T12:32:18.331Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:32:18.331Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T12:40:00.405Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:40:00.405Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T12:40:09.388Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:40:09.388Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T12:40:24.288Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:40:24.288Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T12:40:56.017Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:40:56.017Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T12:43:53.165Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:43:53.166Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T12:46:08.989Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:46:08.989Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T12:47:08.619Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:47:08.619Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T12:51:00.212Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:51:00.212Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T12:51:29.564Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:51:29.564Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T12:56:03.704Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:56:03.704Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T12:57:46.401Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:57:46.401Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T12:59:24.285Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T12:59:24.285Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T13:00:58.115Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:00:58.116Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T13:01:44.474Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:01:44.474Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T13:02:02.501Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:02:02.501Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T13:02:47.215Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:02:47.215Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T13:02:57.334Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:02:57.334Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T13:11:52.892Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T13:11:52.892Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:15:20.350Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:15:20.350Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T13:16:48.739Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:16:48.739Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T13:19:53.667Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:19:53.667Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T13:21:38.933Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:21:38.934Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T13:22:24.351Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:22:24.351Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T13:26:04.778Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:26:04.778Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git"}}
+{"timestamp":"2025-12-22T13:28:14.954Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:28:14.954Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example"}}
+{"timestamp":"2025-12-22T13:28:58.618Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:28:58.619Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example/src"}}
+{"timestamp":"2025-12-22T13:31:24.307Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:31:24.307Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example/src"}}
+{"timestamp":"2025-12-22T13:32:31.931Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:32:31.931Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/vue-mcp-example/src"}}
+{"timestamp":"2025-12-22T13:46:44.790Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:46:44.790Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T13:48:46.447Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:48:46.447Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T13:53:07.701Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T13:53:07.701Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T14:13:40.564Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:13:40.564Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T14:14:48.460Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:14:48.460Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git"}}
+{"timestamp":"2025-12-22T14:19:31.236Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:19:31.236Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode/plugin"}}
+{"timestamp":"2025-12-22T14:28:42.574Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:28:42.574Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode/plugin"}}
+{"timestamp":"2025-12-22T14:30:20.072Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:30:20.072Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode/plugin"}}
+{"timestamp":"2025-12-22T14:30:58.902Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:30:58.902Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/Projects/ts/basicservice.git/branches/main"}}
+{"timestamp":"2025-12-22T14:33:28.042Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:33:28.042Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode/plugin"}}
+{"timestamp":"2025-12-22T14:45:45.720Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:45:45.720Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T14:45:49.803Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:45:49.803Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T14:45:54.728Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:45:54.728Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T14:49:09.489Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T14:49:09.489Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa/.opencode"}}
+{"timestamp":"2025-12-22T15:03:37.963Z","level":"INFO","component":"config","message":"Loaded global config","data":{"path":"/home/froa/.config/opencode/smart-title.jsonc"}}
+{"timestamp":"2025-12-22T15:03:37.964Z","level":"DEBUG","component":"config","message":"No project config found","data":{"searchedFrom":"/home/froa"}}

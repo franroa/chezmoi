@@ -72,7 +72,6 @@ return {
         "helm",
         "http",
         "c_sharp",
-        "dap_repl",
         "vimdoc",
         "lua_patterns",
         "qf",

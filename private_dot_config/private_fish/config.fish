@@ -61,7 +61,6 @@
 # set -x COMPOSE_DOCKER_CLI_BUILD 1
 # set -x HOMEBREW_NO_AUTO_UPDATE 1
 # set -x DOTDROP_AUTOUPDATE no
-# set -x MANPAGER "nvim +Man!"
 # # export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 # set -x MANROFFOPT -c
 # set -x OPENCV_LOG_LEVEL ERROR
@@ -211,71 +210,71 @@
 # #
 # #
 #
-# function klookup
-#     # kubectl run temp -it --rm --image docker.io/amouat/network-utils --command -- nslookup $argv
-#     kubectl run temp --wait --image docker.io/amouat/network-utils --command -- nslookup $argv
-#     kubectl wait --for=condition=Ready --timeout=5m pod temp || kubectl wait --for=condition=Ready --timeout=5m pod temp
-#     kubectl logs temp
-#     kubectl delete pod temp
+function klookup
+    # kubectl run temp -it --rm --image docker.io/amouat/network-utils --command -- nslookup $argv
+    kubectl run temp --wait --image docker.io/amouat/network-utils --command -- nslookup $argv
+    kubectl wait --for=condition=Ready --timeout=5m pod temp || kubectl wait --for=condition=Ready --timeout=5m pod temp
+    kubectl logs temp
+    kubectl delete pod temp
+end
+
+function change_kubernetes_cluster_variable
+    kubelogin convert-kubeconfig -l azurecli
+    set -gx K8S_CLUSTER (kubectl config current-context 2>/dev/null)
+    set -gx FOREGROUND_COLOR grey
+    if string match -q -- "*docker-desktop*" $K8S_CLUSTER
+        set -gx BACKGROUND_COLOR "#303b33"
+        set -gx FOREGROUND_COLOR green
+        printf '\033]11;#303b33\007'
+    end
+    if string match -q -- "*kind*" $K8S_CLUSTER
+        set -gx BACKGROUND_COLOR "#303b33"
+        set -gx FOREGROUND_COLOR green
+        printf '\033]11;#303b33\007'
+    end
+    if string match -q -- "*None*" $K8S_CLUSTER
+        set -gx BACKGROUND_COLOR "#222436"
+        set -gx FOREGROUND_COLOR grey
+        printf '\033]11;#222436\007'
+    end
+    if string match -q -- "*live*" $K8S_CLUSTER
+        set -gx BACKGROUND_COLOR "#8E1600"
+        set -gx FOREGROUND_COLOR green
+        printf '\033]11;#8E1600\007'
+    end
+    if string match -q -- "*sandbox*" $K8S_CLUSTER
+        set -gx BACKGROUND_COLOR "#3c307f"
+        set -gx FOREGROUND_COLOR green
+        printf '\033]11;#3c307f\007'
+    end
+end
+
+function change_kubernetes_ns_variable
+    set -gx K8S_NAMESPACE (kubectl config view --minify -o jsonpath='{..namespace}')
+end
+
+function change_nvim_abbreviation
+    abbr vim K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
+    abbr vi K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
+    abbr v K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
+end
+
+# if not status --is-login
+#     source ~/secrets.fish
 # end
-#
-# function change_kubernetes_cluster_variable
-#     kubelogin convert-kubeconfig -l azurecli
-#     set -gx K8S_CLUSTER (kubectl config current-context 2>/dev/null)
-#     set -gx FOREGROUND_COLOR grey
-#     if string match -q -- "*docker-desktop*" $K8S_CLUSTER
-#         set -gx BACKGROUND_COLOR "#303b33"
-#         set -gx FOREGROUND_COLOR green
-#         printf '\033]11;#303b33\007'
-#     end
-#     if string match -q -- "*kind*" $K8S_CLUSTER
-#         set -gx BACKGROUND_COLOR "#303b33"
-#         set -gx FOREGROUND_COLOR green
-#         printf '\033]11;#303b33\007'
-#     end
-#     if string match -q -- "*None*" $K8S_CLUSTER
-#         set -gx BACKGROUND_COLOR "#222436"
-#         set -gx FOREGROUND_COLOR grey
-#         printf '\033]11;#222436\007'
-#     end
-#     if string match -q -- "*live*" $K8S_CLUSTER
-#         set -gx BACKGROUND_COLOR "#8E1600"
-#         set -gx FOREGROUND_COLOR green
-#         printf '\033]11;#8E1600\007'
-#     end
-#     if string match -q -- "*sandbox*" $K8S_CLUSTER
-#         set -gx BACKGROUND_COLOR "#3c307f"
-#         set -gx FOREGROUND_COLOR green
-#         printf '\033]11;#3c307f\007'
-#     end
-# end
-#
-# function change_kubernetes_ns_variable
-#     set -gx K8S_NAMESPACE (kubectl config view --minify -o jsonpath='{..namespace}')
-# end
-#
-# function change_nvim_abbreviation
-#     abbr vim K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
-#     abbr vi K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
-#     abbr v K8S_CLUSTER=$K8S_CLUSTER K8S_NAMESPACE=$K8S_NAMESPACE nvim
-# end
-#
-# # if not status --is-login
-# #     source ~/secrets.fish
-# # end
-#
-# function kubie
-#     set -gx IS_COMING_FROM_KUBIE TRUE
-#     command kubie $argv
-# end
-# function refresh_prompt --on-event fish_prompt
-#     if test "$IS_COMING_FROM_KUBIE" = TRUE
-#         set -gx IS_COMING_FROM_KUBIE FALSE
-#         change_kubernetes_cluster_variable
-#         change_kubernetes_ns_variable
-#         change_nvim_abbreviation
-#     end
-# end
+
+function kubie
+    set -gx IS_COMING_FROM_KUBIE TRUE
+    command kubie $argv
+end
+function refresh_prompt --on-event fish_prompt
+    if test "$IS_COMING_FROM_KUBIE" = TRUE
+        set -gx IS_COMING_FROM_KUBIE FALSE
+        change_kubernetes_cluster_variable
+        change_kubernetes_ns_variable
+        change_nvim_abbreviation
+    end
+end
 #
 # # HACK: for k9s to show the contexts
 # # this doesnt work with kubie ctx
@@ -445,6 +444,8 @@ fish_add_path $HOME/bin
 set -gx DOTNET_ROOT $HOME/dotnet
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 set -gx EDITOR (which nvim)
+set -gx USER_NAMESPACE fran
+set -x MANPAGER "env NVIM_APPNAME=lazyvim nvim +Man!"
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
 set -gx BROWSER "chrome.exe"

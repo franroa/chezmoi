@@ -1,9 +1,9 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "opencode-skills"
-  ],
   "mcp": {
+    // ═══════════════════════════════════════════════════════════
+    // DOCUMENTACION Y BUSQUEDA
+    // ═══════════════════════════════════════════════════════════
     "context7": {
       "type": "remote",
       "url": "https://mcp.context7.com/mcp"
@@ -12,7 +12,23 @@
       "type": "remote",
       "url": "https://mcp.grep.app"
     },
-    "GitLab": {
+
+    // ═══════════════════════════════════════════════════════════
+    // RAZONAMIENTO
+    // ═══════════════════════════════════════════════════════════
+    "sequential-thinking": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // GIT / CI-CD
+    // ═══════════════════════════════════════════════════════════
+    "gitlab": {
       "type": "local",
       "command": [
         "npx",
@@ -21,197 +37,209 @@
         "--static-oauth-client-metadata",
         "{\"scope\": \"mcp\"}"
       ]
-      // "chrome-devtools": {
-      //   "type": "local",
-      //   "command": [
-      //     "npx",
-      //     "chrom
-      //     "--channel=canary",
-      //     "--headless=true",
-      //     "--isolated=true"
-      //   ]
-      // },
-      // "m
-      //   "type": "loca
-      //   "command": [
-      //     "docker",
-      //     "run",
-      //     "--rm"
-      //     "-i",
-      //     "-v",
-      //     "/hom
-      //     "markitdown-mcp:latest"
-      //   ]
-      // },
-      // "s
-      //   "type": "local",
-      //   "command": [
-      //     "npx",
-      //     "-y",
-      //     "@mod
-      //   ]
-      // },
-      // "b
-      //   "type": "local
-      //   "command": [
-      //     "npx",
-      //     "mcp-r
-      //     "https://mcp.
-      //   ]
-      // },
-      // "g
-      //   "type"
-      //   "command": [
-      //     "mcp-serve
-      //     "--repository",
-      //     "$GIT_REPO"
-      //   ]
-      // },
-      // "m
-      //   "type": "local",
-      //   "command": [
-      //     "podman",
-      //     "run",
-      //     "-i",
-      //     "--rm
-      //     "-e",
-      //     "CONF
-      //     "-e",
-      //     "CONF
-      //     "-e",
-      //     "CONF
-      //     "-e",
-      //     "JIRA
-      //     "-e",
-      //     "JIRA
-      //     "-e",
-      //     "JIRA
-      //     "ghcr.io/sooperse
-      //   ]
-      // },
-      // "t
-      //   "type": "local
-      //   "command": [
-      //     "uvx",
-      //     "--dir
-      //     "$GIT_REPO",
-      //     "mcp-server-
-      //   ]
-      // },
-      // "v
-      //   "type": "local",
-      //   "command": [
-      //     "vectorcod
-      //   ]
-      // },
-      // "t
-      //   "type":
-      //   "command": [
-      //     "uvx",
-      //     "mcp-s
-      //   ]
-      // },
-      // "m
-      //   "type": "
-      //   "command": [
-      //     "npx",
-      //     "-y",
-      //     "@mod
-      //   ]
-      // },
-      // "m
-      //   "type": "loca
-      //   "command": [
-      //     "uvx",
-      //     "mcp-p
-      //   ]
-      // },
-      // "p
-      //   "type": "local",
-      //   "command": [
-      //     "uvx",
-      //     "perpl
-      //   ]
-      // },
-      // "m
-      //   "type": "local"
-      //   "command": [
-      //     "uvx",
-      //     "mcp-o
-      //   ]
-      // },
-      // "n
-      //   "type": "
-      //   "command": [
-      //     "podman",
-      //     "run",
-      //     "--rm"
-      //     "-i",
-      //     "-e",
-      //     "OPEN
-      //     "mcp/notion"
-      //   ]
-      // },
-      // "t
-      //   "type": "loc
-      //   "command": [
-      //     "podman",
-      //     "run",
-      //     "-i",
-      //     "--rm
-      //     "hashic
-      //   ]
-      // },
-      // "o
-      //   "type": "re
-      //   "url": "https://m
-      // },
-      // "g
-      //   "type": "l
-      //   "command": [
-      //     "mcp-grafa
-      //   ]
-      // },
-      // "n
-      //   "type": "local",
-      //   "comman d": [
-      //     "npx",
-      //     "-y",
-      //     "mcp-
-      //   ]
-      // },
-      // "g
-      //   "type": "
-      //   "command": [
-      //     "npx",
-      //     "-y",
-      //     "@mod
-      //   ]
-      // },
-      // "m
-      //   "type": "local",
-      //   "command": [
-      //     "npx",
-      //     "mcp-s
-      //   ]
-      // },
-      // "f
-      //   "type": "loca
-      //   "command": [
-      //     "npx",
-      //     "-y",
-      //     "@mod
-      //     "/home/froa"
-      //   ]
-      // },
-      // "s
-      //   "type": 
-      //   "command": [
-      //     "npx",
-      //     "-y",
-      //     "@mod
-      //   ]
-      // 
     },
-  },
+
+    // ═══════════════════════════════════════════════════════════
+    // CLOUD - AZURE
+    // ═══════════════════════════════════════════════════════════
+    "azure": {
+      "type": "local",
+      "command": ["npx", "-y", "@azure/mcp@latest", "server", "start"]
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // PLATAFORMA - CONTENEDORES Y ORQUESTACION
+    // ═══════════════════════════════════════════════════════════
+    "kubernetes": {
+      "type": "local",
+      "command": ["npx", "-y", "@strowk/mcp-k8s"]
+    },
+    "docker": {
+      "type": "local",
+      "command": ["uvx", "mcp-server-docker"],
+      "enabled": true
+    },
+    // "docker": {
+    //   "type": "local",
+    //   "command": [
+    //     "docker",
+    //     "run",
+    //     "--rm",
+    //     "-i",
+    //     "-v",
+    //     "/var/run/docker.sock:/var/run/docker.sock",
+    //     "mcp/docker"
+    //   ]
+    // },
+    // "helm": {
+    //   "type": "local",
+    //   "command": ["npx", "-y", "mcp-helm"]
+    // }
+    //
+    // // ═══════════════════════════════════════════════════════════
+    // // INFRAESTRUCTURA COMO CODIGO
+    // // ═══════════════════════════════════════════════════════════
+    "terraform": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "hashicorp/terraform-mcp-server"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // OBSERVABILIDAD Y MONITOREO
+    // ═══════════════════════════════════════════════════════════
+    "grafana": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "-i",
+        "-e",
+        "GRAFANA_URL",
+        "-e",
+        "GRAFANA_SERVICE_ACCOUNT_TOKEN",
+        "mcp/grafana",
+        "-t",
+        "stdio"
+      ],
+      "environment": {
+        "GRAFANA_URL": "https://grafana.technosylva.io/",
+        "GRAFANA_SERVICE_ACCOUNT_TOKEN": "{env:GRAFANA_TOKEN}"
+      }
+    },
+    // "prometheus": {
+    //   "type": "local",
+    //   "command": ["uvx", "mcp-server-prometheus"]
+    // },
+    "sentry": {
+      "type": "local",
+      "command": ["npx", "-y", "@sentry/mcp-server"],
+      "environment": {
+        "SENTRY_ACCESS_TOKEN": "{env:SENTRY_AUTH_TOKEN}"
+      }
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // DESARROLLO .NET
+    // ═══════════════════════════════════════════════════════════
+    "nuget": {
+      "type": "local",
+      "command": ["nuget-mcp-server"]
+    },
+    "roslyn": {
+      "type": "local",
+      "command": ["dotnet-roslyn-mcp"]
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // DESARROLLO VUE / FRONTEND
+    // ═══════════════════════════════════════════════════════════
+    // NOTE: vite-plugin-vue-mcp and vite-plugin-mcp are Vite plugins,
+    // not standalone MCP servers. Add them to your Vite projects instead.
+    "vuetify": {
+      "type": "local",
+      "command": ["npx", "-y", "@vuetify/mcp"]
+    },
+    "typescript": {
+      "type": "local",
+      "command": ["npx", "-y", "typescript-mcp"]
+    },
+    "eslint": {
+      "type": "local",
+      "command": ["npx", "-y", "@eslint/mcp"]
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // BROWSER / TESTING E2E
+    // ═══════════════════════════════════════════════════════════
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--headless"]
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp"]
+    },
+    // "puppeteer": {
+    //   "type": "local",
+    //   "command": ["npx", "-y", "@anthropic/mcp-server-puppeteer"]
+    // },
+    //
+    // ═══════════════════════════════════════════════════════════
+    // CALIDAD DE CODIGO
+    // ═══════════════════════════════════════════════════════════
+    "sonarqube": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-sonarqube"]
+      // "env": {
+      //   "SONAR_HOST_URL": "http://localhost:9000",
+      //   "SONAR_TOKEN": "<tu-token-sonar>"
+      // }
+    },
+    "semgrep": {
+      "type": "local",
+      "command": ["uvx", "--python", "3.12", "semgrep-mcp"]
+    },
+
+    // "snyk": {
+    //   "type": "local",
+    //   "command": ["npx", "-y", "@anthropic/mcp-server-snyk"]
+    //   // "env": {
+    //   //   "SNYK_TOKEN": "<tu-token-snyk>"
+    //   // }
+    // },
+    // "prettier": {
+    //   "type": "local",
+    //   "command": ["npx", "-y", "mcp-prettier"]
+    // },
+    // NOTE: No existe un MCP oficial para Prettier. El paquete 'mcp-prettier'
+    // no es oficial. Considera usar ESLint con eslint-plugin-prettier en su lugar.
+
+    // ═══════════════════════════════════════════════════════════
+    // COMUNICACION Y COLABORACION
+    // ═══════════════════════════════════════════════════════════
+    "slack": {
+      "type": "local",
+      "command": ["npx", "-y", "slack-mcp-server"],
+      "environment": {
+        "SLACK_MCP_XOXP_TOKEN": "{env:SLACK_TOKEN}"
+      }
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // SEMANTIC CODE SEARCH
+    // ═══════════════════════════════════════════════════════════
+    "vectorcode": {
+      "type": "local",
+      "command": ["vectorcode-mcp-server"]
+    },
+
+    // ═══════════════════════════════════════════════════════════
+    // MEMORIA PERSISTENTE
+    // ═══════════════════════════════════════════════════════════
+    "memory": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-memory"],
+      "environment": {
+        "MEMORY_FILE_PATH": "/home/froa/.opencode/memory.jsonl"
+      }
+    }
+    // "depcheck": {
+    //   "type": "local",
+    //   "command": ["npx", "-y", "mcp-depcheck"]
+    // },
+    // "codecov": {
+    //   "type": "local",
+    //   "command": ["npx", "-y", "mcp-codecov"]
+    //   // "env": {
+    //   //   "CODECOV_TOKEN": "<tu-token-codecov>"
+    //   // }
+    // }
+  }
 }

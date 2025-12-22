@@ -2,6 +2,7 @@ return {
   {
     lazy = false,
     "stevearc/overseer.nvim",
+    tag = "v1.6.0",
     config = function()
       require("overseer").setup({
         templates = {
@@ -96,6 +97,13 @@ return {
       { "<leader>ob", "<cmd>OverseerBuild<cr>", desc = "Task builder" },
       { "<leader>ot", "<cmd>OverseerTaskAction<cr>", desc = "Task action" },
       { "<leader>oc", "<cmd>OverseerClearCache<cr>", desc = "Clear cache" },
+      {
+        "<leader>oag",
+        function()
+          require("functions.gitlab").run_job_at_cursor()
+        end,
+        desc = "Run Gitlab Job At cursor",
+      },
       -- {
       --   "<leader>oTa",
       --   function()

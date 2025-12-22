@@ -39,7 +39,7 @@ local tmpl = {
     vim.env.TSYL_DOMAIN = params.domain
     vim.env.TSYL_MODULE = params.module
     -- Base command string
-    local cmd_str = "TF_LOG=error "
+    local cmd_str = "unset GIT_DIR && unset GIT_WORK_TREE && TF_LOG=error"
       .. " MODULE="
       .. params.module
       .. " REGION="

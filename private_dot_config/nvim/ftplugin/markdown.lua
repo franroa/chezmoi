@@ -1,4 +1,3 @@
-vim.notify("Test")
 -- vim.b.slime_cell_delimiter = "```"
 --
 -- -- wrap text, but by word no character

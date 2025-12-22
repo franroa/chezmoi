@@ -9,11 +9,11 @@ return {
         callback = function()
           vim.cmd("silent! lcd %:p:h")
           if vim.g.previous_root ~= LazyVim.root.git() then
-            vim.notify(
-              "Local CWD changed to: " .. LazyVim.root.git(),
-              vim.log.levels.WARN, -- You can change this to .INFO, .ERROR, etc.
-              { title = "Working Directory" }
-            )
+            -- vim.notify(
+            --   "Local CWD changed to: " .. LazyVim.root.git(),
+            --   vim.log.levels.WARN, -- You can change this to .INFO, .ERROR, etc.
+            --   { title = "Working Directory" }
+            -- )
           end
           vim.g.previous_root = LazyVim.root.git()
         end,

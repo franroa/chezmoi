@@ -637,7 +637,7 @@ end
 function M.run_job_at_cursor()
   local cursor_line = vim.api.nvim_win_get_cursor(0)[1]
   local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-  
+
   local excluded_keys = {
     "stages",
     "variables",
@@ -645,14 +645,14 @@ function M.run_job_at_cursor()
     "default",
     "include",
   }
-  
+
   local job_name = nil
-  
+
   for i = cursor_line, 1, -1 do
     local line = lines[i]
     if line and vim.trim(line) ~= "" then
       local indent = line:match("^%s*"):len()
-      
+
       if indent == 0 then
         local key = line:match("^([%w_.-]+):")
         if key then

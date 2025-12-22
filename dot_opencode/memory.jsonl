@@ -1,0 +1,29 @@
+{"type":"entity","name":"Francisco_Roa_Prieto","entityType":"person","observations":["Full name is Francisco Roa Prieto","Goes by 'froa' as username","Works as a Platform Engineer","Works in hybrid mode from León, Spain","Prefers English for responses","Uses NeoVim as primary editor","Prefers spaces over tabs for indentation","Believes all projects should have .editorconfig file for consistent formatting","Platform Engineer (same level as Arturo, Álvaro, Luis)"]}
+{"type":"entity","name":"Technosylva","entityType":"organization","observations":["Company where Francisco works","Located in León, Spain","Uses Azure cloud platform","Uses AKS for Kubernetes workloads","Uses Grafana for observability"]}
+{"type":"entity","name":"Programming_Preferences","entityType":"preferences","observations":["Preferred languages: .NET, Go, TypeScript","Needs to learn Python","Preferred frameworks: .NET and Vue","Believes in consistent code formatting via .editorconfig"]}
+{"type":"entity","name":"Azure_Observability_Project","entityType":"project","observations":["Implementing observability for Azure Backups","Uses AKS, Azure, and Grafana","Currently active project"]}
+{"type":"entity","name":"AI_Tools_PoC","entityType":"project","observations":["Proof of concept project","Exploring OpenCode integration","Exploring OpenSpec","Investigating AI tooling workflows","Currently active project"]}
+{"type":"entity","name":"Arturo","entityType":"person","observations":["Team member at Technosylva","Works in the Platform team","Platform Engineer"]}
+{"type":"entity","name":"Alvaro","entityType":"person","observations":["Team member at Technosylva","Works in the Platform team","Platform Engineer"]}
+{"type":"entity","name":"Luis","entityType":"person","observations":["Team member at Technosylva","Works in the Platform team","Platform Engineer"]}
+{"type":"entity","name":"Ramon","entityType":"person","observations":["Team member at Technosylva","Works in the Platform team","Senior Platform Engineer"]}
+{"type":"entity","name":"Gonzalo","entityType":"person","observations":["Team member at Technosylva","Works in the Platform team","Staff Platform Engineer"]}
+{"type":"entity","name":"Ezequiel","entityType":"person","observations":["Director of Platform at Technosylva","Francisco's manager"]}
+{"type":"entity","name":"Platform_Team","entityType":"team","observations":["Platform engineering team at Technosylva","Responsible for infrastructure and platform services"]}
+{"type":"entity","name":"Learning_Goals","entityType":"learning_goals","observations":["Wants to deepen Azure knowledge","Wants to learn more about Networking","Wants to learn AI and AI tooling"]}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"Technosylva","relationType":"works_at"}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"Programming_Preferences","relationType":"has_preferences"}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"Azure_Observability_Project","relationType":"works_on"}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"AI_Tools_PoC","relationType":"works_on"}
+{"type":"relation","from":"Azure_Observability_Project","to":"Technosylva","relationType":"belongs_to"}
+{"type":"relation","from":"AI_Tools_PoC","to":"Technosylva","relationType":"belongs_to"}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"Platform_Team","relationType":"member_of"}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"Learning_Goals","relationType":"has_learning_goals"}
+{"type":"relation","from":"Francisco_Roa_Prieto","to":"Ezequiel","relationType":"reports_to"}
+{"type":"relation","from":"Arturo","to":"Platform_Team","relationType":"member_of"}
+{"type":"relation","from":"Alvaro","to":"Platform_Team","relationType":"member_of"}
+{"type":"relation","from":"Luis","to":"Platform_Team","relationType":"member_of"}
+{"type":"relation","from":"Ramon","to":"Platform_Team","relationType":"member_of"}
+{"type":"relation","from":"Gonzalo","to":"Platform_Team","relationType":"member_of"}
+{"type":"relation","from":"Ezequiel","to":"Platform_Team","relationType":"leads"}
+{"type":"relation","from":"Platform_Team","to":"Technosylva","relationType":"belongs_to"}

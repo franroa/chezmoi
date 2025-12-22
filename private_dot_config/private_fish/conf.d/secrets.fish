@@ -36,6 +36,7 @@ function __chezmoi_load_secrets
     set -gx NOTION_API_KEY (kp_show "notion_fran")
     set -gx JIRA_API_TOKEN (kp_show "jira_token")
     set -gx SENTRY_AUTH_TOKEN (kp_show "sentry")
+    set -gx SLACK_TOKEN (kp_show "SLACK_KEY")
     set -gx GITLAB_PERSONAL_ACCESS_TOKEN (kp_show "gitlab_personal_token")
     set -gx TF_VAR_gitlab_token $GITLAB_PERSONAL_ACCESS_TOKEN
 

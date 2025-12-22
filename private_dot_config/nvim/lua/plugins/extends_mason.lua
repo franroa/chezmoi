@@ -14,7 +14,7 @@ return {
         "gofumpt",
         "goimports",
         "golangci-lint-langserver",
-        "gitlab-ci-ls",
+        -- "gitlab-ci-ls",
         "impl",
         "gomodifytags",
         "iferr",

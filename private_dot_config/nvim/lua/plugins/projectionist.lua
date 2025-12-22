@@ -1,13 +1,13 @@
 return {
   -- Projectionist plugin
   {
-    'tpope/vim-projectionist',
+    "tpope/vim-projectionist",
     lazy = false,
   },
 
   -- Which-Key configuration for Projectionist
   {
-    'folke/which-key.nvim',
+    "folke/which-key.nvim",
     optional = true,
     opts = function(_, opts)
       opts.spec = opts.spec or {}
@@ -15,69 +15,69 @@ return {
       -- Add Projectionist keymaps to which-key
       vim.list_extend(opts.spec, {
         -- Alternate files group
-        { '<leader>a',   group = 'alternate' },
-        { '<leader>a',   ':A<CR>',            desc = 'Alternate file',      mode = 'n' },
-        { '<leader>av',  ':AV<CR>',           desc = 'Alternate (vsplit)',  mode = 'n' },
-        { '<leader>as',  ':AS<CR>',           desc = 'Alternate (split)',   mode = 'n' },
-        { '<leader>at',  ':AT<CR>',           desc = 'Alternate (tab)',     mode = 'n' },
+        { "<leader>A", group = "alternate" },
+        { "<leader>Aa", ":A<CR>", desc = "Alternate file", mode = "n" },
+        { "<leader>Av", ":AV<CR>", desc = "Alternate (vsplit)", mode = "n" },
+        { "<leader>As", ":AS<CR>", desc = "Alternate (split)", mode = "n" },
+        { "<leader>At", ":AT<CR>", desc = "Alternate (tab)", mode = "n" },
 
         -- Related files group
-        { '<leader>r',   group = 'related' },
-        { '<leader>r',   ':R<CR>',            desc = 'Related file',        mode = 'n' },
-        { '<leader>rv',  ':RV<CR>',           desc = 'Related (vsplit)',    mode = 'n' },
-        { '<leader>rs',  ':RS<CR>',           desc = 'Related (split)',     mode = 'n' },
-        { '<leader>rt',  ':RT<CR>',           desc = 'Related (tab)',       mode = 'n' },
+        { "<leader>Ar", group = "related" },
+        { "<leader>Ar", ":R<CR>", desc = "Related file", mode = "n" },
+        { "<leader>Arv", ":RV<CR>", desc = "Related (vsplit)", mode = "n" },
+        { "<leader>Ars", ":RS<CR>", desc = "Related (split)", mode = "n" },
+        { "<leader>Art", ":RT<CR>", desc = "Related (tab)", mode = "n" },
 
         -- Edit by type group
-        { '<leader>e',   group = 'edit' },
+        { "<leader>Ae", group = "edit" },
 
         -- Component
-        { '<leader>ec',  group = 'component' },
-        { '<leader>ec',  ':Ecomponent ',      desc = 'Component',           mode = 'n' },
-        { '<leader>ecc', ':Ecomponent ',      desc = 'Edit component',      mode = 'n' },
-        { '<leader>ecv', ':Vcomponent ',      desc = 'Component (vsplit)',  mode = 'n' },
-        { '<leader>ecs', ':Scomponent ',      desc = 'Component (split)',   mode = 'n' },
-        { '<leader>ect', ':Tcomponent ',      desc = 'Component (tab)',     mode = 'n' },
+        { "<leader>Aec", group = "component" },
+        { "<leader>Aec", ":Ecomponent ", desc = "Component", mode = "n" },
+        { "<leader>Aecc", ":Ecomponent ", desc = "Edit component", mode = "n" },
+        { "<leader>Aecv", ":Vcomponent ", desc = "Component (vsplit)", mode = "n" },
+        { "<leader>Aecs", ":Scomponent ", desc = "Component (split)", mode = "n" },
+        { "<leader>Aect", ":Tcomponent ", desc = "Component (tab)", mode = "n" },
 
         -- Composable
-        { '<leader>eu',  group = 'composable' },
-        { '<leader>eu',  ':Ecomposable ',     desc = 'Composable',          mode = 'n' },
-        { '<leader>euu', ':Ecomposable ',     desc = 'Edit composable',     mode = 'n' },
-        { '<leader>euv', ':Vcomposable ',     desc = 'Composable (vsplit)', mode = 'n' },
-        { '<leader>eus', ':Scomposable ',     desc = 'Composable (split)',  mode = 'n' },
-        { '<leader>eut', ':Tcomposable ',     desc = 'Composable (tab)',    mode = 'n' },
+        { "<leader>Aeu", group = "composable" },
+        { "<leader>Aeu", ":Ecomposable ", desc = "Composable", mode = "n" },
+        { "<leader>Aeuu", ":Ecomposable ", desc = "Edit composable", mode = "n" },
+        { "<leader>Aeuv", ":Vcomposable ", desc = "Composable (vsplit)", mode = "n" },
+        { "<leader>Aeus", ":Scomposable ", desc = "Composable (split)", mode = "n" },
+        { "<leader>Aeut", ":Tcomposable ", desc = "Composable (tab)", mode = "n" },
 
         -- Story
-        { '<leader>es',  group = 'story' },
-        { '<leader>es',  ':Estory ',          desc = 'Story',               mode = 'n' },
-        { '<leader>ess', ':Estory ',          desc = 'Edit story',          mode = 'n' },
-        { '<leader>esv', ':Vstory ',          desc = 'Story (vsplit)',      mode = 'n' },
-        { '<leader>ess', ':Sstory ',          desc = 'Story (split)',       mode = 'n' },
-        { '<leader>est', ':Tstory ',          desc = 'Story (tab)',         mode = 'n' },
+        { "<leader>Aes", group = "story" },
+        { "<leader>Aes", ":Estory ", desc = "Story", mode = "n" },
+        { "<leader>Aess", ":Estory ", desc = "Edit story", mode = "n" },
+        { "<leader>Aesv", ":Vstory ", desc = "Story (vsplit)", mode = "n" },
+        { "<leader>Aess", ":Sstory ", desc = "Story (split)", mode = "n" },
+        { "<leader>Aest", ":Tstory ", desc = "Story (tab)", mode = "n" },
 
         -- Test
-        { '<leader>et',  group = 'test' },
-        { '<leader>et',  ':Etest ',           desc = 'Test',                mode = 'n' },
-        { '<leader>ett', ':Etest ',           desc = 'Edit test',           mode = 'n' },
-        { '<leader>etv', ':Vtest ',           desc = 'Test (vsplit)',       mode = 'n' },
-        { '<leader>ets', ':Stest ',           desc = 'Test (split)',        mode = 'n' },
-        { '<leader>ett', ':Ttest ',           desc = 'Test (tab)',          mode = 'n' },
+        { "<leader>Aet", group = "test" },
+        { "<leader>Aet", ":Etest ", desc = "Test", mode = "n" },
+        { "<leader>Aett", ":Etest ", desc = "Edit test", mode = "n" },
+        { "<leader>Aetv", ":Vtest ", desc = "Test (vsplit)", mode = "n" },
+        { "<leader>Aets", ":Stest ", desc = "Test (split)", mode = "n" },
+        { "<leader>Aett", ":Ttest ", desc = "Test (tab)", mode = "n" },
 
         -- Service
-        { '<leader>ea',  group = 'service' },
-        { '<leader>ea',  ':Eservice ',        desc = 'Service',             mode = 'n' },
-        { '<leader>eaa', ':Eservice ',        desc = 'Edit service',        mode = 'n' },
-        { '<leader>eav', ':Vservice ',        desc = 'Service (vsplit)',    mode = 'n' },
-        { '<leader>eas', ':Sservice ',        desc = 'Service (split)',     mode = 'n' },
-        { '<leader>eat', ':Tservice ',        desc = 'Service (tab)',       mode = 'n' },
+        { "<leader>Aea", group = "service" },
+        { "<leader>Aea", ":Eservice ", desc = "Service", mode = "n" },
+        { "<leader>Aeaa", ":Eservice ", desc = "Edit service", mode = "n" },
+        { "<leader>Aeav", ":Vservice ", desc = "Service (vsplit)", mode = "n" },
+        { "<leader>Aeas", ":Sservice ", desc = "Service (split)", mode = "n" },
+        { "<leader>Aeat", ":Tservice ", desc = "Service (tab)", mode = "n" },
 
         -- Locale
-        { '<leader>el',  group = 'locale' },
-        { '<leader>el',  ':Elocale ',         desc = 'Locale',              mode = 'n' },
-        { '<leader>ell', ':Elocale ',         desc = 'Edit locale',         mode = 'n' },
-        { '<leader>elv', ':Vlocale ',         desc = 'Locale (vsplit)',     mode = 'n' },
-        { '<leader>els', ':Slocale ',         desc = 'Locale (split)',      mode = 'n' },
-        { '<leader>elt', ':Tlocale ',         desc = 'Locale (tab)',        mode = 'n' },
+        { "<leader>Ael", group = "locale" },
+        { "<leader>Ael", ":Elocale ", desc = "Locale", mode = "n" },
+        { "<leader>Aell", ":Elocale ", desc = "Edit locale", mode = "n" },
+        { "<leader>Aelv", ":Vlocale ", desc = "Locale (vsplit)", mode = "n" },
+        { "<leader>Aels", ":Slocale ", desc = "Locale (split)", mode = "n" },
+        { "<leader>Aelt", ":Tlocale ", desc = "Locale (tab)", mode = "n" },
       })
 
       return opts

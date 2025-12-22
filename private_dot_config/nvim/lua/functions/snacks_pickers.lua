@@ -463,7 +463,7 @@ end
 function M.gitlab_ci_jobs()
   local current_bufnr = api.nvim_get_current_buf()
   local content = api.nvim_buf_get_lines(current_bufnr, 0, -1, false)
-  
+
   local gitlab_module = require("functions.gitlab")
   local jobs, stages = gitlab_module.Parser.parse(content)
 

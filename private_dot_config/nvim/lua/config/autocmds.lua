@@ -119,11 +119,11 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 --   end,
 -- })
 
-vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
-  callback = function()
-    vim.notify("Test Entra")
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
+--   callback = function()
+--     vim.notify("Test Entra")
+--   end,
+-- })
 
 -- vim.api.nvim_create_autocmd("BufReadPost", {
 --   callback = function(args)
@@ -133,11 +133,11 @@ vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
 --     end
 --   end,
 -- })
-vim.api.nvim_create_autocmd("UILeave", {
-  callback = function()
-    vim.notify("Test Sale")
-  end,
-})
+-- vim.api.nvim_create_autocmd("UILeave", {
+--   callback = function()
+--     vim.notify("Test Sale")
+--   end,
+-- })
 
 -- git-worktrees
 vim.api.nvim_create_autocmd({ "TabEnter" }, {
@@ -148,8 +148,8 @@ vim.api.nvim_create_autocmd({ "TabEnter" }, {
 
 -- vim-dadbod-ui
 vim.api.nvim_create_autocmd(
---FIX:
---this should be revisited because is firing many times
+  --FIX:
+  --this should be revisited because is firing many times
   { "BufWinLeave", "BufWritePost", "WinLeave" },
   {
     desc = "Save view with mkview for real files",
@@ -172,7 +172,7 @@ function transform_buffer_table()
     if i == 1 then -- first line
       line = line:gsub("^%+", "┌"):gsub("%+$", "┐")
       line = line:gsub("%+", "┬")
-    elseif i == 3 then          -- last line
+    elseif i == 3 then -- last line
       line = line:gsub("^%+", "├"):gsub("%+$", "┤")
     elseif i == #lines - 1 then -- last line
       line = line:gsub("^%+", "└"):gsub("%+$", "┘")
@@ -563,13 +563,13 @@ vim.api.nvim_set_keymap("n", "<leader>r", ":RunUnderCursor<CR>", { noremap = tru
 --
 --
 vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = "*:n",          -- any mode to Normal mode
+  pattern = "*:n", -- any mode to Normal mode
   callback = function()
     vim.cmd([[normal! zi]]) -- Unfold everything to clear any existing manual folds
     -- vim.cmd([[normal! zi]]) -- Unfold everything to clear any existing manual folds
     vim.defer_fn(function()
       vim.cmd([[normal! zi]]) -- Unfold everything to clear any existing manual folds
-    end, 300)                 -- Pequeño retraso para asegurar que Treesitter haya parseado
+    end, 300) -- Pequeño retraso para asegurar que Treesitter haya parseado
     -- vim.cmd([[normal! zi]]) -- Unfold everything to clear any existing manual folds
     -- Your logic here
   end,
@@ -608,13 +608,13 @@ vim.lsp.config("*", {
     },
   },
 })
-vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx)
-  local client = vim.lsp.get_client_by_id(ctx.client_id)
-  if client and client.name == "vtsls" then
-    require("ts-error-translator").translate_diagnostics(err, result, ctx)
-  end
-  vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
-end
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx)
+--   local client = vim.lsp.get_client_by_id(ctx.client_id)
+--   if client and client.name == "vtsls" then
+--     require("ts-error-translator").translate_diagnostics(err, result, ctx)
+--   end
+--   vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
+-- end
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 --   update_in_insert = false,
 --   virtual_text = true,
@@ -1025,7 +1025,7 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
               local joined = table.concat(alloy_content, "")
               -- Unescape the content
               local unescaped =
-                  joined:gsub("\\n", "\n"):gsub("\\t", "\t"):gsub('\\"', '"'):gsub("\\\\", "\\"):gsub("\\(%s)", "%1") -- Remove escape before whitespace
+                joined:gsub("\\n", "\n"):gsub("\\t", "\t"):gsub('\\"', '"'):gsub("\\\\", "\\"):gsub("\\(%s)", "%1") -- Remove escape before whitespace
 
               -- Split into lines and preserve indentation
               local lines = {}

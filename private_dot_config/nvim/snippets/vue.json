@@ -1,0 +1,1 @@
+{"import":{"prefix":"import","body":"import { useSupabaseAuth } from \"../composables/useSupabaseAuth\";"}}

@@ -145,6 +145,7 @@ return {
     -- Merge default sources with existing ones
     local existing_default = opts.sources.default or {}
     local new_sources = {
+      "i18n",
       "dynamic_filter",
       "omni",
       "lsp",
@@ -196,6 +197,13 @@ return {
         module = "blink_sources.dynamic_filter",
       },
 
+      i18n = {
+        name = "i18n",
+        module = "i18n.integration.blink_source",
+        opts = {
+          -- future options can be placed here
+        },
+      },
       -- FIX: Configuración de snippets simplificada a la versión estándar y funcional.
       -- Se ha eliminado la lógica personalizada con `should_show_items` y `transform_items` que causaba problemas.
       snippets = {

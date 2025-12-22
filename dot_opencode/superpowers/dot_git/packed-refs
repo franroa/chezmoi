@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled sorted 
+9eefffc5417a8ee7096e646e573e82ebb64c41c3 refs/remotes/origin/feature/skills-repo-separation
+19e2997334eef29d0b4ab3c40a4bc124d200d1fb refs/remotes/origin/main
+803ce11b5d8ca5009822fb610b7cbb816d72df19 refs/remotes/origin/personal-superpowers
+e26094cae1a75d9fcb9043867924233c6ad40c26 refs/tags/v3.1.0
+^0bc5a5989d8cf140e9f671af14c76f6a6e6fae79
+14827acb4ecd50a8e25a57bf6f95a928de12e92b refs/tags/v3.2.2
+^17bbc2b130f817f7b2e8aade82284b5887864c51
+19e2997334eef29d0b4ab3c40a4bc124d200d1fb refs/tags/v3.2.3

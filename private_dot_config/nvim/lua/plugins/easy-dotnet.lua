@@ -29,10 +29,10 @@ return {
       dotnet.setup({
         lsp = {
           enabled = true,
-          analyzer_assemblies = {
-            vim.fn.expand("~") .. "/global-analyzers/SonarQube.Net.1.0.5/lib/net46/SonarQube.Net.dll",
-          },
-          roslynator_enabled = false,
+          -- analyzer_assemblies = {
+          --   vim.fn.expand("~") .. "/global-analyzers/SonarQube.Net.1.0.5/lib/net46/SonarQube.Net.dll",
+          -- },
+          roslynator_enabled = true,
         },
         test_runner = {
           noBuild = true,

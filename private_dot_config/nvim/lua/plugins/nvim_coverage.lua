@@ -91,7 +91,8 @@ return {
           local task = require("overseer").new_task({
             cmd = "dotnet test "
               .. "--no-build "
-              .. project_path
+              -- .. project_path
+              .. require("easy-dotnet").try_get_selected_solution().path
               .. " "
               .. "/p:CollectCoverage=true "
               .. "/p:CoverletOutputFormat=lcov "
