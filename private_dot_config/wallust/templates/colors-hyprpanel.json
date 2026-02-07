@@ -1,0 +1,23 @@
+{
+  "theme.bar.background": "{{background}}",
+  "theme.bar.buttons.text": "{{foreground}}",
+  "theme.bar.buttons.icon": "{{color4}}",
+  "theme.bar.buttons.icon_background": "{{color1}}",
+  "theme.bar.buttons.background": "{{background}}",
+  "theme.bar.buttons.hover": "{{color8}}",
+  "theme.bar.buttons.borderColor": "{{color4}}",
+  "theme.bar.menus.background": "{{background}}",
+  "theme.bar.menus.text": "{{foreground}}",
+  "theme.bar.menus.border.color": "{{color4}}",
+  "theme.notification.background": "{{background}}",
+  "theme.notification.text": "{{foreground}}",
+  "theme.notification.border": "{{color4}}",
+  "theme.osd.bar_color": "{{color4}}",
+  "theme.osd.bar_overflow_color": "{{color1}}",
+  "theme.osd.icon": "{{foreground}}",
+  "theme.osd.label": "{{foreground}}",
+  "theme.osd.bar_container": "{{color8}}",
+  "theme.bar.buttons.workspaces.active": "{{color4}}",
+  "theme.bar.buttons.workspaces.occupied": "{{color8}}",
+  "theme.bar.buttons.workspaces.available": "{{color0}}"
+}

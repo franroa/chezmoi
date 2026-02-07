@@ -1,0 +1,223 @@
+# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
+# Vendor defaults for window rules and layerrules
+# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+
+# NOTES: This is for Hyprland < 0.53 (no tags support)
+
+# WINDOW RULES - BROWSERS
+windowrule = opacity 0.99 0.8, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr|[Ff]irefox-bin)$
+windowrule = opacity 0.99 0.8, class:^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$
+windowrule = opacity 0.99 0.8, class:^(chrome-.+-Default)$
+windowrule = opacity 0.99 0.8, class:^([Cc]hromium)$
+windowrule = opacity 0.99 0.8, class:^([Mm]icrosoft-edge(-stable|-beta|-dev|-unstable))$
+windowrule = opacity 0.99 0.8, class:^(Brave-browser(-beta|-dev|-unstable)?)$
+windowrule = opacity 0.99 0.8, class:^([Tt]horium-browser|[Cc]achy-browser)$
+windowrule = opacity 0.99 0.8, class:^(zen-alpha|zen)$
+
+# NOTIFICATIONS
+windowrule = opacity 0.9 0.8, class:^(swaync-control-center|swaync-notification-window|swaync-client|class)$
+
+# KOOl SETTINGS
+windowrule = float, title:^(KooL Quick Cheat Sheet)$
+windowrule = center, title:^(KooL Quick Cheat Sheet)$
+windowrule = size 65% 90%, title:^(KooL Quick Cheat Sheet)$
+
+windowrule = float, title:^(KooL Hyprland Settings)$
+windowrule = center, title:^(KooL Hyprland Settings)$
+
+windowrule = float, class:^(nwg-displays|nwg-look)$
+windowrule = center, class:^(nwg-displays|nwg-look)$
+
+# TERMINALS
+windowrule = opacity 0.9 0.7, class:^(Alacritty|kitty|kitty-dropterm)$
+
+# EMAIL
+windowrule = opacity 0.94 0.86, class:^([Tt]hunderbird|org.mozilla.Thunderbird)$
+windowrule = opacity 0.94 0.86, class:^(eu.betterbird.Betterbird)$
+windowrule = opacity 0.94 0.86, class:^(org.gnome.Evolution)$
+
+# PROJECTS / IDEs
+windowrule = opacity 0.9 0.8, class:^(codium|codium-url-handler|VSCodium)$
+windowrule = opacity 0.9 0.8, class:^(VSCode|code|code-url-handler)$
+windowrule = opacity 0.9 0.8, class:^(jetbrains-.+)$
+windowrule = opacity 0.9 0.8, class:^(dev.zed.Zed|antigravity)$
+
+# SCREENSHARE
+windowrule = opacity 0.94 0.86, class:^(com.obsproject.Studio)$
+
+# IM / CHAT
+windowrule = opacity 0.94 0.86, class:^([Dd]iscord|[Ww]ebCord|[Vv]esktop)$
+windowrule = opacity 0.94 0.86, class:^([Ff]erdium)$
+windowrule = float, class:^([Ff]erdium)$
+windowrule = center, class:^([Ff]erdium)$
+windowrule = size 60% 70%, class:^([Ff]erdium)$
+windowrule = opacity 0.94 0.86, class:^([Ww]hatsapp-for-linux)$
+windowrule = float, class:^([Ww]hatsapp-for-linux)$
+windowrule = center, class:^([Ww]hatsapp-for-linux)$
+windowrule = size 60% 70%, class:^([Ww]hatsapp-for-linux)$
+windowrule = opacity 0.94 0.86, class:^(org.telegram.desktop|io.github.tdesktop_x64.TDesktop)$
+windowrule = opacity 0.94 0.86, class:^(teams-for-linux)$
+windowrule = opacity 0.94 0.86, class:^(im.riot.Riot|Element)$
+windowrule = opacity 0.94 0.86, class:^(ZapZap|com.rtosta.zapzap)$
+windowrule = float, class:^(ZapZap|com.rtosta.zapzap)$
+windowrule = center, class:^(ZapZap|com.rtosta.zapzap)$
+windowrule = size 60% 70%, class:^(ZapZap|com.rtosta.zapzap)$
+
+# GAMES
+windowrule = noblur, class:^(gamescope)$
+windowrule = fullscreen, class:^(gamescope)$
+windowrule = noblur, class:^(steam_app_\d+)$
+windowrule = fullscreen, class:^(steam_app_\d+)$
+
+# GAME STORES
+windowrule = float, class:^([Ss]team)$, title:negative:^([Ss]team)$
+windowrule = float, class:^([Ll]utris)$
+windowrule = float, class:^(com.heroicgameslauncher.hgl)$, title:negative:(Heroic Games Launcher)
+
+# FILE MANAGERS
+windowrule = opacity 0.9 0.8, class:^([Tt]hunar|org.gnome.Nautilus|[Pp]cmanfm-qt)$
+windowrule = opacity 0.9 0.8, class:^(app.drey.Warp)$
+
+# WALLPAPER
+windowrule = opacity 0.9 0.7, class:^([Ww]aytrogen)$
+windowrule = float, class:^([Ww]aytrogen)$
+windowrule = center, class:^([Ww]aytrogen)$
+windowrule = size 70% 70%, class:^([Ww]aytrogen)$
+
+# MULTIMEDIA
+windowrule = opacity 0.94 0.86, class:^([Aa]udacious)$
+
+# MULTIMEDIA VIDEO
+windowrule = opacity 1.0, class:^([Mm]pv|vlc)$
+windowrule = noblur, class:^([Mm]pv|vlc)$
+windowrule = float, class:^([Mm]pv|vlc)$
+windowrule = float, class:^(com.github.rafostar.Clapper)$
+
+# SETTINGS
+windowrule = opacity 0.8 0.7, class:^(ROG Control)$
+windowrule = float, class:^(ROG Control)$
+windowrule = center, class:^(ROG Control)$
+
+windowrule = opacity 0.8 0.7, class:^(wihotspot(-gui)?)$
+windowrule = float, class:^(wihotspot(-gui)?)$
+windowrule = center, class:^(wihotspot(-gui)?)$
+
+windowrule = opacity 0.8 0.7, class:^([Bb]aobab|org.gnome.[Bb]aobab)$
+windowrule = float, class:^([Bb]aobab|org.gnome.[Bb]aobab)$
+windowrule = center, class:^([Bb]aobab|org.gnome.[Bb]aobab)$
+
+windowrule = opacity 0.8 0.7, class:^(gnome-disks)$
+windowrule = float, class:^(gnome-disks)$
+windowrule = center, class:^(gnome-disks)$
+
+windowrule = opacity 0.8 0.7, title:(Kvantum Manager)
+windowrule = float, title:(Kvantum Manager)
+windowrule = center, title:(Kvantum Manager)
+
+windowrule = opacity 0.8 0.7, class:^(file-roller|org.gnome.FileRoller)$
+windowrule = float, class:^(file-roller|org.gnome.FileRoller)$
+windowrule = center, class:^(file-roller|org.gnome.FileRoller)$
+
+windowrule = opacity 0.8 0.7, class:^(nm-applet|nm-connection-editor|blueman-manager)$
+windowrule = float, class:^(nm-applet|nm-connection-editor|blueman-manager)$
+windowrule = center, class:^(nm-applet|nm-connection-editor|blueman-manager)$
+
+windowrule = opacity 0.8 0.7, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$
+windowrule = float, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$
+windowrule = center, class:^(pavucontrol|org.pulseaudio.pavucontrol|com.saivert.pwvucontrol)$
+
+windowrule = opacity 0.8 0.7, class:^(qt5ct|qt6ct)$
+windowrule = float, class:^(qt5ct|qt6ct)$
+windowrule = center, class:^(qt5ct|qt6ct)$
+
+windowrule = opacity 0.8 0.7, class:(xdg-desktop-portal-gtk)
+windowrule = float, class:(xdg-desktop-portal-gtk)
+
+windowrule = opacity 0.8 0.7, class:^(org.kde.polkit-kde-authentication-agent-1)$
+windowrule = float, class:^(org.kde.polkit-kde-authentication-agent-1)$
+windowrule = center, class:^(org.kde.polkit-kde-authentication-agent-1)$
+
+windowrule = opacity 0.8 0.7, class:^([Rr]ofi)$
+windowrule = float, class:^([Rr]ofi)$
+
+windowrule = opacity 0.8 0.7, class:^(btrfs-assistant)$
+windowrule = float, class:^(btrfs-assistant)$
+windowrule = center, class:^(btrfs-assistant)$
+
+windowrule = opacity 0.8 0.7, class:^(timeshift-gtk)$
+windowrule = float, class:^(timeshift-gtk)$
+windowrule = center, class:^(timeshift-gtk)$
+
+windowrule = opacity 0.8 0.7, class:^([Yy]ad)$
+windowrule = float, class:^([Yy]ad)$
+windowrule = center, class:^([Yy]ad)$
+
+# VIEWERS
+windowrule = opacity 0.82 0.75, class:^(gnome-system-monitor|org.gnome.SystemMonitor|io.missioncenter.MissionCenter)$
+windowrule = float, class:^(gnome-system-monitor|org.gnome.SystemMonitor|io.missioncenter.MissionCenter)$
+windowrule = center, class:^(gnome-system-monitor|org.gnome.SystemMonitor|io.missioncenter.MissionCenter)$
+
+windowrule = opacity 0.82 0.75, class:^(evince)$
+windowrule = float, class:^(evince)$
+windowrule = center, class:^(evince)$
+
+windowrule = opacity 0.82 0.75, class:^(eog|org.gnome.Loupe)$
+windowrule = float, class:^(eog|org.gnome.Loupe)$
+windowrule = center, class:^(eog|org.gnome.Loupe)$
+
+# FLOAT POPUPS AND DIALOGUES
+windowrule = float, title:^(Authentication Required)$
+windowrule = center, title:^(Authentication Required)$
+
+windowrule = float, class:(codium|codium-url-handler|VSCodium), title:negative:(.*codium.*|.*VSCodium.*)
+windowrule = float, class:^(com.heroicgameslauncher.hgl)$, title:negative:(Heroic Games Launcher)
+windowrule = float, class:^([Ss]team)$, title:negative:^([Ss]team)$
+windowrule = float, class:([Tt]hunar), title:negative:(.*[Tt]hunar.*)
+windowrule = center, class:([Tt]hunar), title:negative:(.*[Tt]hunar.*)
+
+windowrule = float, title:^(Add Folder to Workspace)$
+windowrule = size 70% 60%, title:^(Add Folder to Workspace)$
+windowrule = center, title:^(Add Folder to Workspace)$
+
+windowrule = float, title:^(Save As)$
+windowrule = size 70% 60%, title:^(Save As)$
+windowrule = center, title:^(Save As)$
+
+windowrule = float, title:(Open Files)
+windowrule = size 70% 60%, title:(Open Files)
+
+windowrule = float, title:^(SDDM Background)$
+windowrule = center, title:^(SDDM Background)$
+windowrule = size 16% 12%, title:^(SDDM Background)$
+
+# FLOATING APPS
+windowrule = float, class:([Zz]oom|onedriver|onedriver-launcher)
+windowrule = float, class:(org.gnome.Calculator)
+windowrule = center, class:(org.gnome.Calculator)
+windowrule = size 25% 30%, class:(org.gnome.Calculator)
+windowrule = float, class:^([Qq]alculate-gtk)$
+windowrule = center, class:^([Qq]alculate-gtk)$
+
+# PICTURE IN PICTURE
+windowrule = float, title:^(Picture-in-Picture)$
+windowrule = move 72% 7%, title:^(Picture-in-Picture)$
+windowrule = opacity 0.95 0.75, title:^(Picture-in-Picture)$
+windowrule = pin, title:^(Picture-in-Picture)$
+windowrule = keepaspectratio, title:^(Picture-in-Picture)$
+windowrule = size 30% 30%, title:^(Picture-in-Picture)$
+
+# IDE INITIAL FOCUS
+windowrule = noinitialfocus, class:^(jetbrains-*)
+windowrule = noinitialfocus, class:^(wind.*)$
+
+# IDLE INHIBIT FOR FULLSCREEN
+windowrule = idleinhibit fullscreen, fullscreen:1
+
+# LAYER RULES
+layerrule = blur, rofi
+layerrule = ignorezero, rofi
+layerrule = blur, notifications
+layerrule = ignorezero, notifications
+layerrule = blur, quickshell:overview
+layerrule = ignorezero, quickshell:overview
+layerrule = ignorealpha 0.5, quickshell:overview

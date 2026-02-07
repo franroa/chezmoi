@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@azure/mcp-linux-x64": "^2.0.0-beta.17"
+  }
+}

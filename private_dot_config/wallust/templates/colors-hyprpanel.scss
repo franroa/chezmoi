@@ -1,0 +1,54 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* wallust template - colors-hyprpanel.scss */
+
+@include styleModule(
+    'cmodule-pomodoro',
+    (
+        'text-color': {{foreground}},
+        'icon-color': {{background}},
+        'icon-background': {{color1}},
+        'label-background': {{background}},
+        'inner-spacing': 0.5em,
+        'border-enabled': false,
+        'icon-size': 1.2em
+    )
+);
+
+@include styleModule(
+    'cmodule-slack',
+    (
+        'text-color': {{foreground}},
+        'icon-color': {{color4}},
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);
+
+@include styleModule(
+    'cmodule-gitlab',
+    (
+        'text-color': {{foreground}},
+        'icon-color': {{color6}},
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);
+
+@include styleModule(
+    'cmodule-jira',
+    (
+        'text-color': {{foreground}},
+        'icon-color': {{color1}},
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);

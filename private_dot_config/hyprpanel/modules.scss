@@ -1,0 +1,25 @@
+@include styleModule(
+    'cmodule-pomodoro',
+    (
+        'text-color': #f5c2e7,
+        'icon-color': #1e1e2e,
+        'icon-background': #f5c2e7,
+        'label-background': #1e1e2e,
+        'inner-spacing': 0.5em,
+        'border-enabled': false,
+        'icon-size': 1.2em
+    )
+);
+
+.bar_item_box_visible.cmodule-slack {
+    background: transparent;
+}
+
+
+.bar_item_box_visible.cmodule-temp {
+    animation: temp-blink 0.5s ease-in-out infinite alternate;
+}
+@keyframes temp-blink {
+    0% { background: #ff6600; }
+    100% { background: #ff0000; }
+}

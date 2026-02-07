@@ -1,0 +1,17 @@
+/* Battery low blink - auto-generated */
+@keyframes battery-blink {
+    0%, 100% {
+        background: #ff0000 !important;
+        color: #ffffff !important;
+    }
+    50% {
+        background: #ffffff !important;
+        color: #ff0000 !important;
+    }
+}
+
+/* Active when battery-low class is present */
+.battery-low.bar-button-container,
+.battery-low .bar-button {
+    animation: battery-blink 1s infinite !important;
+}

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Chrome (Focus)
+Exec=/home/froa/.config/sway/browser-focus.sh %U
+Type=Application
+MimeType=x-scheme-handler/http;x-scheme-handler/https;

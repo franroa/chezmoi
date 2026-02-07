@@ -1,0 +1,92 @@
+{
+    "custom/temp": {
+        "icon": "",
+        "label": "{text}",
+        "tooltip": "{tooltip}",
+        "truncationSize": -1,
+        "execute": "/home/froa/.config/hyprpanel/scripts/temp-status.sh",
+        "interval": 5000,
+        "hideOnEmpty": true,
+        "scrollThreshold": 1,
+        "actions": {
+            "onLeftClick": "",
+            "onRightClick": "",
+            "onMiddleClick": "",
+            "onScrollUp": "",
+            "onScrollDown": ""
+        }
+    },
+    "custom/pomodoro": {
+        "icon": {
+            "stopped": "⏱️",
+            "work": "🔴",
+            "break": "🟢",
+            "paused": "⏸️"
+        },
+        "label": "{text}",
+        "tooltip": "Left-click: Start/Pause | Right-click: Reset | Scroll: Skip",
+        "truncationSize": -1,
+        "execute": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh",
+        "interval": 1000,
+        "hideOnEmpty": false,
+        "scrollThreshold": 1,
+        "actions": {
+            "onLeftClick": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh toggle",
+            "onRightClick": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh reset",
+            "onMiddleClick": "",
+            "onScrollUp": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh skip",
+            "onScrollDown": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh skip"
+        }
+    },
+    "custom/slack": {
+        "icon": "󰒱",
+        "label": "{text}",
+        "tooltip": "{tooltip}",
+        "truncationSize": -1,
+        "execute": "/home/froa/.config/hyprpanel/scripts/slack-status.sh",
+        "interval": 500,
+        "hideOnEmpty": false,
+        "scrollThreshold": 1,
+        "actions": {
+            "onLeftClick": "/home/froa/.config/hyprpanel/scripts/slack-status.sh toggle",
+            "onRightClick": "",
+            "onMiddleClick": "",
+            "onScrollUp": "",
+            "onScrollDown": ""
+        }
+    },
+    "custom/gitlab": {
+        "icon": "󰮠",
+        "label": "{text}",
+        "tooltip": "{tooltip}",
+        "truncationSize": -1,
+        "execute": "/home/froa/.config/hyprpanel/scripts/gitlab.sh",
+        "interval": 60000,
+        "hideOnEmpty": true,
+        "scrollThreshold": 1,
+        "actions": {
+            "onLeftClick": "/home/froa/.config/hyprpanel/scripts/gitlab.sh open",
+            "onRightClick": "/home/froa/.config/hyprpanel/scripts/gitlab.sh show",
+            "onMiddleClick": "",
+            "onScrollUp": "",
+            "onScrollDown": ""
+        }
+    },
+    "custom/jira": {
+        "icon": "󰌃",
+        "label": "{text}",
+        "tooltip": "{tooltip}",
+        "truncationSize": -1,
+        "execute": "/home/froa/.config/hyprpanel/scripts/jira.sh",
+        "interval": 60000,
+        "hideOnEmpty": true,
+        "scrollThreshold": 1,
+        "actions": {
+            "onLeftClick": "/home/froa/.config/hyprpanel/scripts/jira.sh open",
+            "onRightClick": "/home/froa/.config/hyprpanel/scripts/jira.sh show",
+            "onMiddleClick": "",
+            "onScrollUp": "",
+            "onScrollDown": ""
+        }
+    }
+}
