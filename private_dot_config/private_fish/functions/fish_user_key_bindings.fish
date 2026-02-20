@@ -1,7 +1,3 @@
-# vi:noexpandtab:sw=4:ts=4
-#
 function fish_user_key_bindings
-  eval $vi_mode_default
+    fish_vi_key_bindings
 end
-
-# vi:noexpandtab:sw=4:ts=4

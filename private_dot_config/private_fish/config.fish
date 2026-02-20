@@ -438,7 +438,7 @@ abbr bat batcat
 
 fish_add_path /usr/local
 fish_add_path $HOME/.dotnet/tools
-fish_add_path ~/.local/share/nvm/v25.0.0/bin
+fish_add_path ~/.local/share/nvm/v25.4.0/bin
 fish_add_path ~/dotnet
 fish_add_path $HOME/bin
 set -gx DOTNET_ROOT $HOME/dotnet
@@ -461,6 +461,11 @@ direnv hook fish | source
 fish_config theme choose tokyonight
 
 fish_vi_key_bindings
+
+# Source secrets file (not tracked by chezmoi)
+if test -f ~/sources.fish
+    source ~/sources.fish
+end
 
 # Source all .fish files from the fish config directory (excluding conf.d and functions)
 for file in ~/.config/fish/*.fish

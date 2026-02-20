@@ -1,0 +1,971 @@
+# LazyVim-style keymaps for wlr-which-key
+# Leader: Super+Space
+
+font: JetBrainsMono Nerd Font 13
+background: "#1a1b26d0"
+color: "#c0caf5"
+border: "#7aa2f7"
+separator: " 󰁔 "
+border_width: 3
+corner_r: 16
+padding: 24
+rows_per_column: 10
+column_padding: 40
+
+anchor: bottom-right
+margin_right: 20
+margin_bottom: 20
+
+menu:
+  # ═══════════════════════════════════════
+  # Quick Actions (single key) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "space"
+    desc: "󰈞 Find Files"
+    cmd: wofi --show drun --style ~/.config/wofi/active-theme.css
+
+  - key: "comma"
+    desc: "󰈙 Buffers"
+    cmd: ~/.config/sway/window-switcher.sh
+
+  - key: "period"
+    desc: "󰓩 Scratch Buffer"
+    cmd: swaymsg scratchpad show
+
+  - key: "slash"
+    desc: "󰈞 Grep"
+    cmd: bash -c 'wofi --show run --style ~/.config/wofi/active-theme.css'
+
+  - key: "colon"
+    desc: "󰘳 Command History"
+    cmd: wezterm -e bash -c 'history | wofi --dmenu --style ~/.config/wofi/active-theme.css'
+
+  - key: "grave"
+    desc: "󰖯 Switch to Other Buffer"
+    cmd: swaymsg workspace back_and_forth
+
+  - key: "question"
+    desc: "󰌌 Cheatsheet"
+    cmd: ~/.config/sway/cheatsheet.sh
+
+  - key: "L"
+    desc: "󰒓 LazyVim Changelog"
+    cmd: bash -c 'notify-send "LazyVim" "Changelog not available in sway"'
+
+  # ═══════════════════════════════════════
+  # +audio (v) - Audio & Volume
+  # ═══════════════════════════════════════
+  - key: "v"
+    desc: "󰕾 +audio"
+    submenu:
+      - key: "v"
+        desc: "󰕾 Sound Settings"
+        cmd: env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound
+      - key: "m"
+        desc: "󰝟 Mute Toggle"
+        cmd: pactl set-sink-mute @DEFAULT_SINK@ toggle
+      - key: "equal"
+        desc: "󰝝 Volume +5%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ +5%
+      - key: "minus"
+        desc: "󰝞 Volume -5%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ -5%
+      - key: "plus"
+        desc: "󰝝 Volume +10%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ +10%
+      - key: "underscore"
+        desc: "󰝞 Volume -10%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ -10%
+      - key: "0"
+        desc: "󰝟 Volume 0%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ 0%
+      - key: "5"
+        desc: "󰕾 Volume 50%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ 50%
+      - key: "1"
+        desc: "󰕾 Volume 100%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ 100%
+      - key: "i"
+        desc: "󰍬 Input Mute"
+        cmd: pactl set-source-mute @DEFAULT_SOURCE@ toggle
+      - key: "o"
+        desc: "󰓃 Output Device"
+        cmd: bash -c 'sink=$(pactl list short sinks | wofi --dmenu -p "Output Device" | awk "{print \$1}"); [ -n "$sink" ] && pactl set-default-sink "$sink"'
+      - key: "I"
+        desc: "󰍬 Input Device"
+        cmd: bash -c 'source=$(pactl list short sources | wofi --dmenu -p "Input Device" | awk "{print \$1}"); [ -n "$source" ] && pactl set-default-source "$source"'
+
+  # ═══════════════════════════════════════
+  # +brightness (V) - Screen Brightness
+  # ═══════════════════════════════════════
+  - key: "V"
+    desc: "󰃟 +brightness"
+    submenu:
+      - key: "equal"
+        desc: "󰃟 Brightness +10%"
+        cmd: brightnessctl set +10%
+      - key: "minus"
+        desc: "󰃞 Brightness -10%"
+        cmd: brightnessctl set 10%-
+      - key: "plus"
+        desc: "󰃟 Brightness +20%"
+        cmd: brightnessctl set +20%
+      - key: "underscore"
+        desc: "󰃞 Brightness -20%"
+        cmd: brightnessctl set 20%-
+      - key: "1"
+        desc: "󰃚 Brightness 10%"
+        cmd: brightnessctl set 10%
+      - key: "2"
+        desc: "󰃛 Brightness 25%"
+        cmd: brightnessctl set 25%
+      - key: "5"
+        desc: "󰃜 Brightness 50%"
+        cmd: brightnessctl set 50%
+      - key: "7"
+        desc: "󰃝 Brightness 75%"
+        cmd: brightnessctl set 75%
+      - key: "0"
+        desc: "󰃟 Brightness 100%"
+        cmd: brightnessctl set 100%
+
+  # ═══════════════════════════════════════
+  # +media (m) - Media controls
+  # ═══════════════════════════════════════
+  - key: "m"
+    desc: "󰎈 +media"
+    submenu:
+      - key: "m"
+        desc: "󰐎 Play/Pause"
+        cmd: playerctl play-pause
+      - key: "n"
+        desc: "󰒭 Next"
+        cmd: playerctl next
+      - key: "p"
+        desc: "󰒮 Previous"
+        cmd: playerctl previous
+      - key: "s"
+        desc: "󰓛 Stop"
+        cmd: playerctl stop
+      - key: "l"
+        desc: "󰑐 Loop Toggle"
+        cmd: playerctl loop
+      - key: "S"
+        desc: "󰒝 Shuffle Toggle"
+        cmd: playerctl shuffle
+      - key: "equal"
+        desc: "󰝝 Vol +5%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ +5%
+      - key: "minus"
+        desc: "󰝞 Vol -5%"
+        cmd: pactl set-sink-volume @DEFAULT_SINK@ -5%
+      - key: "0"
+        desc: "󰝟 Mute Toggle"
+        cmd: pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+  # ═══════════════════════════════════════
+  # +info (i) - Quick system info
+  # ═══════════════════════════════════════
+  - key: "i"
+    desc: "󰋽 +info"
+    submenu:
+      - key: "i"
+        desc: "󰩟 IP Address"
+        cmd: bash -c 'ip=$(curl -s ifconfig.me); notify-send "Public IP" "$ip"; echo "$ip" | wl-copy'
+      - key: "l"
+        desc: "󰩟 Local IP"
+        cmd: bash -c 'ip=$(hostname -I | awk "{print \$1}"); notify-send "Local IP" "$ip"; echo "$ip" | wl-copy'
+      - key: "b"
+        desc: "󰁹 Battery"
+        cmd: bash -c 'bat=$(cat /sys/class/power_supply/BAT*/capacity 2>/dev/null || echo "N/A"); notify-send "Battery" "${bat}%"'
+      - key: "d"
+        desc: "󰋊 Disk Usage"
+        cmd: "bash -c 'df -h / | tail -1 | awk \"{print \\\"Used: \\\" \\$3 \\\" / \\\" \\$2}\" | xargs notify-send \"Disk Usage\"'"
+      - key: "m"
+        desc: "󰍛 Memory"
+        cmd: "bash -c 'free -h | awk \"/^Mem:/ {print \\\"Used: \\\" \\$3 \\\" / \\\" \\$2}\" | xargs notify-send \"Memory\"'"
+      - key: "u"
+        desc: "󰅐 Uptime"
+        cmd: "bash -c 'notify-send \"Uptime\" \"$(uptime -p)\"'"
+      - key: "w"
+        desc: "󰖐 Weather"
+        cmd: "bash -c 'notify-send \"Weather\" \"$(curl -s wttr.in/?format=%l:+%c+%t+%h)\"'"
+      - key: "c"
+        desc: "󰻠 CPU"
+        cmd: "bash -c 'top -bn1 | grep Cpu | awk \"{print 100-\\$8 \\\"%\\\"}\" | xargs notify-send \"CPU Usage\"'"
+
+  # ═══════════════════════════════════════
+  # +layout (l) - Window layouts & presets
+  # ═══════════════════════════════════════
+  - key: "l"
+    desc: "󰕰 +layout"
+    submenu:
+      - key: "h"
+        desc: "󰕰 50/50 Horizontal"
+        cmd: bash -c 'swaymsg "split h; resize set width 50ppt"'
+      - key: "v"
+        desc: "󰕭 50/50 Vertical"
+        cmd: bash -c 'swaymsg "split v; resize set height 50ppt"'
+      - key: "c"
+        desc: "󰆧 Center Float"
+        cmd: bash -c 'swaymsg "floating enable; resize set 80ppt 80ppt; move position center"'
+      - key: "p"
+        desc: "󰹑 PiP Bottom-Right"
+        cmd: bash -c 'swaymsg "floating enable; sticky enable; resize set 480 270; move position 1420 790"'
+      - key: "P"
+        desc: "󰹑 PiP Top-Right"
+        cmd: bash -c 'swaymsg "floating enable; sticky enable; resize set 480 270; move position 1420 20"'
+      - key: "l"
+        desc: "󰜵 Left Half"
+        cmd: bash -c 'swaymsg "floating enable; resize set 50ppt 100ppt; move position 0 0"'
+      - key: "r"
+        desc: "󰜴 Right Half"
+        cmd: bash -c 'swaymsg "floating enable; resize set 50ppt 100ppt; move position 50ppt 0"'
+      - key: "t"
+        desc: "󰕮 Tabbed"
+        cmd: swaymsg layout tabbed
+      - key: "s"
+        desc: "󰕫 Stacking"
+        cmd: swaymsg layout stacking
+      - key: "e"
+        desc: "󰕬 Toggle Split"
+        cmd: swaymsg layout toggle split
+
+  # ═══════════════════════════════════════
+  # +quick (;) - Quick tools
+  # ═══════════════════════════════════════
+  - key: "semicolon"
+    desc: "󱓞 +quick"
+    submenu:
+      - key: "c"
+        desc: "󰆒 Color Picker"
+        cmd: bash -c 'color=$(grim -g "$(slurp -p)" -t ppm - | convert - -format "%[hex:p{0,0}]" info:-); notify-send "Color" "#$color"; echo "#$color" | wl-copy'
+      - key: "e"
+        desc: "󰱫 Emoji"
+        cmd: bash -c 'emoji=$(curl -s "https://raw.githubusercontent.com/muan/emojilib/main/dist/emoji-en-US.json" | jq -r "to_entries | .[] | \"\(.key) \(.value | join(\" \"))\"" | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Emoji" | cut -d" " -f1); [ -n "$emoji" ] && echo -n "$emoji" | wl-copy && wtype "$emoji"'
+      - key: "m"
+        desc: "󰃬 Math/Calc"
+        cmd: bash -c 'result=$(wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Calc" | bc -l 2>/dev/null); [ -n "$result" ] && notify-send "Result" "$result" && echo "$result" | wl-copy'
+      - key: "t"
+        desc: "󰔛 Timer"
+        cmd: bash -c 'time=$(wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Timer (e.g. 5m, 30s)"); [ -n "$time" ] && (sleep "$time" && notify-send -u critical "Timer" "Time is up!" && paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga) &'
+      - key: "s"
+        desc: "󱎫 Stopwatch"
+        cmd: "bash -c 'notify-send \"Stopwatch\" \"Started - Press Enter in terminal to stop\"; wezterm -e bash -c \"read; echo Done\"'"
+      - key: "n"
+        desc: "󰎞 Quick Note"
+        cmd: bash -c 'note=$(wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Quick Note"); [ -n "$note" ] && echo "$(date +%Y-%m-%d\ %H:%M) - $note" >> ~/notes.txt && notify-send "Note Saved" "$note"'
+      - key: "u"
+        desc: "󰌷 UUID"
+        cmd: bash -c 'uuid=$(uuidgen); echo "$uuid" | wl-copy; notify-send "UUID" "$uuid"'
+      - key: "p"
+        desc: "󰌆 Password Gen"
+        cmd: bash -c 'pw=$(openssl rand -base64 16); echo "$pw" | wl-copy; notify-send "Password" "Copied to clipboard"'
+      - key: "d"
+        desc: "󰃭 Date/Time"
+        cmd: bash -c 'dt=$(date "+%Y-%m-%d %H:%M:%S"); echo "$dt" | wl-copy; notify-send "Date/Time" "$dt"'
+
+  # ═══════════════════════════════════════
+  # +apps (a) - Applications
+  # ═══════════════════════════════════════
+  - key: "a"
+    desc: "󰣆 +apps"
+    submenu:
+      - key: "f"
+        desc: "󰈹 Firefox"
+        cmd: firefox
+      - key: "c"
+        desc: "󰊯 Chrome"
+        cmd: google-chrome
+      - key: "s"
+        desc: "󰒱 Slack"
+        cmd: slack
+      - key: "n"
+        desc: "󰈄 Notion"
+        cmd: notion-snap-reborn
+      - key: "m"
+        desc: "󰓇 Spotify"
+        cmd: spotify
+      - key: "b"
+        desc: "󰌋 Bitwarden"
+        cmd: ~/.config/sway/secrets-wofi.sh
+      - key: "e"
+        desc: "󰉋 Nautilus"
+        cmd: nautilus
+      - key: "g"
+        desc: "󰚩 ChatGPT"
+        cmd: firefox --new-tab "https://chat.openai.com"
+      - key: "C"
+        desc: "󰚩 Claude"
+        cmd: firefox --new-tab "https://claude.ai"
+      - key: "j"
+        desc: "󰌃 Jira"
+        cmd: ~/.config/sway/jira-notifications.sh
+      - key: "l"
+        desc: "󰊢 GitLab MRs"
+        cmd: ~/.config/sway/gitlab-notifications.sh
+      - key: "M"
+        desc: "󰃭 Today's Meetings"
+        cmd: ~/.config/sway/calendar-float.sh
+
+  # ═══════════════════════════════════════
+  # +capture (c) - Screenshots & Recording
+  # ═══════════════════════════════════════
+  - key: "c"
+    desc: "󰹑 +capture"
+    submenu:
+      - key: "c"
+        desc: "󰹑 Screenshot Area"
+        cmd: bash -c 'grimshot save area - | swappy -f -'
+      - key: "w"
+        desc: "󰖯 Screenshot Window"
+        cmd: bash -c 'grimshot save window - | swappy -f -'
+      - key: "s"
+        desc: "󰍹 Screenshot Screen"
+        cmd: bash -c 'grimshot save output - | swappy -f -'
+      - key: "a"
+        desc: "󰹑 Screenshot Area (Save)"
+        cmd: bash -c 'grimshot save area ~/Pictures/$(date +%Y%m%d_%H%M%S).png'
+      - key: "W"
+        desc: "󰖯 Screenshot Window (Save)"
+        cmd: bash -c 'grimshot save window ~/Pictures/$(date +%Y%m%d_%H%M%S).png'
+      - key: "S"
+        desc: "󰍹 Screenshot Screen (Save)"
+        cmd: bash -c 'grimshot save output ~/Pictures/$(date +%Y%m%d_%H%M%S).png'
+      - key: "r"
+        desc: "󰻃 Record Toggle"
+        cmd: bash -c 'if pgrep wf-recorder > /dev/null; then killall -s SIGINT wf-recorder && notify-send "Recording" "Stopped"; else wf-recorder -g "$(slurp)" -f ~/Videos/recording-$(date +%Y%m%d_%H%M%S).mp4 & notify-send "Recording" "Started"; fi'
+      - key: "R"
+        desc: "󰻃 Record Screen"
+        cmd: bash -c 'if pgrep wf-recorder > /dev/null; then killall -s SIGINT wf-recorder && notify-send "Recording" "Stopped"; else wf-recorder -f ~/Videos/recording-$(date +%Y%m%d_%H%M%S).mp4 & notify-send "Recording" "Started"; fi'
+      - key: "g"
+        desc: "󰩭 GIF Area"
+        cmd: bash -c 'wf-recorder -c gif -g "$(slurp)" -f ~/Videos/recording-$(date +%Y%m%d_%H%M%S).gif & notify-send "GIF Recording" "Started - Press Ctrl+C to stop"'
+
+  # ═══════════════════════════════════════
+  # +docker (d) - Docker & containers
+  # ═══════════════════════════════════════
+  - key: "d"
+    desc: "󰡨 +docker"
+    submenu:
+      - key: "d"
+        desc: "󰡨 Docker PS"
+        cmd: wezterm -e bash -c 'docker ps -a; echo; read -p "Press Enter to close..."'
+      - key: "l"
+        desc: "󰌱 Docker Logs"
+        cmd: bash -c 'container=$(docker ps --format "{{.Names}}" | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Container"); [ -n "$container" ] && wezterm -e docker logs -f "$container"'
+      - key: "s"
+        desc: "󰓦 Docker Stats"
+        cmd: wezterm -e docker stats
+      - key: "i"
+        desc: "󰆼 Docker Images"
+        cmd: wezterm -e bash -c 'docker images; echo; read -p "Press Enter to close..."'
+      - key: "c"
+        desc: "󰆼 Docker Compose"
+        cmd: wezterm -e bash -c 'docker compose ps; echo; read -p "Press Enter to close..."'
+      - key: "p"
+        desc: "󰓆 Prune System"
+        cmd: wezterm -e bash -c 'docker system prune; echo; read -p "Press Enter to close..."'
+      - key: "r"
+        desc: "󰑐 Restart Container"
+        cmd: bash -c 'container=$(docker ps --format "{{.Names}}" | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Container"); [ -n "$container" ] && docker restart "$container" && notify-send "Docker" "Restarted $container"'
+      - key: "e"
+        desc: "󰆍 Exec Shell"
+        cmd: bash -c 'container=$(docker ps --format "{{.Names}}" | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Container"); [ -n "$container" ] && wezterm -e docker exec -it "$container" sh'
+
+  # ═══════════════════════════════════════
+  # +file (f) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "f"
+    desc: "󰈙 +file"
+    submenu:
+      - key: "f"
+        desc: "󰈞 Find Files (Root Dir)"
+        cmd: wofi --show drun --style ~/.config/wofi/active-theme.css
+      - key: "F"
+        desc: "󰈞 Find Files (cwd)"
+        cmd: bash -c 'cd "$(pwd)" && wofi --show drun --style ~/.config/wofi/active-theme.css'
+      - key: "r"
+        desc: "󰋚 Recent Files"
+        cmd: bash -c 'find ~ -type f -mtime -7 2>/dev/null | head -500 | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Recent Files" | xargs -r wezterm -e nvim'
+      - key: "R"
+        desc: "󰋚 Recent (cwd)"
+        cmd: bash -c 'find . -type f -mtime -7 2>/dev/null | head -500 | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Recent Files" | xargs -r wezterm -e nvim'
+      - key: "n"
+        desc: "󰎞 New File"
+        cmd: bash -c 'wezterm -e nvim'
+      - key: "e"
+        desc: "󰉋 Explorer (root dir)"
+        cmd: nautilus
+      - key: "E"
+        desc: "󰉋 Explorer (cwd)"
+        cmd: bash -c 'nautilus "$(pwd)"'
+      - key: "t"
+        desc: "󰆍 Terminal (Root Dir)"
+        cmd: wezterm
+      - key: "T"
+        desc: "󰆍 Terminal (cwd)"
+        cmd: bash -c 'cd "$(pwd)" && wezterm'
+      - key: "b"
+        desc: "󰈙 Buffers"
+        cmd: ~/.config/sway/window-switcher.sh
+      - key: "c"
+        desc: "󰒓 Find Config File"
+        cmd: bash -c 'find ~/.config -type f | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Config Files" | xargs wezterm -e nvim'
+
+  # ═══════════════════════════════════════
+  # +git (g) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "g"
+    desc: "󰊢 +git"
+    submenu:
+      - key: "g"
+        desc: "󰊢 LazyGit"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/lazygit
+      - key: "s"
+        desc: "󰋜 Git Status"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/lazygit status
+      - key: "l"
+        desc: "󰋚 Git Log"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/lazygit log
+      - key: "L"
+        desc: "󰋚 Git Log (cwd)"
+        cmd: bash -c 'cd "$(pwd)" && wezterm -e git log'
+      - key: "b"
+        desc: "󰘬 Git Branches"
+        cmd: wezterm -e bash -c 'cd $(git rev-parse --show-toplevel 2>/dev/null || pwd) && git branch -a'
+      - key: "B"
+        desc: "󰊤 Git Browse (open)"
+        cmd: xdg-open https://gitlab.com
+      - key: "Y"
+        desc: "󰆒 Git Browse (copy)"
+        cmd: bash -c 'echo "https://gitlab.com" | wl-copy'
+      - key: "f"
+        desc: "󰉋 Open GitLab"
+        cmd: firefox --new-tab "https://gitlab.com"
+      - key: "d"
+        desc: "󰊤 Git Diff (hunks)"
+        cmd: bash -c 'wezterm -e git diff'
+      - key: "D"
+        desc: "󰊤 Git Diff (origin)"
+        cmd: bash -c 'wezterm -e git diff origin'
+      - key: "S"
+        desc: "󰋚 Git Stash"
+        cmd: bash -c 'wezterm -e git stash list'
+
+  # ═══════════════════════════════════════
+  # +notifications (n) - Notification Management
+  # ═══════════════════════════════════════
+  - key: "n"
+    desc: "󰂚 +notifications"
+    submenu:
+      - key: "n"
+        desc: "󰂚 Show Last"
+        cmd: dunstctl history-pop
+      - key: "h"
+        desc: "󰋚 History (All)"
+        cmd: "bash -c 'dunstctl history | jq -r \".data[0][] | .appname.data + \\\": \\\" + .summary.data\" | wofi --dmenu -p Notifications --style ~/.config/wofi/active-theme.css'"
+      - key: "c"
+        desc: "󰅖 Close"
+        cmd: dunstctl close
+      - key: "C"
+        desc: "󰅗 Close All"
+        cmd: dunstctl close-all
+      - key: "a"
+        desc: "󰀘 Action"
+        cmd: dunstctl action
+      - key: "f"
+        desc: "󰈈 Focus Source App"
+        cmd: bash -c 'appname=$(dunstctl history | jq -r ".data[0][0].appname.data"); [ -n "$appname" ] && ~/.config/dunst/dunst-focus.sh "$appname"'
+      - key: "s"
+        desc: "󰒱 Focus Slack"
+        cmd: swaymsg '[class="Slack"]' focus
+      - key: "d"
+        desc: "󰍶 Toggle DND"
+        cmd: bash -c 'dunstctl set-paused toggle; pkill -RTMIN+8 waybar'
+      - key: "m"
+        desc: "󰍡 Context Menu"
+        cmd: dunstctl context
+
+  # ═══════════════════════════════════════
+  # +overseer (o) - Automation scripts
+  # ═══════════════════════════════════════
+  - key: "o"
+    desc: "󱁤 +overseer"
+    submenu:
+      - key: "a"
+        desc: "󰠅 Azure PIM Elevate"
+        cmd: wezterm -e ~/.config/sway/elevate-azure-pim.sh
+      - key: "s"
+        desc: "󱃾 sandbox (ws 9)"
+        cmd: "swaymsg 'workspace 9; exec wezterm start --class kubie-sandbox-terminal -- bash /home/froa/.config/sway/k9s-sandbox.sh'"
+      - key: "p"
+        desc: "󱃾 +platform-live"
+        submenu:
+          - key: "e"
+            desc: "󱃾 platform-live-eu01 (ws 10)"
+            cmd: "swaymsg 'workspace 10; exec wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh platform eu01'"
+          - key: "u"
+            desc: "󱃾 platform-live-us01 (ws 11)"
+            cmd: "swaymsg 'workspace 11; exec wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh platform us01'"
+          - key: "c"
+            desc: "󱃾 platform-live-ca01 (ws 12)"
+            cmd: "swaymsg 'workspace 12; exec wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh platform ca01'"
+      - key: "t"
+        desc: "󱃾 +technosylva-live"
+        submenu:
+          - key: "e"
+            desc: "󱃾 technosylva-live-eu01 (ws 13)"
+            cmd: "swaymsg 'workspace 13; exec wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh technosylva eu01'"
+          - key: "u"
+            desc: "󱃾 technosylva-live-us01 (ws 14)"
+            cmd: "swaymsg 'workspace 14; exec wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh technosylva us01'"
+          - key: "c"
+            desc: "󱃾 technosylva-live-ca01 (ws 15)"
+            cmd: "swaymsg 'workspace 15; exec wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh technosylva ca01'"
+
+  # ═══════════════════════════════════════
+  # +connections (O) - Network & devices
+  # ═══════════════════════════════════════
+  - key: "O"
+    desc: "󰖩 +connect"
+    submenu:
+      - key: "w"
+        desc: "󰖩 WiFi"
+        cmd: ~/.config/sway/wifi-wofi.sh
+      - key: "b"
+        desc: "󰂯 Bluetooth"
+        cmd: ~/.config/sway/bluetooth-wofi.sh
+      - key: "s"
+        desc: "󰢹 SSH"
+        cmd: ~/.config/sway/ssh-wofi.sh
+      - key: "v"
+        desc: "󰖂 VPN"
+        cmd: ~/.config/waybar/scripts/vpn-toggle.sh
+      - key: "n"
+        desc: "󰛳 Network Settings"
+        cmd: env XDG_CURRENT_DESKTOP=GNOME gnome-control-center network
+      - key: "a"
+        desc: "󰕾 Sound Settings"
+        cmd: env XDG_CURRENT_DESKTOP=GNOME gnome-control-center sound
+
+  # ═══════════════════════════════════════
+  # +pomodoro (p)
+  # ═══════════════════════════════════════
+  - key: "p"
+    desc: "󰔟 +pomodoro"
+    submenu:
+      - key: "p"
+        desc: "󰐊 Toggle"
+        cmd: ~/.config/waybar/scripts/pomodoro.sh toggle
+      - key: "s"
+        desc: "󰓛 Skip"
+        cmd: ~/.config/waybar/scripts/pomodoro.sh skip
+      - key: "r"
+        desc: "󰜉 Reset"
+        cmd: ~/.config/waybar/scripts/pomodoro.sh reset
+      - key: "m"
+        desc: "󰍜 Menu"
+        cmd: ~/.config/waybar/scripts/pomodoro.sh menu
+
+  # ═══════════════════════════════════════
+  # +quit/session (q) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "q"
+    desc: "󰗼 +quit/session"
+    submenu:
+      - key: "q"
+        desc: "󰗼 Quit All"
+        cmd: swaymsg exit
+      - key: "l"
+        desc: "󰌾 Lock Screen"
+        cmd: swaylock -f -c 000000
+      - key: "s"
+        desc: "󰤄 Suspend"
+        cmd: systemctl suspend
+      - key: "r"
+        desc: "󰜉 Reboot"
+        cmd: systemctl reboot
+      - key: "p"
+        desc: "󰐥 Power Off"
+        cmd: systemctl poweroff
+
+  # ═══════════════════════════════════════
+  # +terminal (f t) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "t"
+    desc: "󰆍 +terminal"
+    submenu:
+      - key: "t"
+        desc: "󰆍 Terminal (Root Dir)"
+        cmd: wezterm
+      - key: "T"
+        desc: "󰆍 Terminal (cwd)"
+        cmd: bash -c 'cd "$(pwd)" && wezterm'
+      - key: "g"
+        desc: "󰊢 LazyGit"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/lazygit
+      - key: "b"
+        desc: "󰄛 Btop"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/btop
+      - key: "n"
+        desc: "󰎙 Node REPL"
+        cmd: wezterm -e node
+      - key: "p"
+        desc: "󰌠 Python REPL"
+        cmd: wezterm -e python3
+      - key: "k"
+        desc: "󱃾 K9s"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/k9s
+      - key: "l"
+        desc: "󰋚 System Logs"
+        cmd: wezterm -e journalctl -f
+
+  # ═══════════════════════════════════════
+  # +search (s) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "s"
+    desc: "󰈞 +search"
+    submenu:
+      - key: "g"
+        desc: "󰈞 Grep (Root Dir)"
+        cmd: bash -c 'wofi --show run --style ~/.config/wofi/active-theme.css'
+      - key: "G"
+        desc: "󰈞 Grep (cwd)"
+        cmd: bash -c 'cd "$(pwd)" && wofi --show run --style ~/.config/wofi/active-theme.css'
+      - key: "w"
+        desc: "󰈞 Visual selection or word (Root Dir)"
+        cmd: bash -c 'wl-paste | xargs -I {} bash -c "grep -r {} ~"'
+      - key: "W"
+        desc: "󰈞 Visual selection or word (cwd)"
+        cmd: bash -c 'wl-paste | xargs -I {} bash -c "grep -r {} ."'
+      - key: "n"
+        desc: "󰂚 +noice"
+        cmd: dunstctl history-pop
+      - key: "h"
+        desc: "󰋖 Help Pages"
+        cmd: bash -c 'man -k . | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Man Pages" | awk "{print \$1}" | xargs man'
+      - key: "k"
+        desc: "󰌌 Keymaps"
+        cmd: ~/.config/sway/cheatsheet.sh
+      - key: "c"
+        desc: "󰘳 Command History"
+        cmd: bash -c 'history | wofi --dmenu --style ~/.config/wofi/active-theme.css'
+      - key: "C"
+        desc: "󰘳 Commands"
+        cmd: bash -c 'compgen -c | wofi --dmenu --style ~/.config/wofi/active-theme.css'
+      - key: "f"
+        desc: "󰈞 Find Files"
+        cmd: bash -c 'find ~ -type f 2>/dev/null | head -1000 | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Find File" | xargs -r wezterm -e nvim'
+
+  # ═══════════════════════════════════════
+  # +ui/toggle (u) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "u"
+    desc: "󰙵 +ui/toggle"
+    submenu:
+      - key: "n"
+        desc: "󰂛 Dismiss All Notifications"
+        cmd: dunstctl close-all
+      - key: "C"
+        desc: "󰏘 Colorschemes"
+        cmd: ~/.config/sway/wofi-theme-switcher.sh
+      - key: "b"
+        desc: "󰛨 Toggle Dark Background"
+        cmd: ~/.config/sway/nightlight.sh toggle
+      - key: "d"
+        desc: "󰍶 Toggle Diagnostics (DND)"
+        cmd: bash -c 'dunstctl set-paused toggle; pkill -RTMIN+8 waybar'
+      - key: "D"
+        desc: "󰖔 Toggle Dimming"
+        cmd: ~/.config/sway/inactive-opacity.sh
+      - key: "f"
+        desc: "󰽥 Toggle Auto Format (Global)"
+        cmd: ~/.config/sway/focus-mode.sh toggle
+      - key: "F"
+        desc: "󰽥 Toggle Auto Format (Buffer)"
+        cmd: ~/.config/sway/focus-mode.sh toggle
+      - key: "w"
+        desc: "󰖶 Toggle Waybar"
+        cmd: swaymsg bar mode toggle
+      - key: "g"
+        desc: "󰓩 Toggle Gaps"
+        cmd: bash -c 'if [ "$(swaymsg -t get_tree | jq ".nodes[].nodes[].gaps.inner")" = "0" ]; then swaymsg gaps inner all set 5; else swaymsg gaps inner all set 0; fi'
+      - key: "B"
+        desc: "󰓩 Toggle Borders"
+        cmd: bash -c 'swaymsg "border toggle"'
+      - key: "r"
+        desc: "󰑐 Redraw / Clear hlsearch / Diff Update"
+        cmd: swaymsg reload
+      - key: "Z"
+        desc: "󰊓 Toggle Zoom Mode"
+        cmd: swaymsg fullscreen toggle
+      - key: "z"
+        desc: "󰊓 Toggle Zen Mode"
+        cmd: swaymsg fullscreen toggle
+
+  # ═══════════════════════════════════════
+  # +buffer (b) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "b"
+    desc: "󰈙 +buffer"
+    submenu:
+      - key: "b"
+        desc: "󰖯 Switch to Other Buffer"
+        cmd: swaymsg workspace back_and_forth
+      - key: "d"
+        desc: "󰅖 Delete Buffer"
+        cmd: swaymsg kill
+      - key: "D"
+        desc: "󰅗 Delete Buffer and Window"
+        cmd: bash -c 'swaymsg kill'
+      - key: "p"
+        desc: "󰐃 Toggle Pin (Sticky)"
+        cmd: swaymsg sticky toggle
+      - key: "f"
+        desc: "󱂬 Toggle Floating"
+        cmd: swaymsg floating toggle
+
+  # ═══════════════════════════════════════
+  # +window (w) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "w"
+    desc: "󰖯 +window"
+    submenu:
+      - key: "w"
+        desc: "󰖯 Switch Window"
+        cmd: ~/.config/sway/window-switcher.sh
+      - key: "d"
+        desc: "󰅖 Delete Window"
+        cmd: swaymsg kill
+      - key: "m"
+        desc: "󰊓 Toggle Zoom Mode"
+        cmd: swaymsg fullscreen toggle
+      - key: "minus"
+        desc: "󰤼 Split Window Below"
+        cmd: swaymsg split v
+      - key: "bar"
+        desc: "󰤻 Split Window Right"
+        cmd: swaymsg split h
+      - key: "h"
+        desc: "󰁍 Focus Left"
+        cmd: swaymsg focus left
+      - key: "j"
+        desc: "󰁅 Focus Down"
+        cmd: swaymsg focus down
+      - key: "k"
+        desc: "󰁝 Focus Up"
+        cmd: swaymsg focus up
+      - key: "l"
+        desc: "󰁔 Focus Right"
+        cmd: swaymsg focus right
+      - key: "s"
+        desc: "󰃻 Swap with Mark"
+        cmd: swaymsg swap container with mark "_swap"
+      - key: "S"
+        desc: "󰃻 Set Swap Mark"
+        cmd: swaymsg mark --add "_swap"
+      - key: "o"
+        desc: "󰖲 Focus Parent"
+        cmd: swaymsg focus parent
+      - key: "c"
+        desc: "󰖲 Focus Child"
+        cmd: swaymsg focus child
+
+  # ═══════════════════════════════════════
+  # +diagnostics (x) - LazyVim style
+  # ═══════════════════════════════════════
+  - key: "x"
+    desc: "󰒡 +diagnostics"
+    submenu:
+      - key: "x"
+        desc: "󰒡 Diagnostics (Trouble)"
+        cmd: gnome-system-monitor
+      - key: "b"
+        desc: "󰄛 Btop"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/btop
+      - key: "l"
+        desc: "󰋚 System Logs"
+        cmd: wezterm -e journalctl -f
+      - key: "e"
+        desc: "󰋚 Error Logs"
+        cmd: wezterm -e journalctl -p err -b
+      - key: "k"
+        desc: "󱃾 K9s Sandbox"
+        cmd: wezterm -e /home/linuxbrew/.linuxbrew/bin/k9s
+      - key: "K"
+        desc: "󱃾 K9s Live"
+        cmd: wezterm start --class kubie-live-terminal -- ~/.config/sway/k9s-live.sh
+      - key: "d"
+        desc: "󰡨 Docker Stats"
+        cmd: wezterm -e docker stats
+      - key: "n"
+        desc: "󰖩 Network Settings"
+        cmd: env XDG_CURRENT_DESKTOP=GNOME gnome-control-center network
+
+  # ═══════════════════════════════════════
+  # +clipboard (y) - Disabled until cliphist is installed
+  # ═══════════════════════════════════════
+  # - key: "y"
+  #   desc: "󰆏 +clipboard"
+  #   submenu:
+  #     - key: "y"
+  #       desc: "󰆏 History"
+  #       cmd: bash -c 'cliphist list | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Clipboard" | cliphist decode | wl-copy'
+  #     - key: "d"
+  #       desc: "󰆴 Delete Entry"
+  #       cmd: bash -c 'cliphist list | wofi --dmenu --style ~/.config/wofi/active-theme.css -p "Delete" | cliphist delete'
+  #     - key: "c"
+  #       desc: "󰃢 Clear All"
+  #       cmd: bash -c 'cliphist wipe; notify-send "Clipboard" "History cleared"'
+
+  # ═══════════════════════════════════════
+  # +workspace (Tab) - Workspace Management
+  # ═══════════════════════════════════════
+  - key: "Tab"
+    desc: "󰓩 +workspace"
+    submenu:
+      - key: "Tab"
+        desc: "󰁔 New Workspace"
+        cmd: bash -c 'swaymsg workspace number $(swaymsg -t get_workspaces | jq "max_by(.num).num + 1")'
+      - key: "l"
+        desc: "󰁔 Last Workspace"
+        cmd: swaymsg workspace back_and_forth
+      - key: "f"
+        desc: "󰎤 First Workspace"
+        cmd: swaymsg workspace number 1
+      - key: "bracketright"
+        desc: "󰒭 Next Workspace"
+        cmd: ~/.config/sway/next_workspace.sh
+      - key: "bracketleft"
+        desc: "󰒮 Previous Workspace"
+        cmd: ~/.config/sway/prev_workspace.sh
+      - key: "n"
+        desc: "󰒭 Next Workspace"
+        cmd: ~/.config/sway/next_workspace.sh
+      - key: "p"
+        desc: "󰒮 Previous Workspace"
+        cmd: ~/.config/sway/prev_workspace.sh
+      - key: "d"
+        desc: "󰅖 Close All in Workspace"
+        cmd: bash -c 'for win in $(swaymsg -t get_tree | jq -r ".. | select(.type?) | select(.type==\"con\") | select(.focused==false) | .id"); do swaymsg "[con_id=$win]" kill; done'
+      - key: "m"
+        desc: "󰗼 Move to Workspace"
+        cmd: bash -c 'ws=$(seq 1 10 | wofi --dmenu -p "Move to Workspace"); [ -n "$ws" ] && swaymsg move container to workspace number "$ws"'
+      - key: "M"
+        desc: "󰗼 Move & Follow"
+        cmd: bash -c 'ws=$(seq 1 10 | wofi --dmenu -p "Move to Workspace"); [ -n "$ws" ] && swaymsg move container to workspace number "$ws" && swaymsg workspace number "$ws"'
+      - key: "1"
+        desc: "󰎤 Workspace 1"
+        cmd: swaymsg workspace number 1
+      - key: "2"
+        desc: "󰎧 Workspace 2"
+        cmd: swaymsg workspace number 2
+      - key: "3"
+        desc: "󰎪 Workspace 3"
+        cmd: swaymsg workspace number 3
+      - key: "4"
+        desc: "󰎭 Workspace 4"
+        cmd: swaymsg workspace number 4
+      - key: "5"
+        desc: "󰎱 Workspace 5"
+        cmd: swaymsg workspace number 5
+      - key: "6"
+        desc: "󰎳 Workspace 6"
+        cmd: swaymsg workspace number 6
+      - key: "7"
+        desc: "󰎶 Workspace 7"
+        cmd: swaymsg workspace number 7
+      - key: "8"
+        desc: "󰎹 Workspace 8"
+        cmd: swaymsg workspace number 8
+      - key: "9"
+        desc: "󰎼 Workspace 9"
+        cmd: swaymsg workspace number 9
+      - key: "0"
+        desc: "󰎿 Workspace 10"
+        cmd: swaymsg workspace number 10
+      - key: "o"
+        desc: "󱂬 Organize Windows"
+        cmd: ~/.config/sway/organize-windows.sh
+      - key: "r"
+        desc: "󰑐 Rename Workspace"
+        cmd: bash -c 'name=$(wofi --dmenu -p "Workspace Name"); [ -n "$name" ] && swaymsg rename workspace to "$name"'
+
+  # ═══════════════════════════════════════
+  # +marks (r) - Window Marks (vim-style)
+  # ═══════════════════════════════════════
+  - key: "r"
+    desc: "󰃀 +marks"
+    submenu:
+      - key: "a"
+        desc: "󰃀 Mark A"
+        cmd: swaymsg mark --add a
+      - key: "b"
+        desc: "󰃀 Mark B"
+        cmd: swaymsg mark --add b
+      - key: "c"
+        desc: "󰃀 Mark C"
+        cmd: swaymsg mark --add c
+      - key: "d"
+        desc: "󰃀 Mark D"
+        cmd: swaymsg mark --add d
+      - key: "e"
+        desc: "󰃀 Mark E"
+        cmd: swaymsg mark --add e
+      - key: "f"
+        desc: "󰃀 Mark F"
+        cmd: swaymsg mark --add f
+      - key: "g"
+        desc: "󰃀 Mark G"
+        cmd: swaymsg mark --add g
+      - key: "h"
+        desc: "󰃀 Mark H"
+        cmd: swaymsg mark --add h
+      - key: "i"
+        desc: "󰃀 Mark I"
+        cmd: swaymsg mark --add i
+      - key: "j"
+        desc: "󰃀 Mark J"
+        cmd: swaymsg mark --add j
+
+  # ═══════════════════════════════════════
+  # +goto (R) - Jump to Marks
+  # ═══════════════════════════════════════
+  - key: "R"
+    desc: "󰮰 +goto"
+    submenu:
+      - key: "a"
+        desc: "󰮰 Goto A"
+        cmd: swaymsg "[con_mark=a]" focus
+      - key: "b"
+        desc: "󰮰 Goto B"
+        cmd: swaymsg "[con_mark=b]" focus
+      - key: "c"
+        desc: "󰮰 Goto C"
+        cmd: swaymsg "[con_mark=c]" focus
+      - key: "d"
+        desc: "󰮰 Goto D"
+        cmd: swaymsg "[con_mark=d]" focus
+      - key: "e"
+        desc: "󰮰 Goto E"
+        cmd: swaymsg "[con_mark=e]" focus
+      - key: "f"
+        desc: "󰮰 Goto F"
+        cmd: swaymsg "[con_mark=f]" focus
+      - key: "g"
+        desc: "󰮰 Goto G"
+        cmd: swaymsg "[con_mark=g]" focus
+      - key: "h"
+        desc: "󰮰 Goto H"
+        cmd: swaymsg "[con_mark=h]" focus
+      - key: "i"
+        desc: "󰮰 Goto I"
+        cmd: swaymsg "[con_mark=i]" focus
+      - key: "j"
+        desc: "󰮰 Goto J"
+        cmd: swaymsg "[con_mark=j]" focus
+
+  - key: "Escape"
+    desc: "󰅖 Cancel"
+    cmd: "true"

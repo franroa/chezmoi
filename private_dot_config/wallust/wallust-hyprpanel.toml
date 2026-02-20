@@ -1,0 +1,9 @@
+# Wallust config for HyprPanel only - used by WallpaperSelect.sh
+# Separate from main wallust.toml so theme changes don't affect HyprPanel
+
+[templates]
+hyprpanel.template = 'colors-hyprpanel.scss'
+hyprpanel.target = '~/.cache/wallust/hyprpanel-modules.scss'
+
+hyprpanel_json.template = 'colors-hyprpanel.json'
+hyprpanel_json.target = '~/.cache/wallust/hyprpanel-colors.json'

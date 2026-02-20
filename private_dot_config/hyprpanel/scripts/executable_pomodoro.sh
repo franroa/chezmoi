@@ -1,8 +1,16 @@
 #!/bin/bash
 
 STATE_FILE="/tmp/pomodoro_state"
+CONFIG_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/hyprpanel/pomodoro.conf"
+
+# Default durations
 WORK_DURATION=1500   # 25 minutes
 BREAK_DURATION=300   # 5 minutes
+
+# Load config if exists
+if [[ -f "$CONFIG_FILE" ]]; then
+    source "$CONFIG_FILE"
+fi
 
 get_state() {
     if [[ -f "$STATE_FILE" ]]; then
@@ -42,17 +50,28 @@ case "$1" in
         read -r status start_time remaining mode <<< "$(get_state)"
         if [[ "$mode" == "work" ]]; then
             save_state "running" "$(date +%s)" "$BREAK_DURATION" "break"
-            notify-send "Pomodoro" "Break time! 5 minutes"
+            notify-send "Pomodoro" "Break time! $((BREAK_DURATION / 60)) minutes"
         else
             save_state "running" "$(date +%s)" "$WORK_DURATION" "work"
-            notify-send "Pomodoro" "Work time! 25 minutes"
+            notify-send "Pomodoro" "Work time! $((WORK_DURATION / 60)) minutes"
         fi
+        ;;
+    config)
+        work_min=$(printf "25\n30\n45\n50\n60" | rofi -dmenu -p "󰔟 Focus (min)" -mesg "Select focus duration" -theme-str 'listview {lines: 5;}')
+        [[ -z "$work_min" ]] && exit 0
+        break_min=$(printf "5\n10\n15\n20" | rofi -dmenu -p "󰒫 Break (min)" -mesg "Select break duration" -theme-str 'listview {lines: 4;}')
+        [[ -z "$break_min" ]] && exit 0
+        mkdir -p "$(dirname "$CONFIG_FILE")"
+        echo "WORK_DURATION=$((work_min * 60))" > "$CONFIG_FILE"
+        echo "BREAK_DURATION=$((break_min * 60))" >> "$CONFIG_FILE"
+        notify-send "Pomodoro" "Set to ${work_min}min focus / ${break_min}min break"
+        # Reset to apply new settings
+        save_state "stopped" 0 0 "work"
         ;;
     *)
         read -r status start_time remaining mode <<< "$(get_state)"
         
         if [[ "$status" == "stopped" ]]; then
-            echo '{"text": "Start", "alt": "stopped", "percentage": 0}'
             exit 0
         fi
         
@@ -64,6 +83,7 @@ case "$1" in
         fi
         
         if [[ $current_remaining -le 0 && "$status" == "running" ]]; then
+            pw-play /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga &
             if [[ "$mode" == "work" ]]; then
                 notify-send "Pomodoro" "Work session complete! Take a break." -u critical
                 save_state "running" "$(date +%s)" "$BREAK_DURATION" "break"

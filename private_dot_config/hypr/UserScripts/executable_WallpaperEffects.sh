@@ -89,8 +89,8 @@ main() {
   
             wallust run "$wallpaper_output" -s &
             sleep 1
-            # Refresh rofi, waybar, wallust palettes
-            "${SCRIPTSDIR}/Refresh.sh"
+            # Refresh rofi, wallust palettes (without restarting waybar)
+            "${SCRIPTSDIR}/RefreshNoWaybar.sh"
             notify-send -u low -i "$iDIR/ja.png" "$choice" "effects applied"
         else
             echo "Effect '$choice' not recognized."

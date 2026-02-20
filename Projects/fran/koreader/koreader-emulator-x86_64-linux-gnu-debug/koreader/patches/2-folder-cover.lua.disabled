@@ -1,0 +1,124 @@
+local BD = require("ui/bidi")
+local Blitbuffer = require("ffi/blitbuffer")
+local CenterContainer = require("ui/widget/container/centercontainer")
+local Device = require("device")
+local Font = require("ui/font")
+local FrameContainer = require("ui/widget/container/framecontainer")
+local Geom = require("ui/geometry")
+local ImageWidget = require("ui/widget/imagewidget")
+local Size = require("ui/size")
+local TextBoxWidget = require("ui/widget/textboxwidget")
+local VerticalGroup = require("ui/widget/verticalgroup")
+local VerticalSpan = require("ui/widget/verticalspan")
+local userpatch = require("userpatch")
+local util = require("util")
+local Screen = Device.screen
+
+local aspect_ratio = 2 / 3
+
+local function getFrameDimensions(width, height, border_size)
+    local available_w = width - 2 * border_size
+    local available_h = height - 2 * border_size
+    local frame_w, frame_h
+    if available_w / available_h > aspect_ratio then
+        frame_h = available_h
+        frame_w = available_h * aspect_ratio
+    else
+        frame_w = available_w
+        frame_h = available_w / aspect_ratio
+    end
+    return frame_w, frame_h
+end
+
+local function patchFolderCover(plugin)
+    local MosaicMenu = require("mosaicmenu")
+    local MosaicMenuItem = userpatch.getUpValue(MosaicMenu._updateItemsBuildUI, "MosaicMenuItem")
+    if not MosaicMenuItem then return end
+    if MosaicMenuItem.patched_folder_cover then return end
+    MosaicMenuItem.patched_folder_cover = true
+
+    local function findImage(name)
+        local DataStorage = require("datastorage")
+        local icons_dir = DataStorage:getDataDir() .. "/icons/"
+        for _, ext in ipairs({ ".png", ".jpg", ".jpeg", ".webp", ".svg" }) do
+            local fname = icons_dir .. name .. ext
+            if util.fileExists(fname) then return fname end
+        end
+    end
+
+    local folder_image_path = findImage("folder.cover")
+    local folder_up_image_path = findImage("folder.up.cover")
+    if not folder_image_path then return end
+
+    local orig_update = MosaicMenuItem.update
+    function MosaicMenuItem:update()
+        orig_update(self)
+        if not self.is_directory then return end
+
+        local is_parent = self.text:match("⬆") or self.text:match("%.%.$")
+        local image_path = (is_parent and folder_up_image_path) or folder_image_path
+        if not image_path then return end
+
+        local dimen = Geom:new{ w = self.width, h = self.height }
+        local border_size = Size.border.thin
+        local frame_w, frame_h = getFrameDimensions(self.width, self.height, border_size)
+
+        local icon_size = math.floor(math.min(frame_w, frame_h) * 0.3)
+        local icon = ImageWidget:new{
+            file = image_path,
+            width = icon_size,
+            height = icon_size,
+        }
+
+        local fname = self.text:gsub("/$", "")
+        if is_parent then fname = ".." end
+        fname = BD.directory(fname)
+
+        local title_widget = TextBoxWidget:new{
+            text = fname,
+            face = Font:getFace("cfont", 14),
+            width = frame_w - Screen:scaleBySize(10),
+            alignment = "center",
+            bold = true,
+        }
+
+        local content = VerticalGroup:new{
+            align = "center",
+            VerticalSpan:new{ width = Screen:scaleBySize(20) },
+            icon,
+            VerticalSpan:new{ width = Screen:scaleBySize(10) },
+            title_widget,
+        }
+
+        local inner_content = FrameContainer:new{
+            width = frame_w,
+            height = frame_h,
+            margin = 0,
+            padding = 0,
+            bordersize = 0,
+            background = Blitbuffer.COLOR_WHITE,
+            CenterContainer:new{
+                dimen = { w = frame_w, h = frame_h },
+                content,
+            },
+        }
+
+        local cover_frame = FrameContainer:new{
+            margin = 0,
+            padding = 0,
+            bordersize = border_size,
+            inner_content,
+        }
+
+        local widget = CenterContainer:new{
+            dimen = dimen,
+            cover_frame,
+        }
+
+        if self._underline_container[1] then self._underline_container[1]:free() end
+        self._underline_container[1] = widget
+        self._cover_visual_widget = cover_frame
+    end
+end
+
+userpatch.registerPatchPluginFunc("coverbrowser", patchFolderCover)

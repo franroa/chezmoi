@@ -1,0 +1,318 @@
+# Pyprland Configuration
+# Documentation: https://hyprland-community.github.io/pyprland/
+
+[pyprland]
+verbose = false
+plugins = [
+    "scratchpads",
+    "expose",
+    "magnify",
+    "shift_monitors",
+    "toggle_dpms",
+    "toggle_special",
+    "fetch_client_menu",
+    "lost_windows",
+    "layout_center",
+    "shortcuts_menu",
+]
+
+[scratchpads.term]
+animation = ""
+command = "foot --app-id=foot-dropterm fish"
+class = "foot-dropterm"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+unfocus = "hide"
+excludes = "*"
+multi = false
+
+[scratchpads.btop]
+animation = ""
+command = "foot --app-id=foot-btop fish -c btop"
+class = "foot-btop"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.files]
+animation = ""
+command = "nautilus --new-window"
+class = "org.gnome.Nautilus"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.volume]
+animation = ""
+command = "pavucontrol"
+class = "org.pulseaudio.pavucontrol"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+unfocus = "hide"
+excludes = "*"
+
+# Slack is a normal window on workspace 4 (not a scratchpad)
+
+[scratchpads.music]
+animation = ""
+command = "spotify"
+class = "Spotify"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.calc]
+animation = ""
+command = "gnome-calculator"
+class = "org.gnome.Calculator"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.keepassxc]
+animation = ""
+command = "keepassxc"
+class = "org.keepassxc.KeePassXC"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.gpt]
+animation = ""
+command = "firefox --new-window https://chat.openai.com"
+class = "firefox"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.notes]
+animation = ""
+command = "obsidian"
+class = "obsidian"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.opencode_chezmoi]
+animation = ""
+command = "foot --app-id=opencode-chezmoi -D /home/froa/.local/share/chezmoi fish -c '/home/linuxbrew/.linuxbrew/bin/opencode --port --agent plan'"
+class = "opencode-chezmoi"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.opencode_hypr]
+animation = ""
+command = "foot --app-id=opencode-hypr -D /home/froa/.config/hypr fish -c '/home/linuxbrew/.linuxbrew/bin/opencode --port --agent plan'"
+class = "opencode-hypr"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.opencode_nvim]
+animation = ""
+command = "foot --app-id=opencode-nvim -D /home/froa/.config/nvim fish -c '/home/linuxbrew/.linuxbrew/bin/opencode --port --agent plan'"
+class = "opencode-nvim"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.opencode_cwd]
+animation = ""
+command = "/home/froa/.config/hypr/UserScripts/opencode-nvim-cwd.sh"
+class = "opencode-cwd"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.aoe]
+animation = ""
+command = "/home/froa/.config/hypr/UserScripts/aoe-nvim-cwd.sh"
+class = "aoe-cwd"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.koreader]
+animation = ""
+command = "env -u APPIMAGE /home/froa/Projects/fran/koreader/kodev run"
+class = "KOReader"
+process_tracking = false
+excludes = "*"
+
+[scratchpads.opencode_readitlater]
+animation = ""
+command = "foot --app-id=opencode-readitlater -D /home/froa/Documents/ReadItLater fish -c '/home/linuxbrew/.linuxbrew/bin/opencode --port --agent plan'"
+class = "opencode-readitlater"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_sandbox]
+animation = ""
+command = "foot --app-id=k9s-sandbox -e bash /home/froa/.config/sway/k9s-sandbox.sh"
+class = "k9s-sandbox"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_platform_eu01]
+animation = ""
+command = "foot --app-id=k9s-platform-eu01 -e bash /home/froa/.config/sway/k9s-live.sh platform eu01"
+class = "k9s-platform-eu01"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_platform_us01]
+animation = ""
+command = "foot --app-id=k9s-platform-us01 -e bash /home/froa/.config/sway/k9s-live.sh platform us01"
+class = "k9s-platform-us01"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_platform_ca01]
+animation = ""
+command = "foot --app-id=k9s-platform-ca01 -e bash /home/froa/.config/sway/k9s-live.sh platform ca01"
+class = "k9s-platform-ca01"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_technosylva_eu01]
+animation = ""
+command = "foot --app-id=k9s-technosylva-eu01 -e bash /home/froa/.config/sway/k9s-live.sh technosylva eu01"
+class = "k9s-technosylva-eu01"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_technosylva_us01]
+animation = ""
+command = "foot --app-id=k9s-technosylva-us01 -e bash /home/froa/.config/sway/k9s-live.sh technosylva us01"
+class = "k9s-technosylva-us01"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+[scratchpads.k9s_technosylva_ca01]
+animation = ""
+command = "foot --app-id=k9s-technosylva-ca01 -e bash /home/froa/.config/sway/k9s-live.sh technosylva ca01"
+class = "k9s-technosylva-ca01"
+process_tracking = false
+size = "85% 85%"
+position = "7% 7%"
+excludes = "*"
+
+# ============================================================================
+# EXPOSE - Show all windows on current workspace
+# ============================================================================
+
+[expose]
+include_special = false
+
+# ============================================================================
+# MAGNIFY - Zoom the screen
+# ============================================================================
+
+[magnify]
+factor = 2.0
+
+# ============================================================================
+# SHIFT MONITORS - Swap workspaces between monitors
+# ============================================================================
+
+[shift_monitors]
+# No config needed, uses direction argument
+
+# ============================================================================
+# TOGGLE DPMS - Turn screens on/off
+# ============================================================================
+
+[toggle_dpms]
+# No config needed
+
+# ============================================================================
+# TOGGLE SPECIAL - Minimize windows to special workspace
+# ============================================================================
+
+[toggle_special]
+# Default workspace name for minimized windows
+name = "minimized"
+
+# ============================================================================
+# FETCH CLIENT MENU - Pick a window from another workspace
+# ============================================================================
+
+[fetch_client_menu]
+# Menu engine (auto-detected if not set)
+# engine = "rofi"
+separator = " | "
+# Exclude scratchpads from menu
+filter_by_workspace = false
+
+# ============================================================================
+# LOST WINDOWS - Find floating windows off-screen
+# ============================================================================
+
+[lost_windows]
+# No config needed
+
+# ============================================================================
+# LAYOUT CENTER - Center the focused window
+# ============================================================================
+
+[layout_center]
+margin = 60
+offset = [0, 0]
+next = "+1"
+prev = "-1"
+
+# ============================================================================
+# SHORTCUTS MENU - Custom command menus
+# ============================================================================
+
+[shortcuts_menu]
+engine = "rofi"
+
+[shortcuts_menu.entries.apps]
+"󰈹 Firefox" = "firefox"
+"󰊯 Chrome" = "google-chrome"
+"󰉋 Files" = "nautilus"
+"󰆍 Terminal" = "foot"
+"󰨞 VSCode" = "code"
+" Obsidian" = "obsidian"
+"󰓇 Spotify" = "spotify"
+
+[shortcuts_menu.entries.power]
+"󰌾 Lock" = "hyprlock"
+"󰤄 Suspend" = "systemctl suspend"
+"󰜉 Reboot" = "systemctl reboot"
+"󰐥 Shutdown" = "systemctl poweroff"
+"󰗼 Logout" = "hyprctl dispatch exit"
+
+[shortcuts_menu.entries.clipboard]
+"󰅍 History" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+"󰆒 Clear" = "cliphist wipe"

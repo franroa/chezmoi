@@ -1,0 +1,29 @@
+font: JetBrainsMono Nerd Font 14
+background: "#ff0000e0"
+color: "#ffffff"
+border: "#00ff00ff"
+separator: " | "
+border_width: 4
+corner_r: 20
+padding: 30
+rows_per_column: 5
+column_padding: 50
+
+anchor: center
+margin_right: 0
+margin_bottom: 0
+margin_top: 0
+margin_left: 0
+
+menu:
+  - key: "t"
+    desc: "Terminal"
+    cmd: kitty
+
+  - key: "f"
+    desc: "File Manager"
+    cmd: thunar
+
+  - key: "w"
+    desc: "Web Browser"
+    cmd: firefox

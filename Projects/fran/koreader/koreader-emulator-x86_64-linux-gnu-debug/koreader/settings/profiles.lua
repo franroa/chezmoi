@@ -1,0 +1,137 @@
+-- ./settings/profiles.lua
+return {
+    ["Classic Paperback"] = {
+        ["b_page_margin"] = 25,
+        ["font_size"] = 22,
+        ["h_page_margins"] = {
+            [1] = 25,
+            [2] = 25,
+        },
+        ["line_spacing"] = 120,
+        ["set_font"] = "Noto Serif",
+        ["settings"] = {
+            ["name"] = "Classic Paperback",
+            ["order"] = {
+                [1] = "set_font",
+                [2] = "font_size",
+                [3] = "line_spacing",
+                [4] = "h_page_margins",
+                [5] = "t_page_margin",
+                [6] = "b_page_margin",
+                [7] = "status_line",
+            },
+        },
+        ["status_line"] = 1,
+        ["t_page_margin"] = 25,
+    },
+    ["Code Reader"] = {
+        ["b_page_margin"] = 10,
+        ["embedded_css"] = true,
+        ["embedded_fonts"] = true,
+        ["font_size"] = 18,
+        ["h_page_margins"] = {
+            [1] = 10,
+            [2] = 10,
+        },
+        ["line_spacing"] = 100,
+        ["set_font"] = "Noto Sans Mono",
+        ["settings"] = {
+            ["name"] = "Code Reader",
+            ["order"] = {
+                [1] = "set_font",
+                [2] = "font_size",
+                [3] = "line_spacing",
+                [4] = "h_page_margins",
+                [5] = "t_page_margin",
+                [6] = "b_page_margin",
+                [7] = "status_line",
+                [8] = "embedded_css",
+                [9] = "embedded_fonts",
+            },
+        },
+        ["status_line"] = 1,
+        ["t_page_margin"] = 10,
+    },
+    ["Contemplative"] = {
+        ["b_page_margin"] = 50,
+        ["font_size"] = 24,
+        ["h_page_margins"] = {
+            [1] = 50,
+            [2] = 50,
+        },
+        ["line_spacing"] = 150,
+        ["set_font"] = "Noto Serif",
+        ["settings"] = {
+            ["name"] = "Contemplative",
+            ["order"] = {
+                [1] = "set_font",
+                [2] = "font_size",
+                [3] = "line_spacing",
+                [4] = "h_page_margins",
+                [5] = "t_page_margin",
+                [6] = "b_page_margin",
+                [7] = "status_line",
+            },
+        },
+        ["status_line"] = 0,
+        ["t_page_margin"] = 50,
+    },
+    ["Deep Study"] = {
+        ["b_page_margin"] = 15,
+        ["font_size"] = 22,
+        ["h_page_margins"] = {
+            [1] = 15,
+            [2] = 15,
+        },
+        ["line_spacing"] = 100,
+        ["set_font"] = "Noto Sans",
+        ["settings"] = {
+            ["name"] = "Deep Study",
+            ["order"] = {
+                [1] = "set_font",
+                [2] = "font_size",
+                [3] = "line_spacing",
+                [4] = "h_page_margins",
+                [5] = "t_page_margin",
+                [6] = "b_page_margin",
+                [7] = "status_line",
+            },
+        },
+        ["status_line"] = 1,
+        ["t_page_margin"] = 15,
+    },
+    ["Immersion"] = {
+        ["b_page_margin"] = 20,
+        ["font_size"] = 22,
+        ["h_page_margins"] = {
+            [1] = 20,
+            [2] = 20,
+        },
+        ["line_spacing"] = 110,
+        ["set_font"] = "Noto Sans",
+        ["settings"] = {
+            ["name"] = "Immersion",
+            ["order"] = {
+                [1] = "set_font",
+                [2] = "font_size",
+                [3] = "line_spacing",
+                [4] = "h_page_margins",
+                [5] = "t_page_margin",
+                [6] = "b_page_margin",
+                [7] = "status_line",
+            },
+        },
+        ["status_line"] = 1,
+        ["t_page_margin"] = 20,
+    },
+    ["Wallabag Sync"] = {
+        ["settings"] = {
+            ["name"] = "Wallabag Sync",
+            ["notify"] = true,
+            ["order"] = {
+                [1] = "wallabag_download",
+            },
+        },
+        ["wallabag_download"] = true,
+    },
+}

@@ -1,0 +1,21 @@
+font: JetBrainsMono Nerd Font 13
+background: "#222827e0"
+color: "#A9E6DD"
+border: "#04554A80"
+separator: "  "
+border_width: 3
+corner_r: 16
+padding: 24
+anchor: center
+inhibit_compositor_keyboard_shortcuts: true
+
+menu:
+  - key: "space"
+    desc: "Terminal"
+    cmd: kitty
+    keep_open: true
+
+  - key: "f"
+    desc: "Files"
+    cmd: thunar
+    keep_open: true

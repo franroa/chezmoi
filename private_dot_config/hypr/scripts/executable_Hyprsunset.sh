@@ -1,19 +1,22 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Hyprsunset toggle + Waybar status helper
-# Phase 1: manual toggle only (no scheduling)
+# Hyprsunset toggle + Waybar status helper with scheduling
 # Icons:
 # - Off: bright sun
 # - On: sunset icon if available, otherwise a blue sun
 #
 # Customize via env vars:
-#   HYPRSUNSET_TEMP   default 4500 (K)
-#   HYPRSUNSET_ICON_MODE  sunset|blue  (default: sunset)
+#   HYPRSUNSET_TEMP        default 4500 (K)
+#   HYPRSUNSET_ICON_MODE   sunset|blue  (default: sunset)
+#   HYPRSUNSET_START       start hour for auto-on (default: 19)
+#   HYPRSUNSET_END         end hour for auto-off (default: 6)
 
 STATE_FILE="$HOME/.cache/.hyprsunset_state"
 TARGET_TEMP="${HYPRSUNSET_TEMP:-4500}"
 ICON_MODE="${HYPRSUNSET_ICON_MODE:-sunset}"
+START_HOUR="${HYPRSUNSET_START:-19}"
+END_HOUR="${HYPRSUNSET_END:-6}"
 
 ensure_state() {
   [[ -f "$STATE_FILE" ]] || echo "off" > "$STATE_FILE"
@@ -103,9 +106,52 @@ cmd_init() {
   fi
 }
 
+is_night_time() {
+  local hour
+  hour=$(date +%H)
+  hour=$((10#$hour))
+  if (( START_HOUR > END_HOUR )); then
+    (( hour >= START_HOUR || hour < END_HOUR ))
+  else
+    (( hour >= START_HOUR && hour < END_HOUR ))
+  fi
+}
+
+cmd_auto() {
+  ensure_state
+  local current_state
+  current_state="$(cat "$STATE_FILE" || echo off)"
+
+  if is_night_time; then
+    if [[ "$current_state" != "on" ]]; then
+      if pgrep -x hyprsunset >/dev/null 2>&1; then
+        pkill -x hyprsunset || true
+        sleep 0.2
+      fi
+      if command -v hyprsunset >/dev/null 2>&1; then
+        nohup hyprsunset -t "$TARGET_TEMP" >/dev/null 2>&1 &
+      fi
+      echo on > "$STATE_FILE"
+    fi
+  else
+    if [[ "$current_state" != "off" ]]; then
+      if pgrep -x hyprsunset >/dev/null 2>&1; then
+        pkill -x hyprsunset || true
+        sleep 0.2
+      fi
+      if command -v hyprsunset >/dev/null 2>&1; then
+        nohup hyprsunset -i >/dev/null 2>&1 &
+        sleep 0.3 && pkill -x hyprsunset || true
+      fi
+      echo off > "$STATE_FILE"
+    fi
+  fi
+}
+
 case "${1:-}" in
   toggle) cmd_toggle ;;
   status) cmd_status ;;
   init) cmd_init ;;
-  *) echo "usage: $0 [toggle|status|init]" >&2; exit 2 ;;
+  auto) cmd_auto ;;
+  *) echo "usage: $0 [toggle|status|init|auto]" >&2; exit 2 ;;
  esac

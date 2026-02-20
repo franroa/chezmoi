@@ -1,0 +1,3 @@
+#!/bin/bash
+# Sass wrapper that adds --no-charset for GTK compatibility
+exec /nix/store/snsik52909w9hhjqb76dschpbiskj9i8-dart-sass-1.89.2/bin/sass --no-charset "$@"

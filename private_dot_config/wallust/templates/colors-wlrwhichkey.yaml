@@ -38,7 +38,7 @@ menu:
 
   - key: "grave"
     desc: "󰆍 Terminal (pypr)"
-    cmd: ~/.local/bin/pypr toggle term
+    cmd: pypr toggle term
 
   - key: "question"
     desc: "󰌌 Cheatsheet"
@@ -120,6 +120,12 @@ menu:
       - key: "w"
         desc: "󰖐 Weather"
         cmd: bash -c 'notify-send "Weather" "$(curl -s wttr.in/?format=%l:+%c+%t+%h)"'
+      - key: "t"
+        desc: "󰔏 Temperature"
+        cmd: ~/.config/hypr/scripts/show-temperature.sh
+      - key: "T"
+        desc: "󱃃 Set Idle Temp"
+        cmd: ~/.config/hypr/scripts/set-idle-temp.sh
 
   # +layout (l)
   - key: "l"
@@ -188,7 +194,7 @@ menu:
         cmd: google-chrome
       - key: "s"
         desc: "󰒱 Slack"
-        cmd: slack
+        cmd: ~/.config/hypr/scripts/goto-slack.sh
       - key: "n"
         desc: "󰈄 Notion"
         cmd: notion-snap-reborn
@@ -295,6 +301,15 @@ menu:
       - key: "n"
         desc: "󰂚 Toggle Panel"
         cmd: swaync-client -t -sw
+      - key: "s"
+        desc: "󰒱 Open Latest Slack"
+        cmd: ~/.config/hypr/scripts/invoke-notification.sh
+      - key: "o"
+        desc: "󰂞 Open Latest"
+        cmd: ~/.config/hypr/scripts/invoke-notification.sh
+      - key: "g"
+        desc: "󰒱 Go to Slack"
+        cmd: ~/.config/hypr/scripts/goto-slack.sh
       - key: "c"
         desc: "󰅖 Close Latest"
         cmd: swaync-client -C
@@ -303,7 +318,7 @@ menu:
         cmd: swaync-client -C
       - key: "d"
         desc: "󰍶 Toggle DND"
-        cmd: hyprpanel toggleDnd
+        cmd: ~/.config/hypr/scripts/DndMode.sh
       - key: "h"
         desc: "󰋚 Show History"
         cmd: swaync-client -t -sw
@@ -317,34 +332,37 @@ menu:
     submenu:
       - key: "a"
         desc: "󰠅 Azure PIM Elevate"
-        cmd: wezterm -e ~/.config/sway/elevate-azure-pim.sh
+        cmd: foot -e ~/.config/sway/elevate-azure-pim.sh
       - key: "s"
-        desc: "󱃾 sandbox (ws 9)"
-        cmd: bash -c 'hyprctl dispatch workspace 9 && wezterm start --class kubie-sandbox-terminal -- bash /home/froa/.config/sway/k9s-sandbox.sh'
+        desc: "🟢 sandbox"
+        cmd: pypr toggle k9s_sandbox
+      - key: "S"
+        desc: "󰓦 Syncthing"
+        cmd: syncthing
       - key: "p"
         desc: "󱃾 +platform-live"
         submenu:
           - key: "e"
-            desc: "󱃾 platform-live-eu01 (ws 10)"
-            cmd: bash -c 'hyprctl dispatch workspace 10 && wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh platform eu01'
+            desc: "🇪🇺 platform EU"
+            cmd: pypr toggle k9s_platform_eu01
           - key: "u"
-            desc: "󱃾 platform-live-us01 (ws 11)"
-            cmd: bash -c 'hyprctl dispatch workspace 11 && wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh platform us01'
+            desc: "🇺🇸 platform US"
+            cmd: pypr toggle k9s_platform_us01
           - key: "c"
-            desc: "󱃾 platform-live-ca01 (ws 12)"
-            cmd: bash -c 'hyprctl dispatch workspace 12 && wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh platform ca01'
+            desc: "🇨🇦 platform CA"
+            cmd: pypr toggle k9s_platform_ca01
       - key: "t"
         desc: "󱃾 +technosylva-live"
         submenu:
           - key: "e"
-            desc: "󱃾 technosylva-live-eu01 (ws 13)"
-            cmd: bash -c 'hyprctl dispatch workspace 13 && wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh technosylva eu01'
+            desc: "🇪🇺 technosylva EU"
+            cmd: pypr toggle k9s_technosylva_eu01
           - key: "u"
-            desc: "󱃾 technosylva-live-us01 (ws 14)"
-            cmd: bash -c 'hyprctl dispatch workspace 14 && wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh technosylva us01'
+            desc: "🇺🇸 technosylva US"
+            cmd: pypr toggle k9s_technosylva_us01
           - key: "c"
-            desc: "󱃾 technosylva-live-ca01 (ws 15)"
-            cmd: bash -c 'hyprctl dispatch workspace 15 && wezterm start --class kubie-live-terminal -- bash /home/froa/.config/sway/k9s-live.sh technosylva ca01'
+            desc: "🇨🇦 technosylva CA"
+            cmd: pypr toggle k9s_technosylva_ca01
 
   # +connections (O)
   - key: "O"
@@ -372,40 +390,53 @@ menu:
     submenu:
       - key: "p"
         desc: "󰐊 Toggle"
-        cmd: ~/.config/waybar/scripts/pomodoro.sh toggle
+        cmd: ~/.config/hyprpanel/scripts/pomodoro.sh toggle
       - key: "s"
         desc: "󰓛 Skip"
-        cmd: ~/.config/waybar/scripts/pomodoro.sh skip
+        cmd: ~/.config/hyprpanel/scripts/pomodoro.sh skip
       - key: "r"
         desc: "󰜉 Reset"
-        cmd: ~/.config/waybar/scripts/pomodoro.sh reset
+        cmd: ~/.config/hyprpanel/scripts/pomodoro.sh reset
+      - key: "c"
+        desc: "󰒓 Configure"
+        cmd: ~/.config/hyprpanel/scripts/pomodoro.sh config
 
   # +pyprland (y) - Scratchpads & Plugins
   - key: "y"
     desc: "󱂬 +pyprland"
     submenu:
+      # Scratchpad Management
+      - key: "y"
+        desc: "󰋜 List Scratchpads"
+        cmd: ~/.config/hypr/scripts/scratchpad-list.sh
+      - key: "H"
+        desc: "󰘓 Hide All Scratchpads"
+        cmd: ~/.local/bin/pypr hide "*"
+      - key: "C"
+        desc: "󰅖 Close All Scratchpads"
+        cmd: bash -c 'hyprctl clients -j | jq -r ".[] | select(.workspace.name | startswith(\"special:\")) | .address" | xargs -I{} hyprctl dispatch closewindow address:{}'
       # Scratchpads
       - key: "t"
         desc: "󰆍 Terminal"
-        cmd: ~/.local/bin/pypr toggle term
+        cmd: pypr toggle term
       - key: "f"
         desc: "󰉋 Files"
-        cmd: ~/.local/bin/pypr toggle files
+        cmd: pypr toggle files
       - key: "b"
         desc: "󰄛 Btop"
-        cmd: ~/.local/bin/pypr toggle btop
+        cmd: pypr toggle btop
       - key: "v"
         desc: "󰕾 Volume"
-        cmd: ~/.local/bin/pypr toggle volume
+        cmd: pypr toggle volume
       - key: "m"
         desc: "󰓇 Music"
-        cmd: ~/.local/bin/pypr toggle music
+        cmd: pypr toggle music
       - key: "c"
         desc: "󰃬 Calculator"
-        cmd: ~/.local/bin/pypr toggle calc
+        cmd: pypr toggle calc
       - key: "k"
         desc: "󰌆 KeePassXC"
-        cmd: ~/.local/bin/pypr toggle keepassxc
+        cmd: pypr toggle keepassxc
       # Plugins
       - key: "e"
         desc: "󱇙 Expose"
@@ -522,7 +553,7 @@ menu:
         cmd: ~/.config/hypr/scripts/Hyprsunset.sh toggle
       - key: "d"
         desc: "󰍶 Toggle DND"
-        cmd: hyprpanel toggleDnd
+        cmd: ~/.config/hypr/scripts/DndMode.sh
       - key: "g"
         desc: "󰓩 Toggle Gaps"
         cmd: bash -c 'hyprctl keyword general:gaps_in 0; hyprctl keyword general:gaps_out 0'
@@ -641,10 +672,17 @@ menu:
         cmd: hyprctl dispatch workspace 3
       - key: "4"
         desc: "󰎭 Workspace 4"
-        cmd: hyprctl dispatch workspace 4
+        cmd: ~/.config/hypr/scripts/goto-slack.sh
       - key: "5"
         desc: "󰎱 Workspace 5"
         cmd: hyprctl dispatch workspace 5
+      - key: "o"
+        desc: "󱂬 Organize Windows"
+        cmd: ~/.config/sway/organize-windows.sh
+
+  - key: "r"
+    desc: "󱂬 Organize Windows"
+    cmd: ~/.config/sway/organize-windows.sh
 
   - key: "Escape"
     desc: "󰅖 Cancel"

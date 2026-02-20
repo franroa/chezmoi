@@ -1,25 +1,61 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* wallust template - colors-hyprpanel.scss */
+
 @include styleModule(
     'cmodule-pomodoro',
     (
-        'text-color': #f5c2e7,
-        'icon-color': #1e1e2e,
-        'icon-background': #f5c2e7,
-        'label-background': #1e1e2e,
+        'text-color': #F0EAF1,
+        'icon-color': #2A2023,
+        'icon-background': #322738,
+        'label-background': #2A2023,
         'inner-spacing': 0.5em,
         'border-enabled': false,
         'icon-size': 1.2em
     )
 );
 
+@include styleModule(
+    'cmodule-slack',
+    (
+        'text-color': #F0EAF1,
+        'icon-color': #9F5A7B,
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);
+
+@include styleModule(
+    'cmodule-gitlab',
+    (
+        'text-color': #F0EAF1,
+        'icon-color': #D3C3D7,
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);
+
+@include styleModule(
+    'cmodule-jira',
+    (
+        'text-color': #F0EAF1,
+        'icon-color': #322738,
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);
+/* DYNAMIC STYLES */
+
 .bar_item_box_visible.cmodule-slack {
     background: transparent;
 }
 
 
-.bar_item_box_visible.cmodule-temp {
-    animation: temp-blink 0.5s ease-in-out infinite alternate;
-}
-@keyframes temp-blink {
-    0% { background: #ff6600; }
-    100% { background: #ff0000; }
-}

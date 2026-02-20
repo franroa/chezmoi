@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Slack
+StartupWMClass=Slack
+Comment=Slack Desktop
+GenericName=Slack Client for Linux
+Exec=/home/froa/.config/hypr/scripts/slack-wrapper.sh %U
+Icon=com.slack.Slack
+Type=Application
+Categories=GNOME;GTK;Network;InstantMessaging;
+MimeType=x-scheme-handler/slack;
+X-GNOME-UsesNotifications=true

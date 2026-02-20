@@ -120,16 +120,11 @@ if wallust theme -- "${choice}"; then
     hyprctl reload >/dev/null 2>&1 || true
   fi
 
-  # Refresh bars/menus after files are ready
-  if [ -x "$HOME/.config/hypr/scripts/Refresh.sh" ]; then
-    "$HOME/.config/hypr/scripts/Refresh.sh" >/dev/null 2>&1 || true
-  else
-    if command -v waybar-msg >/dev/null 2>&1; then
-      waybar-msg cmd reload >/dev/null 2>&1 || true
-    else
-      pkill -SIGUSR2 waybar >/dev/null 2>&1 || true
-    fi
-  fi
+  # Refresh bars/menus after files are ready (without restarting waybar)
+  # Disabled: Don't update HyprPanel style on theme change (only on wallpaper change)
+  # if [ -x "$HOME/.config/hypr/scripts/RefreshNoWaybar.sh" ]; then
+  #   "$HOME/.config/hypr/scripts/RefreshNoWaybar.sh" >/dev/null 2>&1 || true
+  # fi
 
   # Ask kitty to reload its config so the new 01-Wallust.conf is picked up
   if pidof kitty >/dev/null; then

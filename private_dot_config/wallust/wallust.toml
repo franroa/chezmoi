@@ -52,6 +52,9 @@ kitty.target = '~/.config/kitty/kitty-themes/01-Wallust.conf'
 ghostty.template = 'colors-ghostty.conf'
 ghostty.target = '~/.config/ghostty/wallust.conf'
 
+opencode.template = 'colors-opencode.json'
+opencode.target = '~/.config/opencode/themes/my-system.json'
+
 quickshell.template = 'qml_color.json'
 quickshell.target = '~/.config/quickshell/qml_color.json'
 
@@ -64,13 +67,17 @@ quickshell.target = '~/.config/quickshell/qml_color.json'
 #wezterm.template = 'colors-wezterm.toml'
 #wezterm.target = '~/.config/wezterm/colors/wallust.toml'
 
-hyprpanel.template = 'colors-hyprpanel.scss'
-hyprpanel.target = '~/.config/hyprpanel/modules.scss'
+# Disabled from main config - applied only on wallpaper change via WallpaperSelect.sh
+# hyprpanel.template = 'colors-hyprpanel.scss'
+# hyprpanel.target = '~/.cache/wallust/hyprpanel-modules.scss'
 
 wlrwhichkey.template = 'colors-wlrwhichkey.yaml'
 wlrwhichkey.target = '~/.config/wlr-which-key/config.yaml'
 
-hyprpanel_json.template = 'colors-hyprpanel.json'
-hyprpanel_json.target = '~/.cache/wallust/hyprpanel-colors.json'
+# Disabled from main config - applied only on wallpaper change via WallpaperSelect.sh
+# hyprpanel_json.template = 'colors-hyprpanel.json'
+# hyprpanel_json.target = '~/.cache/wallust/hyprpanel-colors.json'
 
 
+# [exec]
+# command = "~/.config/hyprpanel/scripts/apply-wallust-colors.sh"

@@ -1,0 +1,112 @@
+2026-02-11 18:47:42,983 [INFO] ipc :: Logger "ipc" initialized :: common.py:232
+2026-02-11 18:47:42,983 [INFO] startup :: Logger "startup" initialized :: common.py:232
+2026-02-11 18:47:42,984 [INFO] pypr :: Logger "pypr" initialized :: common.py:232
+2026-02-11 18:47:42,984 [INFO] pypr :: Loading /home/froa/.config/hypr/pyprland.toml :: command.py:143
+2026-02-11 18:47:42,986 [INFO] pyprland :: Logger "pyprland" initialized :: common.py:232
+2026-02-11 18:47:42,987 [INFO] pyprland :: configured :: command.py:226
+2026-02-11 18:47:42,996 [INFO] scratchpads :: Logger "scratchpads" initialized :: common.py:232
+2026-02-11 18:47:42,997 [INFO] scratchpads :: configured :: command.py:226
+2026-02-11 18:47:42,997 [INFO] expose :: Logger "expose" initialized :: common.py:232
+2026-02-11 18:47:42,997 [INFO] expose :: configured :: command.py:226
+2026-02-11 18:47:42,997 [INFO] magnify :: Logger "magnify" initialized :: common.py:232
+2026-02-11 18:47:42,997 [INFO] magnify :: configured :: command.py:226
+2026-02-11 18:47:42,998 [INFO] shift_monitors :: Logger "shift_monitors" initialized :: common.py:232
+2026-02-11 18:47:43,001 [INFO] shift_monitors :: configured :: command.py:226
+2026-02-11 18:47:43,002 [INFO] toggle_dpms :: Logger "toggle_dpms" initialized :: common.py:232
+2026-02-11 18:47:43,002 [INFO] toggle_dpms :: configured :: command.py:226
+2026-02-11 18:47:43,002 [INFO] toggle_special :: Logger "toggle_special" initialized :: common.py:232
+2026-02-11 18:47:43,002 [INFO] toggle_special :: configured :: command.py:226
+2026-02-11 18:47:43,003 [INFO] menus adapter :: Logger "menus adapter" initialized :: common.py:232
+2026-02-11 18:47:43,003 [INFO] fetch_client_menu :: Logger "fetch_client_menu" initialized :: common.py:232
+2026-02-11 18:47:43,003 [INFO] fetch_client_menu :: configured :: command.py:226
+2026-02-11 18:47:43,004 [INFO] lost_windows :: Logger "lost_windows" initialized :: common.py:232
+2026-02-11 18:47:43,004 [INFO] lost_windows :: configured :: command.py:226
+2026-02-11 18:47:43,004 [INFO] layout_center :: Logger "layout_center" initialized :: common.py:232
+2026-02-11 18:47:43,004 [INFO] layout_center :: configured :: command.py:226
+2026-02-11 18:47:43,005 [INFO] shortcuts_menu :: Logger "shortcuts_menu" initialized :: common.py:232
+2026-02-11 18:47:43,005 [INFO] shortcuts_menu :: configured :: command.py:226
+2026-02-11 18:47:43,005 [DEBUG] pypr :: ================================[ initialized ]================================= :: command.py:486
+2026-02-11 18:47:44,954 [DEBUG] scratchpads :: [33;1mrun_toggle('term',)[0m :: command.py:264
+2026-02-11 18:47:44,954 [DEBUG] scratchpads :: visibility_check: ('', '') == ('1', 'eDP-1') :: __init__.py:543
+2026-02-11 18:47:44,954 [DEBUG] scratchpads :: term visibility: False and False :: __init__.py:569
+2026-02-11 18:47:44,954 [INFO] scratchpads :: Showing term :: __init__.py:665
+2026-02-11 18:47:44,955 [INFO] scratchpads :: scratch term (foot --app-id=foot-dropterm fish) has pid 53532 :: __init__.py:310
+2026-02-11 18:47:44,955 [INFO] scratchpads :: ==> Wait for term spawning :: __init__.py:199
+2026-02-11 18:47:45,060 [DEBUG] layout_center :: [30;1mevent_openwindow('5ba223a54150,1,foot-dropterm,foot',)[0m :: command.py:264
+2026-02-11 18:47:45,061 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:45,061 [DEBUG] pyprland :: active_window = 0x5ba223a54150 :: pyprland.py:94
+2026-02-11 18:47:45,061 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:45,061 [INFO] scratchpads :: => term client (proc:53532, addr:0x5ba223a54150) detected on time :: __init__.py:210
+2026-02-11 18:47:45,084 [DEBUG] scratchpads :: dispatch movetoworkspacesilent special:S-term,address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:45,086 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:45,086 [DEBUG] pyprland :: active_window = 0x5ba223993720 :: pyprland.py:94
+2026-02-11 18:47:45,087 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:45,158 [DEBUG] scratchpads :: dispatch resizewindowpixel exact 1740 1088,address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:45,160 [DEBUG] scratchpads :: dispatch ['moveworkspacetomonitor special:S-term eDP-1', 'movetoworkspacesilent 1,address:0x5ba223a54150', 'alterzorder top,address:0x5ba223a54150'] :: ipc.py:162
+2026-02-11 18:47:45,180 [DEBUG] scratchpads :: dispatch movewindowpixel exact 143 89,address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:45,196 [DEBUG] scratchpads :: dispatch focuswindow address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:45,217 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:45,217 [DEBUG] pyprland :: active_window = 0x5ba223a54150 :: pyprland.py:94
+2026-02-11 18:47:45,217 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:45,217 [DEBUG] scratchpads :: dispatch pin address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:45,218 [DEBUG] scratchpads :: [30;1mevent_openwindow('5ba223a54150,1,foot-dropterm,foot',)[0m :: command.py:264
+2026-02-11 18:47:45,218 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:45,218 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:45,218 [DEBUG] scratchpads :: (SKIPPED) hide term because another client is active :: __init__.py:410
+2026-02-11 18:47:45,218 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:53,385 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:53,386 [DEBUG] pyprland :: active_window = 0x5ba223993720 :: pyprland.py:94
+2026-02-11 18:47:53,386 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:53,387 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:53,533 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:53,533 [DEBUG] pyprland :: active_window = 0x5ba223a54150 :: pyprland.py:94
+2026-02-11 18:47:53,533 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:53,534 [DEBUG] scratchpads :: Canceled previous task for term :: __init__.py:495
+2026-02-11 18:47:53,534 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:47:53,645 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:53,645 [DEBUG] pyprland :: active_window = 0x5ba223993720 :: pyprland.py:94
+2026-02-11 18:47:53,646 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:53,646 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:54,047 [DEBUG] scratchpads :: hide term because another client is active :: __init__.py:431
+2026-02-11 18:47:54,059 [INFO] scratchpads :: Hiding term :: __init__.py:952
+2026-02-11 18:47:54,059 [DEBUG] scratchpads :: dispatch pin address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:54,075 [DEBUG] scratchpads :: dispatch movetoworkspacesilent special:S-term,address:0x5ba223a54150 :: ipc.py:162
+2026-02-11 18:47:59,026 [DEBUG] scratchpads :: [33;1mrun_toggle('opencode_hypr',)[0m :: command.py:264
+2026-02-11 18:47:59,026 [DEBUG] scratchpads :: visibility_check: ('', '') == ('1', 'eDP-1') :: __init__.py:543
+2026-02-11 18:47:59,026 [DEBUG] scratchpads :: opencode_hypr visibility: False and False :: __init__.py:569
+2026-02-11 18:47:59,026 [INFO] scratchpads :: Showing opencode_hypr :: __init__.py:665
+2026-02-11 18:47:59,037 [INFO] scratchpads :: scratch opencode_hypr (foot --app-id=opencode-hypr -D /home/froa/.config/hypr fish -c '/home/linuxbrew/.linuxbrew/bin/opencode --port --plan') has pid 53871 :: __init__.py:310
+2026-02-11 18:47:59,037 [INFO] scratchpads :: ==> Wait for opencode_hypr spawning :: __init__.py:199
+2026-02-11 18:47:59,251 [DEBUG] layout_center :: [30;1mevent_openwindow('5ba223a83670,1,opencode-hypr,foot',)[0m :: command.py:264
+2026-02-11 18:47:59,251 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,252 [DEBUG] pyprland :: active_window = 0x5ba223a83670 :: pyprland.py:94
+2026-02-11 18:47:59,252 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,252 [INFO] scratchpads :: => opencode_hypr client (proc:53871, addr:0x5ba223a83670) detected on time :: __init__.py:210
+2026-02-11 18:47:59,268 [DEBUG] scratchpads :: dispatch movetoworkspacesilent special:S-opencode_hypr,address:0x5ba223a83670 :: ipc.py:162
+2026-02-11 18:47:59,282 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:59,282 [DEBUG] pyprland :: active_window = 0x5ba223993720 :: pyprland.py:94
+2026-02-11 18:47:59,282 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:59,348 [DEBUG] scratchpads :: dispatch resizewindowpixel exact 1740 1088,address:0x5ba223a83670 :: ipc.py:162
+2026-02-11 18:47:59,362 [DEBUG] scratchpads :: dispatch ['moveworkspacetomonitor special:S-opencode_hypr eDP-1', 'movetoworkspacesilent 1,address:0x5ba223a83670', 'alterzorder top,address:0x5ba223a83670'] :: ipc.py:162
+2026-02-11 18:47:59,364 [DEBUG] scratchpads :: dispatch movewindowpixel exact 143 89,address:0x5ba223a83670 :: ipc.py:162
+2026-02-11 18:47:59,401 [DEBUG] scratchpads :: dispatch focuswindow address:0x5ba223a83670 :: ipc.py:162
+2026-02-11 18:47:59,417 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,417 [DEBUG] pyprland :: active_window = 0x5ba223a83670 :: pyprland.py:94
+2026-02-11 18:47:59,417 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,417 [DEBUG] scratchpads :: dispatch pin address:0x5ba223a83670 :: ipc.py:162
+2026-02-11 18:47:59,419 [DEBUG] scratchpads :: [30;1mevent_openwindow('5ba223a83670,1,opencode-hypr,foot',)[0m :: command.py:264
+2026-02-11 18:47:59,419 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,420 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:59,420 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,994 [DEBUG] scratchpads :: [30;1mevent_closewindow('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,994 [DEBUG] layout_center :: [30;1mevent_closewindow('5ba223a83670',)[0m :: command.py:264
+2026-02-11 18:47:59,994 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:59,994 [DEBUG] pyprland :: active_window = 0x5ba223993720 :: pyprland.py:94
+2026-02-11 18:47:59,994 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:47:59,996 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223993720',)[0m :: command.py:264
+2026-02-11 18:48:10,028 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:48:10,028 [DEBUG] pyprland :: active_window = 0x5ba223a54150 :: pyprland.py:94
+2026-02-11 18:48:10,029 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:48:10,029 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5ba223a54150',)[0m :: command.py:264
+2026-02-11 18:48:10,280 [DEBUG] scratchpads :: [30;1mevent_openwindow('5ba223c574f0,1,com.mitchellh.ghostty,Ghostty',)[0m :: command.py:264
+2026-02-11 18:48:10,281 [DEBUG] layout_center :: [30;1mevent_openwindow('5ba223c574f0,1,com.mitchellh.ghostty,Ghostty',)[0m :: command.py:264

@@ -43,6 +43,7 @@ function __transient_execute
         end
 
         set --global TRANSIENT transient
+        set --global TRANSIENT_PWD (pwd)
         commandline --function repaint execute
         return 0
     end

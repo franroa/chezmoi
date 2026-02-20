@@ -19,5 +19,7 @@
   "theme.osd.bar_container": "{{color8}}",
   "theme.bar.buttons.workspaces.active": "{{color4}}",
   "theme.bar.buttons.workspaces.occupied": "{{color8}}",
-  "theme.bar.buttons.workspaces.available": "{{color0}}"
+  "theme.bar.buttons.workspaces.available": "{{color0}}",
+  "blink.color1": "{{color1}}",
+  "blink.color2": "{{color4}}"
 }

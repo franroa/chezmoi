@@ -1,6 +1,6 @@
 return {
-  "esmuellert/vscode-diff.nvim",
+  "esmuellert/codediff.nvim",
   config = function()
-    require("vscode-diff").setup({})
+    require("codediff").setup({})
   end,
 }

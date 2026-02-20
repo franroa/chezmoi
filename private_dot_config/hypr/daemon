@@ -1,0 +1,86 @@
+2026-02-13 09:16:35,966 [INFO] ipc :: Logger "ipc" initialized :: common.py:232
+2026-02-13 09:16:35,966 [INFO] startup :: Logger "startup" initialized :: common.py:232
+2026-02-13 09:16:35,967 [INFO] pypr :: Logger "pypr" initialized :: common.py:232
+2026-02-13 09:16:35,968 [INFO] pypr :: Loading /home/froa/.config/hypr/pyprland.toml :: command.py:143
+2026-02-13 09:16:35,973 [INFO] pyprland :: Logger "pyprland" initialized :: common.py:232
+2026-02-13 09:16:35,983 [INFO] pyprland :: configured :: command.py:226
+2026-02-13 09:16:36,011 [INFO] scratchpads :: Logger "scratchpads" initialized :: common.py:232
+2026-02-13 09:16:36,013 [INFO] scratchpads :: configured :: command.py:226
+2026-02-13 09:16:36,014 [INFO] expose :: Logger "expose" initialized :: common.py:232
+2026-02-13 09:16:36,014 [INFO] expose :: configured :: command.py:226
+2026-02-13 09:16:36,014 [INFO] magnify :: Logger "magnify" initialized :: common.py:232
+2026-02-13 09:16:36,014 [INFO] magnify :: configured :: command.py:226
+2026-02-13 09:16:36,015 [INFO] shift_monitors :: Logger "shift_monitors" initialized :: common.py:232
+2026-02-13 09:16:36,018 [INFO] shift_monitors :: configured :: command.py:226
+2026-02-13 09:16:36,019 [INFO] toggle_dpms :: Logger "toggle_dpms" initialized :: common.py:232
+2026-02-13 09:16:36,020 [INFO] toggle_dpms :: configured :: command.py:226
+2026-02-13 09:16:36,020 [INFO] toggle_special :: Logger "toggle_special" initialized :: common.py:232
+2026-02-13 09:16:36,020 [INFO] toggle_special :: configured :: command.py:226
+2026-02-13 09:16:36,021 [INFO] menus adapter :: Logger "menus adapter" initialized :: common.py:232
+2026-02-13 09:16:36,022 [INFO] fetch_client_menu :: Logger "fetch_client_menu" initialized :: common.py:232
+2026-02-13 09:16:36,022 [INFO] fetch_client_menu :: configured :: command.py:226
+2026-02-13 09:16:36,023 [INFO] lost_windows :: Logger "lost_windows" initialized :: common.py:232
+2026-02-13 09:16:36,023 [INFO] lost_windows :: configured :: command.py:226
+2026-02-13 09:16:36,024 [INFO] layout_center :: Logger "layout_center" initialized :: common.py:232
+2026-02-13 09:16:36,024 [INFO] layout_center :: configured :: command.py:226
+2026-02-13 09:16:36,024 [INFO] shortcuts_menu :: Logger "shortcuts_menu" initialized :: common.py:232
+2026-02-13 09:16:36,025 [INFO] shortcuts_menu :: configured :: command.py:226
+2026-02-13 09:16:36,025 [DEBUG] pypr :: ================================[ initialized ]================================= :: command.py:486
+2026-02-13 09:16:45,744 [CRITICAL] pypr :: cancelled :: command.py:493
+2026-02-13 09:17:00,402 [INFO] ipc :: Logger "ipc" initialized :: common.py:232
+2026-02-13 09:17:00,403 [INFO] startup :: Logger "startup" initialized :: common.py:232
+2026-02-13 09:17:00,404 [INFO] pypr :: Logger "pypr" initialized :: common.py:232
+2026-02-13 09:17:00,406 [INFO] pypr :: Loading /home/froa/.config/hypr/pyprland.toml :: command.py:143
+2026-02-13 09:17:00,410 [INFO] pyprland :: Logger "pyprland" initialized :: common.py:232
+2026-02-13 09:17:00,424 [INFO] pyprland :: configured :: command.py:226
+2026-02-13 09:17:00,450 [INFO] scratchpads :: Logger "scratchpads" initialized :: common.py:232
+2026-02-13 09:17:00,452 [INFO] scratchpads :: configured :: command.py:226
+2026-02-13 09:17:00,453 [INFO] expose :: Logger "expose" initialized :: common.py:232
+2026-02-13 09:17:00,453 [INFO] expose :: configured :: command.py:226
+2026-02-13 09:17:00,454 [INFO] magnify :: Logger "magnify" initialized :: common.py:232
+2026-02-13 09:17:00,454 [INFO] magnify :: configured :: command.py:226
+2026-02-13 09:17:00,455 [INFO] shift_monitors :: Logger "shift_monitors" initialized :: common.py:232
+2026-02-13 09:17:00,473 [INFO] shift_monitors :: configured :: command.py:226
+2026-02-13 09:17:00,474 [INFO] toggle_dpms :: Logger "toggle_dpms" initialized :: common.py:232
+2026-02-13 09:17:00,474 [INFO] toggle_dpms :: configured :: command.py:226
+2026-02-13 09:17:00,475 [INFO] toggle_special :: Logger "toggle_special" initialized :: common.py:232
+2026-02-13 09:17:00,475 [INFO] toggle_special :: configured :: command.py:226
+2026-02-13 09:17:00,476 [INFO] menus adapter :: Logger "menus adapter" initialized :: common.py:232
+2026-02-13 09:17:00,476 [INFO] fetch_client_menu :: Logger "fetch_client_menu" initialized :: common.py:232
+2026-02-13 09:17:00,477 [INFO] fetch_client_menu :: configured :: command.py:226
+2026-02-13 09:17:00,477 [INFO] lost_windows :: Logger "lost_windows" initialized :: common.py:232
+2026-02-13 09:17:00,477 [INFO] lost_windows :: configured :: command.py:226
+2026-02-13 09:17:00,478 [INFO] layout_center :: Logger "layout_center" initialized :: common.py:232
+2026-02-13 09:17:00,479 [INFO] layout_center :: configured :: command.py:226
+2026-02-13 09:17:00,479 [INFO] shortcuts_menu :: Logger "shortcuts_menu" initialized :: common.py:232
+2026-02-13 09:17:00,479 [INFO] shortcuts_menu :: configured :: command.py:226
+2026-02-13 09:17:00,480 [DEBUG] pypr :: ================================[ initialized ]================================= :: command.py:486
+2026-02-13 09:17:05,360 [DEBUG] scratchpads :: [33;1mrun_toggle('k9s_sandbox',)[0m :: command.py:264
+2026-02-13 09:17:05,361 [DEBUG] scratchpads :: visibility_check: ('', '') == ('10', 'eDP-1') :: __init__.py:543
+2026-02-13 09:17:05,361 [DEBUG] scratchpads :: k9s_sandbox visibility: False and False :: __init__.py:569
+2026-02-13 09:17:05,361 [INFO] scratchpads :: Showing k9s_sandbox :: __init__.py:665
+2026-02-13 09:17:05,362 [INFO] scratchpads :: scratch k9s_sandbox (foot --app-id=k9s-sandbox -e bash /home/froa/.config/sway/k9s-sandbox.sh) has pid 71015 :: __init__.py:310
+2026-02-13 09:17:05,362 [INFO] scratchpads :: ==> Wait for k9s_sandbox spawning :: __init__.py:199
+2026-02-13 09:17:05,484 [DEBUG] layout_center :: [30;1mevent_openwindow('5acd43045c50,10,k9s-sandbox,foot',)[0m :: command.py:264
+2026-02-13 09:17:05,485 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5acd43045c50',)[0m :: command.py:264
+2026-02-13 09:17:05,485 [DEBUG] pyprland :: active_window = 0x5acd43045c50 :: pyprland.py:94
+2026-02-13 09:17:05,485 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5acd43045c50',)[0m :: command.py:264
+2026-02-13 09:17:05,611 [INFO] scratchpads :: => k9s_sandbox client (proc:71015, addr:0x5acd43045c50) detected on time :: __init__.py:210
+2026-02-13 09:17:05,631 [DEBUG] scratchpads :: dispatch movetoworkspacesilent special:S-k9s_sandbox,address:0x5acd43045c50 :: ipc.py:162
+2026-02-13 09:17:05,633 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5acd42d90600',)[0m :: command.py:264
+2026-02-13 09:17:05,633 [DEBUG] pyprland :: active_window = 0x5acd42d90600 :: pyprland.py:94
+2026-02-13 09:17:05,633 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5acd42d90600',)[0m :: command.py:264
+2026-02-13 09:17:05,699 [DEBUG] scratchpads :: dispatch resizewindowpixel exact 1740 1088,address:0x5acd43045c50 :: ipc.py:162
+2026-02-13 09:17:05,700 [DEBUG] scratchpads :: dispatch ['moveworkspacetomonitor special:S-k9s_sandbox eDP-1', 'movetoworkspacesilent 10,address:0x5acd43045c50', 'alterzorder top,address:0x5acd43045c50'] :: ipc.py:162
+2026-02-13 09:17:05,701 [DEBUG] scratchpads :: dispatch movewindowpixel exact 143 89,address:0x5acd43045c50 :: ipc.py:162
+2026-02-13 09:17:05,702 [DEBUG] scratchpads :: dispatch focuswindow address:0x5acd43045c50 :: ipc.py:162
+2026-02-13 09:17:05,702 [DEBUG] pyprland :: [30;1mevent_activewindowv2('5acd43045c50',)[0m :: command.py:264
+2026-02-13 09:17:05,703 [DEBUG] pyprland :: active_window = 0x5acd43045c50 :: pyprland.py:94
+2026-02-13 09:17:05,703 [DEBUG] layout_center :: [30;1mevent_activewindowv2('5acd43045c50',)[0m :: command.py:264
+2026-02-13 09:17:05,703 [DEBUG] scratchpads :: dispatch pin address:0x5acd43045c50 :: ipc.py:162
+2026-02-13 09:17:05,704 [ERROR] scratchpads :: FAILED b'Window does not qualify to be pinned' :: ipc.py:189
+2026-02-13 09:17:05,704 [DEBUG] scratchpads :: [30;1mevent_openwindow('5acd43045c50,10,k9s-sandbox,foot',)[0m :: command.py:264
+2026-02-13 09:17:05,704 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5acd43045c50',)[0m :: command.py:264
+2026-02-13 09:17:05,705 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5acd42d90600',)[0m :: command.py:264
+2026-02-13 09:17:05,705 [DEBUG] scratchpads :: [30;1mevent_activewindowv2('5acd43045c50',)[0m :: command.py:264
+2026-02-13 09:17:14,625 [CRITICAL] pypr :: cancelled :: command.py:493

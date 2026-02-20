@@ -1,0 +1,63 @@
+{
+  "bar.battery.warnAt": 20,
+  "bar.battery.warnColor": "#ff0000",
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "notifications.enabled": true,
+  "bar.systray.ignore": [
+    "spotify_client",
+    "nm_applet"
+  ],
+  "bar.layouts": {
+    "*": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "custom/temp",
+        "custom/pomodoro",
+        "custom/slack",
+        "custom/gitlab",
+        "custom/jira",
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.dashboard.powermenu.avatar.name": "Fran",
+  "menus.clock.weather.location": "Madrid, Spain",
+  "menus.clock.weather.unit": "imperial",
+  "theme.matugen": false,
+  "wallpaper.enable": false,
+  "theme.bar.background": "#1B1B1B",
+  "theme.bar.buttons.text": "#F6E0EF",
+  "theme.bar.buttons.icon": "#624259",
+  "theme.bar.buttons.icon_background": "#151416",
+  "theme.bar.buttons.background": "#1B1B1B",
+  "theme.bar.buttons.hover": "#A38E9D",
+  "theme.bar.buttons.borderColor": "#624259",
+  "theme.bar.menus.background": "#1B1B1B",
+  "theme.bar.menus.text": "#F6E0EF",
+  "theme.bar.menus.border.color": "#624259",
+  "theme.notification.background": "#1B1B1B",
+  "theme.notification.text": "#F6E0EF",
+  "theme.notification.border": "#624259",
+  "theme.osd.bar_color": "#624259",
+  "theme.osd.bar_overflow_color": "#151416",
+  "theme.osd.icon": "#F6E0EF",
+  "theme.osd.label": "#F6E0EF",
+  "theme.osd.bar_container": "#A38E9D",
+  "theme.bar.buttons.workspaces.active": "#624259",
+  "theme.bar.buttons.workspaces.occupied": "#A38E9D",
+  "theme.bar.buttons.workspaces.available": "#424142"
+}

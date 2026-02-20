@@ -1,0 +1,29 @@
+{
+  "sound": true,
+  "notification": false,
+  "timeout": 5,
+  "showProjectName": true,
+  "showSessionTitle": true,
+  "showIcon": true,
+  "events": {
+    "permission": { "sound": true, "notification": false },
+    "complete": { "sound": true, "notification": false },
+    "subagent_complete": { "sound": false, "notification": false },
+    "error": { "sound": true, "notification": false },
+    "question": { "sound": true, "notification": false }
+  },
+  "messages": {
+    "permission": "Session needs permission: {sessionTitle}",
+    "complete": "Session has finished: {sessionTitle}",
+    "subagent_complete": "Subagent task completed: {sessionTitle}",
+    "error": "Session encountered an error: {sessionTitle}",
+    "question": "Session has a question: {sessionTitle}"
+  },
+  "volumes": {
+    "permission": 0.7,
+    "complete": 0.5,
+    "subagent_complete": 0.3,
+    "error": 1.0,
+    "question": 0.7
+  }
+}

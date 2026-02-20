@@ -28,7 +28,7 @@
         "truncationSize": -1,
         "execute": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh",
         "interval": 1000,
-        "hideOnEmpty": false,
+        "hideOnEmpty": true,
         "scrollThreshold": 1,
         "actions": {
             "onLeftClick": "/home/froa/.config/hyprpanel/scripts/pomodoro.sh toggle",
@@ -43,14 +43,14 @@
         "label": "{text}",
         "tooltip": "{tooltip}",
         "truncationSize": -1,
-        "execute": "/home/froa/.config/hyprpanel/scripts/slack-status.sh",
+        "execute": "/home/froa/.config/hypr/scripts/slack-monitor.sh status",
         "interval": 500,
-        "hideOnEmpty": false,
+        "hideOnEmpty": true,
         "scrollThreshold": 1,
         "actions": {
-            "onLeftClick": "/home/froa/.config/hyprpanel/scripts/slack-status.sh toggle",
-            "onRightClick": "",
-            "onMiddleClick": "",
+            "onLeftClick": "/home/froa/.config/hypr/scripts/goto-slack.sh",
+            "onRightClick": "/home/froa/.config/hypr/scripts/slack-monitor.sh sources",
+            "onMiddleClick": "/home/froa/.config/hypr/scripts/slack-monitor.sh clear",
             "onScrollUp": "",
             "onScrollDown": ""
         }

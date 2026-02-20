@@ -1,0 +1,277 @@
+import { chromium } from 'playwright';
+
+const GROUPS = [
+    'platform-sandbox-contributors',
+    'platform-live-contributors'
+];
+
+const DURATION_HOURS = parseInt(process.env.PIM_DURATION_HOURS || '8');
+const JUSTIFICATION = process.env.PIM_JUSTIFICATION || 'Daily Work';
+const DEBUG = process.env.DEBUG === '1';
+const DEBUG_PORT = process.env.CHROME_DEBUG_PORT || '9222';
+
+const PIM_URL = 'https://portal.azure.com/#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadgroup';
+
+function log(msg) {
+    console.log(`[${new Date().toISOString()}] ${msg}`);
+}
+
+async function waitForPageLoad(page) {
+    // Wait for Azure Portal to fully load
+    try {
+        await page.waitForLoadState('networkidle', { timeout: 30000 });
+    } catch {
+        // Ignore timeout, portal may keep loading
+    }
+    await page.waitForTimeout(3000);
+}
+
+async function activateGroup(page, groupName) {
+    log(`Activating group: ${groupName}`);
+    
+    try {
+        // Step 1: Wait for the table to load (subscriptions take time)
+        log('Waiting for table to load...');
+        await page.waitForSelector('text=' + groupName, { timeout: 120000 });
+        log(`Found group in table: ${groupName}`);
+
+        // Step 2: Find the row with this group name
+        const row = page.locator(`tr:has-text("${groupName}"), div[role="row"]:has-text("${groupName}")`).first();
+        
+        if (await row.count() === 0) {
+            log(`Could not find row for: ${groupName}`);
+            return false;
+        }
+
+        // Step 3: Find and click the "Activate" link in the Action column of that row
+        const activateLink = row.locator('a:has-text("Activate"), button:has-text("Activate"), [role="link"]:has-text("Activate")').first();
+        
+        if (await activateLink.count() === 0) {
+            // Maybe already activated?
+            const rowText = await row.textContent();
+            if (rowText.toLowerCase().includes('deactivate') || rowText.match(/\bactive\b/i)) {
+                log(`Already active: ${groupName}`);
+                return true;
+            }
+            log(`Activate link not found for: ${groupName}`);
+            await page.screenshot({ path: `/tmp/pim-no-link-${groupName.replace(/[^a-z0-9]/gi, '_')}.png` });
+            return false;
+        }
+
+        log('Clicking Activate link in Action column...');
+        await activateLink.click();
+
+        // Step 4: Wait for the new window/panel to appear (5 seconds)
+        log('Waiting 5 seconds for activation window...');
+        await page.waitForTimeout(5000);
+
+        // Step 5: Write "Daily Work" in the text field inside the panel/blade
+        log('Looking for justification input in activation panel...');
+        
+        // The panel/blade should be the rightmost or topmost element
+        // Look for input specifically inside a panel, blade, or dialog - NOT the global search
+        const panelSelectors = [
+            '.ms-Panel textarea',
+            '.ms-Panel input[type="text"]',
+            '[role="dialog"] textarea',
+            '[role="dialog"] input[type="text"]',
+            '.fxs-blade-content-container-default textarea',
+            '.fxs-blade-content-container-default input[type="text"]',
+            '.fxs-contextpane textarea',
+            '.fxs-contextpane input[type="text"]',
+            // Azure-specific blade selectors
+            'div[class*="blade"] textarea',
+            'div[class*="blade"] input[type="text"]:not([aria-label*="Search"])',
+            // Last resort: any textarea that's visible and not in header
+            'main textarea',
+        ];
+        
+        let inputField = null;
+        for (const selector of panelSelectors) {
+            const field = page.locator(selector).first();
+            if (await field.count() > 0 && await field.isVisible()) {
+                inputField = field;
+                log(`Found input with selector: ${selector}`);
+                break;
+            }
+        }
+        
+        if (inputField) {
+            await inputField.click();
+            await inputField.fill(JUSTIFICATION);
+            log(`Entered justification: "${JUSTIFICATION}"`);
+        } else {
+            log('Warning: Could not find text input for justification in panel');
+            await page.screenshot({ path: '/tmp/pim-no-input.png' });
+            log('Screenshot saved to /tmp/pim-no-input.png');
+        }
+
+        // Take a screenshot to debug button finding
+        await page.screenshot({ path: '/tmp/pim-before-button.png' });
+        log('Screenshot saved to /tmp/pim-before-button.png');
+
+        // Step 6: Press the submit button next to Cancel (wait for it to be enabled)
+        log('Waiting for submit button to become enabled...');
+        await page.waitForTimeout(5000);  // Wait 5 seconds as user mentioned
+        
+        // Find the submit button in the popup - it's next to the Cancel button
+        // First try to find Cancel and get its sibling, then fall back to common patterns
+        let activateButton = null;
+        
+        // Strategy 1: Find button container with Cancel and get the other button
+        const cancelButton = page.locator('button:has-text("Cancel"):visible').first();
+        if (await cancelButton.count() > 0) {
+            // Get the parent container and find the other button (not Cancel)
+            const buttonContainer = cancelButton.locator('xpath=..');
+            const siblingButton = buttonContainer.locator('button:not(:has-text("Cancel"))').first();
+            if (await siblingButton.count() > 0 && await siblingButton.isVisible()) {
+                activateButton = siblingButton;
+                log('Found submit button as sibling of Cancel');
+            }
+        }
+        
+        // Strategy 2: Find the primary Activate button (div[role="button"]) in the context pane
+        // Azure uses div[role="button"] with class fxs-portal-button-primary for the submit button
+        if (!activateButton) {
+            const primaryActivate = page.locator('.fxs-contextpane div[role="button"].fxs-portal-button-primary:has-text("Activate")').first();
+            if (await primaryActivate.count() > 0 && await primaryActivate.isVisible()) {
+                activateButton = primaryActivate;
+                log('Found primary Activate button (div[role=button])');
+            }
+        }
+        
+        // Strategy 3: Find any div[role="button"] with Activate text in context pane
+        if (!activateButton) {
+            const divActivate = page.locator('.fxs-contextpane div[role="button"]:has-text("Activate")').first();
+            if (await divActivate.count() > 0 && await divActivate.isVisible()) {
+                activateButton = divActivate;
+                log('Found Activate div[role=button] in context pane');
+            }
+        }
+        
+        // Strategy 4: Find by class fxs-button with title="Activate"
+        if (!activateButton) {
+            const fxsActivate = page.locator('.fxs-contextpane .fxs-button[title="Activate"]').first();
+            if (await fxsActivate.count() > 0 && await fxsActivate.isVisible()) {
+                activateButton = fxsActivate;
+                log('Found Activate button by title attribute');
+            }
+        }
+        
+        if (activateButton) {
+            // Wait for button to be enabled (poll for up to 10 seconds)
+            // Azure uses aria-disabled and fxs-button-disabled class for div[role="button"]
+            for (let i = 0; i < 10; i++) {
+                const ariaDisabled = await activateButton.getAttribute('aria-disabled').catch(() => 'true');
+                const hasDisabledClass = await activateButton.evaluate(el => el.classList.contains('fxs-button-disabled')).catch(() => true);
+                const isDisabled = ariaDisabled === 'true' || hasDisabledClass;
+                if (!isDisabled) {
+                    log('Submit button is now enabled');
+                    break;
+                }
+                log(`Waiting for button to enable... (${i + 1}/10)`);
+                await page.waitForTimeout(1000);
+            }
+            
+            const btnText = await activateButton.textContent().catch(() => 'unknown');
+            await activateButton.click();
+            log(`Clicked submit button: "${btnText}"`);
+        } else {
+            log('Warning: Submit button not found (button next to Cancel)');
+            await page.screenshot({ path: '/tmp/pim-no-button.png' });
+            log('Screenshot saved to /tmp/pim-no-button.png');
+            return false;
+        }
+
+        // Step 7: Wait for the window to close
+        log('Waiting for activation to complete...');
+        await page.waitForTimeout(5000);
+        
+        log(`Successfully activated: ${groupName}`);
+        return true;
+        
+    } catch (error) {
+        log(`Error activating ${groupName}: ${error.message}`);
+        await page.screenshot({ path: `/tmp/pim-error-${groupName.replace(/[^a-z0-9]/gi, '_')}.png` }).catch(() => {});
+        return false;
+    }
+}
+
+async function activateGroupInNewPage(context, groupName) {
+    const page = await context.newPage();
+    
+    try {
+        log(`[${groupName}] Opening PIM page...`);
+        await page.goto(PIM_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        
+        // Check if login is needed
+        await page.waitForTimeout(3000);
+        
+        if (page.url().includes('login.microsoftonline.com')) {
+            log(`[${groupName}] Azure login required. Please log in manually and re-run the script.`);
+            await page.close();
+            return false;
+        }
+
+        await waitForPageLoad(page);
+        
+        const result = await activateGroup(page, groupName);
+        await page.close();
+        return result;
+        
+    } catch (error) {
+        log(`[${groupName}] Fatal error: ${error.message}`);
+        if (DEBUG) console.error(error);
+        await page.close().catch(() => {});
+        return false;
+    }
+}
+
+async function main() {
+    log('Starting Azure PIM activation via browser automation (PARALLEL)');
+    log(`Duration: ${DURATION_HOURS} hours`);
+    log(`Justification: ${JUSTIFICATION}`);
+    log(`Groups: ${GROUPS.join(', ')}`);
+    log(`Connecting to Chrome on port ${DEBUG_PORT}...`);
+    
+    let browser;
+    try {
+        // Connect to existing Chrome with remote debugging
+        browser = await chromium.connectOverCDP(`http://127.0.0.1:${DEBUG_PORT}`);
+        log('Connected to Chrome');
+    } catch (error) {
+        log(`Failed to connect to Chrome: ${error.message}`);
+        log('');
+        log('Please restart Chrome with remote debugging enabled:');
+        log(`  google-chrome --remote-debugging-port=${DEBUG_PORT}`);
+        log('');
+        log('Or add this to your Sway config to always start Chrome with debugging:');
+        log(`  exec google-chrome --remote-debugging-port=${DEBUG_PORT}`);
+        process.exit(1);
+    }
+
+    // Get the default context
+    const contexts = browser.contexts();
+    const context = contexts[0];
+    
+    // Activate all groups in parallel
+    log('');
+    log('Starting parallel activation of all groups...');
+    log('');
+    
+    const results = await Promise.all(
+        GROUPS.map(group => activateGroupInNewPage(context, group))
+    );
+    
+    const successCount = results.filter(r => r).length;
+    const failCount = results.filter(r => !r).length;
+
+    log('');
+    log('=========================================');
+    log(`Activation complete! Success: ${successCount}, Failed: ${failCount}`);
+    log('=========================================');
+    
+    process.exit(failCount > 0 ? 1 : 0);
+}
+
+main();

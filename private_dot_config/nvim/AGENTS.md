@@ -1,3 +1,44 @@
+# Neovim Configuration
+
+This is a LazyVim-based Neovim configuration managed by chezmoi.
+
+## Session
+
+**Use the `neovim` session when working on this config** (`/session neovim`).
+This keeps conversation history for nvim work separate from other tools.
+
+## Structure
+
+- `lua/config/` - Core config (keymaps, options, autocmds, lazy.lua)
+- `lua/plugins/` - Plugin specs (LazyVim format)
+- `lua/_old_plugins/` - Disabled/experimental plugins
+- `after/` - Filetype-specific settings
+- `ftdetect/` - Custom filetype detection
+
+## Guidelines
+
+- Follow LazyVim plugin spec conventions
+- This is part of a chezmoi repo - edit here, then `chezmoi apply`
+- Test changes with `:Lazy reload` or restart nvim
+
+## Common Tasks
+
+```lua
+-- Adding a plugin: lua/plugins/my-plugin.lua
+return {
+  "author/plugin",
+  opts = {},
+}
+
+-- Extending a LazyVim plugin
+return {
+  "existing/plugin",
+  opts = function(_, opts)
+    -- modify opts
+  end,
+}
+```
+
 <!-- OPENSPEC:START -->
 # OpenSpec Instructions
 
