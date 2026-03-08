@@ -1,0 +1,43 @@
+//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
+/* Waybar Modules Extras */
+
+/* This is where you can add Extra Modules you wish. copy.sh will try to restore*/
+/* this file along with the unique configs and styles. */
+/* IMPORTANT, be mindful with , or ". else waybar will not start */
+
+{
+  "custom/slack": {
+    "exec": "~/.config/hypr/scripts/slack-notifications.sh waybar",
+    "return-type": "json",
+    "interval": 60,
+    "on-click": "~/.config/hypr/scripts/slack-notifications.sh open",
+    "on-click-right": "~/.config/hypr/scripts/slack-notifications.sh mark-read",
+    "tooltip": true
+  },
+
+  "custom/jira": {
+    "exec": "~/.config/hypr/scripts/jira-notifications.sh waybar",
+    "return-type": "json",
+    "interval": 120,
+    "on-click": "~/.config/hypr/scripts/jira-notifications.sh show",
+    "on-click-right": "~/.config/hypr/scripts/jira-notifications.sh open",
+    "tooltip": true
+  },
+
+  "custom/gitlab": {
+    "exec": "~/.config/hypr/scripts/gitlab-notifications.sh waybar",
+    "return-type": "json",
+    "interval": 120,
+    "on-click": "~/.config/hypr/scripts/gitlab-notifications.sh show",
+    "on-click-right": "~/.config/hypr/scripts/gitlab-notifications.sh open",
+    "tooltip": true
+  },
+
+  "custom/vpn": {
+    "exec": "~/.config/waybar/scripts/vpn-toggle.sh status",
+    "return-type": "json",
+    "interval": 10,
+    "on-click": "~/.config/waybar/scripts/vpn-toggle.sh toggle",
+    "tooltip": true
+  }
+}

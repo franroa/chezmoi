@@ -1,0 +1,61 @@
+/* Dracula Theme - Converted from rofi-themes */
+* {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #282a36;
+    border: 2px solid #bd93f9;
+    border-radius: 10px;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+#input {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: 1px solid #6272a4;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#input:focus {
+    border-color: #bd93f9;
+}
+
+#scroll {
+    margin: 5px 0;
+}
+
+#entry {
+    padding: 10px 15px;
+    margin: 3px 0;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #bd93f9;
+}
+
+#entry:hover {
+    background-color: #44475a;
+}
+
+#text {
+    color: #f8f8f2;
+}
+
+#text:selected {
+    color: #282a36;
+    font-weight: 500;
+}
+
+image {
+    margin-right: 10px;
+}

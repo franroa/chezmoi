@@ -1,0 +1,61 @@
+/* Everforest Theme - Converted from rofi-themes */
+* {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #2d353b;
+    border: 2px solid #a7c080;
+    border-radius: 10px;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+#input {
+    background-color: #343f44;
+    color: #d3c6aa;
+    border: 1px solid #475258;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#input:focus {
+    border-color: #a7c080;
+}
+
+#scroll {
+    margin: 5px 0;
+}
+
+#entry {
+    padding: 10px 15px;
+    margin: 3px 0;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #a7c080;
+}
+
+#entry:hover {
+    background-color: #343f44;
+}
+
+#text {
+    color: #d3c6aa;
+}
+
+#text:selected {
+    color: #2d353b;
+    font-weight: 500;
+}
+
+image {
+    margin-right: 10px;
+}

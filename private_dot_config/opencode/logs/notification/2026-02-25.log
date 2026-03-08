@@ -1,0 +1,175 @@
+[2026-02-25T10:28:41.606Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T10:28:41.765Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T10:28:41.766Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T10:28:41.766Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T10:31:20.112Z] [notification] session ses_36ba72d28ffeYtcJXCMHxjebcd: title="Notifications panel via wlr-which-key mod-space u h", dir="/home/froa/.config/hypr"
+[2026-02-25T10:31:20.113Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T10:31:20.117Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-25T10:31:20.133Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T10:31:20.133Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-25T10:32:23.939Z] [notification] aoe session detected: "aoe_wlr-which-key_main_0e055795" → using aoe-cwd scratchpad directly
+[2026-02-25T10:32:24.171Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T10:32:24.171Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T10:32:24.171Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T10:33:32.056Z] [notification] suppressing duplicate session.idle for ses_36ba39c06ffesWhqLytm0kxB3a (19ms since last)
+[2026-02-25T10:33:32.058Z] [notification] session ses_36ba39c06ffesWhqLytm0kxB3a: title="Adapting swaync-client to hyprpanel integration", dir="/home/froa/.config/wlr-which-key"
+[2026-02-25T10:33:32.059Z] [notification] scratchpad project_branch: wlr-which-key_main
+[2026-02-25T10:33:32.063Z] [notification] session project_branch: wlr-which-key_main, dir: /home/froa/.config/wlr-which-key
+[2026-02-25T10:33:32.075Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T10:33:32.075Z] [notification] suppressing: same project_branch (wlr-which-key_main)
+[2026-02-25T11:08:46.890Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T11:08:47.081Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T11:08:47.082Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T11:08:47.082Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T11:11:38.068Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:11:38.099Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:11:38.104Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:11:38.111Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T11:11:38.111Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T11:11:38.111Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:11:38.216Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T11:11:38.217Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T11:15:54.470Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:15:54.488Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:15:54.490Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:15:54.495Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T11:15:54.495Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T11:15:54.496Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:15:54.596Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T11:15:54.596Z] [notification] spawning watchScript for notifId=13 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T11:29:41.751Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:29:41.785Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:29:41.789Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:29:41.798Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-25T11:29:41.798Z] [notification] scratchpad hidden → will notify
+[2026-02-25T11:29:41.798Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:35:16.607Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:35:16.638Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:35:16.642Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:35:16.652Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-25T11:35:16.652Z] [notification] scratchpad hidden → will notify
+[2026-02-25T11:35:16.652Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:35:16.728Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T11:35:16.728Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T11:35:34.346Z] [notification] aoe session detected: "aoe_scripts_main_c87c3622" → using aoe-cwd scratchpad directly
+[2026-02-25T11:35:34.535Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T11:35:34.536Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T11:35:34.536Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T11:39:12.457Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:39:12.519Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:39:12.522Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:39:12.531Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-25T11:39:12.531Z] [notification] scratchpad hidden → will notify
+[2026-02-25T11:39:12.531Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:39:12.603Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T11:39:12.603Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T11:41:29.951Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:41:30.032Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:41:30.037Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:41:30.053Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-25T11:41:30.053Z] [notification] scratchpad hidden → will notify
+[2026-02-25T11:41:30.053Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:41:30.137Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T11:41:30.137Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T11:45:49.068Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T11:45:49.155Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T11:45:49.159Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T11:45:49.169Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-25T11:45:49.169Z] [notification] scratchpad hidden → will notify
+[2026-02-25T11:45:49.169Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T11:45:49.265Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T11:45:49.265Z] [notification] spawning watchScript for notifId=9 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T11:53:13.510Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T11:53:13.708Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T11:53:13.708Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T11:53:13.708Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:08:46.347Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:08:46.439Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:08:46.444Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:08:46.452Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:08:46.452Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:08:46.452Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:08:46.508Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:08:46.508Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T12:10:54.927Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:10:54.944Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:10:54.946Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:10:54.948Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:10:54.948Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:10:54.948Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:10:54.960Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:10:54.960Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T12:14:35.559Z] [notification] terminal window address: 0x617dc372a0d0
+[2026-02-25T12:14:35.569Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:14:35.569Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:14:57.440Z] [notification] suppressing duplicate session.idle for ses_36b47023fffe1VaN2xNG07JnL6 (8ms since last)
+[2026-02-25T12:14:57.442Z] [notification] session ses_36b47023fffe1VaN2xNG07JnL6: title="Test conversation overview", dir="/home/froa"
+[2026-02-25T12:14:57.442Z] [notification] scratchpad project_branch: null
+[2026-02-25T12:14:57.446Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-25T12:14:57.454Z] [notification] scratchpad hidden → will notify
+[2026-02-25T12:14:57.454Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-25T12:14:57.520Z] [notification] spawning watchScript for notifId=4 dir=/home/froa
+[2026-02-25T12:16:22.242Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T12:16:22.384Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T12:16:22.385Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:16:22.385Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:16:53.154Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T12:16:53.211Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T12:16:53.212Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:16:53.212Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:16:53.381Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T12:16:53.443Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T12:16:53.443Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:16:53.443Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:18:41.942Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:18:42.049Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:18:42.054Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:18:42.068Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:18:42.068Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:18:42.068Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:18:42.136Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:18:42.136Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T12:21:23.199Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T12:21:23.411Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T12:21:23.412Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:21:23.412Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:23:59.760Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:23:59.866Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:23:59.870Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:23:59.878Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:23:59.878Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:23:59.878Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:23:59.953Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:23:59.953Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T12:25:28.439Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:25:28.535Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:25:28.539Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:25:28.546Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:25:28.546Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:25:28.546Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:25:28.640Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:25:28.640Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T12:27:35.475Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:27:35.587Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:27:35.591Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:27:35.598Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:27:35.598Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:27:35.598Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:27:35.700Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:27:35.700Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr/scripts
+[2026-02-25T12:30:23.195Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T12:30:23.372Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T12:30:23.373Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:30:23.373Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:37:38.533Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-25T12:37:38.689Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-25T12:37:38.690Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-25T12:37:38.690Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-25T12:41:44.996Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="Notification panel: assign unique letters to items and bind actions", dir="/home/froa/.config/hypr/scripts"
+[2026-02-25T12:41:45.096Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-25T12:41:45.098Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-25T12:41:45.104Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-25T12:41:45.104Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-25T12:41:45.104Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-25T12:41:45.225Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-25T12:41:45.226Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr/scripts

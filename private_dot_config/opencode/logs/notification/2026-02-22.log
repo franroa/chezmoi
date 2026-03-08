@@ -1,0 +1,339 @@
+[2026-02-22T14:39:57.667Z] [notification] terminal window address: 0x570b7b2267c0
+[2026-02-22T14:39:57.676Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T14:39:57.676Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T14:42:33.451Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T14:42:33.451Z] [notification] scratchpad project_branch: null
+[2026-02-22T14:42:33.456Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:42:33.474Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:42:33.474Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:42:33.538Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T14:43:42.877Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T14:43:42.877Z] [notification] scratchpad project_branch: null
+[2026-02-22T14:43:42.882Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:43:42.894Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:43:42.894Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:43:42.968Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T14:43:42.991Z] [notification] suppressing duplicate session.idle for ses_37dbda364ffeLMnjeoqOSECG2r (118ms since last)
+[2026-02-22T14:43:43.006Z] [notification] suppressing duplicate session.idle for ses_37dbda364ffeLMnjeoqOSECG2r (133ms since last)
+[2026-02-22T14:44:03.139Z] [notification] terminal window address: 0x570b79d261d0
+[2026-02-22T14:44:03.139Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T14:44:03.139Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T14:44:42.423Z] [notification] suppressing duplicate session.idle for ses_37a30bae8ffezKgsDclrENDiYs (18ms since last)
+[2026-02-22T14:44:42.426Z] [notification] session ses_37a30bae8ffezKgsDclrENDiYs: title="WLR-which-key mod-space n h notification panel issue", dir="/home/froa/.config/hypr"
+[2026-02-22T14:44:42.427Z] [notification] scratchpad project_branch: null
+[2026-02-22T14:44:42.431Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:44:42.444Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:44:42.444Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:44:42.509Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T14:47:06.099Z] [notification] session ses_37a30bae8ffezKgsDclrENDiYs: title="WLR-which-key mod-space n h notification panel issue", dir="/home/froa/.config/hypr"
+[2026-02-22T14:47:06.100Z] [notification] scratchpad project_branch: null
+[2026-02-22T14:47:06.104Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:47:06.118Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:47:06.119Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:47:06.185Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T14:49:16.422Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T14:49:16.422Z] [notification] scratchpad project_branch: null
+[2026-02-22T14:49:16.426Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:49:16.437Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:49:16.437Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:49:16.500Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/.config/hypr
+[2026-02-22T14:50:42.534Z] [notification] session ses_37a30bae8ffezKgsDclrENDiYs: title="WLR-which-key mod-space n h notification panel issue", dir="/home/froa/.config/hypr"
+[2026-02-22T14:50:42.534Z] [notification] scratchpad project_branch: null
+[2026-02-22T14:50:42.539Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:50:42.556Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:50:42.557Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:50:42.637Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/.config/hypr
+[2026-02-22T14:51:34.091Z] [notification] aoe session detected: "aoe_platform-core_featur_c89f04dc" → using aoe-cwd scratchpad directly
+[2026-02-22T14:51:34.307Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-22T14:51:34.307Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T14:51:34.307Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T14:51:41.841Z] [notification] session ses_37a2a5be3ffeuf8jj8bi52d4E0: title="Testing conversation thread title", dir="/home/froa/Projects/ts/platform-core"
+[2026-02-22T14:51:41.851Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-22T14:51:41.856Z] [notification] session project_branch: platform-core_feature-add_backup, dir: /home/froa/Projects/ts/platform-core
+[2026-02-22T14:51:41.876Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-22T14:51:41.876Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:51:41.876Z] [notification] tracked latest notification: platform-core_feature-add_backup (/home/froa/Projects/ts/platform-core)
+[2026-02-22T14:51:41.964Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=platform-core_feature-add_backup
+[2026-02-22T14:51:41.964Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/Projects/ts/platform-core
+[2026-02-22T14:51:41.981Z] [notification] suppressing duplicate session.idle for ses_37a2a5be3ffeuf8jj8bi52d4E0 (143ms since last)
+[2026-02-22T14:52:22.454Z] [notification] session ses_37a2a5be3ffeuf8jj8bi52d4E0: title="Testing conversation thread title", dir="/home/froa/Projects/ts/platform-core"
+[2026-02-22T14:52:22.456Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-22T14:52:22.467Z] [notification] session project_branch: platform-core_feature-add_backup, dir: /home/froa/Projects/ts/platform-core
+[2026-02-22T14:52:22.475Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-22T14:52:22.476Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:52:22.476Z] [notification] tracked latest notification: platform-core_feature-add_backup (/home/froa/Projects/ts/platform-core)
+[2026-02-22T14:52:22.557Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=platform-core_feature-add_backup
+[2026-02-22T14:52:22.557Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/Projects/ts/platform-core
+[2026-02-22T14:52:22.568Z] [notification] suppressing duplicate session.idle for ses_37a2a5be3ffeuf8jj8bi52d4E0 (119ms since last)
+[2026-02-22T14:55:47.177Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T14:55:47.206Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-22T14:55:47.211Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:55:47.231Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-22T14:55:47.231Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:55:47.231Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:55:47.302Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/.config/hypr
+[2026-02-22T14:58:53.868Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T14:58:53.897Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-22T14:58:53.901Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T14:58:53.910Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-22T14:58:53.910Z] [notification] scratchpad hidden → will notify
+[2026-02-22T14:58:53.910Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T14:58:53.998Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T15:01:52.623Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T15:01:52.643Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-22T15:01:52.646Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T15:01:52.663Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-22T15:01:52.663Z] [notification] scratchpad hidden → will notify
+[2026-02-22T15:01:52.663Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T15:01:52.756Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr
+[2026-02-22T16:02:52.082Z] [notification] terminal window address: 0x64d3df5cea60
+[2026-02-22T16:02:52.091Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T16:02:52.091Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T16:06:44.320Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:06:44.320Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:06:44.322Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:06:44.335Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:06:44.336Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:06:44.435Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-02-22T16:09:11.447Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:09:11.447Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:09:11.451Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:09:11.459Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:09:11.459Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:09:11.576Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-22T16:11:04.435Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:11:04.435Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:11:04.439Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:11:04.447Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:11:04.448Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:11:04.546Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/hypr
+[2026-02-22T16:12:00.060Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:12:00.060Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:12:00.064Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:12:00.080Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:12:00.081Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:12:00.213Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr
+[2026-02-22T16:13:06.901Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:13:06.901Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:13:06.906Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:13:06.914Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:13:06.915Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:13:06.981Z] [notification] spawning watchScript for notifId=9 dir=/home/froa/.config/hypr
+[2026-02-22T16:16:03.448Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:16:03.448Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:16:03.453Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:16:03.460Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:16:03.461Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:16:03.532Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/.config/hypr
+[2026-02-22T16:19:08.856Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:19:08.856Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:19:08.859Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:19:08.865Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:19:08.865Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:19:08.935Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/.config/hypr
+[2026-02-22T16:21:58.321Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:21:58.321Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:21:58.326Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:21:58.337Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:21:58.337Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:21:58.424Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T16:23:28.326Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:23:28.326Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:23:28.330Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:23:28.345Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:23:28.345Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:23:28.431Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T16:26:38.043Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:26:38.043Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:26:38.046Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:26:38.052Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:26:38.052Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:26:38.126Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T16:28:59.890Z] [notification] suppressing duplicate session.idle for ses_37dbda364ffeLMnjeoqOSECG2r (25ms since last)
+[2026-02-22T16:28:59.892Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:28:59.892Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:28:59.898Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:28:59.906Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:28:59.906Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:30:38.557Z] [notification] terminal window address: 0x64d3df5cea60
+[2026-02-22T16:30:38.557Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T16:30:38.557Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T16:32:51.947Z] [notification] terminal window address: 0x61f696058fe0
+[2026-02-22T16:32:51.957Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T16:32:51.957Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T16:35:02.754Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:35:02.754Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:35:02.758Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:35:02.769Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:35:02.769Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:35:41.367Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:35:41.367Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:35:41.371Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:35:41.380Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:35:41.380Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:35:41.438Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/.config/hypr
+[2026-02-22T16:36:29.347Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:36:29.348Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:36:29.352Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:36:29.368Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:36:29.368Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:36:29.432Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/.config/hypr
+[2026-02-22T16:36:29.457Z] [notification] suppressing duplicate session.idle for ses_37dbda364ffeLMnjeoqOSECG2r (115ms since last)
+[2026-02-22T16:36:29.477Z] [notification] suppressing duplicate session.idle for ses_37dbda364ffeLMnjeoqOSECG2r (135ms since last)
+[2026-02-22T16:38:00.805Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:38:00.805Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:38:00.810Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:38:00.825Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:38:00.826Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:38:00.904Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T16:38:53.541Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:38:53.542Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:38:53.546Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:38:53.556Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:38:53.556Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:38:53.624Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T16:41:38.990Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-22T16:41:38.990Z] [notification] scratchpad project_branch: null
+[2026-02-22T16:41:38.995Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T16:41:39.001Z] [notification] scratchpad hidden → will notify
+[2026-02-22T16:41:39.001Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T16:41:39.069Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-22T17:21:31.601Z] [notification] terminal window address: 0x5a2922f00e20
+[2026-02-22T17:21:31.611Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T17:21:31.611Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T17:22:01.921Z] [notification] terminal window address: 0x5a2922f00e20
+[2026-02-22T17:22:01.921Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T17:22:01.921Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T17:22:32.302Z] [notification] suppressing duplicate session.idle for ses_379a03bafffeulwTFL05qKsHeT (9ms since last)
+[2026-02-22T17:22:32.304Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:22:32.304Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:22:32.309Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:22:32.320Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:22:32.320Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:22:32.398Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr
+[2026-02-22T17:23:16.774Z] [notification] terminal window address: 0x5a2922f1c9a0
+[2026-02-22T17:23:16.775Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T17:23:16.775Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T17:23:41.152Z] [notification] terminal window address: 0x5a2922f00e20
+[2026-02-22T17:23:41.152Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T17:23:41.152Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T17:24:29.375Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:24:29.375Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:24:29.378Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:24:29.392Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:24:29.393Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:24:29.467Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/.config/hypr
+[2026-02-22T17:26:58.680Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:26:58.680Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:26:58.685Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:26:58.693Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:26:58.693Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:26:58.754Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-22T17:28:11.324Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:28:11.324Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:28:11.329Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:28:11.337Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:28:11.337Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:28:11.406Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T17:28:56.683Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:28:56.683Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:28:56.688Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:28:56.705Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:28:56.705Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:28:56.780Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr
+[2026-02-22T17:34:49.296Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:34:49.296Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:34:49.301Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:34:49.311Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:34:49.311Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:34:49.402Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T17:37:39.031Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:37:39.032Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:37:39.036Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:37:39.052Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:37:39.053Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:37:39.291Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T17:38:54.706Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:38:54.706Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:38:54.711Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:38:54.722Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:38:54.723Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:38:54.781Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T17:39:26.443Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:39:26.443Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:39:26.448Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:39:26.461Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:39:26.462Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:39:26.528Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr
+[2026-02-22T17:41:23.488Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:41:23.489Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:41:23.493Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:41:23.500Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:41:23.501Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:41:23.571Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T17:45:28.641Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:45:28.641Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:45:28.645Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:45:28.657Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:45:28.657Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:45:28.740Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr
+[2026-02-22T17:51:16.296Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:51:16.296Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:51:16.301Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:51:16.318Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:51:16.319Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:51:16.381Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr
+[2026-02-22T17:51:42.377Z] [notification] terminal is pyprland scratchpad: opencode_chezmoi (opencode-chezmoi)
+[2026-02-22T17:51:42.377Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T17:51:42.377Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T17:52:42.731Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:52:42.731Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:52:42.736Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:52:42.744Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:52:42.744Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:52:42.832Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T17:55:20.336Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:55:20.336Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:55:20.340Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:55:20.356Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:55:20.356Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:55:20.423Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/.config/hypr
+[2026-02-22T17:59:20.277Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T17:59:20.277Z] [notification] scratchpad project_branch: null
+[2026-02-22T17:59:20.281Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T17:59:20.288Z] [notification] scratchpad hidden → will notify
+[2026-02-22T17:59:20.289Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T17:59:20.368Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/hypr
+[2026-02-22T18:50:50.408Z] [notification] terminal window address: 0x5d51fcd488d0
+[2026-02-22T18:50:50.417Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-22T18:50:50.417Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-22T18:53:09.253Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T18:53:09.253Z] [notification] scratchpad project_branch: null
+[2026-02-22T18:53:09.258Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T18:53:09.266Z] [notification] scratchpad hidden → will notify
+[2026-02-22T18:53:09.266Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T18:53:09.346Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-22T18:54:05.714Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T18:54:05.715Z] [notification] scratchpad project_branch: null
+[2026-02-22T18:54:05.719Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T18:54:05.731Z] [notification] scratchpad hidden → will notify
+[2026-02-22T18:54:05.731Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T18:54:05.832Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-02-22T18:57:38.634Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T18:57:38.635Z] [notification] scratchpad project_branch: null
+[2026-02-22T18:57:38.640Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T18:57:38.661Z] [notification] scratchpad hidden → will notify
+[2026-02-22T18:57:38.661Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T18:57:38.766Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-22T19:00:53.425Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T19:00:53.425Z] [notification] scratchpad project_branch: null
+[2026-02-22T19:00:53.428Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T19:00:53.447Z] [notification] scratchpad hidden → will notify
+[2026-02-22T19:00:53.447Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T19:00:53.556Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/hypr
+[2026-02-22T19:03:13.151Z] [notification] session ses_379a03bafffeulwTFL05qKsHeT: title="socat-based event: notification panel opened localization", dir="/home/froa/.config/hypr"
+[2026-02-22T19:03:13.151Z] [notification] scratchpad project_branch: null
+[2026-02-22T19:03:13.155Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-22T19:03:13.164Z] [notification] scratchpad hidden → will notify
+[2026-02-22T19:03:13.164Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-22T19:03:13.229Z] [notification] spawning watchScript for notifId=17 dir=/home/froa/.config/hypr

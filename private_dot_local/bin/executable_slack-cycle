@@ -1,0 +1,29 @@
+#!/bin/bash
+# Cycle through Slack notifications and focus Slack
+# Each call: invokes current notification (opening the relevant channel) and closes it
+
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+USER="${USER:-$(whoami)}"
+STATE_FILE="/tmp/.slack_unread_$USER"
+SENDERS_FILE="/tmp/.slack_senders_$USER"
+
+count=$("$SCRIPT_DIR/notif-cycle" count slack 2>/dev/null | head -1 | tr -d '[:space:]')
+
+if [[ -z "$count" ]] || [[ "$count" -eq 0 ]]; then
+    hyprctl dispatch focuswindow class:com.slack.Slack 2>/dev/null || \
+        flatpak run com.slack.Slack &
+    exit 0
+fi
+
+pypr hide "*" 2>/dev/null || true
+"$SCRIPT_DIR/notif-cycle" invoke slack
+
+remaining=$((count - 1))
+if [[ $remaining -lt 0 ]]; then
+    remaining=0
+fi
+echo "$remaining" > "$STATE_FILE"
+
+if [[ $remaining -eq 0 ]]; then
+    > "$SENDERS_FILE"
+fi

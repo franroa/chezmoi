@@ -1,0 +1,217 @@
+#!/bin/bash
+# Notification cycling system for swaync
+# Usage: notif-cycle <action> [app_filter]
+# Actions: list, next, invoke, count, clear-state
+# App filter: slack, discord, etc. (matches desktop-entry hint)
+
+ACTION="${1:-list}"
+APP_FILTER="${2:-}"
+STATE_DIR="/tmp/.notif-cycle-$USER"
+mkdir -p "$STATE_DIR"
+
+get_notification_ids() {
+    dbus-send --session --dest=org.freedesktop.Notifications \
+        --type=method_call --print-reply \
+        /org/freedesktop/Notifications \
+        org.freedesktop.Notifications.NotificationIds 2>/dev/null \
+        | grep 'uint32' | awk '{print $2}'
+}
+
+get_notification_json() {
+    local id="$1"
+    dbus-send --session --dest=org.freedesktop.Notifications \
+        --type=method_call --print-reply \
+        /org/freedesktop/Notifications \
+        org.freedesktop.Notifications.GetNotificationJson uint32:"$id" 2>/dev/null \
+        | sed -n 's/.*string "\(.*\)"/\1/p'
+}
+
+invoke_notification_action() {
+    local id="$1"
+    local action="${2:-default}"
+    dbus-send --session --dest=org.freedesktop.Notifications \
+        --type=method_call \
+        /org/freedesktop/Notifications \
+        org.freedesktop.Notifications.EmitActionInvoked uint32:"$id" string:"$action"
+}
+
+close_notification() {
+    local id="$1"
+    dbus-send --session --dest=org.freedesktop.Notifications \
+        --type=method_call \
+        /org/freedesktop/Notifications \
+        org.freedesktop.Notifications.CloseNotification uint32:"$id"
+}
+
+filter_by_app() {
+    local app="$1"
+    local ids
+    ids=$(get_notification_ids)
+    
+    if [[ -z "$app" ]]; then
+        echo "$ids"
+        return
+    fi
+    
+    local filtered=""
+    for id in $ids; do
+        local json
+        json=$(get_notification_json "$id")
+        local desktop_entry
+        desktop_entry=$(echo "$json" | jq -r '.hints["desktop-entry"] // ""' 2>/dev/null)
+        
+        if [[ "$desktop_entry" == *"$app"* ]] || [[ "$desktop_entry" == *"$(echo "$app" | tr '[:upper:]' '[:lower:]')"* ]]; then
+            filtered="$filtered $id"
+        fi
+    done
+    echo "$filtered" | tr -s ' ' '\n' | grep -v '^$'
+}
+
+get_state_file() {
+    local app="${1:-all}"
+    echo "$STATE_DIR/$app.index"
+}
+
+get_current_index() {
+    local app="${1:-all}"
+    local state_file
+    state_file=$(get_state_file "$app")
+    if [[ -f "$state_file" ]]; then
+        cat "$state_file"
+    else
+        echo "-1"
+    fi
+}
+
+set_current_index() {
+    local app="${1:-all}"
+    local index="$2"
+    local state_file
+    state_file=$(get_state_file "$app")
+    echo "$index" > "$state_file"
+}
+
+list_notifications() {
+    local app="$APP_FILTER"
+    local ids
+    ids=$(filter_by_app "$app")
+    
+    if [[ -z "$ids" ]]; then
+        echo "No notifications${app:+ for $app}"
+        return 1
+    fi
+    
+    local i=0
+    for id in $ids; do
+        local json
+        json=$(get_notification_json "$id")
+        local summary body app_name
+        summary=$(echo "$json" | jq -r '.summary // ""' 2>/dev/null)
+        body=$(echo "$json" | jq -r '.body // ""' 2>/dev/null)
+        app_name=$(echo "$json" | jq -r '.hints["desktop-entry"] // .app_name // ""' 2>/dev/null)
+        echo "[$i] ID:$id ($app_name) $summary: $body"
+        ((i++))
+    done
+}
+
+count_notifications() {
+    local app="$APP_FILTER"
+    local ids
+    ids=$(filter_by_app "$app")
+    echo "$ids" | grep -c '[0-9]' || echo "0"
+}
+
+cycle_next() {
+    local app="$APP_FILTER"
+    local app_key="${app:-all}"
+    local ids
+    mapfile -t id_array < <(filter_by_app "$app")
+    
+    local count=${#id_array[@]}
+    if [[ $count -eq 0 ]]; then
+        echo "No notifications${app:+ for $app}"
+        return 1
+    fi
+    
+    local current_index
+    current_index=$(get_current_index "$app_key")
+    local next_index=$(( (current_index + 1) % count ))
+    
+    set_current_index "$app_key" "$next_index"
+    
+    local id="${id_array[$next_index]}"
+    local json
+    json=$(get_notification_json "$id")
+    local summary body
+    summary=$(echo "$json" | jq -r '.summary // ""' 2>/dev/null)
+    body=$(echo "$json" | jq -r '.body // ""' 2>/dev/null)
+    
+    echo "id=$id"
+    echo "index=$next_index"
+    echo "total=$count"
+    echo "summary=$summary"
+    echo "body=$body"
+}
+
+invoke_current() {
+    local app="$APP_FILTER"
+    local app_key="${app:-all}"
+    mapfile -t id_array < <(filter_by_app "$app")
+    
+    local count=${#id_array[@]}
+    if [[ $count -eq 0 ]]; then
+        echo "No notifications${app:+ for $app}"
+        return 1
+    fi
+    
+    local current_index
+    current_index=$(get_current_index "$app_key")
+    if [[ $current_index -lt 0 ]]; then
+        current_index=0
+    fi
+    
+    local id="${id_array[$current_index]}"
+    pypr hide "*" 2>/dev/null || true
+    invoke_notification_action "$id" "default"
+    close_notification "$id"
+    
+    set_current_index "$app_key" "-1"
+    
+    echo "Invoked and closed notification $id"
+}
+
+clear_state() {
+    local app="$APP_FILTER"
+    local app_key="${app:-all}"
+    local state_file
+    state_file=$(get_state_file "$app_key")
+    rm -f "$state_file"
+    echo "Cleared state for $app_key"
+}
+
+case "$ACTION" in
+    list)
+        list_notifications
+        ;;
+    count)
+        count_notifications
+        ;;
+    next)
+        cycle_next
+        ;;
+    invoke)
+        invoke_current
+        ;;
+    clear-state)
+        clear_state
+        ;;
+    ids)
+        filter_by_app "$APP_FILTER"
+        ;;
+    *)
+        echo "Usage: notif-cycle <action> [app_filter]"
+        echo "Actions: list, next, invoke, count, clear-state, ids"
+        echo "Example: notif-cycle next slack"
+        exit 1
+        ;;
+esac

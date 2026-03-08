@@ -1,0 +1,55 @@
+/* MACOS LAUNCHPAD LIKE THEME FOR WOFI */
+/* Based on rofi theme by Newman Sanchez (https://github.com/newmanls) */
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-size: 9pt;
+}
+
+window {
+    background-color: rgba(36, 36, 36, 0.5);
+}
+
+#outer-box {
+    padding: 1em;
+}
+
+#input {
+    background-color: rgba(245, 245, 245, 0.125);
+    color: #f5f5f5;
+    border: 1px solid rgba(245, 245, 245, 0.25);
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 calc(50% - 120px);
+}
+
+#input:focus {
+    border-color: rgba(245, 245, 245, 0.25);
+}
+
+#scroll {
+    margin: 48px calc(50% - 560px);
+}
+
+#inner-box {
+}
+
+#entry {
+    padding: 8px;
+    margin: 24px;
+    border-radius: 16px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: rgba(8, 96, 242, 0.9);
+}
+
+#img {
+    margin-bottom: 4px;
+}
+
+#text {
+    color: #f5f5f5;
+    text-align: center;
+}

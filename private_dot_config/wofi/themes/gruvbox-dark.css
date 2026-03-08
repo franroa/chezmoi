@@ -1,0 +1,61 @@
+/* Gruvbox Dark Theme - Converted from rofi-themes */
+* {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #282828;
+    border: 2px solid #d79921;
+    border-radius: 8px;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+#input {
+    background-color: #3c3836;
+    color: #ebdbb2;
+    border: 1px solid #504945;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#input:focus {
+    border-color: #d79921;
+}
+
+#scroll {
+    margin: 5px 0;
+}
+
+#entry {
+    padding: 10px 15px;
+    margin: 3px 0;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #d79921;
+}
+
+#entry:hover {
+    background-color: #3c3836;
+}
+
+#text {
+    color: #ebdbb2;
+}
+
+#text:selected {
+    color: #282828;
+    font-weight: 500;
+}
+
+image {
+    margin-right: 10px;
+}

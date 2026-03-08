@@ -304,6 +304,9 @@ menu:
       - key: "s"
         desc: "󰒱 Open Latest Slack"
         cmd: ~/.config/hypr/scripts/invoke-notification.sh
+      - key: "O"
+        desc: "󰈄 OpenCode"
+        cmd: ~/.config/hypr/scripts/goto-latest-opencode-notification.sh
       - key: "o"
         desc: "󰂞 Open Latest"
         cmd: ~/.config/hypr/scripts/invoke-notification.sh

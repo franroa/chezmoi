@@ -1,0 +1,14 @@
+#!/bin/bash
+# Watch for D-Bus ActionInvoked signals on the notification bus and hide all
+# pyprland scratchpads whenever a notification action is invoked (e.g. clicking
+# an action button on a notification popup in hyprpanel).
+#
+# Run as a systemd user service:
+#   systemctl --user enable --now notif-action-hide-scratchpads.service
+
+exec dbus-monitor --session \
+    "type='signal',interface='org.freedesktop.Notifications',member='ActionInvoked'" \
+    2>/dev/null \
+| while IFS= read -r _line; do
+    pypr hide "*" 2>/dev/null || true
+done

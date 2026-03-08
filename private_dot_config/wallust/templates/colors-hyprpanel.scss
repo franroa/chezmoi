@@ -28,10 +28,23 @@
 );
 
 @include styleModule(
+    'cmodule-copilot',
+    (
+        'text-color': {{foreground}},
+        'icon-color': {{color4}},
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.1em
+    )
+);
+
+@include styleModule(
     'cmodule-gitlab',
     (
         'text-color': {{foreground}},
-        'icon-color': {{color6}},
+        'icon-color': {{color4}},
         'icon-background': transparent,
         'label-background': transparent,
         'inner-spacing': 0.3em,
@@ -44,7 +57,7 @@
     'cmodule-jira',
     (
         'text-color': {{foreground}},
-        'icon-color': {{color1}},
+        'icon-color': {{color4}},
         'icon-background': transparent,
         'label-background': transparent,
         'inner-spacing': 0.3em,

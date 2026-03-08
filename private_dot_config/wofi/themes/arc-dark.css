@@ -1,0 +1,53 @@
+/* Arc Dark Theme - Converted from rofi-themes */
+* {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #383c4a;
+    border: 2px solid #5294e2;
+    border-radius: 8px;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+#input {
+    background-color: #404552;
+    color: #d3dae3;
+    border: 1px solid #5294e2;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#scroll {
+    margin: 5px 0;
+}
+
+#entry {
+    padding: 10px 15px;
+    margin: 3px 0;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #5294e2;
+}
+
+#text {
+    color: #d3dae3;
+}
+
+#text:selected {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+image {
+    margin-right: 10px;
+}

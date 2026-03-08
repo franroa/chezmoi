@@ -1,0 +1,13 @@
+[Unit]
+Description=Hide pyprland scratchpads on notification action invoked
+After=graphical-session.target pypr.service
+Requires=pypr.service
+
+[Service]
+Type=simple
+ExecStart=/home/froa/.local/bin/notif-action-hide-scratchpads
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

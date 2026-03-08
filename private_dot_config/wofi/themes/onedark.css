@@ -1,0 +1,61 @@
+/* OneDark Theme - Converted from rofi-themes */
+* {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #282c34;
+    border: 2px solid #61afef;
+    border-radius: 10px;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+#input {
+    background-color: #3e4451;
+    color: #abb2bf;
+    border: 1px solid #4b5263;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#input:focus {
+    border-color: #61afef;
+}
+
+#scroll {
+    margin: 5px 0;
+}
+
+#entry {
+    padding: 10px 15px;
+    margin: 3px 0;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #61afef;
+}
+
+#entry:hover {
+    background-color: #3e4451;
+}
+
+#text {
+    color: #abb2bf;
+}
+
+#text:selected {
+    color: #282c34;
+    font-weight: 500;
+}
+
+image {
+    margin-right: 10px;
+}

@@ -1,4 +1,10 @@
 {
+  "dbus": {
+    "shortcuts": {
+      "enabled": true,
+      "screenshot": "/home/froa/.config/hyprpanel/scripts/screenshot-menu.sh"
+    }
+  },
   "bar.battery.warnAt": 20,
   "bar.battery.warnColor": "#ff0000",
   "bar.customModules.storage.paths": [
@@ -23,6 +29,7 @@
         "custom/temp",
         "custom/pomodoro",
         "custom/slack",
+        "custom/copilot",
         "custom/gitlab",
         "custom/jira",
         "volume",

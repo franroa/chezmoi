@@ -1,0 +1,61 @@
+/* Rose Pine Theme - Converted from rofi-themes */
+* {
+    font-family: "SF Pro Display", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: #191724;
+    border: 2px solid #ebbcba;
+    border-radius: 12px;
+}
+
+#outer-box {
+    margin: 10px;
+    padding: 10px;
+}
+
+#input {
+    background-color: #1f1d2e;
+    color: #e0def4;
+    border: 1px solid #26233a;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+}
+
+#input:focus {
+    border-color: #ebbcba;
+}
+
+#scroll {
+    margin: 5px 0;
+}
+
+#entry {
+    padding: 10px 15px;
+    margin: 3px 0;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+#entry:selected {
+    background-color: #ebbcba;
+}
+
+#entry:hover {
+    background-color: #1f1d2e;
+}
+
+#text {
+    color: #e0def4;
+}
+
+#text:selected {
+    color: #191724;
+    font-weight: 500;
+}
+
+image {
+    margin-right: 10px;
+}

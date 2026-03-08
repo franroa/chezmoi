@@ -1,0 +1,61 @@
+/* Wofi Alt+Tab Switcher Style - Grid Layout */
+
+window {
+    background-color: rgba(20, 20, 30, 0.95);
+    border-radius: 16px;
+    border: 2px solid rgba(80, 80, 100, 0.6);
+}
+
+#outer-box {
+    margin: 20px;
+}
+
+#input {
+    opacity: 0;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+#scroll {
+    margin: 10px;
+}
+
+#inner-box {
+    margin: 10px;
+}
+
+#entry {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: rgba(40, 40, 50, 0.6);
+    border: 2px solid rgba(60, 60, 80, 0.4);
+}
+
+/* Highlight selected entry using wofi's native selection */
+#entry:selected {
+    background-color: rgba(40, 70, 120, 0.85);
+    border: 3px solid rgba(80, 180, 255, 0.95);
+}
+
+#entry:selected image {
+    border: 2px solid rgba(100, 180, 255, 0.9);
+}
+
+image {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px;
+    border: 2px solid rgba(60, 60, 80, 0.6);
+}
+
+#text {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    color: rgba(200, 200, 220, 0.9);
+}

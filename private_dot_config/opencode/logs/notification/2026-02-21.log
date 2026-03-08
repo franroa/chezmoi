@@ -1,0 +1,1271 @@
+[2026-02-21T07:39:47.639Z] [notification] terminal window address: 0x5b2595ab05b0
+[2026-02-21T07:39:47.648Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T07:39:47.649Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T07:40:18.511Z] [notification] suppressing duplicate session.idle for ses_380dbfd7effeO2sZB3JiFPJis3 (9ms since last)
+[2026-02-21T07:40:18.513Z] [notification] session ses_380dbfd7effeO2sZB3JiFPJis3: title="New session - 2026-02-21T07:39:52.321Z", dir="/home/froa/.config/opencode"
+[2026-02-21T07:40:18.513Z] [notification] scratchpad project_branch: null
+[2026-02-21T07:40:18.518Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:40:18.537Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:40:18.537Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:40:18.626Z] [notification] tracking notifId=3 for counter
+[2026-02-21T07:40:18.626Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/.config/opencode
+[2026-02-21T07:40:40.988Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T07:40:41.179Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T07:40:41.179Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T07:40:41.179Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T07:40:58.018Z] [notification] suppressing duplicate session.idle for ses_380db3319ffeI6m1GyfgnnFGEE (9ms since last)
+[2026-02-21T07:40:58.019Z] [notification] session ses_380db3319ffeI6m1GyfgnnFGEE: title="New session - 2026-02-21T07:40:44.135Z", dir="/home/froa/.config/opencode"
+[2026-02-21T07:40:58.019Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:40:58.024Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:40:58.036Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T07:40:58.037Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T07:43:11.952Z] [notification] suppressing duplicate session.idle for ses_380db3319ffeI6m1GyfgnnFGEE (10ms since last)
+[2026-02-21T07:43:11.954Z] [notification] session ses_380db3319ffeI6m1GyfgnnFGEE: title="New session - 2026-02-21T07:40:44.135Z", dir="/home/froa/.config/opencode"
+[2026-02-21T07:43:11.962Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:43:11.966Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:43:11.976Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:43:11.976Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:43:11.976Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:43:12.070Z] [notification] tracking notifId=6 for counter
+[2026-02-21T07:43:12.074Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:43:12.074Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/opencode
+[2026-02-21T07:45:35.834Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T07:45:35.984Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T07:45:35.984Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T07:45:35.984Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T07:46:41.959Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T07:46:42.297Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:46:42.298Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:46:42.301Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T07:46:42.301Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T07:47:15.408Z] [notification] aoe session detected: "aoe_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T07:47:15.461Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T07:47:15.461Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T07:47:15.461Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T07:47:23.424Z] [notification] session ses_380d52640ffevA70Dpao7IdTFg: title="Quick check-in: test conversation title", dir="/home/froa/Projects/ts/platform-core"
+[2026-02-21T07:47:23.433Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-21T07:47:23.438Z] [notification] session project_branch: platform-core_feature-add_backup, dir: /home/froa/Projects/ts/platform-core
+[2026-02-21T07:47:23.448Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:47:23.448Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:47:23.448Z] [notification] tracked latest notification: platform-core_feature-add_backup (/home/froa/Projects/ts/platform-core)
+[2026-02-21T07:47:23.528Z] [notification] tracking notifId=4 for counter
+[2026-02-21T07:47:23.534Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=platform-core_feature-add_backup
+[2026-02-21T07:47:23.534Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/Projects/ts/platform-core
+[2026-02-21T07:47:23.546Z] [notification] suppressing duplicate session.idle for ses_380d52640ffevA70Dpao7IdTFg (125ms since last)
+[2026-02-21T07:48:41.839Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T07:48:42.085Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:48:42.086Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:48:42.105Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:48:42.105Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:48:42.106Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:48:42.172Z] [notification] tracking notifId=5 for counter
+[2026-02-21T07:48:42.177Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:48:42.177Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/opencode
+[2026-02-21T07:50:40.185Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T07:50:40.429Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:50:40.430Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:50:40.433Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T07:50:40.433Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T07:51:07.146Z] [notification] session ses_380d52640ffevA70Dpao7IdTFg: title="Quick check-in: test conversation title", dir="/home/froa/Projects/ts/platform-core"
+[2026-02-21T07:51:07.157Z] [notification] scratchpad project_branch: platform-core_feature-add_backup
+[2026-02-21T07:51:07.162Z] [notification] session project_branch: platform-core_feature-add_backup, dir: /home/froa/Projects/ts/platform-core
+[2026-02-21T07:51:07.177Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:51:07.177Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:51:07.178Z] [notification] tracked latest notification: platform-core_feature-add_backup (/home/froa/Projects/ts/platform-core)
+[2026-02-21T07:51:07.271Z] [notification] tracking notifId=6 for counter
+[2026-02-21T07:51:07.276Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=platform-core_feature-add_backup
+[2026-02-21T07:51:07.276Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/Projects/ts/platform-core
+[2026-02-21T07:51:07.288Z] [notification] suppressing duplicate session.idle for ses_380d52640ffevA70Dpao7IdTFg (147ms since last)
+[2026-02-21T07:52:04.417Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T07:52:04.793Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:52:04.796Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:52:04.812Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T07:52:04.813Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T07:52:42.355Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T07:52:42.600Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T07:52:42.601Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T07:52:42.601Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T07:52:48.250Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (9ms since last)
+[2026-02-21T07:52:48.252Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="New session - 2026-02-21T07:52:45.154Z", dir="/home/froa/.config/opencode"
+[2026-02-21T07:52:48.252Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:52:48.257Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:52:48.266Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:52:48.266Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:52:48.266Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:52:48.353Z] [notification] tracking notifId=5 for counter
+[2026-02-21T07:52:48.357Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:52:48.357Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/opencode
+[2026-02-21T07:53:00.364Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (8ms since last)
+[2026-02-21T07:53:00.365Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="Testing topic request", dir="/home/froa/.config/opencode"
+[2026-02-21T07:53:00.366Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:53:00.370Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:53:00.382Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:53:00.382Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:53:00.382Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:53:00.499Z] [notification] tracking notifId=6 for counter
+[2026-02-21T07:53:00.504Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:53:00.504Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/opencode
+[2026-02-21T07:53:07.308Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (17ms since last)
+[2026-02-21T07:53:07.311Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="Testing topic request", dir="/home/froa/.config/opencode"
+[2026-02-21T07:53:07.312Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:53:07.316Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:53:07.331Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:53:07.331Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:53:07.331Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:53:07.447Z] [notification] tracking notifId=7 for counter
+[2026-02-21T07:53:07.451Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:53:07.451Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/opencode
+[2026-02-21T07:53:25.347Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (8ms since last)
+[2026-02-21T07:53:25.349Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="Testing topic request", dir="/home/froa/.config/opencode"
+[2026-02-21T07:53:25.349Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:53:25.354Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:53:25.373Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T07:53:25.373Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T07:53:29.404Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (8ms since last)
+[2026-02-21T07:53:29.406Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="Testing topic request", dir="/home/froa/.config/opencode"
+[2026-02-21T07:53:29.407Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:53:29.411Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:53:29.418Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:53:29.418Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:53:29.419Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:53:29.545Z] [notification] tracking notifId=8 for counter
+[2026-02-21T07:53:29.549Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:53:29.549Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/opencode
+[2026-02-21T07:53:42.212Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (7ms since last)
+[2026-02-21T07:53:42.213Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="Testing topic request", dir="/home/froa/.config/opencode"
+[2026-02-21T07:53:42.213Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:53:42.218Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:53:42.229Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T07:53:42.229Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T07:53:45.704Z] [notification] suppressing duplicate session.idle for ses_380d0329dffezvbnDNlnhhk9mR (7ms since last)
+[2026-02-21T07:53:45.705Z] [notification] session ses_380d0329dffezvbnDNlnhhk9mR: title="Testing topic request", dir="/home/froa/.config/opencode"
+[2026-02-21T07:53:45.706Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T07:53:45.710Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T07:53:45.723Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T07:53:45.723Z] [notification] scratchpad hidden → will notify
+[2026-02-21T07:53:45.723Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T07:53:45.852Z] [notification] tracking notifId=9 for counter
+[2026-02-21T07:53:45.857Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T07:53:45.857Z] [notification] spawning watchScript for notifId=9 dir=/home/froa/.config/opencode
+[2026-02-21T08:02:00.093Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T08:02:00.346Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:02:00.347Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:02:00.349Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:02:00.349Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T08:02:23.577Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T08:02:23.768Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T08:02:23.769Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T08:02:23.769Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T08:02:38.991Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T08:02:39.174Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T08:02:39.174Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T08:02:39.174Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T08:02:50.763Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T08:02:50.923Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T08:02:50.923Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T08:02:50.923Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T08:03:05.879Z] [notification] aoe session detected: "aoe_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T08:03:06.105Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T08:03:06.106Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T08:03:06.106Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T08:06:19.248Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T08:06:19.960Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:06:19.961Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:06:19.964Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:06:19.964Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:06:19.994Z] [notification] tracking notifId=11 for counter
+[2026-02-21T08:06:19.997Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:06:19.998Z] [notification] spawning watchScript for notifId=11 dir=/home/froa/.config/opencode
+[2026-02-21T08:06:24.817Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T08:06:25.022Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T08:06:25.022Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T08:06:25.022Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T08:06:32.070Z] [notification] suppressing duplicate session.idle for ses_380c39d56ffef3p5TBSNa4Dlou (10ms since last)
+[2026-02-21T08:06:32.072Z] [notification] session ses_380c39d56ffef3p5TBSNa4Dlou: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T08:06:32.072Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:06:32.077Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:06:32.089Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T08:06:32.090Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:06:32.090Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:06:32.138Z] [notification] tracking notifId=12 for counter
+[2026-02-21T08:06:32.139Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:06:32.139Z] [notification] spawning watchScript for notifId=12 dir=/home/froa/.config/opencode
+[2026-02-21T08:06:43.217Z] [notification] suppressing duplicate session.idle for ses_380c39d56ffef3p5TBSNa4Dlou (8ms since last)
+[2026-02-21T08:06:43.219Z] [notification] session ses_380c39d56ffef3p5TBSNa4Dlou: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T08:06:43.232Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:06:43.236Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:06:43.244Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T08:06:43.244Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:06:43.245Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:06:43.342Z] [notification] tracking notifId=13 for counter
+[2026-02-21T08:06:43.347Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:06:43.347Z] [notification] spawning watchScript for notifId=13 dir=/home/froa/.config/opencode
+[2026-02-21T08:08:03.193Z] [notification] suppressing duplicate session.idle for ses_380c39d56ffef3p5TBSNa4Dlou (10ms since last)
+[2026-02-21T08:08:03.196Z] [notification] session ses_380c39d56ffef3p5TBSNa4Dlou: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T08:08:03.196Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:08:03.201Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:08:03.219Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:08:03.220Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T08:11:53.525Z] [notification] session ses_380c39d56ffef3p5TBSNa4Dlou: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T08:11:53.528Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:11:53.532Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:11:53.548Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:11:53.548Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T08:11:55.517Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T08:11:55.795Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:11:55.797Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:11:55.800Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:11:55.800Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T08:13:43.747Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T08:13:44.268Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:13:44.270Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:13:44.272Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:13:44.272Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T08:14:02.504Z] [notification] suppressing duplicate session.idle for ses_380bcbeb7ffeMlogQ2T2WbjXkd (6ms since last)
+[2026-02-21T08:14:02.505Z] [notification] session ses_380bcbeb7ffeMlogQ2T2WbjXkd: title="Test prompt thread", dir="/home/froa/.config/opencode"
+[2026-02-21T08:14:02.506Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:14:02.510Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:14:02.525Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T08:14:02.525Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:14:02.525Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:14:02.611Z] [notification] tracking notifId=14 for counter
+[2026-02-21T08:14:02.615Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:14:02.615Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/.config/opencode
+[2026-02-21T08:18:16.684Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T08:18:16.950Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:18:16.951Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:18:16.953Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:18:16.953Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T08:18:37.955Z] [notification] suppressing duplicate session.idle for ses_380bcbeb7ffeMlogQ2T2WbjXkd (6ms since last)
+[2026-02-21T08:18:37.957Z] [notification] session ses_380bcbeb7ffeMlogQ2T2WbjXkd: title="Test prompt thread", dir="/home/froa/.config/opencode"
+[2026-02-21T08:18:37.957Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:18:37.962Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:18:37.975Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T08:18:37.975Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:18:37.975Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:18:38.077Z] [notification] tracking notifId=18 for counter
+[2026-02-21T08:18:38.082Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:18:38.082Z] [notification] spawning watchScript for notifId=18 dir=/home/froa/.config/opencode
+[2026-02-21T08:18:47.170Z] [notification] suppressing duplicate session.idle for ses_380bcbeb7ffeMlogQ2T2WbjXkd (6ms since last)
+[2026-02-21T08:18:47.171Z] [notification] session ses_380bcbeb7ffeMlogQ2T2WbjXkd: title="Test prompt thread", dir="/home/froa/.config/opencode"
+[2026-02-21T08:18:47.172Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:18:47.176Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:18:47.185Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T08:18:47.185Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:18:47.185Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:18:47.290Z] [notification] tracking notifId=19 for counter
+[2026-02-21T08:18:47.295Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:18:47.295Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/.config/opencode
+[2026-02-21T08:18:53.151Z] [notification] suppressing duplicate session.idle for ses_380bcbeb7ffeMlogQ2T2WbjXkd (6ms since last)
+[2026-02-21T08:18:53.153Z] [notification] session ses_380bcbeb7ffeMlogQ2T2WbjXkd: title="Test prompt thread", dir="/home/froa/.config/opencode"
+[2026-02-21T08:18:53.153Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:18:53.157Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:18:53.165Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T08:18:53.165Z] [notification] scratchpad hidden → will notify
+[2026-02-21T08:18:53.165Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T08:18:53.277Z] [notification] tracking notifId=20 for counter
+[2026-02-21T08:18:53.282Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T08:18:53.282Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/.config/opencode
+[2026-02-21T08:29:27.473Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T08:29:27.994Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T08:29:27.996Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T08:29:28.009Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T08:29:28.009Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T12:12:33.209Z] [notification] aoe session detected: "aoe_azure_backup_main_fcb7938a" → using aoe-cwd scratchpad directly
+[2026-02-21T12:12:33.290Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T12:12:33.290Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T12:12:33.290Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T12:12:41.382Z] [notification] suppressing duplicate session.idle for ses_37fe24775ffeqoM1ShYn52Y6U4 (9ms since last)
+[2026-02-21T12:12:41.383Z] [notification] session ses_37fe24775ffeqoM1ShYn52Y6U4: title="Test conversation setup", dir="/home/froa/.config/opencode"
+[2026-02-21T12:12:41.383Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:12:41.388Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:12:41.395Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T12:12:41.396Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:12:41.396Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:12:41.510Z] [notification] Error storing letter mapping: TypeError: Bun.appendFile is not a function. (In 'Bun.appendFile("/tmp/.opencode_letter_map", mapping + `
+`)', 'Bun.appendFile' is undefined)
+[2026-02-21T12:12:41.526Z] [notification] tracking notifId=8 for counter
+[2026-02-21T12:12:41.531Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:17:17.736Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T12:17:18.000Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:17:18.002Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:17:18.004Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T12:17:18.004Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T12:18:06.529Z] [notification] aoe session detected: "aoe_azure_backup_initial_633a9bf4" → using aoe-cwd scratchpad directly
+[2026-02-21T12:18:06.731Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T12:18:06.731Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T12:18:06.731Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T12:18:12.752Z] [notification] session ses_37fdd348bffe3G3IVBqY8HET7K: title="Quick check-in: test conversation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T12:18:12.761Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T12:18:12.766Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T12:18:12.773Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T12:18:12.773Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:18:12.773Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T12:18:12.789Z] [notification] suppressing duplicate session.idle for ses_37fdd348bffe3G3IVBqY8HET7K (41ms since last)
+[2026-02-21T12:18:12.873Z] [notification] stored letter mapping: b:10|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T12:18:12.890Z] [notification] tracking notifId=10 for counter
+[2026-02-21T12:18:12.895Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=azure_backup_initial_commit
+[2026-02-21T12:21:30.444Z] [notification] aoe session detected: "aoe_azure_backup_initial_633a9bf4" → using aoe-cwd scratchpad directly
+[2026-02-21T12:21:30.594Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T12:21:30.594Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T12:21:30.594Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T12:21:38.581Z] [notification] session ses_37fdd348bffe3G3IVBqY8HET7K: title="Quick check-in: test conversation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T12:21:38.582Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T12:21:38.587Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T12:21:38.607Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T12:21:38.608Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:21:38.608Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T12:21:38.689Z] [notification] stored letter mapping: b:11|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T12:21:38.707Z] [notification] tracking notifId=11 for counter
+[2026-02-21T12:21:38.713Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=azure_backup_initial_commit
+[2026-02-21T12:21:38.728Z] [notification] suppressing duplicate session.idle for ses_37fdd348bffe3G3IVBqY8HET7K (152ms since last)
+[2026-02-21T12:22:38.171Z] [notification] session ses_38310e36effeZjpMAKYvPLebHz: title="Greeting check-in", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T12:22:38.173Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T12:22:38.185Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T12:22:38.198Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T12:22:38.198Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:22:38.198Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T12:22:38.208Z] [notification] suppressing duplicate session.idle for ses_38310e36effeZjpMAKYvPLebHz (40ms since last)
+[2026-02-21T12:22:38.301Z] [notification] stored letter mapping: b:12|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T12:22:38.320Z] [notification] tracking notifId=12 for counter
+[2026-02-21T12:22:38.325Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=azure_backup_initial_commit
+[2026-02-21T12:31:19.709Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T12:31:20.145Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:31:20.147Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:31:20.151Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T12:31:20.151Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T12:32:59.443Z] [notification] suppressing duplicate session.idle for ses_388412603ffe4mr05M8lpZO7AD (71ms since last)
+[2026-02-21T12:32:59.445Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T12:32:59.861Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:32:59.862Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:32:59.864Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T12:32:59.864Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T12:33:14.244Z] [notification] aoe session detected: "aoe_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T12:33:14.424Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T12:33:14.424Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T12:33:14.424Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T12:34:07.917Z] [notification] aoe session detected: "aoe_test_9c04aff3" → using aoe-cwd scratchpad directly
+[2026-02-21T12:34:08.112Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T12:34:08.112Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T12:34:08.112Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T12:38:12.855Z] [notification] aoe session detected: "aoe_term_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T12:38:13.049Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T12:38:13.049Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T12:38:13.050Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T12:38:20.277Z] [notification] suppressing duplicate session.idle for ses_37fcaccebffeGtG94dEr4Utnr7 (10ms since last)
+[2026-02-21T12:38:20.278Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:38:20.279Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:38:20.283Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:38:20.300Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:38:20.300Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:38:20.398Z] [notification] stored letter mapping: b:13|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:38:20.413Z] [notification] tracking notifId=13 for counter
+[2026-02-21T12:38:20.417Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:38:34.421Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:38:34.424Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:38:34.428Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:38:34.445Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:38:34.445Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:38:34.522Z] [notification] stored letter mapping: c:14|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:38:34.537Z] [notification] tracking notifId=14 for counter
+[2026-02-21T12:38:34.542Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:39:02.275Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:39:02.275Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:39:02.280Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:39:02.292Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:39:02.292Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:39:02.373Z] [notification] stored letter mapping: d:15|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:39:02.392Z] [notification] tracking notifId=15 for counter
+[2026-02-21T12:39:02.396Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:39:48.185Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:39:48.186Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:39:48.190Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:39:48.198Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:39:48.199Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:39:48.291Z] [notification] stored letter mapping: e:16|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:39:48.308Z] [notification] tracking notifId=16 for counter
+[2026-02-21T12:39:48.313Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:40:13.778Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:40:13.779Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:40:13.784Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:40:13.789Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:40:13.790Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:40:13.891Z] [notification] stored letter mapping: f:17|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:40:13.909Z] [notification] tracking notifId=17 for counter
+[2026-02-21T12:40:13.914Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:41:26.264Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:41:26.264Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:41:26.269Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:41:26.286Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:41:26.286Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:41:26.386Z] [notification] stored letter mapping: g:18|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:41:26.402Z] [notification] tracking notifId=18 for counter
+[2026-02-21T12:41:26.407Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:44:35.962Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:44:35.962Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:44:35.967Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:44:35.974Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:44:35.974Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:44:36.095Z] [notification] stored letter mapping: h:19|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:44:36.112Z] [notification] tracking notifId=19 for counter
+[2026-02-21T12:44:36.117Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T12:53:30.350Z] [notification] session ses_37fcaccebffeGtG94dEr4Utnr7: title="Terminal access issue and aoe command error", dir="/home/froa/.config/opencode"
+[2026-02-21T12:53:30.351Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T12:53:30.355Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T12:53:30.366Z] [notification] scratchpad hidden → will notify
+[2026-02-21T12:53:30.366Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T12:53:30.477Z] [notification] stored letter mapping: i:22|/home/froa/.config/opencode|opencode_main
+[2026-02-21T12:53:30.485Z] [notification] tracking notifId=22 for counter
+[2026-02-21T12:53:30.488Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:47:16.403Z] [notification] aoe session detected: "aoe_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T14:47:16.600Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:47:16.600Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:47:16.600Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:47:25.592Z] [notification] aoe session detected: "aoe_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T14:47:25.774Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:47:25.774Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:47:25.774Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:47:27.613Z] [notification] session ses_37f5488c5ffe5A5SP834FtrAiM: title="New session - 2026-02-21T14:47:26.778Z", dir="/home/froa/Projects/ts/platform-core"
+[2026-02-21T14:47:27.614Z] [notification] scratchpad project_branch: null
+[2026-02-21T14:47:27.615Z] [notification] session project_branch: platform-core_feature-add_backup, dir: /home/froa/Projects/ts/platform-core
+[2026-02-21T14:47:27.627Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:47:27.627Z] [notification] tracked latest notification: platform-core_feature-add_backup (/home/froa/Projects/ts/platform-core)
+[2026-02-21T14:47:27.673Z] [notification] stored letter mapping: a:11|/home/froa/Projects/ts/platform-core|platform-core_feature-add_backup
+[2026-02-21T14:47:27.678Z] [notification] tracking notifId=11 for counter
+[2026-02-21T14:47:27.679Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=platform-core_feature-add_backup
+[2026-02-21T14:47:29.832Z] [notification] suppressing duplicate session.idle for ses_37f5488c5ffe5A5SP834FtrAiM (10ms since last)
+[2026-02-21T14:47:29.833Z] [notification] session ses_37f5488c5ffe5A5SP834FtrAiM: title="Testing this conversation setup", dir="/home/froa/Projects/ts/platform-core"
+[2026-02-21T14:47:29.833Z] [notification] scratchpad project_branch: null
+[2026-02-21T14:47:29.838Z] [notification] session project_branch: platform-core_feature-add_backup, dir: /home/froa/Projects/ts/platform-core
+[2026-02-21T14:47:29.861Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:47:29.861Z] [notification] tracked latest notification: platform-core_feature-add_backup (/home/froa/Projects/ts/platform-core)
+[2026-02-21T14:47:29.993Z] [notification] stored letter mapping: b:12|/home/froa/Projects/ts/platform-core|platform-core_feature-add_backup
+[2026-02-21T14:47:30.008Z] [notification] tracking notifId=12 for counter
+[2026-02-21T14:47:30.012Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=platform-core_feature-add_backup
+[2026-02-21T14:47:33.376Z] [notification] aoe session detected: "aoe_platform-core_featur_42661821" → using aoe-cwd scratchpad directly
+[2026-02-21T14:47:33.537Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:47:33.538Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:47:33.538Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:49:04.169Z] [notification] aoe session detected: "aoe_test_9c04aff3" → using aoe-cwd scratchpad directly
+[2026-02-21T14:49:04.317Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:49:04.317Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:49:04.318Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:49:24.043Z] [notification] suppressing duplicate session.idle for ses_37f52c817ffeoc8QTvOSf35s15 (10ms since last)
+[2026-02-21T14:49:24.045Z] [notification] session ses_37f52c817ffeoc8QTvOSf35s15: title="AOE sessions removal request", dir="/home/froa/.config/opencode"
+[2026-02-21T14:49:24.045Z] [notification] scratchpad project_branch: null
+[2026-02-21T14:49:24.050Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:49:24.059Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:49:24.059Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:49:24.212Z] [notification] stored letter mapping: c:13|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:49:24.229Z] [notification] tracking notifId=13 for counter
+[2026-02-21T14:49:24.233Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:49:47.173Z] [notification] session ses_37f52c817ffeoc8QTvOSf35s15: title="AOE sessions removal request", dir="/home/froa/.config/opencode"
+[2026-02-21T14:49:47.173Z] [notification] scratchpad project_branch: null
+[2026-02-21T14:49:47.178Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:49:47.190Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:49:47.190Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:49:47.331Z] [notification] stored letter mapping: d:14|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:49:47.348Z] [notification] tracking notifId=14 for counter
+[2026-02-21T14:49:47.353Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:50:29.886Z] [notification] session ses_37f52c817ffeoc8QTvOSf35s15: title="AOE sessions removal request", dir="/home/froa/.config/opencode"
+[2026-02-21T14:50:29.886Z] [notification] scratchpad project_branch: null
+[2026-02-21T14:50:29.890Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:50:29.911Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:50:29.911Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:50:30.063Z] [notification] stored letter mapping: e:15|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:50:30.080Z] [notification] tracking notifId=15 for counter
+[2026-02-21T14:50:30.084Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:51:48.832Z] [notification] suppressing duplicate session.idle for ses_37f52c817ffeoc8QTvOSf35s15 (18ms since last)
+[2026-02-21T14:51:48.834Z] [notification] session ses_37f52c817ffeoc8QTvOSf35s15: title="AOE sessions removal request", dir="/home/froa/.config/opencode"
+[2026-02-21T14:51:48.834Z] [notification] scratchpad project_branch: null
+[2026-02-21T14:51:48.839Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:51:48.854Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:51:48.855Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:51:48.975Z] [notification] stored letter mapping: f:16|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:51:48.980Z] [notification] tracking notifId=16 for counter
+[2026-02-21T14:51:48.981Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:51:58.903Z] [notification] aoe session detected: "aoe_test_9c04aff3" → using aoe-cwd scratchpad directly
+[2026-02-21T14:51:59.015Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:51:59.016Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:51:59.016Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:52:46.080Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T14:52:46.280Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:52:46.280Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:52:46.280Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:56:36.600Z] [notification] session ses_37f4d93acffeqiT0MSoJMGBLQ8: title="AOE opencode shortcuts not working", dir="/home/froa/.config/opencode"
+[2026-02-21T14:56:36.603Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (4ms since last)
+[2026-02-21T14:56:36.604Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (5ms since last)
+[2026-02-21T14:56:36.605Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:56:36.606Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:56:36.610Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T14:56:36.610Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T14:56:41.884Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (9ms since last)
+[2026-02-21T14:56:41.886Z] [notification] session ses_37f4d93acffeqiT0MSoJMGBLQ8: title="AOE opencode shortcuts not working", dir="/home/froa/.config/opencode"
+[2026-02-21T14:56:41.886Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:56:41.890Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:56:41.907Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T14:56:41.907Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T14:56:52.921Z] [notification] session ses_37f4d93acffeqiT0MSoJMGBLQ8: title="AOE opencode shortcuts not working", dir="/home/froa/.config/opencode"
+[2026-02-21T14:56:52.926Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (8ms since last)
+[2026-02-21T14:56:52.934Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (16ms since last)
+[2026-02-21T14:56:52.935Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:56:52.939Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:56:52.957Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T14:56:52.957Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T14:57:04.498Z] [notification] session ses_37f4d93acffeqiT0MSoJMGBLQ8: title="AOE opencode shortcuts not working", dir="/home/froa/.config/opencode"
+[2026-02-21T14:57:04.504Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (8ms since last)
+[2026-02-21T14:57:04.513Z] [notification] suppressing duplicate session.idle for ses_37f4d93acffeqiT0MSoJMGBLQ8 (17ms since last)
+[2026-02-21T14:57:04.515Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:57:04.520Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:57:04.536Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T14:57:04.536Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T14:57:16.349Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T14:57:16.578Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T14:57:16.578Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T14:57:16.578Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T14:57:25.683Z] [notification] suppressing duplicate session.idle for ses_37f4b6c6effeiqmrnUHEBo9lks (10ms since last)
+[2026-02-21T14:57:25.684Z] [notification] session ses_37f4b6c6effeiqmrnUHEBo9lks: title="Test thread: quick check-in", dir="/home/froa/.config/opencode"
+[2026-02-21T14:57:25.685Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:57:25.689Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:57:25.709Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T14:57:25.709Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:57:25.710Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:57:25.877Z] [notification] stored letter mapping: g:17|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:57:25.894Z] [notification] tracking notifId=17 for counter
+[2026-02-21T14:57:25.899Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:57:35.002Z] [notification] suppressing duplicate session.idle for ses_37f4b6c6effeiqmrnUHEBo9lks (8ms since last)
+[2026-02-21T14:57:35.004Z] [notification] session ses_37f4b6c6effeiqmrnUHEBo9lks: title="Test thread: quick check-in", dir="/home/froa/.config/opencode"
+[2026-02-21T14:57:35.004Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:57:35.010Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:57:35.029Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T14:57:35.029Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:57:35.029Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:57:35.182Z] [notification] stored letter mapping: h:18|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:57:35.199Z] [notification] tracking notifId=18 for counter
+[2026-02-21T14:57:35.203Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T14:58:34.774Z] [notification] suppressing duplicate session.idle for ses_37f4b6c6effeiqmrnUHEBo9lks (9ms since last)
+[2026-02-21T14:58:34.776Z] [notification] session ses_37f4b6c6effeiqmrnUHEBo9lks: title="Test thread: quick check-in", dir="/home/froa/.config/opencode"
+[2026-02-21T14:58:34.776Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T14:58:34.781Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T14:58:34.803Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T14:58:34.803Z] [notification] scratchpad hidden → will notify
+[2026-02-21T14:58:34.803Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T14:58:34.951Z] [notification] stored letter mapping: c:19|/home/froa/.config/opencode|opencode_main
+[2026-02-21T14:58:34.965Z] [notification] tracking notifId=19 for counter
+[2026-02-21T14:58:34.969Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T15:07:37.228Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T15:07:37.680Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:07:37.684Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:07:37.698Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:07:37.698Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:07:53.784Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T15:07:53.936Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:07:53.936Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:07:53.936Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:08:00.852Z] [notification] suppressing duplicate session.idle for ses_37f41c7cbfferpycxXkOmgfcVY (9ms since last)
+[2026-02-21T15:08:00.854Z] [notification] session ses_37f41c7cbfferpycxXkOmgfcVY: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T15:08:00.854Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:08:00.859Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:08:00.874Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:08:00.874Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:08:00.874Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T15:08:00.963Z] [notification] stored letter mapping: i:20|/home/froa/.config/opencode|opencode_main
+[2026-02-21T15:08:00.980Z] [notification] tracking notifId=20 for counter
+[2026-02-21T15:08:00.985Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T15:08:14.435Z] [notification] aoe session detected: "aoe_platform-core_featur_c89f04dc" → using aoe-cwd scratchpad directly
+[2026-02-21T15:08:14.580Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:08:14.581Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:08:14.581Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:15:22.894Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T15:15:23.133Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:15:23.134Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:15:23.134Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:15:30.321Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:15:30.323Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:15:30.335Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:15:30.351Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:15:30.351Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:15:30.351Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:15:30.367Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (56ms since last)
+[2026-02-21T15:15:30.463Z] [notification] stored letter mapping: a:22|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:15:30.480Z] [notification] tracking notifId=22 for counter
+[2026-02-21T15:15:30.480Z] [notification] notification sent: notifId=22 letter=a dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T15:15:44.996Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:15:45.005Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:15:45.009Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:15:45.025Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:15:45.025Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T15:15:45.035Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (43ms since last)
+[2026-02-21T15:15:48.048Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:15:48.057Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:15:48.062Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:15:48.081Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:15:48.081Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:15:48.082Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:15:48.157Z] [notification] stored letter mapping: j:23|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:15:48.173Z] [notification] tracking notifId=23 for counter
+[2026-02-21T15:15:48.173Z] [notification] notification sent: notifId=23 letter=j dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T15:15:48.180Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (135ms since last)
+[2026-02-21T15:16:57.769Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:16:57.771Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:16:57.783Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:16:57.790Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:16:57.791Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:16:57.791Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:16:57.800Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (36ms since last)
+[2026-02-21T15:16:57.896Z] [notification] stored letter mapping: d:24|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:16:57.913Z] [notification] tracking notifId=24 for counter
+[2026-02-21T15:16:57.914Z] [notification] notification sent: notifId=24 letter=d dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T15:17:03.963Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T15:17:04.134Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:17:04.134Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:17:04.134Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:18:14.149Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:18:14.149Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:18:14.154Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:18:14.175Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:18:14.175Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:18:14.175Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:18:14.259Z] [notification] stored letter mapping: k:25|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:18:14.276Z] [notification] tracking notifId=25 for counter
+[2026-02-21T15:18:14.276Z] [notification] notification sent: notifId=25 letter=k dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T15:18:14.296Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (153ms since last)
+[2026-02-21T15:18:26.821Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:18:26.829Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:18:26.834Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:18:26.841Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:18:26.841Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:18:26.841Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:18:26.851Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (33ms since last)
+[2026-02-21T15:18:26.950Z] [notification] stored letter mapping: l:26|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:18:26.966Z] [notification] tracking notifId=26 for counter
+[2026-02-21T15:18:26.966Z] [notification] notification sent: notifId=26 letter=l dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T15:18:35.080Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T15:18:35.354Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:18:35.355Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:18:35.355Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:18:35.751Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T15:18:36.567Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:18:36.569Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:18:36.572Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:18:36.572Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:18:36.572Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T15:18:36.625Z] [notification] stored letter mapping: m:27|/home/froa/.config/opencode|opencode_main
+[2026-02-21T15:18:36.632Z] [notification] tracking notifId=27 for counter
+[2026-02-21T15:18:36.634Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T15:19:13.867Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:19:13.877Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:19:13.882Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:19:13.898Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:19:13.898Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T15:19:13.906Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (42ms since last)
+[2026-02-21T15:24:39.561Z] [notification] suppressing duplicate session.idle for ses_388412603ffe4mr05M8lpZO7AD (53ms since last)
+[2026-02-21T15:24:39.562Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T15:24:39.866Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:24:39.868Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:24:39.875Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:24:39.875Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:24:45.248Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T15:24:45.412Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:24:45.412Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:24:45.412Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:24:50.830Z] [notification] suppressing duplicate session.idle for ses_37f325b84ffeg5y8dgQdm55YW4 (9ms since last)
+[2026-02-21T15:24:50.831Z] [notification] session ses_37f325b84ffeg5y8dgQdm55YW4: title="Quick test chat prompt", dir="/home/froa/.config/opencode"
+[2026-02-21T15:24:50.832Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:24:50.836Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:24:50.847Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:24:50.847Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:24:50.847Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T15:24:50.930Z] [notification] stored letter mapping: n:29|/home/froa/.config/opencode|opencode_main
+[2026-02-21T15:24:50.948Z] [notification] tracking notifId=29 for counter
+[2026-02-21T15:25:01.630Z] [notification] suppressing duplicate session.idle for ses_37f325b84ffeg5y8dgQdm55YW4 (9ms since last)
+[2026-02-21T15:25:01.631Z] [notification] session ses_37f325b84ffeg5y8dgQdm55YW4: title="Quick test chat prompt", dir="/home/froa/.config/opencode"
+[2026-02-21T15:25:01.632Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:25:01.636Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:25:01.643Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:25:01.643Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:25:01.643Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T15:25:01.712Z] [notification] stored letter mapping: o:30|/home/froa/.config/opencode|opencode_main
+[2026-02-21T15:25:01.728Z] [notification] tracking notifId=30 for counter
+[2026-02-21T15:25:11.655Z] [notification] suppressing duplicate session.idle for ses_37f325b84ffeg5y8dgQdm55YW4 (7ms since last)
+[2026-02-21T15:25:11.656Z] [notification] session ses_37f325b84ffeg5y8dgQdm55YW4: title="Quick test chat prompt", dir="/home/froa/.config/opencode"
+[2026-02-21T15:25:11.657Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:25:11.661Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:25:11.674Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:25:11.674Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:25:19.866Z] [notification] suppressing duplicate session.idle for ses_37f325b84ffeg5y8dgQdm55YW4 (10ms since last)
+[2026-02-21T15:25:19.868Z] [notification] session ses_37f325b84ffeg5y8dgQdm55YW4: title="Quick test chat prompt", dir="/home/froa/.config/opencode"
+[2026-02-21T15:25:19.868Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:25:19.873Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:25:19.892Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:25:19.892Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:25:21.775Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T15:25:21.997Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:25:21.997Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:25:21.998Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:25:24.414Z] [notification] suppressing duplicate session.idle for ses_37f325b84ffeg5y8dgQdm55YW4 (3ms since last)
+[2026-02-21T15:25:24.414Z] [notification] session ses_37f325b84ffeg5y8dgQdm55YW4: title="Quick test chat prompt", dir="/home/froa/.config/opencode"
+[2026-02-21T15:25:24.415Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:25:24.416Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:25:24.418Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:25:24.418Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:25:29.448Z] [notification] suppressing duplicate session.idle for ses_37f325b84ffeg5y8dgQdm55YW4 (8ms since last)
+[2026-02-21T15:25:29.449Z] [notification] session ses_37f325b84ffeg5y8dgQdm55YW4: title="Quick test chat prompt", dir="/home/froa/.config/opencode"
+[2026-02-21T15:25:29.450Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:25:29.454Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:25:29.477Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:25:29.477Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:25:29.477Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T15:25:29.553Z] [notification] stored letter mapping: p:31|/home/froa/.config/opencode|opencode_main
+[2026-02-21T15:25:29.570Z] [notification] tracking notifId=31 for counter
+[2026-02-21T15:35:10.993Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T15:35:11.353Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:35:11.354Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:35:11.357Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:35:11.357Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:38:29.612Z] [notification] session ses_37f3aedf1ffejsot4LOLEFfOtZ: title="Quick test prompt testing title generation", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:38:29.621Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:38:29.626Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:38:29.633Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:38:29.633Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:38:29.633Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:38:29.642Z] [notification] suppressing duplicate session.idle for ses_37f3aedf1ffejsot4LOLEFfOtZ (33ms since last)
+[2026-02-21T15:38:29.759Z] [notification] stored letter mapping: b:35|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:38:29.776Z] [notification] tracking notifId=35 for counter
+[2026-02-21T15:38:29.776Z] [notification] notification sent: notifId=35 letter=b dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T15:41:20.170Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T15:41:20.571Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T15:41:20.573Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:41:20.575Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:41:20.575Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-02-21T15:42:09.270Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T15:42:09.445Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T15:42:09.445Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T15:42:09.445Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T15:42:22.490Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="New session - 2026-02-21T15:42:20.746Z", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:42:22.499Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:42:22.504Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:42:22.516Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:42:22.516Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:42:22.516Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:42:22.527Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (40ms since last)
+[2026-02-21T15:42:22.613Z] [notification] stored letter mapping: a:36|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:42:22.619Z] [notification] tracking notifId=36 for counter
+[2026-02-21T15:42:31.263Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="Testing conversation context and powers usage", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:42:31.263Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:42:31.268Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:42:31.275Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:42:31.275Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T15:42:31.298Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (39ms since last)
+[2026-02-21T15:42:38.098Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="Testing conversation context and powers usage", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:42:38.106Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:42:38.112Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:42:38.123Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:42:38.123Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T15:42:38.131Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (36ms since last)
+[2026-02-21T15:42:42.555Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="Testing conversation context and powers usage", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:42:42.567Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:42:42.572Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:42:42.585Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:42:42.585Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T15:42:42.595Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (43ms since last)
+[2026-02-21T15:42:59.104Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="Testing conversation context and powers usage", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:42:59.104Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:42:59.110Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:42:59.117Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:42:59.117Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T15:42:59.136Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (40ms since last)
+[2026-02-21T15:43:08.318Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="Testing conversation context and powers usage", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:43:08.318Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:43:08.324Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:43:08.343Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:43:08.343Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:43:08.343Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:43:08.428Z] [notification] stored letter mapping: q:37|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:43:08.446Z] [notification] tracking notifId=37 for counter
+[2026-02-21T15:43:08.455Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (141ms since last)
+[2026-02-21T15:45:19.199Z] [notification] session ses_37f2245b5ffetZslIMG0WK60PW: title="Testing conversation context and powers usage", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T15:45:19.208Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:45:19.213Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T15:45:19.220Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T15:45:19.220Z] [notification] scratchpad hidden → will notify
+[2026-02-21T15:45:19.220Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T15:45:19.229Z] [notification] suppressing duplicate session.idle for ses_37f2245b5ffetZslIMG0WK60PW (34ms since last)
+[2026-02-21T15:45:19.326Z] [notification] stored letter mapping: r:38|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T15:45:19.345Z] [notification] tracking notifId=38 for counter
+[2026-02-21T15:50:07.033Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T15:50:07.406Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T15:50:07.408Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T15:50:07.416Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T15:50:07.416Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-21T15:50:07.416Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T15:50:07.507Z] [notification] stored letter mapping: s:39|/home/froa/.config/opencode|opencode_main
+[2026-02-21T15:50:07.526Z] [notification] tracking notifId=39 for counter
+[2026-02-21T17:40:59.664Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T17:40:59.857Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T17:40:59.858Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T17:40:59.858Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T17:41:09.337Z] [notification] suppressing duplicate session.idle for ses_37eb59128ffeUQM5dYPeu745Xu (9ms since last)
+[2026-02-21T17:41:09.338Z] [notification] session ses_37eb59128ffeUQM5dYPeu745Xu: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T17:41:09.338Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T17:41:09.343Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T17:41:09.359Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T17:41:09.359Z] [notification] scratchpad hidden → will notify
+[2026-02-21T17:41:09.360Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T17:41:09.444Z] [notification] stored letter mapping: a:8|/home/froa/.config/opencode|opencode_main
+[2026-02-21T17:41:09.460Z] [notification] tracking notifId=8 for counter
+[2026-02-21T17:44:41.337Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-21T17:44:41.555Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T17:44:41.555Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T17:44:41.555Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T17:48:00.049Z] [notification] session ses_388412603ffe4mr05M8lpZO7AD: title="Opencode Notifications", dir="/home/froa/.config/opencode"
+[2026-02-21T17:48:00.404Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T17:48:00.406Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T17:48:00.409Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T17:48:00.410Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-21T17:48:00.410Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T17:48:00.471Z] [notification] stored letter mapping: b:3|/home/froa/.config/opencode|opencode_main
+[2026-02-21T17:48:00.488Z] [notification] tracking notifId=3 for counter
+[2026-02-21T17:52:59.343Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T17:52:59.343Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T17:52:59.348Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T17:52:59.355Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T17:52:59.355Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-21T17:52:59.355Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-21T17:52:59.433Z] [notification] stored letter mapping: c:4|/home/froa/.config/hypr|hypr_main
+[2026-02-21T17:52:59.451Z] [notification] tracking notifId=4 for counter
+[2026-02-21T18:17:07.832Z] [notification] suppressing duplicate session.idle for ses_37eaeba08ffezRtVz4RDuVgjMS (13ms since last)
+[2026-02-21T18:17:07.833Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T18:17:07.834Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T18:17:07.838Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T18:17:07.844Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T18:17:07.844Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-21T18:17:07.844Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-21T18:17:07.958Z] [notification] stored letter mapping: a:9|/home/froa/.config/hypr|hypr_main
+[2026-02-21T18:17:07.976Z] [notification] tracking notifId=9 for counter
+[2026-02-21T18:17:54.653Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T18:17:54.654Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T18:17:54.658Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T18:17:54.666Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T18:17:54.667Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T18:18:32.800Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T18:18:33.052Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T18:18:33.053Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T18:18:33.053Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T18:18:46.766Z] [notification] session ses_37e93192effefOFz6aZBq512KE: title="New session - 2026-02-21T18:18:43.794Z", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T18:18:46.768Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T18:18:46.775Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T18:18:46.788Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T18:18:46.788Z] [notification] scratchpad hidden → will notify
+[2026-02-21T18:18:46.788Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T18:18:46.799Z] [notification] suppressing duplicate session.idle for ses_37e93192effefOFz6aZBq512KE (36ms since last)
+[2026-02-21T18:18:46.887Z] [notification] stored letter mapping: a:10|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T18:18:46.887Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T18:18:46.904Z] [notification] tracker exitCode: 0
+[2026-02-21T18:18:46.904Z] [notification] tracker stderr: 
+[2026-02-21T18:18:46.904Z] [notification] tracking notifId=10 for counter
+[2026-02-21T18:18:46.904Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T18:18:55.962Z] [notification] session ses_37e93192effefOFz6aZBq512KE: title="New session - 2026-02-21T18:18:43.794Z", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T18:18:55.974Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T18:18:55.980Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T18:18:55.992Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T18:18:55.992Z] [notification] scratchpad hidden → will notify
+[2026-02-21T18:18:55.992Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T18:18:56.002Z] [notification] suppressing duplicate session.idle for ses_37e93192effefOFz6aZBq512KE (44ms since last)
+[2026-02-21T18:18:56.083Z] [notification] stored letter mapping: a:11|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T18:18:56.083Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T18:18:56.100Z] [notification] tracker exitCode: 0
+[2026-02-21T18:18:56.100Z] [notification] tracker stderr: 
+[2026-02-21T18:18:56.100Z] [notification] tracking notifId=11 for counter
+[2026-02-21T18:18:56.100Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T18:19:05.983Z] [notification] session ses_37e93192effefOFz6aZBq512KE: title="New session - 2026-02-21T18:18:43.794Z", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T18:19:05.992Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T18:19:05.997Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T18:19:06.011Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T18:19:06.011Z] [notification] scratchpad hidden → will notify
+[2026-02-21T18:19:06.011Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T18:19:06.019Z] [notification] suppressing duplicate session.idle for ses_37e93192effefOFz6aZBq512KE (39ms since last)
+[2026-02-21T18:19:06.105Z] [notification] stored letter mapping: d:12|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T18:19:06.105Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T18:19:06.121Z] [notification] tracker exitCode: 0
+[2026-02-21T18:19:06.121Z] [notification] tracker stderr: 
+[2026-02-21T18:19:06.121Z] [notification] tracking notifId=12 for counter
+[2026-02-21T18:19:06.121Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T18:19:40.410Z] [notification] session ses_37e93192effefOFz6aZBq512KE: title="New session - 2026-02-21T18:18:43.794Z", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T18:19:40.413Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T18:19:40.426Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T18:19:40.437Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T18:19:40.437Z] [notification] scratchpad hidden → will notify
+[2026-02-21T18:19:40.437Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T18:19:40.446Z] [notification] suppressing duplicate session.idle for ses_37e93192effefOFz6aZBq512KE (41ms since last)
+[2026-02-21T18:19:40.526Z] [notification] stored letter mapping: a:13|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T18:19:40.526Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T18:19:40.544Z] [notification] tracker exitCode: 0
+[2026-02-21T18:19:40.545Z] [notification] tracker stderr: 
+[2026-02-21T18:19:40.545Z] [notification] tracking notifId=13 for counter
+[2026-02-21T18:19:40.545Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T18:23:59.181Z] [notification] suppressing duplicate session.idle for ses_37eaeba08ffezRtVz4RDuVgjMS (18ms since last)
+[2026-02-21T18:23:59.182Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T18:23:59.183Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T18:23:59.186Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T18:23:59.193Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T18:23:59.193Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T18:24:24.747Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-21T18:24:24.932Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T18:24:24.932Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T18:24:24.932Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T18:27:34.303Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T18:27:34.306Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T18:27:34.311Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T18:27:34.320Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T18:27:34.320Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T18:28:04.847Z] [notification] session ses_37e93192effefOFz6aZBq512KE: title="New session - 2026-02-21T18:18:43.794Z", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T18:28:04.849Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T18:28:04.854Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T18:28:04.869Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T18:28:04.869Z] [notification] scratchpad hidden → will notify
+[2026-02-21T18:28:04.870Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T18:28:04.878Z] [notification] suppressing duplicate session.idle for ses_37e93192effefOFz6aZBq512KE (35ms since last)
+[2026-02-21T18:28:04.971Z] [notification] stored letter mapping: e:3|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T18:28:04.971Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T18:28:04.989Z] [notification] tracker exitCode: 0
+[2026-02-21T18:28:04.989Z] [notification] tracker stderr: 
+[2026-02-21T18:28:04.989Z] [notification] tracking notifId=3 for counter
+[2026-02-21T18:28:04.989Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T18:35:09.086Z] [notification] suppressing duplicate session.idle for ses_37eaeba08ffezRtVz4RDuVgjMS (27ms since last)
+[2026-02-21T18:35:09.088Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T18:35:09.096Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T18:35:09.100Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T18:35:09.117Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T18:35:09.117Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:09:46.700Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-21T19:09:46.748Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T19:09:46.748Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T19:09:46.748Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T19:10:41.568Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:10:41.574Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:10:41.579Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:10:41.591Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:10:41.591Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:13:08.081Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:13:08.088Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:13:08.092Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:13:08.104Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:13:08.105Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:15:57.233Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:15:57.242Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:15:57.247Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:15:57.254Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:15:57.254Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:17:24.359Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:17:24.372Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:17:24.376Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:17:24.389Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:17:24.389Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:18:46.732Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:18:46.746Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:18:46.750Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:18:46.760Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:18:46.760Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:22:10.831Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:22:10.844Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:22:10.848Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:22:10.873Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:22:10.873Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:22:52.883Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T19:22:53.154Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T19:22:53.155Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T19:22:53.155Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T19:23:03.373Z] [notification] session ses_37e583e71ffeELTk7zFVArJ5OU: title="Chat: quick test input?wedge", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T19:23:03.381Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T19:23:03.386Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T19:23:03.392Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:23:03.392Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T19:23:03.405Z] [notification] suppressing duplicate session.idle for ses_37e583e71ffeELTk7zFVArJ5OU (36ms since last)
+[2026-02-21T19:23:07.055Z] [notification] session ses_37e583e71ffeELTk7zFVArJ5OU: title="Chat: quick test input?wedge", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T19:23:07.057Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T19:23:07.072Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T19:23:07.080Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T19:23:07.080Z] [notification] scratchpad hidden → will notify
+[2026-02-21T19:23:07.080Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T19:23:07.153Z] [notification] stored letter mapping: a:12|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T19:23:07.153Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T19:23:07.171Z] [notification] tracker exitCode: 0
+[2026-02-21T19:23:07.171Z] [notification] tracker stderr: 
+[2026-02-21T19:23:07.171Z] [notification] tracking notifId=12 for counter
+[2026-02-21T19:23:07.171Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T19:23:07.181Z] [notification] suppressing duplicate session.idle for ses_37e583e71ffeELTk7zFVArJ5OU (130ms since last)
+[2026-02-21T19:23:35.697Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T19:23:35.958Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T19:23:35.959Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T19:23:35.959Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T19:25:49.438Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:25:49.456Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:25:49.461Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:25:49.484Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:25:49.484Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:29:43.955Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:29:43.970Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:29:43.974Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:29:43.993Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:29:43.993Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:31:10.695Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:31:10.713Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:31:10.718Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:31:10.725Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:31:10.725Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:34:12.962Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:34:12.980Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:34:12.984Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:34:13.004Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:34:13.004Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:40:56.762Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:40:56.787Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:40:56.792Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:40:56.802Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:40:56.802Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:43:28.154Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:43:28.175Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:43:28.179Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:43:28.197Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:43:28.197Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:47:11.099Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T19:47:11.122Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T19:47:11.127Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T19:47:11.145Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T19:47:11.145Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T19:47:52.931Z] [notification] session ses_37e583e71ffeELTk7zFVArJ5OU: title="Chat: quick test input?wedge", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T19:47:52.934Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T19:47:52.946Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T19:47:52.954Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T19:47:52.954Z] [notification] scratchpad hidden → will notify
+[2026-02-21T19:47:52.955Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T19:47:52.965Z] [notification] suppressing duplicate session.idle for ses_37e583e71ffeELTk7zFVArJ5OU (38ms since last)
+[2026-02-21T19:47:53.042Z] [notification] stored letter mapping: b:73|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T19:47:53.042Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T19:47:53.058Z] [notification] tracker exitCode: 0
+[2026-02-21T19:47:53.058Z] [notification] tracker stderr: 
+[2026-02-21T19:47:53.058Z] [notification] tracking notifId=73 for counter
+[2026-02-21T19:47:53.058Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T20:02:45.037Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:02:45.064Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:02:45.068Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:02:45.083Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:02:45.084Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T20:19:27.823Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:19:27.859Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:19:27.863Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:19:27.881Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:19:27.881Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T20:23:39.584Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:23:39.627Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:23:39.631Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:23:39.650Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:23:39.651Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T20:31:39.443Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:31:39.451Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:31:39.452Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:31:39.456Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:31:39.456Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T20:33:06.379Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:33:06.422Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:33:06.426Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:33:06.443Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:33:06.443Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T20:36:29.716Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:36:29.817Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:36:29.822Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:36:29.843Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:36:29.843Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T20:42:24.495Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T20:42:24.582Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T20:42:24.585Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T20:42:24.592Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T20:42:24.592Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:00:59.679Z] [notification] session ses_37e583e71ffeELTk7zFVArJ5OU: title="Chat: quick test input?wedge", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T21:00:59.681Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T21:00:59.694Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T21:00:59.709Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T21:00:59.709Z] [notification] scratchpad hidden → will notify
+[2026-02-21T21:00:59.709Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T21:00:59.718Z] [notification] suppressing duplicate session.idle for ses_37e583e71ffeELTk7zFVArJ5OU (42ms since last)
+[2026-02-21T21:00:59.852Z] [notification] stored letter mapping: c:12|/home/froa/Projects/ts/azure_backup|azure_backup_initial_commit
+[2026-02-21T21:00:59.852Z] [notification] === BEFORE TRACKING ===
+[2026-02-21T21:00:59.870Z] [notification] tracker exitCode: 0
+[2026-02-21T21:00:59.871Z] [notification] tracker stderr: 
+[2026-02-21T21:00:59.871Z] [notification] tracking notifId=12 for counter
+[2026-02-21T21:00:59.871Z] [notification] === AFTER TRACKING, ABOUT TO SPAWN WATCHER ===
+[2026-02-21T21:03:35.942Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:03:36.058Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:03:36.062Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:03:36.073Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:03:36.073Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:04:13.753Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:04:13.861Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:04:13.865Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:04:13.873Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:04:13.873Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:06:02.541Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:06:02.647Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:06:02.651Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:06:02.665Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:06:02.665Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:06:51.677Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:06:51.785Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:06:51.789Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:06:51.800Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:06:51.800Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:08:51.750Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:08:51.876Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:08:51.881Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:08:51.887Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:08:51.888Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:11:46.574Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:11:46.656Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:11:46.659Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:11:46.663Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:11:46.664Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:13:11.028Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:13:11.133Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:13:11.137Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:13:11.159Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:13:11.159Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:23:33.478Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:23:33.603Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:23:33.606Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:23:33.620Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:23:33.620Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:30:05.534Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:30:05.673Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:30:05.677Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:30:05.689Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:30:05.689Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:33:56.852Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:33:56.966Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:33:56.971Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:33:56.980Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:33:56.981Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:35:44.123Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:35:44.198Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:35:44.199Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:35:44.207Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:35:44.207Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:37:05.665Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:37:05.750Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:37:05.752Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:37:05.754Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:37:05.754Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:40:47.347Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:40:47.404Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:40:47.406Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:40:47.409Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:40:47.409Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:43:33.307Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:43:33.403Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:43:33.405Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:43:33.417Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:43:33.417Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T21:45:40.601Z] [notification] session ses_37eaeba08ffezRtVz4RDuVgjMS: title="Slack/Opencode notification keyboard shortcuts mapping", dir="/home/froa/.config/hypr"
+[2026-02-21T21:45:40.659Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T21:45:40.661Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T21:45:40.676Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T21:45:40.676Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:09:31.513Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T22:09:31.727Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T22:09:31.727Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T22:09:31.727Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T22:09:40.963Z] [notification] suppressing duplicate session.idle for ses_37dbfc0acffeyzC8SfNsRFCC62 (9ms since last)
+[2026-02-21T22:09:40.965Z] [notification] session ses_37dbfc0acffeyzC8SfNsRFCC62: title="Quick check-in: test conversation title", dir="/home/froa/.config/opencode"
+[2026-02-21T22:09:40.965Z] [notification] scratchpad project_branch: opencode_main
+[2026-02-21T22:09:40.970Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-02-21T22:09:40.978Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T22:09:40.978Z] [notification] scratchpad hidden → will notify
+[2026-02-21T22:09:40.979Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-02-21T22:09:41.049Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-02-21T22:09:41.049Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/opencode
+[2026-02-21T22:09:50.771Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-02-21T22:09:50.823Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T22:09:50.823Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T22:09:50.823Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T22:11:09.133Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-21T22:11:09.287Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T22:11:09.287Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T22:11:09.287Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T22:12:44.916Z] [notification] suppressing duplicate session.idle for ses_37dbda364ffeLMnjeoqOSECG2r (10ms since last)
+[2026-02-21T22:12:44.918Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:12:44.918Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:12:44.923Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:12:44.945Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:12:44.945Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:14:24.189Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:14:24.190Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:14:24.195Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:14:24.203Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:14:24.203Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:23:18.051Z] [notification] aoe session detected: "aoe_azure_backup_initial_85750bb9" → using aoe-cwd scratchpad directly
+[2026-02-21T22:23:18.313Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-21T22:23:18.314Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-21T22:23:18.314Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-21T22:23:26.885Z] [notification] session ses_37db3256fffewVIkQM0fjMKtaZ: title="Test message intent discussion", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T22:23:26.885Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T22:23:26.899Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:26.907Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T22:23:26.907Z] [notification] scratchpad hidden → will notify
+[2026-02-21T22:23:26.907Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T22:23:27.115Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=azure_backup_initial_commit
+[2026-02-21T22:23:27.115Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:27.135Z] [notification] suppressing duplicate session.idle for ses_37db3256fffewVIkQM0fjMKtaZ (253ms since last)
+[2026-02-21T22:23:33.387Z] [notification] session ses_37db3256fffewVIkQM0fjMKtaZ: title="Test message intent discussion", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T22:23:33.397Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T22:23:33.402Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:33.413Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T22:23:33.413Z] [notification] scratchpad hidden → will notify
+[2026-02-21T22:23:33.413Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T22:23:33.471Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=azure_backup_initial_commit
+[2026-02-21T22:23:33.471Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:33.480Z] [notification] suppressing duplicate session.idle for ses_37db3256fffewVIkQM0fjMKtaZ (96ms since last)
+[2026-02-21T22:23:41.582Z] [notification] session ses_37db3256fffewVIkQM0fjMKtaZ: title="Test message intent discussion", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T22:23:41.590Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T22:23:41.596Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:41.615Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:23:41.615Z] [notification] suppressing: same project_branch (azure_backup_initial_commit)
+[2026-02-21T22:23:41.630Z] [notification] suppressing duplicate session.idle for ses_37db3256fffewVIkQM0fjMKtaZ (51ms since last)
+[2026-02-21T22:23:51.827Z] [notification] session ses_37db3256fffewVIkQM0fjMKtaZ: title="Test message intent discussion", dir="/home/froa/Projects/ts/azure_backup"
+[2026-02-21T22:23:51.828Z] [notification] scratchpad project_branch: azure_backup_initial_commit
+[2026-02-21T22:23:51.833Z] [notification] session project_branch: azure_backup_initial_commit, dir: /home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:51.840Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-21T22:23:51.840Z] [notification] scratchpad hidden → will notify
+[2026-02-21T22:23:51.840Z] [notification] tracked latest notification: azure_backup_initial_commit (/home/froa/Projects/ts/azure_backup)
+[2026-02-21T22:23:51.921Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=azure_backup_initial_commit
+[2026-02-21T22:23:51.921Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/Projects/ts/azure_backup
+[2026-02-21T22:23:51.940Z] [notification] suppressing duplicate session.idle for ses_37db3256fffewVIkQM0fjMKtaZ (116ms since last)
+[2026-02-21T22:39:19.631Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:39:19.641Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:39:19.645Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:39:19.655Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:39:19.655Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:42:44.388Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:42:44.397Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:42:44.402Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:42:44.423Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:42:44.424Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:53:50.189Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:53:50.203Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:53:50.207Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:53:50.229Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:53:50.229Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:55:12.534Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:55:12.550Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:55:12.555Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:55:12.574Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:55:12.574Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T22:57:40.193Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T22:57:40.208Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T22:57:40.213Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T22:57:40.227Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T22:57:40.227Z] [notification] suppressing: same project_branch (hypr_main)
+[2026-02-21T23:03:50.343Z] [notification] session ses_37dbda364ffeLMnjeoqOSECG2r: title="Notification panel open: show alert hook", dir="/home/froa/.config/hypr"
+[2026-02-21T23:03:50.362Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-21T23:03:50.366Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-21T23:03:50.378Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-21T23:03:50.378Z] [notification] suppressing: same project_branch (hypr_main)
