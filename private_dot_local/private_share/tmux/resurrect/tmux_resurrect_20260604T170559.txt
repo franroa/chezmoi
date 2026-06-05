@@ -1,0 +1,13 @@
+pane	cicd-components	0	1	:*Z	0	~/P/t/cicd-components	:/home/froa/Projects/ts/cicd-components	0	fish	:
+pane	cicd-components	0	1	:*Z	1	~/P/t/cicd-components	:/home/froa/Projects/ts/cicd-components	1	fish	:
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	✳ 706	:/home/froa/Projects/ts/firecast-builder	0	claude	:claude --continue
+pane	firecast-builder	0	1	:*Z	1	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	nvim	:/tmp/.mount_nvimLAchID/usr/bin/nvim
+pane	tmux	0	1	:*Z	0	🤖 Applying chezmoi changes	:/home/froa	1	node	:node /home/froa/.local/share/nvm/v25.4.0/bin/copilot
+pane	tmux	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	cicd-components	0	:fish	1	:*Z	34c6,185x51,0,0{93x51,0,0,12,91x51,94,0,13}	:
+window	default	0	:fish	1	:*Z	3523,185x51,0,0{92x51,0,0,6,92x51,93,0,7}	:
+window	firecast-builder	0	:nvim	1	:*Z	3efa,185x51,0,0{93x51,0,0,4,91x51,94,0,5}	:
+window	tmux	0	:node	1	:*Z	34c1,185x51,0,0{93x51,0,0,10,91x51,94,0,11}	:
+state	tmux	firecast-builder

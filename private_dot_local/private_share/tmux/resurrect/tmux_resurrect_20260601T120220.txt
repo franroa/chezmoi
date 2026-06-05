@@ -1,0 +1,13 @@
+pane	azure-vm-tf-mod	0	1	:*Z	0	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	1	fish	:
+pane	azure-vm-tf-mod	0	1	:*Z	1	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	✳ 695	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude
+pane	firecast-builder	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	ts	0	1	:*Z	0	tsyl170	:/home/froa/Projects/ts	1	fish	:/usr/local/bin/starship prompt --terminal-width=183 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	ts	0	1	:*Z	1	tsyl170	:/home/froa/Projects/ts	0	fish	:
+pane	vm-poc	0	1	:*Z	0	✳ gitlab-ci-terraform-vm-pipeline	:/home/froa/Projects/ts/vm-poc	0	claude	:claude
+pane	vm-poc	0	1	:*Z	1	task apply ~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	1	task	:task apply
+window	azure-vm-tf-mod	0	:fish	1	:*Z	f044,183x51,0,0{92x51,0,0,18,90x51,93,0,19}	:
+window	firecast-builder	0	:claude	1	:*Z	2bc2,183x51,0,0{91x51,0,0,20,91x51,92,0,21}	:
+window	ts	0	:fish	1	:*Z	303c,183x51,0,0{92x51,0,0,24,90x51,93,0,25}	:
+window	vm-poc	0	:task	1	:*Z	f030,183x51,0,0{92x51,0,0,10,90x51,93,0,11}	:
+state	ts	firecast-builder

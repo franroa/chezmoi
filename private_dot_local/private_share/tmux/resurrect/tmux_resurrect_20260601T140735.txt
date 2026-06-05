@@ -1,0 +1,19 @@
+pane	azure-vm-tf-mod	0	1	:*Z	0	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	0	fish	:
+pane	azure-vm-tf-mod	0	1	:*Z	1	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	1	fish	:
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	firecast-pipeline	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	firecast-pipeline	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	fran-local-synapse	0	1	:*Z	0	✳ Add ticket link output to working-on-ticket skill	:/home/froa/Projects/ts/fran-local-synapse	1	claude	:claude
+pane	fran-local-synapse	0	1	:*Z	1	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	0	fish	:
+pane	migrate-firecast-to-k8s	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	migrate-firecast-to-k8s	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	vm-poc	0	1	:*Z	0	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	0	fish	:
+pane	vm-poc	0	1	:*Z	1	✳ gitlab-ci-terraform-vm-pipeline	:/home/froa/Projects/ts/vm-poc	1	claude	:claude
+window	azure-vm-tf-mod	0	:fish	1	:*Z	4a6a,91x40,0,0{46x40,0,0,0,44x40,47,0,1}	:
+window	default	0	:fish	1	:*Z	4491,183x43,0,0{91x43,0,0,8,91x43,92,0,9}	:
+window	firecast-pipeline	0	:fish	1	:*Z	4e56,183x43,0,0{92x43,0,0,2,90x43,93,0,3}	:
+window	fran-local-synapse	0	:claude	1	:*Z	76f2,183x43,0,0{92x43,0,0,10,90x43,93,0,11}	:
+window	migrate-firecast-to-k8s	0	:fish	1	:*Z	447f,183x43,0,0{91x43,0,0,4,91x43,92,0,5}	:
+window	vm-poc	0	:claude	1	:*Z	4488,183x43,0,0{91x43,0,0,6,91x43,92,0,7}	:
+state	vm-poc	migrate-firecast-to-k8s

@@ -1,0 +1,10 @@
+pane	azure-sa	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	azure-sa	0	1	:*Z	1	~/.c/fish	:/home/froa/.config/fish	0	fish	:
+pane	citadel-ai	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	firecast-builder	0	1	:*Z	1	K8S_CLUSTER=technosy ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	nvim	:kubie ctx
+window	azure-sa	0	:fish	1	:*Z	5dc1,185x51,0,0{96x51,0,0,2,88x51,97,0,3}	:
+window	citadel-ai	0	:fish	1	:*Z	3f0c,185x51,0,0{93x51,0,0,8,91x51,94,0,9}	:
+window	firecast-builder	0	:claude	1	:*Z	3ee8,185x51,0,0{93x51,0,0,0,91x51,94,0,1}	:
+state	firecast-builder	citadel-ai

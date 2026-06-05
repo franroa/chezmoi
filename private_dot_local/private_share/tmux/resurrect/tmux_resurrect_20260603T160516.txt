@@ -1,0 +1,7 @@
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	fran-local-synapse	0	1	:*Z	0	nvim ~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	1	nvim	:/tmp/.mount_nvimhCdjcB/usr/bin/nvim
+pane	fran-local-synapse	0	1	:*Z	1	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	0	fish	:
+window	firecast-builder	0	:claude	1	:*Z	5e8e,278x71,0,0{139x71,0,0,6,138x71,140,0,7}	:
+window	fran-local-synapse	0	:nvim	1	:*Z	ae9a,278x71,0,0{139x71,0,0,12,138x71,140,0,13}	:
+state	firecast-builder	fran-local-synapse

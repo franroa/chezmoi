@@ -1,0 +1,52 @@
+[2026-03-07T07:57:50.201Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-03-07T07:57:50.250Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-07T07:57:50.250Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-07T07:57:50.251Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-07T07:59:10.732Z] [notification] session ses_338b211efffeIxSbH7aKhy576O: title="Rafa.md update: añadir "Rafa el Súper Héroe" y "Rafa salva a Candela"", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T07:59:10.736Z] [notification] scratchpad project_branch: book-editor_main
+[2026-03-07T07:59:10.751Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T07:59:10.757Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-07T07:59:10.757Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-03-07T08:46:54.986Z] [notification] session ses_338b211efffeIxSbH7aKhy576O: title="Rafa.md update: añadir "Rafa el Súper Héroe" y "Rafa salva a Candela"", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T08:46:54.986Z] [notification] scratchpad project_branch: book-editor_main
+[2026-03-07T08:46:54.988Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T08:46:54.995Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-07T08:46:54.995Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-03-07T08:46:55.043Z] [notification] suppressing duplicate session.idle for ses_338b211efffeIxSbH7aKhy576O (58ms since last)
+[2026-03-07T08:47:29.808Z] [notification] session ses_338b211efffeIxSbH7aKhy576O: title="Rafa.md update: añadir "Rafa el Súper Héroe" y "Rafa salva a Candela"", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T08:47:29.811Z] [notification] scratchpad project_branch: book-editor_main
+[2026-03-07T08:47:29.823Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T08:47:29.832Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-07T08:47:29.832Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-03-07T15:03:52.553Z] [notification] terminal window address: 0x5cc94e694360
+[2026-03-07T15:03:52.563Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-07T15:03:52.563Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-07T15:06:46.605Z] [notification] session ses_3372b8c33ffeYVKbQ79Ra1Qymb: title="Renaming images by date to page01.tif sequence", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T15:06:46.605Z] [notification] scratchpad project_branch: null
+[2026-03-07T15:06:46.609Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T15:06:46.615Z] [notification] scratchpad hidden → will notify
+[2026-03-07T15:06:46.616Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-07T15:06:46.689Z] [notification] spawning watchScript for notifId=18 dir=/home/froa/Projects/fran/book-editor
+[2026-03-07T15:09:29.260Z] [notification] session ses_3372b8c33ffeYVKbQ79Ra1Qymb: title="Renaming images by date to page01.tif sequence", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T15:09:29.260Z] [notification] scratchpad project_branch: null
+[2026-03-07T15:09:29.265Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T15:09:29.271Z] [notification] scratchpad hidden → will notify
+[2026-03-07T15:09:29.271Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-07T15:09:29.353Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/Projects/fran/book-editor
+[2026-03-07T15:15:05.081Z] [notification] session ses_3372b8c33ffeYVKbQ79Ra1Qymb: title="Renaming images by date to page01.tif sequence", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T15:15:05.081Z] [notification] scratchpad project_branch: null
+[2026-03-07T15:15:05.086Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T15:15:05.105Z] [notification] scratchpad hidden → will notify
+[2026-03-07T15:15:05.105Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-07T15:15:05.209Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/Projects/fran/book-editor
+[2026-03-07T15:19:12.455Z] [notification] terminal window address: 0x5cc94e694360
+[2026-03-07T15:19:12.455Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-07T15:19:12.456Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-07T15:21:09.063Z] [notification] session ses_3371dcf77ffeFRgLAFzx09YLwc: title="Book.yaml multi-page update plan for two-page spread copy", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-07T15:21:09.063Z] [notification] scratchpad project_branch: null
+[2026-03-07T15:21:09.069Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-07T15:21:09.084Z] [notification] scratchpad hidden → will notify
+[2026-03-07T15:21:09.084Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-07T15:21:09.213Z] [notification] spawning watchScript for notifId=25 dir=/home/froa/Projects/fran/book-editor
+[2026-03-07T15:21:09.229Z] [notification] suppressing duplicate session.idle for ses_3371dcf77ffeFRgLAFzx09YLwc (170ms since last)
+[2026-03-07T15:21:09.290Z] [notification] suppressing duplicate session.idle for ses_3371dcf77ffeFRgLAFzx09YLwc (231ms since last)

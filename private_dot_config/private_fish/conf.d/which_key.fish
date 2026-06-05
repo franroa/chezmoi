@@ -315,7 +315,17 @@ function __reload_fish_config --description "Reload all fish configuration files
     for file in ~/.config/fish/functions/*.fish
         source "$file" 2>&1
     end
-    
+
+    # Refresh 1Password secrets: clear the sentinel (this shell's env AND the
+    # tmux global env), then re-source op-secrets.fish. It re-prompts once and
+    # re-publishes the resolved values into the tmux global environment so
+    # every pane/session stays in sync. (The loop above skips *secrets.fish.)
+    set -e OP_SECRETS_LOADED
+    if type -q tmux; and tmux has-session 2>/dev/null
+        tmux set-environment -gu OP_SECRETS_LOADED
+    end
+    source ~/.config/fish/conf.d/op-secrets.fish 2>&1
+
     sleep 0.5
     clear
     printf '\n'

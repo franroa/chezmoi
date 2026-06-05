@@ -1,5 +1,0 @@
-return {
-  {
-    'azabiong/vim-highlighter'
-  }
-}

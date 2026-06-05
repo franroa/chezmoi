@@ -1,5 +1,0 @@
-return {
-  {
-    "gregorias/coop.nvim",
-  },
-}

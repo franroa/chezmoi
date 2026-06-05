@@ -1,0 +1,7 @@
+pane	citadel-ai	0	1	:*Z	0	⠐ Fix skill directory validation warnings and errors	:/home/froa/Projects/ts/citadel-ai	1	claude	:claude
+pane	citadel-ai	0	1	:*Z	1	✳ Remove duplicate GitLab skills from platform	:/home/froa/Projects/ts/citadel-ai	0	claude	:claude
+pane	firecast-builder	0	1	:*Z	0	tsyl170	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	firecast-builder	0	1	:*Z	1	tsyl170	:/home/froa/Projects/ts/firecast-builder	0	fish	:/usr/local/bin/starship prompt --terminal-width=138 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+window	citadel-ai	0	:claude	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+window	firecast-builder	0	:fish	1	:*Z	5e8e,278x71,0,0{139x71,0,0,6,138x71,140,0,7}	:
+state	firecast-builder	citadel-ai

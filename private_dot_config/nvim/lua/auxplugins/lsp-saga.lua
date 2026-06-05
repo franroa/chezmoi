@@ -1,5 +1,0 @@
-return {
-  {
-    "nvimdev/lspsaga.nvim"
-  }
-}

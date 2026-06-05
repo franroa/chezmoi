@@ -1,1 +1,0 @@
-{"self_collect":{"prefix":"self_collect","body":["self_collect \"example\" {","\tmetrics_output = prometheus.remote_write.example.receiver","}"]}}

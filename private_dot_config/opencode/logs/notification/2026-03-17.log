@@ -1,0 +1,79 @@
+[2026-03-17T05:48:10.393Z] [notification] terminal window address: 0x6305319f0e10
+[2026-03-17T05:48:10.500Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-17T05:48:10.501Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-17T05:49:18.977Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:49:19.249Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:49:19.249Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T05:49:19.259Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:49:19.259Z] [notification] suppressing duplicate session.idle for ses_305a89cefffe0GtOczlKmDOkqU (282ms since last)
+[2026-03-17T05:49:21.866Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:49:22.084Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:49:22.084Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T05:49:22.091Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:49:22.091Z] [notification] suppressing duplicate session.idle for ses_305a89cefffe0GtOczlKmDOkqU (225ms since last)
+[2026-03-17T05:56:33.736Z] [notification] terminal window address: 0x6305319f0e10
+[2026-03-17T05:56:33.830Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-17T05:56:33.830Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-17T05:58:01.504Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:58:01.698Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:58:01.698Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T05:58:01.700Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T05:58:01.700Z] [notification] suppressing duplicate session.idle for ses_305a0a603ffeDnVHtRT1970KIW (196ms since last)
+[2026-03-17T06:20:01.070Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:20:01.219Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:20:01.219Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T06:21:07.760Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:21:07.991Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:21:07.991Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T06:26:26.927Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:26:27.179Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:26:27.179Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T06:30:27.167Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:30:27.348Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:30:27.348Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T06:32:49.779Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:32:50.038Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:32:50.038Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T06:39:04.681Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:39:04.865Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T06:39:04.865Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T07:38:08.877Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:38:09.132Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:38:09.133Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T07:39:05.871Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:39:06.066Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:39:06.066Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T07:39:06.070Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:39:06.070Z] [notification] suppressing duplicate session.idle for ses_305a0a603ffeDnVHtRT1970KIW (199ms since last)
+[2026-03-17T07:41:03.404Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:41:03.589Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T07:41:03.589Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T08:34:50.709Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:34:50.843Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:34:50.843Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T08:34:50.845Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:34:50.845Z] [notification] suppressing duplicate session.idle for ses_305a0a603ffeDnVHtRT1970KIW (135ms since last)
+[2026-03-17T08:34:50.848Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:34:50.848Z] [notification] suppressing duplicate session.idle for ses_305a0a603ffeDnVHtRT1970KIW (138ms since last)
+[2026-03-17T08:38:16.716Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:38:16.919Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:38:16.919Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T08:53:22.104Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:53:22.226Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:53:22.226Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T08:55:45.703Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:55:45.909Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:55:45.909Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T08:56:23.293Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:56:23.520Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:56:23.520Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T08:57:21.249Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:57:21.478Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T08:57:21.478Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-17T09:02:18.472Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T09:18:35.016Z] [notification] terminal window address: 0x5beb5e81bb50
+[2026-03-17T09:18:35.143Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-17T09:18:35.143Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-17T10:00:43.832Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T10:00:44.104Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-17T10:00:44.104Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)

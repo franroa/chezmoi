@@ -1,0 +1,1231 @@
+[2026-02-27T08:53:31.871Z] [notification] terminal window address: 0x5b2ea30e7710
+[2026-02-27T08:53:31.880Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T08:53:31.880Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T08:58:16.915Z] [notification] session ses_361b13201ffe02g0ealFVhfxUu: title="Slack-colored icons in wallust template inheritance", dir="/home/froa/.config/hypr"
+[2026-02-27T08:58:16.915Z] [notification] scratchpad project_branch: null
+[2026-02-27T08:58:16.920Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T08:58:16.928Z] [notification] scratchpad hidden → will notify
+[2026-02-27T08:58:16.928Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T08:58:17.002Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-27T08:59:08.294Z] [notification] suppressing duplicate session.idle for ses_361b13201ffe02g0ealFVhfxUu (12ms since last)
+[2026-02-27T08:59:08.296Z] [notification] session ses_361b13201ffe02g0ealFVhfxUu: title="Slack-colored icons in wallust template inheritance", dir="/home/froa/.config/hypr"
+[2026-02-27T08:59:08.296Z] [notification] scratchpad project_branch: null
+[2026-02-27T08:59:08.301Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T08:59:08.307Z] [notification] scratchpad hidden → will notify
+[2026-02-27T08:59:08.308Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T08:59:08.393Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-02-27T08:59:43.669Z] [notification] session ses_361b13201ffe02g0ealFVhfxUu: title="Slack-colored icons in wallust template inheritance", dir="/home/froa/.config/hypr"
+[2026-02-27T08:59:43.669Z] [notification] scratchpad project_branch: null
+[2026-02-27T08:59:43.674Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T08:59:43.681Z] [notification] scratchpad hidden → will notify
+[2026-02-27T08:59:43.681Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T08:59:43.777Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-27T09:06:33.216Z] [notification] terminal window address: 0x5b2ea3178140
+[2026-02-27T09:06:33.216Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:06:33.216Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:12:44.481Z] [notification] session ses_361a2ed16ffeeobVIygKdKB5HL: title="New session - 2026-02-27T09:10:25.769Z", dir="/home/froa/.config/hypr"
+[2026-02-27T09:12:44.481Z] [notification] scratchpad project_branch: null
+[2026-02-27T09:12:44.486Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T09:12:44.493Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:12:44.493Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T09:12:44.566Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-02-27T09:13:22.478Z] [notification] suppressing duplicate session.idle for ses_361a2ed16ffeeobVIygKdKB5HL (11ms since last)
+[2026-02-27T09:13:22.479Z] [notification] session ses_361a2ed16ffeeobVIygKdKB5HL: title="New session - 2026-02-27T09:10:25.769Z", dir="/home/froa/.config/hypr"
+[2026-02-27T09:13:22.479Z] [notification] scratchpad project_branch: null
+[2026-02-27T09:13:22.484Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T09:13:22.500Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:13:22.500Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T09:13:22.591Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-27T09:14:30.562Z] [notification] session ses_361a2ed16ffeeobVIygKdKB5HL: title="New session - 2026-02-27T09:10:25.769Z", dir="/home/froa/.config/hypr"
+[2026-02-27T09:14:30.562Z] [notification] scratchpad project_branch: null
+[2026-02-27T09:14:30.564Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T09:14:30.665Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:14:30.665Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T09:14:30.803Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-02-27T09:17:11.493Z] [notification] aoe session detected: "aoe_hypr_main_d888df87" → using aoe-cwd scratchpad directly
+[2026-02-27T09:17:11.710Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:17:11.710Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:17:11.710Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:17:18.697Z] [notification] suppressing duplicate session.idle for ses_3619cb3e9ffehVzpy07ZAAlR1N (10ms since last)
+[2026-02-27T09:17:18.698Z] [notification] session ses_3619cb3e9ffehVzpy07ZAAlR1N: title="Greeting conversation thread title", dir="/home/froa/.config/hypr"
+[2026-02-27T09:17:18.699Z] [notification] scratchpad project_branch: hypr_main
+[2026-02-27T09:17:18.703Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T09:17:18.709Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T09:17:18.709Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:17:18.709Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T09:17:18.783Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T09:17:18.783Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/.config/hypr
+[2026-02-27T09:20:15.922Z] [notification] aoe session detected: "aoe_hyprpanel_main_c4117ff4" → using aoe-cwd scratchpad directly
+[2026-02-27T09:20:16.068Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:20:16.068Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:20:16.068Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:24:41.020Z] [notification] aoe session detected: "aoe_fran_main_d200649b" → using aoe-cwd scratchpad directly
+[2026-02-27T09:24:41.174Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:24:41.174Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:24:41.174Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:25:04.330Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T09:25:04.551Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:25:04.552Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:25:04.552Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:28:28.590Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (9ms since last)
+[2026-02-27T09:28:28.591Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T09:28:28.601Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T09:28:28.606Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T09:28:28.613Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T09:28:28.613Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-27T09:31:04.847Z] [notification] session ses_36197705affe0L6an1p21cKus1: title="Explore notification keybindings (@explore subagent)", dir="/home/froa/.config/hyprpanel"
+[2026-02-27T09:31:04.849Z] [notification] scratchpad project_branch: hyprpanel_main
+[2026-02-27T09:31:04.854Z] [notification] session project_branch: hyprpanel_main, dir: /home/froa/.config/hyprpanel
+[2026-02-27T09:31:04.863Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T09:31:04.863Z] [notification] suppressing: same project_branch (hyprpanel_main)
+[2026-02-27T09:31:04.871Z] [notification] suppressing duplicate session.idle for ses_36197705affe0L6an1p21cKus1 (27ms since last)
+[2026-02-27T09:31:04.889Z] [notification] suppressing duplicate session.idle for ses_36197705affe0L6an1p21cKus1 (45ms since last)
+[2026-02-27T09:31:04.908Z] [notification] suppressing duplicate session.idle for ses_361979352ffeg5cWmNv5c0YV1V (11ms since last)
+[2026-02-27T09:31:04.910Z] [notification] session ses_361979352ffeg5cWmNv5c0YV1V: title="New session - 2026-02-27T09:22:49.645Z", dir="/home/froa/.config/hyprpanel"
+[2026-02-27T09:31:04.918Z] [notification] scratchpad project_branch: hyprpanel_main
+[2026-02-27T09:31:04.922Z] [notification] session project_branch: hyprpanel_main, dir: /home/froa/.config/hyprpanel
+[2026-02-27T09:31:04.939Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T09:31:04.939Z] [notification] suppressing: same project_branch (hyprpanel_main)
+[2026-02-27T09:32:33.018Z] [notification] aoe session detected: "aoe_hyprpanel_main_c4117ff4" → using aoe-cwd scratchpad directly
+[2026-02-27T09:32:33.290Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:32:33.291Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:32:33.291Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:32:40.953Z] [notification] suppressing duplicate session.idle for ses_3618e9a87ffekIV1n4gVMrBoxr (9ms since last)
+[2026-02-27T09:32:40.955Z] [notification] session ses_3618e9a87ffekIV1n4gVMrBoxr: title="Remap mod-g to mod-alt-g for closed notifications panel", dir="/home/froa/.config/hyprpanel"
+[2026-02-27T09:32:40.955Z] [notification] scratchpad project_branch: hyprpanel_main
+[2026-02-27T09:32:40.960Z] [notification] session project_branch: hyprpanel_main, dir: /home/froa/.config/hyprpanel
+[2026-02-27T09:32:40.968Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T09:32:40.968Z] [notification] suppressing: same project_branch (hyprpanel_main)
+[2026-02-27T09:35:20.808Z] [notification] aoe session detected: "aoe_scripts_main_c87c3622" → using aoe-cwd scratchpad directly
+[2026-02-27T09:35:20.993Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:35:20.993Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:35:20.993Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:35:46.251Z] [notification] aoe session detected: "aoe_hyprpanel_main_c4117ff4" → using aoe-cwd scratchpad directly
+[2026-02-27T09:35:46.347Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:35:46.348Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:35:46.348Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:41:40.913Z] [notification] aoe session detected: "aoe_hyprpanel_main_c4117ff4" → using aoe-cwd scratchpad directly
+[2026-02-27T09:41:41.105Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:41:41.105Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:41:41.105Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:43:37.695Z] [notification] aoe session detected: "aoe_hyprpanel_main_c4117ff4" → using aoe-cwd scratchpad directly
+[2026-02-27T09:43:37.911Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:43:37.912Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:43:37.912Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:43:56.682Z] [notification] session ses_3618b0850ffel4EFk2eqekYzjY: title="Find notification panel keybind scripts (@explore subagent)", dir="/home/froa/.config/hypr"
+[2026-02-27T09:43:57.103Z] [notification] scratchpad project_branch: hyprpanel_main
+[2026-02-27T09:43:57.109Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T09:43:57.116Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T09:43:57.116Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:43:57.116Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T09:43:57.202Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T09:43:57.202Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-02-27T09:44:01.653Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T09:44:01.930Z] [notification] scratchpad project_branch: hyprpanel_main
+[2026-02-27T09:44:01.932Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T09:44:01.934Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T09:44:01.934Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:44:01.934Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T09:44:02.018Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T09:44:02.018Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T09:49:42.674Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T09:49:42.843Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T09:49:42.845Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T09:49:42.847Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T09:49:42.847Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:49:42.847Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T09:49:42.878Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T09:49:42.878Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T09:49:46.150Z] [notification] session ses_361849b01ffeCqm0GBvfm5EKqT: title="RSS custom plugin sync issue on Android: KOReader not responding", dir="/home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader"
+[2026-02-27T09:49:46.151Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T09:49:46.155Z] [notification] session project_branch: koreader_master, dir: /home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader
+[2026-02-27T09:49:46.163Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T09:49:46.163Z] [notification] scratchpad hidden → will notify
+[2026-02-27T09:49:46.163Z] [notification] tracked latest notification: koreader_master (/home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader)
+[2026-02-27T09:49:46.283Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=koreader_master
+[2026-02-27T09:49:46.283Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader
+[2026-02-27T09:51:00.510Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T09:51:00.830Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T09:51:00.831Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T09:51:00.836Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T09:51:00.836Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T09:51:00.836Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T09:51:00.940Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T09:51:00.940Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T09:51:48.520Z] [notification] aoe session detected: "aoe_koreader_master_a79b2dc8" → using aoe-cwd scratchpad directly
+[2026-02-27T09:51:48.613Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T09:51:48.613Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T09:51:48.613Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T09:52:36.603Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T09:52:36.828Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T09:52:36.829Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T09:52:36.831Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T09:52:36.831Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T09:52:36.832Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T09:52:36.862Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T09:52:36.862Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T10:02:25.293Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T10:02:25.294Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:02:25.298Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T10:02:25.305Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:02:25.305Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:02:25.305Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-27T10:02:25.375Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-02-27T10:02:25.375Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T10:20:53.120Z] [notification] session ses_361849b01ffeCqm0GBvfm5EKqT: title="RSS custom plugin sync issue on Android: KOReader not responding", dir="/home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader"
+[2026-02-27T10:20:53.125Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:20:53.130Z] [notification] session project_branch: koreader_master, dir: /home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader
+[2026-02-27T10:20:53.148Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:20:53.148Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:20:53.149Z] [notification] tracked latest notification: koreader_master (/home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader)
+[2026-02-27T10:20:53.244Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=koreader_master
+[2026-02-27T10:20:53.244Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/Projects/fran/koreader/koreader-emulator-x86_64-linux-gnu-debug/koreader
+[2026-02-27T10:33:28.263Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T10:33:28.983Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:33:28.987Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T10:33:28.995Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:33:28.995Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:33:28.995Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T10:33:29.073Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T10:33:29.073Z] [notification] spawning watchScript for notifId=11 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T10:34:32.168Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T10:34:32.439Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T10:34:32.439Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T10:34:32.439Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T10:37:47.952Z] [notification] session ses_36153d826ffeCDDf4487QlELTK: title="Find Slack notification action button handler (@explore subagent)", dir="/home/froa/.config/hypr"
+[2026-02-27T10:37:48.135Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:37:48.137Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T10:37:48.138Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:37:48.138Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:37:48.138Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T10:37:48.156Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T10:37:48.156Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/hypr
+[2026-02-27T10:42:15.638Z] [notification] session ses_36152b2a7ffeSv3nAb5vWU2Ht9: title="Find hyprpanel Slack notification action button handler (@explore subagent)", dir="/home/froa/.config/hypr"
+[2026-02-27T10:42:16.054Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:42:16.055Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T10:42:16.062Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:42:16.062Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:42:16.062Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T10:42:16.145Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T10:42:16.145Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr
+[2026-02-27T10:44:33.258Z] [notification] session ses_3614ddce7ffeioDWTJjkL7Huov: title="Investigate notif-cycle scratchpad hiding (@explore subagent)", dir="/home/froa/.config/hypr"
+[2026-02-27T10:44:33.258Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:44:33.263Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T10:44:33.270Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:44:33.270Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:44:33.271Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T10:44:33.398Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T10:44:33.399Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/.config/hypr
+[2026-02-27T10:47:29.397Z] [notification] session ses_3614dc5daffe6Y7FvcliZR1YLd: title="Find AGS/hyprpanel notification action handler (@explore subagent)", dir="/home/froa/.config/hypr"
+[2026-02-27T10:47:29.754Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:47:29.755Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T10:47:29.759Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T10:47:29.759Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T10:47:29.763Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T10:47:29.817Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T10:47:29.817Z] [notification] spawning watchScript for notifId=11 dir=/home/froa/.config/hypr
+[2026-02-27T10:47:54.878Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T10:47:55.408Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:47:55.409Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T10:47:55.414Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T10:47:55.415Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T10:47:55.415Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T10:47:55.509Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T10:47:55.509Z] [notification] spawning watchScript for notifId=12 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T10:48:50.613Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T10:48:50.891Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:48:50.892Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T10:48:50.894Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T10:48:50.894Z] [notification] scratchpad hidden → will notify
+[2026-02-27T10:48:50.894Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T10:48:50.977Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T10:48:50.977Z] [notification] spawning watchScript for notifId=13 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T10:56:21.863Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T10:56:21.881Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (20ms since last)
+[2026-02-27T10:56:21.907Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (46ms since last)
+[2026-02-27T10:56:21.974Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:56:21.979Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T10:56:21.987Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T10:56:21.987Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-27T10:56:53.056Z] [notification] session ses_37613af74ffemY9dlqt2gSFHNR: title="WORKING ON", dir="/home/froa/.config/hypr/scripts"
+[2026-02-27T10:56:53.279Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:56:53.280Z] [notification] session project_branch: scripts_main, dir: /home/froa/.config/hypr/scripts
+[2026-02-27T10:56:53.282Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T10:56:53.282Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T10:56:53.282Z] [notification] tracked latest notification: scripts_main (/home/froa/.config/hypr/scripts)
+[2026-02-27T10:56:53.369Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=scripts_main
+[2026-02-27T10:56:53.369Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/.config/hypr/scripts
+[2026-02-27T10:56:53.557Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T10:56:53.563Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (10ms since last)
+[2026-02-27T10:56:53.592Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (39ms since last)
+[2026-02-27T10:56:53.652Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-27T10:56:53.656Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T10:56:53.664Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T10:56:53.664Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-27T11:03:57.855Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T11:03:58.156Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T11:03:58.157Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T11:03:58.157Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T11:04:41.065Z] [notification] suppressing duplicate session.idle for ses_3613a7871ffethLrHxZ37qJnwK (10ms since last)
+[2026-02-27T11:04:41.066Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:04:41.076Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:04:41.081Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:04:41.090Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:04:41.090Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:04:41.090Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:04:41.171Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:04:41.171Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:05:41.608Z] [notification] suppressing duplicate session.idle for ses_361398ea4ffeUs9O4JTYRPzOcE (20ms since last)
+[2026-02-27T11:05:41.611Z] [notification] session ses_361398ea4ffeUs9O4JTYRPzOcE: title="Resumir artículos raíz (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:05:41.611Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:05:41.615Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:05:41.623Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:05:41.623Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:05:41.623Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:05:41.720Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:05:41.720Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:06:12.492Z] [notification] suppressing duplicate session.idle for ses_361392463ffeKBixhv0M8YUzFK (40ms since last)
+[2026-02-27T11:06:12.496Z] [notification] session ses_361392463ffeKBixhv0M8YUzFK: title="Resumir artículos r_opencodeCLI (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:06:12.496Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:06:12.501Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:06:12.510Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:06:12.510Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:06:12.510Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:06:12.626Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:06:12.626Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:06:35.074Z] [notification] suppressing duplicate session.idle for ses_36138da3bffesvS4QyTFvvtt2X (21ms since last)
+[2026-02-27T11:06:35.078Z] [notification] session ses_36138da3bffesvS4QyTFvvtt2X: title="Resumir artículos r_neovim (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:06:35.078Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:06:35.082Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:06:35.099Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:06:35.099Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:06:35.099Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:06:35.201Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:06:35.202Z] [notification] spawning watchScript for notifId=22 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:06:46.685Z] [notification] suppressing duplicate session.idle for ses_36138a264ffeGGQUUNVrJKd06E (10ms since last)
+[2026-02-27T11:06:46.686Z] [notification] session ses_36138a264ffeGGQUUNVrJKd06E: title="Resumir artículos r_ClaudeCode y r_GithubCopilot (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:06:46.687Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:06:46.688Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:06:46.693Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:06:46.693Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:06:46.693Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:06:46.728Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:06:46.728Z] [notification] spawning watchScript for notifId=23 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:07:08.246Z] [notification] suppressing duplicate session.idle for ses_361385354ffe3zuoqr2rQApqPJ (35ms since last)
+[2026-02-27T11:07:08.250Z] [notification] session ses_361385354ffe3zuoqr2rQApqPJ: title="Resumir artículos r_hyprland, r_koreader, r_n8n, Joe Njenga, JP Caparas (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:07:08.250Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:07:08.255Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:07:08.271Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:07:08.271Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:07:08.272Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:07:08.405Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:07:08.405Z] [notification] spawning watchScript for notifId=24 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:07:42.336Z] [notification] session ses_36139600cffeulaPWNpbFY8Ms9: title="Resumir artículos Agentic AI (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:07:42.336Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:07:42.341Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:07:42.349Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:07:42.349Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:07:42.350Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:07:42.416Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:07:42.416Z] [notification] spawning watchScript for notifId=25 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:07:50.109Z] [notification] session ses_3613943eeffevmG16dplaPMm8p: title="Resumir artículos Kubernetes (@explore subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:07:50.140Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:07:50.144Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:07:50.152Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:07:50.152Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:07:50.152Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:07:50.252Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:07:50.252Z] [notification] spawning watchScript for notifId=26 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:08:15.574Z] [notification] suppressing duplicate session.idle for ses_3613740f1ffemgki5tlqX4RJ0A (23ms since last)
+[2026-02-27T11:08:15.578Z] [notification] session ses_3613740f1ffemgki5tlqX4RJ0A: title="Resumir artículos raíz (reintento) (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:08:15.579Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:08:15.583Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:08:15.606Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T11:08:15.606Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T11:08:15.606Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:08:15.701Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:08:15.701Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:08:34.300Z] [notification] suppressing duplicate session.idle for ses_361370725ffeiCf7ji41fqXI3h (20ms since last)
+[2026-02-27T11:08:34.302Z] [notification] session ses_361370725ffeiCf7ji41fqXI3h: title="Resumir artículos r_opencodeCLI (reintento) (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:08:34.303Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:08:34.308Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:08:34.315Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:08:34.315Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:08:34.315Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:08:34.430Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:08:34.430Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:08:55.197Z] [notification] suppressing duplicate session.idle for ses_36136bc33ffeBCbzDM32hAFF7l (27ms since last)
+[2026-02-27T11:08:55.200Z] [notification] session ses_36136bc33ffeBCbzDM32hAFF7l: title="Resumir artículos r_neovim (reintento) (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:08:55.200Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:08:55.205Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:08:55.215Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:08:55.215Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:08:55.215Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:08:55.334Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:08:55.334Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:09:08.580Z] [notification] suppressing duplicate session.idle for ses_36136830affef23MmsaA10GycO (45ms since last)
+[2026-02-27T11:09:08.584Z] [notification] session ses_36136830affef23MmsaA10GycO: title="Resumir r_ClaudeCode y r_GithubCopilot (reintento) (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:09:08.585Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:09:08.589Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:09:08.595Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:09:08.595Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:09:08.595Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:09:08.708Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:09:08.708Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:09:31.218Z] [notification] suppressing duplicate session.idle for ses_361362d04ffeqaMUowwTu7EnAq (47ms since last)
+[2026-02-27T11:09:31.221Z] [notification] session ses_361362d04ffeqaMUowwTu7EnAq: title="Resumir r_hyprland, r_koreader, r_n8n, Joe Njenga, JP Caparas (reintento) (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:09:31.243Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:09:31.248Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:09:31.265Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T11:09:31.265Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T11:09:31.265Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:09:31.413Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:09:31.413Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:09:33.356Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T11:09:33.505Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:09:33.509Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T11:09:33.520Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T11:09:33.520Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T11:10:10.795Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:10:10.795Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:10:10.800Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:10:10.811Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T11:10:10.811Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T11:10:10.811Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:10:10.929Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:10:10.929Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:11:58.934Z] [notification] suppressing duplicate session.idle for ses_36133d28cffeovX1oMvG8gmnHR (16ms since last)
+[2026-02-27T11:11:58.937Z] [notification] session ses_36133d28cffeovX1oMvG8gmnHR: title="Summarize root dir articles (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:11:58.937Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:11:58.942Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:11:58.959Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:11:58.959Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:11:58.959Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:11:59.117Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:11:59.118Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:04.798Z] [notification] session ses_36133d01affe1RbWm7C20iF1UR: title="Summarize Agentic AI folder (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_36133ca45ffedeVD4THENRlq7X: title="Summarize Kubernetes folder (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_36133c3e4ffeO8DvvTJr03hdw7: title="Summarize r_opencodeCLI folder (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_36133bef1ffeltJUPeYSKCPbJn: title="Summarize r_neovim folder (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_36133b5aeffe9e4Qzp1pXCPtOc: title="Summarize r_ClaudeCode + r_GithubCopilot folders (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_36133ab9bffesVCTvlbedghS3n: title="Summarize r_hyprland + r_koreader + r_n8n folders (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_361339eaeffeDIbFO61vDBRdt2: title="Summarize Joe Njenga + JP Caparas folders (@general subagent)", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.798Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:12:04.804Z] [notification] suppressing duplicate session.idle for ses_36133d01affe1RbWm7C20iF1UR (16ms since last)
+[2026-02-27T11:12:04.811Z] [notification] suppressing duplicate session.idle for ses_36133d01affe1RbWm7C20iF1UR (23ms since last)
+[2026-02-27T11:12:04.814Z] [notification] suppressing duplicate session.idle for ses_3613a7871ffethLrHxZ37qJnwK (26ms since last)
+[2026-02-27T11:12:04.826Z] [notification] suppressing duplicate session.idle for ses_3613a7871ffethLrHxZ37qJnwK (38ms since last)
+[2026-02-27T11:12:04.830Z] [notification] suppressing duplicate session.idle for ses_36133ca45ffedeVD4THENRlq7X (42ms since last)
+[2026-02-27T11:12:04.835Z] [notification] suppressing duplicate session.idle for ses_36133ca45ffedeVD4THENRlq7X (47ms since last)
+[2026-02-27T11:12:04.844Z] [notification] suppressing duplicate session.idle for ses_36133c3e4ffeO8DvvTJr03hdw7 (56ms since last)
+[2026-02-27T11:12:04.861Z] [notification] suppressing duplicate session.idle for ses_36133c3e4ffeO8DvvTJr03hdw7 (73ms since last)
+[2026-02-27T11:12:04.868Z] [notification] suppressing duplicate session.idle for ses_36133bef1ffeltJUPeYSKCPbJn (80ms since last)
+[2026-02-27T11:12:04.882Z] [notification] suppressing duplicate session.idle for ses_36133bef1ffeltJUPeYSKCPbJn (94ms since last)
+[2026-02-27T11:12:04.887Z] [notification] suppressing duplicate session.idle for ses_36133b5aeffe9e4Qzp1pXCPtOc (99ms since last)
+[2026-02-27T11:12:04.892Z] [notification] suppressing duplicate session.idle for ses_36133b5aeffe9e4Qzp1pXCPtOc (104ms since last)
+[2026-02-27T11:12:04.895Z] [notification] suppressing duplicate session.idle for ses_361339eaeffeDIbFO61vDBRdt2 (107ms since last)
+[2026-02-27T11:12:04.899Z] [notification] suppressing duplicate session.idle for ses_361339eaeffeDIbFO61vDBRdt2 (111ms since last)
+[2026-02-27T11:12:04.899Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:04.904Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:04.914Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:04.914Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:04.915Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:05.083Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:05.083Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.084Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:05.087Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.095Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:05.095Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:05.095Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:05.214Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:05.214Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.215Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:05.216Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.224Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:05.224Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:05.224Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:05.394Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:05.394Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.395Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:05.396Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.407Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:05.407Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:05.407Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:05.480Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:05.480Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.480Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:05.481Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.491Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:05.491Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:05.491Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:05.550Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:05.550Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.550Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:05.551Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.561Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:05.561Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:05.561Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:05.790Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:05.790Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.791Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:05.796Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:05.810Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:05.810Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:05.810Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:06.136Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:06.136Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:06.137Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:12:06.142Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:12:06.149Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:12:06.149Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:12:06.149Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:12:06.437Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:12:06.437Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:12:06.440Z] [notification] suppressing duplicate session.idle for ses_36133ab9bffesVCTvlbedghS3n (1652ms since last)
+[2026-02-27T11:12:06.443Z] [notification] suppressing duplicate session.idle for ses_36133ab9bffesVCTvlbedghS3n (1655ms since last)
+[2026-02-27T11:14:41.954Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:14:41.954Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:14:41.959Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:14:41.966Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:14:41.966Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:14:41.966Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:14:42.142Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:14:42.142Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:45:22.399Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T11:45:22.485Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:45:22.486Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T11:45:22.489Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:45:22.489Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:45:22.489Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T11:45:22.692Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T11:45:22.692Z] [notification] spawning watchScript for notifId=46 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T11:45:49.379Z] [notification] aoe session detected: "aoe_ReadItLater_main_3abe0132" → using aoe-cwd scratchpad directly
+[2026-02-27T11:45:49.432Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T11:45:49.432Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T11:45:49.432Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T11:47:38.763Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:47:38.777Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:47:38.782Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:47:38.790Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:47:38.790Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:47:38.790Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:47:38.958Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:47:38.958Z] [notification] spawning watchScript for notifId=47 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:53:59.583Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:53:59.589Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:53:59.594Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:53:59.615Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:53:59.615Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:53:59.615Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:53:59.691Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:53:59.691Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T11:55:44.438Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T11:55:44.445Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T11:55:44.450Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T11:55:44.460Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T11:55:44.460Z] [notification] scratchpad hidden → will notify
+[2026-02-27T11:55:44.460Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T11:55:44.556Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T11:55:44.556Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T12:00:47.530Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T12:00:47.649Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T12:00:47.652Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T12:00:47.657Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T12:00:47.657Z] [notification] scratchpad hidden → will notify
+[2026-02-27T12:00:47.658Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T12:00:47.750Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T12:00:47.750Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T12:19:06.250Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T12:19:06.258Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T12:19:06.272Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T12:19:06.279Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T12:19:06.279Z] [notification] scratchpad hidden → will notify
+[2026-02-27T12:19:06.279Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T12:19:06.382Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T12:19:06.382Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T12:21:49.138Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T12:21:49.146Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T12:21:49.151Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T12:21:49.162Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T12:21:49.162Z] [notification] scratchpad hidden → will notify
+[2026-02-27T12:21:49.162Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T12:21:49.273Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T12:21:49.273Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T13:53:00.774Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T13:53:00.832Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T13:53:00.834Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T13:53:00.844Z] [notification] scratchpad: visible=true, workspace=5
+[2026-02-27T13:53:00.844Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T13:56:39.284Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T13:56:39.381Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T13:56:39.382Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T13:56:39.384Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T13:56:39.384Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T14:02:52.026Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T14:02:52.115Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T14:02:52.117Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T14:02:52.128Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T14:02:52.128Z] [notification] scratchpad hidden → will notify
+[2026-02-27T14:02:52.128Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T14:02:52.299Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T14:02:52.299Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T14:21:37.242Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T14:21:37.402Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T14:21:37.406Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T14:21:37.412Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T14:21:37.412Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T14:28:42.046Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T14:28:42.207Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T14:28:42.212Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T14:28:42.220Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T14:28:42.220Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T14:38:14.732Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T14:38:14.879Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T14:38:14.884Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T14:38:14.894Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T14:38:14.894Z] [notification] scratchpad hidden → will notify
+[2026-02-27T14:38:14.895Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T14:38:15.061Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T14:38:15.061Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T17:16:49.419Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:16:49.421Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:16:49.422Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:16:49.425Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:16:49.425Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:16:49.425Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:16:49.461Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:16:49.461Z] [notification] spawning watchScript for notifId=26 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:21:06.087Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:21:06.090Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:21:06.092Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:21:06.096Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:21:06.096Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:21:06.096Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:21:06.124Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:21:06.124Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:22:44.708Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:22:44.719Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:22:44.723Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:22:44.731Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:22:44.732Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:22:44.732Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:22:44.862Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:22:44.862Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:24:46.594Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:24:46.605Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:24:46.610Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:24:46.622Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:24:46.622Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:24:46.622Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:24:46.839Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:24:46.839Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:29:23.202Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:29:23.214Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:29:23.219Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:29:23.233Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:29:23.233Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T17:29:23.233Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:29:23.432Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:29:23.432Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:29:58.119Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:29:58.130Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:29:58.135Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:29:58.147Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:29:58.147Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:29:58.147Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:29:58.293Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:29:58.294Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:31:24.254Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:31:24.268Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:31:24.273Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:31:24.286Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:31:24.286Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:31:24.286Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:31:24.411Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:31:24.411Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:32:48.290Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (23ms since last)
+[2026-02-27T17:32:48.292Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:32:48.384Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:32:48.387Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:32:48.406Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:32:48.406Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T17:35:19.936Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:35:20.151Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:35:20.156Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:35:20.164Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:35:20.164Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T17:39:22.051Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:39:22.074Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:39:22.077Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:39:22.082Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:39:22.082Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:39:22.082Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:39:22.285Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:39:22.285Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:40:30.120Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:40:30.156Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:40:30.160Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:40:30.177Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:40:30.178Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T17:40:30.178Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:40:30.382Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:40:30.383Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:44:47.099Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (81ms since last)
+[2026-02-27T17:44:47.102Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:44:47.213Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:44:47.217Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:44:47.227Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:44:47.227Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:44:47.227Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T17:44:47.409Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T17:44:47.409Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T17:45:16.251Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (73ms since last)
+[2026-02-27T17:45:16.253Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:45:16.374Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:45:16.379Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:45:16.405Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:45:16.405Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:45:16.405Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T17:45:16.619Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T17:45:16.619Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T17:45:50.983Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:45:51.024Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:45:51.029Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:45:51.037Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:45:51.037Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:45:51.037Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:45:51.254Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:45:51.254Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:48:15.521Z] [notification] suppressing duplicate session.idle for ses_3619272d7ffeIvYy9RST0hodXl (64ms since last)
+[2026-02-27T17:48:15.522Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:48:15.562Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:48:15.564Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:48:15.569Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:48:15.569Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:48:15.569Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T17:48:15.659Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T17:48:15.659Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T17:48:47.474Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:48:47.518Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:48:47.524Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:48:47.540Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:48:47.540Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:48:47.541Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:48:47.774Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:48:47.774Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:50:37.822Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:50:37.875Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:50:37.876Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:50:37.878Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:50:37.878Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T17:50:39.501Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:50:39.545Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:50:39.550Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:50:39.566Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:50:39.566Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-27T17:50:39.566Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:50:39.714Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:50:39.714Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:51:30.479Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:51:30.675Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:51:30.681Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:51:30.688Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:51:30.688Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:51:30.689Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T17:51:30.918Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T17:51:30.918Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T17:52:12.433Z] [notification] session ses_3613a7871ffethLrHxZ37qJnwK: title="Resumen de artículos que tengo aquí", dir="/home/froa/Documents/ReadItLater"
+[2026-02-27T17:52:12.473Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:52:12.476Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-27T17:52:12.486Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T17:52:12.486Z] [notification] scratchpad hidden → will notify
+[2026-02-27T17:52:12.486Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-27T17:52:12.650Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-27T17:52:12.650Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/Documents/ReadItLater
+[2026-02-27T17:53:31.604Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:53:31.717Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:53:31.719Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:53:31.721Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:53:31.721Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T17:56:47.148Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T17:56:47.304Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T17:56:47.310Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T17:56:47.331Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T17:56:47.331Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T18:00:48.510Z] [notification] session ses_3619272d7ffeIvYy9RST0hodXl: title="Creación de AGENTS.md para libro 8.50x8.50 de alta calidad", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T18:00:48.646Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T18:00:48.651Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T18:00:48.657Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T18:00:48.658Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T20:34:34.309Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T20:34:34.449Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T20:34:34.449Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T20:34:34.449Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T20:35:29.791Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T20:35:29.968Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T20:35:29.969Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T20:35:29.969Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T20:42:50.716Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T20:42:50.729Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T20:42:50.734Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T20:42:50.745Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T20:42:50.745Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T20:43:42.745Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T20:43:42.938Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T20:43:42.939Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T20:43:42.939Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T20:44:58.868Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T20:44:59.103Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T20:44:59.104Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T20:44:59.104Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T20:46:15.010Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T20:46:15.011Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T20:46:15.015Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T20:46:15.028Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T20:46:15.028Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T20:46:15.060Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (52ms since last)
+[2026-02-27T20:47:35.037Z] [notification] session ses_35f259cf0ffevoEhVSgvnR400F: title="Explore book-editor codebase (@explore subagent)", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T20:47:35.038Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T20:47:35.043Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T20:47:35.053Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T20:47:35.053Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T20:53:35.205Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T20:53:35.215Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T20:53:35.220Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T20:53:35.226Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T20:53:35.226Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T20:54:23.657Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T20:54:23.670Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T20:54:23.675Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T20:54:23.684Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T20:54:23.684Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T20:54:59.615Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T20:54:59.629Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T20:54:59.634Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T20:54:59.655Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T20:54:59.655Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T21:02:41.789Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T21:02:41.954Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T21:02:41.954Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T21:02:41.954Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T21:05:22.297Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:05:22.305Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (11ms since last)
+[2026-02-27T21:05:22.305Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:05:22.310Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:05:22.317Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:05:22.317Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:05:22.393Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:05:22.393Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:05:22.441Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (147ms since last)
+[2026-02-27T21:06:22.401Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:06:22.405Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (7ms since last)
+[2026-02-27T21:06:22.406Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:06:22.410Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:06:22.429Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:06:22.430Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:06:22.517Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:06:22.517Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:06:22.566Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (168ms since last)
+[2026-02-27T21:06:39.498Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:06:39.498Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:06:39.503Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:06:39.512Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:06:39.512Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:06:39.605Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:06:39.605Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:06:39.652Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (157ms since last)
+[2026-02-27T21:07:10.469Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:07:10.474Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (7ms since last)
+[2026-02-27T21:07:10.491Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (24ms since last)
+[2026-02-27T21:07:10.511Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:07:10.516Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:07:10.523Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:07:10.524Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:07:10.666Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:07:10.666Z] [notification] spawning watchScript for notifId=22 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:07:20.219Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T21:07:20.403Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T21:07:20.403Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T21:07:20.403Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T21:16:23.202Z] [notification] session ses_35f293b42ffeZNnDvdvTYzkp75: title="New session - 2026-02-27T20:42:35.581Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:16:23.202Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:16:23.209Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:16:23.218Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T21:16:23.218Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T21:16:23.276Z] [notification] suppressing duplicate session.idle for ses_35f293b42ffeZNnDvdvTYzkp75 (78ms since last)
+[2026-02-27T21:16:30.920Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T21:16:31.093Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T21:16:31.094Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T21:16:31.094Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T21:18:54.231Z] [notification] session ses_35f090d2effeGyYcbkYEuEkHNA: title="Explore codebase structure (@explore subagent)", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:18:54.232Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:18:54.237Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:18:54.245Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T21:18:54.245Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T21:22:28.692Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:22:28.692Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:22:28.697Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:22:28.726Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-27T21:22:28.727Z] [notification] suppressing: same project_branch (book-editor_master)
+[2026-02-27T21:24:44.980Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T21:24:45.164Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T21:24:45.164Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T21:24:45.164Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T21:25:53.202Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:25:53.202Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:25:53.207Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:25:53.223Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:25:53.223Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:25:53.224Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:25:53.342Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:25:53.342Z] [notification] spawning watchScript for notifId=25 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:27:56.702Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:27:56.702Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:27:56.704Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:27:56.714Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:27:56.714Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:27:56.714Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:27:56.822Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:27:56.822Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:27:56.874Z] [notification] suppressing duplicate session.idle for ses_35f0933dfffeh9l81ERr1qfZCt (173ms since last)
+[2026-02-27T21:43:48.683Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:43:48.688Z] [notification] suppressing duplicate session.idle for ses_35f0933dfffeh9l81ERr1qfZCt (9ms since last)
+[2026-02-27T21:43:48.689Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:43:48.694Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:43:48.717Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:43:48.717Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:43:48.717Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:43:48.860Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:43:48.861Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:43:49.352Z] [notification] suppressing duplicate session.idle for ses_35f0933dfffeh9l81ERr1qfZCt (673ms since last)
+[2026-02-27T21:43:57.605Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:43:57.605Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:43:57.610Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:43:57.624Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:43:57.624Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:43:57.625Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:43:57.757Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:43:57.757Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:43:58.065Z] [notification] suppressing duplicate session.idle for ses_35f0933dfffeh9l81ERr1qfZCt (463ms since last)
+[2026-02-27T21:50:15.494Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:50:16.163Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:50:16.166Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:50:16.172Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:50:16.172Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:50:16.172Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:50:16.298Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:50:16.298Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:53:02.024Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:53:02.605Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:53:02.607Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:53:02.609Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:53:02.609Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:53:02.609Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:53:02.722Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:53:02.722Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T21:53:38.357Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T21:53:38.942Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T21:53:38.943Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T21:53:38.945Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T21:53:38.945Z] [notification] scratchpad hidden → will notify
+[2026-02-27T21:53:38.945Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T21:53:39.018Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T21:53:39.018Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T22:01:31.638Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T22:01:31.863Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T22:01:31.863Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T22:01:31.863Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T22:03:38.679Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:03:38.679Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:03:38.684Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:03:38.692Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:03:38.692Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:03:38.692Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:03:38.877Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:03:38.877Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/.config/hypr
+[2026-02-27T22:04:23.138Z] [notification] suppressing duplicate session.idle for ses_35ee0ac74ffe3lS2dGHsf1dSol (11ms since last)
+[2026-02-27T22:04:23.140Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:04:23.140Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:04:23.143Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:04:23.160Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:04:23.160Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:04:23.160Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:04:23.274Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:04:23.274Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/.config/hypr
+[2026-02-27T22:04:59.273Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:04:59.274Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:04:59.279Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:04:59.297Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:04:59.297Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:04:59.297Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:04:59.499Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:04:59.499Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/.config/hypr
+[2026-02-27T22:05:28.008Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:05:28.009Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:05:28.014Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:05:28.022Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:05:28.022Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:05:28.022Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:05:28.213Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:05:28.213Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/.config/hypr
+[2026-02-27T22:05:50.765Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:05:50.766Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:05:50.771Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:05:50.787Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:05:50.788Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:05:50.788Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:05:50.943Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:05:50.943Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/.config/hypr
+[2026-02-27T22:06:28.461Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:06:28.462Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:06:28.467Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:06:28.477Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:06:28.478Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:06:28.478Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:06:28.692Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:06:28.692Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/.config/hypr
+[2026-02-27T22:07:05.438Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:07:05.438Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:07:05.443Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:07:05.450Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:07:05.450Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:07:05.450Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:07:05.608Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:07:05.608Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/.config/hypr
+[2026-02-27T22:07:21.199Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:07:21.199Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:07:21.204Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:07:21.212Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:07:21.212Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:07:21.212Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:07:21.351Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:07:21.351Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/.config/hypr
+[2026-02-27T22:08:05.412Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:08:05.412Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:08:05.414Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:08:05.416Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:08:05.416Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:08:05.416Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:08:05.450Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:08:05.450Z] [notification] spawning watchScript for notifId=22 dir=/home/froa/.config/hypr
+[2026-02-27T22:09:04.390Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:09:04.391Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:09:04.396Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:09:04.408Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:09:04.408Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:09:04.409Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:09:04.535Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:09:04.535Z] [notification] spawning watchScript for notifId=25 dir=/home/froa/.config/hypr
+[2026-02-27T22:09:39.591Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:09:39.599Z] [notification] suppressing duplicate session.idle for ses_35ee0ac74ffe3lS2dGHsf1dSol (11ms since last)
+[2026-02-27T22:09:39.610Z] [notification] suppressing duplicate session.idle for ses_35ee0ac74ffe3lS2dGHsf1dSol (21ms since last)
+[2026-02-27T22:09:39.611Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:09:39.615Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:09:39.622Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:09:39.622Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:09:39.622Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:09:39.809Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:09:39.809Z] [notification] spawning watchScript for notifId=26 dir=/home/froa/.config/hypr
+[2026-02-27T22:11:56.787Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:11:56.788Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:11:56.792Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:11:56.808Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:11:56.808Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:11:56.808Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:11:56.898Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:11:56.898Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/.config/hypr
+[2026-02-27T22:12:11.575Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:12:11.576Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:12:11.580Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:12:11.601Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:12:11.602Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:12:11.602Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:12:11.758Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:12:11.758Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/.config/hypr
+[2026-02-27T22:13:06.376Z] [notification] session ses_35ee0ac74ffe3lS2dGHsf1dSol: title="Pantalla tiembla o parpadea - diagnóstico y soluciones", dir="/home/froa/.config/hypr"
+[2026-02-27T22:13:06.379Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:13:06.384Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:13:06.391Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:13:06.391Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:13:06.391Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:13:06.564Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:13:06.564Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/.config/hypr
+[2026-02-27T22:17:37.237Z] [notification] session ses_35ed555c5ffe1KoGeo7gY79dh0: title="Actualización wallust template con últimos cambios wlr-which-key plano", dir="/home/froa/.config/hypr"
+[2026-02-27T22:17:37.238Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:17:37.243Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:17:37.256Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:17:37.256Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:17:37.256Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:17:37.386Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:17:37.386Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/.config/hypr
+[2026-02-27T22:18:05.202Z] [notification] session ses_35ed555c5ffe1KoGeo7gY79dh0: title="Actualización wallust template con últimos cambios wlr-which-key plano", dir="/home/froa/.config/hypr"
+[2026-02-27T22:18:05.203Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:18:05.207Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:18:05.220Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:18:05.220Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:18:05.220Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:18:05.387Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:18:05.387Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/.config/hypr
+[2026-02-27T22:24:55.575Z] [notification] session ses_35ed555c5ffe1KoGeo7gY79dh0: title="Actualización wallust template con últimos cambios wlr-which-key plano", dir="/home/froa/.config/hypr"
+[2026-02-27T22:24:55.575Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:24:55.580Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-02-27T22:24:55.590Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:24:55.590Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:24:55.590Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-02-27T22:24:55.730Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=hypr_main
+[2026-02-27T22:24:55.730Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/.config/hypr
+[2026-02-27T22:34:25.796Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T22:34:29.265Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:34:29.266Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T22:34:29.269Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:34:29.269Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:34:29.269Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T22:34:29.380Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T22:34:29.381Z] [notification] spawning watchScript for notifId=22 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T22:38:46.319Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T22:38:49.613Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:38:49.614Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T22:38:49.627Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:38:49.627Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:38:49.627Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T22:38:49.713Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T22:38:49.713Z] [notification] spawning watchScript for notifId=23 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T22:55:37.448Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T22:55:37.677Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T22:55:37.677Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T22:55:37.677Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T22:59:22.739Z] [notification] session ses_35f0933dfffeh9l81ERr1qfZCt: title="New session - 2026-02-27T21:17:34.624Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T22:59:28.837Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T22:59:28.839Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T22:59:28.841Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T22:59:28.841Z] [notification] scratchpad hidden → will notify
+[2026-02-27T22:59:28.841Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T22:59:28.919Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T22:59:28.919Z] [notification] spawning watchScript for notifId=24 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:00:44.204Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="New session - 2026-02-27T23:00:43.392Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:00:44.205Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:00:44.210Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:00:44.218Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:00:44.218Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:00:44.218Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:00:44.383Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:00:44.383Z] [notification] spawning watchScript for notifId=25 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:00:44.559Z] [notification] suppressing duplicate session.idle for ses_35eaac4ffffeKx1EyZEjNf170t (358ms since last)
+[2026-02-27T23:00:44.578Z] [notification] suppressing duplicate session.idle for ses_35eaac4ffffeKx1EyZEjNf170t (377ms since last)
+[2026-02-27T23:00:56.143Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:00:56.143Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:00:56.145Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:00:56.155Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:00:56.155Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:00:56.155Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:00:56.258Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:00:56.259Z] [notification] spawning watchScript for notifId=26 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:00:56.286Z] [notification] suppressing duplicate session.idle for ses_35eaac4ffffeKx1EyZEjNf170t (144ms since last)
+[2026-02-27T23:06:25.207Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:06:25.407Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:06:25.409Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:06:25.411Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:06:25.411Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:06:25.411Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:06:25.528Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:06:25.528Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:16:08.641Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:16:08.827Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:16:08.829Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:16:08.831Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:16:08.831Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:16:08.831Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:16:08.862Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:16:08.862Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:16:39.505Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:16:39.687Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:16:39.688Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:16:39.690Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:16:39.690Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:16:39.690Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:16:39.779Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:16:39.780Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:20:02.999Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:20:03.250Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:20:03.252Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:20:03.254Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:20:03.254Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:20:03.254Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:20:03.366Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:20:03.366Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:24:08.671Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T23:24:08.954Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T23:24:08.955Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T23:24:08.955Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T23:24:51.976Z] [notification] session ses_35e94e746ffemP8qQ6O99yAEq3: title="Clarify --book and --config in build.py usage", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:24:51.980Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:24:51.989Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:24:52.009Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:24:52.009Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:24:52.009Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:24:52.170Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:24:52.170Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:26:53.351Z] [notification] session ses_35e94e746ffemP8qQ6O99yAEq3: title="Clarify --book and --config in build.py usage", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:26:53.355Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:26:53.369Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:26:53.383Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:26:53.383Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:26:53.383Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:26:53.529Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:26:53.529Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:32:23.551Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-27T23:32:23.701Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-27T23:32:23.701Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-27T23:32:23.701Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-27T23:32:31.244Z] [notification] suppressing duplicate session.idle for ses_35e8dbb6dffe5XIUPyNpUGCnNs (9ms since last)
+[2026-02-27T23:32:31.245Z] [notification] session ses_35e8dbb6dffe5XIUPyNpUGCnNs: title="Quick check: test conversation title", dir="/home/froa/.opencode"
+[2026-02-27T23:32:31.245Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:32:31.249Z] [notification] session project_branch: .opencode_main, dir: /home/froa/.opencode
+[2026-02-27T23:32:31.260Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:32:31.261Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:32:31.261Z] [notification] tracked latest notification: .opencode_main (/home/froa/.opencode)
+[2026-02-27T23:32:31.401Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=.opencode_main
+[2026-02-27T23:32:31.401Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/.opencode
+[2026-02-27T23:32:39.551Z] [notification] suppressing duplicate session.idle for ses_35e8dbb6dffe5XIUPyNpUGCnNs (19ms since last)
+[2026-02-27T23:32:39.556Z] [notification] session ses_35e8dbb6dffe5XIUPyNpUGCnNs: title="Quick check: test conversation title", dir="/home/froa/.opencode"
+[2026-02-27T23:32:39.557Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:32:39.561Z] [notification] session project_branch: .opencode_main, dir: /home/froa/.opencode
+[2026-02-27T23:32:39.575Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:32:39.575Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:32:39.575Z] [notification] tracked latest notification: .opencode_main (/home/froa/.opencode)
+[2026-02-27T23:32:39.727Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=.opencode_main
+[2026-02-27T23:32:39.727Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/.opencode
+[2026-02-27T23:32:50.587Z] [notification] suppressing duplicate session.idle for ses_35e8dbb6dffe5XIUPyNpUGCnNs (8ms since last)
+[2026-02-27T23:32:50.589Z] [notification] session ses_35e8dbb6dffe5XIUPyNpUGCnNs: title="Quick check: test conversation title", dir="/home/froa/.opencode"
+[2026-02-27T23:32:50.589Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:32:50.593Z] [notification] session project_branch: .opencode_main, dir: /home/froa/.opencode
+[2026-02-27T23:32:50.601Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:32:50.601Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:32:50.601Z] [notification] tracked latest notification: .opencode_main (/home/froa/.opencode)
+[2026-02-27T23:32:50.754Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=.opencode_main
+[2026-02-27T23:32:50.754Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/.opencode
+[2026-02-27T23:33:01.233Z] [notification] suppressing duplicate session.idle for ses_35e8dbb6dffe5XIUPyNpUGCnNs (8ms since last)
+[2026-02-27T23:33:01.234Z] [notification] session ses_35e8dbb6dffe5XIUPyNpUGCnNs: title="Quick check: test conversation title", dir="/home/froa/.opencode"
+[2026-02-27T23:33:01.235Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:33:01.240Z] [notification] session project_branch: .opencode_main, dir: /home/froa/.opencode
+[2026-02-27T23:33:01.255Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:33:01.255Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:33:01.255Z] [notification] tracked latest notification: .opencode_main (/home/froa/.opencode)
+[2026-02-27T23:33:01.407Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=.opencode_main
+[2026-02-27T23:33:01.407Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/.opencode
+[2026-02-27T23:36:04.529Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:36:05.464Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:36:05.466Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:36:05.472Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:36:05.472Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:36:05.472Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:36:05.539Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:36:05.539Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Projects/fran/book-editor
+[2026-02-27T23:43:30.825Z] [notification] session ses_35eaac4ffffeKx1EyZEjNf170t: title="Implement global defaults with per-type overrides in YAML", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-27T23:43:32.141Z] [notification] scratchpad project_branch: book-editor_master
+[2026-02-27T23:43:32.142Z] [notification] session project_branch: book-editor_master, dir: /home/froa/Projects/fran/book-editor
+[2026-02-27T23:43:32.144Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-27T23:43:32.144Z] [notification] scratchpad hidden → will notify
+[2026-02-27T23:43:32.144Z] [notification] tracked latest notification: book-editor_master (/home/froa/Projects/fran/book-editor)
+[2026-02-27T23:43:32.250Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_master
+[2026-02-27T23:43:32.250Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Projects/fran/book-editor

@@ -1,0 +1,4 @@
+pane	citadel-ai	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+window	citadel-ai	0	:fish	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+state	citadel-ai	

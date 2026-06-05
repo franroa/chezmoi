@@ -1,0 +1,7 @@
+pane	firecast-builder	0	1	:*Z	0	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	nvim	:/tmp/.mount_nvimhJAMAN/usr/bin/nvim
+pane	firecast-builder	0	1	:*Z	1	⠂ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	hypr	0	1	:*Z	0	✳ Configure external monitor display setup	:/home/froa/.config/hypr	1	claude	:bash
+pane	hypr	0	1	:*Z	1	~/.c/hypr	:/home/froa/.config/hypr	0	fish	:
+window	firecast-builder	0	:claude	1	:*Z	6240,278x71,0,0{140x71,0,0,8,137x71,141,0,9}	:
+window	hypr	0	:claude	1	:*Z	ae98,278x71,0,0{139x71,0,0,10,138x71,140,0,11}	:
+state	firecast-builder	hypr

@@ -1,0 +1,19 @@
+pane	aoe_P0004-703-session-na_9f2dcc13	0	1	:*Z	0	✳ Claude Code	:/home/froa/Projects/ts/azure-db-postgresql-tfmod/.aoe-worktrees/P0004-703-session-name	1	claude	:npm exec @upstash/context7-mcp
+/home/froa/.local/bin/uv tool uvx --from git+https://github.com/oraios/serena serena start-mcp-server
+docker run -i --rm -e TFE_TOKEN=${TFE_TOKEN} hashicorp/terraform-mcp-server:0.4.0
+npm exec @azure/mcp@latest server start
+pane	aoe_P0004-703-session-na_9f2dcc13	0	1	:*Z	1	~/P/t/a/.a/P0004-703-session-name	:/home/froa/Projects/ts/azure-db-postgresql-tfmod/.aoe-worktrees/P0004-703-session-name	0	fish	:
+pane	citadel-ai	0	1	:*Z	0	🤖 Creating per-plugin MRs	:/home/froa/Projects/ts/citadel-ai	0	node	:node /home/froa/.local/share/nvm/v25.4.0/bin/copilot
+pane	citadel-ai	0	1	:*Z	1	✳ Remove duplicate GitLab skills from platform	:/home/froa/Projects/ts/citadel-ai	1	claude	:claude
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	fish	0	1	:*Z	0	✳ Debug kubie ctx command in fish shell	:/home/froa/.config/fish	0	claude	:bash
+pane	fish	0	1	:*Z	1	~/.c/fish	:/home/froa/.config/fish	1	fish	:
+pane	fran-local-synapse	0	1	:*Z	0	nvim ~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	1	nvim	:/tmp/.mount_nvimhCdjcB/usr/bin/nvim
+pane	fran-local-synapse	0	1	:*Z	1	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	0	fish	:
+window	aoe_P0004-703-session-na_9f2dcc13	0	:claude	1	:*Z	ae98,278x71,0,0{139x71,0,0,10,138x71,140,0,11}	:
+window	citadel-ai	0	:claude	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+window	firecast-builder	0	:claude	1	:*Z	5e8e,278x71,0,0{139x71,0,0,6,138x71,140,0,7}	:
+window	fish	0	:fish	1	:*Z	5e91,278x71,0,0{139x71,0,0,8,138x71,140,0,9}	:
+window	fran-local-synapse	0	:nvim	1	:*Z	ae9a,278x71,0,0{139x71,0,0,12,138x71,140,0,13}	:
+state	fran-local-synapse	aoe_P0004-703-session-na_9f2dcc13

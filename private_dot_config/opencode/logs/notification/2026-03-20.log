@@ -1,0 +1,110 @@
+[2026-03-20T11:18:14.677Z] [notification] terminal window address: 0x5dd857a63660
+[2026-03-20T11:18:14.801Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:18:14.801Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:19:25.439Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:19:25.720Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:19:25.720Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T11:20:22.775Z] [notification] aoe session detected: "aoe_test_a8568894" → using aoe-cwd scratchpad directly
+[2026-03-20T11:20:22.928Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T11:20:23.047Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:20:23.047Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:23:52.922Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:23:53.200Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:23:53.200Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T11:23:53.207Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:23:53.207Z] [notification] suppressing duplicate session.idle for ses_2f507754effeCuCz9Cd7Eu7vr0 (285ms since last)
+[2026-03-20T11:28:13.929Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:28:14.128Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T11:28:14.129Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T11:48:27.992Z] [notification] terminal window address: 0x5dd857729cc0
+[2026-03-20T11:48:28.092Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:48:28.092Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:48:40.384Z] [notification] aoe session detected: "aoe_testest_a6eee453" → using aoe-cwd scratchpad directly
+[2026-03-20T11:48:40.580Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T11:48:40.681Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:48:40.681Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:50:22.224Z] [notification] aoe session detected: "aoe_testeste_6062213c" → using aoe-cwd scratchpad directly
+[2026-03-20T11:50:22.414Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T11:50:22.512Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:50:22.512Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:50:59.298Z] [notification] terminal window address: 0x5dd857729cc0
+[2026-03-20T11:50:59.408Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:50:59.408Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:52:31.799Z] [notification] aoe session detected: "aoe_testest_8623232e" → using aoe-cwd scratchpad directly
+[2026-03-20T11:52:31.955Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T11:52:32.052Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:52:32.052Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:54:38.537Z] [notification] terminal window address: 0x5dd857a60e30
+[2026-03-20T11:54:38.642Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:54:38.642Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:55:44.908Z] [notification] aoe session detected: "aoe_testestes_1d3957fe" → using aoe-cwd scratchpad directly
+[2026-03-20T11:55:45.070Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T11:55:45.169Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:55:45.169Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T11:56:13.243Z] [notification] terminal window address: 0x5dd857a7ac00
+[2026-03-20T11:56:13.353Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T11:56:13.353Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T12:06:01.663Z] [notification] aoe session detected: "aoe_testestestst_0f3c8cb4" → using aoe-cwd scratchpad directly
+[2026-03-20T12:06:01.866Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T12:06:01.965Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T12:06:01.965Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T12:15:15.710Z] [notification] aoe session detected: "aoe_slslslslslsl_47407af8" → using aoe-cwd scratchpad directly
+[2026-03-20T12:15:15.879Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T12:15:16.003Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T12:15:16.003Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T12:16:10.015Z] [notification] aoe session detected: "aoe_slslslslslsl_47407af8" → using aoe-cwd scratchpad directly
+[2026-03-20T12:16:10.154Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T12:16:10.248Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T12:16:10.248Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T12:21:59.618Z] [notification] aoe session detected: "aoe_slslslslslsl_47407af8" → using aoe-cwd scratchpad directly
+[2026-03-20T12:21:59.765Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T12:21:59.853Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T12:21:59.853Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:53:09.591Z] [notification] aoe session detected: "aoe_opencode_main_52fa6ccd" → using aoe-cwd scratchpad directly
+[2026-03-20T22:53:09.776Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T22:53:09.882Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T22:53:09.882Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:55:03.416Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-20T22:55:03.593Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T22:55:03.693Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T22:55:03.693Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:55:25.447Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-20T22:55:25.653Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T22:55:25.756Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T22:55:25.756Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:55:52.686Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-20T22:55:52.836Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T22:55:52.926Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T22:55:52.926Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:56:11.029Z] [notification] terminal window address: 0x590661661b50
+[2026-03-20T22:56:11.130Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T22:56:11.130Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:56:28.807Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-20T22:56:28.994Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T22:56:29.113Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T22:56:29.113Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T22:57:35.683Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:57:35.889Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:57:35.889Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T22:57:55.835Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:57:56.023Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:57:56.023Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T22:57:56.025Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:57:56.025Z] [notification] suppressing duplicate session.idle for ses_2f28900eaffe8vh0cErudTbb6Q (190ms since last)
+[2026-03-20T22:58:55.132Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:58:55.314Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T22:58:55.314Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T23:00:53.846Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T23:00:54.009Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T23:00:54.009Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T23:01:52.036Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T23:01:52.135Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-20T23:01:52.135Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-20T23:02:12.866Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-20T23:02:13.063Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T23:02:13.165Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T23:02:13.165Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-20T23:04:39.855Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-20T23:04:40.006Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-20T23:04:40.109Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-20T23:04:40.109Z] [notification] isSessionFocused: false - null windowClass

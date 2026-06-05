@@ -1,0 +1,506 @@
+[2026-03-01T11:00:42.884Z] [notification] terminal window address: 0x5f95a7a7d5f0
+[2026-03-01T11:00:42.894Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T11:00:42.894Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T13:45:29.730Z] [notification] terminal window address: 0x592221457210
+[2026-03-01T13:45:29.739Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T13:45:29.740Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T13:47:45.897Z] [notification] terminal window address: 0x5922216e3320
+[2026-03-01T13:47:45.897Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T13:47:45.897Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T13:49:15.820Z] [notification] session ses_35aad9b65ffe43qkOrS8sAdJFe: title="final vs draft configs", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T13:49:15.820Z] [notification] scratchpad project_branch: null
+[2026-03-01T13:49:15.822Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T13:49:15.824Z] [notification] scratchpad hidden → will notify
+[2026-03-01T13:49:15.824Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T13:49:15.860Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T13:55:45.016Z] [notification] terminal window address: 0x5922216e3320
+[2026-03-01T13:55:45.017Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T13:55:45.017Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T13:56:28.497Z] [notification] session ses_3565093adffeyiIc9vls68FIu0: title="New session - 2026-03-01T13:56:11.986Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T13:56:28.497Z] [notification] scratchpad project_branch: null
+[2026-03-01T13:56:28.498Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T13:56:28.501Z] [notification] scratchpad hidden → will notify
+[2026-03-01T13:56:28.510Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T13:56:28.590Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T13:56:28.594Z] [notification] suppressing duplicate session.idle for ses_3565093adffeyiIc9vls68FIu0 (99ms since last)
+[2026-03-01T13:56:28.596Z] [notification] suppressing duplicate session.idle for ses_3565093adffeyiIc9vls68FIu0 (101ms since last)
+[2026-03-01T13:59:22.262Z] [notification] terminal window address: 0x5922216e3320
+[2026-03-01T13:59:22.262Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T13:59:22.262Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T14:06:41.467Z] [notification] session ses_35aad9b65ffe43qkOrS8sAdJFe: title="final vs draft configs", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T14:06:41.467Z] [notification] scratchpad project_branch: null
+[2026-03-01T14:06:41.468Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T14:06:41.472Z] [notification] scratchpad hidden → will notify
+[2026-03-01T14:06:41.472Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T14:06:41.622Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T14:33:04.764Z] [notification] session ses_35aad9b65ffe43qkOrS8sAdJFe: title="final vs draft configs", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T14:33:04.766Z] [notification] scratchpad project_branch: null
+[2026-03-01T14:33:04.771Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T14:33:04.793Z] [notification] scratchpad hidden → will notify
+[2026-03-01T14:33:04.794Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T14:33:05.056Z] [notification] spawning watchScript for notifId=13 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T14:40:53.820Z] [notification] session ses_35aad9b65ffe43qkOrS8sAdJFe: title="final vs draft configs", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T14:40:53.820Z] [notification] scratchpad project_branch: null
+[2026-03-01T14:40:53.822Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T14:40:53.826Z] [notification] scratchpad hidden → will notify
+[2026-03-01T14:40:53.826Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T14:40:53.895Z] [notification] spawning watchScript for notifId=16 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T14:48:26.986Z] [notification] terminal window address: 0x5922216e3320
+[2026-03-01T14:48:26.987Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T14:48:26.987Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T14:50:02.153Z] [notification] session ses_3562034c3ffeI2TtRV7tvYcR5M: title="AI pipeline overview and steps options", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T14:50:02.153Z] [notification] scratchpad project_branch: null
+[2026-03-01T14:50:02.159Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T14:50:02.170Z] [notification] scratchpad hidden → will notify
+[2026-03-01T14:50:02.170Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T14:50:02.416Z] [notification] spawning watchScript for notifId=17 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T14:56:46.662Z] [notification] terminal window address: 0x592221457210
+[2026-03-01T14:56:46.662Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T14:56:46.662Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T14:57:18.996Z] [notification] session ses_35618ea09ffewKmZL4laeEim3C: title="Laptop temperature high: common causes and fixes", dir="/home/froa"
+[2026-03-01T14:57:18.996Z] [notification] scratchpad project_branch: null
+[2026-03-01T14:57:19.001Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-03-01T14:57:19.012Z] [notification] scratchpad hidden → will notify
+[2026-03-01T14:57:19.012Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-03-01T14:57:19.088Z] [notification] spawning watchScript for notifId=18 dir=/home/froa
+[2026-03-01T14:58:05.757Z] [notification] session ses_35618ea09ffewKmZL4laeEim3C: title="Laptop temperature high: common causes and fixes", dir="/home/froa"
+[2026-03-01T14:58:05.757Z] [notification] scratchpad project_branch: null
+[2026-03-01T14:58:05.758Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-03-01T14:58:05.763Z] [notification] scratchpad hidden → will notify
+[2026-03-01T14:58:05.763Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-03-01T14:58:05.794Z] [notification] spawning watchScript for notifId=19 dir=/home/froa
+[2026-03-01T14:59:10.564Z] [notification] terminal window address: 0x592221737770
+[2026-03-01T14:59:10.564Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T14:59:10.564Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T15:00:52.480Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:00:52.480Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:00:52.484Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:00:52.495Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:00:52.495Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:00:52.526Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/.config/hypr
+[2026-03-01T15:07:23.254Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:07:23.254Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:07:23.257Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:07:23.265Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:07:23.265Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:07:23.304Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-03-01T15:10:29.763Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-01T15:10:29.765Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T15:10:29.765Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T15:11:09.509Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:11:09.509Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:11:09.514Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:11:09.521Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:11:09.521Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:11:09.623Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/.config/hypr
+[2026-03-01T15:11:38.126Z] [notification] suppressing duplicate session.idle for ses_356161e41ffeWocifL5cLmT9NJ (11ms since last)
+[2026-03-01T15:11:38.127Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:11:38.128Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:11:38.132Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:11:38.138Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:11:38.138Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:11:38.251Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/.config/hypr
+[2026-03-01T15:12:15.146Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:12:15.147Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:12:15.150Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:12:15.157Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:12:15.157Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:12:15.276Z] [notification] spawning watchScript for notifId=7 dir=/home/froa/.config/hypr
+[2026-03-01T15:16:02.991Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:16:02.991Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:16:02.995Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:16:03.002Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:16:03.002Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:16:03.125Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr
+[2026-03-01T15:16:39.617Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:16:39.617Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:16:39.621Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:16:39.627Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:16:39.628Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:16:39.782Z] [notification] spawning watchScript for notifId=9 dir=/home/froa/.config/hypr
+[2026-03-01T15:17:54.040Z] [notification] terminal window address: 0x6173ba7e9eb0
+[2026-03-01T15:17:54.049Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T15:17:54.049Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T15:18:27.404Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:18:27.404Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:18:27.409Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:18:27.421Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:18:27.422Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:18:27.587Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/.config/hypr
+[2026-03-01T15:18:45.732Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:18:45.732Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:18:45.737Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:18:45.749Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:18:45.749Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:18:45.908Z] [notification] spawning watchScript for notifId=12 dir=/home/froa/.config/hypr
+[2026-03-01T15:19:08.722Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:19:08.722Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:19:08.727Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:19:08.733Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:19:08.733Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:19:08.877Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/.config/hypr
+[2026-03-01T15:20:44.933Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:20:44.933Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:20:44.937Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:20:44.947Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:20:44.948Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:20:45.115Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/.config/hypr
+[2026-03-01T15:21:09.732Z] [notification] terminal window address: 0x6173ba7e9eb0
+[2026-03-01T15:21:09.732Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T15:21:09.732Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T15:21:35.906Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:21:35.906Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:21:35.910Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:21:35.929Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:21:35.929Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:21:36.085Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/.config/hypr
+[2026-03-01T15:21:44.842Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:21:44.842Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:21:44.846Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:21:44.853Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:21:44.854Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:21:44.990Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/.config/hypr
+[2026-03-01T15:22:30.714Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:22:30.714Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:22:30.719Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:22:30.725Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:22:30.725Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:22:30.824Z] [notification] spawning watchScript for notifId=16 dir=/home/froa/.config/hypr
+[2026-03-01T15:22:50.270Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T15:22:50.271Z] [notification] scratchpad project_branch: null
+[2026-03-01T15:22:50.275Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T15:22:50.283Z] [notification] scratchpad hidden → will notify
+[2026-03-01T15:22:50.283Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T15:22:50.451Z] [notification] spawning watchScript for notifId=17 dir=/home/froa/.config/hypr
+[2026-03-01T21:32:35.128Z] [notification] terminal window address: 0x60bc3c7eb8f0
+[2026-03-01T21:32:35.137Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:32:35.138Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:32:40.687Z] [notification] terminal window address: 0x60bc3c7eb8f0
+[2026-03-01T21:32:40.688Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:32:40.688Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:33:39.857Z] [notification] terminal window address: 0x60bc3c7eb8f0
+[2026-03-01T21:33:39.858Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:33:39.858Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:33:53.098Z] [notification] terminal window address: 0x60bc3c7eb8f0
+[2026-03-01T21:33:53.099Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:33:53.099Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:34:13.409Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T21:34:13.409Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:34:13.414Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T21:34:13.428Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:34:13.429Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T21:34:13.591Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/.config/hypr
+[2026-03-01T21:34:40.006Z] [notification] terminal window address: 0x60bc3c745950
+[2026-03-01T21:34:40.006Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:34:40.006Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:34:49.815Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T21:34:49.815Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:34:49.817Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T21:34:49.828Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:34:49.829Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T21:34:49.889Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/.config/hypr
+[2026-03-01T21:35:06.342Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T21:35:06.342Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:35:06.346Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T21:35:06.368Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:35:06.368Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T21:35:06.480Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/.config/hypr
+[2026-03-01T21:49:16.936Z] [notification] terminal window address: 0x5734d96765e0
+[2026-03-01T21:49:16.938Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:49:16.938Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:49:47.672Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T21:49:47.673Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:49:47.677Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T21:49:47.687Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:49:47.688Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T21:49:47.854Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/.config/hypr
+[2026-03-01T21:50:28.561Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T21:50:28.561Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:50:28.566Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T21:50:28.587Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:50:28.587Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T21:50:28.728Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/.config/hypr
+[2026-03-01T21:51:24.616Z] [notification] terminal window address: 0x5734d96dc5f0
+[2026-03-01T21:51:24.616Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T21:51:24.616Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T21:52:05.682Z] [notification] session ses_3549cf09cffeR6cLO5AOscS3oa: title="Cartoon vs real images for make train performance", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T21:52:05.682Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:52:05.687Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T21:52:05.699Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:52:05.700Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T21:52:05.862Z] [notification] spawning watchScript for notifId=16 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T21:52:05.907Z] [notification] suppressing duplicate session.idle for ses_3549cf09cffeR6cLO5AOscS3oa (228ms since last)
+[2026-03-01T21:53:35.572Z] [notification] session ses_356161e41ffeWocifL5cLmT9NJ: title="Game mode refresh rate tuning for mod-shift-g", dir="/home/froa/.config/hypr"
+[2026-03-01T21:53:35.572Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:53:35.577Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T21:53:35.584Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:53:35.584Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T21:53:35.727Z] [notification] spawning watchScript for notifId=17 dir=/home/froa/.config/hypr
+[2026-03-01T21:54:01.373Z] [notification] session ses_3549cf09cffeR6cLO5AOscS3oa: title="Cartoon vs real images for make train performance", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T21:54:01.373Z] [notification] scratchpad project_branch: null
+[2026-03-01T21:54:01.378Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T21:54:01.389Z] [notification] scratchpad hidden → will notify
+[2026-03-01T21:54:01.389Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T21:54:01.543Z] [notification] spawning watchScript for notifId=18 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:26:06.206Z] [notification] terminal window address: 0x5734d973cdf0
+[2026-03-01T22:26:06.206Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T22:26:06.206Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T22:26:43.686Z] [notification] session ses_3547da137ffev2HURJgZze91Oi: title="New session - 2026-03-01T22:26:13.832Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:26:43.686Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:26:43.691Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:26:43.698Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:26:43.698Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:26:43.851Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:32:00.830Z] [notification] session ses_3547da137ffev2HURJgZze91Oi: title="New session - 2026-03-01T22:26:13.832Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:32:00.830Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:32:00.835Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:32:00.862Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:32:00.862Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:32:01.018Z] [notification] spawning watchScript for notifId=22 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:32:01.049Z] [notification] suppressing duplicate session.idle for ses_3547da137ffev2HURJgZze91Oi (223ms since last)
+[2026-03-01T22:43:21.642Z] [notification] suppressing duplicate session.idle for ses_3547da137ffev2HURJgZze91Oi (27ms since last)
+[2026-03-01T22:43:21.644Z] [notification] session ses_3547da137ffev2HURJgZze91Oi: title="New session - 2026-03-01T22:26:13.832Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:43:21.644Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:43:21.650Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:43:21.670Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:43:21.670Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:43:46.622Z] [notification] terminal window address: 0x5734d973cdf0
+[2026-03-01T22:43:46.623Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T22:43:46.623Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T22:44:10.944Z] [notification] session ses_3546d4668ffeDT37fHR5lMBEC9: title="CUDA autocast issue investigation plan", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:44:10.944Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:44:10.950Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:44:10.968Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:44:10.968Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:44:11.111Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:44:11.155Z] [notification] suppressing duplicate session.idle for ses_3546d4668ffeDT37fHR5lMBEC9 (222ms since last)
+[2026-03-01T22:44:34.306Z] [notification] session ses_3546d4668ffeDT37fHR5lMBEC9: title="CUDA autocast issue investigation plan", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:44:34.306Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:44:34.311Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:44:34.318Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:44:34.318Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:44:34.448Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:45:58.239Z] [notification] session ses_3546d4668ffeDT37fHR5lMBEC9: title="CUDA autocast issue investigation plan", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:45:58.239Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:45:58.244Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:45:58.251Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:45:58.251Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:45:58.395Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:47:07.145Z] [notification] terminal window address: 0x5734d9709b90
+[2026-03-01T22:47:07.146Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T22:47:07.146Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T22:47:27.431Z] [notification] session ses_3546a5ebbffem5PHmVReLWfdQS: title="Monitoring large model download progress in safetensors logs", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:47:27.431Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:47:27.436Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:47:27.443Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:47:27.443Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:47:27.605Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:47:27.641Z] [notification] suppressing duplicate session.idle for ses_3546a5ebbffem5PHmVReLWfdQS (213ms since last)
+[2026-03-01T22:47:45.945Z] [notification] session ses_3546d4668ffeDT37fHR5lMBEC9: title="CUDA autocast issue investigation plan", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:47:45.945Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:47:45.950Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:47:45.967Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:47:45.968Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:47:46.117Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:47:57.320Z] [notification] session ses_3546a5ebbffem5PHmVReLWfdQS: title="Monitoring large model download progress in safetensors logs", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:47:57.320Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:47:57.327Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:47:57.348Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:47:57.348Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:47:57.483Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:54:59.199Z] [notification] session ses_3546d4668ffeDT37fHR5lMBEC9: title="CUDA autocast issue investigation plan", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:54:59.199Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:54:59.205Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:54:59.214Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:54:59.214Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:54:59.377Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:54:59.425Z] [notification] suppressing duplicate session.idle for ses_3546d4668ffeDT37fHR5lMBEC9 (233ms since last)
+[2026-03-01T22:55:25.398Z] [notification] terminal window address: 0x5734d973cdf0
+[2026-03-01T22:55:25.398Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T22:55:25.398Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T22:57:10.967Z] [notification] terminal window address: 0x5734d970a780
+[2026-03-01T22:57:10.967Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T22:57:10.967Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T22:57:42.549Z] [notification] session ses_354612c14ffeeyvcnpG65sxwiY: title="Regex control: missing regularization images warning/classification", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:57:42.549Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:57:42.554Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:57:42.569Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:57:42.569Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:57:42.732Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:58:06.523Z] [notification] session ses_354612c14ffeeyvcnpG65sxwiY: title="Regex control: missing regularization images warning/classification", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T22:58:06.523Z] [notification] scratchpad project_branch: null
+[2026-03-01T22:58:06.529Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T22:58:06.536Z] [notification] scratchpad hidden → will notify
+[2026-03-01T22:58:06.536Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T22:58:06.692Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T22:58:06.726Z] [notification] suppressing duplicate session.idle for ses_354612c14ffeeyvcnpG65sxwiY (206ms since last)
+[2026-03-01T23:00:01.748Z] [notification] session ses_354612c14ffeeyvcnpG65sxwiY: title="Regex control: missing regularization images warning/classification", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:00:01.748Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:00:01.754Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:00:01.775Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:00:01.776Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:00:01.904Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:01:18.162Z] [notification] session ses_354612c14ffeeyvcnpG65sxwiY: title="Regex control: missing regularization images warning/classification", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:01:18.162Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:01:18.168Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:01:18.175Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:01:18.175Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:01:18.308Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:02:58.297Z] [notification] terminal window address: 0x5734d966c140
+[2026-03-01T23:02:58.297Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T23:02:58.297Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T23:05:00.238Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:05:00.238Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:05:00.243Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:05:00.259Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:05:00.259Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:05:00.422Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/.config/hypr
+[2026-03-01T23:05:00.438Z] [notification] suppressing duplicate session.idle for ses_3545b62e8ffezy20fSgt7xC6xA (205ms since last)
+[2026-03-01T23:05:00.446Z] [notification] suppressing duplicate session.idle for ses_3545b62e8ffezy20fSgt7xC6xA (213ms since last)
+[2026-03-01T23:05:29.861Z] [notification] suppressing duplicate session.idle for ses_3545b62e8ffezy20fSgt7xC6xA (10ms since last)
+[2026-03-01T23:05:29.862Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:05:29.862Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:05:29.867Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:05:29.875Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:05:29.875Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:05:30.032Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/.config/hypr
+[2026-03-01T23:06:16.689Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:06:16.690Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:06:16.695Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:06:16.701Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:06:16.702Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:06:16.841Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/.config/hypr
+[2026-03-01T23:06:42.819Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:06:42.819Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:06:42.824Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:06:42.842Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:06:42.842Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:06:42.997Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/.config/hypr
+[2026-03-01T23:08:42.957Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:08:42.957Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:08:42.962Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:08:42.974Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:08:42.975Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:08:43.128Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/.config/hypr
+[2026-03-01T23:09:50.341Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:09:50.341Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:09:50.346Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:09:50.354Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:09:50.354Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:09:50.490Z] [notification] spawning watchScript for notifId=43 dir=/home/froa/.config/hypr
+[2026-03-01T23:11:08.493Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:11:08.494Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:11:08.499Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:11:08.506Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:11:08.507Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:11:08.648Z] [notification] spawning watchScript for notifId=44 dir=/home/froa/.config/hypr
+[2026-03-01T23:12:32.114Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:12:32.114Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:12:32.116Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:12:32.118Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:12:32.118Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:12:32.197Z] [notification] spawning watchScript for notifId=45 dir=/home/froa/.config/hypr
+[2026-03-01T23:13:16.070Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:13:16.070Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:13:16.075Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:13:16.088Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:13:16.088Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:13:16.233Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/.config/hypr
+[2026-03-01T23:14:05.118Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:14:05.118Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:14:05.123Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:14:05.138Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:14:05.138Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:14:05.285Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/.config/hypr
+[2026-03-01T23:14:40.449Z] [notification] session ses_3545b62e8ffezy20fSgt7xC6xA: title="Multiple-terminals in one workspace: clearer, vibrant UI?", dir="/home/froa/.config/hypr"
+[2026-03-01T23:14:40.449Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:14:40.453Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:14:40.471Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:14:40.471Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:14:40.636Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/.config/hypr
+[2026-03-01T23:16:03.165Z] [notification] session ses_3546d4668ffeDT37fHR5lMBEC9: title="CUDA autocast issue investigation plan", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:16:03.165Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:16:03.169Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:16:03.177Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:16:03.177Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:16:03.311Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:35:53.524Z] [notification] terminal window address: 0x5734d966c140
+[2026-03-01T23:35:53.533Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T23:35:53.533Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T23:37:19.399Z] [notification] session ses_3543dc6e8ffeSnETwarSw95OSU: title="New session - 2026-03-01T23:35:58.487Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:37:19.399Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:37:19.403Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:37:19.417Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:37:19.418Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:37:19.572Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:39:29.009Z] [notification] session ses_3543dc6e8ffeSnETwarSw95OSU: title="New session - 2026-03-01T23:35:58.487Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:39:29.009Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:39:29.014Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:39:29.021Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:39:29.022Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:39:29.118Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:39:29.159Z] [notification] suppressing duplicate session.idle for ses_3543dc6e8ffeSnETwarSw95OSU (153ms since last)
+[2026-03-01T23:40:09.598Z] [notification] session ses_3543dc6e8ffeSnETwarSw95OSU: title="New session - 2026-03-01T23:35:58.487Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:40:09.598Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:40:09.604Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:40:09.614Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:40:09.615Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:40:09.731Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:40:43.545Z] [notification] session ses_3543dc6e8ffeSnETwarSw95OSU: title="New session - 2026-03-01T23:35:58.487Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-01T23:40:43.545Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:40:43.550Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-01T23:40:43.568Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:40:43.568Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-01T23:40:43.700Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/Projects/fran/book-editor
+[2026-03-01T23:43:09.373Z] [notification] terminal window address: 0x5734d966c140
+[2026-03-01T23:43:09.374Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T23:43:09.374Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T23:47:35.276Z] [notification] suppressing duplicate session.idle for ses_3543687bfffenW1do3p3A2mHRN (8ms since last)
+[2026-03-01T23:47:35.277Z] [notification] session ses_3543687bfffenW1do3p3A2mHRN: title="Hyprpanel: screen vs region screenshot option", dir="/home/froa/.config/hypr"
+[2026-03-01T23:47:35.277Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:47:35.279Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:47:35.282Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:47:35.283Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:47:35.344Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/.config/hypr
+[2026-03-01T23:49:23.473Z] [notification] session ses_3543687bfffenW1do3p3A2mHRN: title="Hyprpanel: screen vs region screenshot option", dir="/home/froa/.config/hypr"
+[2026-03-01T23:49:23.473Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:49:23.478Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:49:23.497Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:49:23.497Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:49:23.627Z] [notification] spawning watchScript for notifId=43 dir=/home/froa/.config/hypr
+[2026-03-01T23:53:00.899Z] [notification] session ses_3543687bfffenW1do3p3A2mHRN: title="Hyprpanel: screen vs region screenshot option", dir="/home/froa/.config/hypr"
+[2026-03-01T23:53:00.899Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:53:00.905Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:53:00.911Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:53:00.911Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:53:01.034Z] [notification] spawning watchScript for notifId=8 dir=/home/froa/.config/hypr
+[2026-03-01T23:54:41.003Z] [notification] session ses_3543687bfffenW1do3p3A2mHRN: title="Hyprpanel: screen vs region screenshot option", dir="/home/froa/.config/hypr"
+[2026-03-01T23:54:41.004Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:54:41.008Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:54:41.028Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:54:41.028Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:54:41.050Z] [notification] suppressing duplicate session.idle for ses_3543687bfffenW1do3p3A2mHRN (50ms since last)
+[2026-03-01T23:54:41.066Z] [notification] suppressing duplicate session.idle for ses_3543687bfffenW1do3p3A2mHRN (66ms since last)
+[2026-03-01T23:55:09.973Z] [notification] session ses_3543687bfffenW1do3p3A2mHRN: title="Hyprpanel: screen vs region screenshot option", dir="/home/froa/.config/hypr"
+[2026-03-01T23:55:09.973Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:55:09.978Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-01T23:55:09.985Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:55:09.985Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-01T23:55:10.015Z] [notification] suppressing duplicate session.idle for ses_3543687bfffenW1do3p3A2mHRN (44ms since last)
+[2026-03-01T23:55:10.032Z] [notification] suppressing duplicate session.idle for ses_3543687bfffenW1do3p3A2mHRN (62ms since last)
+[2026-03-01T23:57:14.607Z] [notification] terminal window address: 0x5734d973cdf0
+[2026-03-01T23:57:14.608Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T23:57:14.608Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T23:58:54.531Z] [notification] terminal window address: 0x5734d8248670
+[2026-03-01T23:58:54.531Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-01T23:58:54.531Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-01T23:59:17.213Z] [notification] session ses_35428a0bdffefCgNJKyX283QGQ: title="GPU RAM detection and amount check", dir="/home/froa"
+[2026-03-01T23:59:17.214Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:59:17.218Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-03-01T23:59:17.226Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:59:17.226Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-03-01T23:59:51.599Z] [notification] session ses_35428a0bdffefCgNJKyX283QGQ: title="GPU RAM detection and amount check", dir="/home/froa"
+[2026-03-01T23:59:51.599Z] [notification] scratchpad project_branch: null
+[2026-03-01T23:59:51.604Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-03-01T23:59:51.612Z] [notification] scratchpad hidden → will notify
+[2026-03-01T23:59:51.612Z] [notification] tracked latest notification: froa_main (/home/froa)

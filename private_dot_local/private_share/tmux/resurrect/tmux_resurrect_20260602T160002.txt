@@ -1,0 +1,13 @@
+pane	azure-vm-tf-mod	0	1	:*Z	0	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	1	fish	:
+pane	azure-vm-tf-mod	0	1	:*Z	1	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	0	fish	:
+pane	default	0	1	:*Z	0	tsyl170	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	tsyl170	:/home/froa	0	fish	:/usr/local/bin/starship prompt --terminal-width=91 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	firecast-builder	0	1	:*Z	0	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	firecast-builder	0	1	:*Z	1	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	nvim	:/tmp/.mount_nvimDjdpHL/usr/bin/nvim
+pane	hypr	0	1	:*Z	0	✳ Fix Ubuntu screen sharing limitations	:/home/froa/.config/hypr	1	claude	:bash
+pane	hypr	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	azure-vm-tf-mod	0	:fish	1	:*Z	303c,183x51,0,0{92x51,0,0,62,90x51,93,0,63}	:
+window	default	0	:fish	1	:*Z	2bd1,183x51,0,0{91x51,0,0,64,91x51,92,0,65}	:
+window	firecast-builder	0	:claude	1	:*Z	f049,183x51,0,0{92x51,0,0,58,90x51,93,0,59}	:
+window	hypr	0	:claude	1	:*Z	abd8,183x51,0,0{91x51,0,0,48,91x51,92,0,49}	:
+state	default	

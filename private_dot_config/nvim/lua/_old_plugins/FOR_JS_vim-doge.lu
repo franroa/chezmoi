@@ -1,8 +1,0 @@
-vim.g.doge_mapping = ",d"
-
-return {
-  {
-    "kkoomen/vim-doge",
-    lazy = false,
-  },
-}

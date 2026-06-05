@@ -1,0 +1,16 @@
+pane	JIRA	0	1	:*Z	0	tsyl170	:/home/froa	1	docker	:
+pane	JIRA	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	P0004-655-GitLab-Project	0	1	:*Z	0	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	0	fish	:
+pane	P0004-655-GitLab-Project	0	1	:*Z	1	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	1	fish	:
+pane	P0004-695-migrate-firecast-k8s	0	1	:*Z	0	✳ 695	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude
+pane	P0004-695-migrate-firecast-k8s	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	P0004-705-add-heartland-tenant	0	1	:*Z	0	✳ P0004-705	:/home/froa/Projects/ts/platform-tenants.git	1	claude	:claude
+pane	P0004-705-add-heartland-tenant	0	1	:*Z	1	~/P/t/platform-tenants.git	:/home/froa/Projects/ts/platform-tenants.git	0	fish	:
+pane	P0004-706-add-firecast-pipeline	0	1	:*Z	0	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude
+pane	P0004-706-add-firecast-pipeline	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+window	JIRA	0	:docker	1	:*Z	2ae7,183x51,0,0{91x51,0,0,0,91x51,92,0,1}	:
+window	P0004-655-GitLab-Project	0	:fish	1	:*Z	34e2,183x51,0,0{92x51,0,0,6,90x51,93,0,7}	:
+window	P0004-695-migrate-firecast-k8s	0	:claude	1	:*Z	34d9,183x51,0,0{92x51,0,0,4,90x51,93,0,5}	:
+window	P0004-705-add-heartland-tenant	0	:claude	1	:*Z	7042,183x51,0,0{92x51,0,0,17,90x51,93,0,18}	:
+window	P0004-706-add-firecast-pipeline	0	:claude	1	:*Z	7033,183x51,0,0{92x51,0,0,11,90x51,93,0,12}	:
+state	P0004-705-add-heartland-tenant	P0004-695-migrate-firecast-k8s

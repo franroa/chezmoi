@@ -1,0 +1,19 @@
+# Multi-perspective review — one branch, fan-out -> fan-in.
+# The main Claude dispatches read-only Task subagents (security / perf /
+# consistency / factual) that each write /tmp/aoe-review-<id>/<perspective>.md;
+# the status pane shows ✓/◌ per perspective.
+#   tmuxinator start review root=$PWD id=rev
+name: review
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+on_project_start:
+  - mkdir -p /tmp/aoe-review-<%= @settings["id"] || "rev" %>
+
+windows:
+  - review:
+      layout: main-vertical
+      panes:
+        - main:
+            - claude "Multi-perspective review (id=<%= @settings["id"] || "rev" %>). Fan out FOUR parallel read-only Task subagents — security, perf, consistency, factual — over the current branch. Each subagent MUST write its findings to /tmp/aoe-review-<%= @settings["id"] || "rev" %>/<perspective>.md. Then fan-in — summarize all four into a single review. Wait for my go-ahead before dispatching."
+        - status:
+            - watch -ct -n2 'bash ~/.config/tmux/scripts/swarm-dashboard.sh review <%= @settings["id"] || "rev" %>'

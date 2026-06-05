@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/froa/.local/share/nvim/lazy/code-preview.nvim/backends/claudecode/code-preview-diff.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/froa/.local/share/nvim/lazy/code-preview.nvim/backends/claudecode/code-close-diff.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "azure"
+  ]
+}

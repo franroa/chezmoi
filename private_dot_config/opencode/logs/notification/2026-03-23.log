@@ -1,0 +1,214 @@
+[2026-03-23T06:47:11.852Z] buildHyprClientMap test: true
+[2026-03-23T06:47:12.143Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-23T06:47:44.891Z] skipping: not in aoe scratchpad
+[2026-03-23T06:57:21.958Z] skipping: not in aoe scratchpad
+[2026-03-23T06:57:47.446Z] skipping: not in aoe scratchpad
+[2026-03-23T07:02:15.812Z] skipping: not in aoe scratchpad
+[2026-03-23T07:06:03.938Z] skipping: not in aoe scratchpad
+[2026-03-23T07:07:46.509Z] skipping: not in aoe scratchpad
+[2026-03-23T07:08:42.920Z] skipping: not in aoe scratchpad
+[2026-03-23T07:10:29.923Z] skipping: not in aoe scratchpad
+[2026-03-23T07:12:26.002Z] skipping: not in aoe scratchpad
+[2026-03-23T07:15:42.521Z] skipping: not in aoe scratchpad
+[2026-03-23T08:40:42.762Z] buildHyprClientMap test: true
+[2026-03-23T08:40:42.777Z] aoe session: "aoe_opencode_main_53fe700f"
+[2026-03-23T08:40:42.941Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T08:40:52.559Z] skipping: not in aoe scratchpad
+[2026-03-23T08:45:09.472Z] skipping: not in aoe scratchpad
+[2026-03-23T08:45:09.482Z] suppressing duplicate for ses_2e68d0fcdffeEeop4ou8Sd2prM
+[2026-03-23T08:45:09.501Z] suppressing duplicate for ses_2e68d0fcdffeEeop4ou8Sd2prM
+[2026-03-23T08:50:06.685Z] buildHyprClientMap test: true
+[2026-03-23T08:50:06.699Z] aoe session: "aoe_opencode_main_53fe700f"
+[2026-03-23T08:50:06.888Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T08:50:31.902Z] skipping: not in aoe scratchpad
+[2026-03-23T08:51:40.362Z] skipping: not in aoe scratchpad
+[2026-03-23T08:51:59.993Z] skipping: not in aoe scratchpad
+[2026-03-23T08:52:30.814Z] skipping: not in aoe scratchpad
+[2026-03-23T08:54:21.152Z] buildHyprClientMap test: true
+[2026-03-23T08:54:21.157Z] aoe session: "aoe_opencode_main_53fe700f"
+[2026-03-23T08:54:21.238Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T09:06:00.723Z] buildHyprClientMap test: true
+[2026-03-23T09:06:01.040Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-23T09:07:36.172Z] skipping: not in aoe scratchpad
+[2026-03-23T09:09:26.155Z] skipping: not in aoe scratchpad
+[2026-03-23T09:10:25.026Z] skipping: not in aoe scratchpad
+[2026-03-23T09:13:43.514Z] buildHyprClientMap test: true
+[2026-03-23T09:13:43.817Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-23T09:17:37.354Z] skipping: not in aoe scratchpad
+[2026-03-23T09:17:58.914Z] buildHyprClientMap test: true
+[2026-03-23T09:17:58.926Z] aoe session: "aoe_book-editor_main_c11bd258"
+[2026-03-23T09:17:59.071Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T09:21:24.771Z] skipping: not in aoe scratchpad
+[2026-03-23T09:21:54.744Z] buildHyprClientMap test: true
+[2026-03-23T09:21:54.768Z] aoe session: "aoe_nvim_feature-P0004-1_222d94c5"
+[2026-03-23T09:21:54.940Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T09:24:49.991Z] skipping: not in aoe scratchpad
+[2026-03-23T09:28:12.321Z] skipping: not in aoe scratchpad
+[2026-03-23T09:32:07.591Z] skipping: not in aoe scratchpad
+[2026-03-23T09:34:14.178Z] skipping: not in aoe scratchpad
+[2026-03-23T09:38:05.943Z] skipping: not in aoe scratchpad
+[2026-03-23T09:43:50.560Z] skipping: not in aoe scratchpad
+[2026-03-23T09:48:04.082Z] skipping: not in aoe scratchpad
+[2026-03-23T09:51:06.288Z] skipping: not in aoe scratchpad
+[2026-03-23T09:52:10.330Z] buildHyprClientMap test: true
+[2026-03-23T09:52:10.344Z] aoe session: "aoe_froa_main_dfa0fa07"
+[2026-03-23T09:52:10.554Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T09:56:26.742Z] skipping: not in aoe scratchpad
+[2026-03-23T10:32:52.430Z] skipping: not in aoe scratchpad
+[2026-03-23T10:34:27.474Z] skipping: not in aoe scratchpad
+[2026-03-23T10:38:28.162Z] skipping: not in aoe scratchpad
+[2026-03-23T10:41:59.337Z] skipping: not in aoe scratchpad
+[2026-03-23T10:50:56.898Z] skipping: not in aoe scratchpad
+[2026-03-23T10:52:49.105Z] skipping: not in aoe scratchpad
+[2026-03-23T10:52:49.108Z] suppressing duplicate for ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-23T10:55:19.572Z] skipping: not in aoe scratchpad
+[2026-03-23T11:01:57.904Z] skipping: not in aoe scratchpad
+[2026-03-23T11:04:11.754Z] skipping: not in aoe scratchpad
+[2026-03-23T11:06:39.436Z] skipping: not in aoe scratchpad
+[2026-03-23T11:08:41.022Z] skipping: not in aoe scratchpad
+[2026-03-23T11:10:59.060Z] skipping: not in aoe scratchpad
+[2026-03-23T11:15:04.451Z] skipping: not in aoe scratchpad
+[2026-03-23T11:18:48.329Z] skipping: not in aoe scratchpad
+[2026-03-23T11:20:27.202Z] skipping: not in aoe scratchpad
+[2026-03-23T11:22:59.545Z] skipping: not in aoe scratchpad
+[2026-03-23T11:25:04.598Z] skipping: not in aoe scratchpad
+[2026-03-23T11:29:06.770Z] skipping: not in aoe scratchpad
+[2026-03-23T11:37:29.720Z] skipping: not in aoe scratchpad
+[2026-03-23T11:38:45.789Z] skipping: not in aoe scratchpad
+[2026-03-23T11:42:09.803Z] skipping: not in aoe scratchpad
+[2026-03-23T11:43:01.768Z] skipping: not in aoe scratchpad
+[2026-03-23T11:44:57.083Z] skipping: not in aoe scratchpad
+[2026-03-23T11:49:11.057Z] skipping: not in aoe scratchpad
+[2026-03-23T12:16:57.444Z] skipping: not in aoe scratchpad
+[2026-03-23T12:40:08.055Z] buildHyprClientMap test: true
+[2026-03-23T12:40:08.332Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-23T12:45:21.433Z] skipping: not in aoe scratchpad
+[2026-03-23T12:45:21.437Z] suppressing duplicate for ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-23T12:45:21.440Z] suppressing duplicate for ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-23T12:45:55.457Z] skipping: not in aoe scratchpad
+[2026-03-23T12:46:22.355Z] buildHyprClientMap test: true
+[2026-03-23T12:46:22.365Z] aoe session: "aoe_book-editor_main_869ab3bd"
+[2026-03-23T12:46:22.584Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T12:46:43.621Z] buildHyprClientMap test: true
+[2026-03-23T12:46:43.647Z] aoe session: "aoe_nvim_feature-P0004-1_07f729da"
+[2026-03-23T12:46:43.832Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T12:49:39.714Z] skipping: not in aoe scratchpad
+[2026-03-23T12:50:47.958Z] skipping: not in aoe scratchpad
+[2026-03-23T12:56:23.594Z] skipping: not in aoe scratchpad
+[2026-03-23T12:56:23.595Z] suppressing duplicate for ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-23T12:56:23.597Z] suppressing duplicate for ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-23T12:56:59.915Z] buildHyprClientMap test: true
+[2026-03-23T12:57:00.244Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-23T12:58:47.622Z] skipping: not in aoe scratchpad
+[2026-03-23T13:08:48.043Z] skipping: not in aoe scratchpad
+[2026-03-23T13:09:40.606Z] skipping: not in aoe scratchpad
+[2026-03-23T13:11:30.251Z] skipping: not in aoe scratchpad
+[2026-03-23T13:13:15.896Z] skipping: not in aoe scratchpad
+[2026-03-23T13:14:46.769Z] skipping: not in aoe scratchpad
+[2026-03-23T13:14:46.772Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:14:46.781Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:16:09.613Z] skipping: not in aoe scratchpad
+[2026-03-23T13:16:09.615Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:16:09.663Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:16:16.306Z] skipping: not in aoe scratchpad
+[2026-03-23T13:17:47.345Z] skipping: not in aoe scratchpad
+[2026-03-23T13:20:37.874Z] skipping: not in aoe scratchpad
+[2026-03-23T13:20:37.878Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:20:37.925Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:21:02.311Z] skipping: not in aoe scratchpad
+[2026-03-23T13:21:02.322Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:21:02.375Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:21:33.498Z] skipping: not in aoe scratchpad
+[2026-03-23T13:24:39.125Z] skipping: not in aoe scratchpad
+[2026-03-23T13:41:04.460Z] skipping: not in aoe scratchpad
+[2026-03-23T13:41:04.464Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:41:04.596Z] suppressing duplicate for ses_2e53a6530ffe09ink7KizxzD2Y
+[2026-03-23T13:44:57.327Z] skipping: not in aoe scratchpad
+[2026-03-23T13:54:40.741Z] buildHyprClientMap test: true
+[2026-03-23T13:54:40.753Z] aoe session: "aoe_book-editor_main_869ab3bd"
+[2026-03-23T13:54:40.914Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T13:54:57.351Z] buildHyprClientMap test: true
+[2026-03-23T13:54:57.366Z] aoe session: "aoe_nvim_feature-P0004-1_07f729da"
+[2026-03-23T13:54:57.537Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-23T13:55:43.411Z] will notify for session ses_2e505348bffe5H4uqfhc6ltj2p
+[2026-03-23T13:55:43.418Z] session: title="Test conversation recap", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-23T13:55:43.418Z] scratchpad project_branch: book-editor_main
+[2026-03-23T13:55:43.424Z] session project_branch: book-editor_main
+[2026-03-23T13:55:43.431Z] scratchpad visible=false
+[2026-03-23T13:55:43.431Z] scratchpad hidden → will notify
+[2026-03-23T13:55:43.580Z] notification sent: id=64
+[2026-03-23T14:05:32.365Z] skipping: not in aoe scratchpad
+[2026-03-23T14:07:02.622Z] skipping: not in aoe scratchpad
+[2026-03-23T15:30:55.311Z] buildHyprClientMap test: true
+[2026-03-23T15:30:56.244Z] init: windowClass=null, pyprScratchpadName=null
+[2026-03-23T15:31:53.879Z] skipping: not in aoe scratchpad
+[2026-03-23T15:33:58.887Z] skipping: not in aoe scratchpad
+[2026-03-23T15:34:39.593Z] skipping: not in aoe scratchpad
+[2026-03-23T15:36:33.195Z] skipping: not in aoe scratchpad
+[2026-03-23T16:52:51.214Z] [notification] terminal window address: 0x57a4bb837820
+[2026-03-23T16:52:51.336Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T16:52:51.336Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T16:56:59.006Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T16:57:39.345Z] [notification] tmux session "0" not found in any hyprland window's child tree
+[2026-03-23T16:57:39.444Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-23T16:57:39.549Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T16:57:39.549Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T16:57:49.211Z] [notification] tmux session "0" not found in any hyprland window's child tree
+[2026-03-23T16:57:49.306Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-23T16:57:49.413Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T16:57:49.413Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T16:58:05.440Z] [notification] terminal window address: 0x57a4bb8d62e0
+[2026-03-23T16:58:05.553Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T16:58:05.553Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T17:08:53.337Z] [notification] tmux session "nvim" not found in any hyprland window's child tree
+[2026-03-23T17:08:53.441Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-23T17:08:53.549Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T17:08:53.549Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T17:09:06.593Z] [notification] tmux session "nvim" not found in any hyprland window's child tree
+[2026-03-23T17:09:06.695Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-23T17:09:06.799Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T17:09:06.799Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T17:09:17.223Z] [notification] tmux session "nvim" not found in any hyprland window's child tree
+[2026-03-23T17:09:17.333Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-23T17:09:17.452Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T17:09:17.452Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T17:09:31.448Z] [notification] terminal window address: 0x57a4bb8d62e0
+[2026-03-23T17:09:31.550Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T17:09:31.550Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T17:11:29.952Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T17:11:30.151Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T17:11:30.151Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-23T17:11:30.155Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T17:11:30.155Z] [notification] suppressing duplicate session.idle for ses_2f0d09710ffedy8oNAuiP4ndgG (203ms since last)
+[2026-03-23T17:11:30.159Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T17:11:30.159Z] [notification] suppressing duplicate session.idle for ses_2f0d09710ffedy8oNAuiP4ndgG (207ms since last)
+[2026-03-23T17:13:18.299Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T17:13:18.427Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-23T17:13:18.427Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-23T17:14:12.814Z] [notification] aoe session detected: "aoe_test_2bd877b0" → using aoe-cwd scratchpad directly
+[2026-03-23T17:14:13.036Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-23T17:14:13.074Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T17:14:13.074Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T21:03:44.625Z] [notification] aoe session detected: "aoe_test_2bd877b0" → using aoe-cwd scratchpad directly
+[2026-03-23T21:03:44.807Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-23T21:03:44.904Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T21:03:44.904Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T21:04:08.490Z] [notification] aoe session detected: "aoe_test_2bd877b0" → using aoe-cwd scratchpad directly
+[2026-03-23T21:04:08.642Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-23T21:04:08.744Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T21:04:08.744Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T21:07:27.870Z] [notification] aoe session detected: "aoe_test_2bd877b0" → using aoe-cwd scratchpad directly
+[2026-03-23T21:07:28.038Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-23T21:07:28.146Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T21:07:28.146Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T21:07:57.946Z] [notification] aoe session detected: "aoe_test_2bd877b0" → using aoe-cwd scratchpad directly
+[2026-03-23T21:07:58.098Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-23T21:07:58.193Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T21:07:58.193Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T21:08:24.478Z] [notification] aoe session detected: "aoe_test_2bd877b0" → using aoe-cwd scratchpad directly
+[2026-03-23T21:08:24.633Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-23T21:08:24.739Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T21:08:24.739Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-23T21:13:16.099Z] [notification] terminal window address: 0x57e678fa8700
+[2026-03-23T21:13:16.211Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-23T21:13:16.211Z] [notification] isSessionFocused: false - null windowClass

@@ -1,1 +1,2 @@
-0000000000000000000000000000000000000000 23d667d0944fff6a1ce5107246ede87ae0185879 francisco roa prieto <francisco.roa@xeridia.com> 1740493321 +0100	clone: from github.com:franroa/nvim.git
+0000000000000000000000000000000000000000 803bc181d7c0d6d5eeba9274d9be49b287294d99 froa-tsyl <froa@tecnosylva.com> 1776344076 +0200	clone: from https://github.com/LazyVim/starter
+803bc181d7c0d6d5eeba9274d9be49b287294d99 2d9fd17b1568dd206744caee5e2c8eb56cff4386 froa-tsyl <froa@technosylva.com> 1778485373 +0200	commit: chore: retrigger pipeline

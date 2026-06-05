@@ -1,9 +1,0 @@
-return {
-  {
-    "sarrisv/readermode.nvim",
-    opts = {
-      enabled = true,
-      keymap = "<leader>R", -- Keymap used to toggle ReaderMode on/off
-    },
-  },
-}

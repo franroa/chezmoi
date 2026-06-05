@@ -1,3 +1,0 @@
-return {
-  "jonschlinkert/markdown-toc",
-}

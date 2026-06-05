@@ -41,9 +41,12 @@ if [[ -f /tmp/aoe_session_name ]]; then
     CURRENT_SESSION=$(cat /tmp/aoe_session_name)
 fi
 
-# If already showing the target session, check if window is visible
-if [[ "$CURRENT_CWD" == "$CWD" || "$CURRENT_SESSION" == "$SESSION_TITLE" ]]; then
-    # Check if window exists and is on a normal workspace (not hidden on special)
+# Check if the aoe-cwd window actually exists right now
+WINDOW_EXISTS=$(hyprctl clients -j 2>/dev/null | jq -r '.[] | select(.class == "aoe-cwd") | .class' 2>/dev/null)
+
+# If already showing the target session AND the window exists, toggle/focus it
+if [[ "$CURRENT_CWD" == "$CWD" || "$CURRENT_SESSION" == "$SESSION_TITLE" ]] && [[ -n "$WINDOW_EXISTS" ]]; then
+    # Check if window is on a normal workspace (not hidden on special)
     WS=$(hyprctl clients -j 2>/dev/null | jq -r '.[] | select(.class == "aoe-cwd") | .workspace.name' 2>/dev/null)
     
     if [[ -n "$WS" && "$WS" != "special:"* ]]; then
@@ -51,7 +54,7 @@ if [[ "$CURRENT_CWD" == "$CWD" || "$CURRENT_SESSION" == "$SESSION_TITLE" ]]; the
         echo "Session already showing (visible): $SESSION_TITLE"
         hyprctl dispatch focuswindow "class:aoe-cwd" 2>/dev/null
     else
-        # Window hidden or doesn't exist - use pypr show (needed for scratchpad behavior)
+        # Window is hidden in scratchpad - show it
         echo "Session already showing (hidden): $SESSION_TITLE"
         $PYPR_BIN show aoe
     fi

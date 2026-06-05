@@ -1,0 +1,19 @@
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	fish	0	1	:*Z	0	~/.c/fish	:/home/froa/.config/fish	1	fish	:
+pane	fish	0	1	:*Z	1	~/.c/fish	:/home/froa/.config/fish	0	fish	:
+pane	migrate-firecast-to-k8s	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	migrate-firecast-to-k8s	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	platform-observability	0	1	:*Z	0	~/P/t/platform-observability	:/home/froa/Projects/ts/platform-observability	1	fish	:
+pane	platform-observability	0	1	:*Z	1	~/P/t/platform-observability	:/home/froa/Projects/ts/platform-observability	0	fish	:
+pane	tmux	0	1	:*Z	0	~/.c/hypr	:/home/froa/.config/hypr	0	fish	:
+pane	tmux	0	1	:*Z	1	✳ Debug Slack notification source links in hyprpanel	:/home/froa/.config/hypr	1	claude	:bash
+pane	vm-poc	0	1	:*Z	0	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	1	fish	:
+pane	vm-poc	0	1	:*Z	1	✳ gitlab-ci-terraform-vm-pipeline	:/home/froa/Projects/ts/vm-poc	0	claude	:claude --continue
+window	default	0	:fish	1	:*Z	abd8,183x51,0,0{91x51,0,0,48,91x51,92,0,49}	:
+window	fish	0	:fish	1	:*Z	7038,183x51,0,0{92x51,0,0,32,90x51,93,0,33}	:
+window	migrate-firecast-to-k8s	0	:claude	1	:*Z	2af0,183x51,0,0{91x51,0,0,2,91x51,92,0,3}	:
+window	platform-observability	0	:fish	1	:*Z	703d,183x51,0,0{92x51,0,0,34,90x51,93,0,35}	:
+window	tmux	0	:claude	1	:*Z	34e2,183x51,0,0{92x51,0,0,6,90x51,93,0,7}	:
+window	vm-poc	0	:fish	1	:*Z	f030,183x51,0,0{92x51,0,0,10,90x51,93,0,11}	:
+state	tmux	vm-poc

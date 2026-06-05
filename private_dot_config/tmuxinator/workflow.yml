@@ -1,0 +1,19 @@
+# Dynamic workflow — an orchestrator-Claude spawns/sends/reaps AOE workers at
+# runtime via orchestrate.sh, deciding the DAG from results.
+#   tmuxinator start workflow root=$PWD id=wf
+name: workflow
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+on_project_start:
+  - mkdir -p /tmp/aoe-workflow-<%= @settings["id"] || "wf" %>
+
+windows:
+  - workflow:
+      layout: main-vertical
+      panes:
+        - orchestrator:
+            - WF=<%= @settings["id"] || "wf" %> claude "You are the orchestrator. Read ~/.config/tmux/scripts/orchestrator-playbook.md and follow it. Your workflow id is WF=<%= @settings["id"] || "wf" %> (already exported) — use it with orchestrate.sh. Wait for my goal, then decompose it into workers."
+        - dashboard:
+            - bash ~/.config/tmux/scripts/swarm-dashboard.sh watch
+        - shell:
+            - echo "WF=<%= @settings["id"] || "wf" %>  ·  orchestrate.sh {spawn|send|wait|collect|state|reap}  ·  aoe session attach <id>"

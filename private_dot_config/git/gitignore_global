@@ -17,6 +17,10 @@ backend
 .env
 .gitlab.nvim
 .gitlab-ci-local/
+.gitlab-ci-local.yml
+.gitlab-ci-local-variables.yml
+.gitlab-local.yml
+.gitlab-ci-local/*
 # *.editorconfig
 
 .vectorcode/
@@ -34,3 +38,5 @@ FRAN_docker-compose.yml
 gl-sast-report.json
 gl-secret-detection-report.json
 # .gitlab-ci-local.yml
+#
+.aoe-worktrees

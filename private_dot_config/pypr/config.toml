@@ -1,8 +1,7 @@
 # Pyprland Configuration
-# Documentation: https://hyprland-community.github.io/pyprland/
+# Documentation: https:/hyprland-community.github.io/pyprland/
 
 [pyprland]
-verbose = false
 plugins = [
     "scratchpads",
     "expose",
@@ -24,8 +23,7 @@ process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
 unfocus = "hide"
-excludes = "*"
-multi = false
+hypr_rules = ["float"]
 
 [scratchpads.btop]
 animation = ""
@@ -34,7 +32,7 @@ class = "foot-btop"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.files]
 animation = ""
@@ -43,7 +41,7 @@ class = "org.gnome.Nautilus"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.volume]
 animation = ""
@@ -53,9 +51,7 @@ process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
 unfocus = "hide"
-excludes = "*"
-
-# Slack is a normal window on workspace 4 (not a scratchpad)
+hypr_rules = ["float"]
 
 [scratchpads.music]
 animation = ""
@@ -64,7 +60,7 @@ class = "Spotify"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.calc]
 animation = ""
@@ -73,7 +69,7 @@ class = "org.gnome.Calculator"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.keepassxc]
 animation = ""
@@ -82,16 +78,16 @@ class = "org.keepassxc.KeePassXC"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.gpt]
 animation = ""
-command = "firefox --new-window https://chat.openai.com"
+command = "firefox --new-window https:/chat.openai.com"
 class = "firefox"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.notes]
 animation = ""
@@ -100,16 +96,7 @@ class = "obsidian"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
-
-[scratchpads.opencode_chezmoi]
-animation = ""
-command = "foot --app-id=opencode-chezmoi -D /home/froa/.local/share/chezmoi fish -c '/home/linuxbrew/.linuxbrew/bin/opencode --port --agent plan'"
-class = "opencode-chezmoi"
-process_tracking = false
-size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.opencode_hypr]
 animation = ""
@@ -118,7 +105,7 @@ class = "opencode-hypr"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.opencode_nvim]
 animation = ""
@@ -127,7 +114,7 @@ class = "opencode-nvim"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
 [scratchpads.opencode_cwd]
 animation = ""
@@ -136,23 +123,22 @@ class = "opencode-cwd"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
-[scratchpads.aoe]
-animation = ""
-command = "/home/froa/.config/hypr/UserScripts/aoe-nvim-cwd.sh"
-class = "aoe-cwd"
-process_tracking = false
-size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+# [scratchpads.aoe]
+# animation = ""
+# command = "foot --app-id=aoe-cwd"
+# class = "aoe-cwd"
+# process_tracking = true
+# size = "85% 85%"
+# position = "7% 7%"
+# unfocus = "hide"
 
 [scratchpads.koreader]
 animation = ""
 command = "env -u APPIMAGE /home/froa/Projects/fran/koreader/kodev run"
 class = "KOReader"
 process_tracking = false
-excludes = "*"
 
 [scratchpads.opencode_readitlater]
 animation = ""
@@ -161,70 +147,59 @@ class = "opencode-readitlater"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-excludes = "*"
+hypr_rules = ["float"]
 
+# --- Sandbox (Common) ---
 [scratchpads.k9s_sandbox]
-animation = ""
-command = "foot --app-id=k9s-sandbox -e bash /home/froa/.config/sway/k9s-sandbox.sh"
-class = "k9s-sandbox"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh platform sandbox ca01"
+class = "k9s-platform-sandbox-ca01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
+# --- Platform Live Clusters ---
 [scratchpads.k9s_platform_eu01]
-animation = ""
-command = "foot --app-id=k9s-platform-eu01 -e bash /home/froa/.config/sway/k9s-live.sh platform eu01"
-class = "k9s-platform-eu01"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh platform live eu01"
+class = "k9s-platform-live-eu01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
 [scratchpads.k9s_platform_us01]
-animation = ""
-command = "foot --app-id=k9s-platform-us01 -e bash /home/froa/.config/sway/k9s-live.sh platform us01"
-class = "k9s-platform-us01"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh platform live us01"
+class = "k9s-platform-live-us01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
 [scratchpads.k9s_platform_ca01]
-animation = ""
-command = "foot --app-id=k9s-platform-ca01 -e bash /home/froa/.config/sway/k9s-live.sh platform ca01"
-class = "k9s-platform-ca01"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh platform live ca01"
+class = "k9s-platform-live-ca01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
+# --- Technosylva Live Clusters ---
 [scratchpads.k9s_technosylva_eu01]
-animation = ""
-command = "foot --app-id=k9s-technosylva-eu01 -e bash /home/froa/.config/sway/k9s-live.sh technosylva eu01"
-class = "k9s-technosylva-eu01"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh technosylva live eu01"
+class = "k9s-technosylva-live-eu01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
 [scratchpads.k9s_technosylva_us01]
-animation = ""
-command = "foot --app-id=k9s-technosylva-us01 -e bash /home/froa/.config/sway/k9s-live.sh technosylva us01"
-class = "k9s-technosylva-us01"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh technosylva live us01"
+class = "k9s-technosylva-live-us01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
 [scratchpads.k9s_technosylva_ca01]
-animation = ""
-command = "foot --app-id=k9s-technosylva-ca01 -e bash /home/froa/.config/sway/k9s-live.sh technosylva ca01"
-class = "k9s-technosylva-ca01"
-process_tracking = false
+command = "/home/froa/.config/hypr/scripts/k9s.sh technosylva live ca01"
+class = "k9s-technosylva-live-ca01"
 size = "85% 85%"
-position = "7% 7%"
-excludes = "*"
+unfocus = "hide"
+lazy = true
 
 # ============================================================================
 # EXPOSE - Show all windows on current workspace

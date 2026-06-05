@@ -1,10 +1,9 @@
 [user]
 	; email = franciscoroaprieto@gmail.com
 	; name = Francisco Roa Prieto
-  email = froa@tecnosylva.com
+  email = froa@technosylva.com
   name = froa-tsyl
-  excludesfile = /home/froa/.config/git/gitignore_global
-	signingkey = BF0E77C26FBBEE9B
+	; signingkey = BF0E77C26FBBEE9B
 
 ; [includeIf "gitdir:~/Projects/ts/"]
 ;   path = ~/.gitconfig-work
@@ -12,6 +11,7 @@
 [core]
   pager = delta
   editor = nvim
+  excludesfile = /home/froa/.config/git/gitignore_global
 
 [interactive]
   diffFilter = delta --color-only
@@ -58,7 +58,7 @@
 [commit]
   template = /home/froa/.config/git/commit_template
   verbose = true
-  gpgSign = true
+  ; gpgSign = true
 
 [status]
   short = true
@@ -69,3 +69,7 @@
 	insteadOf = https://gitlab.com
 [mergetool "vscode-diff"]
 	cmd = nvim \"$MERGED\" -c \"CodeDiff merge \\\"$MERGED\\\"\"
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+	insteadOf = https://gitlab.com/

@@ -14,6 +14,7 @@ $php\
 [](fg:#212736 bg:#1d2230)\
 $time\
 [ ](fg:#1d2230)\
+$custom\
 $kubernetes\
 $azure\
 $battery\
@@ -37,11 +38,18 @@ format = "[azure_live](bg:#4c873f)[](fg:#4c873f)"
 symbol = '󰠅 '
 when = '[ "$subscription" == "19d93633-fbae-477e-aaa0-d9bf157fda78" ]'
 
+
 [azure]
 disabled = false
 format = '[$symbol($subscription)]($style) '
 symbol = '󰠅 '
 style = 'blue bold'
+
+[custom.tmux]
+disabled = false
+format = "[](fg:#4c873f)[$symbol](bg:#4c873f fg:#ffffff)[](fg:#4c873f) "
+symbol = '  '
+when = '[ -n "$TMUX" ]'
 
 # https://starship.rs/config/#kubernetes
 [kubernetes]

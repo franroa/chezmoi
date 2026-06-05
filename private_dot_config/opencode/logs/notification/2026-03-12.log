@@ -1,0 +1,73 @@
+[2026-03-12T18:57:03.795Z] [notification] terminal window address: 0x597f8d919de0
+[2026-03-12T18:57:03.805Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-12T18:57:03.805Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-12T19:10:26.878Z] [notification] session ses_31c964a14ffeIZOeSjgHSwko4p: title="New session - 2026-03-12T18:58:01.835Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-12T19:10:26.879Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:10:26.883Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-12T19:10:26.894Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:10:26.894Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-12T19:10:27.046Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/Projects/fran/book-editor
+[2026-03-12T19:11:14.182Z] [notification] session ses_31c964a14ffeIZOeSjgHSwko4p: title="New session - 2026-03-12T18:58:01.835Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-12T19:11:14.182Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:11:14.187Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-12T19:11:14.205Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:11:14.205Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-12T19:11:14.359Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/Projects/fran/book-editor
+[2026-03-12T19:17:19.978Z] [notification] terminal window address: 0x597f8d927ad0
+[2026-03-12T19:17:19.978Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-12T19:17:19.978Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-12T19:17:35.316Z] [notification] suppressing duplicate session.idle for ses_31c846bc1ffenGww371cG0BbEz (10ms since last)
+[2026-03-12T19:17:35.317Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="New session - 2026-03-12T19:17:32.862Z", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:17:35.318Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:17:35.322Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:17:35.330Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:17:35.330Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:17:35.410Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:18:51.913Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:18:51.913Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:18:51.918Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:18:51.924Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:18:51.925Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:18:52.051Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:23:55.875Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:23:55.876Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:23:55.880Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:23:55.887Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:23:55.887Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:23:56.075Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:25:12.172Z] [notification] session ses_31c964a14ffeIZOeSjgHSwko4p: title="New session - 2026-03-12T18:58:01.835Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-12T19:25:12.172Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:25:12.178Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-12T19:25:12.186Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:25:12.186Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-12T19:25:12.259Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/Projects/fran/book-editor
+[2026-03-12T19:30:24.921Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:30:24.921Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:30:24.931Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:30:24.948Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:30:24.948Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:30:25.340Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:39:42.218Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:39:42.218Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:39:42.228Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:39:42.247Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:39:42.248Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:39:42.591Z] [notification] spawning watchScript for notifId=43 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:46:27.665Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:46:27.665Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:46:27.675Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:46:27.688Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:46:27.689Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:46:28.066Z] [notification] spawning watchScript for notifId=44 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:48:08.862Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:48:08.863Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:48:08.872Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:48:08.896Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:48:08.896Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:48:09.278Z] [notification] spawning watchScript for notifId=45 dir=/home/froa/Documents/ReadItLater
+[2026-03-12T19:50:13.255Z] [notification] session ses_31c846bc1ffenGww371cG0BbEz: title="Greeting chat prompt", dir="/home/froa/Documents/ReadItLater"
+[2026-03-12T19:50:13.255Z] [notification] scratchpad project_branch: null
+[2026-03-12T19:50:13.264Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-03-12T19:50:13.296Z] [notification] scratchpad hidden → will notify
+[2026-03-12T19:50:13.297Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-03-12T19:50:13.646Z] [notification] spawning watchScript for notifId=46 dir=/home/froa/Documents/ReadItLater

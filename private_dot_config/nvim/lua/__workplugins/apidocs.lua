@@ -1,3 +1,0 @@
-return {
-  "emmanueltouzery/apidocs.nvim",
-}

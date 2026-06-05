@@ -1,0 +1,326 @@
+[2026-03-14T20:04:35.584Z] [notification] terminal window address: 0x6206bc091170
+[2026-03-14T20:04:35.593Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:04:35.593Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:05:20.276Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:05:20.460Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:05:20.460Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:05:20.516Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:05:20.516Z] [notification] suppressing duplicate session.idle for ses_3120c9975ffemq82PtHi68yT8C (240ms since last)
+[2026-03-14T20:06:26.573Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:06:26.880Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:06:26.880Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:06:26.930Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:06:26.930Z] [notification] suppressing duplicate session.idle for ses_3120c9975ffemq82PtHi68yT8C (357ms since last)
+[2026-03-14T20:06:31.316Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:06:31.505Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:06:31.505Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:06:31.535Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:06:31.535Z] [notification] suppressing duplicate session.idle for ses_3120c9975ffemq82PtHi68yT8C (219ms since last)
+[2026-03-14T20:07:59.066Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:07:59.111Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:07:59.111Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:07:59.111Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:08:51.091Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:08:51.282Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:08:51.284Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:08:51.284Z] [notification] suppressing duplicate session.idle for ses_312097e65ffeEdODeJgiRDviMn (193ms since last)
+[2026-03-14T20:08:51.285Z] [notification] session ses_312097e65ffeEdODeJgiRDviMn: title="New session - 2026-03-14T20:08:01.178Z", dir="/home/froa/.config/opencode"
+[2026-03-14T20:08:51.287Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:08:51.288Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:08:51.290Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:08:51.290Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:08:51.290Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:08:51.380Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:08:51.380Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/.config/opencode
+[2026-03-14T20:09:07.570Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:09:07.739Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:09:07.743Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:09:07.743Z] [notification] suppressing duplicate session.idle for ses_312097e65ffeEdODeJgiRDviMn (172ms since last)
+[2026-03-14T20:09:07.744Z] [notification] session ses_312097e65ffeEdODeJgiRDviMn: title="New session - 2026-03-14T20:08:01.178Z", dir="/home/froa/.config/opencode"
+[2026-03-14T20:09:07.744Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:09:07.753Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:09:07.764Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-14T20:09:07.764Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-03-14T20:09:22.592Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:09:22.760Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:09:22.760Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:09:22.760Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:09:30.455Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:09:30.614Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:09:30.618Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:09:30.618Z] [notification] suppressing duplicate session.idle for ses_312097e65ffeEdODeJgiRDviMn (163ms since last)
+[2026-03-14T20:09:30.619Z] [notification] session ses_312097e65ffeEdODeJgiRDviMn: title="New session - 2026-03-14T20:08:01.178Z", dir="/home/froa/.config/opencode"
+[2026-03-14T20:09:30.619Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:09:30.621Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:09:30.626Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:09:30.626Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:09:30.626Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:09:30.697Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:09:30.697Z] [notification] spawning watchScript for notifId=11 dir=/home/froa/.config/opencode
+[2026-03-14T20:09:35.231Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:09:35.375Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:09:35.375Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:09:35.375Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:10:15.702Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:10:15.969Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:10:15.975Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:10:15.975Z] [notification] suppressing duplicate session.idle for ses_3120807f1ffeCjWh3GLkjC2uzq (273ms since last)
+[2026-03-14T20:10:15.975Z] [notification] session ses_3120807f1ffeCjWh3GLkjC2uzq: title="New session - 2026-03-14T20:09:37.038Z", dir="/home/froa/.config/opencode"
+[2026-03-14T20:10:15.978Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:10:15.979Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:10:15.982Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:10:15.982Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:10:15.982Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:10:16.003Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:10:16.004Z] [notification] spawning watchScript for notifId=12 dir=/home/froa/.config/opencode
+[2026-03-14T20:10:55.628Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:10:55.901Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:10:55.910Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:10:55.910Z] [notification] suppressing duplicate session.idle for ses_3120807f1ffeCjWh3GLkjC2uzq (282ms since last)
+[2026-03-14T20:10:55.911Z] [notification] session ses_3120807f1ffeCjWh3GLkjC2uzq: title="New session - 2026-03-14T20:09:37.038Z", dir="/home/froa/.config/opencode"
+[2026-03-14T20:10:55.911Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:10:55.925Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:10:55.931Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:10:55.931Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:10:55.932Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:10:55.998Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:10:55.999Z] [notification] spawning watchScript for notifId=13 dir=/home/froa/.config/opencode
+[2026-03-14T20:11:57.543Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:11:57.767Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:11:57.795Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:11:57.795Z] [notification] suppressing duplicate session.idle for ses_3196c1af9ffeWqeYgNu6jHapkU (251ms since last)
+[2026-03-14T20:11:57.796Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T20:11:57.816Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:11:57.821Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:11:57.829Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:11:57.829Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:11:57.829Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:11:57.919Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:11:57.919Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/.config/opencode
+[2026-03-14T20:13:11.306Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:13:11.484Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:13:11.489Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:13:11.489Z] [notification] suppressing duplicate session.idle for ses_3196c1af9ffeWqeYgNu6jHapkU (183ms since last)
+[2026-03-14T20:13:11.490Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T20:13:11.498Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:13:11.502Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:13:11.512Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:13:11.512Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:13:11.512Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:13:11.615Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:13:11.616Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/.config/opencode
+[2026-03-14T20:26:01.720Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:26:01.920Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:26:01.922Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T20:26:01.934Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:26:01.938Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:26:01.945Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:26:01.946Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:26:01.946Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:26:02.071Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:26:02.071Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/.config/opencode
+[2026-03-14T20:29:04.880Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:29:05.100Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:29:05.100Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:29:05.100Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:29:13.915Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:29:14.085Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:29:14.088Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:29:14.088Z] [notification] suppressing duplicate session.idle for ses_311f62c61ffesAhCq8DH9v2nJb (173ms since last)
+[2026-03-14T20:29:14.088Z] [notification] session ses_311f62c61ffesAhCq8DH9v2nJb: title="Quick test note", dir="/home/froa/.config/opencode"
+[2026-03-14T20:29:14.092Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:29:14.094Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:29:14.101Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:29:14.101Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:29:14.101Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:29:14.159Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:29:14.159Z] [notification] spawning watchScript for notifId=20 dir=/home/froa/.config/opencode
+[2026-03-14T20:29:43.800Z] [notification] terminal window address: 0x6206bc07b150
+[2026-03-14T20:29:43.800Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:29:43.800Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:30:14.157Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:30:14.340Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:30:14.340Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:30:14.343Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:30:14.343Z] [notification] suppressing duplicate session.idle for ses_311f59505ffeP331i3bdkRNa9A (186ms since last)
+[2026-03-14T20:30:35.889Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:30:36.074Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:30:36.074Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:30:36.076Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:30:36.076Z] [notification] suppressing duplicate session.idle for ses_311f59505ffeP331i3bdkRNa9A (187ms since last)
+[2026-03-14T20:30:53.129Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:30:53.321Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:30:53.322Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:30:53.322Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:31:16.453Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:16.671Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:16.674Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:16.674Z] [notification] suppressing duplicate session.idle for ses_311f48616ffehKp4RYRINpycKS (221ms since last)
+[2026-03-14T20:31:16.674Z] [notification] session ses_311f48616ffehKp4RYRINpycKS: title="Test prompt discussion", dir="/home/froa/.config/opencode"
+[2026-03-14T20:31:16.675Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:31:16.676Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:31:16.688Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-14T20:31:16.688Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-03-14T20:31:20.225Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:20.415Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:20.417Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:20.417Z] [notification] suppressing duplicate session.idle for ses_311f48616ffehKp4RYRINpycKS (192ms since last)
+[2026-03-14T20:31:20.417Z] [notification] session ses_311f48616ffehKp4RYRINpycKS: title="Test prompt discussion", dir="/home/froa/.config/opencode"
+[2026-03-14T20:31:20.420Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:31:20.422Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:31:20.431Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:31:20.432Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:31:20.432Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:31:20.566Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:31:20.566Z] [notification] spawning watchScript for notifId=21 dir=/home/froa/.config/opencode
+[2026-03-14T20:31:31.178Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:31:31.364Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:31:31.364Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:31:31.365Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:31:31.365Z] [notification] suppressing duplicate session.idle for ses_311f59505ffeP331i3bdkRNa9A (187ms since last)
+[2026-03-14T20:31:40.717Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:40.964Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:40.970Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:40.970Z] [notification] suppressing duplicate session.idle for ses_311f48616ffehKp4RYRINpycKS (253ms since last)
+[2026-03-14T20:31:40.971Z] [notification] session ses_311f48616ffehKp4RYRINpycKS: title="Test prompt discussion", dir="/home/froa/.config/opencode"
+[2026-03-14T20:31:40.971Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:31:40.975Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:31:40.983Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:31:40.983Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:31:40.983Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:31:41.092Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:31:41.092Z] [notification] spawning watchScript for notifId=22 dir=/home/froa/.config/opencode
+[2026-03-14T20:31:46.743Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:47.016Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:47.023Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:31:47.023Z] [notification] suppressing duplicate session.idle for ses_311f48616ffehKp4RYRINpycKS (280ms since last)
+[2026-03-14T20:31:47.024Z] [notification] session ses_311f48616ffehKp4RYRINpycKS: title="Test prompt discussion", dir="/home/froa/.config/opencode"
+[2026-03-14T20:31:47.024Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:31:47.029Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:31:47.037Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-14T20:31:47.037Z] [notification] suppressing: same project_branch (opencode_main)
+[2026-03-14T20:31:53.381Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:31:53.634Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:31:53.634Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-14T20:31:53.640Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-14T20:31:53.640Z] [notification] suppressing duplicate session.idle for ses_311f59505ffeP331i3bdkRNa9A (259ms since last)
+[2026-03-14T20:36:24.162Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:36:24.382Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:36:24.382Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:36:24.382Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:37:52.297Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:37:52.455Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:37:52.457Z] [notification] session ses_311ee399cffe5my6Nr5w03TLfp: title="Font editor: Borel-RegularCustom.ttf connector behavior issue", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-14T20:37:52.459Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:37:52.462Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-14T20:37:52.474Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:37:52.474Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:37:52.474Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-14T20:37:52.552Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-03-14T20:37:52.552Z] [notification] spawning watchScript for notifId=23 dir=/home/froa/Projects/fran/book-editor
+[2026-03-14T20:37:52.603Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:37:52.603Z] [notification] suppressing duplicate session.idle for ses_311ee399cffe5my6Nr5w03TLfp (306ms since last)
+[2026-03-14T20:38:22.520Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:38:22.732Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:38:22.738Z] [notification] session ses_311ee399cffe5my6Nr5w03TLfp: title="Font editor: Borel-RegularCustom.ttf connector behavior issue", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-14T20:38:22.738Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:38:22.744Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-14T20:38:22.751Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:38:22.751Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:38:22.751Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-14T20:38:22.846Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-03-14T20:38:22.846Z] [notification] spawning watchScript for notifId=24 dir=/home/froa/Projects/fran/book-editor
+[2026-03-14T20:39:44.558Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:39:44.809Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:39:44.811Z] [notification] session ses_311ee399cffe5my6Nr5w03TLfp: title="Font editor: Borel-RegularCustom.ttf connector behavior issue", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-14T20:39:44.811Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:39:44.814Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-14T20:39:44.824Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:39:44.825Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:39:44.825Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-14T20:39:44.917Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-03-14T20:39:44.917Z] [notification] spawning watchScript for notifId=25 dir=/home/froa/Projects/fran/book-editor
+[2026-03-14T20:48:46.706Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:48:46.909Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:48:46.910Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:48:46.910Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:49:53.126Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:49:53.337Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:49:53.337Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:49:53.337Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:50:01.855Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:50:02.006Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:50:02.015Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:50:02.015Z] [notification] suppressing duplicate session.idle for ses_311e32278ffeYUh7x3lAKhDp4p (160ms since last)
+[2026-03-14T20:50:02.016Z] [notification] session ses_311e32278ffeYUh7x3lAKhDp4p: title="TET conversation context and goals", dir="/home/froa/Downloads"
+[2026-03-14T20:50:02.016Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:50:02.019Z] [notification] session project_branch: Downloads_main, dir: /home/froa/Downloads
+[2026-03-14T20:50:02.027Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:50:02.027Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:50:02.027Z] [notification] tracked latest notification: Downloads_main (/home/froa/Downloads)
+[2026-03-14T20:50:02.132Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=Downloads_main
+[2026-03-14T20:50:02.132Z] [notification] spawning watchScript for notifId=26 dir=/home/froa/Downloads
+[2026-03-14T20:50:14.620Z] [notification] aoe session detected: "aoe_opencode_main_b78c7a28" → using aoe-cwd scratchpad directly
+[2026-03-14T20:50:14.834Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-14T20:50:14.835Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-14T20:50:14.835Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-14T20:52:45.340Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:52:45.535Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T20:52:45.536Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T20:52:45.576Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T20:52:45.581Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T20:52:45.595Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T20:52:45.595Z] [notification] scratchpad hidden → will notify
+[2026-03-14T20:52:45.596Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T20:52:45.724Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T20:52:45.724Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/.config/opencode
+[2026-03-14T21:00:58.792Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:00:59.034Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:00:59.037Z] [notification] session ses_311ddb44bffegHWXtJ3sYkc517: title="Explore opencode notification config (@explore subagent)", dir="/home/froa/.config/opencode"
+[2026-03-14T21:00:59.057Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T21:00:59.058Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T21:00:59.063Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T21:00:59.063Z] [notification] scratchpad hidden → will notify
+[2026-03-14T21:00:59.064Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T21:00:59.130Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T21:00:59.130Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/.config/opencode
+[2026-03-14T21:01:28.355Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:01:28.569Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:01:28.571Z] [notification] session ses_311d8df8effeGfyyqjRN6PCiUN: title="Read notification.js plugin source (@explore subagent)", dir="/home/froa/.config/opencode"
+[2026-03-14T21:01:28.631Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T21:01:28.636Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T21:01:28.654Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T21:01:28.654Z] [notification] scratchpad hidden → will notify
+[2026-03-14T21:01:28.654Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T21:01:28.812Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T21:01:28.812Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/.config/opencode
+[2026-03-14T21:01:46.618Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:01:46.808Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:01:46.813Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T21:01:46.870Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T21:01:46.875Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T21:01:46.883Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T21:01:46.883Z] [notification] scratchpad hidden → will notify
+[2026-03-14T21:01:46.883Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T21:01:47.062Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T21:01:47.062Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/.config/opencode
+[2026-03-14T21:03:13.277Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:03:13.502Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:03:13.503Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T21:03:13.549Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T21:03:13.553Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T21:03:13.560Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T21:03:13.560Z] [notification] scratchpad hidden → will notify
+[2026-03-14T21:03:13.561Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T21:03:13.785Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T21:03:13.785Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/.config/opencode
+[2026-03-14T21:05:33.540Z] [notification] event: pyprScratchpadName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:05:33.818Z] [notification] runtime check: runtimePyprName=aoe, windowClass=aoe-cwd
+[2026-03-14T21:05:33.831Z] [notification] session ses_3196c1af9ffeWqeYgNu6jHapkU: title="AOE PyPrland Scratchpad: Conditional Notifications for Sessions Only in Agents of Empires", dir="/home/froa/.config/opencode"
+[2026-03-14T21:05:33.872Z] [notification] scratchpad project_branch: opencode_main
+[2026-03-14T21:05:33.877Z] [notification] session project_branch: opencode_main, dir: /home/froa/.config/opencode
+[2026-03-14T21:05:33.884Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-03-14T21:05:33.885Z] [notification] scratchpad hidden → will notify
+[2026-03-14T21:05:33.885Z] [notification] tracked latest notification: opencode_main (/home/froa/.config/opencode)
+[2026-03-14T21:05:34.024Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=opencode_main
+[2026-03-14T21:05:34.024Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/.config/opencode

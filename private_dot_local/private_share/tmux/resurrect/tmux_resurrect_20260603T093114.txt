@@ -1,0 +1,13 @@
+pane	aoe_P0004-703-error_22e4a24c	0	1	:*	0	~/P/t/c/.a/P0004-703-error	:/home/froa/Projects/ts/citadel-ai/.aoe-worktrees/P0004-703-error	1	fish	:
+pane	aoe_P0004-703-error_22e4a24c	0	1	:*	1	~	:/home/froa	0	fish	:
+pane	aoe_P0004-703-rdp_9f7e27a3	0	1	:*	0	~/P/t/p/.a/P0004-703-rdp	:/home/froa/Projects/ts/platform-vpn/.aoe-worktrees/P0004-703-rdp	1	fish	:
+pane	aoe_P0004-703-rdp_9f7e27a3	0	1	:*	1	~	:/home/froa	0	fish	:
+pane	aoe_P0004-703-test_7f928ca2	0	1	:*	0	~/P/t/v/.a/P0004-703-test	:/home/froa/Projects/ts/vm-poc/.aoe-worktrees/P0004-703-test	1	fish	:
+pane	aoe_P0004-703-test_7f928ca2	0	1	:*	1	~/P/t/v/.a/P0004-703-test	:/home/froa/Projects/ts/vm-poc/.aoe-worktrees/P0004-703-test	0	fish	:
+pane	default	0	1	:*Z	0	tsyl170	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	tsyl170	:/home/froa	0	fish	:
+window	aoe_P0004-703-error_22e4a24c	0	:fish	1	:*	8205,80x24,0,0{40x24,0,0,0,39x24,41,0,1}	:
+window	aoe_P0004-703-rdp_9f7e27a3	0	:fish	1	:*	34d0,183x51,0,0{92x51,0,0,2,90x51,93,0,3}	:
+window	aoe_P0004-703-test_7f928ca2	0	:fish	1	:*	34d9,183x51,0,0{92x51,0,0,4,90x51,93,0,5}	:
+window	default	0	:fish	1	:*Z	2b02,183x51,0,0{91x51,0,0,6,91x51,92,0,7}	:
+state	default	

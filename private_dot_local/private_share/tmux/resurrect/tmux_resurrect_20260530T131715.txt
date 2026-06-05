@@ -1,0 +1,28 @@
+pane	11	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	11	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	P0004-655-GitLab-Project	0	1	:*	0	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	1	fish	:
+pane	P0004-655-GitLab-Project	0	1	:*	1	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	0	fish	:
+pane	P0004-695-migrate-firecast-k8s	0	1	:*	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	P0004-695-migrate-firecast-k8s	0	1	:*	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	P0004-706-add-firecast-pipeline	0	1	:*	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	P0004-706-add-firecast-pipeline	0	1	:*	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	SDI2402-367-azure-access	0	1	:*	0	~/.c/hypr	:/home/froa/.config/hypr	1	fish	:
+pane	SDI2402-367-azure-access	0	1	:*	1	~/.c/hypr	:/home/froa/.config/hypr	0	fish	:
+pane	azure-vm-tf-mod	0	1	:*	0	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	1	fish	:
+pane	azure-vm-tf-mod	0	1	:*	1	~	:/home/froa	0	fish	:
+pane	chezmoi	0	1	:*Z	0	tsyl170	:/home/froa/.local/share/chezmoi	1	fish	:
+pane	chezmoi	0	1	:*Z	1	tsyl170	:/home/froa/.local/share/chezmoi	0	fish	:
+pane	fran-local-synapse	0	1	:*Z	0	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	1	fish	:
+pane	fran-local-synapse	0	1	:*Z	1	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	0	fish	:
+pane	hypr	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	hypr	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	11	0	:fish	1	:*Z	34c7,183x51,0,0{92x51,0,0,0,90x51,93,0,1}	:
+window	P0004-655-GitLab-Project	0	:fish	1	:*	34d0,183x51,0,0{92x51,0,0,2,90x51,93,0,3}	:
+window	P0004-695-migrate-firecast-k8s	0	:fish	1	:*	34e2,183x51,0,0{92x51,0,0,6,90x51,93,0,7}	:
+window	P0004-706-add-firecast-pipeline	0	:fish	1	:*	34eb,183x51,0,0{92x51,0,0,8,90x51,93,0,9}	:
+window	SDI2402-367-azure-access	0	:fish	1	:*	f030,183x51,0,0{92x51,0,0,10,90x51,93,0,11}	:
+window	azure-vm-tf-mod	0	:fish	1	:*	f035,183x51,0,0{92x51,0,0,12,90x51,93,0,13}	:
+window	chezmoi	0	:fish	1	:*Z	303c,183x51,0,0{92x51,0,0,24,90x51,93,0,25}	:
+window	fran-local-synapse	0	:fish	1	:*Z	f03f,183x51,0,0{92x51,0,0,16,90x51,93,0,17}	:
+window	hypr	0	:fish	1	:*Z	f044,183x51,0,0{92x51,0,0,18,90x51,93,0,19}	:
+state	chezmoi	fran-local-synapse

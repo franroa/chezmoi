@@ -1,0 +1,11 @@
+[2026-03-24T12:55:46.298Z] [notification] terminal is pyprland scratchpad: opencode_cwd (opencode-cwd)
+[2026-03-24T12:55:46.415Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-24T12:55:46.415Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-24T16:34:36.232Z] [notification] tmux session "2" not found in any hyprland window's child tree
+[2026-03-24T16:34:36.339Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-24T16:34:36.442Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-24T16:34:36.442Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-24T16:35:19.762Z] [notification] tmux session "2" not found in any hyprland window's child tree
+[2026-03-24T16:35:19.867Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-24T16:35:19.987Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-24T16:35:19.987Z] [notification] isSessionFocused: false - null windowClass

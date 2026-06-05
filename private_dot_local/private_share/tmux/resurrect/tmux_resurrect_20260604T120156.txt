@@ -1,0 +1,10 @@
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	0	claude	:claude --continue
+pane	fish	0	1	:*Z	0	tsyl170	:/home/froa/.config/fish	1	fish	:
+pane	fish	0	1	:*Z	1	tsyl170	:/home/froa/.config/fish	0	fish	:/usr/local/bin/starship prompt --terminal-width=91 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	tmux	0	1	:*Z	0	nvim .tmux.conf ~	:/home/froa	1	nvim	:/tmp/.mount_nvimLlgNmh/usr/bin/nvim .tmux.conf
+pane	tmux	0	1	:*Z	1	✳ Debug tmux glab-open pipeline script error	:/home/froa	0	claude	:claude --continue
+window	firecast-builder	0	:fish	1	:*Z	3ef1,185x51,0,0{93x51,0,0,2,91x51,94,0,3}	:
+window	fish	0	:fish	1	:*Z	34cb,185x51,0,0{93x51,0,0,14,91x51,94,0,15}	:
+window	tmux	0	:nvim	1	:*Z	3051,185x51,0,0{92x51,0,0,10,92x51,93,0,11}	:
+state	fish	firecast-builder

@@ -1,0 +1,233 @@
+[2026-03-21T06:27:09.295Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-21T06:27:09.455Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-21T06:27:09.560Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:27:09.560Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:27:51.294Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-21T06:27:51.469Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-21T06:27:51.596Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:27:51.596Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:28:03.379Z] [notification] terminal window address: 0x61eddb777b20
+[2026-03-21T06:28:03.491Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:28:03.491Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:28:43.263Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:28:43.521Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:28:43.521Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:29:34.256Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:29:34.396Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:29:34.396Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:32:27.921Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:32:28.187Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:32:28.187Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:36:18.426Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-21T06:36:18.627Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-21T06:36:18.740Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:36:18.740Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:37:48.486Z] [notification] terminal window address: 0x61eddb777b20
+[2026-03-21T06:37:48.591Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:37:48.591Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:38:30.462Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:38:30.633Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:38:30.633Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:41:10.809Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:41:10.988Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:41:10.988Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:42:17.589Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:42:17.839Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:42:17.839Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:42:40.530Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:42:40.783Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:42:40.783Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:42:49.262Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-21T06:42:49.415Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-21T06:42:49.517Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:42:49.517Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:43:48.472Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:43:48.742Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:43:48.742Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:44:34.953Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:44:35.126Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:44:35.126Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:45:53.815Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:45:54.089Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:45:54.089Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:46:02.894Z] [notification] aoe session detected: "aoe_testest_b1051d0a" → using aoe-cwd scratchpad directly
+[2026-03-21T06:46:03.058Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-21T06:46:03.159Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-21T06:46:03.160Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-21T06:46:55.060Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:46:55.264Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:46:55.264Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:47:45.243Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:47:45.383Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:47:45.383Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:48:06.091Z] buildHyprClientMap test: true
+[2026-03-21T06:48:18.916Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:48:19.040Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:48:19.040Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:48:30.906Z] buildHyprClientMap test: true
+[2026-03-21T06:48:45.195Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:48:45.458Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:48:45.458Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:48:58.906Z] buildHyprClientMap test: true
+[2026-03-21T06:49:10.975Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:49:11.177Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:49:11.177Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:49:26.910Z] buildHyprClientMap test: true
+[2026-03-21T06:49:41.339Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:49:41.606Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:49:41.606Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:49:51.501Z] buildHyprClientMap test: true
+[2026-03-21T06:50:03.665Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:50:03.915Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:50:03.915Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:50:16.291Z] buildHyprClientMap test: true
+[2026-03-21T06:50:31.820Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:50:31.997Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:50:31.997Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:50:41.080Z] buildHyprClientMap test: true
+[2026-03-21T06:50:59.483Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:50:59.634Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:50:59.634Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:51:08.270Z] buildHyprClientMap test: true
+[2026-03-21T06:51:08.285Z] aoe session: "aoe_testest_b1051d0a"
+[2026-03-21T06:51:08.537Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:51:25.478Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:51:25.644Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:51:25.644Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:51:35.435Z] buildHyprClientMap test: true
+[2026-03-21T06:51:35.450Z] aoe session: "aoe_testest_b1051d0a"
+[2026-03-21T06:51:35.636Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:51:50.057Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:51:50.270Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:51:50.270Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:52:01.248Z] buildHyprClientMap test: true
+[2026-03-21T06:52:01.263Z] aoe session: "aoe_testest_b1051d0a"
+[2026-03-21T06:52:01.422Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:52:24.984Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:52:25.151Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:52:25.152Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:52:46.695Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:52:46.914Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:52:46.914Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:53:28.424Z] [notification] event: pyprScratchpadName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:53:28.638Z] [notification] runtime check: runtimePyprName=null, windowClass=com.mitchellh.ghostty
+[2026-03-21T06:53:28.638Z] [notification] skipping notification: not in aoe scratchpad (runtimePyprName=null)
+[2026-03-21T06:53:35.452Z] buildHyprClientMap test: true
+[2026-03-21T06:53:35.466Z] aoe session: "aoe_testest_b1051d0a"
+[2026-03-21T06:53:35.590Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:54:06.789Z] buildHyprClientMap test: true
+[2026-03-21T06:54:07.104Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-21T06:54:33.018Z] skipping: not in aoe scratchpad
+[2026-03-21T06:55:46.312Z] buildHyprClientMap test: true
+[2026-03-21T06:55:46.327Z] aoe session: "aoe_testest_b1051d0a"
+[2026-03-21T06:55:46.521Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:55:53.697Z] buildHyprClientMap test: true
+[2026-03-21T06:55:53.711Z] aoe session: "aoe_testcasdf_86ffc8b7"
+[2026-03-21T06:55:53.902Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:56:58.402Z] buildHyprClientMap test: true
+[2026-03-21T06:56:58.417Z] aoe session: "aoe_asdfasdfasdf_2b8e0333"
+[2026-03-21T06:56:58.577Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:57:10.248Z] buildHyprClientMap test: true
+[2026-03-21T06:57:10.555Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-21T06:57:49.243Z] buildHyprClientMap test: true
+[2026-03-21T06:57:49.257Z] aoe session: "aoe_asdfasdfasdf_2b8e0333"
+[2026-03-21T06:57:49.443Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T06:59:09.097Z] skipping: not in aoe scratchpad
+[2026-03-21T07:08:24.819Z] skipping: not in aoe scratchpad
+[2026-03-21T07:09:14.311Z] buildHyprClientMap test: true
+[2026-03-21T07:09:14.327Z] aoe session: "aoe_UserScripts_main_5c7ada9f"
+[2026-03-21T07:09:14.502Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:10:24.441Z] will notify for session ses_2f0c4ec88fferd5zcwehQgri1A
+[2026-03-21T07:10:24.446Z] suppressing duplicate for ses_2f0c4ec88fferd5zcwehQgri1A
+[2026-03-21T07:10:24.447Z] session: title="New session - 2026-03-21T07:10:23.095Z", dir="/home/froa/.config/hypr/UserScripts"
+[2026-03-21T07:10:24.453Z] scratchpad project_branch: UserScripts_main
+[2026-03-21T07:10:24.458Z] session project_branch: UserScripts_main
+[2026-03-21T07:10:24.468Z] scratchpad visible=false
+[2026-03-21T07:10:24.468Z] scratchpad hidden → will notify
+[2026-03-21T07:10:24.544Z] notification sent: id=9
+[2026-03-21T07:10:32.595Z] will notify for session ses_2f0c4ec88fferd5zcwehQgri1A
+[2026-03-21T07:10:32.597Z] suppressing duplicate for ses_2f0c4ec88fferd5zcwehQgri1A
+[2026-03-21T07:10:32.597Z] session: title="New session - 2026-03-21T07:10:23.095Z", dir="/home/froa/.config/hypr/UserScripts"
+[2026-03-21T07:10:32.599Z] scratchpad project_branch: UserScripts_main
+[2026-03-21T07:10:32.601Z] session project_branch: UserScripts_main
+[2026-03-21T07:10:32.603Z] scratchpad visible=false
+[2026-03-21T07:10:32.603Z] scratchpad hidden → will notify
+[2026-03-21T07:10:32.622Z] notification sent: id=10
+[2026-03-21T07:11:06.864Z] will notify for session ses_2f0c4ec88fferd5zcwehQgri1A
+[2026-03-21T07:11:06.872Z] suppressing duplicate for ses_2f0c4ec88fferd5zcwehQgri1A
+[2026-03-21T07:11:06.873Z] session: title="New session - 2026-03-21T07:10:23.095Z", dir="/home/froa/.config/hypr/UserScripts"
+[2026-03-21T07:11:06.874Z] scratchpad project_branch: UserScripts_main
+[2026-03-21T07:11:06.878Z] session project_branch: UserScripts_main
+[2026-03-21T07:11:06.886Z] scratchpad visible=false
+[2026-03-21T07:11:06.886Z] scratchpad hidden → will notify
+[2026-03-21T07:11:06.954Z] notification sent: id=11
+[2026-03-21T07:11:27.433Z] buildHyprClientMap test: true
+[2026-03-21T07:11:27.673Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-21T07:11:31.798Z] skipping: not in aoe scratchpad
+[2026-03-21T07:11:31.800Z] suppressing duplicate for ses_2f0c3e4e3ffev4phi4ZS60IKvd
+[2026-03-21T07:11:35.723Z] skipping: not in aoe scratchpad
+[2026-03-21T07:11:35.725Z] suppressing duplicate for ses_2f0c3e4e3ffev4phi4ZS60IKvd
+[2026-03-21T07:11:41.912Z] skipping: not in aoe scratchpad
+[2026-03-21T07:11:41.918Z] suppressing duplicate for ses_2f0c3e4e3ffev4phi4ZS60IKvd
+[2026-03-21T07:13:01.437Z] will notify for session ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-21T07:13:01.439Z] session: title="AOE session vs pypr scratchpad Alt-3 issue", dir="/home/froa/.config/hypr"
+[2026-03-21T07:13:01.439Z] scratchpad project_branch: UserScripts_main
+[2026-03-21T07:13:01.441Z] session project_branch: hypr_main
+[2026-03-21T07:13:01.445Z] scratchpad visible=true
+[2026-03-21T07:13:01.445Z] different project_branch → will notify
+[2026-03-21T07:13:01.512Z] notification sent: id=12
+[2026-03-21T07:13:59.285Z] will notify for session ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-21T07:13:59.290Z] session: title="AOE session vs pypr scratchpad Alt-3 issue", dir="/home/froa/.config/hypr"
+[2026-03-21T07:13:59.291Z] scratchpad project_branch: UserScripts_main
+[2026-03-21T07:13:59.295Z] session project_branch: hypr_main
+[2026-03-21T07:13:59.302Z] scratchpad visible=true
+[2026-03-21T07:13:59.302Z] different project_branch → will notify
+[2026-03-21T07:13:59.405Z] notification sent: id=13
+[2026-03-21T07:15:06.863Z] will notify for session ses_2f0d09710ffedy8oNAuiP4ndgG
+[2026-03-21T07:15:06.865Z] session: title="AOE session vs pypr scratchpad Alt-3 issue", dir="/home/froa/.config/hypr"
+[2026-03-21T07:15:06.865Z] scratchpad project_branch: UserScripts_main
+[2026-03-21T07:15:06.867Z] session project_branch: hypr_main
+[2026-03-21T07:15:06.882Z] scratchpad visible=true
+[2026-03-21T07:15:06.882Z] different project_branch → will notify
+[2026-03-21T07:15:06.955Z] notification sent: id=14
+[2026-03-21T07:15:53.768Z] buildHyprClientMap test: true
+[2026-03-21T07:15:54.057Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-21T07:20:10.268Z] skipping: not in aoe scratchpad
+[2026-03-21T07:20:50.824Z] buildHyprClientMap test: true
+[2026-03-21T07:20:51.100Z] init: windowClass=com.mitchellh.ghostty, pyprScratchpadName=null
+[2026-03-21T07:22:11.385Z] skipping: not in aoe scratchpad
+[2026-03-21T07:24:10.640Z] skipping: not in aoe scratchpad
+[2026-03-21T07:25:53.723Z] skipping: not in aoe scratchpad
+[2026-03-21T07:27:04.219Z] skipping: not in aoe scratchpad
+[2026-03-21T07:28:03.993Z] skipping: not in aoe scratchpad
+[2026-03-21T07:29:28.621Z] skipping: not in aoe scratchpad
+[2026-03-21T07:31:04.372Z] skipping: not in aoe scratchpad
+[2026-03-21T07:32:54.574Z] skipping: not in aoe scratchpad
+[2026-03-21T07:33:06.744Z] buildHyprClientMap test: true
+[2026-03-21T07:33:06.773Z] aoe session: "aoe_opencode_main_af850b5d"
+[2026-03-21T07:33:06.981Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:33:50.905Z] buildHyprClientMap test: true
+[2026-03-21T07:33:50.913Z] aoe session: "aoe_hypr_main_2eb1bf82"
+[2026-03-21T07:33:50.966Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:36:15.884Z] skipping: not in aoe scratchpad
+[2026-03-21T07:40:34.979Z] skipping: not in aoe scratchpad
+[2026-03-21T07:42:07.585Z] buildHyprClientMap test: true
+[2026-03-21T07:42:07.623Z] aoe session: "aoe_test_error_23c6589b"
+[2026-03-21T07:42:07.814Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:45:30.368Z] skipping: not in aoe scratchpad
+[2026-03-21T07:46:29.774Z] buildHyprClientMap test: true
+[2026-03-21T07:46:29.790Z] aoe session: "aoe_hypr_main_2eb1bf82"
+[2026-03-21T07:46:29.963Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:48:24.219Z] skipping: not in aoe scratchpad
+[2026-03-21T07:48:29.146Z] buildHyprClientMap test: true
+[2026-03-21T07:48:29.160Z] aoe session: "aoe_hypr_main_86840c9e"
+[2026-03-21T07:48:29.417Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:50:02.698Z] skipping: not in aoe scratchpad
+[2026-03-21T07:50:19.119Z] buildHyprClientMap test: true
+[2026-03-21T07:50:19.134Z] aoe session: "aoe_opencode_main_53fe700f"
+[2026-03-21T07:50:19.285Z] init: windowClass=aoe-cwd, pyprScratchpadName=aoe
+[2026-03-21T07:51:51.153Z] skipping: not in aoe scratchpad
+[2026-03-21T07:54:32.107Z] skipping: not in aoe scratchpad
+[2026-03-21T07:56:33.473Z] skipping: not in aoe scratchpad
+[2026-03-21T07:57:42.951Z] skipping: not in aoe scratchpad
+[2026-03-21T08:00:27.822Z] skipping: not in aoe scratchpad

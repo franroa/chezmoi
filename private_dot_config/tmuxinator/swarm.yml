@@ -1,0 +1,19 @@
+# Ticket swarm — optional persistent control session (dashboard + shell).
+# Workers are independent AOE sessions spawned by swarm.sh, NOT panes here.
+#   tmuxinator start swarm root=$PWD tickets="TICK-1,TICK-2"
+#   (tickets is optional; omit to just open the dashboard)
+name: swarm
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+on_project_start:
+  - <% if @settings["tickets"] %>bash ~/.config/tmux/scripts/swarm.sh spawn "<%= @settings["tickets"] %>"<% end %>
+
+windows:
+  - control:
+      layout: main-horizontal
+      panes:
+        - dashboard:
+            - bash ~/.config/tmux/scripts/swarm-dashboard.sh watch
+        - shell:
+            - echo "swarm.sh spawn \"A,B\" | teardown | list   ·   aoe session attach <id>"
+            - bash ~/.config/tmux/scripts/swarm.sh list

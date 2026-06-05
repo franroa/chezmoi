@@ -1,0 +1,7 @@
+pane	citadel-ai	0	1	:*Z	0	✳ Rename platform plugin to gitlab	:/home/froa/Projects/ts/citadel-ai	1	claude	:claude
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai\ (deleted)	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+window	citadel-ai	0	:claude	1	:*Z	2e9b,278x71,0,0{139x71,0,0,41,138x71,140,0,42}	:
+window	firecast-builder	0	:claude	1	:*Z	6240,278x71,0,0{140x71,0,0,8,137x71,141,0,9}	:
+state	firecast-builder	citadel-ai

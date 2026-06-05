@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(kubie --version)",
+      "Bash(kubie ctx *)",
+      "Bash(kubectl config *)",
+      "Read(//tmp/**)",
+      "Bash(fish -l -i -c 'pwd')",
+      "Bash(fish -c 'pwd')",
+      "Bash(env)",
+      "Bash(fish --version)",
+      "Bash(fish -c 'pwd; echo MARKER; set -S | grep -i pwd')"
+    ]
+  }
+}

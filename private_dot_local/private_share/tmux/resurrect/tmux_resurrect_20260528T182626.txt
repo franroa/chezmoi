@@ -1,0 +1,10 @@
+pane	JIRA	0	1	:*	0	tsyl170	:/home/froa	1	docker	:
+pane	fran-local-synapse	0	1	:*Z	0	nvim .tmux.conf ~	:/home/froa	1	nvim	:/tmp/.mount_nvimEMjmcc/usr/bin/nvim .tmux.conf
+pane	fran-local-synapse	0	1	:*Z	1	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	0	fish	:
+pane	hypr	0	1	:*	0	✳ fix-slack-notification-timing	:/home/froa/.config/hypr	1	claude	:bash
+pane	synapse	0	1	:*	0	nvim settings.json  ~/.claude	:/home/froa/.claude	1	nvim	:/tmp/.mount_nvimjebioj/usr/bin/nvim settings.json
+window	JIRA	0	:docker	1	:*	b3fd,183x51,0,0,0	:
+window	fran-local-synapse	0	:nvim	1	:*Z	b4cc,183x51,0,0{92x51,0,0,1,90x51,93,0,4}	:
+window	hypr	0	:claude	1	:*	b400,183x51,0,0,3	:
+window	synapse	0	:nvim	1	:*	b3ff,183x51,0,0,2	:
+state	fran-local-synapse	synapse

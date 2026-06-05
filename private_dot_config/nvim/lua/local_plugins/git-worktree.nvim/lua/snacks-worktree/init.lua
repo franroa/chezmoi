@@ -152,14 +152,14 @@ function snacks_worktree.create_worktree()
         format = function(item, _)
             local a = Snacks.picker.util.align
             local ret = {} ---@type snacks.picker.Highlight[]
-            
+
             -- Get existing worktrees to show which branches are already in use
             local existing_worktrees = get_existing_worktrees()
-            
+
             -- Mark branch as existing if it's already in a worktree
             local marker = existing_worktrees[item.branch] and '✓' or ' '
             local marker_hl = existing_worktrees[item.branch] and 'SnacksPickerGitBranchCurrent' or 'Normal'
-            
+
             ret[#ret + 1] = { a(marker, 2), marker_hl }
             ret[#ret + 1] = { a(item.branch, 30, { truncate = true }), 'SnacksPickerGitBranch' }
             ret[#ret + 1] = { ' ' }
@@ -173,34 +173,34 @@ function snacks_worktree.create_worktree()
             end
             local branch = item.branch
             picker:close()
-            
+
             -- Check if worktree already exists for this branch
             local existing_worktrees = get_existing_worktrees()
             if existing_worktrees[branch] then
                 Snacks.notify.warn('Worktree already exists for branch: ' .. branch, { title = 'Worktree' })
                 return
             end
-            
-             create_input_prompt(function(name)
-                  if not name or name == '' then
-                      name = branch
-                  end
-                  
-                  -- Check if the worktree path already exists in the branches directory
-                  local git_root = Git.toplevel_dir()
-                  if git_root then
-                      local branches_dir = git_root .. '/branches'
-                      local worktree_path = branches_dir .. '/' .. name
-                      
-                      local stat = uv.fs_stat(worktree_path)
-                      if stat and stat.type == 'directory' then
-                          Snacks.notify.warn('Worktree path already exists: ' .. worktree_path, { title = 'Worktree' })
-                          return
-                      end
-                  end
-                  
-                  git_worktree.create_worktree(name, branch, nil)
-              end)
+
+            create_input_prompt(function(name)
+                if not name or name == '' then
+                    name = branch
+                end
+
+                -- Check if the worktree path already exists in the branches directory
+                local git_root = Git.toplevel_dir()
+                if git_root then
+                    local branches_dir = git_root .. '/branches'
+                    local worktree_path = branches_dir .. '/' .. name
+
+                    local stat = uv.fs_stat(worktree_path)
+                    if stat and stat.type == 'directory' then
+                        Snacks.notify.warn('Worktree path already exists: ' .. worktree_path, { title = 'Worktree' })
+                        return
+                    end
+                end
+
+                git_worktree.create_worktree(name, branch, nil)
+            end)
         end,
     }
 end
@@ -209,8 +209,8 @@ end
 -- @param cb fun(prefix: string|nil): callback with selected prefix or nil if cancelled
 -- @return nil
 local function select_commit_prefix(cb)
-    local prefixes = { 'feat', 'fix', 'chore', 'docs', 'style', 'refactor', 'perf', 'test' }
-    
+    local prefixes = { 'feat', 'fix', 'chore', 'docs', 'style', 'refactor', 'perf', 'test', 'poc' }
+
     Snacks.picker.select(prefixes, {
         prompt = 'Select conventional commit prefix (or ESC to skip)',
     }, function(choice)
@@ -225,7 +225,7 @@ function snacks_worktree.create_new_worktree()
             Snacks.notify.info('Cancelled', { title = 'Create Worktree' })
             return
         end
-        
+
         -- Then prompt for branch name
         vim.ui.input({
             prompt = 'New branch name (will be used as worktree path)',
@@ -234,21 +234,21 @@ function snacks_worktree.create_new_worktree()
                 Snacks.notify.info('Cancelled', { title = 'Create Worktree' })
                 return
             end
-            
+
             -- Check if the worktree path already exists
             local git_root = Git.toplevel_dir()
             if git_root then
                 local branches_dir = git_root .. '/branches'
                 local prefixed_branch = prefix .. '/' .. branch
                 local worktree_path = branches_dir .. '/' .. prefixed_branch
-                
+
                 local stat = uv.fs_stat(worktree_path)
                 if stat and stat.type == 'directory' then
                     Snacks.notify.warn('Worktree path already exists: ' .. worktree_path, { title = 'Create Worktree' })
                     return
                 end
             end
-            
+
             git_worktree.create_worktree(branch, branch, nil, nil, prefix)
         end)
     end)
@@ -261,7 +261,7 @@ function snacks_worktree.create_from_jira()
             Snacks.notify.info('Cancelled', { title = 'Create Worktree from JIRA' })
             return
         end
-        
+
         -- Then prompt for JIRA issue key
         vim.ui.input({
             prompt = 'JIRA issue key (e.g., PROJ-123)',
@@ -270,7 +270,7 @@ function snacks_worktree.create_from_jira()
                 Snacks.notify.info('Cancelled', { title = 'Create Worktree from JIRA' })
                 return
             end
-            
+
             -- Create worktree with JIRA issue - branch name will be derived from JIRA
             -- The create function will fetch the JIRA summary and use it to generate branch/path names
             git_worktree.create_worktree(jira_issue, jira_issue, nil, jira_issue, prefix)
@@ -283,7 +283,7 @@ local finder = function(opts, ctx)
     local cwd = vim.fs.normalize(opts and opts.cwd or uv.cwd() or '.') or nil
     cwd = Snacks.git.get_root(cwd)
     local current = Git.toplevel_dir()
-    
+
     -- Merge options with proc-specific config
     local proc_opts = vim.tbl_extend('force', opts or {}, {
         cwd = cwd,
@@ -302,7 +302,7 @@ local finder = function(opts, ctx)
             end
         end,
     })
-    
+
     return require('snacks.picker.source.proc').proc(proc_opts, ctx)
 end
 

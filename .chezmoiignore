@@ -8,3 +8,20 @@
 
 **/tmp/
 **/temp/
+
+# ── Runtime-regenerated / machine-state files (not real dotfiles) ──────────
+# wallust regenerates these on every wallpaper change → constant drift
+.config/ghostty/wallust.conf
+.config/hypr/wallust/
+.config/kitty/kitty-themes/01-Wallust.conf
+.config/opencode/themes/my-system.json
+.config/rofi/.current_wallpaper
+.config/rofi/wallust/
+.config/waybar/wallust/
+**/wallust/colors-*
+# GNOME dconf binary blob — changes constantly, not hand-edited
+.config/dconf/user
+# tmux-resurrect runtime saves (regenerate on every save/restore)
+.local/share/tmux/resurrect/
+# vendored koreader emulator build artifacts (binary tree, not config)
+Projects/fran/koreader/

@@ -1,0 +1,7 @@
+pane	migrate-firecast-to-k8s	0	1	:*Z	0	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	nvim	:/tmp/.mount_nvimfboeFp/usr/bin/nvim
+pane	migrate-firecast-to-k8s	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	0	claude	:claude --continue
+pane	tmux	0	1	:*Z	0	⠂ Debug Slack notification source links in hyprpanel	:/home/froa/.config/hypr	1	claude	:bash
+pane	tmux	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	migrate-firecast-to-k8s	0	:nvim	1	:*Z	2af9,183x51,0,0{91x51,0,0,4,91x51,92,0,5}	:
+window	tmux	0	:claude	1	:*Z	f044,183x51,0,0{92x51,0,0,18,90x51,93,0,19}	:
+state	migrate-firecast-to-k8s	tmux

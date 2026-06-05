@@ -52,7 +52,16 @@ def get_slack_notifications():
     return notifications
 
 
-def invoke_notification(notif_id):
+def get_slack_action_id(notif):
+    """Extract the action ID to use from a Slack notification dict.
+    .notif files store the action_id, but legacy files stored 'slack'."""
+    content = notif.get("content", "default")
+    if content in ("slack", "opencode", ""):
+        return "default"
+    return content
+
+
+def invoke_notification(notif_id, action_id="default"):
     """Try to invoke notification via busctl EmitActionInvoked."""
     result = subprocess.run(
         [
@@ -65,7 +74,7 @@ def invoke_notification(notif_id):
             "EmitActionInvoked",
             "us",
             str(notif_id),
-            "default",
+            action_id,
         ],
         capture_output=True,
         text=True,
@@ -195,11 +204,11 @@ def get_current_slack_notif_id():
             )
 
             output = result.stdout.strip()
-            if output.startswith('s "') and output.endswith('"'):
-                json_str = output[2:-1]
+            if output.startswith('s "'):
                 import json
 
-                data = json.loads(json_str)
+                # s[2:] is the outer JSON string literal; parse twice to get the dict
+                data = json.loads(json.loads(output[2:]))
                 app_name = data.get("app_name", "")
                 if "slack" in app_name.lower():
                     return str(nid)
@@ -251,7 +260,7 @@ def main():
                     notif = slack_notifs[slack_idx]
                     print(f"Invoking Slack notification {slack_idx + 1}: {notif}")
                     hide_scratchpads()
-                    if invoke_notification(notif["id"]):
+                    if invoke_notification(notif["id"], get_slack_action_id(notif)):
                         close_notification(notif["id"])
                     else:
                         invoke_slack()
@@ -304,7 +313,7 @@ def main():
         notif = slack_notifs[0]
         print(f"Invoking first Slack notification: {notif}")
         hide_scratchpads()
-        if invoke_notification(notif["id"]):
+        if invoke_notification(notif["id"], get_slack_action_id(notif)):
             close_notification(notif["id"])
         else:
             invoke_slack()

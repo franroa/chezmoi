@@ -1,0 +1,10 @@
+pane	default	0	1	:*Z	0	tsyl170	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	tsyl170	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	firecast-builder	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	fran-local-synapse	0	1	:*Z	0	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	1	fish	:
+pane	fran-local-synapse	0	1	:*Z	1	~/P/t/fran-local-synapse	:/home/froa/Projects/ts/fran-local-synapse	0	fish	:
+window	default	0	:fish	1	:*Z	351a,185x51,0,0{92x51,0,0,4,92x51,93,0,5}	:
+window	firecast-builder	0	:fish	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+window	fran-local-synapse	0	:fish	1	:*Z	5e88,278x71,0,0{139x71,0,0,2,138x71,140,0,3}	:
+state	default	

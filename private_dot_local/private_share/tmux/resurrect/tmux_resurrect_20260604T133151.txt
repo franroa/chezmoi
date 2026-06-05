@@ -1,0 +1,16 @@
+pane	azure-sa	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	azure-sa	0	1	:*Z	1	~/.c/fish	:/home/froa/.config/fish	0	fish	:
+pane	citadel-ai	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+pane	default	0	1	:*Z	0	tsyl170	:/home/froa	1	fish	:/usr/local/bin/starship prompt --terminal-width=92 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	default	0	1	:*Z	1	tsyl170	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	✳ 706	:/home/froa/Projects/ts/firecast-builder	0	claude	:claude --continue
+pane	firecast-builder	0	1	:*Z	1	k9s ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	k9s	:kubie ctx
+pane	tmux	0	1	:*Z	0	✳ Debug tmux glab-open pipeline script error	:/home/froa	1	claude	:claude --continue
+pane	tmux	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	azure-sa	0	:fish	1	:*Z	e419,92x51,0,0{46x51,0,0,2,45x51,47,0,3}	:
+window	citadel-ai	0	:fish	1	:*Z	3f0c,185x51,0,0{93x51,0,0,8,91x51,94,0,9}	:
+window	default	0	:fish	1	:*Z	5f17,92x51,0,0{46x51,0,0,10,45x51,47,0,11}	:
+window	firecast-builder	0	:k9s	1	:*Z	e410,92x51,0,0{46x51,0,0,0,45x51,47,0,1}	:
+window	tmux	0	:claude	1	:*Z	da42,92x51,0,0{45x51,0,0,4,46x51,46,0,5}	:
+state	default	

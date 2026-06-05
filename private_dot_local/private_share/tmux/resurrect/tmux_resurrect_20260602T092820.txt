@@ -1,0 +1,9 @@
+pane	kubernetes-namespaces	0	1	:*Z	0	~/P/t/kubernetes-namespaces	:/home/froa/Projects/ts/kubernetes-namespaces	1	fish	:/home/linuxbrew/.linuxbrew/bin/chezmoi completion fish
+pane	kubernetes-namespaces	0	1	:*Z	1	✳ Debug missing platform-sandbox-eu01 in promote options	:/home/froa	0	fish	:
+pane	migrate-firecast-to-k8s	0	1	:*Z	0	tsyl170	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	migrate-firecast-to-k8s	0	1	:*Z	1	tsyl170	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+window	kubernetes-namespaces	0	:claude	1	:*	34c7,183x51,0,0{92x51,0,0,0,90x51,93,0,1}	:
+window	migrate-firecast-to-k8s	0	:claude	1	:*	2af0,183x51,0,0{91x51,0,0,2,91x51,92,0,3}	:
+window	synapse	0	:fish	1	:*	34d9,183x51,0,0{92x51,0,0,4,90x51,93,0,5}	:
+window	tmux	0	:claude	1	:*	34e2,183x51,0,0{92x51,0,0,6,90x51,93,0,7}	:
+state		

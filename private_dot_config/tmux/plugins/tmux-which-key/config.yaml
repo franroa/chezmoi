@@ -1,0 +1,414 @@
+# yaml-language-server: $schema=config.schema.yaml
+command_alias_start_index: 200
+keybindings:
+  # root_table: C-Space
+  prefix_table: Space
+title:
+  style: align=centre,bold
+  prefix: tmux
+  prefix_style: fg=green,align=centre,bold
+position:
+  x: R
+  y: P
+custom_variables:
+  - name: log_info
+    value: "#[fg=green,italics] [info]#[default]#[italics]"
+macros:
+  - name: reload-config
+    commands:
+      - display "#{log_info} Loading config... "
+      - source-file $HOME/.tmux.conf
+      - display -p "\n\n... Press ENTER to continue"
+  - name: restart-pane
+    commands:
+      - display "#{log_info} Restarting pane"
+      - "respawnp -k -c #{pane_current_path}"
+items:
+  - name: Run
+    key: space
+    command: command-prompt
+  - name: Last window
+    key: tab
+    command: last-window
+  - name: Last pane
+    key: "`"
+    command: last-pane
+  - name: Copy
+    key: c
+    menu:
+      - name: Copy
+        key: c
+        command: copy-mode
+      - name: List buffers
+        key: "#"
+        command: list-buffers
+  - separator: true
+  - name: +Windows
+    key: w
+    menu:
+      - name: Last
+        key: tab
+        command: last-window
+      - name: Choose
+        key: w
+        command: choose-tree -Zw
+      - name: Previous
+        key: p
+        command: previous-window
+      - name: Next
+        key: n
+        command: next-window
+      - name: New
+        key: c
+        command: "neww -c #{pane_current_path}"
+      - separator: true
+      - name: +Layout
+        key: l
+        menu:
+          - name: Next
+            key: l
+            command: nextl
+            transient: true
+          - name: Tiled
+            key: t
+            command: selectnl tiled
+          - name: Horizontal
+            key: h
+            command: selectl even-horizontal
+          - name: Vertical
+            key: v
+            command: selectl even-vertical
+          - name: Horizontal main
+            key: H
+            command: selectl main-horizontal
+          - name: Vertical main
+            key: V
+            command: selectl main-vertical
+      - name: Split horizontal
+        key: /
+        command: "splitw -h -c #{pane_current_path}"
+      - name: Split vertical
+        key: "-"
+        command: "splitw -v -c #{pane_current_path}"
+      - name: Rotate
+        key: o
+        command: rotatew
+        transient: true
+      - name: Rotate reverse
+        key: O
+        command: rotatew -D
+        transient: true
+      - separator: true
+      - name: Rename
+        key: R
+        command: command-prompt -I "#W" "renamew -- \"%%\""
+      - name: Kill
+        key: X
+        command: 'confirm -p "Kill window #W? (y/n)" killw'
+      - separator: true
+      - name: +Worktrees
+        key: W
+        menu:
+          - name: Choose
+            key: w
+            command: run-shell -b "~/.config/tmux/plugins/tmux-worktrees/scripts/worktree-manager.sh choose"
+          - name: Cleanup
+            key: d
+            command: run-shell -b "~/.config/tmux/plugins/tmux-worktrees/scripts/worktree-manager.sh cleanup"
+  - name: +Panes
+    key: p
+    menu:
+      - name: Last
+        key: tab
+        command: lastp
+      - name: Choose
+        key: p
+        command: displayp -d 0
+      - separator: true
+      - name: Left
+        key: h
+        command: selectp -L
+      - name: Down
+        key: j
+        command: selectp -D
+      - name: Up
+        key: k
+        command: selectp -U
+      - name: Right
+        key: l
+        command: selectp -R
+      - separator: true
+      - name: Zoom
+        key: z
+        command: resizep -Z
+      - name: +Resize
+        key: r
+        menu:
+          - name: Left
+            key: h
+            command: resizep -L
+            transient: true
+          - name: Down
+            key: j
+            command: resizep -D
+            transient: true
+          - name: Up
+            key: k
+            command: resizep -U
+            transient: true
+          - name: Right
+            key: l
+            command: resizep -R
+            transient: true
+          - name: Left more
+            key: H
+            command: resizep -L 10
+            transient: true
+          - name: Down more
+            key: J
+            command: resizep -D 10
+            transient: true
+          - name: Up more
+            key: K
+            command: resizep -U 10
+            transient: true
+          - name: Right more
+            key: L
+            command: resizep -R 10
+            transient: true
+      - name: Swap left
+        key: H
+        command: swapp -t "{left-of}"
+      - name: Swap down
+        key: J
+        command: swapp -t "{down-of}"
+      - name: Swap up
+        key: K
+        command: swapp -t "{up-of}"
+      - name: Swap right
+        key: L
+        command: swapp -t "{right-of}"
+      - name: Break
+        key: "!"
+        command: break-pane
+      - separator: true
+      - name: Mark
+        key: m
+        command: selectp -m
+      - name: Unmark
+        key: M
+        command: selectp -M
+      - name: Capture
+        key: C
+        command: capture-pane
+      - name: Respawn pane
+        key: R
+        macro: restart-pane
+      - name: Kill
+        key: X
+        command: 'confirm -p "Kill pane #P? (y/n)" killp'
+  - name: +Buffers
+    key: b
+    menu:
+      - name: Choose
+        key: b
+        command: choose-buffer -Z
+      - name: List
+        key: l
+        command: lsb
+      - name: Paste
+        key: p
+        command: pasteb
+  - name: +Sessions
+    key: s
+    menu:
+      - name: Choose
+        key: s
+        command: choose-tree -Zs
+      - name: New
+        key: N
+        command: new
+      - name: Rename
+        key: r
+        command: rename
+      - separator: true
+      - name: +Resurrect
+        key: R
+        menu:
+          - name: Save session
+            key: s
+            command: run-shell ~/.config/tmux/plugins/tmux-resurrect/scripts/save.sh
+          - name: Restore session
+            key: r
+            command: run-shell ~/.config/tmux/plugins/tmux-resurrect/scripts/restore.sh
+      - name: +Snapshots
+        key: S
+        menu:
+          - name: Save named
+            key: s
+            command: "command-prompt -p \"Snapshot name:\" \"run-shell ~/.config/tmux/plugins/tmux-named-snapshot/scripts/save-snapshot.sh %%\""
+          - name: Restore named
+            key: r
+            command: "command-prompt -p \"Snapshot name:\" \"run-shell ~/.config/tmux/plugins/tmux-named-snapshot/scripts/restore-snapshot.sh %%\""
+          - name: Pick snapshot
+            key: p
+            command: "display-popup -E -d \"#{pane_current_path}\" -h 40% -w 50% ~/.config/tmux/scripts/snapshot-picker.sh"
+  - name: +Client
+    key: C
+    menu:
+      - name: Choose
+        key: c
+        command: choose-client -Z
+      - name: Last
+        key: l
+        command: switchc -l
+      - name: Previous
+        key: p
+        command: switchc -p
+      - name: Next
+        key: n
+        command: switchc -n
+      - separator: true
+      - name: Refresh
+        key: R
+        command: refresh
+      - name: +Plugins
+        key: P
+        menu:
+          - name: Install
+            key: i
+            command:
+              run-shell $TMUX_PLUGIN_MANAGER_PATH/tpm/bindings/install_plugins
+          - name: Update
+            key: u
+            command:
+              run-shell $TMUX_PLUGIN_MANAGER_PATH/tpm/bindings/update_plugins
+          - name: Clean
+            key: c
+            command:
+              run-shell $TMUX_PLUGIN_MANAGER_PATH/tpm/bindings/clean_plugins
+      - name: Detach
+        key: D
+        command: detach
+      - name: Suspend
+        key: Z
+        command: suspendc
+      - separator: true
+      - name: Reload config
+        key: r
+        macro: reload-config
+      - name: Customize
+        key: ","
+        command: customize-mode -Z
+  - separator: true
+  - name: +Harpoon
+    key: h
+    menu:
+      - name: List
+        key: l
+        command: run-shell "~/.config/tmux/plugins/tmux-harpoon/harpoon -l"
+      - name: Add window
+        key: a
+        command: run-shell "~/.config/tmux/plugins/tmux-harpoon/harpoon -a"
+      - separator: true
+      - name: Slot 1
+        key: "1"
+        command: run-shell "~/.config/tmux/plugins/tmux-harpoon/harpoon -s 1"
+      - name: Slot 2
+        key: "2"
+        command: run-shell "~/.config/tmux/plugins/tmux-harpoon/harpoon -s 2"
+      - name: Slot 3
+        key: "3"
+        command: run-shell "~/.config/tmux/plugins/tmux-harpoon/harpoon -s 3"
+      - separator: true
+      - name: Pin to slot 1
+        key: H
+        command: run-shell "~/.config/tmux/plugins/tmux-harpoon/harpoon -r 1"
+  - name: +GitLab
+    key: g
+    menu:
+      - name: Open repo
+        key: r
+        command: "run-shell \"~/.config/tmux/scripts/glab-open.sh repo #{pane_current_path}\""
+      - name: Latest pipeline
+        key: p
+        command: "run-shell \"~/.config/tmux/scripts/glab-open.sh pipeline #{pane_current_path}\""
+      - name: Pipelines list
+        key: l
+        command: "run-shell \"~/.config/tmux/scripts/glab-open.sh pipelines-list #{pane_current_path}\""
+      - name: Pipeline TUI
+        key: c
+        command: "display-popup -E -d \"#{pane_current_path}\" -h 85% -w 85% \"fish -c \\\"glab ci view\\\"\""
+      - separator: true
+      - name: CI status
+        key: s
+        command: "display-popup -E -d \"#{pane_current_path}\" -h 50% -w 80% \"glab ci status 2>&1; echo; read _\""
+      - name: MR list
+        key: m
+        command: "display-popup -E -d \"#{pane_current_path}\" -h 50% -w 80% \"glab mr list 2>&1; echo; read _\""
+      - name: Create MR
+        key: R
+        command: "display-popup -E -d \"#{pane_current_path}\" -h 80% -w 80% \"glab mr create\""
+      - name: View MR
+        key: v
+        command: "run-shell \"glab mr view --web\""
+  - name: +Tools
+    key: t
+    menu:
+      - name: FZF
+        key: f
+        command: run-shell -b ~/.config/tmux/plugins/tmux-fzf/main.sh
+      - name: Extrakto
+        key: e
+        command: "run-shell \"\\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\\" \\\"#{pane_id}\\\"\""
+      - separator: true
+      - name: +Jot
+        key: j
+        menu:
+          - name: Open
+            key: j
+            command: "run-shell \"~/.config/tmux/plugins/tmux-jot/scripts/jot.sh main #{q:client_name} #{q:session_name} > /dev/null 2>&1\""
+          - name: Switch
+            key: s
+            command: "run-shell \"~/.config/tmux/plugins/tmux-jot/scripts/jot.sh switch #{q:client_name} #{q:session_name} > /dev/null 2>&1\""
+          - name: Search content
+            key: w
+            command: "run-shell \"~/.config/tmux/plugins/tmux-jot/scripts/jot.sh content_search #{q:client_name} #{q:session_name} > /dev/null 2>&1\""
+          - name: Cleanup
+            key: k
+            command: "run-shell \"~/.config/tmux/plugins/tmux-jot/scripts/jot.sh cleanup #{q:client_name} #{q:session_name} > /dev/null 2>&1\""
+          - name: Doctor
+            key: d
+            command: "run-shell \"~/.config/tmux/plugins/tmux-jot/scripts/jot.sh doctor #{q:client_name} #{q:session_name} > /dev/null 2>&1\""
+      - name: +Logging
+        key: l
+        menu:
+          - name: Toggle logging
+            key: t
+            command: run-shell ~/.config/tmux/plugins/tmux-logging/scripts/toggle_logging.sh
+          - name: Save history
+            key: s
+            command: run-shell ~/.config/tmux/plugins/tmux-logging/scripts/save_complete_history.sh
+          - name: Screen capture
+            key: c
+            command: run-shell ~/.config/tmux/plugins/tmux-logging/scripts/screen_capture.sh
+          - name: Clear history
+            key: x
+            command: run-shell ~/.config/tmux/plugins/tmux-logging/scripts/clear_history.sh
+      - separator: true
+      - name: Yank line
+        key: y
+        command: run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_line.sh
+      - name: Yank PWD
+        key: Y
+        command: run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_pane_pwd.sh
+  - separator: true
+  - name: Time
+    key: T
+    command: clock-mode
+  - name: Show messages
+    key: "~"
+    command: show-messages
+  - name: +Keys
+    key: "?"
+    command: list-keys -N

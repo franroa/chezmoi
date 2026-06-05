@@ -1,0 +1,1 @@
+{"version":1,"hooks":{"postToolUse":[{"type":"command","timeoutSec":30,"bash":"'/home/froa/.local/share/nvim/lazy/code-preview.nvim/backends/copilot/code-close-diff.sh'"}],"preToolUse":[{"type":"command","timeoutSec":30,"bash":"'/home/froa/.local/share/nvim/lazy/code-preview.nvim/backends/copilot/code-preview-diff.sh'"}]}}

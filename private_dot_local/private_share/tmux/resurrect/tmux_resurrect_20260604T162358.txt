@@ -1,0 +1,22 @@
+pane	azure-sa	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	azure-sa	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	cicd-components	0	1	:*Z	0	tsyl170	:/home/froa/Projects/ts/cicd-components	1	fish	:
+pane	cicd-components	0	1	:*Z	1	tsyl170	:/home/froa/Projects/ts/cicd-components	0	fish	:/usr/local/bin/starship prompt --terminal-width=91 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	citadel-ai	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	⠐ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	firecast-builder	0	1	:*Z	1	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	nvim	:/tmp/.mount_nvimLAchID/usr/bin/nvim
+pane	hypr	0	1	:*Z	0	✳ Fix Hyprpanel bluetooth toggle functionality	:/home/froa/.config/hypr	1	claude	:bash
+pane	hypr	0	1	:*Z	1	~/.c/hypr	:/home/froa/.config/hypr	0	fish	:
+pane	tmux	0	1	:*Z	0	🤖 Exploring tmux config	:/home/froa	1	node	:node /home/froa/.local/share/nvm/v25.4.0/bin/copilot
+pane	tmux	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	azure-sa	0	:fish	1	:*Z	5db8,185x51,0,0{96x51,0,0,0,88x51,97,0,1}	:
+window	cicd-components	0	:fish	1	:*Z	34c6,185x51,0,0{93x51,0,0,12,91x51,94,0,13}	:
+window	citadel-ai	0	:fish	1	:*Z	3ef1,185x51,0,0{93x51,0,0,2,91x51,94,0,3}	:
+window	default	0	:fish	1	:*Z	3523,185x51,0,0{92x51,0,0,6,92x51,93,0,7}	:
+window	firecast-builder	0	:claude	1	:*Z	3efa,185x51,0,0{93x51,0,0,4,91x51,94,0,5}	:
+window	hypr	0	:claude	1	:*Z	3f0c,185x51,0,0{93x51,0,0,8,91x51,94,0,9}	:
+window	tmux	0	:node	1	:*Z	34c1,185x51,0,0{93x51,0,0,10,91x51,94,0,11}	:
+state	cicd-components	firecast-builder

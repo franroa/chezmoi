@@ -1,3 +1,0 @@
-return {
-  "nvimdev/visualizer.nvim",
-}

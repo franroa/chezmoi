@@ -1,0 +1,138 @@
+#!/usr/bin/env bash
+
+client_term=$(tmux display-message -p '#{client_termname}' 2>/dev/null)
+if [[ "$client_term" == foot* ]]; then
+  exit 0
+fi
+
+session_count=$(tmux list-sessions 2>/dev/null | wc -l)
+
+if [ "$session_count" -le 1 ]; then
+  exit 0
+fi
+
+current_session=$(tmux display-message -p '#{session_name}')
+all_sessions=$(tmux list-sessions -F '#{session_name}' 2>/dev/null)
+
+main_name=""
+if [[ "$current_session" == *-T2 ]]; then
+  main_name="${current_session%-T2}"
+fi
+
+# Spinner frame is time-based, shared by all working sessions.
+# 2-row-tall braille (bottom rows only — no top dot): a 2-dot bar rotating.
+spinner_frames=('⠆' '⠒' '⠰' '⠤')
+now=$(date +%s)
+frame_idx=$(( now % ${#spinner_frames[@]} ))
+spinner_char="${spinner_frames[$frame_idx]}"
+
+# Ensure the GitLab pipeline-status poller is running (single instance, detached).
+poller_pid=/tmp/.claude-tmux-pipeline-poller.pid
+if ! { [ -f "$poller_pid" ] && kill -0 "$(cat "$poller_pid" 2>/dev/null)" 2>/dev/null; }; then
+  setsid bash /home/froa/.config/tmux/scripts/glab-pipeline-poller.sh >/dev/null 2>&1 &
+fi
+
+# Read Claude status for a given session name from its status file
+session_status() {
+  local s="$1"
+  local f="/tmp/.claude-tmux-status-${s}"
+  [ -f "$f" ] || return
+  local raw
+  raw=$(cat "$f" 2>/dev/null)
+  case "$raw" in
+    input) printf 'input' ;;     # waiting for user input  -> red blink
+    done)  printf 'done' ;;      # finished the job        -> green blink
+    working:*)
+      local ts="${raw#working:}"
+      [ $(( now - ts )) -lt 300 ] && printf 'working'
+      ;;
+  esac
+}
+
+# GitLab pipeline icon for a session, read from the poller's cache (keyed by
+# the session's active pane path). Prints a tmux-styled icon or nothing.
+pipeline_icon() {
+  local s="$1" path key st
+  path="$(tmux display-message -p -t "${s}:" '#{pane_current_path}' 2>/dev/null)"
+  [ -z "$path" ] && return
+  key="$(printf '%s' "$path" | md5sum | cut -c1-16)"
+  local cache="/tmp/.claude-tmux-pipeline-${key}"
+  [ -f "$cache" ] || return
+  st="$(cat "$cache" 2>/dev/null)"
+  case "$st" in
+    running)            printf ' #[fg=#89dceb]⟳' ;;
+    success)            printf ' #[fg=#a6e3a1]✓' ;;
+    failed)             printf ' #[fg=#f38ba8]✗' ;;
+    pending|created|preparing|scheduled|waiting_for_resource) printf ' #[fg=#f9e2af]◌' ;;
+    *)                  : ;;   # none / canceled / skipped / manual -> no icon
+  esac
+}
+
+output=""
+range_idx=0
+for session in $all_sessions; do
+  if [[ "$session" == *-T2 ]]; then
+    continue
+  fi
+
+  if [[ "$session" =~ ^[0-9]+$ ]]; then
+    continue
+  fi
+
+  # Display label: hide "aoe_" prefix and trailing "_<hash>" suffix
+  label="${session#aoe_}"
+  label=$(printf '%s' "$label" | sed -E 's/_[0-9a-f]+$//')
+
+  # Per-session Claude status (works regardless of focus)
+  status=$(session_status "$session")
+
+  is_focused=0
+  if [ "$session" = "$current_session" ] || [ "$session" = "$main_name" ]; then
+    is_focused=1
+  fi
+
+  if [ "$is_focused" = 1 ]; then
+    bg="#7aa2f7"
+    attr=",bold"
+  else
+    bg="#9d989f"
+    attr=""
+  fi
+
+  # Spinner lives inside the block, sharing the session's background
+  spinner=""
+  if [ "$status" = "working" ]; then
+    spinner="#[fg=#fab387,bold]${spinner_char}#[fg=#1a1b26] "
+  fi
+
+  # Acknowledge on focus: only the "done" (green) state clears on focus.
+  # "input" (red) means Claude still needs a choice — focusing doesn't answer
+  # it, so it keeps blinking until Claude resumes (a working write overwrites).
+  if [ "$status" = "done" ] && [ "$is_focused" = 1 ]; then
+    rm -f "/tmp/.claude-tmux-status-${session}"
+    status=""
+  fi
+
+  # Manual blink: ghostty ignores the SGR blink attr, so pulse the background
+  # color each second (same redraw trick as spinner).
+  #   red   = waiting for user input
+  #   green = finished the job
+  if [ $(( now % 2 )) -eq 0 ]; then
+    if [ "$status" = "input" ]; then
+      bg="#f38ba8"
+    elif [ "$status" = "done" ]; then
+      bg="#a6e3a1"
+    fi
+  fi
+
+  # GitLab pipeline icon, right of the session name, sharing the block bg.
+  icon="$(pipeline_icon "$session")"
+
+  # Wrap block in a clickable range. mouse_status_range = range_idx on click;
+  # session-menu.sh maps the index back to the session name (names can exceed
+  # the 15-byte range=user|X cap, so index is used instead).
+  output+="#[range=user|${range_idx}]#[bg=${bg},fg=#1a1b26${attr}] ${spinner}${label}${icon} #[norange]#[default] "
+  range_idx=$((range_idx + 1))
+done
+
+printf '%s' "$output"

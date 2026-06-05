@@ -1,0 +1,21 @@
+pane	_tmux	0	1	:*Z	0	✳ Claude Code	:/home/froa	1	claude	:bash
+pane	_tmux	0	1	:*Z	1	~/.config	:/home/froa/.config	0	fish	:
+pane	azure-vm-tf-mod	0	1	:*Z	0	~/P/t/azure-vm-tf-mod	:/home/froa/Projects/ts/azure-vm-tf-mod	1	fish	:
+pane	azure-vm-tf-mod	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	citadel-ai	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	firecast-builder	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	synapse	0	0	:-Z	0	~/P/t/synapse	:/home/froa/Projects/ts/synapse	1	fish	:
+pane	synapse	0	0	:-Z	1	~/P/t/synapse	:/home/froa/Projects/ts/synapse	0	fish	:
+pane	synapse	1	1	:*	0	~/P/t/synapse	:/home/froa/Projects/ts/synapse	1	fish	:
+window	_tmux	0	:claude	1	:*Z	7033,183x51,0,0{92x51,0,0,11,90x51,93,0,12}	:
+window	azure-vm-tf-mod	0	:fish	1	:*Z	34c7,183x51,0,0{92x51,0,0,0,90x51,93,0,1}	:
+window	citadel-ai	0	:fish	1	:*Z	34d0,183x51,0,0{92x51,0,0,2,90x51,93,0,3}	:
+window	default	0	:fish	1	:*Z	2b02,183x51,0,0{91x51,0,0,6,91x51,92,0,7}	:
+window	firecast-builder	0	:fish	1	:*Z	34d9,183x51,0,0{92x51,0,0,4,90x51,93,0,5}	:
+window	synapse	0	:fish	0	:-Z	34eb,183x51,0,0{92x51,0,0,8,90x51,93,0,9}	:
+window	synapse	1	:fish	1	:*	5a2f,183x51,0,0,10	:
+state	_tmux	synapse

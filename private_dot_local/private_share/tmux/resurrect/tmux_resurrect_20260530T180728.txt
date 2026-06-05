@@ -1,0 +1,7 @@
+pane	default	0	1	:*Z	0	✳ Check skills quality with skill-validator	:/home/froa/Projects/ts/citadel-ai	1	claude	:claude
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	nvim	0	1	:*Z	0	nvim .tmux.conf ~	:/home/froa	1	nvim	:/tmp/.mount_nvimKBJnkF/usr/bin/nvim .tmux.conf
+pane	nvim	0	1	:*Z	1	~/.c/nvim	:/home/froa/.config/nvim	0	fish	:
+window	default	0	:claude	1	:*Z	2ae7,183x51,0,0{91x51,0,0,0,91x51,92,0,1}	:
+window	nvim	0	:nvim	1	:*Z	34d0,183x51,0,0{92x51,0,0,2,90x51,93,0,3}	:
+state	nvim	default

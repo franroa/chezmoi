@@ -1,0 +1,674 @@
+[2026-03-02T00:03:52.498Z] [notification] session ses_3543687bfffenW1do3p3A2mHRN: title="Hyprpanel: screen vs region screenshot option", dir="/home/froa/.config/hypr"
+[2026-03-02T00:03:52.498Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:03:52.504Z] [notification] session project_branch: hypr_main, dir: /home/froa/.config/hypr
+[2026-03-02T00:03:52.513Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:03:52.513Z] [notification] tracked latest notification: hypr_main (/home/froa/.config/hypr)
+[2026-03-02T00:07:32.088Z] [notification] session ses_3542a35a3ffe7v40USvUcV90Ae: title="New session - 2026-03-01T23:57:20.860Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T00:07:32.088Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:07:32.102Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T00:07:32.110Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:07:32.111Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T00:07:32.250Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T00:07:32.254Z] [notification] suppressing duplicate session.idle for ses_3542a35a3ffe7v40USvUcV90Ae (170ms since last)
+[2026-03-02T00:07:32.273Z] [notification] suppressing duplicate session.idle for ses_3542a35a3ffe7v40USvUcV90Ae (189ms since last)
+[2026-03-02T00:07:37.371Z] [notification] session ses_3542a35a3ffe7v40USvUcV90Ae: title="New session - 2026-03-01T23:57:20.860Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T00:07:37.371Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:07:37.376Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T00:07:37.392Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:07:37.392Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T00:07:37.540Z] [notification] spawning watchScript for notifId=11 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T00:07:37.576Z] [notification] suppressing duplicate session.idle for ses_3542a35a3ffe7v40USvUcV90Ae (210ms since last)
+[2026-03-02T00:07:56.162Z] [notification] session ses_3542a35a3ffe7v40USvUcV90Ae: title="New session - 2026-03-01T23:57:20.860Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T00:07:56.162Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:07:56.168Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T00:07:56.179Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:07:56.179Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T00:07:56.353Z] [notification] spawning watchScript for notifId=12 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T00:09:14.209Z] [notification] session ses_3542a35a3ffe7v40USvUcV90Ae: title="New session - 2026-03-01T23:57:20.860Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T00:09:14.209Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:09:14.213Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T00:09:14.224Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:09:14.224Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T00:09:14.366Z] [notification] spawning watchScript for notifId=13 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T00:10:50.227Z] [notification] session ses_3541e2b6bffeoqTODRonbtu0qa: title="Character training purpose and meaning", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T00:10:50.227Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:10:50.232Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T00:10:50.241Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:10:50.241Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T00:10:50.373Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T00:11:50.477Z] [notification] terminal window address: 0x5734d973cdf0
+[2026-03-02T00:11:50.477Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T00:11:50.477Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T00:12:04.037Z] [notification] suppressing duplicate session.idle for ses_3541cc608ffexI9JVMiwkoJGYj (9ms since last)
+[2026-03-02T00:12:04.039Z] [notification] session ses_3541cc608ffexI9JVMiwkoJGYj: title="New session - 2026-03-02T00:12:01.399Z", dir="/home/froa"
+[2026-03-02T00:12:04.039Z] [notification] scratchpad project_branch: null
+[2026-03-02T00:12:04.044Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-03-02T00:12:04.062Z] [notification] scratchpad hidden → will notify
+[2026-03-02T00:12:04.063Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-03-02T00:12:04.234Z] [notification] spawning watchScript for notifId=16 dir=/home/froa
+[2026-03-02T06:43:55.501Z] [notification] terminal window address: 0x63f86fe0ebd0
+[2026-03-02T06:43:55.510Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T06:43:55.510Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T06:44:39.198Z] [notification] suppressing duplicate session.idle for ses_352b5a5a9ffeNLAEUNldwGAmjT (1359ms since last)
+[2026-03-02T06:44:39.200Z] [notification] session ses_352b5a5a9ffeNLAEUNldwGAmjT: title="PDF read error for book_final.pdf - Read tool unavailable", dir="/home/froa/Downloads"
+[2026-03-02T06:44:39.200Z] [notification] scratchpad project_branch: null
+[2026-03-02T06:44:39.209Z] [notification] session project_branch: Downloads_main, dir: /home/froa/Downloads
+[2026-03-02T06:44:39.225Z] [notification] scratchpad hidden → will notify
+[2026-03-02T06:44:39.225Z] [notification] tracked latest notification: Downloads_main (/home/froa/Downloads)
+[2026-03-02T06:44:39.273Z] [notification] spawning watchScript for notifId=14 dir=/home/froa/Downloads
+[2026-03-02T06:45:12.645Z] [notification] session ses_352b5a5a9ffeNLAEUNldwGAmjT: title="PDF read error for book_final.pdf - Read tool unavailable", dir="/home/froa/Downloads"
+[2026-03-02T06:45:12.645Z] [notification] scratchpad project_branch: null
+[2026-03-02T06:45:12.647Z] [notification] session project_branch: Downloads_main, dir: /home/froa/Downloads
+[2026-03-02T06:45:12.650Z] [notification] scratchpad hidden → will notify
+[2026-03-02T06:45:12.650Z] [notification] tracked latest notification: Downloads_main (/home/froa/Downloads)
+[2026-03-02T06:45:12.684Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/Downloads
+[2026-03-02T06:47:59.236Z] [notification] session ses_352b5a5a9ffeNLAEUNldwGAmjT: title="PDF read error for book_final.pdf - Read tool unavailable", dir="/home/froa/Downloads"
+[2026-03-02T06:47:59.237Z] [notification] scratchpad project_branch: null
+[2026-03-02T06:47:59.239Z] [notification] session project_branch: Downloads_main, dir: /home/froa/Downloads
+[2026-03-02T06:47:59.243Z] [notification] scratchpad hidden → will notify
+[2026-03-02T06:47:59.244Z] [notification] tracked latest notification: Downloads_main (/home/froa/Downloads)
+[2026-03-02T06:47:59.281Z] [notification] spawning watchScript for notifId=16 dir=/home/froa/Downloads
+[2026-03-02T09:53:24.734Z] [notification] terminal window address: 0x63f86fdb35b0
+[2026-03-02T09:53:24.734Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T09:53:24.735Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T09:54:51.516Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T09:54:51.516Z] [notification] scratchpad project_branch: null
+[2026-03-02T09:54:51.521Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T09:54:51.534Z] [notification] scratchpad hidden → will notify
+[2026-03-02T09:54:51.534Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T09:54:51.732Z] [notification] spawning watchScript for notifId=26 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T09:55:31.260Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T09:55:31.260Z] [notification] scratchpad project_branch: null
+[2026-03-02T09:55:31.265Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T09:55:31.283Z] [notification] scratchpad hidden → will notify
+[2026-03-02T09:55:31.283Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T09:55:31.440Z] [notification] spawning watchScript for notifId=27 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T09:55:31.473Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (217ms since last)
+[2026-03-02T09:56:08.116Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T09:56:08.116Z] [notification] scratchpad project_branch: null
+[2026-03-02T09:56:08.120Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T09:56:08.128Z] [notification] scratchpad hidden → will notify
+[2026-03-02T09:56:08.128Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T09:56:08.277Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:02:01.055Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:02:01.055Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:02:01.060Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:02:01.070Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:02:01.070Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:02:01.228Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:02:01.236Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (186ms since last)
+[2026-03-02T10:02:01.242Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (192ms since last)
+[2026-03-02T10:03:28.707Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:03:28.707Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:03:28.712Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:03:28.720Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:03:28.721Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:03:28.880Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:06:09.387Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:06:09.387Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:06:09.392Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:06:09.400Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:06:09.400Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:06:09.535Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:07:41.551Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:07:41.551Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:07:41.556Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:07:41.563Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:07:41.563Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:07:41.746Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:26:06.504Z] [notification] terminal window address: 0x63f86fdc8cf0
+[2026-03-02T10:26:06.504Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T10:26:06.504Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T10:26:57.828Z] [notification] session ses_351ea30e2ffexjrM2yUZBjMwUI: title="SafetyTensor file creation with Gemini", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:26:57.829Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:26:57.835Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:26:57.843Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:26:57.843Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:26:58.006Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:38:06.030Z] [notification] session ses_351ea30e2ffexjrM2yUZBjMwUI: title="SafetyTensor file creation with Gemini", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:38:06.030Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:38:06.035Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:38:06.042Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:38:06.042Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:38:06.203Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:38:06.224Z] [notification] suppressing duplicate session.idle for ses_351ea30e2ffexjrM2yUZBjMwUI (198ms since last)
+[2026-03-02T10:38:32.145Z] [notification] session ses_351ea30e2ffexjrM2yUZBjMwUI: title="SafetyTensor file creation with Gemini", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:38:32.145Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:38:32.150Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:38:32.157Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:38:32.157Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:38:32.332Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:39:38.461Z] [notification] session ses_351ea30e2ffexjrM2yUZBjMwUI: title="SafetyTensor file creation with Gemini", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:39:38.462Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:39:38.466Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:39:38.473Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:39:38.474Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:39:38.628Z] [notification] spawning watchScript for notifId=40 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:42:50.467Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:42:50.467Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:42:50.473Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:42:50.491Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:42:50.491Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:42:50.699Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:44:35.790Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:44:35.791Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:44:35.795Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:44:35.814Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:44:35.814Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:44:35.997Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T10:45:04.452Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T10:45:04.452Z] [notification] scratchpad project_branch: null
+[2026-03-02T10:45:04.457Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T10:45:04.465Z] [notification] scratchpad hidden → will notify
+[2026-03-02T10:45:04.465Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T10:45:04.616Z] [notification] spawning watchScript for notifId=43 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:33:43.011Z] [notification] terminal window address: 0x64c68eae8550
+[2026-03-02T14:33:43.012Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T14:33:43.012Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T14:34:25.185Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:34:25.185Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:34:25.189Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:34:25.200Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:34:25.200Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:34:25.343Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:34:53.296Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:34:53.296Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:34:53.301Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:34:53.307Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:34:53.307Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:34:53.441Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:35:35.911Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:35:35.912Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:35:35.917Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:35:35.925Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:35:35.925Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:35:36.076Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:38:55.488Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:38:55.488Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:38:55.491Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:38:55.493Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:38:55.493Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:38:55.542Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:42:31.138Z] [notification] terminal window address: 0x64c68f012520
+[2026-03-02T14:42:31.138Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T14:42:31.138Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T14:46:00.840Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:46:00.840Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:46:00.845Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:46:00.852Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:46:00.853Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:46:01.020Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:47:31.991Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:47:31.991Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:47:31.995Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:47:32.001Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:47:32.001Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:47:32.049Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:47:32.053Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (65ms since last)
+[2026-03-02T14:47:32.066Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (78ms since last)
+[2026-03-02T14:54:14.382Z] [notification] terminal window address: 0x64c68f058ba0
+[2026-03-02T14:54:14.382Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T14:54:14.382Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T14:54:52.219Z] [notification] session ses_350f4c241ffe1odECaJSbRQYn9: title="Generated images storage location discussion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:54:52.219Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:54:52.224Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:54:52.238Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:54:52.239Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:54:52.371Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:56:32.006Z] [notification] session ses_350f4c241ffe1odECaJSbRQYn9: title="Generated images storage location discussion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:56:32.006Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:56:32.011Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:56:32.021Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:56:32.021Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:56:32.191Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:56:32.222Z] [notification] suppressing duplicate session.idle for ses_350f4c241ffe1odECaJSbRQYn9 (219ms since last)
+[2026-03-02T14:57:07.290Z] [notification] session ses_350f4c241ffe1odECaJSbRQYn9: title="Generated images storage location discussion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:57:07.290Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:57:07.292Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:57:07.294Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:57:07.294Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:57:07.342Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T14:59:01.336Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T14:59:01.336Z] [notification] scratchpad project_branch: null
+[2026-03-02T14:59:01.342Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T14:59:01.349Z] [notification] scratchpad hidden → will notify
+[2026-03-02T14:59:01.350Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T14:59:01.507Z] [notification] spawning watchScript for notifId=37 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T15:02:23.751Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T15:02:23.752Z] [notification] scratchpad project_branch: null
+[2026-03-02T15:02:23.757Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T15:02:23.778Z] [notification] scratchpad hidden → will notify
+[2026-03-02T15:02:23.778Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T15:02:23.929Z] [notification] spawning watchScript for notifId=38 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T16:42:58.019Z] [notification] terminal window address: 0x576fd08f4a70
+[2026-03-02T16:42:58.030Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T16:42:58.030Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T16:47:22.391Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T16:47:22.391Z] [notification] scratchpad project_branch: null
+[2026-03-02T16:47:22.397Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T16:47:22.405Z] [notification] scratchpad hidden → will notify
+[2026-03-02T16:47:22.405Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T16:47:22.576Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T16:59:21.797Z] [notification] terminal window address: 0x576fd094e6d0
+[2026-03-02T16:59:21.797Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T16:59:21.797Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T16:59:58.318Z] [notification] suppressing duplicate session.idle for ses_3508209e5ffeKUm1PYp5TByxwr (14ms since last)
+[2026-03-02T16:59:58.320Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T16:59:58.320Z] [notification] scratchpad project_branch: null
+[2026-03-02T16:59:58.325Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T16:59:58.333Z] [notification] scratchpad hidden → will notify
+[2026-03-02T16:59:58.333Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T16:59:58.538Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:01:06.569Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:01:06.569Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:01:06.574Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:01:06.580Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:01:06.580Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:01:06.737Z] [notification] spawning watchScript for notifId=30 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:02:48.753Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:02:48.753Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:02:48.758Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:02:48.768Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:02:48.768Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:02:48.945Z] [notification] spawning watchScript for notifId=31 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:03:29.685Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:03:29.685Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:03:29.690Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:03:29.704Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:03:29.704Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:03:29.880Z] [notification] spawning watchScript for notifId=32 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:04:17.450Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:04:17.451Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:04:17.456Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:04:17.462Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:04:17.463Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:04:17.612Z] [notification] spawning watchScript for notifId=33 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:04:50.960Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:04:50.960Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:04:50.966Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:04:50.973Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:04:50.973Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:04:51.157Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:05:25.014Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:05:25.014Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:05:25.020Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:05:25.026Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:05:25.027Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:05:25.203Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:05:44.680Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:05:44.681Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:05:44.685Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:05:44.693Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:05:44.693Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:05:44.836Z] [notification] spawning watchScript for notifId=36 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:06:27.239Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="New session - 2026-03-02T16:59:53.754Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:06:27.239Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:06:27.245Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:06:27.252Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:06:27.252Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:06:27.407Z] [notification] spawning watchScript for notifId=39 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:13:00.311Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:13:00.311Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:13:00.314Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:13:00.322Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:13:00.322Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:13:00.396Z] [notification] spawning watchScript for notifId=41 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:13:00.400Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (91ms since last)
+[2026-03-02T17:13:01.047Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (738ms since last)
+[2026-03-02T17:28:28.196Z] [notification] terminal window address: 0x576fd09e16f0
+[2026-03-02T17:28:28.197Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T17:28:28.197Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T17:28:58.859Z] [notification] suppressing duplicate session.idle for ses_350679547ffeLC3AoCYQZf40fr (9ms since last)
+[2026-03-02T17:28:58.860Z] [notification] session ses_350679547ffeLC3AoCYQZf40fr: title="New session - 2026-03-02T17:28:47.544Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:28:58.860Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:28:58.866Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:28:58.874Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:28:58.874Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:28:59.022Z] [notification] spawning watchScript for notifId=44 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:29:08.665Z] [notification] suppressing duplicate session.idle for ses_350679547ffeLC3AoCYQZf40fr (8ms since last)
+[2026-03-02T17:29:08.666Z] [notification] session ses_350679547ffeLC3AoCYQZf40fr: title="New session - 2026-03-02T17:28:47.544Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:29:08.667Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:29:08.671Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:29:08.695Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:29:08.695Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:29:08.833Z] [notification] spawning watchScript for notifId=45 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:29:52.987Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:29:52.987Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:29:52.992Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:29:53.006Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:29:53.006Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:29:53.124Z] [notification] spawning watchScript for notifId=47 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:29:53.133Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (151ms since last)
+[2026-03-02T17:29:53.185Z] [notification] suppressing duplicate session.idle for ses_3520759baffef1EX99cZtgkSM1 (203ms since last)
+[2026-03-02T17:30:04.271Z] [notification] terminal window address: 0x576fd09bfc60
+[2026-03-02T17:30:04.271Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T17:30:04.271Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T17:35:09.370Z] [notification] session ses_350679547ffeLC3AoCYQZf40fr: title="New session - 2026-03-02T17:28:47.544Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:35:09.371Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:35:09.374Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:35:09.380Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:35:09.381Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:35:09.486Z] [notification] spawning watchScript for notifId=48 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:35:09.707Z] [notification] suppressing duplicate session.idle for ses_350679547ffeLC3AoCYQZf40fr (339ms since last)
+[2026-03-02T17:35:09.733Z] [notification] suppressing duplicate session.idle for ses_350679547ffeLC3AoCYQZf40fr (365ms since last)
+[2026-03-02T17:36:37.328Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:36:37.329Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:36:37.332Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:36:37.336Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:36:37.336Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:36:37.439Z] [notification] spawning watchScript for notifId=49 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T17:45:33.745Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:45:33.745Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:45:33.748Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:45:33.759Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:45:33.759Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:46:25.590Z] [notification] terminal window address: 0x576fd08f4a70
+[2026-03-02T17:46:25.591Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T17:46:25.591Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T17:51:23.653Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T17:51:23.653Z] [notification] scratchpad project_branch: null
+[2026-03-02T17:51:23.655Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T17:51:23.656Z] [notification] scratchpad hidden → will notify
+[2026-03-02T17:51:23.656Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T17:51:23.794Z] [notification] spawning watchScript for notifId=51 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:05:37.983Z] [notification] session ses_3520759baffef1EX99cZtgkSM1: title="New session - 2026-03-02T09:54:39.813Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:05:37.983Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:05:37.986Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:05:37.990Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:05:37.992Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:05:38.076Z] [notification] spawning watchScript for notifId=52 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:14:02.023Z] [notification] terminal window address: 0x576fd09e16b0
+[2026-03-02T18:14:02.023Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T18:14:02.023Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T18:14:42.912Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:14:42.912Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:14:42.918Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:14:42.925Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:14:42.926Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:14:43.071Z] [notification] spawning watchScript for notifId=53 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:30:03.928Z] [notification] terminal window address: 0x576fd08f4a70
+[2026-03-02T18:30:03.928Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T18:30:03.928Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T18:30:18.066Z] [notification] session ses_3502f53bcffevRoKa8MrJjxdoH: title="NanoBanana vs Diffusion: Performance Comparison", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:30:18.067Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:30:18.072Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:30:18.079Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:30:18.080Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:30:18.284Z] [notification] spawning watchScript for notifId=54 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:30:18.323Z] [notification] suppressing duplicate session.idle for ses_3502f53bcffevRoKa8MrJjxdoH (269ms since last)
+[2026-03-02T18:30:55.736Z] [notification] session ses_3502f53bcffevRoKa8MrJjxdoH: title="NanoBanana vs Diffusion: Performance Comparison", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:30:55.737Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:30:55.742Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:30:55.749Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:30:55.750Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:30:55.904Z] [notification] spawning watchScript for notifId=55 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:31:33.096Z] [notification] session ses_3502f53bcffevRoKa8MrJjxdoH: title="NanoBanana vs Diffusion: Performance Comparison", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:31:33.097Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:31:33.102Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:31:33.112Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:31:33.112Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:31:33.314Z] [notification] spawning watchScript for notifId=56 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:33:12.672Z] [notification] session ses_3502f53bcffevRoKa8MrJjxdoH: title="NanoBanana vs Diffusion: Performance Comparison", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:33:12.672Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:33:12.677Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:33:12.687Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:33:12.687Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:33:12.895Z] [notification] spawning watchScript for notifId=57 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:34:25.732Z] [notification] session ses_3502f53bcffevRoKa8MrJjxdoH: title="NanoBanana vs Diffusion: Performance Comparison", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:34:25.732Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:34:25.736Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:34:25.743Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:34:25.743Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:34:25.929Z] [notification] spawning watchScript for notifId=58 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:39:16.418Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:39:16.418Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:39:16.424Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:39:16.439Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:39:16.439Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:39:16.626Z] [notification] spawning watchScript for notifId=59 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:40:23.313Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:40:23.313Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:40:23.319Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:40:23.326Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:40:23.326Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:40:23.470Z] [notification] spawning watchScript for notifId=60 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:43:39.148Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:43:39.148Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:43:39.153Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:43:39.164Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:43:39.164Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:43:39.336Z] [notification] spawning watchScript for notifId=61 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:44:46.505Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:44:46.505Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:44:46.510Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:44:46.526Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:44:46.526Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:44:46.697Z] [notification] spawning watchScript for notifId=62 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:45:42.518Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:45:42.518Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:45:42.523Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:45:42.530Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:45:42.531Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:45:42.678Z] [notification] spawning watchScript for notifId=63 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:46:07.786Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:46:07.787Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:46:07.789Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:46:07.794Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:46:07.794Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:46:07.833Z] [notification] spawning watchScript for notifId=64 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:46:51.546Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:46:51.547Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:46:51.551Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:46:51.558Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:46:51.558Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:46:51.722Z] [notification] spawning watchScript for notifId=65 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T18:54:24.808Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T18:54:24.808Z] [notification] scratchpad project_branch: null
+[2026-03-02T18:54:24.810Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T18:54:24.812Z] [notification] scratchpad hidden → will notify
+[2026-03-02T18:54:24.812Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T18:54:24.891Z] [notification] spawning watchScript for notifId=66 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T19:03:48.891Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T19:03:48.891Z] [notification] scratchpad project_branch: null
+[2026-03-02T19:03:48.893Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T19:03:48.903Z] [notification] scratchpad hidden → will notify
+[2026-03-02T19:03:48.903Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T19:03:48.975Z] [notification] spawning watchScript for notifId=67 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T19:06:03.550Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T19:06:03.550Z] [notification] scratchpad project_branch: null
+[2026-03-02T19:06:03.552Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T19:06:03.564Z] [notification] scratchpad hidden → will notify
+[2026-03-02T19:06:03.564Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T19:06:03.607Z] [notification] spawning watchScript for notifId=68 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T19:22:28.621Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T19:22:28.621Z] [notification] scratchpad project_branch: null
+[2026-03-02T19:22:28.626Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T19:22:28.646Z] [notification] scratchpad hidden → will notify
+[2026-03-02T19:22:28.646Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T21:50:15.050Z] [notification] terminal window address: 0x62d7543edaa0
+[2026-03-02T21:50:15.059Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T21:50:15.059Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T21:50:48.212Z] [notification] terminal window address: 0x62d7543edaa0
+[2026-03-02T21:50:48.212Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T21:50:48.212Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T21:51:47.494Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T21:51:47.494Z] [notification] scratchpad project_branch: null
+[2026-03-02T21:51:47.496Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T21:51:47.498Z] [notification] scratchpad hidden → will notify
+[2026-03-02T21:51:47.498Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T21:51:47.642Z] [notification] spawning watchScript for notifId=52 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T21:54:26.747Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T21:54:26.747Z] [notification] scratchpad project_branch: null
+[2026-03-02T21:54:26.749Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T21:54:26.752Z] [notification] scratchpad hidden → will notify
+[2026-03-02T21:54:26.752Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T21:54:26.888Z] [notification] spawning watchScript for notifId=53 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:01:54.185Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:01:54.279Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:01:54.281Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:01:54.283Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:01:54.283Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:01:54.317Z] [notification] spawning watchScript for notifId=54 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:02:23.529Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:02:23.529Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:02:23.531Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:02:23.533Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:02:23.533Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:02:23.629Z] [notification] spawning watchScript for notifId=55 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:03:01.523Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:03:01.523Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:03:01.524Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:03:01.526Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:03:01.526Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:03:01.566Z] [notification] spawning watchScript for notifId=56 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:04:28.611Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:04:28.611Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:04:28.613Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:04:28.615Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:04:28.615Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:04:28.744Z] [notification] spawning watchScript for notifId=57 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:05:52.321Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:05:52.321Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:05:52.322Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:05:52.325Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:05:52.325Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:05:52.410Z] [notification] spawning watchScript for notifId=58 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:06:17.227Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:06:17.227Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:06:17.229Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:06:17.231Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:06:17.231Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:06:17.355Z] [notification] spawning watchScript for notifId=59 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:08:01.998Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:08:01.998Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:08:02.000Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:08:02.002Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:08:02.003Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:08:02.145Z] [notification] spawning watchScript for notifId=60 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:10:37.051Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:10:37.051Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:10:37.053Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:10:37.055Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:10:37.055Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:10:37.178Z] [notification] spawning watchScript for notifId=61 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:11:03.911Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:11:03.911Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:11:03.914Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:11:03.917Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:11:03.917Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:11:04.020Z] [notification] spawning watchScript for notifId=62 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:11:44.232Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:11:44.232Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:11:44.234Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:11:44.237Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:11:44.237Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:11:44.322Z] [notification] spawning watchScript for notifId=63 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:31:06.155Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:31:06.155Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:31:06.157Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:31:06.160Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:31:06.166Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:31:06.285Z] [notification] spawning watchScript for notifId=66 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:33:51.379Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:33:51.379Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:33:51.380Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:33:51.387Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:33:51.388Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:33:51.514Z] [notification] spawning watchScript for notifId=67 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:34:17.575Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:34:17.575Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:34:17.577Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:34:17.584Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:34:17.584Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:34:17.637Z] [notification] spawning watchScript for notifId=68 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:38:23.304Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:38:23.304Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:38:23.306Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:38:23.312Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:38:23.312Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:38:23.408Z] [notification] spawning watchScript for notifId=69 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:40:14.756Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:40:14.756Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:40:14.758Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:40:14.762Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:40:14.762Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:40:14.800Z] [notification] spawning watchScript for notifId=70 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:42:51.676Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:42:51.676Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:42:51.681Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:42:51.689Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:42:51.689Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:42:51.851Z] [notification] spawning watchScript for notifId=71 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:42:51.859Z] [notification] suppressing duplicate session.idle for ses_3508209e5ffeKUm1PYp5TByxwr (187ms since last)
+[2026-03-02T22:42:52.226Z] [notification] suppressing duplicate session.idle for ses_3508209e5ffeKUm1PYp5TByxwr (554ms since last)
+[2026-03-02T22:48:24.208Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:48:24.208Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:48:24.209Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:48:24.211Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:48:24.211Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:48:24.307Z] [notification] spawning watchScript for notifId=72 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T22:54:09.177Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T22:54:09.177Z] [notification] scratchpad project_branch: null
+[2026-03-02T22:54:09.179Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T22:54:09.186Z] [notification] scratchpad hidden → will notify
+[2026-03-02T22:54:09.186Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T22:54:09.245Z] [notification] spawning watchScript for notifId=73 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:15:03.454Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:15:03.454Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:15:03.456Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:15:03.461Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:15:03.461Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:15:03.524Z] [notification] spawning watchScript for notifId=74 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:21:30.530Z] [notification] terminal window address: 0x62d7543edaa0
+[2026-03-02T23:21:30.531Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-02T23:21:30.531Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-02T23:22:50.162Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:22:50.162Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:22:50.164Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:22:50.168Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:22:50.168Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:22:50.298Z] [notification] spawning watchScript for notifId=75 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:27:25.670Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:27:25.670Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:27:25.672Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:27:25.682Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:27:25.682Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:27:25.731Z] [notification] spawning watchScript for notifId=76 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:30:16.861Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:30:16.861Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:30:16.863Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:30:16.865Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:30:16.865Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:30:16.973Z] [notification] spawning watchScript for notifId=77 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:36:14.790Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:36:14.790Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:36:14.792Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:36:14.793Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:36:14.793Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:36:14.882Z] [notification] spawning watchScript for notifId=78 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:38:09.076Z] [notification] suppressing duplicate session.idle for ses_3508209e5ffeKUm1PYp5TByxwr (524ms since last)
+[2026-03-02T23:38:09.077Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:38:09.077Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:38:09.078Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:38:09.084Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:38:09.084Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:38:09.232Z] [notification] spawning watchScript for notifId=79 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:38:23.567Z] [notification] suppressing duplicate session.idle for ses_3508209e5ffeKUm1PYp5TByxwr (182ms since last)
+[2026-03-02T23:38:23.567Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:38:23.567Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:38:23.569Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:38:23.575Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:38:23.575Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:38:23.706Z] [notification] spawning watchScript for notifId=80 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:45:06.513Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:45:06.513Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:45:06.515Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:45:06.517Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:45:06.517Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:45:06.609Z] [notification] spawning watchScript for notifId=81 dir=/home/froa/Projects/fran/book-editor
+[2026-03-02T23:47:03.102Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-02T23:47:03.102Z] [notification] scratchpad project_branch: null
+[2026-03-02T23:47:03.104Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-02T23:47:03.106Z] [notification] scratchpad hidden → will notify
+[2026-03-02T23:47:03.106Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-02T23:47:03.246Z] [notification] spawning watchScript for notifId=82 dir=/home/froa/Projects/fran/book-editor

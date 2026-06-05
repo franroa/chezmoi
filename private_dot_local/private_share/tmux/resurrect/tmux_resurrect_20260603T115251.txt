@@ -1,0 +1,17 @@
+pane	aoe_P0004-703-error_c7f68b29	0	1	:*Z	0	tsyl170	:/home/froa/Projects/ts/vm-poc/.aoe-worktrees/P0004-703-error	1	fish	:
+pane	aoe_P0004-703-error_c7f68b29	0	1	:*Z	1	tsyl170	:/home/froa/Projects/ts/vm-poc/.aoe-worktrees/P0004-703-error	0	fish	:
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	nvim	:/tmp/.mount_nvimhJAMAN/usr/bin/nvim
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	hypr	0	1	:*Z	0	✳ Configure external monitor display setup	:/home/froa/.config/hypr	1	claude	:bash
+pane	hypr	0	1	:*Z	1	~/.c/hypr	:/home/froa/.config/hypr	0	fish	:
+pane	tmux	0	1	:*Z	0	✳ Create tmux keymap for aoen session popup	:/home/froa	0	claude	:bash
+pane	tmux	0	1	:*Z	1	~/.config	:/home/froa/.config	0	fish	:
+pane	tmux	0	1	:*Z	2	aoe ~/.config	:/home/froa/.config	1	aoe	:aoe
+window	aoe_P0004-703-error_c7f68b29	0	:claude	1	:*Z	7b23,80x24,0,0{40x24,0,0,29,39x24,41,0,30}	:
+window	default	0	:fish	1	:*Z	2b02,183x51,0,0{91x51,0,0,6,91x51,92,0,7}	:
+window	firecast-builder	0	:claude	1	:*Z	6240,278x71,0,0{140x71,0,0,8,137x71,141,0,9}	:
+window	hypr	0	:claude	1	:*Z	ae98,278x71,0,0{139x71,0,0,10,138x71,140,0,11}	:
+window	tmux	0	:aoe	1	:*Z	2cdb,278x71,0,0{69x71,0,0,12,69x71,70,0,14,138x71,140,0,13}	:
+state	tmux	

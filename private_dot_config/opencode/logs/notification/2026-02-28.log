@@ -1,0 +1,354 @@
+[2026-02-28T00:09:24.226Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-28T00:09:24.436Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T00:09:24.436Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T00:09:24.436Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T00:09:39.045Z] [notification] aoe session detected: "aoe_ReadItLater_main_3abe0132" → using aoe-cwd scratchpad directly
+[2026-02-28T00:09:39.246Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T00:09:39.246Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T00:09:39.246Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T00:10:10.845Z] [notification] aoe session detected: "aoe_ReadItLater_main_3abe0132" → using aoe-cwd scratchpad directly
+[2026-02-28T00:10:11.104Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T00:10:11.105Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T00:10:11.105Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T00:12:19.460Z] [notification] session ses_35e6a4161ffeGtvIeIFDNZiE8H: title="New session - 2026-02-28T00:11:11.390Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:12:19.470Z] [notification] suppressing duplicate session.idle for ses_35e6a4161ffeGtvIeIFDNZiE8H (14ms since last)
+[2026-02-28T00:12:19.481Z] [notification] suppressing duplicate session.idle for ses_35e6a4161ffeGtvIeIFDNZiE8H (25ms since last)
+[2026-02-28T00:12:19.482Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:12:19.487Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:12:19.494Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:12:19.494Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:12:19.658Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:12:19.659Z] [notification] spawning watchScript for notifId=42 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:12:28.876Z] [notification] aoe session detected: "aoe_ReadItLater_main_3abe0132" → using aoe-cwd scratchpad directly
+[2026-02-28T00:12:29.057Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T00:12:29.057Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T00:12:29.057Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T00:12:57.246Z] [notification] suppressing duplicate session.idle for ses_35e6a4161ffeGtvIeIFDNZiE8H (25ms since last)
+[2026-02-28T00:12:57.250Z] [notification] session ses_35e6a4161ffeGtvIeIFDNZiE8H: title="New session - 2026-02-28T00:11:11.390Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:12:57.250Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:12:57.255Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:12:57.262Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:12:57.263Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:12:57.427Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:12:57.427Z] [notification] spawning watchScript for notifId=43 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:18:38.195Z] [notification] aoe session detected: "aoe_ReadItLater_main_3abe0132" → using aoe-cwd scratchpad directly
+[2026-02-28T00:18:38.429Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T00:18:38.429Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T00:18:38.429Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T00:18:50.689Z] [notification] suppressing duplicate session.idle for ses_35e6a4161ffeGtvIeIFDNZiE8H (27ms since last)
+[2026-02-28T00:18:50.692Z] [notification] session ses_35e6a4161ffeGtvIeIFDNZiE8H: title="New session - 2026-02-28T00:11:11.390Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:18:50.693Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:18:50.698Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:18:50.714Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:18:50.714Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:18:50.824Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:18:50.824Z] [notification] spawning watchScript for notifId=44 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:19:01.457Z] [notification] suppressing duplicate session.idle for ses_35e6a4161ffeGtvIeIFDNZiE8H (26ms since last)
+[2026-02-28T00:19:01.459Z] [notification] session ses_35e6a4161ffeGtvIeIFDNZiE8H: title="New session - 2026-02-28T00:11:11.390Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:19:01.509Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:19:01.512Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:19:01.524Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:19:01.524Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:19:01.692Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:19:01.693Z] [notification] spawning watchScript for notifId=45 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:27:53.847Z] [notification] session ses_35e6a4161ffeGtvIeIFDNZiE8H: title="New session - 2026-02-28T00:11:11.390Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:27:53.859Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:27:53.864Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:27:53.886Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:27:53.886Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:27:54.048Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:27:54.048Z] [notification] spawning watchScript for notifId=46 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:30:44.005Z] [notification] session ses_35e6a4161ffeGtvIeIFDNZiE8H: title="New session - 2026-02-28T00:11:11.390Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:30:44.017Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:30:44.022Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:30:44.028Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:30:44.028Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:30:44.202Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:30:44.202Z] [notification] spawning watchScript for notifId=47 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:40:16.839Z] [notification] aoe session detected: "aoe_ReadItLater_main_3abe0132" → using aoe-cwd scratchpad directly
+[2026-02-28T00:40:16.995Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T00:40:16.995Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T00:40:16.995Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T00:40:45.876Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:40:45.876Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:40:45.881Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:40:45.897Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:40:45.897Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:40:45.998Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:40:45.998Z] [notification] spawning watchScript for notifId=48 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:41:26.334Z] [notification] suppressing duplicate session.idle for ses_35e4f6928ffe3GuPyRS6O0Bp9i (8ms since last)
+[2026-02-28T00:41:26.335Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:41:26.336Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:41:26.340Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:41:26.358Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:41:26.359Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:41:26.508Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:41:26.508Z] [notification] spawning watchScript for notifId=49 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:41:41.948Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:41:41.948Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:41:41.953Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:41:41.965Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:41:41.965Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:41:42.116Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:41:42.116Z] [notification] spawning watchScript for notifId=50 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:42:47.231Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:42:47.231Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:42:47.236Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:42:47.243Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:42:47.243Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:42:47.429Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:42:47.429Z] [notification] spawning watchScript for notifId=51 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:43:33.328Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:43:33.328Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:43:33.333Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:43:33.347Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:43:33.347Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:43:33.469Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:43:33.469Z] [notification] spawning watchScript for notifId=52 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:44:27.277Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:44:27.278Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:44:27.283Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:44:27.290Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:44:27.291Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:44:27.455Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:44:27.455Z] [notification] spawning watchScript for notifId=53 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T00:45:05.107Z] [notification] session ses_35e4f6928ffe3GuPyRS6O0Bp9i: title="New session - 2026-02-28T00:40:30.679Z", dir="/home/froa/Documents/ReadItLater"
+[2026-02-28T00:45:05.108Z] [notification] scratchpad project_branch: ReadItLater_main
+[2026-02-28T00:45:05.113Z] [notification] session project_branch: ReadItLater_main, dir: /home/froa/Documents/ReadItLater
+[2026-02-28T00:45:05.125Z] [notification] scratchpad hidden → will notify
+[2026-02-28T00:45:05.125Z] [notification] tracked latest notification: ReadItLater_main (/home/froa/Documents/ReadItLater)
+[2026-02-28T00:45:05.307Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=ReadItLater_main
+[2026-02-28T00:45:05.308Z] [notification] spawning watchScript for notifId=54 dir=/home/froa/Documents/ReadItLater
+[2026-02-28T16:34:48.200Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-28T16:34:48.420Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T16:34:48.420Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T16:34:48.420Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T16:43:37.539Z] [notification] session ses_35ae41522ffet7BhFtPnxD3WUa: title="New session - 2026-02-28T16:36:36.189Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T16:43:37.632Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T16:43:37.634Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T16:43:37.636Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-28T16:43:37.636Z] [notification] scratchpad hidden → will notify
+[2026-02-28T16:43:37.636Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T16:43:37.793Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-02-28T16:43:37.793Z] [notification] spawning watchScript for notifId=34 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T16:51:10.135Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T16:51:10.135Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T16:51:10.137Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T16:51:10.141Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-28T16:51:10.141Z] [notification] scratchpad hidden → will notify
+[2026-02-28T16:51:10.141Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T16:51:10.248Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-02-28T16:51:10.248Z] [notification] spawning watchScript for notifId=35 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T16:51:10.268Z] [notification] suppressing duplicate session.idle for ses_35ad6ccd9ffe6lOmXAEM6nyP1J (134ms since last)
+[2026-02-28T16:51:46.818Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T16:51:46.832Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T16:51:46.837Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T16:51:46.853Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T16:51:46.853Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:03:18.224Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:03:18.227Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:03:18.242Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:03:18.250Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:03:18.250Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:04:19.915Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:04:19.926Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:04:19.932Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:04:19.946Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:04:19.946Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:05:17.624Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:05:17.628Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:05:17.640Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:05:17.651Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:05:17.651Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:05:46.003Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:05:46.004Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:05:46.009Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:05:46.020Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:05:46.021Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:06:27.467Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:06:27.468Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:06:27.472Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:06:27.479Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:06:27.479Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:07:36.895Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:07:36.895Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:07:36.900Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:07:36.932Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:07:36.932Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:08:31.479Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:08:31.479Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:08:31.484Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:08:31.494Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:08:31.494Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:14:12.689Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:14:12.690Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:14:12.695Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:14:12.703Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:14:12.703Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:14:52.300Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:14:52.300Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:14:52.305Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:14:52.312Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:14:52.312Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:15:37.588Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:15:37.589Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:15:37.594Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:15:37.610Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:15:37.610Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:16:40.829Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:16:40.829Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:16:40.835Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:16:40.842Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:16:40.842Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:17:41.332Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:17:41.333Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:17:41.338Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:17:41.350Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:17:41.350Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:18:14.248Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:18:14.248Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:18:14.253Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:18:14.265Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:18:14.265Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:18:57.772Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:18:57.772Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:18:57.778Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:18:57.787Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:18:57.787Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:35:35.255Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-28T17:35:35.402Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T17:35:35.402Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:35:35.402Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:38:13.025Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-28T17:38:13.190Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T17:38:13.190Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:38:13.190Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:39:19.725Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:39:19.733Z] [notification] suppressing duplicate session.idle for ses_35ad6ccd9ffe6lOmXAEM6nyP1J (13ms since last)
+[2026-02-28T17:39:21.760Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:39:22.783Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:39:22.786Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:39:22.794Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:39:22.794Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:39:22.794Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:39:22.796Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:39:22.808Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:39:22.808Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-02-28T17:49:51.048Z] [notification] session ses_35aad9b65ffe43qkOrS8sAdJFe: title="New session - 2026-02-28T17:36:06.298Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:49:51.053Z] [notification] suppressing duplicate session.idle for ses_35aad9b65ffe43qkOrS8sAdJFe (8ms since last)
+[2026-02-28T17:49:51.068Z] [notification] suppressing duplicate session.idle for ses_35aad9b65ffe43qkOrS8sAdJFe (23ms since last)
+[2026-02-28T17:49:51.071Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:49:51.074Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:49:51.076Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-28T17:49:51.077Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:49:51.077Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T17:49:51.101Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=book-editor_main
+[2026-02-28T17:49:51.101Z] [notification] spawning watchScript for notifId=45 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T17:50:17.075Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-28T17:50:17.191Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T17:50:17.191Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:50:17.191Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:50:40.174Z] [notification] suppressing duplicate session.idle for ses_35aa08419ffetuDVsBz8cheie6 (12ms since last)
+[2026-02-28T17:50:40.176Z] [notification] session ses_35aa08419ffetuDVsBz8cheie6: title="Laptop overheating reasons and fixes", dir="/home/froa"
+[2026-02-28T17:50:40.177Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:50:40.180Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-28T17:50:40.196Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-28T17:50:40.196Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:50:40.197Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-28T17:50:40.326Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=froa_main
+[2026-02-28T17:50:40.326Z] [notification] spawning watchScript for notifId=46 dir=/home/froa
+[2026-02-28T17:50:54.666Z] [notification] session ses_35aa08419ffetuDVsBz8cheie6: title="Laptop overheating reasons and fixes", dir="/home/froa"
+[2026-02-28T17:50:54.666Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:50:54.668Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-28T17:50:54.674Z] [notification] scratchpad: visible=false, workspace=special:S-aoe
+[2026-02-28T17:50:54.674Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:50:54.674Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-28T17:50:54.750Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=froa_main
+[2026-02-28T17:50:54.750Z] [notification] spawning watchScript for notifId=47 dir=/home/froa
+[2026-02-28T17:51:50.801Z] [notification] session ses_35aa08419ffetuDVsBz8cheie6: title="Laptop overheating reasons and fixes", dir="/home/froa"
+[2026-02-28T17:51:51.000Z] [notification] scratchpad project_branch: book-editor_main
+[2026-02-28T17:51:51.058Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-28T17:51:51.162Z] [notification] scratchpad: visible=true, workspace=1
+[2026-02-28T17:51:51.162Z] [notification] scratchpad visible, different project_branch → will notify
+[2026-02-28T17:51:51.166Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-28T17:51:52.607Z] [notification] watchScript: pyprScratchpadName=aoe, sessionProjectBranch=froa_main
+[2026-02-28T17:51:52.608Z] [notification] spawning watchScript for notifId=48 dir=/home/froa
+[2026-02-28T17:52:41.551Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-02-28T17:52:41.662Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-02-28T17:52:41.662Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:52:41.662Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:53:20.098Z] [notification] terminal window address: 0x62a51fc5fbd0
+[2026-02-28T17:53:20.098Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:53:20.098Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:54:47.485Z] [notification] terminal window address: 0x5cd013370360
+[2026-02-28T17:54:47.495Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:54:47.495Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:54:53.114Z] [notification] terminal window address: 0x5cd013370360
+[2026-02-28T17:54:53.114Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:54:53.114Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:55:42.642Z] [notification] session ses_35a9c3a1dffe8sb3SnqJyRNwt0: title="Laptop overheating: why temps are high and how to fix", dir="/home/froa"
+[2026-02-28T17:55:42.642Z] [notification] scratchpad project_branch: null
+[2026-02-28T17:55:42.647Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-28T17:55:42.659Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:55:42.660Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-28T17:55:42.791Z] [notification] spawning watchScript for notifId=12 dir=/home/froa
+[2026-02-28T17:56:11.611Z] [notification] suppressing duplicate session.idle for ses_35a9c3a1dffe8sb3SnqJyRNwt0 (9ms since last)
+[2026-02-28T17:56:11.612Z] [notification] session ses_35a9c3a1dffe8sb3SnqJyRNwt0: title="Laptop overheating: why temps are high and how to fix", dir="/home/froa"
+[2026-02-28T17:56:11.612Z] [notification] scratchpad project_branch: null
+[2026-02-28T17:56:11.617Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-28T17:56:11.630Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:56:11.630Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-28T17:56:11.761Z] [notification] spawning watchScript for notifId=13 dir=/home/froa
+[2026-02-28T17:56:32.016Z] [notification] session ses_35a9c3a1dffe8sb3SnqJyRNwt0: title="Laptop overheating: why temps are high and how to fix", dir="/home/froa"
+[2026-02-28T17:56:32.016Z] [notification] scratchpad project_branch: null
+[2026-02-28T17:56:32.020Z] [notification] session project_branch: froa_main, dir: /home/froa
+[2026-02-28T17:56:32.036Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:56:32.037Z] [notification] tracked latest notification: froa_main (/home/froa)
+[2026-02-28T17:56:32.151Z] [notification] spawning watchScript for notifId=14 dir=/home/froa
+[2026-02-28T17:56:53.167Z] [notification] terminal window address: 0x5cd013370360
+[2026-02-28T17:56:53.168Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T17:56:53.168Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T17:57:11.730Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:57:11.730Z] [notification] scratchpad project_branch: null
+[2026-02-28T17:57:11.736Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:57:11.746Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:57:11.746Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T17:57:11.880Z] [notification] spawning watchScript for notifId=15 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T17:57:15.011Z] [notification] session ses_35ad6ccd9ffe6lOmXAEM6nyP1J: title="Image generation via Codex API retrieval", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T17:57:15.012Z] [notification] scratchpad project_branch: null
+[2026-02-28T17:57:15.013Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T17:57:15.016Z] [notification] scratchpad hidden → will notify
+[2026-02-28T17:57:15.016Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T17:57:15.105Z] [notification] spawning watchScript for notifId=16 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T18:03:29.504Z] [notification] terminal window address: 0x5cd0133f5870
+[2026-02-28T18:03:29.504Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T18:03:29.504Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T18:05:46.378Z] [notification] session ses_35a932c95ffeV4T6BnV7Bed9Vi: title="Laptop temperature high: GPU usage and CPU culprits in OpenCode setup", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T18:05:46.378Z] [notification] scratchpad project_branch: null
+[2026-02-28T18:05:46.380Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T18:05:46.390Z] [notification] scratchpad hidden → will notify
+[2026-02-28T18:05:46.390Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T18:05:46.448Z] [notification] spawning watchScript for notifId=17 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T18:06:22.419Z] [notification] session ses_35a932c95ffeV4T6BnV7Bed9Vi: title="Laptop temperature high: GPU usage and CPU culprits in OpenCode setup", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T18:06:22.419Z] [notification] scratchpad project_branch: null
+[2026-02-28T18:06:22.421Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T18:06:22.428Z] [notification] scratchpad hidden → will notify
+[2026-02-28T18:06:22.428Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T18:06:22.494Z] [notification] spawning watchScript for notifId=18 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T18:06:22.499Z] [notification] suppressing duplicate session.idle for ses_35a932c95ffeV4T6BnV7Bed9Vi (82ms since last)
+[2026-02-28T18:06:22.501Z] [notification] suppressing duplicate session.idle for ses_35a932c95ffeV4T6BnV7Bed9Vi (84ms since last)
+[2026-02-28T18:06:32.018Z] [notification] terminal window address: 0x5cd0133f5870
+[2026-02-28T18:06:32.018Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T18:06:32.018Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T18:07:20.723Z] [notification] session ses_35aad9b65ffe43qkOrS8sAdJFe: title="New session - 2026-02-28T17:36:06.298Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-02-28T18:07:20.724Z] [notification] scratchpad project_branch: null
+[2026-02-28T18:07:20.726Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-02-28T18:07:20.733Z] [notification] scratchpad hidden → will notify
+[2026-02-28T18:07:20.734Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-02-28T18:07:20.798Z] [notification] spawning watchScript for notifId=19 dir=/home/froa/Projects/fran/book-editor
+[2026-02-28T18:12:55.758Z] [notification] terminal window address: 0x5cd0133ad850
+[2026-02-28T18:12:55.759Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T18:12:55.759Z] [notification] isSessionFocused: false - null windowClass
+[2026-02-28T18:26:17.487Z] [notification] terminal window address: 0x5cd0133e6770
+[2026-02-28T18:26:17.487Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-02-28T18:26:17.487Z] [notification] isSessionFocused: false - null windowClass

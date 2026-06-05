@@ -1,0 +1,4 @@
+[2026-04-16T07:14:03.566Z] [notification] tmux session "synapse" not found in any hyprland window's child tree
+[2026-04-16T07:14:03.747Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-04-16T07:14:03.930Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-04-16T07:14:03.931Z] [notification] isSessionFocused: false - null windowClass

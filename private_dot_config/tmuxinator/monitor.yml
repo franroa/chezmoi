@@ -1,0 +1,17 @@
+# Monitor dashboards — work pane + live monitors (no extra agents).
+#   tmuxinator start monitor root=$PWD logcmd="kubectl logs -f deploy/foo"
+name: monitor
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+windows:
+  - monitor:
+      layout: main-vertical
+      panes:
+        - work:
+            - claude
+        - ci:
+            - bash ~/.config/tmux/scripts/glab-ci.sh
+        - kube:
+            - watch -ct -n5 'bash ~/.config/tmux/plugins/kube-tmux/scripts/kube-tmux.sh 2>/dev/null || kubectl get pods'
+        - logs:
+            - <%= @settings["logcmd"] || "echo 'pass logcmd=... for a live log tail'" %>

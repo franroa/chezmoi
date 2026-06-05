@@ -26,8 +26,8 @@ foreground = #dddddd
 background = #000000
 
 # Shell
-command = fish
-
+# command = fish -c "tmux new-session -A -s JIRA docker exec -it 70d jira issue list --jql 'project in (SDI2402, P0004) AND assignee = currentUser() AND status not in (\"Done\", \"Closed\", \"Resolved\")'"
+command = fish -c "tmux attach-session -t default || tmux new-session -s default"
 # Other settings
 gtk-single-instance = true
 mouse-hide-while-typing = true

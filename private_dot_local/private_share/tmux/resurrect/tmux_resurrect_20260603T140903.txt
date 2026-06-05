@@ -1,0 +1,10 @@
+pane	citadel-ai	0	1	:*Z	0	🤖 Trimming azure-infra-inventory Step 8	:/home/froa/Projects/ts/citadel-ai	1	node	:node /home/froa/.local/share/nvm/v25.4.0/bin/copilot
+pane	citadel-ai	0	1	:*Z	1	✳ Remove duplicate GitLab skills from platform	:/home/froa/Projects/ts/citadel-ai	0	claude	:claude
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	1	fish	:
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	0	claude	:claude --continue
+pane	fish	0	1	:*Z	0	tsyl170	:/home/froa/.config/fish	1	fish	:/usr/local/bin/starship prompt --terminal-width=278 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	fish	0	1	:*Z	1	tsyl170	:/home/froa/.config/fish	0	fish	:/usr/local/bin/starship prompt --terminal-width=138 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+window	citadel-ai	0	:node	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+window	firecast-builder	0	:fish	1	:*Z	5e8e,278x71,0,0{139x71,0,0,6,138x71,140,0,7}	:
+window	fish	0	:fish	1	:*Z	5e91,278x71,0,0{139x71,0,0,8,138x71,140,0,9}	:
+state	fish	firecast-builder

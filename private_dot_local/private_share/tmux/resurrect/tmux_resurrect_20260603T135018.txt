@@ -1,0 +1,10 @@
+pane	citadel-ai	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	citadel-ai	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+pane	default	0	1	:*Z	0	tsyl170	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	tsyl170	:/home/froa	0	fish	:/usr/local/bin/starship prompt --terminal-width=138 --status=0 --pipestatus=0 --keymap=insert --cmd-duration=0 --jobs=0
+pane	firecast-builder	0	1	:*Z	0	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	1	fish	:
+pane	firecast-builder	0	1	:*Z	1	~/P/t/citadel-ai	:/home/froa/Projects/ts/citadel-ai	0	fish	:
+window	citadel-ai	0	:fish	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+window	default	0	:fish	1	:*Z	5e8b,278x71,0,0{139x71,0,0,4,138x71,140,0,5}	:
+window	firecast-builder	0	:fish	1	:*Z	6237,278x71,0,0{140x71,0,0,2,137x71,141,0,3}	:
+state	default	

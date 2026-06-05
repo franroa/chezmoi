@@ -1,0 +1,10 @@
+pane	azure-sa	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	azure-sa	0	1	:*Z	1	~/.c/fish	:/home/froa/.config/fish	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	firecast-builder	0	1	:*Z	1	nvim ~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	nvim	:/tmp/.mount_nvimJKoFiO/usr/bin/nvim
+pane	tmux	0	1	:*Z	0	✳ Debug tmux glab-open pipeline script error	:/home/froa	1	claude	:claude --continue
+pane	tmux	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	azure-sa	0	:fish	1	:*Z	3ef1,185x51,0,0{93x51,0,0,2,91x51,94,0,3}	:
+window	firecast-builder	0	:claude	1	:*Z	3ee8,185x51,0,0{93x51,0,0,0,91x51,94,0,1}	:
+window	tmux	0	:claude	1	:*Z	351a,185x51,0,0{92x51,0,0,4,92x51,93,0,5}	:
+state	firecast-builder	azure-sa

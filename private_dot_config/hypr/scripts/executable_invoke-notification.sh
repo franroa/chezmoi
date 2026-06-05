@@ -37,8 +37,21 @@ get_slack_notif_from_hyprpanel() {
 invoke_notification() {
     local notif_id="$1"
     if [[ -n "$notif_id" ]]; then
+        # Use stored action ID from .notif file, fall back to "default"
+        local action_id="default"
+        local notif_file="${NOTIF_DIR}/${notif_id}.notif"
+        if [[ -f "$notif_file" ]]; then
+            local stored
+            stored=$(cat "$notif_file")
+            # .notif file contains the action_id (e.g. "default", "focus", "open")
+            # but legacy files may contain just "slack" - keep "default" in that case
+            case "$stored" in
+                slack|opencode|"") action_id="default" ;;
+                *) action_id="$stored" ;;
+            esac
+        fi
         busctl --user call org.freedesktop.Notifications /org/freedesktop/Notifications \
-            org.freedesktop.Notifications EmitActionInvoked us "$notif_id" "default" 2>/dev/null
+            org.freedesktop.Notifications EmitActionInvoked us "$notif_id" "$action_id" 2>/dev/null
         return $?
     fi
     return 1
@@ -91,7 +104,7 @@ main() {
     # Fallback: just go to Slack workspace
     hyprctl dispatch workspace 4
     sleep 0.1
-    hyprctl dispatch focuswindow "class:Slack"
+    hyprctl dispatch focuswindow "class:slack"
 }
 
 main "$@"

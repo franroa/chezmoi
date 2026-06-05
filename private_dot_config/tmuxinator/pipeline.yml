@@ -1,0 +1,21 @@
+# Staged pipeline — one Claude walks plan -> implement -> test -> review,
+# coordinated by a baton file; monitor panes react to the baton.
+#   tmuxinator start pipeline root=$PWD id=p testcmd="npm test"
+name: pipeline
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+on_project_start:
+  - bash ~/.config/tmux/scripts/pipeline-baton.sh init <%= @settings["id"] || "p" %>
+
+windows:
+  - pipeline:
+      layout: tiled
+      panes:
+        - work:
+            - PIPELINE_ID=<%= @settings["id"] || "p" %> claude "Staged pipeline id=<%= @settings["id"] || "p" %>. As you progress, advance the baton by running ~/.config/tmux/scripts/pipeline-baton.sh set <%= @settings["id"] || "p" %> <stage> for stages plan|implement|test|review. You are at 'plan'. Wait for my task."
+        - baton:
+            - watch -ct -n1 'bash ~/.config/tmux/scripts/pipeline-baton.sh show <%= @settings["id"] || "p" %>'
+        - tests:
+            - bash ~/.config/tmux/scripts/pipeline-baton.sh on test <%= @settings["id"] || "p" %> -- <%= @settings["testcmd"] || "echo 'set testcmd= to your test command'" %>
+        - ci:
+            - watch -ct -n5 'bash ~/.config/tmux/scripts/swarm-dashboard.sh pipeline'

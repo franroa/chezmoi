@@ -1,0 +1,399 @@
+[2026-03-03T00:11:42.845Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T00:11:42.846Z] [notification] scratchpad project_branch: null
+[2026-03-03T00:11:42.847Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T00:11:42.849Z] [notification] scratchpad hidden → will notify
+[2026-03-03T00:11:42.849Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T00:11:42.942Z] [notification] spawning watchScript for notifId=83 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T00:13:01.839Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T00:13:01.839Z] [notification] scratchpad project_branch: null
+[2026-03-03T00:13:01.841Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T00:13:01.846Z] [notification] scratchpad hidden → will notify
+[2026-03-03T00:13:01.846Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T00:13:01.969Z] [notification] spawning watchScript for notifId=84 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T00:14:52.064Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T00:14:52.064Z] [notification] scratchpad project_branch: null
+[2026-03-03T00:14:52.066Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T00:14:52.068Z] [notification] scratchpad hidden → will notify
+[2026-03-03T00:14:52.068Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T00:14:52.114Z] [notification] spawning watchScript for notifId=85 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T00:21:27.082Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T00:21:27.082Z] [notification] scratchpad project_branch: null
+[2026-03-03T00:21:27.083Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T00:21:27.090Z] [notification] scratchpad hidden → will notify
+[2026-03-03T00:21:27.090Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T00:21:27.238Z] [notification] spawning watchScript for notifId=86 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T00:29:02.967Z] [notification] session ses_3508209e5ffeKUm1PYp5TByxwr: title="Diffusion Locally", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T00:29:03.169Z] [notification] scratchpad project_branch: null
+[2026-03-03T00:29:03.170Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T00:29:03.174Z] [notification] scratchpad hidden → will notify
+[2026-03-03T00:29:03.174Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T00:29:03.300Z] [notification] spawning watchScript for notifId=87 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:39:54.446Z] [notification] terminal window address: 0x6270f6fa55f0
+[2026-03-03T06:39:54.455Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T06:39:54.455Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T06:41:35.398Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:41:35.398Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:41:35.404Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:41:35.410Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:41:35.411Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:41:35.583Z] [notification] spawning watchScript for notifId=68 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:42:27.215Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:42:27.215Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:42:27.220Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:42:27.228Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:42:27.228Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:42:27.400Z] [notification] spawning watchScript for notifId=69 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:42:27.434Z] [notification] suppressing duplicate session.idle for ses_34d92eac0ffeFi1MAEjqmeFjkU (223ms since last)
+[2026-03-03T06:44:40.131Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:44:40.131Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:44:40.136Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:44:40.149Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:44:40.149Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:44:40.314Z] [notification] spawning watchScript for notifId=70 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:46:19.652Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:46:19.652Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:46:19.657Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:46:19.664Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:46:19.665Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:46:19.797Z] [notification] spawning watchScript for notifId=71 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:46:54.676Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:46:54.676Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:46:54.681Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:46:54.692Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:46:54.692Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:46:54.838Z] [notification] spawning watchScript for notifId=72 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:48:55.804Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:48:55.804Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:48:55.806Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:48:55.809Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:48:55.809Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:48:55.916Z] [notification] spawning watchScript for notifId=73 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:50:10.071Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:50:10.071Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:50:10.073Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:50:10.076Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:50:10.076Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:50:10.120Z] [notification] spawning watchScript for notifId=74 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T06:54:26.363Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T06:54:26.363Z] [notification] scratchpad project_branch: null
+[2026-03-03T06:54:26.365Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T06:54:26.368Z] [notification] scratchpad hidden → will notify
+[2026-03-03T06:54:26.368Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T06:54:26.504Z] [notification] spawning watchScript for notifId=75 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T07:03:08.028Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T07:03:08.028Z] [notification] scratchpad project_branch: null
+[2026-03-03T07:03:08.030Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T07:03:08.032Z] [notification] scratchpad hidden → will notify
+[2026-03-03T07:03:08.032Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T07:03:08.144Z] [notification] spawning watchScript for notifId=76 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T07:04:02.164Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T07:04:02.164Z] [notification] scratchpad project_branch: null
+[2026-03-03T07:04:02.166Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T07:04:02.172Z] [notification] scratchpad hidden → will notify
+[2026-03-03T07:04:02.172Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T07:04:02.319Z] [notification] spawning watchScript for notifId=77 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:27:36.976Z] [notification] terminal window address: 0x6143bc3bd690
+[2026-03-03T08:27:36.978Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T08:27:36.978Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T08:28:32.372Z] [notification] session ses_34d92eac0ffeFi1MAEjqmeFjkU: title="Character usage in image generation troubleshooting", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:28:32.372Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:28:32.375Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:28:32.377Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:28:32.378Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:28:32.560Z] [notification] spawning watchScript for notifId=69 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:40:54.866Z] [notification] terminal window address: 0x6143bc88ffe0
+[2026-03-03T08:40:54.866Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T08:40:54.866Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T08:41:35.493Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:41:35.493Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:41:35.496Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:41:35.516Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:41:35.516Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:41:35.668Z] [notification] spawning watchScript for notifId=72 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:41:35.686Z] [notification] suppressing duplicate session.idle for ses_34d241100ffe037Mq2rvvomP53 (195ms since last)
+[2026-03-03T08:42:18.798Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:42:18.798Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:42:18.803Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:42:18.810Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:42:18.811Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:42:18.946Z] [notification] spawning watchScript for notifId=73 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:43:04.363Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:43:04.363Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:43:04.368Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:43:04.383Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:43:04.383Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:43:04.522Z] [notification] spawning watchScript for notifId=74 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:44:14.150Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:44:14.151Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:44:14.155Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:44:14.162Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:44:14.163Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:44:14.341Z] [notification] spawning watchScript for notifId=75 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:46:22.876Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:46:22.876Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:46:22.881Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:46:22.889Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:46:22.889Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:46:23.033Z] [notification] spawning watchScript for notifId=76 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T08:52:47.232Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T08:52:47.232Z] [notification] scratchpad project_branch: null
+[2026-03-03T08:52:47.237Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T08:52:47.245Z] [notification] scratchpad hidden → will notify
+[2026-03-03T08:52:47.245Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T08:52:47.398Z] [notification] spawning watchScript for notifId=77 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:10:12.218Z] [notification] terminal window address: 0x6143bc85abe0
+[2026-03-03T09:10:12.219Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T09:10:12.219Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T09:10:24.048Z] [notification] terminal window address: 0x6143bc85abe0
+[2026-03-03T09:10:24.048Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T09:10:24.048Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T09:12:52.053Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:12:52.053Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:12:52.058Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:12:52.066Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:12:52.066Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:12:52.178Z] [notification] spawning watchScript for notifId=78 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:12:53.722Z] [notification] terminal window address: 0x6143bc819cf0
+[2026-03-03T09:12:53.722Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T09:12:53.722Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T09:13:53.559Z] [notification] suppressing duplicate session.idle for ses_34d0662efffeWqMdPY2Z0llgKG (23ms since last)
+[2026-03-03T09:13:53.562Z] [notification] session ses_34d0662efffeWqMdPY2Z0llgKG: title="New session - 2026-03-03T09:13:49.072Z", dir="/home/froa/Downloads/Hipoteca León 2026"
+[2026-03-03T09:13:53.562Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:13:53.566Z] [notification] session project_branch: Hipoteca León 2026_main, dir: /home/froa/Downloads/Hipoteca León 2026
+[2026-03-03T09:13:53.574Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:13:53.575Z] [notification] tracked latest notification: Hipoteca León 2026_main (/home/froa/Downloads/Hipoteca León 2026)
+[2026-03-03T09:13:53.752Z] [notification] spawning watchScript for notifId=79 dir=/home/froa/Downloads/Hipoteca León 2026
+[2026-03-03T09:14:25.261Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:14:25.261Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:14:25.266Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:14:25.282Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:14:25.282Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:14:25.453Z] [notification] spawning watchScript for notifId=80 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:14:25.507Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (249ms since last)
+[2026-03-03T09:14:30.677Z] [notification] session ses_34d241100ffe037Mq2rvvomP53: title="Using Gemini API in generate_images.py instead of Stable Diffusion", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:14:30.677Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:14:30.682Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:14:30.690Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:14:30.690Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:14:30.843Z] [notification] spawning watchScript for notifId=81 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:15:28.885Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:15:28.885Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:15:28.891Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:15:28.899Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:15:28.900Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:15:29.095Z] [notification] spawning watchScript for notifId=82 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:15:29.104Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (221ms since last)
+[2026-03-03T09:15:29.114Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (231ms since last)
+[2026-03-03T09:15:39.468Z] [notification] session ses_34d0662efffeWqMdPY2Z0llgKG: title="New session - 2026-03-03T09:13:49.072Z", dir="/home/froa/Downloads/Hipoteca León 2026"
+[2026-03-03T09:15:39.468Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:15:39.473Z] [notification] session project_branch: Hipoteca León 2026_main, dir: /home/froa/Downloads/Hipoteca León 2026
+[2026-03-03T09:15:39.481Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:15:39.481Z] [notification] tracked latest notification: Hipoteca León 2026_main (/home/froa/Downloads/Hipoteca León 2026)
+[2026-03-03T09:15:39.629Z] [notification] spawning watchScript for notifId=83 dir=/home/froa/Downloads/Hipoteca León 2026
+[2026-03-03T09:16:37.025Z] [notification] session ses_34d0662efffeWqMdPY2Z0llgKG: title="New session - 2026-03-03T09:13:49.072Z", dir="/home/froa/Downloads/Hipoteca León 2026"
+[2026-03-03T09:16:37.026Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:16:37.030Z] [notification] session project_branch: Hipoteca León 2026_main, dir: /home/froa/Downloads/Hipoteca León 2026
+[2026-03-03T09:16:37.038Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:16:37.038Z] [notification] tracked latest notification: Hipoteca León 2026_main (/home/froa/Downloads/Hipoteca León 2026)
+[2026-03-03T09:16:37.144Z] [notification] spawning watchScript for notifId=84 dir=/home/froa/Downloads/Hipoteca León 2026
+[2026-03-03T09:17:34.995Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:17:34.995Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:17:35.000Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:17:35.018Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:17:35.018Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:17:35.200Z] [notification] spawning watchScript for notifId=85 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:35:07.061Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:35:07.061Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:35:07.066Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:35:07.086Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:35:07.086Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:35:07.240Z] [notification] spawning watchScript for notifId=86 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:35:07.243Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (185ms since last)
+[2026-03-03T09:35:07.893Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (835ms since last)
+[2026-03-03T09:38:28.849Z] [notification] terminal window address: 0x6143bc799ec0
+[2026-03-03T09:38:28.849Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T09:38:28.849Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T09:40:40.150Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:40:40.150Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:40:40.151Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:40:40.153Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:40:40.153Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:40:40.233Z] [notification] spawning watchScript for notifId=87 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:54:23.591Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T09:54:23.592Z] [notification] scratchpad project_branch: null
+[2026-03-03T09:54:23.594Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T09:54:23.602Z] [notification] scratchpad hidden → will notify
+[2026-03-03T09:54:23.602Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T09:54:23.655Z] [notification] spawning watchScript for notifId=88 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T09:54:23.657Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (67ms since last)
+[2026-03-03T09:54:24.355Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (765ms since last)
+[2026-03-03T10:19:25.840Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T10:19:25.849Z] [notification] scratchpad project_branch: null
+[2026-03-03T10:19:25.850Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T10:19:25.854Z] [notification] scratchpad hidden → will notify
+[2026-03-03T10:19:25.854Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T10:19:25.895Z] [notification] spawning watchScript for notifId=91 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T10:23:59.127Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T10:23:59.127Z] [notification] scratchpad project_branch: null
+[2026-03-03T10:23:59.129Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T10:23:59.131Z] [notification] scratchpad hidden → will notify
+[2026-03-03T10:23:59.131Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T10:23:59.180Z] [notification] spawning watchScript for notifId=92 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T10:27:55.384Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T10:27:55.384Z] [notification] scratchpad project_branch: null
+[2026-03-03T10:27:55.386Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T10:27:55.388Z] [notification] scratchpad hidden → will notify
+[2026-03-03T10:27:55.388Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T10:27:55.425Z] [notification] spawning watchScript for notifId=93 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T10:31:12.920Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T10:31:12.920Z] [notification] scratchpad project_branch: null
+[2026-03-03T10:31:12.921Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T10:31:12.923Z] [notification] scratchpad hidden → will notify
+[2026-03-03T10:31:12.923Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T10:31:13.070Z] [notification] spawning watchScript for notifId=94 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T10:41:56.330Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T10:41:56.330Z] [notification] scratchpad project_branch: null
+[2026-03-03T10:41:56.332Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T10:41:56.334Z] [notification] scratchpad hidden → will notify
+[2026-03-03T10:41:56.334Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T10:41:56.394Z] [notification] spawning watchScript for notifId=95 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T12:53:25.080Z] [notification] terminal window address: 0x5a7bde4c8f20
+[2026-03-03T12:53:25.090Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T12:53:25.090Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T13:11:09.675Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:11:09.675Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:11:09.676Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:11:09.678Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:11:09.678Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:11:09.778Z] [notification] spawning watchScript for notifId=77 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:13:40.995Z] [notification] terminal is pyprland scratchpad: opencode_chezmoi (opencode-chezmoi)
+[2026-03-03T13:13:40.995Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T13:13:40.995Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T13:28:33.668Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:28:33.669Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:28:33.671Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:28:33.673Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:28:33.673Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:28:33.804Z] [notification] spawning watchScript for notifId=79 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:35:00.602Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:35:00.602Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:35:00.603Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:35:00.606Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:35:00.606Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:35:00.696Z] [notification] spawning watchScript for notifId=81 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:37:35.220Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:37:35.220Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:37:35.222Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:37:35.224Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:37:35.224Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:37:35.324Z] [notification] spawning watchScript for notifId=83 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:43:01.528Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:43:01.528Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:43:01.530Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:43:01.538Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:43:01.538Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:43:01.669Z] [notification] spawning watchScript for notifId=85 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:43:03.503Z] [notification] suppressing duplicate session.idle for ses_34d07e131ffeQcnLjkuEGnb8Gl (1977ms since last)
+[2026-03-03T13:44:10.696Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:44:10.696Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:44:10.698Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:44:10.701Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:44:10.701Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:44:10.804Z] [notification] spawning watchScript for notifId=87 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:45:58.561Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:45:58.561Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:45:58.562Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:45:58.564Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:45:58.564Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:45:58.633Z] [notification] spawning watchScript for notifId=88 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T13:50:06.697Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T13:50:06.697Z] [notification] scratchpad project_branch: null
+[2026-03-03T13:50:06.699Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T13:50:06.706Z] [notification] scratchpad hidden → will notify
+[2026-03-03T13:50:06.706Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T13:50:06.803Z] [notification] spawning watchScript for notifId=89 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:00:04.043Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:00:04.043Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:00:04.045Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:00:04.047Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:00:04.047Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:00:04.093Z] [notification] spawning watchScript for notifId=90 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:03:13.550Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:03:13.550Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:03:13.552Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:03:13.555Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:03:13.555Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:03:13.664Z] [notification] spawning watchScript for notifId=92 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:06:19.490Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:06:19.490Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:06:19.492Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:06:19.494Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:06:19.494Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:06:19.538Z] [notification] spawning watchScript for notifId=93 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:11:00.806Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:11:00.806Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:11:00.808Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:11:00.817Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:11:00.817Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:11:00.853Z] [notification] spawning watchScript for notifId=94 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:24:58.382Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:24:58.384Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:24:58.386Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:24:58.390Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:24:58.390Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:24:58.644Z] [notification] spawning watchScript for notifId=95 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:40:47.424Z] [notification] terminal window address: 0x5a7bde4c8f20
+[2026-03-03T14:40:47.426Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T14:40:47.426Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T14:42:04.417Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:42:04.417Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:42:04.419Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:42:04.422Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:42:04.422Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:42:04.513Z] [notification] spawning watchScript for notifId=96 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:42:08.161Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:42:08.161Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:42:08.163Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:42:08.168Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:42:08.168Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:42:08.421Z] [notification] spawning watchScript for notifId=97 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:52:16.399Z] [notification] terminal window address: 0x5a7bde4c8f20
+[2026-03-03T14:52:16.400Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T14:52:16.400Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T14:53:15.175Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:53:15.175Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:53:15.177Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:53:15.185Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:53:15.186Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:53:15.258Z] [notification] spawning watchScript for notifId=98 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T14:53:18.985Z] [notification] session ses_34d07e131ffeQcnLjkuEGnb8Gl: title="Integrating Borel font files into text-only pages", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T14:53:18.985Z] [notification] scratchpad project_branch: null
+[2026-03-03T14:53:18.986Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T14:53:18.989Z] [notification] scratchpad hidden → will notify
+[2026-03-03T14:53:18.989Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T14:53:19.234Z] [notification] spawning watchScript for notifId=99 dir=/home/froa/Projects/fran/book-editor
+[2026-03-03T16:42:29.647Z] [notification] terminal window address: 0x6387a426b740
+[2026-03-03T16:42:29.657Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T16:42:29.657Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T16:44:16.908Z] [notification] terminal window address: 0x6387a433a0c0
+[2026-03-03T16:44:16.908Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-03T16:44:16.908Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-03T16:44:33.826Z] [notification] session ses_34b69c8c3ffeBtPhVtWrshDiQU: title="New session - 2026-03-03T16:44:29.372Z", dir="/home/froa/Projects/fran/book-editor/images"
+[2026-03-03T16:44:33.826Z] [notification] scratchpad project_branch: null
+[2026-03-03T16:44:33.828Z] [notification] session project_branch: images_main, dir: /home/froa/Projects/fran/book-editor/images
+[2026-03-03T16:44:33.831Z] [notification] scratchpad hidden → will notify
+[2026-03-03T16:44:33.831Z] [notification] tracked latest notification: images_main (/home/froa/Projects/fran/book-editor/images)
+[2026-03-03T16:44:33.883Z] [notification] spawning watchScript for notifId=79 dir=/home/froa/Projects/fran/book-editor/images
+[2026-03-03T16:44:33.911Z] [notification] suppressing duplicate session.idle for ses_34b69c8c3ffeBtPhVtWrshDiQU (89ms since last)
+[2026-03-03T16:45:11.004Z] [notification] session ses_34b69c8c3ffeBtPhVtWrshDiQU: title="Convert page01.png to page01.tif conversion task", dir="/home/froa/Projects/fran/book-editor/images"
+[2026-03-03T16:45:11.004Z] [notification] scratchpad project_branch: null
+[2026-03-03T16:45:11.010Z] [notification] session project_branch: images_main, dir: /home/froa/Projects/fran/book-editor/images
+[2026-03-03T16:45:11.016Z] [notification] scratchpad hidden → will notify
+[2026-03-03T16:45:11.016Z] [notification] tracked latest notification: images_main (/home/froa/Projects/fran/book-editor/images)
+[2026-03-03T16:45:11.165Z] [notification] spawning watchScript for notifId=80 dir=/home/froa/Projects/fran/book-editor/images
+[2026-03-03T16:49:01.750Z] [notification] session ses_34b6b3ac8ffe9FVj3NQoIhtAKG: title="Book layout: sync pages/chapters with trainer.yaml", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-03T16:49:01.750Z] [notification] scratchpad project_branch: null
+[2026-03-03T16:49:01.752Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-03T16:49:01.756Z] [notification] scratchpad hidden → will notify
+[2026-03-03T16:49:01.756Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-03T16:49:01.873Z] [notification] spawning watchScript for notifId=81 dir=/home/froa/Projects/fran/book-editor

@@ -1,0 +1,3 @@
+2026-03-25 22:37:25,286 [INFO] ipc :: Logger "ipc" initialized :: common.py:232
+2026-03-25 22:37:25,286 [INFO] startup :: Logger "startup" initialized :: common.py:232
+2026-03-25 22:37:25,287 [INFO] pypr :: Logger "pypr" initialized :: common.py:232

@@ -40,15 +40,16 @@
 # fish_add_path /usr/local/cuda-12.8/bin
 # fish_add_path $HOME/scripts/
 # fish_add_path $HOME/scripts/git-scripts/
+#
 # fish_add_path GPG_TTY=$(tty)
 # # NOTE: deno
 # # set -gx DENO_INSTALL "~/.deno"
 # # fish_add_path ~/.deno/bin
 #
 # # Fish
-# set fish_emoji_width 2
-# alias oil='~/.local/bin/oil-ssh.sh'
-# alias ft='~/.local/bin/ft.sh'
+set fish_emoji_width 2
+alias oil='~/.local/bin/oil-ssh.sh'
+alias ft='~/.local/bin/ft.sh'
 # set -U fish_greeting ""
 # # Go
 # # set -x GOPATH ~/go
@@ -219,7 +220,6 @@ function klookup
 end
 
 function change_kubernetes_cluster_variable
-    kubelogin convert-kubeconfig -l azurecli
     set -gx K8S_CLUSTER (kubectl config current-context 2>/dev/null)
     set -gx FOREGROUND_COLOR grey
     if string match -q -- "*docker-desktop*" $K8S_CLUSTER
@@ -250,7 +250,7 @@ function change_kubernetes_cluster_variable
 end
 
 function change_kubernetes_ns_variable
-    set -gx K8S_NAMESPACE (kubectl config view --minify -o jsonpath='{..namespace}')
+    set -gx K8S_NAMESPACE (kubectl config view --minify -o jsonpath='{..namespace}' 2>/dev/null)
 end
 
 function change_nvim_abbreviation
@@ -264,12 +264,12 @@ end
 # end
 
 function kubie
-    set -gx IS_COMING_FROM_KUBIE TRUE
+    set -g IS_COMING_FROM_KUBIE TRUE
     command kubie $argv
 end
 function refresh_prompt --on-event fish_prompt
     if test "$IS_COMING_FROM_KUBIE" = TRUE
-        set -gx IS_COMING_FROM_KUBIE FALSE
+        set -g IS_COMING_FROM_KUBIE FALSE
         change_kubernetes_cluster_variable
         change_kubernetes_ns_variable
         change_nvim_abbreviation
@@ -418,6 +418,9 @@ end
 # #     echo "Open your code in nvim and press <leader>pla to load annotations"
 # # end
 
+alias retrigger_change='git commit --allow-empty -m "chore: retrigger pipeline" && git push'
+alias minimalvim "NVIM_APPNAME=minimalvim nvim"
+alias ai='/home/froa/run-opencode-in-foot.sh'
 alias gcl='gitlab-ci-local'
 alias kco='kubie ctx __None__'
 alias kn='kubie ns'
@@ -436,6 +439,28 @@ abbr v nvim
 abbr vim nvim
 abbr bat batcat
 
+export CLAUDE_CODE_ENABLE_TELEMETRY=1
+
+# Configure exporters
+export OTEL_METRICS_EXPORTER=otlp
+export OTEL_LOGS_EXPORTER=otlp
+export OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
+
+# Metric labels
+export OTEL_METRICS_INCLUDE_SESSION_ID=true
+export OTEL_METRICS_INCLUDE_VERSION=false
+export OTEL_METRICS_INCLUDE_ACCOUNT_UUID=true
+
+# Export intervals
+export OTEL_METRIC_EXPORT_INTERVAL=60000
+export OTEL_LOGS_EXPORT_INTERVAL=5000
+
+# Traces beta
+export CLAUDE_CODE_ENHANCED_TELEMETRY_BETA=1
+export OTEL_TRACES_EXPORTER=otlp
+export OTEL_TRACES_EXPORT_INTERVAL=5000
+
 fish_add_path /usr/local
 fish_add_path $HOME/.dotnet/tools
 fish_add_path ~/.local/share/nvm/v25.4.0/bin
@@ -448,11 +473,15 @@ set -gx USER_NAMESPACE fran
 set -x MANPAGER "env NVIM_APPNAME=lazyvim nvim +Man!"
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
-set -gx BROWSER "chrome.exe"
+set -gx BROWSER google-chrome-stable
+set -gx EXEC_LOCAL true
 set -g fish_key_bindings fish_vi_key_bindings
 set -gx LS_COLORS (vivid generate tokyonight-storm)
 export DIRENV_LOG_FORMAT=\033\[32mdirenv:\ %s\033\[0m
-
+set -gx JIRA_BASE_URL https://technosylva.atlassian.net
+set -gx GITLAB_URL https://gitlab.com
+set -gx JIRA_EMAIL froa@technosylva.com
+set -gx JIRA_ENCODED_CREDENTIALS (echo -n "$JIRA_EMAIL:$JIRA_TOKEN" | base64 | tr -d '\n')
 zoxide init fish | source
 starship init fish | source
 atuin init fish --disable-up-arrow | source
@@ -460,7 +489,10 @@ direnv hook fish | source
 
 fish_config theme choose tokyonight
 
-fish_vi_key_bindings
+# Use fish_user_key_bindings (not bare fish_vi_key_bindings) so custom binds
+# (which-key Space, Ctrl+R reload) are applied too. A bare fish_vi_key_bindings
+# here would erase them.
+fish_user_key_bindings
 
 # Source secrets file (not tracked by chezmoi)
 if test -f ~/sources.fish

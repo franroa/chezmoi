@@ -1,0 +1,7 @@
+pane	-config	0	1	:*Z	0	✳ Review AI platform Notion documents	:/home/froa/.config	1	claude	:claude
+pane	-config	0	1	:*Z	1	~/.config	:/home/froa/.config	0	fish	:
+pane	vm-poc	0	1	:*Z	0	✳ gitlab-ci-terraform-vm-pipeline	:/home/froa/Projects/ts/vm-poc	1	claude	:claude
+pane	vm-poc	0	1	:*Z	1	~/P/t/vm-poc	:/home/froa/Projects/ts/vm-poc	0	fish	:
+window	-config	0	:claude	1	:*Z	f03f,183x51,0,0{92x51,0,0,16,90x51,93,0,17}	:
+window	vm-poc	0	:claude	1	:*Z	f030,183x51,0,0{92x51,0,0,10,90x51,93,0,11}	:
+state	vm-poc	-config

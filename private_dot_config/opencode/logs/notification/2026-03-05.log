@@ -1,0 +1,87 @@
+[2026-03-05T09:04:01.301Z] [notification] terminal window address: 0x5b424f765640
+[2026-03-05T09:04:01.301Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-05T09:04:01.301Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-05T09:04:16.478Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T09:04:16.478Z] [notification] scratchpad project_branch: null
+[2026-03-05T09:04:16.484Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T09:04:16.491Z] [notification] scratchpad hidden → will notify
+[2026-03-05T09:04:16.492Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T09:04:16.573Z] [notification] spawning watchScript for notifId=1 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T09:04:16.624Z] [notification] suppressing duplicate session.idle for ses_342c29318ffeXfJQdAT0KWs5HV (154ms since last)
+[2026-03-05T09:05:24.568Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T09:05:24.568Z] [notification] scratchpad project_branch: null
+[2026-03-05T09:05:24.573Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T09:05:24.586Z] [notification] scratchpad hidden → will notify
+[2026-03-05T09:05:24.586Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T09:05:24.671Z] [notification] spawning watchScript for notifId=2 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T09:05:24.720Z] [notification] suppressing duplicate session.idle for ses_342c29318ffeXfJQdAT0KWs5HV (156ms since last)
+[2026-03-05T09:06:37.157Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T09:06:37.157Z] [notification] scratchpad project_branch: null
+[2026-03-05T09:06:37.163Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T09:06:37.179Z] [notification] scratchpad hidden → will notify
+[2026-03-05T09:06:37.180Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T09:06:37.282Z] [notification] spawning watchScript for notifId=3 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T09:07:29.789Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T09:07:29.789Z] [notification] scratchpad project_branch: null
+[2026-03-05T09:07:29.794Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T09:07:29.813Z] [notification] scratchpad hidden → will notify
+[2026-03-05T09:07:29.813Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T09:07:29.916Z] [notification] spawning watchScript for notifId=4 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T09:09:11.305Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T09:09:11.305Z] [notification] scratchpad project_branch: null
+[2026-03-05T09:09:11.310Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T09:09:11.318Z] [notification] scratchpad hidden → will notify
+[2026-03-05T09:09:11.318Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T09:09:11.431Z] [notification] spawning watchScript for notifId=5 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T09:12:19.201Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T09:12:19.201Z] [notification] scratchpad project_branch: null
+[2026-03-05T09:12:19.206Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T09:12:19.225Z] [notification] scratchpad hidden → will notify
+[2026-03-05T09:12:19.225Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T09:12:19.345Z] [notification] spawning watchScript for notifId=6 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T10:42:42.637Z] [notification] session ses_342c29318ffeXfJQdAT0KWs5HV: title="Greeting check-in: hola", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T10:42:42.638Z] [notification] scratchpad project_branch: null
+[2026-03-05T10:42:42.642Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T10:42:42.650Z] [notification] scratchpad hidden → will notify
+[2026-03-05T10:42:42.650Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T10:42:42.798Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T13:52:11.556Z] [notification] aoe session detected: "aoe_book-editor_main_ce7453ce" → using aoe-cwd scratchpad directly
+[2026-03-05T13:52:11.719Z] [notification] terminal is pyprland scratchpad: aoe (aoe-cwd)
+[2026-03-05T13:52:11.720Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-05T13:52:11.720Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-05T13:55:25.743Z] [notification] suppressing duplicate session.idle for ses_341b916b8ffeFxK4eFwRzsFcIP (9ms since last)
+[2026-03-05T13:55:25.746Z] [notification] session ses_341b916b8ffeFxK4eFwRzsFcIP: title="New session - 2026-03-05T13:54:04.231Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T13:55:25.746Z] [notification] scratchpad project_branch: book-editor_main
+[2026-03-05T13:55:25.752Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T13:55:25.774Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-05T13:55:25.774Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-03-05T13:56:28.964Z] [notification] session ses_341b916b8ffeFxK4eFwRzsFcIP: title="New session - 2026-03-05T13:54:04.231Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T13:56:28.964Z] [notification] scratchpad project_branch: book-editor_main
+[2026-03-05T13:56:28.969Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T13:56:28.992Z] [notification] scratchpad: visible=true, workspace=1
+[2026-03-05T13:56:28.992Z] [notification] suppressing: same project_branch (book-editor_main)
+[2026-03-05T16:04:02.455Z] [notification] terminal window address: 0x5e2b1d9df030
+[2026-03-05T16:04:02.464Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-05T16:04:02.464Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-05T16:15:09.895Z] [notification] session ses_34137f702ffePeT9GivWLy1AeI: title="New session - 2026-03-05T16:15:06.493Z", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T16:15:09.895Z] [notification] scratchpad project_branch: null
+[2026-03-05T16:15:09.898Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T16:15:09.913Z] [notification] scratchpad hidden → will notify
+[2026-03-05T16:15:09.913Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T16:15:09.994Z] [notification] spawning watchScript for notifId=28 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T16:15:10.157Z] [notification] suppressing duplicate session.idle for ses_34137f702ffePeT9GivWLy1AeI (263ms since last)
+[2026-03-05T16:15:36.551Z] [notification] session ses_34137f702ffePeT9GivWLy1AeI: title="Convert image to TIFF format (belongs_to.png)", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T16:15:36.551Z] [notification] scratchpad project_branch: null
+[2026-03-05T16:15:36.553Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T16:15:36.558Z] [notification] scratchpad hidden → will notify
+[2026-03-05T16:15:36.558Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T16:15:36.614Z] [notification] spawning watchScript for notifId=29 dir=/home/froa/Projects/fran/book-editor
+[2026-03-05T21:58:01.219Z] [notification] terminal window address: 0x5ad1d66f7510
+[2026-03-05T21:58:01.228Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-05T21:58:01.228Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-05T22:00:45.202Z] [notification] session ses_33ffd5104ffeCqaIbU48LwkJOv: title="Template book-abcd-trainer.yaml with 4 chapters for a,e,i,o,u", dir="/home/froa/Projects/fran/book-editor"
+[2026-03-05T22:00:45.202Z] [notification] scratchpad project_branch: null
+[2026-03-05T22:00:45.207Z] [notification] session project_branch: book-editor_main, dir: /home/froa/Projects/fran/book-editor
+[2026-03-05T22:00:45.228Z] [notification] scratchpad hidden → will notify
+[2026-03-05T22:00:45.229Z] [notification] tracked latest notification: book-editor_main (/home/froa/Projects/fran/book-editor)
+[2026-03-05T22:00:45.350Z] [notification] spawning watchScript for notifId=10 dir=/home/froa/Projects/fran/book-editor

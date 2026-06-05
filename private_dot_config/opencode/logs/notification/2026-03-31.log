@@ -1,0 +1,16 @@
+[2026-03-31T06:42:28.489Z] [notification] tmux session "froa-T2" not found in any hyprland window's child tree
+[2026-03-31T06:42:28.637Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-31T06:42:28.797Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-31T06:42:28.797Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-31T06:49:19.287Z] [notification] tmux session "froa" not found in any hyprland window's child tree
+[2026-03-31T06:49:19.445Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-31T06:49:19.614Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-31T06:49:19.614Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-31T16:05:15.151Z] [notification] tmux session "froa-T2" not found in any hyprland window's child tree
+[2026-03-31T16:05:15.314Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-31T16:05:15.488Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-31T16:05:15.488Z] [notification] isSessionFocused: false - null windowClass
+[2026-03-31T16:08:35.572Z] [notification] tmux session "froa-T2" not found in any hyprland window's child tree
+[2026-03-31T16:08:35.723Z] [notification] could not determine terminal window address; focus action will be skipped
+[2026-03-31T16:08:35.863Z] [notification] isSessionFocused check: sessionDir=[object Object], currentAoeDir=undefined, class=undefined
+[2026-03-31T16:08:35.863Z] [notification] isSessionFocused: false - null windowClass

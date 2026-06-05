@@ -1,0 +1,10 @@
+pane	citadel-ai	0	1	:*Z	0	🤖 Creating per-plugin MRs	:/home/froa/Projects/ts/citadel-ai	1	node	:node /home/froa/.local/share/nvm/v25.4.0/bin/copilot
+pane	citadel-ai	0	1	:*Z	1	✳ Remove duplicate GitLab skills from platform	:/home/froa/Projects/ts/citadel-ai	0	claude	:claude
+pane	firecast-builder	0	1	:*Z	0	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:
+pane	firecast-builder	0	1	:*Z	1	✳ 706	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude --continue
+pane	fish	0	1	:*Z	0	✳ Debug kubie ctx command in fish shell	:/home/froa/.config/fish	1	claude	:bash
+pane	fish	0	1	:*Z	1	~/.c/fish	:/home/froa/.config/fish	0	fish	:
+window	citadel-ai	0	:node	1	:*Z	5e85,278x71,0,0{139x71,0,0,0,138x71,140,0,1}	:
+window	firecast-builder	0	:claude	1	:*Z	5e8e,278x71,0,0{139x71,0,0,6,138x71,140,0,7}	:
+window	fish	0	:claude	1	:*Z	5e91,278x71,0,0{139x71,0,0,8,138x71,140,0,9}	:
+state	fish	firecast-builder

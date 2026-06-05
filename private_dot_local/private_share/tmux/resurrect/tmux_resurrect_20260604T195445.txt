@@ -1,0 +1,16 @@
+pane	cicd-components	0	1	:*	0	~/P/t/cicd-components	:/home/froa/Projects/ts/cicd-components	1	fish	:
+pane	cicd-components	0	1	:*	1	~	:/home/froa	0	fish	:
+pane	default	0	1	:*Z	0	~	:/home/froa	1	fish	:
+pane	default	0	1	:*Z	1	~	:/home/froa	0	fish	:
+pane	firecast-builder	0	1	:*Z	0	✳ Random selection from three elements	:/home/froa/Projects/ts/firecast-builder	1	claude	:claude
+pane	firecast-builder	0	1	:*Z	1	~/P/t/firecast-builder	:/home/froa/Projects/ts/firecast-builder	0	fish	:kubie ctx
+pane	nvim	0	1	:*Z	0	nvim ~/.c/nvim	:/home/froa/.config/nvim	1	nvim	:/tmp/.mount_nvimgijCaf/usr/bin/nvim
+pane	nvim	0	1	:*Z	1	~/.c/nvim	:/home/froa/.config/nvim	0	fish	:
+pane	tmux	0	1	:*Z	0	⠂ TMUX-AND-CLAUDE-BLINKING	:/home/froa	1	claude	:bash
+pane	tmux	0	1	:*Z	1	~	:/home/froa	0	fish	:
+window	cicd-components	0	:fish	1	:*	3ee8,185x51,0,0{93x51,0,0,0,91x51,94,0,1}	:
+window	default	0	:fish	1	:*Z	3511,185x51,0,0{92x51,0,0,2,92x51,93,0,3}	:
+window	firecast-builder	0	:claude	1	:*Z	3efa,185x51,0,0{93x51,0,0,4,91x51,94,0,5}	:
+window	nvim	0	:nvim	1	:*Z	3f0c,185x51,0,0{93x51,0,0,8,91x51,94,0,9}	:
+window	tmux	0	:claude	1	:*Z	3f03,185x51,0,0{93x51,0,0,6,91x51,94,0,7}	:
+state	firecast-builder	nvim

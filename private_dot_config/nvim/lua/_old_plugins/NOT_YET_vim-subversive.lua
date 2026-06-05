@@ -1,5 +1,0 @@
-return {
-  {
-    "svermeulen/vim-subversive"
-  }
-}
