@@ -1,0 +1,3 @@
+# koreader gdrive settings contain live OAuth tokens — never commit
+**/koreader/settings/gdrive.lua
+**/koreader/settings/gdrive.lua.old
