@@ -1,10 +1,4 @@
 {
-  "env": {
-    "CLAUDE_MEM_RUNTIME": "server-beta"
-  },
-  "permissions": {
-    "defaultMode": "auto"
-  },
   "hooks": {
     "ElicitationResult": [
       {
@@ -18,23 +12,6 @@
     ],
     "Notification": [
       {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "sh -c 'setsid bash /home/froa/.claude/hooks/notify.sh \"Awaiting your input\" /home/froa/.claude/plugins/cache/claude-notifications-go/claude-notifications-go/1.38.0/sounds/question.mp3 > /dev/null 2>&1 &'"
-          }
-        ]
-      },
-      {
-        "matcher": "permission_prompt|elicitation_dialog",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/froa/.claude/hooks/tmux-input.sh"
-          }
-        ]
-      },
-      {
         "matcher": "permission_prompt|elicitation_dialog",
         "hooks": [
           {
@@ -44,43 +21,7 @@
         ]
       }
     ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/froa/.claude/hooks/tmux-working.sh"
-          }
-        ]
-      }
-    ],
     "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/froa/.claude/hooks/rtk-rewrite.sh"
-          }
-        ]
-      },
-      {
-        "matcher": "ExitPlanMode|EnterPlanMode",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash /tmp/debug-hook.sh"
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/froa/.claude/hooks/tmux-working.sh"
-          }
-        ]
-      },
       {
         "hooks": [
           {
@@ -90,51 +31,21 @@
         ]
       }
     ],
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"/home/froa/.claude/hooks/context-mode-cache-heal.mjs\""
-          }
-        ]
-      }
-    ],
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c 'setsid bash /home/froa/.claude/hooks/notify.sh \"Task completed\" /home/froa/.claude/plugins/cache/claude-notifications-go/claude-notifications-go/1.38.0/sounds/task-complete.mp3 > /dev/null 2>&1 &'"
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/froa/.claude/hooks/tmux-done.sh"
-          }
-        ]
-      },
-      {
-        "hooks": [
-          {
-            "type": "command",
             "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf idle > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
+          },
+          {
+            "type": "command",
+            "command": "sh -c '[ -f /.dockerenv ] || exit 0; chown -R 1001:1001 /root/.claude/sandbox/ 2>/dev/null; chown 1001:1001 /root/.claude/.claude.json /root/.claude/yas-last-prompt.json 2>/dev/null; exit 0'"
           }
         ]
       }
     ],
     "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/home/froa/.claude/hooks/tmux-working.sh"
-          }
-        ]
-      },
       {
         "hooks": [
           {
@@ -147,113 +58,14 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "\"/bin/python\" \"/home/froa/.claude/plugins/cache/yet-another-statusline/yas/0.2.0/claude/statusline_command.py\"",
+    "command": "\"/usr/bin/python3\" \"$HOME/.claude/yas-docker-wrapper.py\"",
     "refreshInterval": 1
   },
   "enabledPlugins": {
-    "agentic-workflow@citadel": true,
-    "andrej-karpathy-skills@karpathy-skills": true,
-    "azure@citadel": true,
-    "caveman@caveman": true,
-    "citadel@citadel": true,
-    "claude-hud@claude-hud": true,
-    "claude-observability@citadel": true,
-    "code-review@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "context-engineering@context-engineering-marketplace": true,
-    "context-mode@context-mode": true,
-    "context7@claude-plugins-official": true,
-    "development@synapse": true,
-    "elrond@eregion": true,
-    "everything-claude-code@everything-claude-code": false,
-    "git@fran-local-synapse": true,
-    "gitlab@claude-plugins-official": true,
-    "incident-response@synapse": true,
-    "legolas@eregion": true,
-    "maturity-model@synapse": true,
-    "platform@citadel": true,
-    "productivity@fran-local-synapse": true,
-    "serena@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true,
-    "synapse@synapse": true,
-    "terraform@citadel": true,
-    "terraform@claude-plugins-official": true,
-    "workflow@fran-local-synapse": true,
     "yas@yet-another-statusline": true
   },
-  "extraKnownMarketplaces": {
-    "caveman": {
-      "source": {
-        "source": "github",
-        "repo": "JuliusBrussee/caveman"
-      }
-    },
-    "citadel": {
-      "source": {
-        "source": "directory",
-        "path": "/home/froa/Projects/ts/citadel-ai"
-      },
-      "autoUpdate": true
-    },
-    "claude-hud": {
-      "source": {
-        "source": "github",
-        "repo": "jarrodwatts/claude-hud"
-      }
-    },
-    "claude-notifications-go": {
-      "source": {
-        "source": "github",
-        "repo": "777genius/claude-notifications-go"
-      }
-    },
-    "context-engineering-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering"
-      }
-    },
-    "eregion": {
-      "source": {
-        "source": "directory",
-        "path": "/home/froa/Projects/ts/eregion"
-      },
-      "autoUpdate": true
-    },
-    "everything-claude-code": {
-      "source": {
-        "source": "git",
-        "url": "https://github.com/affaan-m/everything-claude-code.git"
-      }
-    },
-    "fran-local-synapse": {
-      "source": {
-        "source": "directory",
-        "path": "/home/froa/Projects/ts/fran-local-synapse"
-      },
-      "autoUpdate": true
-    },
-    "karpathy-skills": {
-      "source": {
-        "source": "github",
-        "repo": "forrestchang/andrej-karpathy-skills"
-      }
-    },
-    "synapse": {
-      "source": {
-        "source": "directory",
-        "path": "/home/froa/Projects/ts/synapse"
-      },
-      "autoUpdate": true
-    },
-    "yet-another-statusline": {
-      "source": {
-        "source": "github",
-        "repo": "tmck-code/yet-another-statusline"
-      }
-    }
-  },
-  "editorMode": "vim",
-  "skipAutoPermissionPrompt": true,
-  "model": "sonnet"
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "model": "opus",
+  "tui": "fullscreen"
 }
