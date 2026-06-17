@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# chezmoi modify_ script: enforce ONLY sandbox.extra_volumes in AOE's config,
+# passing through everything AOE writes at runtime (telemetry, app_state, etc.).
+# chezmoi pipes the current target file on stdin; stdout becomes the new file.
+import sys, re
+
+DESIRED = [
+    "{{ .chezmoi.homeDir }}/.claude/agents:/root/.claude/agents:ro",
+    "{{ .chezmoi.homeDir }}/.claude/commands:/root/.claude/commands:ro",
+]
+
+MARKER = (
+    "# Read-only shares of host Claude config the agent never writes to. Writable\n"
+    "# config (settings.json, .claude.json, plugins/, sessions/) is left to AOE's\n"
+    "# sandbox-dir sync; mounting those RW would corrupt the host copy.\n"
+)
+block = MARKER + "extra_volumes = [\n" + "".join(f'  "{v}",\n' for v in DESIRED) + "]"
+
+text = sys.stdin.read()
+
+# Drop any existing extra_volumes assignment (single- or multi-line array)...
+text = re.sub(r'(?m)^[ \t]*extra_volumes[ \t]*=[ \t]*\[.*?\][ \t]*\n', '', text, flags=re.S)
+# ...and our own marker comment lines, so re-runs don't accumulate them.
+text = re.sub(r'(?m)^#.*(Read-only shares of host Claude|is left to AOE|sandbox-dir sync; mounting).*\n', '', text)
+
+lines, out, inserted = text.split("\n"), [], False
+for line in lines:
+    out.append(line)
+    if not inserted and line.strip() == "[sandbox]":
+        out.append(block)
+        inserted = True
+
+if not inserted:  # no [sandbox] table yet (fresh machine) — create it
+    if out and out[-1].strip():
+        out.append("")
+    out += ["[sandbox]", block]
+
+result = re.sub(r'\n{3,}', '\n\n', "\n".join(out)).lstrip("\n")
+sys.stdout.write(result)
