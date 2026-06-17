@@ -7,6 +7,9 @@ import sys, re
 DESIRED = [
     "{{ .chezmoi.homeDir }}/.claude/agents:/root/.claude/agents:ro",
     "{{ .chezmoi.homeDir }}/.claude/commands:/root/.claude/commands:ro",
+    # plugin marketplace registry + clones (RO; container keeps its own installed_plugins.json)
+    "{{ .chezmoi.homeDir }}/.claude/plugins/marketplaces:/root/.claude/plugins/marketplaces:ro",
+    "{{ .chezmoi.homeDir }}/.claude/plugins/known_marketplaces.json:/root/.claude/plugins/known_marketplaces.json:ro",
 ]
 
 MARKER = (
