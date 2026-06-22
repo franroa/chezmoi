@@ -1,0 +1,7 @@
+# Per-profile host-agent environment (AOE-native, host mode only).
+# Points host `claude` at the personal (gmail) account dir instead of the work
+# hub (~/.claude). Injected onto the agent launch command by AOE, so no HOME
+# hack / ~/.aoe-homes mirror is needed. Value MUST be a literal absolute path
+# (no ~, no $HOME). `default` profile sets nothing -> uses real ~/.claude (work).
+# Confirmed-supported approach per maintainer: issue #2302 comment 4768511171.
+environment = ["CLAUDE_CONFIG_DIR=/home/froa/.local/share/claude-profiles/personal"]

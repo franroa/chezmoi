@@ -63,21 +63,14 @@ else
     [ -z "$profile" ] && exit 0
 fi
 
-# Export so every subsequent `aoe` call targets the chosen profile.
+# Export so every subsequent `aoe` call targets the chosen profile. This also
+# selects the profile's Claude ACCOUNT: a profile carries its credentials via its
+# own profiles/<name>/config.toml `environment = ["CLAUDE_CONFIG_DIR=..."]`, which
+# AOE injects onto the host agent launch command (CLAUDE_CONFIG_DIR wins over
+# $HOME). So no HOME hack is needed here anymore — the old `env HOME=...` wrapper
+# was removed. The `default` profile sets no override -> real ~/.claude (work).
+# See memory: aoe-percontext-credentials / AOE issue #2302 comment 4768511171.
 [ -n "$profile" ] && export AGENT_OF_EMPIRES_PROFILE="$profile"
-
-# Run the `aoe` calls with HOME pointed at the matching per-context home so the
-# sandbox runs the chosen profile's Claude ACCOUNT. AOE seeds sandbox creds from
-# $HOME/.claude/sandbox (NOT from the AOE profile or CLAUDE_CONFIG_DIR), so
-# without this every session runs whatever account sits in the real ~/.claude.
-# ~/.aoe-homes/<profile> is built by ~/.config/aoe/build-aoe-homes.sh
-# (.claude -> claude-profiles/<profile>). We set HOME ONLY for the aoe subprocesses
-# (via this prefix) — NOT globally — so tmux/switch-client keep the real HOME.
-# Profiles with no context home (e.g. default/main) get an empty prefix.
-aoe_env=()
-if [ -n "$profile" ] && [ -d "$HOME/.aoe-homes/$profile" ]; then
-    aoe_env=(env "HOME=$HOME/.aoe-homes/$profile")
-fi
 
 cd "$selected" || exit 1
 
@@ -86,15 +79,15 @@ sessions_before=$(tmux list-sessions -F '#{session_name}' 2>/dev/null)
 # 3. Create a plain session in this folder (no worktree, no branch).
 #    Name the session after the folder itself (basename, not the full path).
 folder_name="${selected##*/}"
-"${aoe_env[@]}" "$aoe" add . -t "$folder_name" || exit 1
+"$aoe" add . -t "$folder_name" || exit 1
 
 # 4. Start the most recently created aoe session.
-aoe_session_id=$("${aoe_env[@]}" "$aoe" list --json 2>/dev/null \
+aoe_session_id=$("$aoe" list --json 2>/dev/null \
     | jq -r 'sort_by(.created_at) | last | .id')
 
 [ -z "$aoe_session_id" ] && exit 1
 
-"${aoe_env[@]}" "$aoe" session start "$aoe_session_id" 2>/dev/null
+"$aoe" session start "$aoe_session_id" 2>/dev/null
 
 # 5. Switch the calling client to the new tmux session.
 new_tmux_session=$(tmux list-sessions -F '#{session_name}' 2>/dev/null \

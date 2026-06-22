@@ -461,15 +461,13 @@ set -g @vim_navigator_mapping_up "C-k"
 set -g @vim_navigator_mapping_down "C-j"
 set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
 
-# -- per-context HOME for AOE profile credentials ----------------------------
-# AOE runs agents in host mode; each profile points $HOME at ~/.aoe-homes/<ctx>
-# so the agent reads the matching Claude account (claude-profiles/<ctx>). tmux
-# does NOT propagate HOME into new sessions by default, so prefix-T's
-# `env HOME=...` was discarded and every session read the work hub (~/.claude).
-# Adding HOME to update-environment makes tmux copy it from the creating client
-# into the new session, so personal sessions get the personal account.
-# See memory: aoe-percontext-credentials / claude-shared-config-architecture.
-set -ga update-environment "HOME"
+# NOTE: AOE per-profile Claude accounts no longer need a tmux HOME hack. Host
+# agents now get the right account via the profile's own config.toml
+# `environment = ["CLAUDE_CONFIG_DIR=..."]`, which AOE injects onto the launch
+# command (CLAUDE_CONFIG_DIR wins over $HOME). See memory:
+# aoe-percontext-credentials and AOE issue #2302 comment 4768511171. The old
+# `set -ga update-environment "HOME"` was removed because it leaked HOME into
+# every new session as a global side effect.
 
 # -- session notification for foot synchronization ---------------------------
 
