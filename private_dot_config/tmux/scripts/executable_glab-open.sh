@@ -10,13 +10,13 @@ path="${2:-$PWD}"
 
 cd "$path" 2>/dev/null || {
   tmux display-message "❌ Path not accessible: $path"
-  exit 1
+  exit 0
 }
 
 # Distinguish the genuine "not a repo" case from a glab/browser failure.
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   tmux display-message "❌ Not a git repository"
-  exit 1
+  exit 0
 fi
 
 case "$mode" in
@@ -29,11 +29,12 @@ case "$mode" in
         | sed -E 's/^[[:space:]]+//')"
       [ -z "$msg" ] && msg="glab repo view --web failed"
       tmux display-message "❌ glab: $msg"
-      exit 1
+      exit 0
     fi
     ;;
   pipeline)
-    # ci view --web requires a TTY; fetch URL from ci status JSON instead.
+    # ci view --web requires a TTY; fetch the pipeline URL from ci status JSON.
+    tmux display-message " opening pipeline…"
     if ! out="$(glab ci status --output json 2>&1)"; then
       msg="$(printf '%s\n' "$out" \
         | sed -E 's/\x1b\[[0-9;]*[mGKH]//g' \
@@ -42,14 +43,28 @@ case "$mode" in
         | sed -E 's/^[[:space:]]+//')"
       [ -z "$msg" ] && msg="glab ci status failed"
       tmux display-message "❌ glab: $msg"
-      exit 1
+      exit 0
     fi
-    url="$(printf '%s\n' "$out" | grep -o '"web_url":"[^"]*"' | head -n1 | cut -d'"' -f4)"
+    # Use the top-level pipeline.web_url (the .../-/pipelines/<id> page), NOT the
+    # first job/commit web_url that a naive grep would pick up.
+    url="$(printf '%s' "$out" | jq -r '.pipeline.web_url // empty' 2>/dev/null)"
     if [ -z "$url" ]; then
-      tmux display-message "❌ glab: could not extract pipeline URL"
-      exit 1
+      # Fallback: query the API for the latest pipeline on the current branch.
+      b="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+      url="$(glab api "projects/:id/pipelines?ref=${b}&per_page=1" 2>/dev/null \
+        | jq -r '.[0].web_url // empty' 2>/dev/null)"
     fi
-    xdg-open "$url" >/dev/null 2>&1 &
+    if [ -z "$url" ]; then
+      tmux display-message "❌ glab: no pipeline found for this branch"
+      exit 0
+    fi
+    # Foreground so we can detect a failed launch (no handler / dead display)
+    # instead of swallowing it in a backgrounded process.
+    if ! xdg-open "$url" >/dev/null 2>&1; then
+      tmux display-message "❌ could not open browser: $url"
+      exit 0
+    fi
+    tmux display-message " $url"
     ;;
   pipelines-list)
     # Open the repo's /-/pipelines page in browser.
@@ -61,7 +76,7 @@ case "$mode" in
         | sed -E 's/^[[:space:]]+//')"
       [ -z "$msg" ] && msg="glab repo view --web failed"
       tmux display-message "❌ glab: $msg"
-      exit 1
+      exit 0
     fi
     # Derive pipelines URL from remote.
     remote_url="$(git remote get-url origin 2>/dev/null)"
@@ -70,7 +85,7 @@ case "$mode" in
       | sed -E 's|git@([^:]+):|https://\1/|; s|\.git$||')"
     if [ -z "$web_url" ]; then
       tmux display-message "❌ glab: could not determine repo URL"
-      exit 1
+      exit 0
     fi
     xdg-open "${web_url}/-/pipelines" >/dev/null 2>&1 &
     ;;

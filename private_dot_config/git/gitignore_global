@@ -37,6 +37,6 @@ FRAN_docker-compose.yml
 
 gl-sast-report.json
 gl-secret-detection-report.json
-# .gitlab-ci-local.yml
-#
+.gitlab-ci-local.yml
 .aoe-worktrees
+.gitlab-ci.dynamic.yml

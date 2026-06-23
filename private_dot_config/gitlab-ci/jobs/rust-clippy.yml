@@ -1,0 +1,9 @@
+# Mini-job: Rust clippy. Injected when Cargo.toml detected.
+rust-clippy:
+  stage: lint
+  image: rust:latest
+  script:
+    - rustup component add clippy
+    - cargo clippy --all-targets -- -D warnings
+  rules:
+    - if: '$CI_COMMIT_BRANCH'

@@ -20,8 +20,11 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
 	hyprctl keyword "windowrule opacity 1 override 1 override 1 override, ^(.*)$"
     hyprctl keyword monitor "eDP-1,2560x1600@240.00,0x1728,1.25"
     notify-send -e -u low -i "$notif" " Gamemode:" " enabled (240Hz)"
-    swww kill
-    sleep 0.1
+    # Keep the wallpaper in game mode: ensure the daemon is alive and
+    # re-render after the 240Hz mode switch so the background persists.
+    swww query &>/dev/null || swww-daemon --format xrgb &
+    sleep 0.2
+    swww img "$HOME/.config/rofi/.current_wallpaper"
     exit
 else
 	swww-daemon --format xrgb && swww img "$HOME/.config/rofi/.current_wallpaper" &

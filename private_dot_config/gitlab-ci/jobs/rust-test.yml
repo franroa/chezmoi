@@ -1,0 +1,8 @@
+# Mini-job: Rust tests. Injected when Cargo.toml detected.
+rust-test:
+  stage: test
+  image: rust:latest
+  script:
+    - cargo test --all
+  rules:
+    - if: '$CI_COMMIT_BRANCH'

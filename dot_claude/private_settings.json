@@ -1,22 +1,57 @@
 {
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "yas@yet-another-statusline": true
+  },
+  "extraKnownMarketplaces": {
+    "context-engineering-marketplace": {
+      "source": {
+        "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "source": "github"
+      }
+    }
+  },
   "hooks": {
     "ElicitationResult": [
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf running > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
           }
         ]
       }
     ],
     "Notification": [
       {
-        "matcher": "permission_prompt|elicitation_dialog",
         "hooks": [
           {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf waiting > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
+            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-input.sh\" ] && \"$HOME/.claude/hooks/tmux-input.sh\"; exit 0'",
+            "type": "command"
+          },
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf waiting > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
+          }
+        ],
+        "matcher": "permission_prompt|elicitation_dialog"
+      },
+      {
+        "hooks": [
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf waiting > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
+          }
+        ],
+        "matcher": "permission_prompt|elicitation_dialog"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-working.sh\" ] && \"$HOME/.claude/hooks/tmux-working.sh\"; exit 0'",
+            "type": "command"
           }
         ]
       }
@@ -25,8 +60,30 @@
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf running > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
+            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-working.sh\" ] && \"$HOME/.claude/hooks/tmux-working.sh\"; exit 0'",
+            "type": "command"
+          },
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; command -v aoe >/dev/null 2>&1 || exit 0; aoe __extract-session-id 2>/dev/null; exit 0 # aoe-hooks'",
+            "type": "command"
           }
         ]
       }
@@ -35,12 +92,24 @@
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf idle > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
+            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-done.sh\" ] && \"$HOME/.claude/hooks/tmux-done.sh\"; exit 0'",
+            "type": "command"
           },
           {
-            "type": "command",
-            "command": "sh -c '[ -f /.dockerenv ] || exit 0; chown -R 1001:1001 /root/.claude/sandbox/ 2>/dev/null; chown 1001:1001 /root/.claude/.claude.json /root/.claude/yas-last-prompt.json 2>/dev/null; exit 0'"
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf idle > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'",
+            "type": "command"
+          },
+          {
+            "command": "sh -c '[ -f /.dockerenv ] || exit 0; chown -R 1001:1001 /root/.claude/sandbox/ 2>/dev/null; chown 1001:1001 /root/.claude/.claude.json /root/.claude/yas-last-prompt.json 2>/dev/null; exit 0'",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf idle > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
           }
         ]
       }
@@ -49,23 +118,40 @@
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf running > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
+            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-working.sh\" ] && \"$HOME/.claude/hooks/tmux-working.sh\"; exit 0'",
+            "type": "command"
+          },
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; command -v aoe >/dev/null 2>&1 || exit 0; aoe __extract-session-id 2>/dev/null; exit 0 # aoe-hooks'",
+            "type": "command"
+          },
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; command -v aoe >/dev/null 2>&1 || exit 0; aoe __extract-session-id 2>/dev/null; exit 0 # aoe-hooks'",
+            "type": "command"
+          },
+          {
+            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'",
+            "type": "command"
           }
         ]
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "\"/usr/bin/python3\" \"$HOME/.claude/yas-docker-wrapper.py\"",
-    "refreshInterval": 1
-  },
-  "enabledPlugins": {
-    "yas@yet-another-statusline": true
-  },
+  "model": "opus[1m]",
   "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "command": "\"/usr/bin/python3\" \"$HOME/.claude/yas-docker-wrapper.py\"",
+    "refreshInterval": 1,
+    "type": "command"
+  },
   "theme": "dark",
-  "model": "opus",
   "tui": "fullscreen"
 }

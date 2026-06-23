@@ -1,0 +1,10 @@
+# Mini-job: Terraform validate. Injected when *.tf detected.
+tf-validate:
+  stage: lint
+  image: hashicorp/terraform:latest
+  script:
+    - terraform init -backend=false
+    - terraform validate
+    - terraform fmt -check -recursive
+  rules:
+    - if: '$CI_COMMIT_BRANCH'

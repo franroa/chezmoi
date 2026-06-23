@@ -1,0 +1,9 @@
+# Mini-job: Semgrep SAST. Injected for every stack (security baseline).
+sast:
+  stage: security
+  image: returntocorp/semgrep:latest
+  script:
+    - semgrep scan --config auto --error
+  rules:
+    - if: '$CI_COMMIT_BRANCH'
+  allow_failure: true

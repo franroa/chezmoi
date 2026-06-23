@@ -1,0 +1,9 @@
+# Mini-job: Python lint (ruff). Injected when pyproject.toml / requirements.txt / *.py detected.
+python-lint:
+  stage: lint
+  image: python:3.12-slim
+  script:
+    - pip install ruff
+    - ruff check .
+  rules:
+    - if: '$CI_COMMIT_BRANCH'

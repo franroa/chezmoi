@@ -1,0 +1,13 @@
+# CI dual view — remote pipeline (left) + local pipeline viewer (right)
+#   tmuxinator start ci root=$PWD
+name: ci
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+windows:
+  - ci:
+      layout: main-vertical
+      panes:
+        - remote:
+            - ~/.local/bin/gctui --remote .
+        - local:
+            - ~/.local/bin/gctui .

@@ -27,6 +27,8 @@
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + Tab             │ extrakto: fzf-extract any text visible in pane → enter copies, tab inserts at cursor │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + u               │ tmux-1password: fzf picker of 1Password items → pastes selected secret into pane     │
+  ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + M-L             │ Toggle pane logging to file (~/tmux-*.log)  [moved from P]                           │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + M-p             │ Save full pane scrollback to file                                                     │
@@ -51,11 +53,9 @@
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + M-k             │ tmux-jot: cleanup notes                                                               │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
-  │ prefix + M               │ Named snapshot: save (prompts for name)                                               │
+  │ prefix + N               │ Snapshot leader table → s save · r restore · p picker (see Snapshot section below)   │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
-  │ prefix + N               │ Named snapshot: restore (prompts for name)                                            │
-  ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
-  │ prefix + M-I             │ TPM: install plugins  [moved from I]                                                  │
+  │ prefix + I               │ TPM: install plugins                                                                  │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + U               │ TPM: update plugins                                                                   │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
@@ -70,8 +70,6 @@
   │ prefix + O   │ Open repo in browser                                                                              │
   ├──────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + P   │ Open latest pipeline in browser                                                                   │
-  ├──────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ prefix + I   │ Open pipelines list in browser                                                                    │
   ├──────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + C   │ Pipeline TUI — interactive glab ci view                                                           │
   └──────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -93,10 +91,26 @@
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + G → L   │ MR list in terminal popup                                                                    │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + G → R   │ Review MR — fzf picker → glab mr checkout → tuicr (origin/<target>..HEAD)                     │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + G → M   │ Create MR (glab mr create)                                                                   │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + G → V   │ View current MR in browser (glab mr view --web)                                             │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + G → u   │ Local CI setup — init git submodules + verify .gitlab-ci-local-variables.yml               │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + G → v   │ gctui — pipeline TUI (Local view; Tab switches to Remote in-app)                          │
+  │ prefix + G → d   │ gctui — pipeline TUI (Remote view)                                                        │
+  │ prefix + G → C/S │ gctui --remote (remote pipeline)                                                          │
+  │ prefix + G → y   │ gctui --config (expanded YAML / merged config)                                            │
+  │ prefix + G → w   │ Dual view — remote (left) + local (right), both gctui, via tmuxinator                     │
+  │ prefix + G → j   │ Assemble a modular component pipeline (gctui assemble, headless)                          │
+  │ prefix + G → u   │ Local CI setup — init submodules + verify .gitlab-ci-local-variables.yml (gcl-setup.sh)   │
+  │ prefix + G → ?   │ gctui usage / flags                                                                       │
   └──────────────────┴────────────────────────────────────────────────────────────────────────────────────────────┘
+  gctui = ~/.local/bin/gctui (Go/bubbletea TUI). One binary, Local + Remote tabs; run/cancel/
+  retry/logs/filter/disable all in-app. Replaced gcl-viewer.sh, glab-ci.sh, gcl.sh,
+  ci-inject.sh, ci-dispatch.sh (retired). Source: ~/gitlab-ci-tui. Build: task install.
 
   Parallel agents — leader (prefix + A, then key):
 
@@ -125,6 +139,67 @@
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + A → x   │ Teardown swarm — aoe remove all (worktrees + branches)                                     │
   └──────────────────┴────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  Snapshot — leader (prefix + N, then key):  [tmux-named-snapshot; frees prefix+M]
+
+  ┌──────────────────┬────────────────────────────────────────────────────────────────────────────────────────────┐
+  │       Key        │                                          Action                                             │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + N → s   │ Save named snapshot (prompts for name)                                                      │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + N → r   │ Restore named snapshot (prompts for name)                                                   │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + N → p   │ Snapshot picker — fzf restore/delete named snapshots                                        │
+  └──────────────────┴────────────────────────────────────────────────────────────────────────────────────────────┘
+
+  Note: prefix + C-n still opens the snapshot picker directly (unchanged).
+
+  Context Inspector — leader (prefix + K, then key):  [lee transcript en disco; SIN enviar /context]
+
+  ┌──────────────────┬────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Key              │ Action                                                                                     │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → c   │ Contexto total + inventario (del transcript, sin /context)                                 │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → L   │ Vista LIVE — envía /context al REPL (split oficial)                                        │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → y   │ System prompt  (movido de s)                                                               │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → t   │ System tools                                                                               │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → m   │ Servidores MCP + tokens (+ /mcp)                                                           │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → a   │ Agentes personalizados (.claude/agents/)                                                   │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → f   │ Memoria / jerarquía CLAUDE.md (+ /memory)                                                  │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → i   │ Archivos cargados al contexto (agentsview session tool-calls)                              │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → h   │ Mensajes / historial (tip /compact)                                                        │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → p   │ Permisos (+ /permissions)                                                                  │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → k   │ Skills cargadas (.claude/skills/)                                                          │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → o   │ Coste/utilización sesión (agentsview session usage)                                        │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → u   │ Uso/coste diario cross-sesión (agentsview usage daily)                                     │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → s ▸ │ SESIONES(vi): n nombre·c contenido·p proy·a agente·g grado·O outcome·F fallos·r todas      │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → S ▸ │ SECRETOS (fzf vi): l todos · p proyecto · a agente · x escanear                            │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → H ▸ │ SALUD por grado: a b c d f → sesiones de ese grado                                         │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → x   │ Stats agentsview (ventana 28d, en less)                                                    │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → r   │ Projects: elige proyecto → sus sesiones                                                    │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → ?   │ Ayuda / mapa de teclas                                                                     │
+  └──────────────────┴────────────────────────────────────────────────────────────────────────────────────────────┘
+  fzf modo vi: j/k mueve · g/G · i o / busca (escribe filtra; en 's c' es FTS en vivo) · esc
+  vuelve a NORMAL · o abre la sesión en tmux nueva (claude --resume, como prefix A l) · enter detalle.
+  q / Esc cancela / vuelve. Vistas single: por defecto NO envían /context (sólo L lo hace).
 
   In copy mode (prefix + [):
 
@@ -179,9 +254,11 @@
   ├───────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
   │ h → ...                       │ +Harpoon: list, add, slots 1/2/3, pin slot 1                          │
   ├───────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
-  │ g → r/p/l/c                   │ +GitLab: open repo / latest pipeline / pipelines list / TUI           │
+  │ g → O/P/I/C                   │ +GitLab: open repo / latest pipeline / pipelines list / TUI           │
   ├───────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
-  │ g → s/m/R/v                   │ +GitLab: CI status / MR list / create MR / view MR                   │
+  │ g → S/L/R/M/V                 │ +GitLab: CI status / MR list / review MR (tuicr) / create MR / view MR│
+  ├───────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
+  │   (in CI viewer) x/e/n/y      │ gcl: run selected job locally / run stage / list jobs / preview YAML  │
   ├───────────────────────────────┼──────────────────────────────────────────────────────────────────────┤
   │ t → f/e                       │ +Tools: FZF / Extrakto                                                │
   ├───────────────────────────────┼──────────────────────────────────────────────────────────────────────┤

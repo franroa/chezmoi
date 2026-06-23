@@ -1,0 +1,12 @@
+# Mini-job: Node lint. Injected when package.json detected.
+node-lint:
+  stage: lint
+  image: node:20
+  cache:
+    key: { files: [package-lock.json] }
+    paths: [node_modules/]
+  script:
+    - npm ci --no-audit --no-fund
+    - npm run lint --if-present
+  rules:
+    - if: '$CI_COMMIT_BRANCH'

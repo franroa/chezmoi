@@ -228,6 +228,49 @@ async function activateGroup(page, groupName) {
     }
 }
 
+async function ensureLoggedIn(context) {
+    const page = await context.newPage();
+    try {
+        log('Checking Azure login status...');
+        await page.goto(PIM_URL, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.waitForTimeout(3000);
+
+        if (!page.url().includes('login.microsoftonline.com')) {
+            log('Already logged in.');
+            await page.close();
+            return true;
+        }
+
+        log('');
+        log('========================================');
+        log('  Azure login required.');
+        log('  Complete the login in the Chrome window.');
+        log('  Waiting up to 5 minutes for login...');
+        log('========================================');
+        log('');
+
+        const LOGIN_TIMEOUT_MS = 5 * 60 * 1000;
+        const start = Date.now();
+        while (Date.now() - start < LOGIN_TIMEOUT_MS) {
+            await page.waitForTimeout(2000);
+            if (!page.url().includes('login.microsoftonline.com')) {
+                log('Login detected, continuing...');
+                await page.waitForTimeout(3000);
+                await page.close();
+                return true;
+            }
+        }
+
+        log('Login timed out after 5 minutes.');
+        await page.close();
+        return false;
+    } catch (error) {
+        log(`Login check error: ${error.message}`);
+        await page.close().catch(() => {});
+        return false;
+    }
+}
+
 async function activateGroupInNewPage(context, groupName) {
     const page = await context.newPage();
     
@@ -284,7 +327,14 @@ async function main() {
     // Get the default context
     const contexts = browser.contexts();
     const context = contexts[0];
-    
+
+    // Make sure we're logged in before fanning out (waits for manual login)
+    const loggedIn = await ensureLoggedIn(context);
+    if (!loggedIn) {
+        log('Cannot proceed without an active Azure login.');
+        process.exit(1);
+    }
+
     // Activate all groups in parallel
     log('');
     log('Starting parallel activation of all groups...');

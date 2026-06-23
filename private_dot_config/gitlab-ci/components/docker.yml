@@ -1,0 +1,5 @@
+# ci-stage: build
+# Reusable component: technosylva docker build/push. Injected when Dockerfile detected.
+- component: $CI_SERVER_FQDN/technosylva/platform/development/cicd-components/docker@0.1.2
+  inputs:
+    stage: build

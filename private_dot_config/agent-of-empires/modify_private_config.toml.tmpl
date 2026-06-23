@@ -7,6 +7,11 @@ import sys, re
 DESIRED = [
     "{{ .chezmoi.homeDir }}/.claude/agents:/root/.claude/agents:ro",
     "{{ .chezmoi.homeDir }}/.claude/commands:/root/.claude/commands:ro",
+    # AOE's own profile registry, mounted RO at the SAME path it lives on the host
+    # so the yas statusline wrapper resolves the session's profile (work/personal)
+    # in-sandbox with the exact same code it runs on the host. AOE writes this dir
+    # on the host only; the container never writes it, so RO is safe.
+    "{{ .chezmoi.homeDir }}/.config/agent-of-empires/profiles:/root/.config/agent-of-empires/profiles:ro",
     # NOTE: do NOT RO-mount plugins/marketplaces or known_marketplaces.json. Claude
     # Code refreshes marketplaces on load (rm + re-clone), which EROFS-fails on a
     # read-only mount. Plugins reach sandboxes via settings.json enabledPlugins

@@ -10,7 +10,7 @@ windows:
         - work:
             - claude
         - ci:
-            - bash ~/.config/tmux/scripts/glab-ci.sh
+            - ~/.local/bin/gctui --remote
         - kube:
             - watch -ct -n5 'bash ~/.config/tmux/plugins/kube-tmux/scripts/kube-tmux.sh 2>/dev/null || kubectl get pods'
         - logs:

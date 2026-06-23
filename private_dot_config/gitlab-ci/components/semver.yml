@@ -1,0 +1,3 @@
+# ci-stage: .pre
+# Reusable component: ultimate auto semversioning. Computes a unique semver early.
+- component: $CI_SERVER_FQDN/guided-explorations/ci-components/ultimate-auto-semversioning/ultimate-auto-semversioning@1.2.8

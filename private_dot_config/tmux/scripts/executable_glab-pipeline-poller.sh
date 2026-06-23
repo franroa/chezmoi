@@ -8,8 +8,17 @@
 set -uo pipefail
 
 GLAB="$(command -v glab || echo /home/linuxbrew/.linuxbrew/bin/glab)"
-INTERVAL=30
+INTERVAL=10
 PIDFILE=/tmp/.claude-tmux-pipeline-poller.pid
+
+# glab auth needs GITLAB_TOKEN. This daemon is launched from the status-line
+# #() command, which inherits the tmux SERVER's start environment — that often
+# predates the 1Password token loader, so the token is missing here even though
+# `set-environment -g` put it in the global env for panes. Pull it from there.
+if [ -z "${GITLAB_TOKEN:-}" ]; then
+  tok="$(tmux show-environment -g GITLAB_TOKEN 2>/dev/null | sed -n 's/^GITLAB_TOKEN=//p')"
+  [ -n "$tok" ] && export GITLAB_TOKEN="$tok"
+fi
 
 # Single instance.
 if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE" 2>/dev/null)" 2>/dev/null; then
@@ -57,9 +66,21 @@ reduce_status() {
 }
 
 write_cache() {  # path  status
-  local key cache tmp
+  local key cache tmp prev marker
   key="$(key_for "$1")"
   cache="/tmp/.claude-tmux-pipeline-${key}"
+  marker="/tmp/.claude-tmux-pipeline-finished-${key}"
+  prev="$(cat "$cache" 2>/dev/null)"
+  # Detect a pipeline that just FINISHED (active -> terminal): drop a marker the
+  # status bar blinks pink on, cleared when its session is focused. A fresh run
+  # (terminal/none -> active) clears any stale marker so old blinks don't linger.
+  case "$prev" in
+    running|pending|created|preparing|scheduled|waiting_for_resource)
+      case "$2" in success|failed) : > "$marker" ;; esac ;;
+  esac
+  case "$2" in
+    running|pending|created|preparing|scheduled|waiting_for_resource) rm -f "$marker" ;;
+  esac
   tmp="${cache}.$$"
   printf '%s' "$2" > "$tmp" && mv -f "$tmp" "$cache"
 }

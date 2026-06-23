@@ -5,6 +5,13 @@
 PLUGIN_ROOT="/home/froa/.claude/plugins/cache/claude-notifications-go/claude-notifications-go/1.38.0"
 ICON="${PLUGIN_ROOT}/claude_icon.png"
 
+# --- Suppress when workspace 1 is focused ---
+# If the user is already looking at workspace 1, skip the notification entirely.
+if command -v hyprctl &>/dev/null; then
+  active_ws=$(hyprctl activeworkspace -j 2>/dev/null | jq -r '.id // empty' 2>/dev/null)
+  [ "$active_ws" = "1" ] && exit 0
+fi
+
 # --- Git repo name ---
 repo_name=""
 if git rev-parse --is-inside-work-tree &>/dev/null 2>&1; then

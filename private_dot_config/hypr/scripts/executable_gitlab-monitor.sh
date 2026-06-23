@@ -17,6 +17,7 @@ NOTIF_APP_NAME="GitLab"
 CREDS_FILE="$HOME/.config/gitlab-credentials"
 SEEN_DIR="/tmp/.gitlab_seen_$USER"
 POLL_INTERVAL=300
+FAST_RETRY_INTERVAL=20   # while waiting for the token to appear (local check only)
 
 source /home/froa/.config/hypr/scripts/notification-tracker-lib.sh
 
@@ -86,14 +87,56 @@ send_notif_action() {
 # Credentials
 # ---------------------------------------------------------------------------
 
-load_credentials() {
-    if [[ ! -f "$CREDS_FILE" ]]; then
-        notify-send -u critical "GitLab" "Please configure credentials in:\n$CREDS_FILE"
-        exit 1
+# Read a token from the 1Password secrets cache that fish writes at login
+# ($XDG_RUNTIME_DIR/op-secrets.cache.fish, lines like `set -gx GITLAB_TOKEN x`).
+# This daemon is launched by Hyprland's exec-once under /bin/sh, which never
+# sources fish, so the env var is otherwise unavailable here.
+read_token_from_op_cache() {
+    local cache="${XDG_RUNTIME_DIR:-/tmp/op-$(id -u)}/op-secrets.cache.fish"
+    [[ -r "$cache" ]] || return 1
+    local tok
+    tok="$(awk '$1=="set" && $3=="GITLAB_TOKEN" {print $4; exit}' "$cache")"
+    # fish `set` lines quote the value; strip surrounding single/double quotes.
+    tok="${tok#[\"\']}"; tok="${tok%[\"\']}"
+    [[ -n "$tok" ]] && printf '%s' "$tok"
+}
+
+# Resolve the GitLab token from (in order) the environment, the 1Password cache,
+# then the credentials file. Echoes the token, empty if none. Purely local: no
+# API calls and no side effects, so it is safe to call cheaply on every loop
+# tick to detect when the secret becomes available.
+resolve_token() {
+    local tok="${GITLAB_TOKEN:-}"
+    if [[ -n "$tok" && "$tok" != "your_token" ]]; then
+        printf '%s' "$tok"; return 0
     fi
-    eval "$(grep -v '^#' "$CREDS_FILE" | grep '=')"
-    if [[ "${GITLAB_TOKEN:-}" == "your_token" || -z "${GITLAB_TOKEN:-}" ]]; then
-        notify-send -u normal "GitLab" "Please configure your GitLab token in:\n$CREDS_FILE"
+    tok="$(read_token_from_op_cache)"
+    if [[ -n "$tok" ]]; then printf '%s' "$tok"; return 0; fi
+    if [[ -f "$CREDS_FILE" ]]; then
+        tok="$(grep -v '^#' "$CREDS_FILE" | sed -n 's/^[[:space:]]*GITLAB_TOKEN=//p' | tail -n1)"
+        tok="${tok%\"}"; tok="${tok#\"}"
+        if [[ -n "$tok" && "$tok" != "your_token" ]]; then printf '%s' "$tok"; return 0; fi
+    fi
+    return 1
+}
+
+load_credentials() {
+    # Token precedence (env > 1Password cache > credentials file) is handled by
+    # resolve_token; the credentials file additionally supplies GITLAB_URL.
+    local env_url="${GITLAB_URL:-}"
+    local tok
+    tok="$(resolve_token)"
+
+    if [[ -f "$CREDS_FILE" ]]; then
+        eval "$(grep -v '^#' "$CREDS_FILE" | grep '=')"
+    fi
+
+    [[ -n "$tok"     ]] && GITLAB_TOKEN="$tok"
+    [[ -n "$env_url" ]] && GITLAB_URL="$env_url"
+    GITLAB_URL="${GITLAB_URL:-https://gitlab.com}"
+
+    if [[ -z "${GITLAB_TOKEN:-}" || "${GITLAB_TOKEN:-}" == "your_token" ]]; then
+        notify-send -u normal "GitLab" "Set \$GITLAB_TOKEN env var or configure:\n$CREDS_FILE"
         exit 1
     fi
 }
@@ -406,8 +449,17 @@ dbus_monitor_loop() {
 _run_monitor() {
     dbus_monitor_loop &
     while true; do
-        poll_once 2>/dev/null || true
-        sleep "$POLL_INTERVAL"
+        if [[ -n "$(resolve_token)" ]]; then
+            poll_once 2>/dev/null || true
+            sleep "$POLL_INTERVAL"
+        else
+            # No token yet. After a fresh boot the 1Password cache is empty until
+            # you open a terminal and unlock it, and exec-once under /bin/sh has
+            # no GITLAB_TOKEN env var. Wait on the local cache file cheaply (no
+            # API calls) and pick the secret up within FAST_RETRY_INTERVAL once
+            # it lands -- no restart needed.
+            sleep "$FAST_RETRY_INTERVAL"
+        fi
     done
 }
 

@@ -1,0 +1,10 @@
+# Local CI view — gctui (stage board + embedded log pane)
+#   tmuxinator start ci-local root=$PWD
+name: ci-local
+root: <%= @settings["root"] || ENV["PWD"] %>
+
+windows:
+  - ci-local:
+      panes:
+        - viewer:
+            - ~/.local/bin/gctui .

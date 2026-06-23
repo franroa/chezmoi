@@ -1,0 +1,11 @@
+[portal]
+DBusName=org.freedesktop.portal.Desktop
+DBusObjectPath=/org/freedesktop/portal/desktop
+Interfaces=org.freedesktop.portal.ScreenCast;org.freedesktop.portal.RemoteDesktop;
+SupportedMethods=ScreenCast;RemoteDesktop;
+
+[org.freedesktop.portal.ScreenCast]
+Session=pw
+Sources=all
+Devices=all
+ronment=XDG_CURRENT_DESKTOP=Hyprland

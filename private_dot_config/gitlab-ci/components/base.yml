@@ -1,0 +1,3 @@
+# Reusable component: technosylva platform base. Org CI baseline.
+# Brings its own stages; do not pin a stage here.
+- component: $CI_SERVER_FQDN/technosylva/platform/development/cicd-components/base@main

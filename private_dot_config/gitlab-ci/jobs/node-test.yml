@@ -1,0 +1,12 @@
+# Mini-job: Node tests. Injected when package.json detected.
+node-test:
+  stage: test
+  image: node:20
+  cache:
+    key: { files: [package-lock.json] }
+    paths: [node_modules/]
+  script:
+    - npm ci --no-audit --no-fund
+    - npm test --if-present
+  rules:
+    - if: '$CI_COMMIT_BRANCH'

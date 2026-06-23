@@ -1,0 +1,5 @@
+# ci-stage: test
+# Reusable component: GitLab official Go (format, vet, test, build).
+- component: gitlab.com/components/go/go@main
+  inputs:
+    stage: test

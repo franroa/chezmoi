@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=config.schema.yaml
 command_alias_start_index: 200
 keybindings:
-  # root_table: C-Space
+  root_table: ""
   prefix_table: Space
 title:
   style: align=centre,bold
@@ -232,6 +232,22 @@ items:
         key: r
         command: rename
       - separator: true
+      - name: New AOE session
+        key: a
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 80% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoen-session.sh"
+      - name: New AOE session (any folder, pick profile)
+        key: A
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 80% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoe-profile-session.sh"
+      - name: Session picker
+        key: p
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 50% -h 40% ~/.config/tmux/scripts/session-picker.sh"
+      - name: Sessionizer (projects)
+        key: f
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 60% -h 50% ~/.config/tmux/scripts/sessionizer.sh"
+      - name: Session wizard
+        key: w
+        command: "display-popup -E -h 40% -w 80% ~/.config/tmux/plugins/tmux-session-wizard/bin/t"
+      - separator: true
       - name: +Resurrect
         key: R
         menu:
@@ -328,30 +344,204 @@ items:
     key: g
     menu:
       - name: Open repo
-        key: r
+        key: O
         command: "run-shell \"~/.config/tmux/scripts/glab-open.sh repo #{pane_current_path}\""
       - name: Latest pipeline
-        key: p
+        key: P
         command: "run-shell \"~/.config/tmux/scripts/glab-open.sh pipeline #{pane_current_path}\""
       - name: Pipelines list
-        key: l
+        key: I
         command: "run-shell \"~/.config/tmux/scripts/glab-open.sh pipelines-list #{pane_current_path}\""
       - name: Pipeline TUI
-        key: c
+        key: C
         command: "display-popup -E -d \"#{pane_current_path}\" -h 85% -w 85% \"fish -c \\\"glab ci view\\\"\""
       - separator: true
       - name: CI status
-        key: s
+        key: S
         command: "display-popup -E -d \"#{pane_current_path}\" -h 50% -w 80% \"glab ci status 2>&1; echo; read _\""
       - name: MR list
-        key: m
+        key: L
         command: "display-popup -E -d \"#{pane_current_path}\" -h 50% -w 80% \"glab mr list 2>&1; echo; read _\""
-      - name: Create MR
+      - name: Review MR (tuicr)
         key: R
+        command: "display-popup -E -d \"#{pane_current_path}\" -h 90% -w 95% \"~/.config/tmux/scripts/glab-mr-review.sh || read _\""
+      - name: Create MR
+        key: M
         command: "display-popup -E -d \"#{pane_current_path}\" -h 80% -w 80% \"glab mr create\""
       - name: View MR
-        key: v
+        key: V
         command: "run-shell \"glab mr view --web\""
+      - separator: true
+      - name: Local CI setup
+        key: u
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% \"bash ~/.config/tmux/scripts/gcl-setup.sh #{pane_current_path}\""
+      - name: Pipeline TUI (Local)
+        key: v
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui #{pane_current_path}\""
+      - name: Pipeline TUI (Remote)
+        key: d
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui --remote #{pane_current_path}\""
+      - name: Config view
+        key: y
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui --config #{pane_current_path}\""
+      - name: Dual view (local + remote)
+        key: w
+        command: "run-shell \"tmuxinator start ci root=#{pane_current_path}\""
+      - name: Assemble pipeline
+        key: j
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 70% \"~/.local/bin/gctui assemble #{pane_current_path}; read _\""
+  - name: +Parallel
+    key: A
+    menu:
+      - name: AOE scratchpad
+        key: O
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 85% -h 85% aoe"
+      - name: All Claude sessions (every repo)
+        key: l
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 80% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoe-claude-sessions.sh"
+      - separator: true
+      - name: Spawn ticket swarm
+        key: s
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 60% \"~/.config/tmux/scripts/swarm.sh interactive\""
+      - name: Swarm control session
+        key: S
+        command: "run-shell \"tmuxinator start swarm root=#{pane_current_path}\""
+      - name: Swarm dashboard
+        key: d
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 60% \"~/.config/tmux/scripts/swarm-dashboard.sh watch\""
+      - separator: true
+      - name: Review layout
+        key: r
+        command: "run-shell \"tmuxinator start review root=#{pane_current_path} id=rev\""
+      - name: Pipeline layout
+        key: p
+        command: "run-shell \"tmuxinator start pipeline root=#{pane_current_path} id=p\""
+      - name: Monitor layout
+        key: m
+        command: "run-shell \"tmuxinator start monitor root=#{pane_current_path}\""
+      - name: Workflow (orchestrator)
+        key: o
+        command: "run-shell \"tmuxinator start workflow root=#{pane_current_path} id=wf\""
+      - separator: true
+      - name: Autopilot status
+        key: a
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 50% \"~/.config/tmux/scripts/autopilot.sh list; echo; read _\""
+      - name: Peek a worker
+        key: P
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 70% \"~/.config/tmux/scripts/swarm.sh peek-i\""
+      - name: Reap done workers
+        key: R
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 50% \"~/.config/tmux/scripts/swarm.sh reap-done; echo; read _\""
+      - name: Teardown swarm
+        key: x
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 50% \"~/.config/tmux/scripts/swarm.sh teardown; echo; read _\""
+  - name: +Context
+    key: K
+    menu:
+      - name: Context total (transcript, no /context)
+        key: c
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_full_context.sh"
+      - name: Live /context (sends to REPL)
+        key: L
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_live_context.sh"
+      - name: System prompt
+        key: y
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_system_prompt.sh"
+      - name: System tools
+        key: t
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_system_tools.sh"
+      - name: MCP servers
+        key: m
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_mcp.sh"
+      - name: Custom agents
+        key: a
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_agents.sh"
+      - name: Memory / CLAUDE.md
+        key: f
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_memory_files.sh"
+      - name: Files loaded into context
+        key: i
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_context_files.sh"
+      - name: Messages
+        key: g
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_messages.sh"
+      - name: Session health / intel (current)
+        key: h
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_health.sh"
+      - name: Permissions
+        key: p
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_permissions.sh"
+      - name: Skills
+        key: k
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_skills.sh"
+      - name: Cost / usage (session)
+        key: o
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_cost.sh"
+      - name: Daily usage / cost
+        key: u
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_usage.sh"
+      - separator: true
+      - name: +Sessions (fzf vi)
+        key: s
+        menu:
+          - name: By name
+            key: n
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh sessions name"
+          - name: By content (FTS)
+            key: c
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh sessions content"
+          - name: By project
+            key: p
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh pick project"
+          - name: By agent
+            key: a
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh pick agent"
+          - name: By health grade
+            key: g
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh pick grade"
+          - name: By outcome
+            key: O
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh pick outcome"
+          - name: With tool failures
+            key: F
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh sessions failures"
+          - name: All
+            key: r
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh sessions all"
+      - name: +Secrets (fzf vi)
+        key: S
+        menu:
+          - name: All findings
+            key: l
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh secrets all"
+          - name: By project
+            key: p
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh secrets pick project"
+          - name: By agent
+            key: a
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh secrets pick agent"
+          - name: Scan now
+            key: x
+            command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh secrets scan"
+      - name: Health / intel overview (all)
+        key: H
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_health_overview.sh"
+      - name: Stats (28d, less)
+        key: x
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh stats"
+      - name: Projects browser
+        key: r
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 92% -h 88% -e TMUX_PARENT_CLIENT=#{client_tty} /home/froa/tmux-context-inspector/scripts/av_browse.sh projects"
+      - separator: true
+      - name: Web UI — session insights (current)
+        key: w
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/open_web.sh session"
+      - name: Web UI — insights dashboard (all)
+        key: W
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/open_web.sh insights"
+      - name: Help
+        key: "?"
+        command: run-shell -b "/home/froa/tmux-context-inspector/scripts/show_help.sh"
   - name: +Tools
     key: t
     menu:
@@ -361,6 +551,12 @@ items:
       - name: Extrakto
         key: e
         command: "run-shell \"\\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\\" \\\"#{pane_id}\\\"\""
+      - name: 1Password
+        key: u
+        command: "split-window -l 10 ~/.config/tmux/plugins/tmux-1password/scripts/main.sh #{pane_id}"
+      - name: Scratch terminal
+        key: g
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 80%"
       - separator: true
       - name: +Jot
         key: j
@@ -403,6 +599,9 @@ items:
         key: Y
         command: run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_pane_pwd.sh
   - separator: true
+  - name: tmux-menus
+    key: M
+    command: run-shell ~/.config/tmux/plugins/tmux-menus/items/main.sh
   - name: Time
     key: T
     command: clock-mode

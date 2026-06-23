@@ -1,21 +1,22 @@
 #!/usr/bin/env fish
-# Load secrets from 1Password ONCE per login into every shell and tmux pane.
+# Inject 1Password secrets into every fish/tmux session, app-free, with ONE
+# masked master-password prompt per login.
 #
-# Sources (tried in order, cheapest first):
-#   1. Shell sentinel (OP_SECRETS_LOADED) -- already done, skip everything.
-#   2. tmux global env  -- set when ANY pane in this server has done auth;
-#                          no cache file needed, no op call.
-#   3. Cache file       -- tmpfs, 0600, written after the first successful fetch.
-#   4. 1Password fetch  -- one biometric prompt under a flock; losers wait for
-#                          the winner's cache instead of each prompting.
+# Load sources (op-load, cheap, NEVER prompts):
+#   1. Shell sentinel (OP_SECRETS_LOADED) -- already done, skip.
+#   2. tmux global env  -- set once any pane has fetched; no file, no op call.
+#   3. Cache file       -- tmpfs, 0600, written after the first fetch.
 #
-# Lazy pickup: shells that start before auth (e.g. tmux-continuum panes at
-# boot) register hooks on BOTH fish_prompt AND fish_preexec. The first event
-# that fires after any source becomes available loads the vars and self-removes.
+# Fetch (__op_fetch, INTERACTIVE, prompts): masked password read in fish, piped
+# to `op signin` (no desktop app), then `op read` for each secret -> cache.
+# Only op-login (the Hyprland floating terminal) and op-reload call it, so a
+# normal shell never blocks on a prompt.
 #
-# op-reload: force a fresh fetch (use after rotating a token).
+# Lazy pickup: panes that start before the fetch (tmux-resurrect at boot)
+# register fish_prompt/fish_preexec hooks that op-load (no prompt) on the next
+# event, inheriting the vars the instant the login window populates them.
 #
-# Edit only the map below.
+# Edit only the two maps below.
 
 function __op_secrets_vars
     # One name per line so `for v in (__op_secrets_vars)` iterates correctly.
@@ -23,12 +24,17 @@ function __op_secrets_vars
 end
 
 function __op_secrets_refs
-    # Returns NAME ref pairs, one pair per call to the caller via stdout.
-    # Format: NAME<TAB>ref  (one line each)
-    printf 'CLOCKWORK_API\top://Employee/CLOCKWORK_API/credential\n'
-    printf 'JIRA_API_TOKEN\top://Employee/JIRA_API_TOKEN/credential\n'
-    printf 'JIRA_TOKEN\top://Employee/JIRA_TOKEN/credential\n'
-    printf 'GITLAB_TOKEN\top://Employee/GITLAB_TOKEN/credential\n'
+    # NAME<TAB>op://ref, one per line. Vault froa-shell-secrets is a user-created
+    # (non-Personal) vault, readable via a master-password signin with no app.
+    printf 'CLOCKWORK_API\top://froa-shell-secrets/CLOCKWORK_API/credential\n'
+    printf 'JIRA_API_TOKEN\top://froa-shell-secrets/JIRA_API_TOKEN/credential\n'
+    printf 'JIRA_TOKEN\top://froa-shell-secrets/JIRA_TOKEN/credential\n'
+    printf 'GITLAB_TOKEN\top://froa-shell-secrets/GITLAB_TOKEN/credential\n'
+end
+
+# 1Password account to sign in to (added via `op account add`; no desktop app).
+function __op_account
+    echo technosylva
 end
 
 function __op_cache_path
@@ -71,49 +77,71 @@ function __op_sync_tmux
     end
 end
 
-# Main loader: tries all sources, falls back to fetching.
+# Cheap, non-interactive load. NEVER prompts. Returns 0 if all sources gave vars.
 function op-load
     set -q OP_SECRETS_LOADED; and return 0
-
-    # Source 2: tmux global env (fast, no file needed).
     if __op_load_from_tmux
         set -gx OP_SECRETS_LOADED 1
         return 0
     end
-
-    # Source 3: cache file.
     if __op_load_from_cache
         __op_sync_tmux
         set -gx OP_SECRETS_LOADED 1
         return 0
     end
+    return 1
+end
 
-    # Source 4: fetch from 1Password (interactive + has tools only).
+# Interactive fetch from 1Password (no desktop app). One MASKED master-password
+# prompt, sign in, read each secret, write the 0600 tmpfs cache, sync to tmux.
+# Returns 0 on success. Only call from op-login / op-reload.
+function __op_fetch
     status is-interactive; or return 1
     type -q op; or return 1
-    set -l helper $HOME/.config/op/op-fetch.sh
-    test -f $helper; or return 1
 
+    # Masked read in fish itself -- reliable, unlike op's own prompt in this
+    # nested context (op fails to disable echo here).
+    read --silent --local --prompt-str 'Enter 1Password master password: ' pw
+    echo
+    test -n "$pw"; or return 1
+
+    # Pipe the password to `op signin`; capture its `export OP_SESSION_x=...`.
+    set -l out (printf '%s' "$pw" | op signin --account (__op_account) 2>/dev/null)
+    set -e pw
+    test -n "$out"; or return 1
+
+    # Apply the session to THIS shell so the reads below are authenticated.
+    # Split on the FIRST '=' only -- the token can contain '=' padding.
+    set -l kv (string replace 'export ' '' -- $out)
+    set -l name (string split -m1 '=' -- $kv)[1]
+    set -l val (string split -m1 '=' -- $kv)[2]
+    set -gx $name (string trim -c '"' -- $val)
+
+    # Read each secret; build the cache atomically.
     set -l cache (__op_cache_path)
-    set -l rt (dirname $cache)
-    set -l lock $rt/op-secrets.lock
-    set -l spec (mktemp $rt/op-spec.XXXXXX)
-    __op_secrets_refs > $spec
-
-    if type -q flock
-        flock -w 20 $lock sh $helper $cache $spec
-    else
-        sh $helper $cache $spec
+    set -l tmp $cache.tmp.$fish_pid
+    rm -f $tmp
+    set -l ok 0
+    for line in (__op_secrets_refs)
+        set -l parts (string split \t -- $line)
+        set -l v (op read $parts[2] 2>/dev/null)
+        test -n "$v"; or continue
+        printf 'set -gx %s %s\n' $parts[1] (string escape -- $v) >> $tmp
+        set ok 1
     end
-    rm -f $spec
+    set -e $name  # drop the session token from env; the cache holds the secrets
 
-    if __op_load_from_cache
-        __op_sync_tmux
-        set -gx OP_SECRETS_LOADED 1
-        return 0
+    if test $ok -eq 0
+        rm -f $tmp
+        return 1
     end
+    mv -f $tmp $cache
+    chmod 600 $cache
 
-    return 1
+    __op_load_from_cache
+    __op_sync_tmux
+    set -gx OP_SECRETS_LOADED 1
+    return 0
 end
 
 # Force a fresh fetch (e.g. after rotating a token).
@@ -125,13 +153,35 @@ function op-reload
             tmux set-environment -gu $v 2>/dev/null
         end
     end
-    op-load
+    __op_fetch
 end
 
-# Lazy pickup hooks: fire on BOTH fish_prompt AND fish_preexec so that idle
-# panes that started before auth don't need user interaction to catch up.
-# Both hooks check tmux global env first -- no file needed -- so they pick up
-# vars the instant another pane finishes its fetch, even without a re-render.
+# Interactive login helper for the floating startup terminal (Hyprland exec-once).
+# Loads from cache/tmux if available, else prompts (masked) once. Prints clear
+# success/failure feedback; on failure waits and offers a retry.
+function op-login
+    op-load; or __op_fetch
+    set -l missing
+    for v in (__op_secrets_vars)
+        set -q $v; or set -a missing $v
+    end
+    if test (count $missing) -eq 0
+        set_color green
+        echo "✓ 1Password secrets loaded ("(count (__op_secrets_vars))" tokens). Closing…"
+        set_color normal
+        sleep 1.5
+        return 0
+    end
+    set_color red
+    echo "✗ Sign-in failed (wrong password or no network). Missing: $missing"
+    set_color normal
+    echo "Press Enter to retry, Ctrl-C to close."
+    read
+    op-login
+end
+
+# Lazy pickup hooks: panes started before the login fetch inherit the vars on
+# their next prompt/command -- op-load only (no prompt), self-erase once loaded.
 function __op_lazy_pickup
     set -q OP_SECRETS_LOADED; and begin
         functions -e __op_lazy_prompt __op_lazy_preexec
@@ -150,7 +200,7 @@ function __op_lazy_preexec --on-event fish_preexec
     __op_lazy_pickup
 end
 
-# Run at shell startup.
+# Run at shell startup (cache/tmux only -- never prompts here).
 op-load
 
 # If loaded: erase both lazy hooks (zero per-prompt cost for normal shells).

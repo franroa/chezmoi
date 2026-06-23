@@ -1,0 +1,5 @@
+# ci-stage: verify
+# Reusable component: GitLab official SAST. Security baseline for any stack.
+- component: gitlab.com/components/sast/sast@main
+  inputs:
+    stage: verify

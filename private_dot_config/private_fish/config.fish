@@ -439,6 +439,7 @@ abbr v nvim
 abbr vim nvim
 abbr bat batcat
 
+# export CLAUDE_CONFIG_DIR="/home/froa/.claude"
 export CLAUDE_CODE_ENABLE_TELEMETRY=1
 
 # Configure exporters
@@ -711,3 +712,6 @@ function kapply
         end
     end
 end
+
+# Entire CLI shell completion
+entire completion fish | source
