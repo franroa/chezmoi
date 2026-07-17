@@ -247,6 +247,9 @@ items:
       - name: Session wizard
         key: w
         command: "display-popup -E -h 40% -w 80% ~/.config/tmux/plugins/tmux-session-wizard/bin/t"
+      - name: SSH to host (ft)
+        key: t
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 80% ~/.local/bin/ft.sh"
       - separator: true
       - name: +Resurrect
         key: R
@@ -377,13 +380,13 @@ items:
         command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% \"bash ~/.config/tmux/scripts/gcl-setup.sh #{pane_current_path}\""
       - name: Pipeline TUI (Local)
         key: v
-        command: "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui #{pane_current_path}\""
+        command: "new-window -c \"#{pane_current_path}\" -n gctui \"~/.local/bin/gctui #{pane_current_path}\""
       - name: Pipeline TUI (Remote)
         key: d
-        command: "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui --remote #{pane_current_path}\""
+        command: "new-window -c \"#{pane_current_path}\" -n gctui:remote \"~/.local/bin/gctui --remote #{pane_current_path}\""
       - name: Config view
         key: y
-        command: "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui --config #{pane_current_path}\""
+        command: "new-window -c \"#{pane_current_path}\" -n gctui:cfg \"~/.local/bin/gctui --config #{pane_current_path}\""
       - name: Dual view (local + remote)
         key: w
         command: "run-shell \"tmuxinator start ci root=#{pane_current_path}\""
@@ -395,7 +398,7 @@ items:
     menu:
       - name: AOE scratchpad
         key: O
-        command: "display-popup -E -d \"#{pane_current_path}\" -w 85% -h 85% aoe"
+        command: "display-popup -E -w 85% -h 85% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoe-scratchpad.sh"
       - name: All Claude sessions (every repo)
         key: l
         command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 80% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoe-claude-sessions.sh"
@@ -598,6 +601,13 @@ items:
       - name: Yank PWD
         key: Y
         command: run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_pane_pwd.sh
+  - separator: true
+  - name: +Overseer
+    key: o
+    menu:
+      - name: User access (subscriptions + roles)
+        key: p
+        command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% ~/.config/tmux/scripts/show-user-access.sh"
   - separator: true
   - name: tmux-menus
     key: M

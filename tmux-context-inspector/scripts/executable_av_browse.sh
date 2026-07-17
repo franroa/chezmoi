@@ -23,18 +23,47 @@ LIST_LIMIT=500
 ci_have_agentsview || { echo "agentsview no está instalado."; sleep 1.5; exit 0; }
 command -v fzf >/dev/null 2>&1 || { echo "fzf no encontrado."; sleep 1.5; exit 0; }
 
+# Refresca la DB local antes de listar: `session list` lee la DB (SQLite), NO los
+# JSONL en vivo, así que sesiones nuevas o RE-TITULADAS (p.ej. *_WIP) no aparecen
+# hasta sincronizar. Incremental (~0.2s en estado estable). Con timeout para que
+# un remote_hosts SSH mal configurado nunca cuelgue el popup.
+ci_sync_db() {
+    local t=""
+    command -v timeout >/dev/null 2>&1 && t="timeout 8"
+    $t agentsview sync >/dev/null 2>&1 || true
+}
+
 cur_id() { local t; t="$(ci_transcript_for_dir "$PWD" 2>/dev/null)"; ci_session_id "$t"; }
 
+# Session title map -> "<id>\t<title>". agentsview exposes no title, so read it
+# from the transcripts (same source `claude --resume` shows, like file_label in
+# aoe-claude-sessions.sh): a custom-title beats an ai-title, and the last write
+# of each wins. One grep pass over all JSONL, resolved in awk (~0.3s).
+rows_titles() {
+    grep -rhE '"type":"(custom-title|ai-title)"' "$CI_PROJECTS_DIR"/*/*.jsonl 2>/dev/null \
+    | jq -r 'select(.sessionId and (.customTitle or .aiTitle))
+             | [ .sessionId, .type,
+                 ((.customTitle // .aiTitle) | gsub("[\t\r\n]+"; " ")) ] | @tsv' 2>/dev/null \
+    | awk -F'\t' '{ p=($2=="custom-title")?2:1; if (p>=pr[$1]) { pr[$1]=p; t[$1]=$3 } }
+                  END{ for (id in t) printf "%s\t%s\n", id, t[id] }'
+}
+
 # session list (con flags) -> filas "<display>\t<id>". Marca la sesión viva ▶.
+# El nombre = título de la sesión (custom/ai-title), y si no tiene, first_message.
 rows_session_list() {
-    agentsview session list --limit "$LIST_LIMIT" --format json "$@" 2>/dev/null | jq -r \
-        --arg cur "$(cur_id)" '
+    local tmap; tmap="$(mktemp)"; rows_titles > "$tmap"
+    agentsview session list --limit "$LIST_LIMIT" --include-one-shot --format json "$@" 2>/dev/null | jq -r '
         .sessions | sort_by(.started_at) | reverse | .[]
-        | ((.first_message // "(sin mensaje)") | gsub("[\n\r\t]+"; " ")) as $name
-        | (if .id == $cur then "▶ " else "  " end) as $mark
-        | [ ($mark + ($name | .[0:44])), (.project // ""),
-            ((.started_at // "") | .[0:16]), (.health_grade // "?"), .id ] | @tsv' 2>/dev/null \
-    | awk -F'\t' '{ printf "%-46s  %-14s  %-16s  %-2s\t%s\n", $1,$2,$3,$4,$5 }'
+        | [ .id, ((.first_message // "") | gsub("[\n\r\t]+"; " ")),
+            (.project // ""), ((.started_at // "") | .[0:16]), (.health_grade // "?") ] | @tsv' 2>/dev/null \
+    | awk -F'\t' -v cur="$(cur_id)" -v tmap="$tmap" '
+        BEGIN{ while ((getline l < tmap) > 0) { i=index(l,"\t"); title[substr(l,1,i-1)]=substr(l,i+1) } }
+        { id=$1; fm=$2; proj=$3; started=$4; grade=$5;
+          name=(id in title && title[id]!="") ? title[id] : fm;
+          if (name=="") name="(sin nombre)";
+          mark=(id==cur)?"▶ ":"  ";
+          printf "%-46s  %-14s  %-16s  %-2s\t%s\n", mark substr(name,1,44), proj, started, grade, id }'
+    rm -f "$tmap"
 }
 
 # FTS por contenido -> filas "<snippet>\t<id>".
@@ -66,6 +95,8 @@ pick_value() {
 }
 
 group="${1:-}"; kind="${2:-}"; val="${3:-}"
+# Sync once per popup open (NOT on _content: that re-invokes on every keystroke).
+[ "$group" = _content ] || ci_sync_db
 case "$group" in
   sessions)
     case "$kind" in

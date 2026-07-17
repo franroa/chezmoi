@@ -9,7 +9,8 @@
       "Bash(fish -c 'pwd')",
       "Bash(env)",
       "Bash(fish --version)",
-      "Bash(fish -c 'pwd; echo MARKER; set -S | grep -i pwd')"
+      "Bash(fish -c 'pwd; echo MARKER; set -S | grep -i pwd')",
+      "Bash(op read *)"
     ]
   }
 }

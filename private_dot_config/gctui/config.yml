@@ -1,0 +1,46 @@
+# gctui config — read at startup from $XDG_CONFIG_HOME/gctui/config.yml
+# (this file) and, if present, a per-repo .gctui.yml at the CI root (repo wins).
+# Everything here is optional; with no config gctui uses safe defaults.
+
+# ── UI / behaviour defaults ─────────────────────────────────────────────────
+options:
+  deployLocal: true     # initial state of the `d` toggle (deploy jobs run locally)
+  # notify: true        # completion notifications (default: env GCTUI_NOTIFY)
+  # hscroll: false      # horizontal-scroll stage columns instead of wrapping
+  # tab: local          # initial view: local | remote
+
+# ── Runtime variable injection for LOCAL deploy runs ────────────────────────
+# Variables here are passed to the deploy job as PROCESS ENV at run time and are
+# NEVER written to disk. SECURITY: no secrets are read unless you opt in.
+runtime:
+  # Fetch the project's CI/CD variables (via glab) at run time. OFF by default.
+  # Even when ON, masked/protected variables are EXCLUDED (no secrets) unless you
+  # set includeSecrets: true. Use the `D` diff in the Local tab to see which
+  # remote variable NAMES are missing locally.
+  fetchRemote: false
+  # includeSecrets: false        # DANGER: also read masked/protected vars
+  # allow: [VAR_A, VAR_B]        # if set, fetch ONLY these keys
+  # deny:  [SOME_VAR]            # never read these keys (wins over allow + fetch)
+
+  # Supply specific variables from your HOST env ($NAME) or a literal value.
+  # This is the intended way to provide secrets — they come from your shell, not
+  # from the project, and are never persisted. A "$NAME" whose host var is unset
+  # is skipped. These win over any fetched remote value.
+  envOverrides:
+    # helm OCI registry login (var.ci_platform_username/password → oci://registry.gitlab.com).
+    # Inherited from the technosylva/heartland group remotely; supplied from your shell here.
+    CI_PLATFORM_USERNAME: froa-tsyl
+    CI_PLATFORM_PASSWORD: $GITLAB_TOKEN       # PAT/deploy token with read_registry; from host env, never persisted
+  #   CI_REGISTRY_USER: gitlab-ci-token
+  #   CI_REGISTRY_PASSWORD: $GITLAB_TOKEN     # registry login for the helm OCI provider
+  #   CI_JOB_TOKEN: $GITLAB_TOKEN
+
+  # Secrets read from the HOST env and injected into EVERY local run via
+  # --variable (so they reach all jobs, not just deploy). List the variable NAMES;
+  # their values come from your shell (export them, e.g. from 1Password) and are
+  # never written to disk. Replaces the plaintext tokens that used to live in
+  # .gitlab-ci-local-variables.yml. A name unset in your env is skipped + reported.
+  injectEnv:
+    - CI_API_TOKEN
+    - SONAR_TOKEN
+    - HARBOR_AUTH

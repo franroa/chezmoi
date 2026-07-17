@@ -65,3 +65,16 @@
         'icon-size': 1.1em
     )
 );
+
+@include styleModule(
+    'cmodule-touchpad',
+    (
+        'text-color': {{foreground}},
+        'icon-color': {{color4}},
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.6em
+    )
+);

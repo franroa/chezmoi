@@ -475,6 +475,7 @@ set -x MANPAGER "env NVIM_APPNAME=lazyvim nvim +Man!"
 set -gx VISUAL $EDITOR
 set -gx SUDO_EDITOR $EDITOR
 set -gx BROWSER google-chrome-stable
+set -gx TERMINAL kitty
 set -gx EXEC_LOCAL true
 set -g fish_key_bindings fish_vi_key_bindings
 set -gx LS_COLORS (vivid generate tokyonight-storm)

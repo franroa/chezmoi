@@ -17,8 +17,10 @@ Activación:  <Prefix> K   y luego:
   f   Memoria / jerarquía CLAUDE.md  (+ /memory)
   i   Archivos cargados al contexto  (agentsview session tool-calls)
   g   Mensajes / historial           (movido de h; tip /compact)
-  h   Salud/inteligencia SESIÓN actual (agentsview health <id>)
-  H   Salud/inteligencia OVERVIEW global (agentsview health + stats)
+  h   Salud/inteligencia SESIÓN actual (agentsview health <id>) + Recommendations
+      (secrets/fallo/friccion/insights-obsoleto/edit-churn — máx. 2, sólo si aplica)
+  H   Salud/inteligencia OVERVIEW global (agentsview health + stats) + Recommendations
+      (secrets/coste/grade-tail/insights-obsoleto — máx. 4, sólo si aplica)
   p   Permisos                        (+ /permissions)
   k   Skills cargadas                 (.claude/skills/)
   o   Coste y utilización             (agentsview session usage)

@@ -14,7 +14,7 @@ font-feature = dlig
 background-opacity = 0.75
 # Apply opacity to cells with an explicit bg too (tmux/nvim repaint the bg on
 # redraw/session-switch, which otherwise renders them fully opaque/black).
-background-opacity-cells = true
+background-opacity-cells = false
 confirm-close-surface = false
 
 cursor-style = bar

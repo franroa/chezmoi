@@ -342,6 +342,9 @@ menu:
       - key: "S"
         desc: "󰓦 Syncthing"
         cmd: syncthing
+      - key: "T"
+        desc: "󰍁 Touchpad Toggle"
+        cmd: ~/.config/hyprpanel/scripts/touchpad-toggle.sh toggle
       - key: "p"
         desc: "󱃾 +platform-live"
         submenu:

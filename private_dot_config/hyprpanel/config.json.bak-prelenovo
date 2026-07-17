@@ -1,0 +1,73 @@
+{
+  "dbus": {
+    "shortcuts": {
+      "enabled": true,
+      "screenshot": "/home/froa/.config/hyprpanel/scripts/screenshot-menu.sh"
+    }
+  },
+  "bar.battery.warnAt": 20,
+  "bar.battery.warnColor": "#ff0000",
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "notifications.enabled": true,
+  "bar.systray.ignore": [
+    "spotify_client",
+    "nm_applet"
+  ],
+  "bar.layouts": {
+    "*": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "custom/temp",
+        "custom/pomodoro",
+        "custom/slack",
+        "custom/copilot",
+        "custom/gitlab",
+        "custom/jira",
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "menus.dashboard.powermenu.avatar.name": "Fran",
+  "menus.clock.weather.location": "Madrid, Spain",
+  "menus.clock.weather.unit": "imperial",
+  "theme.matugen": false,
+  "wallpaper.enable": false,
+  "theme.bar.background": "#2A2023",
+  "theme.bar.buttons.text": "#F0EAF1",
+  "theme.bar.buttons.icon": "#9F5A7B",
+  "theme.bar.buttons.icon_background": "#322738",
+  "theme.bar.buttons.background": "#2A2023",
+  "theme.bar.buttons.hover": "#9D989F",
+  "theme.bar.buttons.borderColor": "#9F5A7B",
+  "theme.bar.menus.background": "#2A2023",
+  "theme.bar.menus.text": "#F0EAF1",
+  "theme.bar.menus.border.color": "#9F5A7B",
+  "theme.notification.background": "#2A2023",
+  "theme.notification.text": "#F0EAF1",
+  "theme.notification.border": "#9F5A7B",
+  "theme.osd.bar_color": "#9F5A7B",
+  "theme.osd.bar_overflow_color": "#322738",
+  "theme.osd.icon": "#F0EAF1",
+  "theme.osd.label": "#F0EAF1",
+  "theme.osd.bar_container": "#9D989F",
+  "theme.bar.buttons.workspaces.active": "#9F5A7B",
+  "theme.bar.buttons.workspaces.occupied": "#9D989F",
+  "theme.bar.buttons.workspaces.available": "#514549",
+  "blink.color1": "#322738",
+  "blink.color2": "#9F5A7B",
+  "menus.dashboard.powermenu.avatar.image": "/home/froa/Downloads/11130102_10153887752951393_4491032512407988710_n.jpg"
+}

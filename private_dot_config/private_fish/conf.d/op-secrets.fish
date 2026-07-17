@@ -20,7 +20,7 @@
 
 function __op_secrets_vars
     # One name per line so `for v in (__op_secrets_vars)` iterates correctly.
-    printf '%s\n' CLOCKWORK_API JIRA_API_TOKEN JIRA_TOKEN GITLAB_TOKEN
+    printf '%s\n' CLOCKWORK_API JIRA_API_TOKEN JIRA_TOKEN GITLAB_TOKEN TF_TOKEN_gitlab_com GRAFANA_TOKEN GRAFANA_CLOUD_API_TOKEN GITLAB_MANAGEMENT_TOKEN VAULT_PASSWORD OPEN_VPN_PASSWORD
 end
 
 function __op_secrets_refs
@@ -30,6 +30,15 @@ function __op_secrets_refs
     printf 'JIRA_API_TOKEN\top://froa-shell-secrets/JIRA_API_TOKEN/credential\n'
     printf 'JIRA_TOKEN\top://froa-shell-secrets/JIRA_TOKEN/credential\n'
     printf 'GITLAB_TOKEN\top://froa-shell-secrets/GITLAB_TOKEN/credential\n'
+    printf 'TF_TOKEN_gitlab_com\top://froa-shell-secrets/TF_TOKEN_gitlab_com/credential\n'
+    printf 'GRAFANA_TOKEN\top://froa-shell-secrets/GRAFANA_TOKEN/credential\n'
+    # Item was created via a Spanish-locale 1Password client: field label is
+    # "credencial" not "credential", and `op` can't yet resolve it by name
+    # (stale local name-cache for a new item) -- pinned to its UUID instead.
+    printf 'GRAFANA_CLOUD_API_TOKEN\top://froa-shell-secrets/f5e3tzqh7n7rkyckupnq3axufq/credencial\n'
+    printf 'GITLAB_MANAGEMENT_TOKEN\top://froa-shell-secrets/GITLAB_MANAGEMENT_TOKEN/credential\n'
+    printf 'VAULT_PASSWORD\top://froa-shell-secrets/VAULT_PASSWORD/credential\n'
+    printf 'OPEN_VPN_PASSWORD\top://froa-shell-secrets/OPEN_VPN_PASSWORD/credential\n'
 end
 
 # 1Password account to sign in to (added via `op account add`; no desktop app).

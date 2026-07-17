@@ -1,0 +1,13 @@
+[Unit]
+Description=Timer for: Morning digest (10 min after login/boot)
+
+[Timer]
+# Fire ~10 min after the user session starts (i.e. ~10 min after a reboot/login).
+# For USER timers OnStartupSec counts from the systemd --user manager start,
+# which happens on login — the closest analogue to "after rebooting the laptop".
+OnStartupSec=10min
+# The script has its own once-a-day gate ($STATE_DIR/last_run_date), so extra
+# logins/reboots on the same day won't re-send.
+
+[Install]
+WantedBy=timers.target

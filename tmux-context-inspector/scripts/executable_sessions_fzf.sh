@@ -54,7 +54,7 @@ if [ -n "${SESS_RELOAD:-}" ]; then
 fi
 
 run() {
-    fzf --delimiter='\t' --with-nth=1 --ansi --no-sort --reverse --cycle \
+    fzf --delimiter='\t' --with-nth=1 --nth=1 --ansi --no-sort --reverse --cycle \
         --height=100% --disabled --prompt="$prompt" --header="$header" \
         --preview="agentsview session usage {2} 2>/dev/null; echo; agentsview health {2} 2>/dev/null" \
         --preview-window='right,55%,wrap' "${binds[@]}" "$@"

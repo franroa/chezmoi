@@ -476,6 +476,23 @@ set -g @vim_navigator_mapping_prev ""  # removes the C-\ binding
 # which can be watched by other terminals
 set-hook -g client-session-changed "run-shell 'echo #{session_name} > /tmp/tmux-current-session'"
 
+# -- time tracker (tt) hooks ---------------------------------------------------
+
+# These -ga appends must stay AFTER the client-session-changed set-hook above,
+# which uses plain -g and would replace them. They used to live in
+# ~/.config/tmux/hooks.conf, which no startup file sourced — so every tmux
+# server restart silently killed time tracking (Jun 30 → Jul 10 2026 gap).
+# Do not source hooks.conf: its set-hook -u lines would unset the
+# after-new-session auto-split hook. Absolute tt path because run-shell uses
+# the server's PATH, which may lack ~/.local/bin.
+set-hook -ga client-session-changed 'run-shell "/home/froa/.local/bin/tt event focus #{session_name}"'
+set-hook -ga client-attached 'run-shell "/home/froa/.local/bin/tt event attach #{session_name}"'
+set-hook -ga client-detached 'run-shell "/home/froa/.local/bin/tt event detach #{session_name}"'
+
+# instant status redraw on session/window switch (also formerly in hooks.conf)
+set-hook -ga client-session-changed 'refresh-client -S'
+set-hook -ga session-window-changed 'refresh-client -S'
+
 # -- custom variables ----------------------------------------------------------
 
 # to define a custom #{foo} variable, define a POSIX shell function between the

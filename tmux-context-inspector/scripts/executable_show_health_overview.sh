@@ -7,6 +7,7 @@
 #
 # Doc: https://www.agentsview.io/session-intelligence/#agentsview-health
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_capture.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_recommend.sh"
 
 out="$(mktemp)"
 
@@ -21,6 +22,7 @@ if ci_have_agentsview; then
         echo "— Stats del workspace (ventana 28d)"
         echo
         agentsview stats 2>&1
+        ci_workspace_recommendations
         echo
         echo "Salud de la sesión actual: vista h  ·  navegar por grado: s g  ·  proyectos: r"
     } > "$out"

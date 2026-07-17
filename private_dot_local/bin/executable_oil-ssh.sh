@@ -1,17 +1,31 @@
 #!/bin/sh
+# Pick a host, fetch its domain password from 1Password, and open a new tmux
+# session running Neovim's Oil file manager over SSH. The SSH calls Oil makes
+# authenticate automatically (no sshpass, no pasting) via SSH_ASKPASS.
+# Usage: `oil-ssh.sh` (or `oil` via an alias).
 
-# This script is used to easily open an SSH connection through the Neovim Oil file manager.
-# Before using this script you need to make it executable with `$ chmod +x oil-ssh.sh`.
-# Usage: `$ ./oil-ssh.sh` (or `$ oil` with an alias)
+. /home/froa/.local/bin/ssh-op-lib.sh
 
-# Select a host via fzf
-host=$(grep 'Host\>' ~/.ssh/config | sed 's/^Host //' | grep -v '\*' | fzf --cycle --layout=reverse)
-
+host=$(ssh_select_host)
 if [ -z "$host" ]; then
   exit 0
 fi
 
-# Get user from host name
-user=$(ssh -G "$host" | grep '^user\>' | sed 's/^user //')
+user=$(ssh_host_user "$host")
+domain=$(ssh_user_domain "$user")
 
-SSHPASS="./home/froa/Projects/ts/ansible-playbooks/vault/tspass $host" nvim oil-ssh://"$user"@"$host"/
+if ! op_ensure_signin; then
+  echo "Error: 1Password sign-in failed" >&2
+  exit 1
+fi
+
+pass=$(op_domain_password "$domain")
+if [ -z "$pass" ]; then
+  echo "Error: no password found in vault '$OP_VAULT' for domain '$domain'" >&2
+  exit 1
+fi
+
+session="oil-$host"
+cmd="nvim 'oil-ssh://$user@$host/' || { ec=\$?; printf '\n[oil] nvim exited (%s). Press Enter to close...' \"\$ec\"; read _; }"
+
+ssh_tmux_launch "$session" "$pass" "$cmd"

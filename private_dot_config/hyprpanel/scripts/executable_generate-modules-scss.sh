@@ -13,10 +13,12 @@ if [[ -f "$COLORS_JSON" ]]; then
     blink1=$(jq -r '."blink.color1" // "#f38ba8"' "$COLORS_JSON")
     blink2=$(jq -r '."blink.color2" // "#89b4fa"' "$COLORS_JSON")
     background=$(jq -r '."theme.bar.background" // "#1e1e2e"' "$COLORS_JSON")
+    icon_color=$(jq -r '."theme.bar.buttons.icon" // "#9F5A7B"' "$COLORS_JSON")
 else
     blink1="#f38ba8"
     blink2="#89b4fa"
     background="#1e1e2e"
+    icon_color="#9F5A7B"
 fi
 
 # Start with wallust-generated base (written by wallust to modules.scss)
@@ -36,15 +38,10 @@ slack_count=0
 if [[ "$slack_count" -gt 0 ]]; then
     SLACK_CSS="
 .bar_item_box_visible.cmodule-slack {
-    background: ${blink1};
-    animation: slack-blink 0.5s ease-in-out infinite alternate;
+    background: ${icon_color};
 }
-.bar_item_box_visible.cmodule-slack .icon {
+.module-icon.cmodule-slack {
     color: ${background};
-}
-@keyframes slack-blink {
-    0% { background: ${blink1}; }
-    100% { background: ${blink2}; }
 }"
 else
     SLACK_CSS='
@@ -58,15 +55,11 @@ if [[ -f "$BATTERY_LOW_FILE" ]]; then
     BATTERY_CSS="
 .bar_item_box_visible.battery,
 .bar_item_box_visible.battery-container {
-    animation: battery-blink 0.5s ease-in-out infinite alternate;
+    background: #ff0000;
 }
 .bar_item_box_visible.battery .bar-button-icon,
 .bar_item_box_visible.battery-container .bar-button-icon {
-    animation: battery-blink 0.5s ease-in-out infinite alternate;
-}
-@keyframes battery-blink {
-    0% { background: #ff0000; }
-    100% { background: ${background}; }
+    background: #ff0000;
 }"
 fi
 
@@ -74,11 +67,7 @@ TEMP_CSS=""
 if [[ -f "$TEMP_HIGH_FILE" ]]; then
     TEMP_CSS='
 .bar_item_box_visible.cmodule-temp {
-    animation: temp-blink 0.5s ease-in-out infinite alternate;
-}
-@keyframes temp-blink {
-    0% { background: #ff6600; }
-    100% { background: #ff0000; }
+    background: #ff6600;
 }'
 fi
 

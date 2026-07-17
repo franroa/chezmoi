@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 # Autopilot: cron-scheduled AOE workers for recurring, unattended tasks.
 #
-# The first (and currently only) job is `daily-report`: at a scheduled time it
-# spawns an AOE worker inside a dedicated git "journal" repo, seeded to run your
-# productivity skills (gather-daily-info -> daily-update) and commit the Spanish
-# standup to reports/<date>.md. The skills are interactive, so the worker parks
-# on `input` until you attend it — the swarm dashboard flags it for you.
+# Jobs:
+#   daily-report        gather-daily-info (previous working day) -> daily-update,
+#                       commits the Spanish standup to reports/<date>.md.
+#                       Runs in the MORNING, so the report date is the previous
+#                       working day, not today.
+#   log-clockwork-hours gather-daily-info (today) -> log-clockwork-hours, logs
+#                       8h of worklogs to Jira at end of day (needs JIRA_TOKEN,
+#                       inherited from the user's login shell inside tmux).
+# Both jobs read per-ticket time from the local `tt` time-tracker (~/.local/bin,
+# on PATH below). The skills are interactive, so workers park on `input` until
+# you attend them — the swarm dashboard flags them for you.
 #
 #   autopilot.sh init                       create the state dir + journal repo
 #   autopilot.sh run <job>                  run a job now (this is what cron calls)
@@ -14,9 +20,9 @@
 #   autopilot.sh list                       show installed jobs + recent runs
 #   autopilot.sh peek [date]                read a day's worker output (no attach)
 #
-# Jobs: daily-report
-# Default schedule (daily-report): weekdays 16:00 Europe/Madrid  ->  "0 16 * * 1-5"
-# (cron uses the system timezone, which is Europe/Madrid — DST handled by the OS)
+# Default schedules (system timezone = Europe/Madrid, DST handled by the OS):
+#   daily-report:        every day 09:30  ->  "30 9 * * *"
+#   log-clockwork-hours: weekdays 16:00   ->  "0 16 * * 1-5"
 #
 # State (persists across reboots — unlike the /tmp swarm registry):
 #   ~/.local/state/aoe-autopilot/
@@ -36,7 +42,8 @@ JOURNAL="$STATE/journal"
 REG="$STATE/registry"
 LOGDIR="$STATE/log"
 SELF="$(readlink -f "$0" 2>/dev/null || echo "$0")"
-DEFAULT_CRON_daily_report="0 16 * * 1-5"   # weekdays 16:00 Europe/Madrid (system TZ)
+DEFAULT_CRON_daily_report="30 9 * * *"            # every day 09:30 Europe/Madrid (system TZ)
+DEFAULT_CRON_log_clockwork_hours="0 16 * * 1-5"   # weekdays 16:00 Europe/Madrid (system TZ)
 
 log() { printf '%s [autopilot] %s\n' "$(date '+%F %T')" "$*"; }
 die() { printf '❌ %s\n' "$*" >&2; exit 1; }
@@ -119,17 +126,29 @@ job_daily_report() {
   local date seed
   date="$(date +%F)"
   # Tight, scoped seed: name the exact skills, the output path, the commit, and
-  # tell the worker to ask for the interactive selections.
-  seed="Run the skill gather-daily-info to build today's Daily Context Block, then run the skill daily-update to produce the Spanish standup. Save the daily-update markdown to reports/${date}.md in this repo and commit it with message 'daily report ${date}'. These skills are interactive — ask me for the in-progress ticket selections and blockers; do not invent tickets. When the report is committed, you are done."
+  # tell the worker to ask for the interactive selections. This job runs in the
+  # MORNING, so the report covers the previous working day, not today.
+  seed="Run the skill gather-daily-info to build the Daily Context Block, using the PREVIOUS WORKING DAY as the report date (it is ${date} today — pass the previous working day's explicit YYYY-MM-DD to the skill, including for the tt time-tracker report). Then run the skill daily-update to produce the Spanish standup. Save the daily-update output to reports/${date}.md in this repo and commit it with message 'daily report ${date}'. These skills are interactive — ask me for the in-progress ticket selections and blockers; do not invent tickets. When the report is committed, you are done."
   spawn_worker daily-report "$seed"
+}
+
+job_log_clockwork_hours() {
+  init
+  local date seed
+  date="$(date +%F)"
+  # End-of-day job: today IS the report date. Worklog POSTs need per-entry
+  # confirmation — the skill enforces that; the seed repeats it anyway.
+  seed="Run the skill gather-daily-info to build today's (${date}) Daily Context Block — read per-ticket time from the tt time-tracker (tt report today --by-ticket --json); do not ask me for durations the tracker already has. Then run the skill log-clockwork-hours to log exactly 8 hours of worklogs to Jira for ${date}. These skills are interactive — ask me to confirm each worklog before POSTing, and keep asking until the total reaches exactly 8h. When all worklogs are posted, you are done."
+  spawn_worker log-clockwork-hours "$seed"
 }
 
 run() {
   local job="${1:?usage: autopilot.sh run <job>}"
   mkdir -p "$LOGDIR"
   case "$job" in
-    daily-report) job_daily_report ;;
-    *) die "unknown job: $job (known: daily-report)" ;;
+    daily-report)        job_daily_report ;;
+    log-clockwork-hours) job_log_clockwork_hours ;;
+    *) die "unknown job: $job (known: daily-report, log-clockwork-hours)" ;;
   esac
 }
 
@@ -137,7 +156,8 @@ run() {
 install_job() {
   local job="${1:?usage: autopilot.sh install <job> [\"<cron>\"]}" cron="${2:-}"
   case "$job" in
-    daily-report) : "${cron:=$DEFAULT_CRON_daily_report}" ;;
+    daily-report)        : "${cron:=$DEFAULT_CRON_daily_report}" ;;
+    log-clockwork-hours) : "${cron:=$DEFAULT_CRON_log_clockwork_hours}" ;;
     *) die "unknown job: $job" ;;
   esac
   local marker="# aoe-autopilot:${job}"

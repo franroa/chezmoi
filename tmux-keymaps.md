@@ -175,7 +175,10 @@
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + K → i   │ Archivos cargados al contexto (agentsview session tool-calls)                              │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ prefix + K → h   │ Mensajes / historial (tip /compact)                                                        │
+  │ prefix + K → g   │ Mensajes / historial (tip /compact)  [movido de h]                                         │
+  ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + K → h   │ Salud/inteligencia SESIÓN actual (agentsview health) + timeline modelo/modo +             │
+  │                  │ Recommendations (secrets/fallo/friccion/insights/churn — máx. 2, sólo si aplica)          │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + K → p   │ Permisos (+ /permissions)                                                                  │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
@@ -189,7 +192,8 @@
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + K → S ▸ │ SECRETOS (fzf vi): l todos · p proyecto · a agente · x escanear                            │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ prefix + K → H ▸ │ SALUD por grado: a b c d f → sesiones de ese grado                                         │
+  │ prefix + K → H   │ Salud/inteligencia OVERVIEW global (agentsview health --limit 25 + stats 28d) +           │
+  │                  │ Recommendations (secrets/coste/grade-tail/insights — máx. 4). Grado por sesión: s g       │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + K → x   │ Stats agentsview (ventana 28d, en less)                                                    │
   ├──────────────────┼────────────────────────────────────────────────────────────────────────────────────────────┤

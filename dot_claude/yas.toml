@@ -1,0 +1,12 @@
+# yet-another-statusline config (shared across Claude profiles).
+# The personal profile's ~/.local/share/claude-profiles/personal/yas.toml
+# symlinks here, matching the settings.json sharing pattern.
+
+[layout]
+# Wider default box. yas caps the box at max_width (default 140); 140 is a bad
+# spot for our payload -- yas packs cost%/timer right up to the model cluster,
+# leaving the docker-wrapper no room to splice the 🧠/📄 badges (only the 🌳
+# profile glyph fits). ~150 reliably restores 🧠 and usually 📄. Do NOT go >=160
+# or set full_width: that flips yas into a two-column layout (~84-col columns)
+# which packs the model row again and drops 📄.
+max_width = 150

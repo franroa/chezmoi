@@ -65,10 +65,26 @@
         'icon-size': 1.1em
     )
 );
+
+@include styleModule(
+    'cmodule-touchpad',
+    (
+        'text-color': #F0EAF1,
+        'icon-color': #9F5A7B,
+        'icon-background': transparent,
+        'label-background': transparent,
+        'inner-spacing': 0.3em,
+        'border-enabled': false,
+        'icon-size': 1.6em
+    )
+);
 /* DYNAMIC STYLES */
 
 .bar_item_box_visible.cmodule-slack {
-    background: transparent;
+    background: #9F5A7B;
+}
+.module-icon.cmodule-slack {
+    color: #2A2023;
 }
 
 

@@ -51,4 +51,20 @@ if has('syntax')
   highlight default ciSlash              ctermfg=5  guifg=#c678dd
 endif
 
+" --- transparency: inherit the terminal background ---
+" nvim runs full-screen in the tmux popup, so it paints every content cell; with
+" `-u NONE` + termguicolors the Normal group carries an opaque guibg that hides
+" the terminal's transparency. Clear the bg attribute on every group that fills
+" blank space so nvim emits "default" for those cells and tmux passes the
+" terminal's (transparent) background straight through. fg/attrs are untouched,
+" so the ci* recoloring above still shows. ctermbg covers the no-termguicolors
+" fallback. (The popup *border* is drawn by tmux, not nvim — see notes.)
+highlight Normal      ctermbg=NONE guibg=NONE
+highlight NormalNC    ctermbg=NONE guibg=NONE
+highlight NormalFloat ctermbg=NONE guibg=NONE
+highlight EndOfBuffer ctermbg=NONE guibg=NONE
+highlight NonText     ctermbg=NONE guibg=NONE
+highlight LineNr      ctermbg=NONE guibg=NONE
+highlight SignColumn  ctermbg=NONE guibg=NONE
+
 normal! gg

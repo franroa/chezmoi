@@ -11,6 +11,8 @@
     "/"
   ],
   "notifications.enabled": true,
+  "notifications.clearDelay": 0,
+  "scalingPriority": "hyprland",
   "bar.systray.ignore": [
     "spotify_client",
     "nm_applet"
@@ -27,6 +29,7 @@
       ],
       "right": [
         "custom/temp",
+        "custom/touchpad",
         "custom/pomodoro",
         "custom/slack",
         "custom/copilot",
@@ -36,6 +39,17 @@
         "network",
         "bluetooth",
         "battery",
+        "clock",
+        "notifications"
+      ]
+    },
+    "desc:Lenovo Group Limited D24-45": {
+      "left": [
+        "dashboard"
+      ],
+      "middle": [],
+      "right": [
+        "custom/slack",
         "clock",
         "notifications"
       ]

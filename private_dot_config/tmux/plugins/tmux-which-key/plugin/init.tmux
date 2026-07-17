@@ -118,6 +118,7 @@ Rename "r" rename \
 "Session picker" "p" "display-popup -E -d \"#{pane_current_path}\" -w 50% -h 40% ~/.config/tmux/scripts/session-picker.sh" \
 "Sessionizer (projects)" "f" "display-popup -E -d \"#{pane_current_path}\" -w 60% -h 50% ~/.config/tmux/scripts/sessionizer.sh" \
 "Session wizard" "w" "display-popup -E -h 40% -w 80% ~/.config/tmux/plugins/tmux-session-wizard/bin/t" \
+"SSH to host (ft)" "t" "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 80% ~/.local/bin/ft.sh" \
 "" \
 "+Resurrect" "R" "show-wk-menu #{@wk_menu_resurrect}" \
 "+Snapshots" "S" "show-wk-menu #{@wk_menu_snapshots}"'
@@ -164,14 +165,14 @@ set -g @wk_menu_gitlab \
 "View MR" "V" "run-shell \"glab mr view --web\"" \
 "" \
 "Local CI setup" "u" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% \"bash ~/.config/tmux/scripts/gcl-setup.sh #{pane_current_path}\"" \
-"Pipeline TUI (Local)" "v" "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui #{pane_current_path}\"" \
-"Pipeline TUI (Remote)" "d" "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui --remote #{pane_current_path}\"" \
-"Config view" "y" "display-popup -E -d \"#{pane_current_path}\" -w 95% -h 90% \"~/.local/bin/gctui --config #{pane_current_path}\"" \
+"Pipeline TUI (Local)" "v" "new-window -c \"#{pane_current_path}\" -n gctui \"~/.local/bin/gctui #{pane_current_path}\"" \
+"Pipeline TUI (Remote)" "d" "new-window -c \"#{pane_current_path}\" -n gctui:remote \"~/.local/bin/gctui --remote #{pane_current_path}\"" \
+"Config view" "y" "new-window -c \"#{pane_current_path}\" -n gctui:cfg \"~/.local/bin/gctui --config #{pane_current_path}\"" \
 "Dual view (local + remote)" "w" "run-shell \"tmuxinator start ci root=#{pane_current_path}\"" \
 "Assemble pipeline" "j" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 70% \"~/.local/bin/gctui assemble #{pane_current_path}; read _\""'
 
 set -g @wk_menu_parallel \
-'"AOE scratchpad" "O" "display-popup -E -d \"#{pane_current_path}\" -w 85% -h 85% aoe" \
+'"AOE scratchpad" "O" "display-popup -E -w 85% -h 85% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoe-scratchpad.sh" \
 "All Claude sessions (every repo)" "l" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 80% -e TMUX_PARENT_CLIENT=#{client_tty} ~/.config/tmux/scripts/aoe-claude-sessions.sh" \
 "" \
 "Spawn ticket swarm" "s" "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 60% \"~/.config/tmux/scripts/swarm.sh interactive\"" \
@@ -255,6 +256,9 @@ Extrakto "e" "run-shell \"\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\" 
 "Yank line" "y" "run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_line.sh" \
 "Yank PWD" "Y" "run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_pane_pwd.sh"'
 
+set -g @wk_menu_overseer \
+'"User access (subscriptions + roles)" "p" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% ~/.config/tmux/scripts/show-user-access.sh"'
+
 set -g @wk_menu_root \
 'Run "space" command-prompt \
 "Last window" "tab" last-window \
@@ -272,6 +276,8 @@ Copy "c" "show-wk-menu #{@wk_menu_copy}" \
 "+Parallel" "A" "show-wk-menu #{@wk_menu_parallel}" \
 "+Context" "K" "show-wk-menu #{@wk_menu_context}" \
 "+Tools" "t" "show-wk-menu #{@wk_menu_tools}" \
+"" \
+"+Overseer" "o" "show-wk-menu #{@wk_menu_overseer}" \
 "" \
 tmux-menus "M" "run-shell ~/.config/tmux/plugins/tmux-menus/items/main.sh" \
 Time "T" clock-mode \

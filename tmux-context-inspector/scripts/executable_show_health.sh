@@ -4,10 +4,14 @@
 # Fuente: agentsview `health <id>` sobre el transcript JSONL del cwd del panel
 # Claude. Muestra grade+score, outcome (con confianza) y el desglose de señales
 # (fallos de tool, reintentos, edit churn, secretos, compactaciones, presión de
-# contexto). Es la contraparte por-sesión de la vista H (overview global).
+# contexto), más el timeline de modelos y modos (av_model_timeline.sh: qué
+# modelo se usó en cada tramo y el permissionMode real de cada tramo — ground
+# truth del transcript, cubre Shift+Tab y sesiones que arrancan en plan mode).
+# Es la contraparte por-sesión de la vista H (overview global).
 #
 # Doc: https://www.agentsview.io/session-intelligence/#agentsview-health
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_capture.sh"
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/_recommend.sh"
 
 out="$(mktemp)"
 
@@ -26,7 +30,17 @@ if ci_have_agentsview; then
         else
             echo "— health  ·  id: $id"
             echo
+            health_json="$(agentsview health "$id" --json 2>/dev/null)"
             agentsview health "$id" 2>&1
+            echo
+            echo "— modelos y modos (timeline: modelo por mensaje + permissionMode real)"
+            timeline_text="$("$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/av_model_timeline.sh" "$id" 2>/dev/null)"
+            if [ -n "$timeline_text" ]; then
+                printf '%s\n' "$timeline_text"
+            else
+                echo "  (timeline no disponible)"
+            fi
+            ci_session_recommendations "$id" "$health_json" "$timeline_text"
         fi
         echo
         echo "Overview global de salud: vista H  ·  coste de sesión: vista o"

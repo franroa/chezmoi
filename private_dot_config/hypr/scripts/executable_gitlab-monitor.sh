@@ -11,17 +11,23 @@
 #     GITLAB_URL=https://gitlab.com
 #     GITLAB_TOKEN=your_token
 
-NOTIF_STATE_DIR="/tmp/gitlab_notifications_$USER"
-NOTIF_COUNTER_FILE="/tmp/.gitlab_unread_$USER"
+# All state lives under XDG_STATE_HOME (persistent) rather than /tmp, so the
+# "seen" watermarks and the "marked read" ledger survive a reboot -- otherwise a
+# fresh /tmp resets every watermark to 0 and the whole backlog re-notifies.
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/gitlab-monitor"
+NOTIF_STATE_DIR="$STATE_DIR/notifications"   # active (unread) items + dbus id maps
+NOTIF_COUNTER_FILE="$STATE_DIR/unread_count"
 NOTIF_APP_NAME="GitLab"
 CREDS_FILE="$HOME/.config/gitlab-credentials"
-SEEN_DIR="/tmp/.gitlab_seen_$USER"
+SEEN_DIR="$STATE_DIR/seen"                    # per-category watermarks / dedup markers
+READ_DIR="$STATE_DIR/read"                    # permanent "marked read" acknowledgements
+BASELINE_FLAG="$STATE_DIR/.baselined"         # set after the first poll baselines state
 POLL_INTERVAL=300
 FAST_RETRY_INTERVAL=20   # while waiting for the token to appear (local check only)
 
 source /home/froa/.config/hypr/scripts/notification-tracker-lib.sh
 
-mkdir -p "$SEEN_DIR"
+mkdir -p "$STATE_DIR" "$NOTIF_STATE_DIR" "$SEEN_DIR" "$READ_DIR"
 
 # ---------------------------------------------------------------------------
 # Send a desktop notification and record the dbus ID → internal notif ID map
@@ -64,7 +70,14 @@ send_notif_action() {
     fi
     if [[ -n "$mr_url" ]]; then
         acts+=("'scriptAction:-ghostty -e /home/froa/.config/hypr/scripts/tuicr-review.sh ${mr_url}'" "'TUI'")
+        # Resume this MR with an Agent of Empires (aoe) Claude session that
+        # checks it out and runs /code-review on it (model sonnet 4.6).
+        acts+=("'scriptAction:-ghostty -e /home/froa/.config/hypr/scripts/mr-agent.sh review ${mr_url}'" "'Agent'")
     fi
+    # Every GitLab notification carries a Mark-read button so a single item can be
+    # acknowledged in place. The scriptAction key runs `ack <notif_id>` and dismisses
+    # the popup; `ack` writes a persistent read marker so the item never re-pops.
+    acts+=("'scriptAction:-/home/froa/.config/hypr/scripts/gitlab-monitor.sh ack ${notif_id}'" "'Mark read'")
     local actions="@as []"
     if [[ ${#acts[@]} -gt 0 ]]; then
         local IFS=,
@@ -169,6 +182,32 @@ seen_set() {
 }
 
 # ---------------------------------------------------------------------------
+# Read-state helpers
+#
+# An item is shown only when it is neither currently active (a .notif tracker
+# file exists -> already on the panel) nor previously acknowledged (a .read
+# marker exists -> the user marked it read). Both stores are persistent, so a
+# marked-read item stays suppressed across reboots.
+# ---------------------------------------------------------------------------
+
+should_notify() {
+    local notif_id="$1"
+    [[ -f "$NOTIF_STATE_DIR/${notif_id}.notif" ]] && return 1
+    [[ -f "$READ_DIR/${notif_id}.read" ]] && return 1
+    return 0
+}
+
+# Permanently acknowledge an item: record it as read (survives reboot) and drop
+# it from the unread set. Idempotent -- safe to call from the Mark-read button,
+# the D-Bus close watcher, or the mark-all path.
+mark_item_read() {
+    local notif_id="$1"
+    [[ -z "$notif_id" ]] && return
+    : > "$READ_DIR/${notif_id}.read"
+    notif_remove "$notif_id"
+}
+
+# ---------------------------------------------------------------------------
 # Get current user
 # ---------------------------------------------------------------------------
 
@@ -233,7 +272,7 @@ check_mr_comments() {
             "\(.id)|\(.author.name)|\(.body | split("\n")[0] | .[0:100])"
         ' | while IFS='|' read -r note_id author body; do
             local notif_id="comment_${note_id}"
-            if [[ ! -f "$NOTIF_STATE_DIR/${notif_id}.notif" ]]; then
+            if [[ "$FIRST_RUN" != "1" ]] && should_notify "$notif_id"; then
                 local comment_url="$mr_web_url"
                 [[ -n "$mr_web_url" ]] && comment_url="${mr_web_url}#note_${note_id}"
                 notif_add "$notif_id" "!$mr_iid" "$author"
@@ -277,7 +316,11 @@ check_mr_approvals() {
             "\(.id)|\(.username)|\(.name)"
         ' | while IFS='|' read -r user_id username name; do
             local notif_id="approval_${mr_id}_${user_id}"
-            if [[ ! -f "$NOTIF_STATE_DIR/${notif_id}.notif" ]]; then
+            if [[ "$FIRST_RUN" == "1" ]]; then
+                # Baseline pre-existing approvals as read so migrating to persistent
+                # storage doesn't backfill a notification for every old approval.
+                : > "$READ_DIR/${notif_id}.read"
+            elif should_notify "$notif_id"; then
                 notif_add "$notif_id" "!$mr_iid" "$name approved"
                 send_notif_action "$notif_id" 1 "GitLab approved: !$mr_iid" \
                     "$name approved your MR"$'\n\n'"$mr_title" \
@@ -370,7 +413,7 @@ check_mentions() {
         "\(.id)|\(.author.name)|\(.target_type)|\(.target_url // "")|\(.body | split("\n")[0] | .[0:100])"
     ' | while IFS='|' read -r todo_id author target_type target_url body; do
         local notif_id="mention_${todo_id}"
-        if [[ ! -f "$NOTIF_STATE_DIR/${notif_id}.notif" ]]; then
+        if [[ "$FIRST_RUN" != "1" ]] && should_notify "$notif_id"; then
             local mention_mr_url=""
             if [[ "$target_url" == *"/merge_requests/"* ]]; then
                 mention_mr_url="${target_url%%#*}"   # strip #note_ anchor for tuicr
@@ -404,6 +447,13 @@ check_mentions() {
 poll_once() {
     load_credentials
 
+    # FIRST_RUN baselines existing state on the very first successful poll (e.g.
+    # after migrating off /tmp): watermarks advance and pre-existing approvals are
+    # marked read, but nothing is notified, so there is no startup backlog flood.
+    # Global (not local) so the piped sub-shells inside the check_* helpers see it.
+    FIRST_RUN=0
+    [[ -f "$BASELINE_FLAG" ]] || FIRST_RUN=1
+
     local my_username
     my_username=$(get_my_username)
     [[ -z "$my_username" ]] && return
@@ -418,6 +468,8 @@ poll_once() {
     check_mr_approvals "$mrs" "$my_username"
     check_pipeline_finished "$mrs"
     check_mentions "$my_username"
+
+    [[ "$FIRST_RUN" == "1" ]] && : > "$BASELINE_FLAG"
 }
 
 # ---------------------------------------------------------------------------
@@ -429,24 +481,48 @@ poll_once() {
 dbus_monitor_loop() {
     dbus-monitor "interface='org.freedesktop.Notifications'" 2>/dev/null | \
     while IFS= read -r line; do
-        if [[ "$line" == *"member=NotificationClosed"* || "$line" == *"member=ActionInvoked"* ]]; then
-            read -r id_line
-            local dbus_id
-            dbus_id=$(echo "$id_line" | grep -oP 'uint32 \K[0-9]+')
-            if [[ -n "$dbus_id" ]]; then
-                local map_file="$NOTIF_STATE_DIR/dbus_${dbus_id}"
-                if [[ -f "$map_file" ]]; then
-                    local notif_id
-                    notif_id=$(cat "$map_file")
-                    rm -f "$map_file"
-                    [[ -n "$notif_id" ]] && notif_remove "$notif_id"
-                fi
+        local kind=""
+        if [[ "$line" == *"member=NotificationClosed"* ]]; then
+            kind="closed"
+        elif [[ "$line" == *"member=ActionInvoked"* ]]; then
+            kind="action"
+        else
+            continue
+        fi
+
+        # First body arg is the dbus id. NotificationClosed carries a second uint32
+        # `reason` (1=expired, 2=dismissed-by-user, 3=closed-by-CloseNotification);
+        # ActionInvoked carries the action-key string instead.
+        local id_line dbus_id reason=""
+        read -r id_line
+        dbus_id=$(echo "$id_line" | grep -oP 'uint32 \K[0-9]+')
+        if [[ "$kind" == "closed" ]]; then
+            local reason_line
+            read -r reason_line
+            reason=$(echo "$reason_line" | grep -oP 'uint32 \K[0-9]+')
+        fi
+        [[ -z "$dbus_id" ]] && continue
+
+        # Acknowledge only on an explicit gesture: a fired action, a user dismiss
+        # (reason 2), or the programmatic close from our scriptAction buttons
+        # (reason 3). An expired popup (reason 1) leaves the item unread so the
+        # panel badge persists until it is actually marked read.
+        if [[ "$kind" == "action" || "$reason" == "2" || "$reason" == "3" ]]; then
+            local map_file="$NOTIF_STATE_DIR/dbus_${dbus_id}"
+            if [[ -f "$map_file" ]]; then
+                local notif_id
+                notif_id=$(cat "$map_file")
+                rm -f "$map_file"
+                mark_item_read "$notif_id"
             fi
         fi
     done
 }
 
 _run_monitor() {
+    # dbus ids are assigned per session; stale maps from a previous boot would
+    # mis-resolve, so drop them (the persistent .notif/.read state stays intact).
+    rm -f "$NOTIF_STATE_DIR"/dbus_* 2>/dev/null || true
     dbus_monitor_loop &
     while true; do
         if [[ -n "$(resolve_token)" ]]; then
@@ -473,20 +549,28 @@ start_monitor() {
 
 mark_read() {
     load_credentials
+
+    # Persist every currently-unread item as read so it never re-pops -- including
+    # after a reboot -- then drop it from the unread set.
+    local f base
+    for f in "$NOTIF_STATE_DIR"/*.notif; do
+        [[ -e "$f" ]] || continue
+        base="$(basename "$f" .notif)"
+        : > "$READ_DIR/${base}.read"
+    done
     notif_clear
 
-    # Also mark all current todos as seen
-    local todos
+    # Advance the mention watermark so pending todos don't resurface. (We must NOT
+    # reset the per-MR comment / pipeline watermarks here -- doing so would replay
+    # the whole backlog on the next poll.)
+    local todos max_id
     todos=$(gitlab_api "todos?action=mentioned&state=pending&per_page=50" 2>/dev/null)
     if [[ -n "$todos" ]]; then
-        local max_id
         max_id=$(echo "$todos" | jq -r '[.[].id] | max // 0')
         [[ "$max_id" != "null" && "$max_id" != "0" ]] && \
             seen_set "mentions" "$max_id"
     fi
 
-    # Clear seen per-MR state so fresh MRs start clean
-    rm -f "$SEEN_DIR"/mr_comments_* "$SEEN_DIR"/pipeline_* 2>/dev/null || true
     notify-send "GitLab" "All notifications marked as read"
 }
 
@@ -527,6 +611,7 @@ case "${1:-status}" in
     check)          poll_once ;;
     clear)          notif_clear ;;
     mark-read)      mark_read ;;
+    ack)            shift; mark_item_read "$1" ;;
     open)           open_gitlab ;;
     show)           show_notifications ;;
     count)          notif_get_count ;;

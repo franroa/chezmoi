@@ -39,4 +39,17 @@ gl-sast-report.json
 gl-secret-detection-report.json
 .gitlab-ci-local.yml
 .aoe-worktrees
+
+# gctui (local GitLab pipeline TUI) per-repo artifacts
 .gitlab-ci.dynamic.yml
+.gctui.yml
+env-pipeline.local.yml
+thisversion.env
+zz_gctui*
+
+# terraform plan output files
+tfplan.out
+tfplan.json
+
+FRAN_NOTES.md
+CLAUDE.local.md

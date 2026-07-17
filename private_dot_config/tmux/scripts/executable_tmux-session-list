@@ -44,10 +44,20 @@ now=$(date +%s)
 frame_idx=$(( now % ${#spinner_frames[@]} ))
 spinner_char="${spinner_frames[$frame_idx]}"
 
-# Ensure the GitLab pipeline-status poller is running (single instance, detached).
+# Ensure the GitLab remote-pipeline poller is running (single instance, detached).
+# gctui remote-poll writes /tmp/.claude-tmux-pipeline-* (same paths as the old
+# glab-pipeline-poller.sh it replaces) and uses the same pidfile — no icon changes.
 poller_pid=/tmp/.claude-tmux-pipeline-poller.pid
 if ! { [ -f "$poller_pid" ] && kill -0 "$(cat "$poller_pid" 2>/dev/null)" 2>/dev/null; }; then
-  setsid bash /home/froa/.config/tmux/scripts/glab-pipeline-poller.sh >/dev/null 2>&1 &
+  setsid "$(command -v gctui || echo /home/froa/.local/bin/gctui)" remote-poll >/dev/null 2>&1 &
+fi
+
+# Ensure the gctui local-pipeline status poller is running (single instance). It
+# mirrors the remote poller but reads gctui's durable ~/.cache/gctui run-state and
+# writes /tmp/.claude-tmux-local-* render caches that local_icon() draws from.
+local_poller_pid=/tmp/.claude-tmux-local-poller.pid
+if ! { [ -f "$local_poller_pid" ] && kill -0 "$(cat "$local_poller_pid" 2>/dev/null)" 2>/dev/null; }; then
+  setsid "$(command -v gctui || echo /home/froa/.local/bin/gctui)" tmux-poll >/dev/null 2>&1 &
 fi
 
 # Read Claude status for a given session name from its status file
@@ -85,6 +95,26 @@ pipeline_icon() {
     failed)             printf ' #[fg=#f38ba8]✗' ;;
     pending|created|preparing|scheduled|waiting_for_resource) printf ' #[fg=#f9e2af]◌' ;;
     *)                  : ;;   # none / canceled / skipped / manual -> no icon
+  esac
+}
+
+# gctui local-pipeline icon, read from the local poller's cache (same path key as
+# the remote one). Uses the SAME glyphs as the remote pipeline_icon (⟳/✓/✗/◌) so
+# a local run reads identically to a remote one; it sits just right of the remote
+# icon, so position (not shape) tells them apart. Running shows ⟳ as soon as the
+# poller sees the live job (icon changes while a pipeline runs).
+local_icon() {
+  local key="$1" st
+  [ -z "$key" ] && return
+  local cache="/tmp/.claude-tmux-local-${key}"
+  [ -f "$cache" ] || return
+  st="$(<"$cache")"
+  case "$st" in
+    running) printf ' #[fg=#89dceb]⟳' ;;
+    success) printf ' #[fg=#a6e3a1]✓' ;;
+    failed)  printf ' #[fg=#f38ba8]✗' ;;
+    pending) printf ' #[fg=#f9e2af]◌' ;;
+    *)       : ;;   # none -> no icon
   esac
 }
 
@@ -142,7 +172,7 @@ for session in $all_sessions; do
   # Spinner lives inside the block, sharing the session's background
   spinner=""
   if [ "$status" = "working" ]; then
-    spinner="#[fg=#89dceb,bold]${spinner_char}#[fg=#1a1b26] "
+    spinner="#[fg=#f38ba8,bold]${spinner_char}#[fg=#1a1b26] "
   fi
 
   # Acknowledge on focus: only the "done" (green) state clears on focus.
@@ -167,11 +197,24 @@ for session in $all_sessions; do
     fi
   fi
 
+  # Local-pipeline-finished yellow blink: same active -> terminal marker mechanism
+  # as remote, dropped by `gctui tmux-poll`. Distinct color (yellow vs the remote
+  # pink) so a local run finishing reads differently from a remote pipeline.
+  loc_finished=0
+  if [ -n "$pl_key" ] && [ -f "/tmp/.claude-tmux-local-finished-${pl_key}" ]; then
+    if [ "$is_focused" = 1 ]; then
+      rm -f "/tmp/.claude-tmux-local-finished-${pl_key}"
+    else
+      loc_finished=1
+    fi
+  fi
+
   # Manual blink: ghostty ignores the SGR blink attr, so pulse the background
   # color each second (same redraw trick as spinner).
-  #   red   = waiting for user input
-  #   green = finished the job
-  #   pink  = GitLab pipeline just finished (success or failed)
+  #   red    = waiting for user input
+  #   green  = finished the job
+  #   pink   = REMOTE GitLab pipeline just finished (success or failed)
+  #   yellow = LOCAL pipeline/job just finished (gctui)
   if [ $(( now % 2 )) -eq 0 ]; then
     if [ "$status" = "input" ]; then
       bg="#f38ba8"
@@ -179,11 +222,14 @@ for session in $all_sessions; do
       bg="#a6e3a1"
     elif [ "$pl_finished" = 1 ]; then
       bg="#f5c2e7"
+    elif [ "$loc_finished" = 1 ]; then
+      bg="#f9e2af"
     fi
   fi
 
-  # GitLab pipeline icon, right of the session name, sharing the block bg.
+  # GitLab pipeline icon (remote) + gctui local icon, right of the session name.
   icon="$(pipeline_icon "$pl_key")"
+  licon="$(local_icon "$pl_key")"
 
   # Wrap block in a clickable range. mouse_status_range = range_idx on click;
   # session-menu.sh maps the index back to the session name (names can exceed
@@ -191,7 +237,7 @@ for session in $all_sessions; do
   # Range value is prefixed with "s" so it is never the bare string "0" — tmux's
   # `if-shell -F` guard treats "0" (and empty) as false, which silently swallowed
   # clicks on the first element. session-menu.sh strips the prefix back off.
-  output+="#[range=user|s${range_idx}]#[bg=${bg},fg=#1a1b26${attr}] ${spinner}${display_label}${icon} #[norange]#[default] "
+  output+="#[range=user|s${range_idx}]#[bg=${bg},fg=#1a1b26${attr}] ${spinner}${display_label}${icon}${licon} #[norange]#[default] "
   range_idx=$((range_idx + 1))
   letter_idx=$((letter_idx + 1))
 done

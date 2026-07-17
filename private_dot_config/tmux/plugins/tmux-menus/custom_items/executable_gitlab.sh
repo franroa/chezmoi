@@ -11,7 +11,7 @@ static_content() {
             "display-popup -d '#{pane_current_path}' -w 80% -h 50% -E \
             'bash -c \"$glab ci run -b \$(git branch --show-current) 2>&1; echo; read -p \\\"Press enter to close\\\" _\"'" \
         0.0 C s "Pipeline TUI — Remote (gctui)" \
-            "display-popup -d '#{pane_current_path}' -w 95% -h 90% -E \
+            "new-window -c '#{pane_current_path}' -n gctui:remote \
             '~/.local/bin/gctui --remote \"#{pane_current_path}\"'" \
         0.0 C ? "Pipeline TUI — usage / flags" \
             "display-popup -d '#{pane_current_path}' -w 70% -h 65% -E \
@@ -33,10 +33,10 @@ static_content() {
         0.0 T "-#[nodim]Pipeline TUI  (gctui — Local + Remote)" \
         0.0 S \
         0.0 C V "Open — Local view" \
-            "display-popup -d '#{pane_current_path}' -w 95% -h 90% -E \
+            "new-window -c '#{pane_current_path}' -n gctui \
             '~/.local/bin/gctui \"#{pane_current_path}\"'" \
         0.0 C y "Open — Config view (expanded YAML)" \
-            "display-popup -d '#{pane_current_path}' -w 95% -h 90% -E \
+            "new-window -c '#{pane_current_path}' -n gctui:cfg \
             '~/.local/bin/gctui --config \"#{pane_current_path}\"'" \
         0.0 C a "Assemble pipeline from components/jobs" \
             "display-popup -d '#{pane_current_path}' -w 90% -h 70% -E \

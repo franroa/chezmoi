@@ -89,6 +89,26 @@
       "onScrollDown": ""
     }
   },
+  "custom/touchpad": {
+    "icon": {
+      "enabled": "󰍀",
+      "disabled": "󰍁"
+    },
+    "label": "{text}",
+    "tooltip": "{tooltip}",
+    "truncationSize": -1,
+    "execute": "/home/froa/.config/hyprpanel/scripts/touchpad-toggle.sh",
+    "interval": 5000,
+    "hideOnEmpty": false,
+    "scrollThreshold": 1,
+    "actions": {
+      "onLeftClick": "/home/froa/.config/hyprpanel/scripts/touchpad-toggle.sh toggle",
+      "onRightClick": "",
+      "onMiddleClick": "",
+      "onScrollUp": "",
+      "onScrollDown": ""
+    }
+  },
   "custom/jira": {
     "icon": "󰌃",
     "label": "{text}",
