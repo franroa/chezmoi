@@ -1,0 +1,83 @@
+-- Function to read a file content
+function read_file(file_path)
+  local file = io.open(file_path, "r")
+  if not file then
+    error("Could not open file: " .. file_path)
+  end
+
+  local content = file:read("*a")
+  file:close()
+
+  return content
+end
+
+-- Function to replace environment variable references with actual values
+function replace_env_vars(content)
+  -- Find all the environment variable references in the content like $VAR_NAME or ${VAR_NAME}
+  return content
+    :gsub("${(.-)}", function(var_name)
+      return os.getenv(var_name) or ""
+    end)
+    :gsub("$([%w_]+)", function(var_name)
+      return os.getenv(var_name) or ""
+    end)
+end
+
+-- Function to write content to a file
+function write_file(file_path, content)
+  local file = io.open(file_path, "w")
+  if not file then
+    error("Could not open file for writing: " .. file_path)
+  end
+
+  file:write(content)
+  file:close()
+end
+
+-- Main function to process the file
+function process_file(input_file, output_file)
+  -- Step 1: Read the input file content
+  local content = read_file(input_file)
+
+  -- Step 2: Replace the environment variables
+  content = replace_env_vars(content)
+
+  -- Step 3: Write the updated content to the output JSON file
+  write_file(output_file, content)
+  print("File processed and saved as: " .. output_file)
+end
+
+-- https://glama.ai/mcp/servers/s0fywdwp87
+return {
+  "ravitemer/mcphub.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
+  },
+  build = "npm install -g mcp-hub@latest", -- Installs required mcp-hub npm module
+  config = function()
+    vim.env.GIT_REPO = LazyVim.root.git()
+
+    process_file("/home/froa/mcpservers.json.txt", "/home/froa/mcpservers.json")
+
+    require("mcphub").setup({
+      -- Required options
+      port = 3000, -- Port for MCP Hub server
+      config = vim.fn.expand("~/mcpservers.json"), -- Absolute path to config file
+
+      -- Optional options
+      on_ready = function(hub)
+        -- Called when hub is ready
+      end,
+      on_error = function(err)
+        -- Called on errors
+      end,
+      shutdown_delay = 0, -- Wait 0ms before shutting down server after last client exits
+      log = {
+        level = vim.log.levels.WARN,
+        to_file = false,
+        file_path = nil,
+        prefix = "MCPHub",
+      },
+    })
+  end,
+}

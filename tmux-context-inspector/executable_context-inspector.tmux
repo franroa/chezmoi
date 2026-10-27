@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # tmux-context-inspector
-# Leader <Prefix> K -> tabla de teclas `context-inspector`. Vistas single de
+# Leader <Prefix> I -> tabla de teclas `context-inspector`. Vistas single de
 # contexto/config (leen el transcript en disco o el REPL) + navegadores
 # agentsview en submenús (fzf modo vi). (K y no C: prefix+C ya es el TUI de
 # pipelines de GitLab.)
@@ -24,7 +24,7 @@
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SCRIPTS="$CURRENT_DIR/scripts"
 
-tmux bind-key K switch-client -T context-inspector
+tmux bind-key I switch-client -T context-inspector
 
 # Limpia binds de iteraciones previas que se han plegado en submenús
 # (recargar sólo AÑADE; estas teclas ya no existen en la tabla root).

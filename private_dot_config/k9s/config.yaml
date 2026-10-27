@@ -11,7 +11,7 @@ k9s:
     headless: false
     logoless: false
     crumbsless: false
-    skin: tokyonight
+    skin: transparent
     reactive: false
     noIcons: false
     defaultsToFullScreen: false

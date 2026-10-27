@@ -1,0 +1,160 @@
+local.file_match "logs_nginx" {
+    path_targets      = [{"__path__" = "/var/log/nginx/access.log"}]
+    ignore_older_than = "48h"
+}
+
+loki.source.file "logs_scraper_nginx" {
+    targets       = local.file_match.logs_nginx.targets
+    tail_from_end = true
+
+    forward_to    = [loki.process.combined_format_nginx.receiver]
+}
+
+loki.process "combined_format_nginx" {
+    stage.regex {
+        expression = `^\S+ \S+ \S+ \[(?P<datetime>\S+ [^\]]+)\] "(?P<method>\S+) (?P<request_route>[^\s?]+)\S* (?P<protocol>\S+)" (?P<status>\S+) (?P<body_bytes_sent>\S+) "[^"]+" "[^"]+" (?P<request_time>\S+) (?P<upstream_response_time>\S+) (?P<pipe>\S+)$`
+    }
+    stage.timestamp {
+        source = "datetime"
+        format = "02/Jan/2006:15:04:05 -0700"
+    }
+    stage.labels {
+        values = {
+            method = "method",
+            status ="status",
+            request_route =  "request_route",
+            request_route_formated = "request_route",
+            body_bytes_sent = "body_bytes_sent",
+            request_time = "request_time",
+            upstream_response_time = "upstream_response_time",
+        }
+    }
+    
+    forward_to = [loki.relabel.relabel_nginx.receiver]
+}
+
+loki.relabel "relabel_nginx" {
+    rule {
+        regex = "^200$"
+        replacement = "INFO"
+        action = "replace"
+        source_labels = ["status"]
+        target_label = "detected_level"
+    }
+    rule {
+        regex = "^500$"
+        replacement = "ERROR"
+        action = "replace"
+        source_labels = ["status"]
+        target_label = "detected_level"
+    }
+    rule {
+        regex = "^(.*?)/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        replacement = "$1/uuid"
+        action = "replace"
+        source_labels = ["request_route"]
+        target_label = "request_route_formated"
+    }
+    rule {
+        regex = "^(.*)(/assets)(.*)$"
+        replacement = "$1/assets"
+        action = "replace"
+        source_labels = ["request_route"]
+        target_label = "request_route_formated"
+    }
+    rule {
+        regex = "^(/save)(.*)$"
+        replacement = "$1/static"
+        action = "replace"
+        source_labels = ["request_route"]
+        target_label = "request_route_formated"
+    }
+    rule {
+        regex = "^(/_nuxt)(.*)$"
+        replacement = "$1/static"
+        action = "replace"
+        source_labels = ["request_route"]
+        target_label = "request_route_formated"
+    }
+    rule {
+        regex = "^(.*?)/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/(.*)$"
+        replacement = "$1/uuid/$2"
+        action = "replace"
+        source_labels = ["request_route"]
+        target_label = "request_route_formated"
+    }
+
+    forward_to = [loki.process.histogram_metrics.receiver]
+}
+
+loki.process "histogram_metrics" {
+    stage.label_drop {
+        values = [ "upstream_response_time", "body_bytes_sent", "request_time", "request_route" ]
+    }
+    stage.metrics {
+        metric.histogram {
+            name        = "nginx_request_time"
+            description = "recorded request time"
+            source      = "request_time"
+            buckets     = [0.002,0.005,0.010,0.015,0.025,0.050,0.1,0.25,1.0,3.0]
+        }
+    }
+    stage.metrics {
+        metric.histogram {
+            name        = "nginx_upstream_response_time"
+            description = "recorded upstream response times"
+            source      = "upstream_response_time"
+            buckets     = [0.001,0.0025,0.005,0.015,0.025,0.050,0.1,0.25,1.0,3.0]
+        }
+    }
+    stage.metrics {
+        metric.histogram {
+            name        = "nginx_body_bytes_sent"
+            description = "recorded body bytes sent"
+            source      = "body_bytes_sent"
+            buckets     = [5,15,35,100,250,500,1500,5000,25000,100000,1000000,3000000]
+        }
+    }
+    stage.labels {
+        values = {
+            nginx_body_bytes_sent = "nginx_body_bytes_sent",
+            nginx_request_time = "nginx_request_time",
+            nginx_upstream_response_time = "nginx_upstream_response_time",
+        }
+    }    
+
+  forward_to = [loki.write.loki_nginx.receiver]
+}
+
+loki.write "loki_nginx" {
+    endpoint {
+        url = "http://loki.us01.live.internal.technosylva.io/loki/api/v1/push"
+    }
+    external_labels = {
+        host    = "ccdevweb2",
+        app = "nginx",
+        environment = "staging",
+        customer = "SC",
+    }
+}
+
+prometheus.scrape "self_scrape" {
+  targets    = [
+    {
+      __address__ = "127.0.0.1:12345",
+      app = "nginx",
+      environment = "staging",
+      host = "ccdevweb2",
+      customer = "SC",
+    },
+  ]
+  scrape_interval = "60s"
+  scrape_timeout = "10s"
+
+  forward_to = [prometheus.remote_write.mimir_cluster.receiver]
+}
+prometheus.remote_write "mimir_cluster" {
+    endpoint {
+      url = "http://mimir.us01.live.internal.technosylva.io/api/v1/push"
+    }
+}

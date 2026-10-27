@@ -257,7 +257,8 @@ Extrakto "e" "run-shell \"\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\" 
 "Yank PWD" "Y" "run-shell -b ~/.config/tmux/plugins/tmux-yank/scripts/copy_pane_pwd.sh"'
 
 set -g @wk_menu_overseer \
-'"User access (subscriptions + roles)" "p" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% ~/.config/tmux/scripts/show-user-access.sh"'
+'"User access (subscriptions + roles)" "p" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% ~/.config/tmux/scripts/show-user-access.sh" \
+"GitLab search (group-wide)" "s" "command-prompt -p \"GitLab search:\" \"run-shell \\"~/.config/tmux/scripts/glab-search-popup.sh %%\\"\""'
 
 set -g @wk_menu_root \
 'Run "space" command-prompt \

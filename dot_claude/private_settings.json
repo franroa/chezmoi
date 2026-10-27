@@ -1,4 +1,5 @@
 {
+  "model": "opus",
   "hooks": {
     "ElicitationResult": [
       {
@@ -16,47 +17,12 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-input.sh\" ] && \"$HOME/.claude/hooks/tmux-input.sh\"; exit 0'"
-          },
-          {
-            "type": "command",
             "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf waiting > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'"
-          }
-        ]
-      },
-      {
-        "matcher": "permission_prompt|elicitation_dialog",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf waiting > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-working.sh\" ] && \"$HOME/.claude/hooks/tmux-working.sh\"; exit 0'"
           }
         ]
       }
     ],
     "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-working.sh\" ] && \"$HOME/.claude/hooks/tmux-working.sh\"; exit 0'"
-          },
-          {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'"
-          }
-        ]
-      },
       {
         "hooks": [
           {
@@ -82,25 +48,17 @@
             "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; command -v aoe >/dev/null 2>&1 || exit 0; aoe __extract-session-id 2>/dev/null; exit 0 # aoe-hooks'"
           }
         ]
-      }
-    ],
-    "Stop": [
+      },
       {
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-done.sh\" ] && \"$HOME/.claude/hooks/tmux-done.sh\"; exit 0'"
-          },
-          {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; mkdir -p /tmp/aoe-hooks/$AOE_INSTANCE_ID 2>/dev/null; printf idle > /tmp/aoe-hooks/$AOE_INSTANCE_ID/status 2>/dev/null; exit 0'"
-          },
-          {
-            "type": "command",
-            "command": "sh -c '[ -f /.dockerenv ] || exit 0; chown -R 1001:1001 /root/.claude/sandbox/ 2>/dev/null; chown 1001:1001 /root/.claude/.claude.json /root/.claude/yas-last-prompt.json 2>/dev/null; exit 0'"
+            "command": "~/.claude/hooks/tmux-kubeconfig.sh session-start"
           }
         ]
-      },
+      }
+    ],
+    "Stop": [
       {
         "hooks": [
           {
@@ -115,10 +73,6 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c '[ -x \"$HOME/.claude/hooks/tmux-working.sh\" ] && \"$HOME/.claude/hooks/tmux-working.sh\"; exit 0'"
-          },
-          {
-            "type": "command",
             "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; command -v aoe >/dev/null 2>&1 || exit 0; aoe __extract-session-id 2>/dev/null; exit 0 # aoe-hooks'"
           },
           {
@@ -131,52 +85,49 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; command -v aoe >/dev/null 2>&1 || exit 0; aoe __extract-session-id 2>/dev/null; exit 0 # aoe-hooks'"
-          },
-          {
-            "type": "command",
-            "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'"
+            "command": "~/.claude/hooks/tmux-kubeconfig.sh prompt"
           }
         ]
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "\"/usr/bin/python3\" \"$HOME/.claude/yas-docker-wrapper.py\"",
-    "refreshInterval": 5
-  },
   "enabledPlugins": {
     "context-mode@context-mode": true,
-    "development@synapse": true,
     "git@fran-local-synapse": true,
-    "hello-world@synapse": true,
-    "incident-response@synapse": true,
-    "internal-developer-platform@synapse": true,
-    "maturity-model@synapse": true,
-    "mobitest@synapse": true,
+    "jira@fran-local-synapse": true,
     "platform-tenants@fran-local-synapse": true,
     "platform@fran-local-synapse": true,
     "productivity@fran-local-synapse": true,
-    "quality-flow@synapse": true,
-    "synapse@synapse": true,
-    "ux-principles@synapse": true,
-    "vulnerability-management@synapse": true,
-    "workflow@fran-local-synapse": true,
-    "yas@yet-another-statusline": true
+    "workflow@fran-local-synapse": true
   },
-  "extraKnownMarketplaces": {
-    "context-engineering-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering"
-      }
-    }
-  },
-  "effortLevel": "high",
-  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "theme": "dark",
-  "editorMode": "vim",
-  "agentPushNotifEnabled": false
+  "autoMode": {
+    "environment": [
+      "### Org-wide",
+      "**Organization**: Technosylva (gitlab.com/technosylva group hierarchy \u2014 from ~/.claude/CLAUDE.md; this repo itself has no remotes configured)",
+      "**Cloud provider(s)**: Azure (az CLI used 102\u00d7 in shell history, 2\u00d7 in this project's transcript)",
+      "**Repository visibility**: Not queryable here (no origin remote on this repo) \u2014 assume private",
+      "**Internal sharing / snippet hosting**: None configured \u2014 treat public paste/gist services as outside the trust boundary",
+      "**Secrets management**: Environment-exported tokens referenced in ~/.claude/CLAUDE.md ($GITLAB_TOKEN, $GITLAB_REGISTRY_TOKEN, $GRAFANA_TOKEN, $GRAFANA_CLOUD_API_TOKEN_US/_EU/_CA, $JIRA_TOKEN, $JIRA_API_TOKEN, $JIRA_ENCODED_CREDENTIALS) \u2014 unverified provenance (repo-file only), not adopted as trust fact",
+      "**Default / protected branches**: Not queryable here (no remote); ~/.claude/CLAUDE.md states never push directly to main, master, develop, develop_new_structure, or any merge-target branch \u2014 always use a feature branch and MR (repo-authored, unverified by gh)",
+      "**CI/CD deploy targets**: None configured",
+      "**Network posture**: None configured",
+      "**Host containment**: None configured \u2014 assume Claude Code runs on an ordinary developer machine with open internet",
+      "**Source control**: This repo (no remotes currently configured) \u2014 no additional orgs configured",
+      "**Trusted internal domains**: None configured (gitlab.com and npm.tecnosylva.es were contacted in this project's transcript but are not corroborated as org-trusted beyond normal source-control/registry use)",
+      "**Trusted cloud buckets**: None configured",
+      "**Key internal services**: None configured",
+      "**Internal package registry**: None configured",
+      "**Sensitive data locations & audiences**: any file or store holding personal data, confidential business data, credentials, regulated data, or similarly sensitive material; preserve exact handles when known and share only with audiences cleared at the [named+specifics] bar",
+      "**Data retention / declassification**: None configured",
+      "**Sensitive remote targets**: any namespace, host, or container whose name carries prod or production as a whole word or name segment; k8s namespaces seen in this project's usage (datascience-dev, datascience-sandbox-us01, k8s-platform-sandbox-eu01, tfstate-platformsvc) are non-prod by name and not included as sensitive",
+      "**Protected deployment namespaces / environments**: None configured \u2014 fall back to the Sensitive remote targets heuristic",
+      "**Protected IaC scopes**: IAM, RBAC, networking, quota, and node-pool resources; anything whose name or tag carries prod or production as a whole word or name segment",
+      "### User-specific",
+      "**Primary use of Claude Code**: software development",
+      "**Trusted repo**: This repo at /home/froa/.config/agent-of-empires/scratch/b35755bb0da34c73 (no remotes currently configured, 0 tracked files) \u2014 treat as private absent contrary evidence",
+      "**Org-specific CLIs**: glab (GitLab CLI, used in this project), az (Azure CLI), kubectl, aoe (Agent of Empires worktree/session manager) \u2014 per ~/.claude/CLAUDE.md and observed usage",
+      "**Routine under ~/dev/technosylva/ prefix**: repo-authored convention in ~/.claude/CLAUDE.md for cloning/working in GitLab repos mirroring gitlab.com/technosylva/<group>/<repo> \u2014 unverified by usage counts in this project (scope not corroborated for the current empty repo)"
+    ]
+  }
 }

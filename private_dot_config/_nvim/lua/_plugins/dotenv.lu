@@ -1,0 +1,11 @@
+return {
+  "tpope/vim-d otenv",
+  lazy = false,
+  config = function(_, opts)
+    vim.cmd(":verbose Dotenv " .. LazyVim.root.git() .. "/NVIM_project.env")
+    -- vim.api.nvim_create_autocmd("VimEnter", {
+    --   callback = function()
+    --   end,
+    -- })
+  end,
+}

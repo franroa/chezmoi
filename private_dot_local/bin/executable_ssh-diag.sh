@@ -22,7 +22,7 @@ host="${1:-CCDEVDBS1}"
   echo "-- direct ssh -v (askpass, no tmux) --"
   SSH_ASKPASS="$SSH_ASKPASS_HELPER" SSH_ASKPASS_REQUIRE=force SSH_PASSWORD="$pass" \
     ssh -v -o ConnectTimeout=12 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-        -o NumberOfPasswordPrompts=1 "$user@$host" 'echo REMOTE_OK; hostname' 2>&1
+        -o NumberOfPasswordPrompts=1 "$host" 'echo REMOTE_OK; hostname' 2>&1
   echo "ssh_exit=$?"
   echo "===== end ====="
 } >"$LOG" 2>&1

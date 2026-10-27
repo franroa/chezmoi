@@ -1,0 +1,16 @@
+local identity = vim.fn.expand('$HOME/.age/identity.txt')
+local secret = vim.fn.expand('$HOME/.dotfiles/chatgpt.age')
+
+require("lazy").setup({
+    "jackMort/ChatGPT.nvim",
+    event = "VeryLazy",
+    dependencies = {
+        ...
+        "KingMichaelPark/age.nvim" -- Add age dependency
+    }
+    config = function()
+        vim.env.OPENAI_API_KEY = require('age').get(secret, identity) -- Get secret
+        require("chatgpt").setup()
+    end,
+}
+})

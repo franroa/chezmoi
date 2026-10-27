@@ -1,0 +1,5 @@
+fix: properly merge opts with proc config in snacks finder
+
+- Merge opts into proc_opts using vim.tbl_extend instead of overwriting
+- Ensures all picker options (like cmd) are properly passed to proc source
+- Fixes E5108 error: `opts.cmd` is required in snacks picker

@@ -1,7 +1,6 @@
 [Unit]
 Description=Hide pyprland scratchpads on notification action invoked
-After=graphical-session.target pypr.service
-Requires=pypr.service
+After=graphical-session.target
 
 [Service]
 Type=simple

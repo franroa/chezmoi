@@ -1,0 +1,13 @@
+[Unit]
+Description=Neovim + oil as the XDG FileChooser portal backend
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.impl.portal.desktop.oil-filechooser
+ExecStart=/home/linuxbrew/.linuxbrew/bin/python3 /home/froa/.local/share/nvim/lazy/oil-xdg-filechooser.nvim/daemon/portal.py
+Slice=session.slice
+
+[Install]
+WantedBy=xdg-desktop-portal.service

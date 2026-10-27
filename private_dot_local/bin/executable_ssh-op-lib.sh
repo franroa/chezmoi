@@ -60,6 +60,21 @@ op_domain_password() {
   printf '%s' "$v"
 }
 
+# Copy stdin-free text to the system clipboard (Wayland first, X11 fallback).
+#   copy_to_clipboard <text>
+copy_to_clipboard() {
+  if [ -n "$WAYLAND_DISPLAY" ] && command -v wl-copy >/dev/null 2>&1; then
+    # wl-copy/xclip fork a background owner that inherits the popup's pty and
+    # would keep the popup open after the script exits; detach its stdout/stderr.
+    printf '%s' "$1" | wl-copy >/dev/null 2>&1
+  elif command -v xclip >/dev/null 2>&1; then
+    printf '%s' "$1" | xclip -selection clipboard >/dev/null 2>&1
+  else
+    echo "Warning: no clipboard tool (wl-copy/xclip) found" >&2
+    return 1
+  fi
+}
+
 # Open a command in a new tmux session, wired so any ssh it runs authenticates
 # automatically with the given password (via SSH_ASKPASS, no sshpass).
 #   ssh_tmux_launch <session-name> <password> <shell-command>
@@ -93,6 +108,13 @@ ssh_tmux_launch() {
     -e "SSH_ASKPASS_REQUIRE=force" \
     -e "SSH_PASSWORD=$_password" \
     "$_runner"
+
+  # Session exists: put the password on the clipboard (before any foreground
+  # attach, which would block) so it can be pasted into a fallback prompt.
+  # Opt-in via SSH_COPY_PASSWORD=1 so oil-ssh.sh behaviour is unchanged.
+  if [ "${SSH_COPY_PASSWORD:-0}" = 1 ]; then
+    copy_to_clipboard "$_password"
+  fi
 
   if [ -n "$TMUX" ] || [ -n "$TMUX_PARENT_CLIENT" ]; then
     # Inside tmux. From a popup, switch-client must target the *parent* client

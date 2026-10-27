@@ -1,0 +1,30 @@
+# $XDG_CONFIG_HOME/k9s/views.yaml
+# https://github.com/derailed/k9s#custom-views
+views:
+  v1/nodes:
+    columns:
+      - NAME
+      - STATUS
+      - ROLE
+      - ZONE:.metadata.labels.topology\.kubernetes\.io/zone # => extract the topology.kubernetes.io/zone label
+      - ARCH
+      - TAINTS
+      - VERSION
+      - OS-IMAGE
+      - KERNEL
+      - INTERNAL-IP
+      - EXTERNAL-IP
+      - PODS
+      - CPU
+      - CPU/A
+      - '%CPU'
+      - MEM
+      - MEM/A
+      - '%MEM'
+      - GPU/A
+      - GPU/C
+      - SH-GPU/A
+      - SH-GPU/C
+      - LABELS
+      - VALID
+      - AGE

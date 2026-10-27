@@ -20,7 +20,7 @@
 
 function __op_secrets_vars
     # One name per line so `for v in (__op_secrets_vars)` iterates correctly.
-    printf '%s\n' CLOCKWORK_API JIRA_API_TOKEN JIRA_TOKEN GITLAB_TOKEN TF_TOKEN_gitlab_com GRAFANA_TOKEN GRAFANA_CLOUD_API_TOKEN GITLAB_MANAGEMENT_TOKEN VAULT_PASSWORD OPEN_VPN_PASSWORD
+    printf '%s\n' CLOCKWORK_API JIRA_API_TOKEN JIRA_TOKEN GITLAB_TOKEN TF_TOKEN_gitlab_com GRAFANA_TOKEN GRAFANA_CLOUD_API_TOKEN GITLAB_MANAGEMENT_TOKEN VAULT_PASSWORD OPEN_VPN_PASSWORD GITLAB_REGISTRY_TOKEN GRAFANA_CLOUD_API_TOKEN_CA GRAFANA_CLOUD_API_TOKEN_EU ARM_CLIENT_ID ARM_CLIENT_SECRET ARM_TENANT_ID ARM_SUBSCRIPTION_ID TINYBIRD_TOKEN TINYBIRD_TOKEN_AWS
 end
 
 function __op_secrets_refs
@@ -32,6 +32,10 @@ function __op_secrets_refs
     printf 'GITLAB_TOKEN\top://froa-shell-secrets/GITLAB_TOKEN/credential\n'
     printf 'TF_TOKEN_gitlab_com\top://froa-shell-secrets/TF_TOKEN_gitlab_com/credential\n'
     printf 'GRAFANA_TOKEN\top://froa-shell-secrets/GRAFANA_TOKEN/credential\n'
+    printf 'CI_PLATFORM_USERNAME\top://froa-shell-secrets/CI_PLATFORM_USERNAME/credential\n'
+    printf 'CI_PLATFORM_PASSWORD\top://froa-shell-secrets/CI_PLATFORM_PASSWORD/credential\n'
+    printf 'TF_VAR_ci_platform_password\top://froa-shell-secrets/TF_VAR_ci_platform_password/credential\n'
+    printf 'TF_VAR_ci_platform_username\top://froa-shell-secrets/TF_VAR_ci_platform_username/credential\n'
     # Item was created via a Spanish-locale 1Password client: field label is
     # "credencial" not "credential", and `op` can't yet resolve it by name
     # (stale local name-cache for a new item) -- pinned to its UUID instead.
@@ -39,6 +43,16 @@ function __op_secrets_refs
     printf 'GITLAB_MANAGEMENT_TOKEN\top://froa-shell-secrets/GITLAB_MANAGEMENT_TOKEN/credential\n'
     printf 'VAULT_PASSWORD\top://froa-shell-secrets/VAULT_PASSWORD/credential\n'
     printf 'OPEN_VPN_PASSWORD\top://froa-shell-secrets/OPEN_VPN_PASSWORD/credential\n'
+    printf 'GITLAB_REGISTRY_TOKEN\top://froa-shell-secrets/GITLAB_REGISTRY_TOKEN/credential\n'
+    printf 'GRAFANA_CLOUD_API_TOKEN_CA\top://froa-shell-secrets/GRAFANA_CLOUD_API_TOKEN_CA/credential\n'
+    printf 'GRAFANA_CLOUD_API_TOKEN_EU\top://froa-shell-secrets/GRAFANA_CLOUD_API_TOKEN_EU/credential\n'
+    printf 'GRAFANA_CLOUD_API_TOKEN_US\top://froa-shell-secrets/GRAFANA_CLOUD_API_TOKEN_US/credential\n'
+    printf 'ARM_CLIENT_ID\top://froa-shell-secrets/ARM_CLIENT_ID/credential\n'
+    printf 'ARM_CLIENT_SECRET\top://froa-shell-secrets/ARM_CLIENT_SECRET/credential\n'
+    printf 'ARM_TENANT_ID\top://froa-shell-secrets/ARM_TENANT_ID/credential\n'
+    printf 'ARM_SUBSCRIPTION_ID\top://froa-shell-secrets/ARM_SUBSCRIPTION_ID/credential\n'
+    printf 'TINYBIRD_TOKEN\top://froa-shell-secrets/TINYBIRD_TOKEN/credential\n'
+    printf 'TINYBIRD_TOKEN_AWS\top://froa-shell-secrets/TINYBIRD_TOKEN_AWS/credential\n'
 end
 
 # 1Password account to sign in to (added via `op account add`; no desktop app).
@@ -135,10 +149,10 @@ function __op_fetch
         set -l parts (string split \t -- $line)
         set -l v (op read $parts[2] 2>/dev/null)
         test -n "$v"; or continue
-        printf 'set -gx %s %s\n' $parts[1] (string escape -- $v) >> $tmp
+        printf 'set -gx %s %s\n' $parts[1] (string escape -- $v) >>$tmp
         set ok 1
     end
-    set -e $name  # drop the session token from env; the cache holds the secrets
+    set -e $name # drop the session token from env; the cache holds the secrets
 
     if test $ok -eq 0
         rm -f $tmp

@@ -1,0 +1,6 @@
+return {
+  {
+    "jaxbot/semantic-highlight.vim",
+    lazy = false,
+  },
+}

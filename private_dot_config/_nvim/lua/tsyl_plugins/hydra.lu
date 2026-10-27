@@ -1,0 +1,27 @@
+-- require("mini.diff").get_buf_data() -- create an hydra for diff view
+return {
+  {
+    "nvimtools/hydra.nvim",
+    keys = {
+      {
+        "<leader>dh",
+        function()
+          require("hydra").spawn("dap-hydra")
+        end,
+        desc = "Hydra DAP",
+      },
+      {
+        "<leader>G",
+        function()
+          require("hydra").spawn("Git")
+        end,
+        desc = "Hydra Git",
+      },
+    },
+    config = function()
+      require("hydras.dap")
+      require("hydras.git")
+      require("hydras.sidescroll")
+    end,
+  },
+}

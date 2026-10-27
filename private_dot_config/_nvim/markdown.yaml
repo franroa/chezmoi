@@ -1,0 +1,17 @@
+default: true
+
+blanks-around-lists: false
+code-block-style: false
+fenced-code-language: false
+first-line-h1: false
+heading-increment: false
+no-bare-urls: false
+no-duplicate-heading: false
+no-inline-html: false
+single-title: false
+ul-indent: false
+ul-style: false
+
+line-length:
+  code_blocks: false
+  tables: false

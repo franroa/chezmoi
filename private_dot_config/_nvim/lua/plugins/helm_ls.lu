@@ -1,0 +1,9 @@
+return {
+  {
+    "qvalentin/helm-ls.nvim",
+    lazy = false,
+    opts = function(_opts)
+      require("helm-ls").setup()
+    end
+  },
+}

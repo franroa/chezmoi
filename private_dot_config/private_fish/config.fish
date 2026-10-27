@@ -222,31 +222,29 @@ end
 function change_kubernetes_cluster_variable
     set -gx K8S_CLUSTER (kubectl config current-context 2>/dev/null)
     set -gx FOREGROUND_COLOR grey
-    if string match -q -- "*docker-desktop*" $K8S_CLUSTER
-        set -gx BACKGROUND_COLOR "#303b33"
-        set -gx FOREGROUND_COLOR green
-        printf '\033]11;#303b33\007'
+    set -l color (~/.config/tmux/scripts/kube-color.sh $K8S_CLUSTER)
+    set -gx BACKGROUND_COLOR $color
+    if set -q TMUX
+        if string match -q -- "$HOME/.kube/tmux/*" "$KUBECONFIG"
+            # tmux window-style (kube-switch.sh) owns the color; drop pane overrides.
+            # set-option -p, NOT select-pane -P: select-pane also focuses the pane.
+            tmux set-option -p -t $TMUX_PANE -u window-style
+            tmux set-option -p -t $TMUX_PANE -u window-active-style
+        else
+            tmux set-option -p -t $TMUX_PANE window-style "bg=$color"
+            tmux set-option -p -t $TMUX_PANE window-active-style "bg=$color"
+        end
+    else
+        printf '\033]11;%s\007' $color
     end
-    if string match -q -- "*kind*" $K8S_CLUSTER
-        set -gx BACKGROUND_COLOR "#303b33"
-        set -gx FOREGROUND_COLOR green
-        printf '\033]11;#303b33\007'
-    end
-    if string match -q -- "*None*" $K8S_CLUSTER
-        set -gx BACKGROUND_COLOR "#222436"
-        set -gx FOREGROUND_COLOR grey
-        printf '\033]11;#222436\007'
-    end
-    if string match -q -- "*live*" $K8S_CLUSTER
-        set -gx BACKGROUND_COLOR "#8E1600"
-        set -gx FOREGROUND_COLOR green
-        printf '\033]11;#8E1600\007'
-    end
-    if string match -q -- "*sandbox*" $K8S_CLUSTER
-        set -gx BACKGROUND_COLOR "#3c307f"
-        set -gx FOREGROUND_COLOR green
-        printf '\033]11;#3c307f\007'
-    end
+end
+
+# C-b K in tmux re-links this session's kubeconfig and bumps this variable
+function __tmux_kube_sync --on-variable __tmux_kube_rev
+    string match -q -- "$HOME/.kube/tmux/*" "$KUBECONFIG"; or return
+    change_kubernetes_cluster_variable
+    change_kubernetes_ns_variable
+    change_nvim_abbreviation
 end
 
 function change_kubernetes_ns_variable
@@ -267,7 +265,15 @@ function kubie
     set -g IS_COMING_FROM_KUBIE TRUE
     command kubie $argv
 end
+if status --is-interactive; and set -q TMUX
+    set -g __tmux_kube_rev_init 1
+end
+
 function refresh_prompt --on-event fish_prompt
+    if set -q __tmux_kube_rev_init
+        set -e __tmux_kube_rev_init
+        __tmux_kube_sync
+    end
     if test "$IS_COMING_FROM_KUBIE" = TRUE
         set -g IS_COMING_FROM_KUBIE FALSE
         change_kubernetes_cluster_variable
@@ -421,6 +427,7 @@ end
 alias retrigger_change='git commit --allow-empty -m "chore: retrigger pipeline" && git push'
 alias minimalvim "NVIM_APPNAME=minimalvim nvim"
 alias ai='/home/froa/run-opencode-in-foot.sh'
+alias claude='ori claude'
 alias gcl='gitlab-ci-local'
 alias kco='kubie ctx __None__'
 alias kn='kubie ns'
@@ -467,8 +474,11 @@ fish_add_path $HOME/.dotnet/tools
 fish_add_path ~/.local/share/nvm/v25.4.0/bin
 fish_add_path ~/dotnet
 fish_add_path $HOME/bin
+fish_add_path $HOME/scripts
 set -gx DOTNET_ROOT $HOME/dotnet
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+set -gx AUTH_GITLAB_CLIENT_ID dc032f7c3b477c12ec9bf730848847d298d5eabf411bc8438ddca2cfcf25314a
+set -gx AUTH_GITLAB_CLIENT_SECRET gloas-9d3c5db1fa32fd31da3d250358e0b5498e282ce83e7209d6d686c49beb36b8cf
 set -gx EDITOR (which nvim)
 set -gx USER_NAMESPACE fran
 set -x MANPAGER "env NVIM_APPNAME=lazyvim nvim +Man!"
@@ -716,3 +726,7 @@ end
 
 # Entire CLI shell completion
 entire completion fish | source
+
+# fnm
+fish_add_path $HOME/.local/share/fnm
+fnm env --use-on-cd --shell fish | source

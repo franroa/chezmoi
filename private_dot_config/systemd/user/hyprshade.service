@@ -1,0 +1,9 @@
+[Unit]
+Description=Apply screen filter
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'sleep 3 && /home/froa/.local/share/pipx/venvs/hyprshade/bin/hyprshade auto'
+
+[Install]
+WantedBy=graphical-session.target

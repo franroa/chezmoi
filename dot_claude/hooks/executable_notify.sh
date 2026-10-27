@@ -2,15 +2,10 @@
 # Claude Code notifications for Hyprland
 # Usage: notify.sh <message> [sound_file]
 
-PLUGIN_ROOT="/home/froa/.claude/plugins/cache/claude-notifications-go/claude-notifications-go/1.38.0"
-ICON="${PLUGIN_ROOT}/claude_icon.png"
-
-# --- Suppress when workspace 1 is focused ---
-# If the user is already looking at workspace 1, skip the notification entirely.
-if command -v hyprctl &>/dev/null; then
-  active_ws=$(hyprctl activeworkspace -j 2>/dev/null | jq -r '.id // empty' 2>/dev/null)
-  [ "$active_ws" = "1" ] && exit 0
-fi
+# claude-notifications-go (the plugin this hook originally shipped with) has
+# since been uninstalled, taking its bundled icon/sound assets with it — fall
+# back to stock freedesktop/icon-theme assets instead of a dead path.
+ICON="utilities-terminal"
 
 # --- Git repo name ---
 repo_name=""
@@ -65,6 +60,17 @@ if command -v hyprctl &>/dev/null && command -v jq &>/dev/null; then
   fi
 fi
 
+# --- Suppress when this session's own terminal window is focused ---
+# Compares the *actual* active window address to the terminal window resolved
+# above, regardless of which workspace either lives on. (A prior version only
+# checked "is workspace 1 active", which both missed real focus on other
+# workspaces and false-suppressed on workspace 1 when some other window there
+# had focus.)
+if [ -n "$win_address" ] && command -v hyprctl &>/dev/null && command -v jq &>/dev/null; then
+  active_address=$(hyprctl activewindow -j 2>/dev/null | jq -r '.address // empty')
+  [ -n "$active_address" ] && [ "$active_address" = "$win_address" ] && exit 0
+fi
+
 # --- Build body ---
 message="${1:-Task completed}"
 context=""
@@ -76,7 +82,7 @@ body="$message"
 [ -n "$context" ] && body="${context}\n${message}"
 
 # --- Play sound (non-blocking) ---
-sound_file="${2:-${PLUGIN_ROOT}/sounds/task-complete.mp3}"
+sound_file="${2:-/usr/share/sounds/freedesktop/stereo/complete.oga}"
 if [ -f "$sound_file" ]; then
   ffplay -nodisp -autoexit -loglevel quiet "$sound_file" &>/dev/null &
 fi

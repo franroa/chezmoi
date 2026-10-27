@@ -1,0 +1,35 @@
+✓ BRUNO TREE-SITTER QUERIES SETUP COMPLETE
+
+Location: /home/froa/Projects/tools/tree-sitter-bruno/queries/
+
+Query files created:
+✓ highlights.scm    - Syntax highlighting for Bruno language
+✓ injections.scm    - Language injections (JSON, XML, GraphQL, JavaScript, Markdown, SPARQL)
+✓ locals.scm        - Variable definitions and references tracking
+✓ folds.scm         - Code folding support for all section types
+✓ indents.scm       - Proper indentation rules
+
+Neovim integration:
+✓ Updated /home/froa/.config/nvim/ftplugin/bruno.lua
+  - Automatically copies queries to ~/.config/nvim/queries/bruno/
+  - Runs on first Bruno file open
+
+Setup helpers in ftplugin directory:
+- setup_bruno_queries.sh  - Bash script for manual setup
+- setup_bruno_queries.lua - Lua script for manual setup
+- SETUP_BRUNO_QUERIES.md  - Setup documentation
+
+TO ACTIVATE:
+1. Open any .bru file in Neovim
+2. The ftplugin will automatically copy all queries
+
+OR manually run:
+mkdir -p ~/.config/nvim/queries/bruno && \
+cp /home/froa/Projects/tools/tree-sitter-bruno/queries/{highlights,injections,locals,folds,indents}.scm ~/.config/nvim/queries/bruno/
+
+FEATURES ENABLED:
+✓ Syntax highlighting with proper color groups
+✓ Language injection for code blocks
+✓ Variable tracking and LSP support
+✓ Code folding (Za, Zc, Zo in Neovim)
+✓ Proper indentation handling

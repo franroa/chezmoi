@@ -608,6 +608,9 @@ items:
       - name: User access (subscriptions + roles)
         key: p
         command: "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% ~/.config/tmux/scripts/show-user-access.sh"
+      - name: GitLab search (group-wide)
+        key: s
+        command: "command-prompt -p \"GitLab search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-search-popup.sh %%\\\"\""
   - separator: true
   - name: tmux-menus
     key: M

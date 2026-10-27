@@ -41,7 +41,6 @@ gl-secret-detection-report.json
 .aoe-worktrees
 
 # gctui (local GitLab pipeline TUI) per-repo artifacts
-.gitlab-ci.dynamic.yml
 .gctui.yml
 env-pipeline.local.yml
 thisversion.env
@@ -53,3 +52,5 @@ tfplan.json
 
 FRAN_NOTES.md
 CLAUDE.local.md
+settings.local.json
+.gitlab-ci.dynamic.yml

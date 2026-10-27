@@ -1,0 +1,21 @@
+return {
+  "cuducos/yaml.nvim",
+  ft = { "yaml", "taskfile" }, -- optional
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "folke/snacks.nvim", -- optional
+    "nvim-telescope/telescope.nvim", -- optional
+    "ibhagwan/fzf-lua", -- optional
+  },
+  {
+    "someone-stole-my-name/yaml-companion.nvim",
+    requires = {
+      { "neovim/nvim-lspconfig" },
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-telescope/telescope.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("yaml_schema")
+    end,
+  },
+}

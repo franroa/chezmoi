@@ -1,0 +1,340 @@
+# [None]
+# [WHY]:
+
+
+
+
+
+
+
+
+
+
+; Please enter the commit message for your changes. Lines starting
+; with ';' will be ignored, and an empty message aborts the commit.
+;
+; On branch feature/P0004-182_Collect_metrics_with_the_new_exporter
+; Changes to be committed:
+;	new file:   after/lsp/roslyn.lua
+;
+; Changes not staged for commit:
+;	modified:   README.md
+;	deleted:    after/lsp/roslyn.lua
+;	modified:   ftplugin/gitcommit.lua
+;	deleted:    ftplugin/vua.lua
+;	modified:   init.lua
+;	modified:   lazy-lock.json
+;	modified:   lazyvim.json
+;	deleted:    lua/_old_plugins/lsp-saga.lua
+;	deleted:    lua/_old_plugins/treesitter-textsubjects.lua
+;	deleted:    lua/_plugins/copilot-chat.lu
+;	deleted:    lua/_plugins/extend_luasnip.lu
+;	deleted:    lua/_plugins/extends_tokyonight.lua
+;	deleted:    lua/_plugins/extends_trouble.lua
+;	deleted:    lua/_plugins/extends_ts_comments.lua
+;	deleted:    lua/_plugins/fzf.lua
+;	deleted:    lua/_plugins/gitlab.lua
+;	deleted:    lua/_plugins/hardtime.lu
+;	deleted:    lua/_plugins/img_clip.lu
+;	deleted:    lua/_plugins/leetcode.lua
+;	deleted:    lua/_plugins/markview.lua
+;	deleted:    lua/_plugins/matchup.lua
+;	deleted:    lua/_plugins/navigator.lu
+;	deleted:    lua/_plugins/nvim-scissors.lua
+;	deleted:    lua/_plugins/precognition.lua
+;	deleted:    lua/_plugins/spider.lua
+;	deleted:    lua/_plugins/transfer.lua
+;	deleted:    lua/_plugins/ui_dropbar.lua
+;	deleted:    lua/_plugins/ui_smartcolumn.lua
+;	deleted:    lua/_plugins/z_folding_nvim-ufo.lu
+;	modified:   lua/config/autocmds.lua
+;	modified:   lua/config/keymaps.lua
+;	modified:   lua/config/lazy.lua
+;	modified:   lua/config/options.lua
+;	modified:   lua/overseer/template/dotnet/build.lua
+;	modified:   lua/overseer/template/dotnet/run.lua
+;	deleted:    lua/plugins/NOT_YET_actions-preview.lua
+;	deleted:    lua/plugins/NOT_YET_fugitive-gitlab.lu
+;	deleted:    lua/plugins/NOT_YET_vim-fugitive.lua
+;	deleted:    lua/plugins/agitator.lua
+;	deleted:    lua/plugins/alternate.lua
+;	deleted:    lua/plugins/angular.lua
+;	deleted:    lua/plugins/avante.lu
+;	deleted:    lua/plugins/color_picker.lua
+;	deleted:    lua/plugins/colorizer.lua
+;	deleted:    lua/plugins/coop.lua
+;	deleted:    lua/plugins/cursor-text-objects.lu
+;	deleted:    lua/plugins/demicolon.lua
+;	deleted:    lua/plugins/diagram.lua
+;	modified:   lua/plugins/diff-view.lua
+;	deleted:    lua/plugins/disable-indent-blankline.lua
+;	deleted:    lua/plugins/disable_dashboard.lu
+;	deleted:    lua/plugins/dooing.lua
+;	deleted:    lua/plugins/dotnet.lua
+;	modified:   lua/plugins/easy-dotnet.lua
+;	deleted:    lua/plugins/ecolog.lua
+;	deleted:    lua/plugins/extends-mini-animate.lua
+;	deleted:    lua/plugins/extends_blink.lu
+;	deleted:    lua/plugins/extends_bufferline.lu
+;	deleted:    lua/plugins/extends_bufferline.lua
+;	modified:   lua/plugins/extends_conform.lua
+;	deleted:    lua/plugins/extends_copilot_chat.lua
+;	modified:   lua/plugins/extends_edgy.lua
+;	deleted:    lua/plugins/extends_fzf.lua
+;	deleted:    lua/plugins/extends_gitsigns.lu
+;	deleted:    lua/plugins/extends_kulala.lua
+;	modified:   lua/plugins/extends_lsp_config.lua
+;	modified:   lua/plugins/extends_lualine.lua
+;	modified:   lua/plugins/extends_mason.lua
+;	modified:   lua/plugins/extends_mini_icons.lua
+;	modified:   lua/plugins/extends_neotest.lua
+;	modified:   lua/plugins/extends_neotree.lua
+;	deleted:    lua/plugins/extends_nvim-cmp.lua
+;	modified:   lua/plugins/extends_overseer.lua
+;	deleted:    lua/plugins/extends_smear-cursor.lu
+;	modified:   lua/plugins/extends_snacks.lua
+;	deleted:    lua/plugins/extends_telescope.l
+;	deleted:    lua/plugins/extends_telescope.lua
+;	modified:   lua/plugins/extends_treesitter.lua
+;	deleted:    lua/plugins/extends_which_key.lua
+;	deleted:    lua/plugins/flog.lua
+;	deleted:    lua/plugins/foldtext.lu
+;	deleted:    lua/plugins/gh_actions.lua
+;	deleted:    lua/plugins/git-fugitivediff.lua
+;	deleted:    lua/plugins/git-messenger.lua
+;	deleted:    lua/plugins/git-worktree.lu
+;	deleted:    lua/plugins/glances.lua
+;	deleted:    lua/plugins/goto-preview.lua
+;	modified:   lua/plugins/grapple.lua
+;	modified:   lua/plugins/helm_ls.lu
+;	deleted:    lua/plugins/helpview.lu
+;	deleted:    lua/plugins/hydra.lu
+;	deleted:    lua/plugins/image.lu
+;	deleted:    lua/plugins/kube-utils.lua
+;	deleted:    lua/plugins/kubectl.lua
+;	deleted:    lua/plugins/kubernetes_vimkubectl.lua
+;	deleted:    lua/plugins/kubernetes_yaml.lua
+;	deleted:    lua/plugins/last_place.lu
+;	deleted:    lua/plugins/lazyclip.lua
+;	deleted:    lua/plugins/lazydo.lua
+;	deleted:    lua/plugins/local_plugins.lu
+;	deleted:    lua/plugins/lsp_tiny_code_action.lua
+;	deleted:    lua/plugins/lualine_battery.lua
+;	deleted:    lua/plugins/magazine.lu
+;	deleted:    lua/plugins/markdown-org.lua
+;	deleted:    lua/plugins/menu.lua
+;	deleted:    lua/plugins/mini-diff.lua
+;	deleted:    lua/plugins/mini-git.lua
+;	deleted:    lua/plugins/mini_map.lu
+;	deleted:    lua/plugins/mini_misc.lua
+;	deleted:    lua/plugins/mini_snippets.lua
+;	deleted:    lua/plugins/minimap.lua
+;	deleted:    lua/plugins/mundo.lua
+;	deleted:    lua/plugins/music.lua
+;	deleted:    lua/plugins/neo-scroll.lu
+;	deleted:    lua/plugins/neo-scroll.lua
+;	deleted:    lua/plugins/neodim.lua
+;	deleted:    lua/plugins/neogit.lua
+;	deleted:    lua/plugins/neorg.lua
+;	deleted:    lua/plugins/neotree_bufferline.lu
+;	deleted:    lua/plugins/netman.lua
+;	deleted:    lua/plugins/octohub.lua
+;	modified:   lua/plugins/omnisharp.lua
+;	deleted:    lua/plugins/other.lua
+;	deleted:    lua/plugins/persisted.lu
+;	modified:   lua/plugins/projectionist.lua
+;	deleted:    lua/plugins/px-to-rem.lua
+;	deleted:    lua/plugins/quicker.lua
+;	deleted:    lua/plugins/quicknotes.lua
+;	deleted:    lua/plugins/repl.lua
+;	deleted:    lua/plugins/resession.lu
+;	deleted:    lua/plugins/rolsyn.lua
+;	modified:   lua/plugins/roslyn.lu
+;	deleted:    lua/plugins/scope.lua
+;	deleted:    lua/plugins/screenkey.lua
+;	deleted:    lua/plugins/scroll-it.lua
+;	deleted:    lua/plugins/smart-scrolloff.lua
+;	deleted:    lua/plugins/ssr.lua
+;	deleted:    lua/plugins/symbol-usage.lu
+;	deleted:    lua/plugins/telescope_undo.lua
+;	deleted:    lua/plugins/template.lua
+;	deleted:    lua/plugins/terminal_toggleterm.lua
+;	deleted:    lua/plugins/timerly.lua
+;	modified:   lua/plugins/tiny-inline-diagnostics.lua
+;	deleted:    lua/plugins/tiny_unit.lua
+;	deleted:    lua/plugins/toggle.lua
+;	deleted:    lua/plugins/transparent.lu
+;	deleted:    lua/plugins/treesitter-sorter.lua
+;	deleted:    lua/plugins/treewalker.lua
+;	deleted:    lua/plugins/typewritter.lua
+;	deleted:    lua/plugins/typr.lua
+;	deleted:    lua/plugins/ui_cursor_modes.lu
+;	deleted:    lua/plugins/ui_cursor_modicator.lua
+;	deleted:    lua/plugins/ui_zenmode.lua
+;	deleted:    lua/plugins/vim_rip_substitute.lua
+;	modified:   package-lock.json
+;	modified:   package.json
+;	modified:   update_git_branch.sh
+;
+; Untracked files:
+;	--help
+;	.devcontainers.json
+;	.luarc.json
+;	.nvim/
+;	Session.vim
+;	Untitled
+;	addvue
+;	after/lsp/asfdriver.lu
+;	after/lsp/oxide.lu
+;	after/lsp/river.lua
+;	after/lsp/roslyn.lu
+;	after/lsp/systemd.lua
+;	after/lsp/ts.lu
+;	after/lsp/ty.lu
+;	after/lsp/typescript.lua
+;	after/lsp/vtsls.lu
+;	after/queries/
+;	ama-metrics-settings-configmap-v1.yaml
+;	asdfasdfadsfadsf
+;	autoload/
+;	calendar
+;	chroma-data/
+;	config-nginx.alloy
+;	cuda-repo-ubuntu2204-12-8-local_12.8.1-570.124.06-1_amd64.deb
+;	doc/
+;	dsf
+;	ftdetect/alloy.vim
+;	ftdetect/json.tmpl.vim
+;	ftdetect/markdown.vim
+;	ftdetect/service.vim
+;	ftdetect/taskfile.vi
+;	ftdetect/tpl.vim
+;	ftplugin/alloy.lua
+;	ftplugin/alloy.vi
+;	ftplugin/cs.lua
+;	ftplugin/help.lua
+;	ftplugin/json.tmpl.lua
+;	ftplugin/markdown.lua
+;	ftplugin/python.lua
+;	ftplugin/qf.lua
+;	ftplugin/terraform.lua
+;	ftplugin/vue.lua
+;	git-fuzzy/
+;	google-chrome-stable_current_amd64.deb
+;	init.ts
+;	krr-report-ca.csv
+;	krr-report-eu.csv
+;	krr-report-us.csv
+;	lua/Untitled
+;	lua/__workplugins/
+;	lua/_old_plugins/plugins
+;	lua/_plugins/copilot-chat.lua
+;	lua/auxplugins/
+;	lua/blink_sources/
+;	lua/functions/_pluginbck/
+;	lua/functions/alloy.lua
+;	lua/functions/ansible.lua
+;	lua/functions/autofold.lua
+;	lua/functions/backup.lua
+;	lua/functions/colors.lua
+;	lua/functions/drawbox.lua
+;	lua/functions/fff.lua
+;	lua/functions/fold_icons.lua
+;	lua/functions/gitlab.lua
+;	lua/functions/helper_funcs.lua
+;	lua/functions/markdown_folding.lua
+;	lua/functions/snacks_pickers.lua
+;	lua/functions/terraform.lua
+;	lua/functions/test.yaml
+;	lua/functions/test_new.yaml
+;	lua/functions/treesitter_ansible.lua
+;	lua/functions/treesitter_autofold.lua
+;	lua/functions/typescript/
+;	lua/functions/venv-selector.lua
+;	lua/functions/yaml-additional-schemas.lua
+;	lua/local_plugins/alloy2_bck/
+;	lua/local_plugins/alloy_bck/
+;	lua/local_plugins/alloyy/
+;	lua/local_plugins/codecompanion.nvim/
+;	lua/local_plugins/neotest-vitest/
+;	lua/local_plugins/neotest-vstest/
+;	lua/local_plugins/oil.nvim/
+;	lua/local_plugins/overseer.nvim/
+;	lua/local_plugins/test_cursor_fix.lua
+;	lua/local_plugins/vim-alloy/
+;	lua/overseer/template/alloy/
+;	lua/overseer/template/ansible/
+;	lua/overseer/template/docker/
+;	lua/overseer/template/gitlab/
+;	lua/overseer/template/ssh/
+;	lua/overseer/template/taskfile/
+;	lua/overseer/template/terraform/
+;	lua/plugins/alloy.lua
+;	lua/plugins/ansible.lu
+;	lua/plugins/claudecode.lu
+;	lua/plugins/codecompanion.lua
+;	lua/plugins/dad-bod-ui-yank.lua
+;	lua/plugins/daily-bible.lua
+;	lua/plugins/dap-breakpoints.lua
+;	lua/plugins/difft.lua
+;	lua/plugins/direnv.lua
+;	lua/plugins/endpoint.lua
+;	lua/plugins/extends-nvim-lint.lua
+;	lua/plugins/extends_blink.lua
+;	lua/plugins/extends_flash.lua
+;	lua/plugins/extends_snippets.lu
+;	lua/plugins/extends_telescope.lu
+;	lua/plugins/extends_tokyonight.lu
+;	lua/plugins/extends_treesitter_obj.lu
+;	lua/plugins/extends_trouble.lu
+;	lua/plugins/extends_ts_comments.lua
+;	lua/plugins/fff.lua
+;	lua/plugins/fyler.lua
+;	lua/plugins/i18n.lua
+;	lua/plugins/lensline.lua
+;	lua/plugins/live-rename.lua
+;	lua/plugins/local_plugins.lua
+;	lua/plugins/markview.lua
+;	lua/plugins/megatoggler.lua
+;	lua/plugins/mssql.lua
+;	lua/plugins/neovim-tips.lua
+;	lua/plugins/no_neck_pain.lua
+;	lua/plugins/nvim-scissors.lua
+;	lua/plugins/oil.lua
+;	lua/plugins/opencode-context.lu
+;	lua/plugins/opencode.lua
+;	lua/plugins/perfanno.lua
+;	lua/plugins/python.lu
+;	lua/plugins/sidekick.lu
+;	lua/plugins/snipbrowzurr.lua
+;	lua/plugins/ts_better_errors.lua
+;	lua/plugins/ts_errors.lua
+;	lua/plugins/ts_format_errors.lu
+;	lua/plugins/ts_typechecking.lua
+;	lua/plugins/ts_worksheet.lua
+;	lua/plugins/vectorcode.lua
+;	lua/toolbox/
+;	lua/tsyl_plugins/
+;	markdown.yaml
+;	neovim_tips/
+;	queries/
+;	screw_notes_20250930_155611.json
+;	snippets/
+;	table.html
+;	table.md
+;	test.alloy
+;	test.json
+;	test.lua
+;	test.md
+;	todo.md
+;
+; ------------------------ >8 ------------------------
+; Do not modify or remove the line above.
+; Everything below it will be ignored.
+diff --git c/after/lsp/roslyn.lua i/after/lsp/roslyn.lua
+new file mode 100644
+index 0000000..b8b0df8
+--- /dev/null
++++ i/after/lsp/roslyn.lua
+@@ -0,0 +1 @@
++vim.lsp.config("roslyn", {

@@ -1,0 +1,14 @@
+Name,CPU Requests,Memory Requests
+mimir-distributor,(-1.984) 2.0 -> 16m,(-3928Mi) 4096Mi -> 168Mi
+mimir-gateway,(-990m) 1.0 -> 10m,(-412Mi) 512Mi -> 100Mi
+mimir-querier,(-1.99) 2.0 -> 10m,(-3831Mi) 4096Mi -> 265Mi
+mimir-query-frontend,(-1.99) 2.0 -> 10m,(-1817Mi) 2048Mi -> 231Mi
+mimir-ruler,(-979m) 1.0 -> 21m,(-1897Mi) 2048Mi -> 151Mi
+loki-results-cache,(-490m) 500m -> 10m,(-1129Mi) 1229Mi -> 100Mi
+mimir-compactor,(-990m) 1.0 -> 10m,(-1301Mi) 1536Mi -> 235Mi
+mimir-ingester-zone-a,(-3.484) 3.5 -> 16m,(-6368Mi) 8192Mi -> 1824Mi
+mimir-ingester-zone-b,(-3.484) 3.5 -> 16m,(-6307Mi) 8192Mi -> 1885Mi
+mimir-ingester-zone-c,(-3.486) 3.5 -> 14m,(-6383Mi) 8192Mi -> 1809Mi
+mimir-store-gateway-zone-a,(-990m) 1.0 -> 10m,(-1332Mi) 1536Mi -> 204Mi
+mimir-store-gateway-zone-b,(-990m) 1.0 -> 10m,(-1340Mi) 1536Mi -> 196Mi
+mimir-store-gateway-zone-c,(-990m) 1.0 -> 10m,(-1330Mi) 1536Mi -> 206Mi

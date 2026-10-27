@@ -1,0 +1,24 @@
+return {
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "nvim-telescope/telescope.nvim", -- optional
+      "sindrets/diffview.nvim", -- optional
+      "ibhagwan/fzf-lua",
+      {
+        "3rd/image.nvim",
+        opts = {
+          backend = "kitty",
+        },
+      },
+    },
+
+    opts = {
+      graph_style = "unicode",
+    },
+    vscode = false,
+    cond = vim.g.started_by_firenvim == nil,
+    config = true,
+  },
+}

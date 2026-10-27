@@ -1,0 +1,176 @@
+-- River LSP Configuration for Neovim
+-- Adapted to your existing server structure
+-- Uses the compiled server.js from river_lsp/server/out/
+
+local lsp_server_path = vim.fn.expand("/home/froa/Projects/alloy/river_lsp/server")
+local lspconfig = require("lspconfig")
+
+-- Configure River LSP
+return {
+  filetypes = {
+    "alloy",
+    "markdown",
+    "alloy_vertical_diagram",
+  },
+  name = "river",
+  cmd = {
+    "node",
+    lsp_server_path .. "/out/server.js",
+    -- "npx",
+    -- "ts-node",
+    -- -- 1. Use the FULL, absolute path to the script
+    -- "--esm"
+    -- lsp_server_path .. "/src/server.ts",
+    -- "--stdio",
+  },
+  -- Root directory detection
+  -- root_dir = function(fname)
+  --   local util = require("lspconfig.util")
+  --   if type(fname) ~= "string" then
+  --     fname = vim.api.nvim_buf_get_name(0)
+  --   end
+  --   if not fname or fname == "" then
+  --     return nil
+  --   end
+  --   return util.root_pattern("alloy", ".git")(fname) or util.path.dirname(fname)
+  -- end,
+  settings = {
+    alloyLsp = {
+      symbols = {
+        enableFuzzySearch = true,
+        enableHierarchy = true,
+        maxSymbolResults = 150,
+        enableRelationships = true,
+      },
+      performance = {
+        maxFiles = 1000,
+        enableCaching = true,
+        maxCacheSize = 500,
+      },
+      diagnostics = {
+        enabled = true,
+        severity = {
+          unknownComponent = "error",
+          unknownBlock = "error",
+          missingRequiredArgument = "error",
+          unknownArgument = "warning",
+          duplicateComponent = "error",
+          componentReference = "error",
+          crossScopeReference = "warning",
+          invalidArgumentType = "warning",
+          deprecatedComponent = "warning",
+          unusedComponent = "info",
+          circularDependency = "error",
+        },
+        validation = {
+          enableWorkspaceValidation = true,
+          enableCrossScopeValidation = true,
+          enableDuplicateDetection = true,
+          enableReferenceValidation = true,
+          enableTypeValidation = true,
+          enableDeprecationCheck = true,
+          enableUnusedDetection = false,
+          enableCircularDependencyCheck = true,
+          enableSyntaxValidation = true,
+        },
+        throttle = {
+          workspaceDiagnosticsDelay = 1000,
+          documentDiagnosticsDelay = 300,
+          maxConcurrentValidations = 5,
+        },
+        filtering = {
+          excludePatterns = { "**/node_modules/**", "**/.git/**", "**/dist/**" },
+          includePatterns = { "**/*.alloy" },
+          maxDiagnosticsPerFile = 100,
+          maxDiagnosticsTotal = 1000,
+        },
+      },
+    },
+  },
+  on_attach = function(client, bufnr)
+    -- 🎹 Enhanced keybindings for your LSP features
+    local opts = { buffer = bufnr, noremap = true, silent = true }
+
+    -- Document symbols (outline) - hierarchical view
+    vim.keymap.set("n", "<leader>lo", vim.lsp.buf.document_symbol, opts)
+
+    -- Workspace symbol search - fuzzy enhanced
+    vim.keymap.set("n", "<leader>lS", vim.lsp.buf.workspace_symbol, opts)
+
+    -- Hover (enhanced with symbol information)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+    -- Go to definition
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+
+    -- Find references
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+
+    -- Rename symbol
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+
+    -- Code actions
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+    -- Format document
+    vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, opts)
+
+    -- 🚀 Your custom LSP commands (log to console, no quickfix)
+    vim.keymap.set("n", "<leader>lr", function()
+      vim.lsp.buf.execute_command({
+        command = "alloy.findRelatedSymbols",
+        arguments = { vim.fn.expand("<cword>") },
+      })
+    end, opts)
+
+    vim.keymap.set("n", "<leader>la", function()
+      vim.lsp.buf.execute_command({
+        command = "alloy.analyzeSymbolUsage",
+      })
+    end, opts)
+
+    vim.keymap.set("n", "<leader>lt", function()
+      vim.lsp.buf.execute_command({
+        command = "alloy.filterSymbolsByType",
+        arguments = { vim.lsp.protocol.SymbolKind.Class },
+      })
+    end, opts)
+
+    -- Refresh diagnostics
+    vim.keymap.set("n", "<leader>ld", function()
+      vim.lsp.buf.execute_command({
+        command = "alloy.refreshDiagnostics",
+      })
+    end, opts)
+
+    -- Debug information
+    print("🚀 River LSP attached successfully!")
+    print("📁 Root directory: " .. (client.config.root_dir or "Not set"))
+    print("🔧 Enhanced features enabled:")
+    print("  • Fuzzy symbol search")
+    print("  • Hierarchical symbols")
+    print("  • Component relationships")
+    print("  • Advanced hover information")
+    print("  • Performance optimizations")
+    print("  • Custom LSP commands (log to console, no quickfix)")
+  end,
+  on_init = function(client)
+    print("🔌 River LSP initialized")
+    print("📂 Root directory: " .. (client.config.root_dir or "Not detected"))
+  end,
+  cwd = lsp_server_path,
+  capabilities = vim.lsp.protocol.make_client_capabilities(),
+}
+
+-- -- Auto-start LSP for .alloy files
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "alloy",
+--   callback = function()
+--     -- The LSP should auto-attach due to the filetypes configuration above
+--     -- If it doesn't work, you can manually start it with:
+--     -- :LspStart river
+--   end,
+-- })
+--
+-- print("📋 River LSP configuration loaded with your server path")
+-- print("💡 Open an .alloy file to test the enhanced features")

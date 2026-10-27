@@ -21,6 +21,29 @@ notify_cmd_shot="${notify_cmd_base} -i ${iDIR}/picture.png "
 notify_cmd_shot_win="${notify_cmd_base} -i ${iDIR}/picture.png "
 notify_cmd_NOT="notify-send -u low -i ${iDoR}/note.png "
 
+# Unfocused windows are translucent and dimmed (opacity rules + dim_inactive),
+# which lets the wallpaper tint the capture. Wrap grim so visible windows are
+# forced opaque and undimmed just for the grab, then restored.
+visible_windows() {
+    hyprctl -j clients | jq -r --argjson ws "$(hyprctl -j monitors | jq '[.[].activeWorkspace.id]')" \
+        '.[] | select(.mapped and (.hidden | not) and (.workspace.id as $w | $ws | index($w))) | .address'
+}
+set_capture_props() {
+    local value=$1 batch=""
+    for addr in $(visible_windows); do
+        batch+="dispatch setprop address:$addr opaque $value; dispatch setprop address:$addr no_dim $value; "
+    done
+    [[ -n "$batch" ]] && hyprctl --batch "$batch" >/dev/null
+}
+grim() {
+    set_capture_props 1
+    sleep 0.05
+    command grim "$@"
+    local rc=$?
+    set_capture_props unset
+    return $rc
+}
+
 # notify and view screenshot
 notify_view() {
     if [[ "$1" == "active" ]]; then

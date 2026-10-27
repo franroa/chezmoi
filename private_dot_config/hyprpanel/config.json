@@ -83,5 +83,6 @@
   "theme.bar.buttons.workspaces.available": "#514549",
   "blink.color1": "#322738",
   "blink.color2": "#9F5A7B",
-  "menus.dashboard.powermenu.avatar.image": "/home/froa/Downloads/11130102_10153887752951393_4491032512407988710_n.jpg"
+  "menus.dashboard.powermenu.avatar.image": "/home/froa/Downloads/11130102_10153887752951393_4491032512407988710_n.jpg",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "/home/froa/.config/hyprpanel/scripts/screenshot-menu.sh"
 }

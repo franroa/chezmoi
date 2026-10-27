@@ -19,7 +19,7 @@
 [alias]
 	st = status
 	co = checkout
-  cloneb = !git clone --bar
+  ; cloneb = !git clone --bar
 
 [delta]
     navigate = true

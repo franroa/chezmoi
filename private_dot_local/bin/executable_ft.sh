@@ -32,7 +32,7 @@ fi
 session="ssh-$host"
 # On ssh failure keep the tmux pane open so the error is visible instead of the
 # session vanishing instantly.
-cmd="ssh -tt -o ConnectTimeout=10 -o StrictHostKeyChecking=no '$user@$host' || { ec=\$?; printf '\n[ft] ssh to %s failed (exit %s). Press Enter to close...' '$host' \"\$ec\"; read _; }"
+cmd="ssh -tt -o ConnectTimeout=10 -o StrictHostKeyChecking=no '$host' || { ec=\$?; printf '\n[ft] ssh to %s failed (exit %s). Press Enter to close...' '$host' \"\$ec\"; read _; }"
 
 echo "Connecting to $user@$host in tmux session '$session'..." >&2
-ssh_tmux_launch "$session" "$pass" "$cmd"
+SSH_COPY_PASSWORD=1 ssh_tmux_launch "$session" "$pass" "$cmd"
