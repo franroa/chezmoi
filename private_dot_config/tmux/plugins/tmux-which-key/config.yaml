@@ -611,6 +611,32 @@ items:
       - name: GitLab search (group-wide)
         key: s
         command: "command-prompt -p \"GitLab search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-search-popup.sh %%\\\"\""
+      - name: GitLab semantic search (current project)
+        key: S
+        command: "command-prompt -p \"Semantic search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-semantic-popup.sh #{pane_current_path} %%\\\"\""
+      - name: GitLab semantic search (in directory)
+        key: d
+        command: "command-prompt -p \"Directory:,Semantic search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-semantic-popup.sh #{pane_current_path} -d=%1 %2\\\"\""
+      - name: GitLab Duo CLI
+        key: x
+        command: "display-popup -E -d \"#{pane_current_path}\" -h 90% -w 90% \"glab duo cli || read _\""
+      - separator: true
+      - name: MRs waiting on my review (group-wide)
+        key: r
+        command: "display-popup -E -h 80% -w 90% \"~/.config/tmux/scripts/overseer-mrs.sh reviewer\""
+      - name: My open MRs (group-wide)
+        key: m
+        command: "display-popup -E -h 80% -w 90% \"~/.config/tmux/scripts/overseer-mrs.sh author\""
+      - separator: true
+      - name: Firing Grafana alerts
+        key: a
+        command: "display-popup -E -h 80% -w 90% ~/.config/tmux/scripts/grafana-alerts.sh"
+      - name: Unhealthy pods (current context)
+        key: k
+        command: "display-popup -E -h 80% -w 95% ~/.config/tmux/scripts/kube-unhealthy.sh"
+      - name: Jump to local repo
+        key: j
+        command: "display-popup -E -h 70% -w 80% ~/.config/tmux/scripts/repo-jump.sh"
   - separator: true
   - name: tmux-menus
     key: M

@@ -33,15 +33,31 @@ for w in $(tmux list-windows -t "$target" -F '#{window_id}'); do
   tmux set-option -w -t "$w" window-style "bg=$color"
   tmux set-option -w -t "$w" window-active-style "bg=$color"
 done
+# status line follows the cluster color too (it otherwise uses the terminal default bg)
+tmux set-option -t "$target" status-style "bg=$color"
 tmux set-hook -t "$target" after-new-window "run-shell -b '$HOME/.config/tmux/scripts/kube-switch.sh -t $target'"
 
-# k9s: restart on the new context
-k9s=$(tmux list-panes -t "$target" -s -F $'#{pane_id}\t#{@role}\t#{pane_current_command}' | awk -F'\t' '$2=="k9s" && $3=="k9s" {print $1; exit}')
-if [ -n "$k9s" ]; then
-  tmux send-keys -t "$k9s" C-c
-  sleep 0.3
-  tmux send-keys -t "$k9s" k9s Enter
+# claude: its process env is frozen at launch (and its pane predates this script),
+# so inject through the project's settings.local.json, which claude re-reads live
+dir=$("$HOME/.config/tmux/scripts/workspace-dir.sh" -t "$target")
+ns=$(KUBECONFIG="$link" kubectl config view --minify -o jsonpath='{..namespace}' 2>/dev/null)
+if [ -d "$dir" ] && [ "$dir" != "$HOME" ]; then
+  f="$dir/.claude/settings.local.json"
+  mkdir -p "$dir/.claude"
+  [ -s "$f" ] || echo '{}' > "$f"
+  tmp=$(mktemp "$f.XXXXXX") && jq --arg c "$cluster" --arg n "$ns" --arg k "$link" \
+    '.env = ((.env // {}) + {K8S_CLUSTER: $c, K8S_NAMESPACE: $n, KUBECONFIG: $k})' "$f" > "$tmp" \
+    && mv "$tmp" "$f" || rm -f "$tmp"
 fi
+
+# k9s: restart every k9s pane on the new context (tagged by @role or running k9s)
+for k9s in $(tmux list-panes -t "$target" -s -F $'#{pane_id}\t#{@role}\t#{pane_current_command}' | awk -F'\t' '$2=="k9s" || $3=="k9s" {print $1}'); do
+  case "$(tmux display -p -t "$k9s" '#{pane_current_command}')" in
+    bash|zsh|fish|sh|dash) ;;                 # app already exited: leave the shell alone
+    *) tmux send-keys -t "$k9s" C-c; sleep 0.3 ;;
+  esac
+  tmux send-keys -t "$k9s" k9s Enter
+done
 
 # wake fish shells (see __tmux_kube_sync in config.fish)
 command -v fish >/dev/null && fish -c "set -U __tmux_kube_rev $RANDOM$RANDOM" 2>/dev/null

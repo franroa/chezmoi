@@ -56,7 +56,7 @@ New "c" "neww -c #{pane_current_path}" \
 Rotate "o" "rotatew ; show-wk-menu #{@wk_menu_windows}" \
 "Rotate reverse" "O" "rotatew -D ; show-wk-menu #{@wk_menu_windows}" \
 "" \
-Rename "R" "command-prompt -I \"#W\" \"renamew -- \\"%%\\"\"" \
+Rename "R" "command-prompt -I \"#W\" \"renamew -- \\\"%%\\\"\"" \
 Kill "X" "confirm -p \"Kill window #W? (y/n)\" killw" \
 "" \
 "+Worktrees" "W" "show-wk-menu #{@wk_menu_worktrees}"'
@@ -156,7 +156,7 @@ set -g @wk_menu_gitlab \
 '"Open repo" "O" "run-shell \"~/.config/tmux/scripts/glab-open.sh repo #{pane_current_path}\"" \
 "Latest pipeline" "P" "run-shell \"~/.config/tmux/scripts/glab-open.sh pipeline #{pane_current_path}\"" \
 "Pipelines list" "I" "run-shell \"~/.config/tmux/scripts/glab-open.sh pipelines-list #{pane_current_path}\"" \
-"Pipeline TUI" "C" "display-popup -E -d \"#{pane_current_path}\" -h 85% -w 85% \"fish -c \\"glab ci view\\"\"" \
+"Pipeline TUI" "C" "display-popup -E -d \"#{pane_current_path}\" -h 85% -w 85% \"fish -c \\\"glab ci view\\\"\"" \
 "" \
 "CI status" "S" "display-popup -E -d \"#{pane_current_path}\" -h 50% -w 80% \"glab ci status 2>&1; echo; read _\"" \
 "MR list" "L" "display-popup -E -d \"#{pane_current_path}\" -h 50% -w 80% \"glab mr list 2>&1; echo; read _\"" \
@@ -246,7 +246,7 @@ set -g @wk_menu_logging \
 
 set -g @wk_menu_tools \
 'FZF "f" "run-shell -b ~/.config/tmux/plugins/tmux-fzf/main.sh" \
-Extrakto "e" "run-shell \"\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\" \\"#{pane_id}\\"\"" \
+Extrakto "e" "run-shell \"\\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\\" \\\"#{pane_id}\\\"\"" \
 1Password "u" "split-window -l 10 ~/.config/tmux/plugins/tmux-1password/scripts/main.sh #{pane_id}" \
 "Scratch terminal" "g" "display-popup -E -d \"#{pane_current_path}\" -w 80% -h 80%" \
 "" \
@@ -258,7 +258,17 @@ Extrakto "e" "run-shell \"\\"~/.config/tmux/plugins/extrakto/scripts/open.sh\\" 
 
 set -g @wk_menu_overseer \
 '"User access (subscriptions + roles)" "p" "display-popup -E -d \"#{pane_current_path}\" -w 90% -h 75% ~/.config/tmux/scripts/show-user-access.sh" \
-"GitLab search (group-wide)" "s" "command-prompt -p \"GitLab search:\" \"run-shell \\"~/.config/tmux/scripts/glab-search-popup.sh %%\\"\""'
+"GitLab search (group-wide)" "s" "command-prompt -p \"GitLab search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-search-popup.sh %%\\\"\"" \
+"GitLab semantic search (current project)" "S" "command-prompt -p \"Semantic search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-semantic-popup.sh #{pane_current_path} %%\\\"\"" \
+"GitLab semantic search (in directory)" "d" "command-prompt -p \"Directory:,Semantic search:\" \"run-shell \\\"~/.config/tmux/scripts/glab-semantic-popup.sh #{pane_current_path} -d=%1 %2\\\"\"" \
+"GitLab Duo CLI" "x" "display-popup -E -d \"#{pane_current_path}\" -h 90% -w 90% \"glab duo cli || read _\"" \
+"" \
+"MRs waiting on my review (group-wide)" "r" "display-popup -E -h 80% -w 90% \"~/.config/tmux/scripts/overseer-mrs.sh reviewer\"" \
+"My open MRs (group-wide)" "m" "display-popup -E -h 80% -w 90% \"~/.config/tmux/scripts/overseer-mrs.sh author\"" \
+"" \
+"Firing Grafana alerts" "a" "display-popup -E -h 80% -w 90% ~/.config/tmux/scripts/grafana-alerts.sh" \
+"Unhealthy pods (current context)" "k" "display-popup -E -h 80% -w 95% ~/.config/tmux/scripts/kube-unhealthy.sh" \
+"Jump to local repo" "j" "display-popup -E -h 70% -w 80% ~/.config/tmux/scripts/repo-jump.sh"'
 
 set -g @wk_menu_root \
 'Run "space" command-prompt \

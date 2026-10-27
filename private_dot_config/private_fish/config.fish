@@ -241,7 +241,11 @@ end
 
 # C-b K in tmux re-links this session's kubeconfig and bumps this variable
 function __tmux_kube_sync --on-variable __tmux_kube_rev
-    string match -q -- "$HOME/.kube/tmux/*" "$KUBECONFIG"; or return
+    set -q TMUX; or return
+    # panes created before the first switch carry a stale KUBECONFIG: take the session's
+    set -l kc (tmux show-environment KUBECONFIG 2>/dev/null | string replace -r '^KUBECONFIG=' '')
+    string match -q -- "$HOME/.kube/tmux/*" "$kc"; or return
+    set -gx KUBECONFIG $kc
     change_kubernetes_cluster_variable
     change_kubernetes_ns_variable
     change_nvim_abbreviation

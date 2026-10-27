@@ -76,11 +76,14 @@ display -p '[tmux-which-key] Done'
 
 def add_quotes(s: str) -> str:
     '''Wraps s in quotes if it has any whitespace or special chars, escaping
-    existing double-quotes.'''
+    existing backslashes and double-quotes.'''
     if all(c.isalnum() or c in ['-', '_'] for c in s):
         return s
 
-    return '"{}"'.format(s.replace('"', '\\"'))
+    # Backslashes must be escaped first, otherwise the backslash added in front
+    # of a nested double-quote would itself be left unescaped and tmux would
+    # read it as a literal backslash terminating the string.
+    return '"{}"'.format(s.replace('\\', '\\\\').replace('"', '\\"'))
 
 
 @dataclass
