@@ -219,7 +219,25 @@ function klookup
     kubectl delete pod temp
 end
 
+# a shell has a cluster only when kubie or the tmux session set its KUBECONFIG
+function __kube_managed
+    set -q KUBIE_ACTIVE; and return 0
+    string match -q -- "$HOME/.kube/tmux/*" "$KUBECONFIG"
+end
+
 function change_kubernetes_cluster_variable
+    if not __kube_managed
+        set -e K8S_CLUSTER
+        change_tsyl_env_from_cluster ""
+        if set -q TMUX
+            tmux set-option -p -t $TMUX_PANE -u window-style
+            tmux set-option -p -t $TMUX_PANE -u window-active-style
+            tmux set-option -p -t $TMUX_PANE -u @kube_color
+        else
+            printf '\033]111\007' # reset to the terminal's own background
+        end
+        return
+    end
     set -gx K8S_CLUSTER (kubectl config current-context 2>/dev/null)
     set -gx FOREGROUND_COLOR grey
     set -l color (~/.config/tmux/scripts/kube-color.sh $K8S_CLUSTER)
@@ -269,11 +287,11 @@ function __kube_apply
     change_nvim_abbreviation
 end
 
-# C-b K in tmux re-links this session's kubeconfig and bumps this variable
-function __tmux_kube_sync --on-variable __tmux_kube_rev
-    set -q TMUX; or return
-    # kubie shells own their KUBECONFIG; don't overwrite it with the tmux session's
-    set -q KUBIE_ACTIVE; and return
+function __tmux_kube_rev_now
+    tmux show-environment KUBE_REV 2>/dev/null | string replace -r '^KUBE_REV=' ''
+end
+
+function __tmux_kube_apply_session
     # panes created before the first switch carry a stale KUBECONFIG: take the session's
     set -l kc (tmux show-environment KUBECONFIG 2>/dev/null | string replace -r '^KUBECONFIG=' '')
     string match -q -- "$HOME/.kube/tmux/*" "$kc"; or return
@@ -281,7 +299,21 @@ function __tmux_kube_sync --on-variable __tmux_kube_rev
     __kube_apply
 end
 
+# C-b K bumps KUBE_REV on this session (kube-switch.sh); the shells of that session
+# apply the new cluster, other sessions see an unchanged rev and leave kubie shells alone
+function __tmux_kube_sync --on-variable __tmux_kube_rev
+    set -q TMUX; or return
+    set -l rev (__tmux_kube_rev_now)
+    test "$rev" = "$__kube_rev_seen"; and return
+    set -g __kube_rev_seen $rev
+    __tmux_kube_apply_session
+end
+
 function change_kubernetes_ns_variable
+    if not __kube_managed
+        set -e K8S_NAMESPACE
+        return
+    end
     set -gx K8S_NAMESPACE (kubectl config view --minify -o jsonpath='{..namespace}' 2>/dev/null)
 end
 
@@ -304,7 +336,9 @@ end
 function refresh_prompt --on-event fish_prompt
     if set -q __tmux_kube_rev_init
         set -e __tmux_kube_rev_init
-        __tmux_kube_sync
+        set -g __kube_rev_seen (__tmux_kube_rev_now)
+        # kubie shells keep the cluster kubie gave them; other panes take the session's
+        set -q KUBIE_ACTIVE; or __tmux_kube_apply_session
     end
     if not set -q __kube_seen_cfg; or test "$KUBECONFIG" != "$__kube_seen_cfg"
         __kube_apply
