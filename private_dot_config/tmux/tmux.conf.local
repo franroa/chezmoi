@@ -453,6 +453,9 @@ tmux_conf_uninstall_plugins_on_reload=true
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
 
+# Always use fish, regardless of the SHELL of the session that started the tmux server (GNOME vs Hyprland)
+set -g default-shell /usr/local/bin/fish
+
 set -g @plugin '27medkamal/tmux-session-wizard'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @vim_navigator_mapping_left "C-Left C-h"  # use C-h and C-Left
@@ -492,6 +495,14 @@ set-hook -ga client-detached 'run-shell "/home/froa/.local/bin/tt event detach #
 # instant status redraw on session/window switch (also formerly in hooks.conf)
 set-hook -ga client-session-changed 'refresh-client -S'
 set-hook -ga session-window-changed 'refresh-client -S'
+
+# -- repo sessions sidebar (prefix B) ------------------------------------------
+
+# Lists this repo's agent sessions (live first, status, unread highlighted).
+# Width: set -g @sidebar_width N (default 32). While on, the hook below opens
+# it in each session you switch to.
+bind B run-shell "~/.config/tmux/scripts/tmux-sidebar-toggle"
+set-hook -ga client-session-changed 'run-shell "~/.config/tmux/scripts/tmux-sidebar-toggle ensure"'
 
 # -- custom variables ----------------------------------------------------------
 

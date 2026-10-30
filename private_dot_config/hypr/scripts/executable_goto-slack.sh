@@ -1,14 +1,15 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Go to workspace 4 (Slack), focus, go to unreads
 
 ~/.local/bin/pypr hide "*" 2>/dev/null
-hyprctl dispatch workspace 4
+hl_workspace 4
 sleep 0.15
 
 slack_addr=$(hyprctl clients -j | jq -r '.[] | select(.class == "slack") | .address' | head -1)
 [[ -z "$slack_addr" ]] && exit 0
 
-hyprctl dispatch focuswindow "address:${slack_addr}"
+hl_focus_window "address:${slack_addr}"
 
 # Wait until Slack actually holds keyboard focus (up to 2s)
 for i in {1..20}; do

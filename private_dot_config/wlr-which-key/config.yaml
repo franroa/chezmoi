@@ -30,7 +30,7 @@ menu:
 
   - key: "period"
     desc: "󰓩 Scratch Buffer"
-    cmd: hyprctl dispatch togglespecialworkspace scratchpad
+    cmd: hyprctl dispatch "hl.dsp.workspace.toggle_special(\"scratchpad\")"
 
   - key: "slash"
     desc: "󰈞 Grep"
@@ -133,19 +133,19 @@ menu:
     submenu:
       - key: "c"
         desc: "󰆧 Center Float"
-        cmd: bash -c 'hyprctl dispatch togglefloating; hyprctl dispatch centerwindow'
+        cmd: bash -c 'hyprctl dispatch "hl.dsp.window.float({ action = \"toggle\" })"; hyprctl dispatch "hl.dsp.window.center()"'
       - key: "C"
         desc: "󰆧 Layout Center (pypr)"
         cmd: ~/.local/bin/pypr layout_center toggle
       - key: "p"
         desc: "󰹑 PiP Bottom-Right"
-        cmd: bash -c 'hyprctl dispatch togglefloating; hyprctl dispatch pin; hyprctl dispatch resizeactive exact 480 270; hyprctl dispatch moveactive exact 1420 790'
+        cmd: bash -c 'hyprctl dispatch "hl.dsp.window.float({ action = \"toggle\" })"; hyprctl dispatch "hl.dsp.window.pin()"; hyprctl dispatch "hl.dsp.window.resize({ x = 480, y = 270 })"; hyprctl dispatch "hl.dsp.window.move({ x = 1420, y = 790 })"'
       - key: "t"
         desc: "󰕮 Tabbed"
-        cmd: hyprctl dispatch togglegroup
+        cmd: hyprctl dispatch "hl.dsp.group.toggle()"
       - key: "f"
         desc: "󰊓 Fullscreen"
-        cmd: hyprctl dispatch fullscreen
+        cmd: hyprctl dispatch "hl.dsp.window.fullscreen({ mode = \"fullscreen\" })"
       - key: "z"
         desc: "󰍉 Zoom In (pypr)"
         cmd: ~/.local/bin/pypr zoom ++0.5
@@ -420,7 +420,7 @@ menu:
         cmd: ~/.local/bin/pypr hide "*"
       - key: "C"
         desc: "󰅖 Close All Scratchpads"
-        cmd: bash -c 'hyprctl clients -j | jq -r ".[] | select(.workspace.name | startswith(\"special:\")) | .address" | xargs -I{} hyprctl dispatch closewindow address:{}'
+        cmd: bash -c 'hyprctl clients -j | jq -r ".[] | select(.workspace.name | startswith(\"special:\")) | .address" | xargs -I{} hyprctl dispatch "hl.dsp.window.close({ window = \"address:{}\" })"'
       # Scratchpads
       - key: "t"
         desc: "󰆍 Terminal"
@@ -484,7 +484,7 @@ menu:
     submenu:
       - key: "q"
         desc: "󰗼 Quit Hyprland"
-        cmd: hyprctl dispatch exit
+        cmd: hyprctl dispatch "hl.dsp.exit()"
       - key: "l"
         desc: "󰌾 Lock Screen"
         cmd: swaylock -f -c 000000
@@ -562,13 +562,13 @@ menu:
         cmd: ~/.config/hypr/scripts/DndMode.sh
       - key: "g"
         desc: "󰓩 Toggle Gaps"
-        cmd: bash -c 'hyprctl keyword general:gaps_in 0; hyprctl keyword general:gaps_out 0'
+        cmd: hyprctl eval "hl.config({ general = { gaps_in = 0, gaps_out = 0 } })"
       - key: "G"
         desc: "󰓩 Restore Gaps"
-        cmd: bash -c 'hyprctl keyword general:gaps_in 5; hyprctl keyword general:gaps_out 5'
+        cmd: hyprctl eval "hl.config({ general = { gaps_in = 5, gaps_out = 5 } })"
       - key: "z"
         desc: "󰊓 Toggle Fullscreen"
-        cmd: hyprctl dispatch fullscreen
+        cmd: hyprctl dispatch "hl.dsp.window.fullscreen({ mode = \"fullscreen\" })"
 
   # +buffer (b)
   - key: "b"
@@ -576,16 +576,16 @@ menu:
     submenu:
       - key: "b"
         desc: "󰖯 Switch Buffer"
-        cmd: hyprctl dispatch workspace previous
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = \"previous\" })"
       - key: "d"
         desc: "󰅖 Close Window"
-        cmd: hyprctl dispatch killactive
+        cmd: hyprctl dispatch "hl.dsp.window.close()"
       - key: "p"
         desc: "󰐃 Toggle Pin"
-        cmd: hyprctl dispatch pin
+        cmd: hyprctl dispatch "hl.dsp.window.pin()"
       - key: "f"
         desc: "󱂬 Toggle Floating"
-        cmd: hyprctl dispatch togglefloating
+        cmd: hyprctl dispatch "hl.dsp.window.float({ action = \"toggle\" })"
 
   # +window (w)
   - key: "w"
@@ -602,22 +602,22 @@ menu:
         cmd: hyprctl dispatch overview:toggle
       - key: "d"
         desc: "󰅖 Close Window"
-        cmd: hyprctl dispatch killactive
+        cmd: hyprctl dispatch "hl.dsp.window.close()"
       - key: "m"
         desc: "󰊓 Fullscreen"
-        cmd: hyprctl dispatch fullscreen
+        cmd: hyprctl dispatch "hl.dsp.window.fullscreen({ mode = \"fullscreen\" })"
       - key: "h"
         desc: "󰁍 Focus Left"
-        cmd: hyprctl dispatch movefocus l
+        cmd: hyprctl dispatch "hl.dsp.focus({ direction = \"left\" })"
       - key: "J"
         desc: "󰁅 Focus Down"
-        cmd: hyprctl dispatch movefocus d
+        cmd: hyprctl dispatch "hl.dsp.focus({ direction = \"down\" })"
       - key: "k"
         desc: "󰁝 Focus Up"
-        cmd: hyprctl dispatch movefocus u
+        cmd: hyprctl dispatch "hl.dsp.focus({ direction = \"up\" })"
       - key: "l"
         desc: "󰁔 Focus Right"
-        cmd: hyprctl dispatch movefocus r
+        cmd: hyprctl dispatch "hl.dsp.focus({ direction = \"right\" })"
       - key: "e"
         desc: "󱇙 Expose (pypr)"
         cmd: ~/.local/bin/pypr expose
@@ -657,31 +657,31 @@ menu:
     submenu:
       - key: "Tab"
         desc: "󰁔 New Workspace"
-        cmd: hyprctl dispatch workspace empty
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = \"empty\" })"
       - key: "l"
         desc: "󰁔 Last Workspace"
-        cmd: hyprctl dispatch workspace previous
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = \"previous\" })"
       - key: "n"
         desc: "󰒭 Next Workspace"
-        cmd: hyprctl dispatch workspace e+1
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = \"e+1\" })"
       - key: "p"
         desc: "󰒮 Previous Workspace"
-        cmd: hyprctl dispatch workspace e-1
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = \"e-1\" })"
       - key: "1"
         desc: "󰎤 Workspace 1"
-        cmd: hyprctl dispatch workspace 1
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = 1 })"
       - key: "2"
         desc: "󰎧 Workspace 2"
-        cmd: hyprctl dispatch workspace 2
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = 2 })"
       - key: "3"
         desc: "󰎪 Workspace 3"
-        cmd: hyprctl dispatch workspace 3
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = 3 })"
       - key: "4"
         desc: "󰎭 Workspace 4"
         cmd: ~/.config/hypr/scripts/goto-slack.sh
       - key: "5"
         desc: "󰎱 Workspace 5"
-        cmd: hyprctl dispatch workspace 5
+        cmd: hyprctl dispatch "hl.dsp.focus({ workspace = 5 })"
       - key: "o"
         desc: "󱂬 Organize Windows"
         cmd: ~/.config/sway/organize-windows.sh

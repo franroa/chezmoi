@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Unified notification monitor for HyprPanel
 # Tracks Slack and OpenCode notifications
 
@@ -151,9 +152,9 @@ focus_and_navigate_slack() {
         xdg-open "$action_id" 2>/dev/null
     fi
 
-    hyprctl dispatch workspace 4 2>/dev/null
+    hl_workspace 4 2>/dev/null
     sleep 0.15
-    hyprctl dispatch focuswindow "class:slack" 2>/dev/null
+    hl_focus_window "class:slack" 2>/dev/null
 }
 
 # --- Unified monitor ---

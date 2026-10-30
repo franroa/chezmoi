@@ -25,11 +25,11 @@ visible_windows() {
         '.[] | select(.mapped and (.hidden | not) and (.workspace.id as $w | $ws | index($w))) | .address'
 }
 set_capture_props() {
-    local value=$1 batch=""
+    local value=$1 addrs=""
     for addr in $(visible_windows); do
-        batch+="dispatch setprop address:$addr opaque $value; dispatch setprop address:$addr no_dim $value; "
+        addrs+="\"$addr\", "
     done
-    [[ -n "$batch" ]] && hyprctl --batch "$batch" >/dev/null
+    [[ -n "$addrs" ]] && hyprctl eval "for _, a in ipairs({ $addrs }) do for _, p in ipairs({ \"opaque\", \"no_dim\" }) do hl.dispatch(hl.dsp.window.set_prop({ prop = p, value = \"$value\", window = \"address:\" .. a })) end end" >/dev/null
 }
 capture() {
     set_capture_props 1

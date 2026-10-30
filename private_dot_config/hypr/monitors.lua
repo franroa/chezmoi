@@ -1,0 +1,5 @@
+-- Monitors (was monitors.conf; nwg-displays >= 0.4.3 writes this file)
+hl.monitor({ output = "desc:Lenovo Group Limited D24-45 UMHP8F7H", mode = "1920x1080@60", position = "0x0", scale = 1, transform = 0, vrr = 0 })
+hl.monitor({ output = "desc:Acer Technologies VG270K L 641300C934202", mode = "3840x2160@60", position = "1920x0", scale = 1.25, vrr = 0 })
+hl.monitor({ output = "eDP-1", mode = "2560x1600@240", position = "4992x448", scale = 1.25 })
+hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })

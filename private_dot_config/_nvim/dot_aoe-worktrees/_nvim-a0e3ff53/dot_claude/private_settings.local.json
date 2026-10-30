@@ -1,0 +1,7 @@
+{
+  "env": {
+    "K8S_CLUSTER": "default",
+    "K8S_NAMESPACE": "",
+    "KUBECONFIG": "/home/froa/.kube/tmux/8.yaml"
+  }
+}

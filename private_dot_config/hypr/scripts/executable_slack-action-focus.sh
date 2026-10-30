@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Watch for ActionInvoked on Slack notifications, invoke the action to navigate
 # Slack to the source message, then focus workspace 4.
 # Needed since Hyprland 0.55 tightened XDG activation token requirements,
@@ -39,9 +40,9 @@ focus_and_navigate() {
     fi
 
     # Move to workspace 4 (where Slack lives) and bring it to focus.
-    hyprctl dispatch workspace 4 2>/dev/null
+    hl_workspace 4 2>/dev/null
     sleep 0.15
-    hyprctl dispatch focuswindow "class:slack" 2>/dev/null
+    hl_focus_window "class:slack" 2>/dev/null
 }
 
 dbus-monitor "interface='org.freedesktop.Notifications',member='ActionInvoked'" 2>/dev/null | \

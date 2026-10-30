@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 
 MAP_FILE="/tmp/hypr_notif_map"
 CHEAT_SHEET_TEXT=""
@@ -16,7 +17,7 @@ while IFS=':' read -r letter app summary; do
     CHEAT_SHEET_TEXT+="[${letter^^}] $app: $summary\n"
 
     # Tell Hyprland to bind the letter!
-    hyprctl keyword bind , "$letter", exec, "notify-send 'Action Triggered' 'You pressed ${letter^^} for $app'"
+    hyprctl eval "hl.bind($(hl_str "$letter"), hl.dsp.exec_cmd($(hl_str "notify-send 'Action Triggered' 'You pressed ${letter^^} for $app'")))"
   fi
 done <"$MAP_FILE"
 

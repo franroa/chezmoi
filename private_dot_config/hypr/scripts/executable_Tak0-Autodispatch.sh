@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Tak0-Autodispatch.sh
@@ -35,6 +36,32 @@
 set -u
 
 LOGFILE="$(dirname "$0")/dispatch.log"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Temporary rules (Lua config: windowrulev2 keywords are gone)
+# ─────────────────────────────────────────────────────────────────────────────
+#   Rules are created through `hyprctl eval` and kept in a Lua table keyed by
+#   this script's PID so they can be switched off again (rule handles).
+
+# tak0_rule_add <kind: wide|cap> <field> <regex>   (field: class, title, initial_class, ...)
+tak0_rule_add() {
+  hyprctl eval "tak0_rules = tak0_rules or {}; tak0_rules[\"$$-$1\"] = tak0_rules[\"$$-$1\"] or {}; table.insert(tak0_rules[\"$$-$1\"], hl.window_rule({ match = { $2 = $(hl_str "$3") }, workspace = $(hl_str "$TARGET_WS silent") }))"
+}
+
+# tak0_rule_clear <kind>
+tak0_rule_clear() {
+  hyprctl eval "for _, r in ipairs((tak0_rules or {})[\"$$-$1\"] or {}) do r:set_enabled(false) end; if tak0_rules then tak0_rules[\"$$-$1\"] = nil end"
+}
+
+# Old windowrulev2 style "field:regex" -> Lua match field + regex
+tak0_rule_split() {
+  local field="${1%%:*}" regex="${1#*:}"
+  case "$field" in
+    initialClass) field=initial_class ;;
+    initialTitle) field=initial_title ;;
+  esac
+  printf '%s %s' "$field" "$regex"
+}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 0️⃣ ARGUMENT PARSING
@@ -86,11 +113,8 @@ done
 cleanup() {
   echo "Cleanup: removing temporary capture rules and initialWorkspace at $(date)" >>"$LOGFILE"
 
-  hyprctl keyword windowrulev2 "unset, initialClass:.*" >>"$LOGFILE" 2>&1 || true
-  for RULE in "${CAPTURE_RULES[@]}"; do
-    echo "Cleanup: removing temporary capture rule: $RULE" >>"$LOGFILE"
-    hyprctl keyword windowrulev2 "unset, $RULE" >>"$LOGFILE" 2>&1 || true
-  done
+  tak0_rule_clear wide >>"$LOGFILE" 2>&1 || true
+  tak0_rule_clear cap >>"$LOGFILE" 2>&1 || true
 }
 
 trap cleanup EXIT INT TERM ERR
@@ -107,9 +131,7 @@ trap cleanup EXIT INT TERM ERR
 #     • steamwebhelper
 
 echo "Applying temporary initialWorkspace capture (initialClass:.*)" >>"$LOGFILE"
-hyprctl keyword windowrulev2 \
-  "initialWorkspace $TARGET_WS silent, initialClass:.*" \
-  >>"$LOGFILE" 2>&1 || true
+tak0_rule_add wide initial_class ".*" >>"$LOGFILE" 2>&1 || true
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 3️⃣.1 OPTIONAL CLASS-BASED PRE-CAPTURE
@@ -119,9 +141,8 @@ hyprctl keyword windowrulev2 \
 
 for RULE in "${CAPTURE_RULES[@]}"; do
   echo "Applying temporary capture rule: $RULE" >>"$LOGFILE"
-  hyprctl keyword windowrulev2 \
-    "initialWorkspace $TARGET_WS silent, $RULE" \
-    >>"$LOGFILE" 2>&1 || true
+  # shellcheck disable=SC2046
+  tak0_rule_add cap $(tak0_rule_split "$RULE") >>"$LOGFILE" 2>&1 || true
 done
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -155,7 +176,7 @@ sleep 1.5
 
 #!TO-DO: Release the nuclear option ASAP
 echo "Releasing ultra-early wide capture" >>"$LOGFILE"
-hyprctl keyword windowrulev2 "unset, initialClass:.*" >>"$LOGFILE" 2>&1 || true
+tak0_rule_clear wide >>"$LOGFILE" 2>&1 || true
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 5️⃣ SUPERVISION LOOP (AUTHORITATIVE PHASE)
@@ -216,8 +237,7 @@ while ((SECONDS < END_TIME)); do
 
     if ((MATCH)) && [[ -z "${SEEN[$ADDR]-}" ]]; then
       echo "Placing window $ADDR (pid $PID, class $CLASS) → WS $TARGET_WS" >>"$LOGFILE"
-      hyprctl dispatch movetoworkspacesilent \
-        "$TARGET_WS,address:$ADDR" >>"$LOGFILE" 2>&1 || true
+      hl_move_window_silent "$TARGET_WS" "address:$ADDR" >>"$LOGFILE" 2>&1 || true
       SEEN[$ADDR]=1
     fi
   done < <(hyprctl clients -j | jq -r '.[] | [.pid, .address, .class] | @tsv')

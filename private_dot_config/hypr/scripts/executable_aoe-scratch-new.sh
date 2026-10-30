@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Prompt for a session name via rofi, create a new aoe scratch session running
 # claude, then open it in the aoe-cwd foot scratchpad and reveal it on the
 # current workspace. Triggered from wlr-which-key (leader -> o -> A).
@@ -64,7 +65,7 @@ log "created session id=$sid"
 
 # 2. Replace any existing scratchpad window so it shows the new session
 #    (the aoe-cwd scratchpad only ever holds one session at a time).
-hyprctl dispatch closewindow "class:aoe-cwd" 2>/dev/null || true
+hl_close_window "class:aoe-cwd" 2>/dev/null || true
 sleep 0.2
 
 # 3. Write the script foot will run: start the session's tmux, then attach.
@@ -96,8 +97,8 @@ for _ in $(seq 1 50); do
 done
 
 if [[ -n "$addr" && "$addr" != "null" ]]; then
-    hyprctl dispatch movetoworkspace "$target_ws,address:$addr" 2>/dev/null
-    hyprctl dispatch focuswindow "address:$addr" 2>/dev/null
+    hl_move_window "$target_ws" "address:$addr" 2>/dev/null
+    hl_focus_window "address:$addr" 2>/dev/null
     log "revealed window $addr on ws $target_ws"
 else
     log "WARN: aoe-cwd window did not appear within timeout"

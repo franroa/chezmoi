@@ -100,27 +100,27 @@ shell fish
 ## Hyprland Integration
 
 ### Default Terminal
-From `UserConfigs/01-UserDefaults.conf`:
-```conf
-$term = kitty
+From `lua/vars.lua`:
+```lua
+term = "kitty"
 ```
 
 ### Window Rules
-From `configs/WindowRules.conf`:
-```conf
-windowrule = match:class ^(Alacritty|kitty|kitty-dropterm)$, tag +terminal
+From `lua/rules.lua`:
+```lua
+hl.window_rule({ match = { class = "^(Alacritty|kitty|kitty-dropterm)$" }, tag = "+terminal" })
 ```
 
 ### Window Swallowing
-From `configs/SystemSettings.conf`:
-```conf
-swallow_regex = ^(kitty)$
+From `lua/settings.lua`:
+```lua
+misc = { swallow_regex = "^(kitty)$" }
 ```
 
 ### Startup
-From `configs/Startup_Apps.conf`:
-```conf
-exec-once = $HOME/.config/hypr/scripts/Dropterminal.sh kitty &
+From `lua/autostart.lua`:
+```lua
+hl.exec_cmd("$HOME/.config/hypr/scripts/Dropterminal.sh kitty &")
 ```
 
 ### Pyprland Scratchpads

@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 
 MAP_FILE="/tmp/hypr_notif_map"
 
@@ -6,7 +7,7 @@ MAP_FILE="/tmp/hypr_notif_map"
 if [ -s "$MAP_FILE" ]; then
     while IFS=':' read -r letter app summary; do
         if [ -n "$letter" ]; then
-            hyprctl keyword unbind , "$letter"
+            hyprctl eval "hl.unbind($(hl_str "$letter"))"
         fi
     done <"$MAP_FILE"
 fi

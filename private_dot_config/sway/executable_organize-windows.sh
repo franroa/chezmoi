@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Move all windows to their assigned workspaces based on config rules
 # Works with Hyprland
 
@@ -91,7 +92,7 @@ main() {
         if [[ -n "$target_ws" ]]; then
             ((total++))
             if [[ "$current_ws" != "$target_ws" ]]; then
-                hyprctl dispatch movetoworkspacesilent "$target_ws,address:$address" 2>/dev/null
+                hl_move_window_silent "$target_ws" "address:$address" 2>/dev/null
                 ((moved++))
                 echo "Moved $class from workspace $current_ws to $target_ws"
             fi
@@ -109,7 +110,7 @@ if [[ "${1:-}" == "--app" && -n "${2:-}" ]]; then
     app="$2"
     target="${ASSIGNMENTS[$app]:-}"
     if [[ -n "$target" ]]; then
-        hyprctl dispatch movetoworkspacesilent "$target,class:$app" 2>/dev/null
+        hl_move_window_silent "$target" "class:$app" 2>/dev/null
         notify "Moved $app to workspace $target"
     else
         notify "No assignment found for $app"

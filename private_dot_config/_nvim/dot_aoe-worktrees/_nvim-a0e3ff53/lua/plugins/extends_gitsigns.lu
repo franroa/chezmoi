@@ -1,0 +1,15 @@
+return {
+  {
+    "lewis6991/gitsigns.nvim",
+    keys = {
+      { "<leader>gb", ":Gitsigns toggle_current_line_blame<cr>", desc = "Toggle Blame" },
+    },
+    lazy = false,
+    opts = function(_, opts)
+      opts.auto_attach = false
+      opts.current_line_blame_opts = {
+        delay = 1000,
+      }
+    end,
+  },
+}

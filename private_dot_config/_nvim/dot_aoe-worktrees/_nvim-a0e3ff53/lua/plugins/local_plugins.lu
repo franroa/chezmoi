@@ -1,0 +1,241 @@
+local local_plugins_path = vim.fn.stdpath("config") .. "/lua/local_plugins/"
+
+return {
+  -- {
+  --   dir = local_plugins_path .. "easy-dotnet.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+  --   config = function()
+  --     local function get_secret_path(secret_guid)
+  --       local path = ""
+  --       local home_dir = vim.fn.expand("~")
+  --       if require("easy-dotnet.extensions").isWindows() then
+  --         local secret_path = home_dir
+  --           .. "\\AppData\\Roaming\\Microsoft\\UserSecrets\\"
+  --           .. secret_guid
+  --           .. "\\secrets.json"
+  --         path = secret_path
+  --       else
+  --         local secret_path = home_dir .. "/.microsoft/usersecrets/" .. secret_guid .. "/secrets.json"
+  --         path = secret_path
+  --       end
+  --       return path
+  --     end
+  --
+  --     local logPath = vim.fn.stdpath("data") .. "/easy-dotnet/build.log"
+  --     local dotnet = require("easy-dotnet")
+  --     -- Options are not required
+  --     dotnet.setup({
+  --       test_runner = {
+  --         noBuild = true,
+  --         noRestore = true,
+  --       },
+  --       terminal = function(path, action)
+  --         local commands = {
+  --           run = function()
+  --             return "dotnet run --project " .. path
+  --           end,
+  --           test = function()
+  --             return "dotnet test " .. path
+  --           end,
+  --           restore = function()
+  --             return "dotnet restore --configfile " .. os.getenv("NUGET_CONFIG") .. " " .. path
+  --           end,
+  --           build = function()
+  --             return "dotnet build  " .. path .. " /flp:v=q /flp:logfile=" .. logPath
+  --           end,
+  --         }
+  --
+  --         local overseer_components = {
+  --           { "on_complete_dispose", timeout = 30 },
+  --           "default",
+  --           { "unique", replace = true },
+  --           {
+  --             "on_output_parse",
+  --             parser = {
+  --               diagnostics = {
+  --                 { "extract", filter_warnings, "filename", "lnum", "col", "text" },
+  --               },
+  --             },
+  --           },
+  --           {
+  --             "on_result_diagnostics_quickfix",
+  --             open = true,
+  --             close = true,
+  --           },
+  --         }
+  --
+  --         if action == "run" or action == "test" then
+  --           table.insert(overseer_components, { "restart_on_save", paths = { LazyVim.root.git() } })
+  --         end
+  --
+  --         local command = commands[action]()
+  --         local task = require("overseer").new_task({
+  --           strategy = {
+  --             "toggleterm",
+  --             use_shell = false,
+  --             direction = "horizontal",
+  --             open_on_start = false,
+  --           },
+  --           name = action,
+  --           cmd = command,
+  --           cwd = LazyVim.root.git(),
+  --           components = overseer_components,
+  --         })
+  --         task:start()
+  --       end,
+  --       secrets = {
+  --         path = get_secret_path,
+  --       },
+  --     })
+  --   end,
+  -- },
+  {
+    "git-worktree",
+    dir = local_plugins_path .. "git-worktree.nvim",
+    config = function()
+      vim.g.GIT_WORKTREE_CREATED = false
+      local function ask_for_confirmation(title, message, on_confirm)
+        local choice = vim.fn.confirm(title .. "\n" .. message, "&Yes\n&No", 2)
+
+        if choice == 1 then
+          on_confirm()
+        end
+      end
+
+      require("telescope").load_extension("git_worktree")
+
+      local function copy_appsettings_file()
+        local lfs = require("lfs")
+        function find_file_in_parents(filename, dir)
+          local file_path = dir .. "/" .. filename
+          if lfs.attributes(file_path) then
+            return file_path
+          end
+
+          local parent_dir = dir:match("(.*)/[^/]*")
+          if parent_dir then
+            return find_file_in_parents(filename, parent_dir)
+          end
+
+          return nil
+        end
+
+        local file_path = find_file_in_parents("appsettings.GITIGNORE.json", LazyVim.root.git())
+        local command = "cp "
+          .. file_path
+          .. " "
+          .. LazyVim.root.git()
+          .. "/"
+          .. vim.g.DOTNET_DLL_PATH
+          .. "/appsettings.GITIGNORE.json"
+        local task = require("overseer").new_task({
+          name = "Copy Appsettings",
+          cmd = command,
+          cwd = LazyVim.root.git(),
+        })
+        task:start()
+      end
+
+      local Hooks = require("git-worktree.hooks")
+      Hooks.register(Hooks.type.SWITCH, function()
+        if vim.g.GIT_WORKTREE_CREATED then
+          if require("easy-dotnet").is_dotnet_project() then
+            copy_appsettings_file()
+          end
+        end
+        vim.notify("Hook On Change")
+        vim.g.GIT_WORKTREE_CREATED = false
+      end)
+      Hooks.register(Hooks.type.CREATE, function()
+        vim.g.GIT_WORKTREE_CREATED = true
+        if require("easy-dotnet").is_dotnet_project() then
+          vim.g.DOTNET_DLL_PATH = require("easy-dotnet").get_debug_dll().project_path
+        end
+        vim.cmd(":bufdo bd")
+      end)
+      Hooks.register(Hooks.type.DELETE, function(data)
+        branch_name = data:match(".*/(.*/.*)$")
+        ask_for_confirmation(
+          "Delete branch",
+          "Are you sure you want to delete the branch " .. branch_name .. "?",
+          function()
+            vim.fn.system("git branch -D " .. branch_name)
+            vim.notify("Branch " .. branch_name .. " deleted")
+          end
+        )
+      end)
+    end,
+    keys = {
+      {
+        "<leader>gwm",
+        function()
+          require("telescope").extensions.git_worktree.git_worktree()
+        end,
+        desc = "Manage",
+      },
+      {
+        "<leader>gwc",
+        function()
+          require("telescope").extensions.git_worktree.create_git_worktree()
+        end,
+        desc = "Create",
+      },
+    },
+  },
+  {
+    "grapple-neotree",
+    dir = local_plugins_path .. "grapple-neotree",
+  },
+  {
+    "vim-dadbod-ui-fork",
+    dir = local_plugins_path .. "vim-dadbod-ui",
+    dependencies = {
+      {
+        "kristijanhusak/vim-dadbod-completion",
+        dependencies = "vim-dadbod",
+        ft = sql_ft,
+        init = function()
+          vim.api.nvim_create_autocmd("FileType", {
+            pattern = sql_ft,
+            callback = function()
+              local cmp = require("cmp")
+
+              -- global sources
+              ---@param source cmp.SourceConfig
+              local sources = vim.tbl_map(function(source)
+                return { name = source.name }
+              end, cmp.get_config().sources)
+
+              -- add vim-dadbod-completion source
+              table.insert(sources, { name = "vim-dadbod-completion" })
+
+              -- update sources for the current buffer
+              cmp.setup.buffer({ sources = sources })
+            end,
+          })
+        end,
+      },
+      { "tpope/vim-dadbod", cmd = "DB" },
+    },
+    cmd = { "DBUI", "DBUIToggle", "DBUIAddConnection", "DBUIFindBuffer" },
+    keys = {
+      { "<leader>D", "<cmd>DBUIToggle<CR>", desc = "Toggle DBUI" },
+    },
+    init = function()
+      local data_path = vim.fn.stdpath("data")
+
+      vim.g.db_ui_auto_execute_table_helpers = 1
+      vim.g.db_ui_save_location = data_path .. "/dadbod_ui"
+      vim.g.db_ui_show_database_icon = true
+      vim.g.db_ui_tmp_query_location = data_path .. "/dadbod_ui/tmp"
+      vim.g.db_ui_use_nerd_fonts = true
+      vim.g.db_ui_use_nvim_notify = true
+
+      -- NOTE: The default behavior of auto-execution of queries on save is disabled
+      -- this is useful when you have a big query that you don't want to run every time
+      -- you save the file running those queries can crash neovim to run use the
+      -- default keymap: <leader>S
+      vim.g.db_ui_execute_on_save = false
+    end,
+  },
+}

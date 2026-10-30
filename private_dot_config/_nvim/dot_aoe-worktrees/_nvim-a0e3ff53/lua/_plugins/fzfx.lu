@@ -1,0 +1,20 @@
+return {
+
+  -- optional for icons
+  { "nvim-tree/nvim-web-devicons" },
+
+  -- mandatory
+  {
+    "junegunn/fzf",
+    build = function()
+      vim.fn["fzf#install"]()
+    end,
+  },
+  {
+    "linrongbin16/fzfx.nvim",
+    dependencies = { "junegunn/fzf", "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("fzfx").setup()
+    end,
+  },
+}

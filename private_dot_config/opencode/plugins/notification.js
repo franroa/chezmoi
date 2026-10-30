@@ -538,7 +538,7 @@ export const NotificationPlugin = async ({ client }) => {
         `;
       } else {
         const focusCmd = windowAddress
-          ? `hyprctl dispatch focuswindow address:${windowAddress}`
+          ? `hyprctl dispatch 'hl.dsp.focus({ window = "address:${windowAddress}" })'`
           : `true`;
         watchScript = `
           gdbus monitor --session --dest org.freedesktop.Notifications \\

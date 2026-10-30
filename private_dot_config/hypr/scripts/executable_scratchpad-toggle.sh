@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Toggle a pyprland scratchpad with exclusive behavior
 # Hides all visible special workspaces before showing the requested one
 
@@ -100,7 +101,7 @@ if [[ "$SCRATCHPAD" == "opencode_cwd" ]]; then
 
 		# If CWD changed, kill the existing window so pyprland recreates it
 		if [[ -n "$NVIM_CWD" && "$CURRENT_CWD" != "$NVIM_CWD" ]]; then
-			hyprctl dispatch closewindow "class:opencode-cwd"
+			hl_close_window "class:opencode-cwd"
 			sleep 0.2
 		fi
 	fi
@@ -157,7 +158,7 @@ VISIBLE=$(hyprctl monitors -j | jq -r '.[].specialWorkspace.name | select(. != "
 
 for ws in $VISIBLE; do
 	ws_name="${ws#special:}"
-	hyprctl dispatch togglespecialworkspace "$ws_name"
+	hl_toggle_special "$ws_name"
 done
 
 # Now toggle the requested scratchpad

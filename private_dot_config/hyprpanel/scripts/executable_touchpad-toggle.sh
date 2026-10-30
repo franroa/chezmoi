@@ -25,13 +25,13 @@ is_disabled() {
 }
 
 disable() {
-    hyprctl keyword "device[$DEVICE]:enabled" 0 >/dev/null 2>&1
+    hyprctl eval "hl.device({ name = \"$DEVICE\", enabled = false })" >/dev/null 2>&1
     touch "$STATE_FILE"
     [[ "$1" != "--silent" ]] && notify-send "Touchpad" "Disabled" -t 1500
 }
 
 enable() {
-    hyprctl keyword "device[$DEVICE]:enabled" 1 >/dev/null 2>&1
+    hyprctl eval "hl.device({ name = \"$DEVICE\", enabled = true })" >/dev/null 2>&1
     rm -f "$STATE_FILE"
     [[ "$1" != "--silent" ]] && notify-send "Touchpad" "Enabled" -t 1500
 }

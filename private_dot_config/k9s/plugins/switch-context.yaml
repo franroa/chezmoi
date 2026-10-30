@@ -1,0 +1,13 @@
+plugins:
+  switch-context:
+    shortCut: Shift-X
+    confirm: false
+    description: "Switch context keeping the current view"
+    scopes:
+      - all
+    command: k9s-switch-ctx.sh
+    background: false
+    args:
+      - $RESOURCE_GROUP
+      - $RESOURCE_VERSION
+      - $RESOURCE_NAME

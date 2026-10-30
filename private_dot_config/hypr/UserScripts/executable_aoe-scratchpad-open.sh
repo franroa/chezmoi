@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Script to open aoe session in scratchpad and update current session tracking
 # Usage: aoe-scratchpad-open.sh <session-directory> [session-title]
 
@@ -52,7 +53,7 @@ if [[ "$CURRENT_CWD" == "$CWD" || "$CURRENT_SESSION" == "$SESSION_TITLE" ]] && [
     if [[ -n "$WS" && "$WS" != "special:"* ]]; then
         # Window exists and visible - focus directly (fast)
         echo "Session already showing (visible): $SESSION_TITLE"
-        hyprctl dispatch focuswindow "class:aoe-cwd" 2>/dev/null
+        hl_focus_window "class:aoe-cwd" 2>/dev/null
     else
         # Window is hidden in scratchpad - show it
         echo "Session already showing (hidden): $SESSION_TITLE"
@@ -63,7 +64,7 @@ fi
 
 # Session changed - close and reopen
 echo "Switching session: $CURRENT_SESSION → $SESSION_TITLE"
-hyprctl dispatch closewindow "class:aoe-cwd" 2>/dev/null || true
+hl_close_window "class:aoe-cwd" 2>/dev/null || true
 sleep 0.2
 
 # Update temp files for session tracking (after the check)

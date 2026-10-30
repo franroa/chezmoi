@@ -1,0 +1,7 @@
+-- https://github.com/moalamri/vscode-inline-fold
+-- https://github.com/malbertzard/inline-fold.nvim
+-- return {
+--   {
+--     'malbertzard/inline-fold.nvim'
+--   }
+-- }

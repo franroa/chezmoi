@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # notif-history.sh - Show notification history in rofi
 
 NOTIFS=$(dunstctl history 2>/dev/null | jq -r '.data[][] | "\(.appname.data)\t\(.summary.data)\t\(.body.data // "")"' 2>/dev/null | head -20)
@@ -27,13 +28,13 @@ if [ "$KEY" -eq 10 ]; then
     # Alt+v - view (focus app)
     case "${APP}" in
         Slack)
-            hyprctl dispatch focuswindow "class:Slack" 2>/dev/null
+            hl_focus_window "class:Slack" 2>/dev/null
             ;;
         Discord)
-            hyprctl dispatch focuswindow "class:Discord" 2>/dev/null
+            hl_focus_window "class:Discord" 2>/dev/null
             ;;
         *)
-            hyprctl dispatch focuswindow "class:$APP" 2>/dev/null
+            hl_focus_window "class:$APP" 2>/dev/null
             ;;
     esac
 elif [ "$KEY" -eq 11 ]; then

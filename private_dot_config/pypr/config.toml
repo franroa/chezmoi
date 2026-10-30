@@ -23,7 +23,6 @@ process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
 unfocus = "hide"
-hypr_rules = ["float"]
 
 [scratchpads.btop]
 animation = ""
@@ -32,7 +31,6 @@ class = "foot-btop"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.files]
 animation = ""
@@ -41,7 +39,6 @@ class = "org.gnome.Nautilus"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.volume]
 animation = ""
@@ -51,7 +48,6 @@ process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
 unfocus = "hide"
-hypr_rules = ["float"]
 
 [scratchpads.music]
 animation = ""
@@ -60,7 +56,6 @@ class = "Spotify"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.calc]
 animation = ""
@@ -69,7 +64,6 @@ class = "org.gnome.Calculator"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.keepassxc]
 animation = ""
@@ -78,7 +72,6 @@ class = "org.keepassxc.KeePassXC"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.gpt]
 animation = ""
@@ -87,7 +80,6 @@ class = "firefox"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.notes]
 animation = ""
@@ -96,7 +88,6 @@ class = "obsidian"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.opencode_hypr]
 animation = ""
@@ -105,7 +96,6 @@ class = "opencode-hypr"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.opencode_nvim]
 animation = ""
@@ -114,7 +104,6 @@ class = "opencode-nvim"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 [scratchpads.opencode_cwd]
 animation = ""
@@ -123,7 +112,6 @@ class = "opencode-cwd"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 # [scratchpads.aoe]
 # animation = ""
@@ -147,7 +135,6 @@ class = "opencode-readitlater"
 process_tracking = false
 size = "85% 85%"
 position = "7% 7%"
-hypr_rules = ["float"]
 
 # --- Sandbox (Common) ---
 [scratchpads.k9s_sandbox]
@@ -245,8 +232,6 @@ name = "minimized"
 # Menu engine (auto-detected if not set)
 # engine = "rofi"
 separator = " | "
-# Exclude scratchpads from menu
-filter_by_workspace = false
 
 # ============================================================================
 # LOST WINDOWS - Find floating windows off-screen
@@ -286,7 +271,7 @@ engine = "rofi"
 "󰤄 Suspend" = "systemctl suspend"
 "󰜉 Reboot" = "systemctl reboot"
 "󰐥 Shutdown" = "systemctl poweroff"
-"󰗼 Logout" = "hyprctl dispatch exit"
+"󰗼 Logout" = "hyprctl dispatch 'hl.dsp.exit()'"
 
 [shortcuts_menu.entries.clipboard]
 "󰅍 History" = "cliphist list | rofi -dmenu | cliphist decode | wl-copy"

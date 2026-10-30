@@ -1,0 +1,12 @@
+return {
+  "code-biscuits/nvim-biscuits",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-telescope/telescope.nvim",
+    "nvim-lua/plenary.nvim",
+  },
+  lazy = false,
+  config = function()
+    require("biscuits").setup()
+  end,
+}

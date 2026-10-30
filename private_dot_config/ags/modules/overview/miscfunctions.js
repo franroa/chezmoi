@@ -14,14 +14,14 @@ export function hasUnterminatedBackslash(inputString) {
 export function launchCustomCommand(command) {
     const args = command.toLowerCase().split(' ');
     if (args[0] == '>raw') { // Mouse raw input
-        Utils.execAsync('hyprctl -j getoption input:accel_profile')
+        Utils.execAsync('hyprctl -j getoption input.accel_profile')
             .then((output) => {
                 const value = JSON.parse(output)["str"].trim();
                 if (value != "[[EMPTY]]" && value != "") {
-                    execAsync(['bash', '-c', `hyprctl keyword input:accel_profile '[[EMPTY]]'`]).catch(print);
+                    execAsync(['bash', '-c', `hyprctl eval 'hl.config({ input = { accel_profile = "" } })'`]).catch(print);
                 }
                 else {
-                    execAsync(['bash', '-c', `hyprctl keyword input:accel_profile flat`]).catch(print);
+                    execAsync(['bash', '-c', `hyprctl eval 'hl.config({ input = { accel_profile = "flat" } })'`]).catch(print);
                 }
             })
     }

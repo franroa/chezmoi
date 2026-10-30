@@ -37,8 +37,13 @@ threshold = 11
 cava.template = 'colors-cava'
 cava.target = '~/.config/cava/config'
 
+# hyprlang colors: still read by hyprlock (hyprlock*.conf), which is not migrated to Lua
 hypr.template = 'colors-hyprland.conf'
 hypr.target = '~/.config/hypr/wallust/wallust-hyprland.conf'
+
+# Lua colors for hyprland.lua (lua/decorations.lua)
+hypr_lua.template = 'colors-hyprland.lua'
+hypr_lua.target = '~/.config/hypr/wallust/colors.lua'
 
 rofi.template = 'colors-rofi.rasi'
 rofi.target = '~/.config/rofi/wallust/colors-rofi.rasi'

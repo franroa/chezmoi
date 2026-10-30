@@ -21,9 +21,9 @@ tmux_window=""
 tmux_client=""
 if [ -n "$TMUX" ]; then
   tmux_socket=$(echo "$TMUX" | cut -d',' -f1)
-  tmux_session=$(tmux display-message -p '#S' 2>/dev/null | tr -d ' ')
-  tmux_window=$(tmux display-message -p '#I' 2>/dev/null | tr -d ' ')
-  tmux_client=$(tmux display-message -p '#{client_tty}' 2>/dev/null | tr -d ' ')
+  tmux_session=$(tmux display-message -t "$TMUX_PANE" -p '#S' 2>/dev/null | tr -d ' ')
+  tmux_window=$(tmux display-message -t "$TMUX_PANE" -p '#I' 2>/dev/null | tr -d ' ')
+  tmux_client=$(tmux display-message -t "$TMUX_PANE" -p '#{client_tty}' 2>/dev/null | tr -d ' ')
 fi
 
 # --- Hyprland workspace + window detection ---
@@ -33,7 +33,7 @@ if command -v hyprctl &>/dev/null && command -v jq &>/dev/null; then
   # If inside tmux, walk up from the tmux client PID to find the terminal emulator.
   # Direct walk from $$ fails because tmux server daemonizes (reparents to systemd).
   if [ -n "$TMUX" ]; then
-    term_pid=$(tmux display-message -p '#{client_pid}' 2>/dev/null | tr -d ' ')
+    term_pid=$(tmux display-message -t "$TMUX_PANE" -p '#{client_pid}' 2>/dev/null | tr -d ' ')
     [ -z "$term_pid" ] && term_pid=$$
   else
     term_pid=$$

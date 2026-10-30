@@ -1,5 +1,5 @@
 {
-  "model": "opus",
+  "model": "haiku",
   "hooks": {
     "ElicitationResult": [
       {
@@ -12,6 +12,23 @@
       }
     ],
     "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'setsid bash /home/froa/.claude/hooks/notify.sh \"Awaiting your input\" > /dev/null 2>&1 &'"
+          }
+        ]
+      },
+      {
+        "matcher": "permission_prompt|elicitation_dialog",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/froa/.claude/hooks/tmux-input.sh"
+          }
+        ]
+      },
       {
         "matcher": "permission_prompt|elicitation_dialog",
         "hooks": [
@@ -27,7 +44,27 @@
         "hooks": [
           {
             "type": "command",
+            "command": "/home/froa/.claude/hooks/tmux-working.sh",
+            "async": true
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
             "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf running > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/froa/.claude/hooks/tmux-working.sh",
+            "async": true
           }
         ]
       }
@@ -63,12 +100,38 @@
         "hooks": [
           {
             "type": "command",
+            "command": "sh -c 'setsid bash /home/froa/.claude/hooks/notify.sh \"Task completed\" > /dev/null 2>&1 &'"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/froa/.claude/hooks/tmux-done.sh",
+            "async": true
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
             "command": "sh -c '[ -n \"$AOE_INSTANCE_ID\" ] || exit 0; case \"$AOE_INSTANCE_ID\" in *[!0-9a-zA-Z_-]*) exit 0 ;; esac; mkdir -p \"/tmp/aoe-hooks/$AOE_INSTANCE_ID\" 2>/dev/null; printf idle > \"/tmp/aoe-hooks/$AOE_INSTANCE_ID/status\" 2>/dev/null; exit 0'"
           }
         ]
       }
     ],
     "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/froa/.claude/hooks/tmux-working.sh",
+            "async": true
+          }
+        ]
+      },
       {
         "hooks": [
           {

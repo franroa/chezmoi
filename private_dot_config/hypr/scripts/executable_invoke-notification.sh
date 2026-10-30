@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Open the latest Slack notification using hyprpanel's EmitActionInvoked
 # This triggers the "default" action on the notification, opening Slack to the conversation
 # Then closes the notification to remove it from the list and update blink state
@@ -102,9 +103,9 @@ main() {
     fi
     
     # Fallback: just go to Slack workspace
-    hyprctl dispatch workspace 4
+    hl_workspace 4
     sleep 0.1
-    hyprctl dispatch focuswindow "class:slack"
+    hl_focus_window "class:slack"
 }
 
 main "$@"

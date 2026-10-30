@@ -1,19 +1,14 @@
 #!/usr/bin/env bash
 # /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Rofi menu for KooL Hyprland Quick Settings (SUPER SHIFT E)
-# Updated for UserConfigs/configs separation
+# Config lives in ~/.config/hypr/lua/*.lua (Lua config, Hyprland >= 0.55)
 
-# Modify this config file for default terminal and EDITOR
-config_file="$HOME/.config/hypr/UserConfigs/01-UserDefaults.conf"
-
-tmp_config_file=$(mktemp)
-sed 's/^\$//g; s/ = /=/g' "$config_file" > "$tmp_config_file"
-source "$tmp_config_file"
+# Default terminal and EDITOR come from lua/vars.lua
+source "$HOME/.config/hypr/scripts/hypr-defaults.sh" || exit 1
 # ##################################### #
 
 # variables
-configs="$HOME/.config/hypr/configs"
-UserConfigs="$HOME/.config/hypr/UserConfigs"
+luaDir="$HOME/.config/hypr/lua"
 rofi_theme="$HOME/.config/rofi/config-edit.rasi"
 msg=' ⁉️ Choose what to do ⁉️'
 iDIR="$HOME/.config/swaync/images"
@@ -175,21 +170,16 @@ rainbow_borders_menu() {
 # Function to display the menu options without numbers
 menu() {
     cat <<EOF
---- USER CUSTOMIZATIONS ---
-Edit User Defaults
-Edit User Keybinds
-Edit User ENV variables
-Edit User Startup Apps (overlay)
-Edit User Window Rules (overlay)
-Edit User Settings
-Edit User Decorations
-Edit User Animations
-Edit User Laptop Settings
---- SYSTEM DEFAULTS  ---
-Edit System Default Keybinds
-Edit System Default Startup Apps
-Edit System Default Window Rules
-Edit System Default Settings
+--- CONFIGURATION ---
+Edit Defaults (terminal, editor, ...)
+Edit Keybinds
+Edit ENV variables
+Edit Startup Apps
+Edit Window Rules
+Edit Settings
+Edit Decorations
+Edit Animations
+Edit Devices / Laptop Settings
 --- UTILITIES ---
 Set SDDM Wallpaper
 Choose Kitty Terminal Theme
@@ -214,19 +204,15 @@ main() {
     
     # Map choices to corresponding files
     case "$choice" in
-    	"Edit User Defaults") file="$UserConfigs/01-UserDefaults.conf" ;;
-        "Edit User ENV variables") file="$UserConfigs/ENVariables.conf" ;;
-        "Edit User Keybinds") file="$UserConfigs/UserKeybinds.conf" ;;
-        "Edit User Startup Apps (overlay)") file="$UserConfigs/Startup_Apps.conf" ;;
-        "Edit User Window Rules (overlay)") file="$UserConfigs/WindowRules.conf" ;;
-        "Edit User Settings") file="$configs/SystemSettings.conf"; show_info "Editing default settings. Copy to UserConfigs/UserSettings.conf to override." ;;
-        "Edit User Decorations") file="$UserConfigs/UserDecorations.conf" ;;
-        "Edit User Animations") file="$UserConfigs/UserAnimations.conf" ;;
-        "Edit User Laptop Settings") file="$UserConfigs/Laptops.conf" ;;
-        "Edit System Default Keybinds") file="$configs/Keybinds.conf" ;;
-        "Edit System Default Startup Apps") file="$configs/Startup_Apps.conf" ;;
-        "Edit System Default Window Rules") file="$configs/WindowRules.conf" ;;
-        "Edit System Default Settings") file="$configs/SystemSettings.conf" ;;
+        "Edit Defaults (terminal, editor, ...)") file="$luaDir/vars.lua" ;;
+        "Edit Keybinds") file="$luaDir/binds.lua" ;;
+        "Edit ENV variables") file="$luaDir/env.lua" ;;
+        "Edit Startup Apps") file="$luaDir/autostart.lua" ;;
+        "Edit Window Rules") file="$luaDir/rules.lua" ;;
+        "Edit Settings") file="$luaDir/settings.lua" ;;
+        "Edit Decorations") file="$luaDir/decorations.lua" ;;
+        "Edit Animations") file="$luaDir/animations.lua" ;;
+        "Edit Devices / Laptop Settings") file="$luaDir/devices.lua" ;;
         "Set SDDM Wallpaper") $scriptsDir/sddm_wallpaper.sh --normal ;;
         "Choose Kitty Terminal Theme") $scriptsDir/Kitty_themes.sh ;;
         "Configure Monitors (nwg-displays)") 

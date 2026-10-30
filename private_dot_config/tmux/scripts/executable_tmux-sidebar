@@ -1,0 +1,278 @@
+#!/usr/bin/env python3
+"""Left sidebar: sessions of the current repo, live first, with status + unread.
+
+Runs inside a pane tagged @role=sidebar (see tmux-sidebar-toggle). Read-only
+w.r.t. status markers: the `done` (unread) marker is cleared by tmux-session-list
+when the session gets focus, never here.
+
+Keys: j/k/arrows move, Enter/click switch, q hide.
+"""
+import json
+import os
+import re
+import select
+import subprocess
+import sys
+import termios
+import time
+import tty
+
+PANE = os.environ.get("TMUX_PANE", "")
+AOE_TTL = 10
+RESET = "\x1b[0m"
+C = {
+    "red": "\x1b[38;2;243;139;168m",
+    "green": "\x1b[38;2;166;227;161m",
+    "yellow": "\x1b[38;2;249;226;175m",
+    "blue": "\x1b[38;2;122;162;247m",
+    "dim": "\x1b[38;2;157;152;159m",
+    "grey": "\x1b[38;2;86;95;137m",
+}
+UNREAD_BG = "\x1b[48;2;166;227;161m\x1b[38;2;26;27;38m\x1b[1m"
+CURSOR_BG = "\x1b[48;2;41;46;66m"
+SPINNER = "⠆⠒⠰⠤"
+PROJECTS = os.path.expanduser("~/.claude/projects")
+CHATS_CUR, CHATS_OTHER, TITLE_TTL = 6, 3, 30
+
+
+def tmux(*args):
+    r = subprocess.run(["tmux", *args], capture_output=True, text=True)
+    return r.stdout.strip()
+
+
+def repo_of(path):
+    return (path or "").split("/.aoe-worktrees/")[0].rstrip("/")
+
+
+_aoe = {"t": 0.0, "data": []}
+
+
+def aoe_sessions():
+    if time.time() - _aoe["t"] > AOE_TTL:
+        r = subprocess.run(["aoe", "list", "--json", "--all"], capture_output=True, text=True)
+        try:
+            _aoe["data"] = json.loads(r.stdout)
+        except ValueError:
+            pass
+        _aoe["t"] = time.time()
+    return _aoe["data"]
+
+
+def read(path):
+    try:
+        with open(path) as f:
+            return f.read().strip()
+    except OSError:
+        return ""
+
+
+def collect(own_session):
+    now = time.time()
+    fmt = "#{session_name}\t#{@workspace_dir}\t#{session_path}\t#{session_activity}"
+    live = {}
+    for line in tmux("list-sessions", "-F", fmt).splitlines():
+        name, wdir, spath, act = line.split("\t")
+        live[name] = (repo_of(wdir or spath), int(act or 0), wdir or spath)
+    if own_session not in live:
+        return "", []
+    repo = live[own_session][0]
+
+    aoe = aoe_sessions()
+    by_id8 = {a["id"][:8]: a for a in aoe}
+
+    rows = []
+    seen = set()
+    for name, (r, act, wpath) in live.items():
+        if r != repo or name.isdigit() or name.endswith("-T2"):
+            continue
+        if name.startswith(("__tmux__jot_", "scratch-")):
+            continue
+        m = re.match(r"^aoe_.+_([0-9a-f]{8})$", name)
+        a = by_id8.get(m.group(1)) if m else None
+        if a:
+            seen.add(a["id"])
+        branch = ((a or {}).get("worktree") or {}).get("branch", "")
+        label = branch or (a or {}).get("title") or re.sub(r"^aoe_|_[0-9a-f]+$", "", name)
+        marker = read(f"/tmp/.claude-tmux-status-{name}")
+        hook = read(f"/tmp/aoe-hooks/{a['id']}/status") if a else ""
+        is_cur = name == own_session
+
+        if marker == "input" or hook == "waiting":
+            state, rank = "input", 0
+        elif marker == "done" and not is_cur:
+            state, rank = "unread", 1
+        elif (marker.startswith("working:") and now - int(marker[8:] or 0) < 300) or hook == "running":
+            state, rank = "running", 2
+        else:
+            state, rank = "idle", 3
+        rows.append(dict(name=name, label=label, path=wpath, state=state,
+                         rank=rank, act=act, cur=is_cur, live=True))
+
+    for a in aoe:
+        wt = a.get("worktree") or {}
+        if a["id"] in seen or repo_of(wt.get("main_repo_path") or a.get("path")) != repo:
+            continue
+        rows.append(dict(name=None, label=wt.get("branch") or a["title"], path=a.get("path", ""),
+                         state="stopped", rank=9, act=0, cur=False, live=False))
+
+    # current worktree always first, then live by urgency, then stopped
+    rows.sort(key=lambda r: (not r["cur"], not r["live"], r["rank"], -r["act"], r["label"]))
+    return os.path.basename(repo) or repo, rows
+
+
+def glyph(row, frame):
+    s = row["state"]
+    if s == "input":
+        return C["red"] + "▲"
+    if s == "unread":
+        return "●"
+    if s == "running":
+        return C["yellow"] + SPINNER[frame % len(SPINNER)]
+    if s == "idle":
+        return C["dim"] + "○"
+    return C["grey"] + "·"
+
+
+_titles = {}
+
+
+def chat_title(f, mtime):
+    hit = _titles.get(f)
+    if hit and (hit[0] == mtime or time.time() - hit[2] < TITLE_TTL):
+        return hit[1]
+    title = ""
+    try:
+        with open(f, "rb") as fh:
+            data = fh.read()
+        for key in (b'"type":"custom-title"', b'"type":"ai-title"'):
+            k = data.rfind(key)
+            if k < 0:
+                continue
+            start = data.rfind(b"\n", 0, k) + 1
+            end = data.find(b"\n", k)
+            j = json.loads(data[start: end if end > 0 else len(data)])
+            title = j.get("customTitle") or j.get("aiTitle") or ""
+            if title:
+                break
+    except (OSError, ValueError):
+        pass
+    title = title or "untitled chat"
+    _titles[f] = (mtime, title, time.time())
+    return title
+
+
+def chats(path, limit):
+    """Most recent Claude chats recorded for this worktree path."""
+    d = os.path.join(PROJECTS, re.sub(r"[/.]", "-", path.rstrip("/")))
+    try:
+        files = [(e.stat().st_mtime, e.path) for e in os.scandir(d) if e.name.endswith(".jsonl")]
+    except OSError:
+        return []
+    files.sort(reverse=True)
+    return [(m, chat_title(f, m)) for m, f in files[:limit]]
+
+
+def age(mtime):
+    s = max(int(time.time() - mtime), 0)
+    for unit, n in (("d", 86400), ("h", 3600), ("m", 60)):
+        if s >= n:
+            return f"{s // n}{unit}"
+    return f"{s}s"
+
+
+def layout(rows, width, frame):
+    """Flat list of (ansi_line, row_index); worktree rows then their chats."""
+    lines = []
+    for i, r in enumerate(rows):
+        if not r["live"] and (i == 0 or rows[i - 1]["live"]):
+            lines.append((f"{C['grey']} stopped{RESET}", None))
+        arrow = "▶" if r["cur"] else " "
+        label = r["label"][: width - 6] + (" *" if r["state"] == "unread" else "")
+        pad = max(width - 3 - len(label), 0)
+        if r["state"] == "unread":
+            head = f"{UNREAD_BG}{arrow}● {label}{' ' * pad}{RESET}"
+        else:
+            color = C["grey"] if r["state"] == "stopped" else ("\x1b[1m" if r["cur"] else "")
+            head = f"{color}{arrow}{glyph(r, frame)}\x1b[39m {label}{RESET}"
+        lines.append((head, i))
+        for n, (m, title) in enumerate(chats(r["path"], CHATS_CUR if r["cur"] else CHATS_OTHER)):
+            a = age(m)
+            room = width - 7 - len(a)
+            # the newest chat is the one the worktree's agent is working in
+            mark = f"{C['yellow']}{SPINNER[frame % 4]}" if n == 0 and r["state"] == "running" else (
+                f"{C['red']}▲" if n == 0 and r["state"] == "input" else f"{C['grey']}·")
+            lines.append((f"{C['dim']}   {mark}{C['dim']} {title[:room]:<{room}} {C['grey']}{a}{RESET}", i))
+    return lines
+
+
+def render(rows, sel, repo, width, height, frame):
+    out = ["\x1b[H", f"{C['blue']}\x1b[1m {repo[: width - 2]}{RESET}\x1b[K\r\n",
+           f"{C['grey']}{'─' * width}{RESET}\x1b[K\r\n"]
+    for text, idx in layout(rows, width, frame)[: height - 2]:
+        if idx == sel and idx is not None and "\x1b[48;" not in text:
+            text = CURSOR_BG + text.replace(RESET, RESET + CURSOR_BG) + RESET
+        out.append(text + "\x1b[K\r\n")
+    out.append("\x1b[J")
+    return "".join(out)
+
+
+def row_at(rows, y, width):
+    """Screen row (1-based) -> worktree row index (chat lines map to their worktree)."""
+    ls = layout(rows, width, 0)
+    return ls[y - 3][1] if 0 <= y - 3 < len(ls) else None
+
+
+def switch(name):
+    if not name:
+        return
+    own = tmux("display-message", "-p", "-t", PANE, "#{session_name}")
+    client = tmux("list-clients", "-t", own, "-F", "#{client_name}").splitlines()
+    cmd = ["switch-client", "-t", name]
+    if client:
+        cmd[1:1] = ["-c", client[0]]
+    tmux(*cmd)
+
+
+def main():
+    fd = sys.stdin.fileno()
+    old = termios.tcgetattr(fd)
+    tty.setcbreak(fd)
+    sys.stdout.write("\x1b[?25l\x1b[?1000h\x1b[?1006h\x1b[2J")
+    sel = 0
+    try:
+        while True:
+            own = tmux("display-message", "-p", "-t", PANE, "#{session_name}")
+            repo, rows = collect(own)
+            sel = min(sel, max(len(rows) - 1, 0))
+            size = os.get_terminal_size()
+            frame = int(time.time())
+            sys.stdout.write(render(rows, sel, repo, size.columns, size.lines, frame))
+            sys.stdout.flush()
+            if not select.select([fd], [], [], 1.0)[0]:
+                continue
+            data = os.read(fd, 64).decode(errors="ignore")
+            m = re.match(r"\x1b\[<(\d+);(\d+);(\d+)([Mm])", data)
+            if m:
+                if m.group(1) == "0" and m.group(4) == "M":
+                    idx = row_at(rows, int(m.group(3)), size.columns)
+                    if idx is not None:
+                        sel = idx
+                        switch(rows[idx]["name"])
+                continue
+            if data in ("j", "\x1b[B"):
+                sel = min(sel + 1, len(rows) - 1)
+            elif data in ("k", "\x1b[A"):
+                sel = max(sel - 1, 0)
+            elif data in ("\r", "\n") and rows:
+                switch(rows[sel]["name"])
+            elif data == "q":
+                subprocess.run([os.path.expanduser("~/.config/tmux/scripts/tmux-sidebar-toggle"), "off"])
+                return
+    finally:
+        sys.stdout.write("\x1b[?1000l\x1b[?1006l\x1b[?25h")
+        sys.stdout.flush()
+        termios.tcsetattr(fd, termios.TCSADRAIN, old)
+
+
+if __name__ == "__main__":
+    main()

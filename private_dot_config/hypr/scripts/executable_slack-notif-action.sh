@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Called by hyprpanel when a Slack notification action is clicked.
 #
 # Preferred path: open the slack:// deep link captured from Slack's browser.log
@@ -27,6 +28,15 @@ if [[ -f "$URL_FILE" ]]; then
     # workspace 4 itself. Do NOT also dispatch workspace/focus here, or it
     # switches to workspace 4 twice.
     xdg-open "$url" 2>>"$LOG"
+    # Safety net: if the activation token was ignored, Slack navigated but we
+    # stayed on the current workspace. Only then switch manually.
+    sleep 0.4
+    if [[ "$(hyprctl activewindow -j | jq -r '.class // ""')" != "slack" ]]; then
+        log "deeplink did not focus Slack, switching to workspace 4"
+        hl_workspace 4 2>>"$LOG"
+        sleep 0.15
+        hl_focus_window class:slack 2>>"$LOG"
+    fi
 else
     log "click notifId=$NOTIF_ID no deeplink, fallback EmitActionInvoked action=$ACTION_ID"
     busctl --user call org.freedesktop.Notifications /org/freedesktop/Notifications \
@@ -34,7 +44,7 @@ else
     # ActionInvoked-based activation is unreliable on Hyprland 0.55+, so bring
     # Slack into view manually for the fallback path only.
     sleep 0.3
-    hyprctl dispatch workspace 4 2>>"$LOG"
+    hl_workspace 4 2>>"$LOG"
     sleep 0.15
-    hyprctl dispatch focuswindow class:slack 2>>"$LOG"
+    hl_focus_window class:slack 2>>"$LOG"
 fi

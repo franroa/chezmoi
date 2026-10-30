@@ -1,0 +1,165 @@
+-- TODO: install FixCursorHold: https://github.com/nvim-neotest/neotest#introduction
+--
+--TODO: use lazyvim defaults
+
+return {
+  {
+    "vim-test/vim-test",
+    dependencies = {
+      -- which key integration
+      {
+        "folke/which-key.nvim",
+        opts = function(_, opts)
+          if require("lazyvim.util").has("noice.nvim") then
+            opts.spec[",t"] = { name = "+testing" }
+          end
+        end,
+      },
+    },
+    keys = {
+      { ",tc", "<cmd>TestClass<cr>",   desc = "Class" },
+      { ",tf", "<cmd>TestFile<cr>",    desc = "File" },
+      { ",tl", "<cmd>TestLast<cr>",    desc = "Last" },
+      { ",tn", "<cmd>TestNearest<cr>", desc = "Nearest" },
+      { ",ts", "<cmd>TestSuite<cr>",   desc = "Suite" },
+      { ",tv", "<cmd>TestVisit<cr>",   desc = "Visit" },
+    },
+    config = function()
+      vim.g["test#strategy"] = "neovim"
+      vim.g["test#neovim#term_position"] = "belowright"
+      vim.g["test#neovim#preserve_screen"] = 1
+      vim.g["test#python#runner"] = "pyunit" -- pytest
+    end,
+  },
+  {
+    "nvim-neotest/neotest",
+    keys = {
+      {
+        ",tNF",
+        "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>",
+        desc =
+        "Debug File"
+      },
+      {
+        ",tjn",
+        "<cmd>lua require('neotest').jump.next({ status = 'failed'})<cr>",
+        desc =
+        "Jumt to next failed test"
+      },
+      {
+        ",tjp",
+        "<cmd>lua require('neotest').jump.prev({ status = 'failed'})<cr>",
+        desc =
+        "Jump to previous failed test"
+      },
+      {
+        ",tNL",
+        "<cmd>lua require('neotest').run.run_last({strategy = 'dap'})<cr>",
+        desc =
+        "Debug Last"
+      },
+      { ",tNa", "<cmd>lua require('neotest').run.attach()<cr>",                desc = "Attach" },
+      { ",tNf", "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", desc = "File" },
+      { ",tNl", "<cmd>lua require('neotest').run.run_last()<cr>",              desc = "Last" },
+      {
+        ",tNn",
+        "<cmd>lua require('neotest').run.run()<cr>",
+        desc =
+        "Nearest"
+      },
+      {
+        ",tNN",
+        "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>",
+        desc =
+        "Debug Nearest"
+      },
+      { ",tNo", "<cmd>lua require('neotest').output.open({ enter = true })<cr>", desc = "Output" },
+      { ",tNs", "<cmd>lua require('neotest').run.stop()<cr>",                    desc = "Stop" },
+      {
+        ",tNS",
+        "<cmd>lua require('neotest').summary.toggle()<cr>",
+        desc =
+        "Summary"
+      },
+    },
+    dependencies = {
+      "vim-test/vim-test",
+      "nvim-neotest/neotest-python",
+      "nvim-neotest/neotest-plenary",
+      "nvim-neotest/neotest-vim-test",
+      "nvim-neotest/neotest-go",
+      "rouge8/neotest-rust",
+      "marilari88/neotest-vitest",
+    },
+    config = function()
+      local neotest_ns = vim.api.nvim_create_namespace("neotest")
+      vim.diagnostic.config({
+        virtual_text = {
+          format = function(diagnostic)
+            -- Replace newline and tab characters with space for more compact diagnostics
+            local message = diagnostic.message:gsub("\n", " "):gsub("\t", " "):gsub("%s+", " "):gsub("^%s+", "")
+            return message
+          end,
+        },
+      }, neotest_ns)
+      local opts = {
+        adapters = {
+          require "neotest-python" {
+            dap = { justMyCode = false },
+            runner = "unittest",
+          },
+          require "neotest-plenary",
+          require "neotest-vim-test" {
+            ignore_file_types = { "python", "vim", "lua" },
+          },
+          require "neotest-rust",
+          require "neotest-go" {
+            experimental = {
+              test_table = true,
+            },
+            args = { "-count=1", "-timeout=60s" }
+          },
+        },
+        status = {
+          virtual_text = true,
+          signs = true,
+        },
+        diagnostic = {
+          enabled = true,
+          severity = 1,
+        },
+        -- overseer.nvim
+        consumers = {
+          overseer = require "neotest.consumers.overseer",
+        },
+        overseer = {
+          enabled = true,
+          force_default = true,
+        },
+      }
+      require("neotest").setup(opts)
+    end,
+  },
+  {
+    "stevearc/overseer.nvim",
+    keys = {
+      { ",toR", "<cmd>OverseerRunCmd<cr>",       desc = "Run Command" },
+      { ",toa", "<cmd>OverseerTaskAction<cr>",   desc = "Task Action" },
+      { ",tob", "<cmd>OverseerBuild<cr>",        desc = "Build" },
+      { ",toc", "<cmd>OverseerClose<cr>",        desc = "Close" },
+      { ",tod", "<cmd>OverseerDeleteBundle<cr>", desc = "Delete Bundle" },
+      { ",tol", "<cmd>OverseerLoadBundle<cr>",   desc = "Load Bundle" },
+      { ",too", "<cmd>OverseerOpen<cr>",         desc = "Open" },
+      { ",toq", "<cmd>OverseerQuickAction<cr>",  desc = "Quick Action" },
+      { ",tor", "<cmd>OverseerRun<cr>",          desc = "Run" },
+      { ",tos", "<cmd>OverseerSaveBundle<cr>",   desc = "Save Bundle" },
+      { ",tot", "<cmd>OverseerToggle<cr>",       desc = "Toggle" },
+    },
+    config = true,
+  },
+  {
+    "andythigpen/nvim-coverage",
+    cmd = { "Coverage" },
+    config = true,
+  },
+}

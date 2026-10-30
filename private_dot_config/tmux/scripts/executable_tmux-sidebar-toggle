@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+# Toggle the repo-sessions sidebar pane (@role=sidebar) in the current window.
+#   toggle (default) | ensure (hook: follow the global on/off flag) | off
+#   focus <pane>     show only <pane> next to the sidebar (workspace-focus.sh)
+# Zoom would hide the sidebar, so while it is on every other pane is parked in a
+# hidden `_parked` window (id kept in the window option @parked_win) and the
+# window layout is saved in @sb_layout; closing the sidebar joins them back.
+mode="${1:-toggle}"
+flag=/tmp/.tmux-sidebar-on
+width=$(tmux show -gqv @sidebar_width); width=${width:-32}
+
+find_sb() { tmux list-panes -t "$1" -F '#{pane_id}|#{@role}' | awk -F'|' '$2=="sidebar"{print $1; exit}'; }
+alive() { [ -n "$1" ] && tmux display -p -t "$1" '#{window_id}' >/dev/null 2>&1; }
+
+# focus_only <window> <pane>: <pane> is the only non-sidebar pane left visible.
+focus_only() {
+  local win=$1 keep=$2 sb parked p
+  [ "$(tmux display -p -t "$win" '#{window_zoomed_flag}')" = 1 ] && tmux resize-pane -t "$win" -Z
+  sb=$(find_sb "$win")
+  parked=$(tmux show -wqv -t "$win" @parked_win)
+  if alive "$parked" && tmux list-panes -t "$parked" -F '#{pane_id}' | grep -qx "$keep"; then
+    tmux join-pane -d -h -s "$keep" -t "$sb"
+  fi
+  alive "$parked" || parked=
+  for p in $(tmux list-panes -t "$win" -F '#{pane_id}|#{@role}' | awk -F'|' '$2!="sidebar"{print $1}'); do
+    [ "$p" = "$keep" ] && continue
+    if alive "$parked"; then
+      tmux join-pane -d -s "$p" -t "$parked"
+    else
+      parked=$(tmux break-pane -d -P -F '#{window_id}' -n _parked -s "$p")
+    fi
+  done
+  [ -z "$parked" ] || tmux set-option -w -t "$win" @parked_win "$parked"
+  tmux resize-pane -t "$sb" -x "$width"
+}
+
+open() {
+  local win active pane
+  win=$(tmux display -p '#{window_id}')
+  [ "$(tmux display -p -t "$win" '#{window_zoomed_flag}')" = 1 ] && tmux resize-pane -t "$win" -Z
+  active=$(tmux display -p -t "$win" '#{pane_id}')
+  tmux set-option -w -t "$win" @sb_layout "$(tmux display -p -t "$win" '#{window_layout}')"
+  # pane order matters: select-layout assigns cells by pane index
+  tmux set-option -w -t "$win" @sb_order "$(tmux list-panes -t "$win" -F '#{pane_id}' | tr '\n' ' ')"
+  pane=$(tmux split-window -hbf -d -l "$width" -P -F '#{pane_id}' -t "$active" \
+    "$HOME/.config/tmux/scripts/tmux-sidebar")
+  tmux set-option -p -t "$pane" @role sidebar
+  focus_only "$win" "$active"
+}
+
+close() {
+  local win parked layout order keep prev p
+  win=$(tmux display -p -t "$1" '#{window_id}')  # resolve first: $1 may be our own pane
+  parked=$(tmux show -wqv -t "$win" @parked_win)
+  layout=$(tmux show -wqv -t "$win" @sb_layout)
+  order=$(tmux show -wqv -t "$win" @sb_order)
+  tmux kill-pane -t "$1"
+  keep=$(tmux list-panes -t "$win" -F '#{pane_id}' | head -1)
+  if alive "$parked"; then
+    # rejoin in the original order, then any stragglers; each pane goes after the
+    # previously joined one, or the order would come back reversed
+    prev=$keep
+    for p in $order $(tmux list-panes -t "$parked" -F '#{pane_id}' 2>/dev/null); do
+      alive "$parked" || break
+      tmux list-panes -t "$parked" -F '#{pane_id}' 2>/dev/null | grep -qx "$p" || continue
+      tmux join-pane -d -s "$p" -t "$prev"
+      tmux select-layout -t "$win" tiled  # make room, or the next join fails: pane too small
+      prev=$p
+    done
+  fi
+  [ -z "$layout" ] || tmux select-layout -t "$win" "$layout" 2>/dev/null
+  tmux set-option -w -u -t "$win" @parked_win
+  tmux set-option -w -u -t "$win" @sb_layout
+  tmux set-option -w -u -t "$win" @sb_order
+  # restore the usual zoomed workspace view
+  [ "$(tmux display -p -t "$win" '#{window_zoomed_flag}')" = 1 ] || tmux resize-pane -t "$win" -Z
+}
+
+cur=$(tmux display -p '#{window_id}')
+sb=$(find_sb "$cur")
+case "$mode" in
+  toggle)
+    if [ -n "$sb" ]; then rm -f "$flag"; close "$sb"; else touch "$flag"; open; fi ;;
+  off)
+    rm -f "$flag"; [ -z "$sb" ] || close "$sb" ;;
+  focus)
+    [ -z "$sb" ] || focus_only "$cur" "$2" ;;
+  ensure)
+    name=$(tmux display -p '#{session_name}')
+    case "$name" in __tmux__jot_*|scratch-*|[0-9]*) exit 0 ;; esac
+    if [ -f "$flag" ]; then [ -n "$sb" ] || open
+    elif [ -n "$sb" ]; then close "$sb"; fi ;;
+esac
+tmux refresh-client -S

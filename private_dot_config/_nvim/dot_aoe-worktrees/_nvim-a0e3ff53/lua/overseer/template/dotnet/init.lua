@@ -1,0 +1,1 @@
+return { "build", "restore", "secrets" }

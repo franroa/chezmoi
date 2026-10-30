@@ -1,4 +1,5 @@
 #!/bin/bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Called by hyprpanel when a Claude Code notification action button is clicked.
 #
 # The action id carries the focus target encoded as base64 (see
@@ -84,10 +85,10 @@ find_terminal_pid() {
 focus_hypr_addr() {
   local addr="$1"
   [ -z "$addr" ] && return 1
-  hyprctl keyword animations:enabled 0 >/dev/null 2>&1
-  hyprctl dispatch focuswindow "address:${addr}" >>/tmp/notify-debug.log 2>&1
+  hl_config '{ animations = { enabled = false } }' >/dev/null 2>&1
+  hl_focus_window "address:${addr}" >>/tmp/notify-debug.log 2>&1
   local rc=$?
-  hyprctl keyword animations:enabled 1 >/dev/null 2>&1
+  hl_config '{ animations = { enabled = true } }' >/dev/null 2>&1
   return $rc
 }
 
@@ -132,7 +133,7 @@ fi
 if focus_hypr_addr "$win_address"; then
   log "focused by sent addr=$win_address"
 elif [ -n "$workspace_info" ]; then
-  hyprctl dispatch workspace "$workspace_info" >>/tmp/notify-debug.log 2>&1
+  hl_workspace "$workspace_info" >>/tmp/notify-debug.log 2>&1
   log "switched to workspace=$workspace_info"
 else
   log "no focus target available"

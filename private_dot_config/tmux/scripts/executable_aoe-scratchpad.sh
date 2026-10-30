@@ -5,7 +5,9 @@
 # Bound to a tmux popup (prefix-A -> O). The popup is a small dialog: pick the
 # AOE profile (workspace), enter a name, and it ensures the scratch session
 # titled "SP-<name>" exists and is running in that profile (creating it on first
-# use), then switches the client that opened the popup into that session and
+# use). Leave the name empty to always get a new "SP-<hash>" session, so you can
+# open as many throwaway scratchpads as you like. It then switches the client
+# that opened the popup into that session and
 # exits (so the popup closes onto the now-focused session). The parent client is
 # handed in via TMUX_PARENT_CLIENT (-e in the binding); without it we just leave
 # the session running and print a notice.
@@ -14,23 +16,30 @@
 # only ever explicit via `aoe rm`; the docs default to wiping the scratch dir
 # then, so use `aoe rm --keep-scratch` if you ever want to delete the session
 # but keep its files. See https://www.agent-of-empires.com/guides/scratch-sessions/
+#
+# Claude runs as `claude --dangerously-skip-permissions` (-y) through
+# claude-then-shell.sh (--cmd-override), so exiting claude leaves a shell in the
+# scratch dir instead of a dead pane.
 set -u
 
 AOE=/home/linuxbrew/.linuxbrew/bin/aoe
 command -v aoe >/dev/null 2>&1 && AOE=aoe
 
 PREFIX="SP-"
+AGENT_WRAPPER="$HOME/.config/tmux/scripts/claude-then-shell.sh"
 
 die() { echo "aoe-scratchpad: $*" >&2; sleep 1.5; exit 1; }
 
 # Pick the AOE profile (workspace). The default profile is listed first so it's
 # the pre-selected fzf row. With a single profile we skip the picker. Scoping
 # everything below to the chosen profile is just a matter of exporting the env
-# var that every `aoe` subcommand reads.
-mapfile -t PROFILES < <("$AOE" profile list 2>/dev/null \
-    | grep -E '^[[:space:]]+' \
-    | sed -E 's/^[[:space:]]*\*?[[:space:]]*//; s/ \(default\)//; s/[[:space:]]+$//' \
-    | sed '/^$/d')
+# var that every `aoe` subcommand reads. Profile names come straight from disk
+# (profiles/<name>/), not from parsing `aoe profile list`, whose format changes
+# between aoe releases (see aoe-profile-session.sh).
+PROFILES_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/agent-of-empires/profiles"
+[[ -d "$PROFILES_DIR" ]] || PROFILES_DIR="$HOME/.agent-of-empires/profiles"
+mapfile -t PROFILES < <(find "$PROFILES_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' 2>/dev/null \
+    | sort | awk '$0 == "default" { print; next } { rest[++n] = $0 } END { for (i = 1; i <= n; i++) print rest[i] }')
 
 PROFILE=""
 if [[ ${#PROFILES[@]} -gt 1 ]]; then
@@ -50,9 +59,10 @@ fi
 [[ -n "$PROFILE" ]] && export AGENT_OF_EMPIRES_PROFILE="$PROFILE"
 
 # Prompt for the suffix; the popup gives us an interactive TTY. The "SP-" prefix
-# is shown inline so you only type the rest. Empty input (or Ctrl-C) cancels.
+# is shown inline so you only type the rest. Empty input means a new random
+# "SP-<hash>" session; Ctrl-C cancels.
 printf '\n  AOE scratchpad%s\n\n' "${PROFILE:+ [$PROFILE]}"
-read -e -r -p "  session name: ${PREFIX}" NAME || exit 0
+read -e -r -p "  session name (empty = new random): ${PREFIX}" NAME || exit 0
 
 # Normalise to the characters aoe keeps verbatim in the tmux session name
 # (aoe turns e.g. spaces into underscores). Doing it up front means the aoe
@@ -61,7 +71,7 @@ read -e -r -p "  session name: ${PREFIX}" NAME || exit 0
 # same session instead of spawning a duplicate. Runs of other chars collapse to
 # a single underscore; leading/trailing underscores are trimmed.
 NAME=$(printf '%s' "$NAME" | sed -E 's/[^A-Za-z0-9_-]+/_/g; s/^_+//; s/_+$//')
-[[ -z "$NAME" ]] && exit 0
+[[ -z "$NAME" ]] && NAME=$(od -An -N4 -tx1 /dev/urandom | tr -d ' \n')
 
 TITLE="${PREFIX}${NAME}"
 
@@ -77,7 +87,7 @@ ID=$(find_id)
 # Not there yet -- create the named scratch session.
 if [[ -z "$ID" ]]; then
     echo "  creating ${TITLE} ..."
-    "$AOE" add --scratch -t "$TITLE" >/dev/null || die "failed to create ${TITLE}"
+    "$AOE" add --scratch -t "$TITLE" -y --cmd-override "$AGENT_WRAPPER" >/dev/null || die "failed to create ${TITLE}"
     ID=$(find_id)
     [[ -z "$ID" ]] && die "scratch session ${TITLE} created but not found"
 fi

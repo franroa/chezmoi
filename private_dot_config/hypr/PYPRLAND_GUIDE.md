@@ -33,8 +33,8 @@ All bindings use SUPER (Windows key) as $mainMod:
 
 Add to your startup applications:
 ```bash
-# In your hyprland.conf or autostart:
-exec-once = pypr
+# In lua/autostart.lua:
+hl.exec_cmd("pypr")
 ```
 
 ## Managing Pyprland
@@ -149,7 +149,7 @@ pypr dumpjson  # Check if config loads correctly
 ## Files Modified
 
 - `~/.config/hypr/pyprland.toml` - Main configuration
-- `~/.config/hypr/UserConfigs/UserKeybinds.conf` - Keyboard bindings
+- `~/.config/hypr/lua/binds.lua` - Keyboard bindings
 
 ## Resources
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 SCRATCH_CLASS="random-scratch"
 
 WINDOW=$(hyprctl clients -j 2>/dev/null | jq -r ".[] | select(.class == \"$SCRATCH_CLASS\")" 2>/dev/null)
@@ -12,8 +13,8 @@ ADDR=$(echo "$WINDOW" | jq -r '.address')
 WS=$(echo "$WINDOW" | jq -r '.workspace.id')
 
 if [ "$WS" = "99" ]; then
-    hyprctl dispatch movetoworkspacesilent "e+0,address:$ADDR"
-    hyprctl dispatch focuswindow "address:$ADDR"
+    hl_move_window_silent "$(hl_current_ws)" "address:$ADDR"
+    hl_focus_window "address:$ADDR"
 else
-    hyprctl dispatch movetoworkspacesilent "99,address:$ADDR"
+    hl_move_window_silent "99" "address:$ADDR"
 fi

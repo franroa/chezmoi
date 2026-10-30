@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$HOME/.config/hypr/scripts/hypr-lua.sh"
 # Toggle the morning-digest scratchpad (show/hide), modeled on toggle-jira.sh.
 # Opens a floating foot window showing the last-sent digest + today's Google
 # Calendar agenda (digest-window.sh). Bound to Alt+4 and to the "Open" button on
@@ -18,9 +19,9 @@ WS=$(echo "$WINDOW" | jq -r '.workspace.id')
 
 if [ "$WS" = "99" ]; then
     # Hidden on ws 99 - bring to current workspace and focus.
-    hyprctl dispatch movetoworkspacesilent "e+0,address:$ADDR"
-    hyprctl dispatch focuswindow "address:$ADDR"
+    hl_move_window_silent "$(hl_current_ws)" "address:$ADDR"
+    hl_focus_window "address:$ADDR"
 else
     # Visible - hide to ws 99.
-    hyprctl dispatch movetoworkspacesilent "99,address:$ADDR"
+    hl_move_window_silent "99" "address:$ADDR"
 fi

@@ -1,0 +1,18 @@
+return {
+  {
+    "Sharonex/grape.nvim",
+    lazy = false,
+    config = function()
+      require("grape").live_grep()
+    end,
+    keys = {
+      {
+        "<leader>sF",
+        function()
+          require("grape").live_grep()
+        end,
+        desc = "Fuzzy Search",
+      },
+    },
+  },
+}

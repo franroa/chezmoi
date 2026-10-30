@@ -19,6 +19,9 @@
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + g               │ Floating 80×80% scratch terminal at current path. Dismiss: exit or ctrl+d            │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
+  │ prefix + B               │ Toggle repo sessions sidebar: live first; ▲ input  ⠒ running  ○ idle  green row = unread │
+  │                          │ In sidebar: j/k move, Enter/click switch, q hide. Width: @sidebar_width (32)         │
+  ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + C-f             │ Sessionizer popup — fzf your projects → creates or switches to named session         │
   ├──────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────┤
   │ prefix + C-n             │ Snapshot picker — fzf restore/delete named tmux snapshots                            │
