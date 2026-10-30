@@ -230,25 +230,55 @@ function change_kubernetes_cluster_variable
             # set-option -p, NOT select-pane -P: select-pane also focuses the pane.
             tmux set-option -p -t $TMUX_PANE -u window-style
             tmux set-option -p -t $TMUX_PANE -u window-active-style
+            tmux set-option -p -t $TMUX_PANE -u @kube_color
         else
+            # same color as kube-switch.sh; status line follows the active pane's value
             tmux set-option -p -t $TMUX_PANE window-style "bg=$color"
             tmux set-option -p -t $TMUX_PANE window-active-style "bg=$color"
+            tmux set-option -p -t $TMUX_PANE @kube_color $color
         end
     else
         printf '\033]11;%s\007' $color
     end
+    change_tsyl_env_from_cluster $K8S_CLUSTER
+end
+
+# k8s-<domain>-<tier>-<region> or <domain>-<tier>-<region>, e.g.
+# k8s-technosylva-sandbox-ca01, platform-live-eu01
+# domain and sector are the same token (platform|technosylva)
+function change_tsyl_env_from_cluster
+    set -l parts (string match -r -- '^(?:k8s-)?([a-z]+)-(live|sandbox|test)-([a-z0-9]+)$' $argv[1])
+    if test (count $parts) -eq 4
+        set -gx TSYL_DOMAIN $parts[2]
+        set -gx TSYL_SECTOR $parts[2]
+        set -gx TSYL_TIER $parts[3]
+        set -gx TSYL_REGION $parts[4]
+    else
+        set -e TSYL_DOMAIN
+        set -e TSYL_SECTOR
+        set -e TSYL_TIER
+        set -e TSYL_REGION
+    end
+end
+
+# derive K8S_CLUSTER/K8S_NAMESPACE/TSYL_* from the KUBECONFIG this shell is using
+function __kube_apply
+    set -g __kube_seen_cfg $KUBECONFIG
+    change_kubernetes_cluster_variable
+    change_kubernetes_ns_variable
+    change_nvim_abbreviation
 end
 
 # C-b K in tmux re-links this session's kubeconfig and bumps this variable
 function __tmux_kube_sync --on-variable __tmux_kube_rev
     set -q TMUX; or return
+    # kubie shells own their KUBECONFIG; don't overwrite it with the tmux session's
+    set -q KUBIE_ACTIVE; and return
     # panes created before the first switch carry a stale KUBECONFIG: take the session's
     set -l kc (tmux show-environment KUBECONFIG 2>/dev/null | string replace -r '^KUBECONFIG=' '')
     string match -q -- "$HOME/.kube/tmux/*" "$kc"; or return
     set -gx KUBECONFIG $kc
-    change_kubernetes_cluster_variable
-    change_kubernetes_ns_variable
-    change_nvim_abbreviation
+    __kube_apply
 end
 
 function change_kubernetes_ns_variable
@@ -265,24 +295,19 @@ end
 #     source ~/secrets.fish
 # end
 
-function kubie
-    set -g IS_COMING_FROM_KUBIE TRUE
-    command kubie $argv
-end
 if status --is-interactive; and set -q TMUX
     set -g __tmux_kube_rev_init 1
 end
 
+# runs before every prompt; the kubectl calls only happen when KUBECONFIG changed
+# (kubie ctx/ns spawn or exit, C-b K), so entering or leaving a kubie shell is picked up
 function refresh_prompt --on-event fish_prompt
     if set -q __tmux_kube_rev_init
         set -e __tmux_kube_rev_init
         __tmux_kube_sync
     end
-    if test "$IS_COMING_FROM_KUBIE" = TRUE
-        set -g IS_COMING_FROM_KUBIE FALSE
-        change_kubernetes_cluster_variable
-        change_kubernetes_ns_variable
-        change_nvim_abbreviation
+    if not set -q __kube_seen_cfg; or test "$KUBECONFIG" != "$__kube_seen_cfg"
+        __kube_apply
     end
 end
 #
