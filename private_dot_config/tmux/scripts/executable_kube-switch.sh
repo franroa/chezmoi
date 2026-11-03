@@ -25,6 +25,8 @@ if [ -z "$cluster" ]; then
   for w in $(tmux list-windows -t "$target" -F '#{window_id}'); do
     tmux set-option -wu -t "$w" window-style
     tmux set-option -wu -t "$w" window-active-style
+    tmux set-option -wu -t "$w" popup-style
+    tmux set-option -wu -t "$w" popup-border-style
   done
   for p in $(tmux list-panes -t "$target" -s -F '#{pane_id}'); do
     tmux set-option -pu -t "$p" window-style
@@ -57,6 +59,9 @@ color=$("$HOME/.config/tmux/scripts/kube-color.sh" "$cluster")
 for w in $(tmux list-windows -t "$target" -F '#{window_id}'); do
   tmux set-option -w -t "$w" window-style "bg=$color"
   tmux set-option -w -t "$w" window-active-style "bg=$color"
+  # popup-style doesn't expand formats, so it is set per window like window-style
+  tmux set-option -w -t "$w" popup-style "bg=$color"
+  tmux set-option -w -t "$w" popup-border-style "bg=$color"
 done
 # status line follows the cluster color too: the global status-style (workspace.conf)
 # reads @kube_color. Not a per-session status-style, because `aoe session start`
@@ -83,7 +88,7 @@ fi
 runtime="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 panes=" $(tmux list-panes -t "$target" -s -F '#{pane_id}' | tr '\n' ' ') "
 lua_env="'K8S_CLUSTER': '$cluster', 'K8S_NAMESPACE': '$ns', 'KUBECONFIG': '$link', 'TSYL_DOMAIN': '$tsyl_domain', 'TSYL_SECTOR': '$tsyl_domain', 'TSYL_TIER': '$tsyl_tier', 'TSYL_REGION': '$tsyl_region'"
-nvim_expr="luaeval(\"(function(t) for k, v in pairs(t) do if v == '' then vim.env[k] = nil else vim.env[k] = v end end end)(_A)\", {$lua_env})"
+nvim_expr="luaeval(\"(function(t) for k, v in pairs(t) do if v == '' then vim.env[k] = nil else vim.env[k] = v end end vim.api.nvim_exec_autocmds('User', { pattern = 'KubeClusterChanged' }) end)(_A)\", {$lua_env})"
 for sock in "$runtime"/nvim.*.0; do
   [ -S "$sock" ] || continue
   pid=${sock##*/nvim.}; pid=${pid%.0}

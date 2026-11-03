@@ -1,0 +1,21 @@
+name: azure
+version: 1.1.39
+description: Microsoft Azure MCP and Skills integration for cloud resource management,
+  deployments, and Azure services. Manage your Azure infrastructure, monitor applications,
+  and deploy resources directly from your development environment.
+author: Microsoft
+license: MIT
+repository: https://github.com/microsoft/azure-skills
+homepage: https://github.com/microsoft/azure-skills
+dependencies:
+  mcp:
+  - name: azure
+    registry: false
+    transport: stdio
+    command: npx
+    args:
+    - -y
+    - '@azure/mcp@latest'
+    - server
+    - start
+type: hybrid

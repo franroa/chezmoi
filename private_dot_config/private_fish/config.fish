@@ -233,6 +233,7 @@ function change_kubernetes_cluster_variable
             tmux set-option -p -t $TMUX_PANE -u window-style
             tmux set-option -p -t $TMUX_PANE -u window-active-style
             tmux set-option -p -t $TMUX_PANE -u @kube_color
+            ~/.config/tmux/scripts/popup-sync.sh $TMUX_PANE
         else
             printf '\033]111\007' # reset to the terminal's own background
         end
@@ -255,6 +256,7 @@ function change_kubernetes_cluster_variable
             tmux set-option -p -t $TMUX_PANE window-active-style "bg=$color"
             tmux set-option -p -t $TMUX_PANE @kube_color $color
         end
+        ~/.config/tmux/scripts/popup-sync.sh $TMUX_PANE
     else
         printf '\033]11;%s\007' $color
     end

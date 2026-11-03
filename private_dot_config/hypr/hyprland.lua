@@ -3,6 +3,7 @@
 
 require("lua.env")
 require("monitors")      -- written by nwg-displays
+require("lua.monitor-quirks") -- Acer VG270K modeset-loop recovery (nwg-displays-safe)
 require("workspaces")    -- written by nwg-displays
 require("lua.settings")
 require("lua.decorations")

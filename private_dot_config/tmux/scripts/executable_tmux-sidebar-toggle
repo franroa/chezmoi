@@ -6,7 +6,8 @@
 # hidden `_parked` window (id kept in the window option @parked_win) and the
 # window layout is saved in @sb_layout; closing the sidebar joins them back.
 mode="${1:-toggle}"
-flag=/tmp/.tmux-sidebar-on
+# on/off lives in the server (not a /tmp file), so a restarted server starts with it off
+is_on() { [ "$(tmux show -gqv @sidebar_on)" = 1 ]; }
 width=$(tmux show -gqv @sidebar_width); width=${width:-32}
 
 find_sb() { tmux list-panes -t "$1" -F '#{pane_id}|#{@role}' | awk -F'|' '$2=="sidebar"{print $1; exit}'; }
@@ -80,15 +81,15 @@ cur=$(tmux display -p '#{window_id}')
 sb=$(find_sb "$cur")
 case "$mode" in
   toggle)
-    if [ -n "$sb" ]; then rm -f "$flag"; close "$sb"; else touch "$flag"; open; fi ;;
+    if [ -n "$sb" ]; then tmux set -gu @sidebar_on; close "$sb"; else tmux set -g @sidebar_on 1; open; fi ;;
   off)
-    rm -f "$flag"; [ -z "$sb" ] || close "$sb" ;;
+    tmux set -gu @sidebar_on; [ -z "$sb" ] || close "$sb" ;;
   focus)
     [ -z "$sb" ] || focus_only "$cur" "$2" ;;
   ensure)
     name=$(tmux display -p '#{session_name}')
     case "$name" in __tmux__jot_*|scratch-*|[0-9]*) exit 0 ;; esac
-    if [ -f "$flag" ]; then [ -n "$sb" ] || open
+    if is_on; then [ -n "$sb" ] || open
     elif [ -n "$sb" ]; then close "$sb"; fi ;;
 esac
 tmux refresh-client -S

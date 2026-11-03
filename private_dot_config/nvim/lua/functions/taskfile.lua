@@ -119,7 +119,11 @@ local function module_from_buffer(root, bufnr)
   return name:sub(#root + 2):match("^terraform/([^/]+)/")
 end
 
----Resolved var values for a root: stored > inferred module > Taskfile default.
+-- cluster env (config.fish / kube-switch.sh) for the vars that describe the cluster
+local CLUSTER_ENV = { SECTOR = "TSYL_SECTOR", DOMAIN = "TSYL_DOMAIN", TIER = "TSYL_TIER", REGION = "TSYL_REGION" }
+
+---Resolved var values for a root: cluster env > stored > Taskfile default, then the
+---inferred module. An env value is only used when it is one of the Taskfile's enum choices.
 function M.context(root, bufnr)
   local info = cache[root]
   local stored = read_state()[root] or {}
@@ -127,7 +131,12 @@ function M.context(root, bufnr)
   for _, name in ipairs(info.order) do
     local spec = info.vars[name]
     if spec.enum then
-      ctx[name] = stored[name] or spec.default
+      local from_env = CLUSTER_ENV[name] and vim.env[CLUSTER_ENV[name]]
+      if from_env and vim.tbl_contains(spec.enum, from_env) then
+        ctx[name] = from_env
+      else
+        ctx[name] = stored[name] or spec.default
+      end
     end
   end
   local mod = module_from_buffer(root, bufnr)
