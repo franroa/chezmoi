@@ -346,6 +346,9 @@ items:
   - name: +GitLab
     key: g
     menu:
+      - name: Open repo by slug
+        key: b
+        command: "command-prompt -p \"Repo slug:\" \"run-shell \\\"~/.config/tmux/scripts/glab-repo-open.sh %%\\\"\""
       - name: Open repo
         key: O
         command: "run-shell \"~/.config/tmux/scripts/glab-open.sh repo #{pane_current_path}\""

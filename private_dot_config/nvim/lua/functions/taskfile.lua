@@ -351,6 +351,44 @@ function M.run(name, opts)
   return task
 end
 
+local last_plan_vars = ""
+
+---`terraform plan -no-color <vars> -out=tfplan > plan.txt 2>&1` inside terraform/<module>.
+---Prompts for the extra args (e.g. `-var a=b -var c=d`), remembered for next time.
+function M.plan_file()
+  local root = M.root()
+  if not root then
+    return vim.notify("No Taskfile found", vim.log.levels.WARN)
+  end
+  local dir = M.module_dir(root, M.context(root))
+  if vim.fn.isdirectory(dir) == 0 then
+    return vim.notify("Module dir not found: " .. dir, vim.log.levels.WARN)
+  end
+  vim.ui.input({ prompt = "terraform plan args: ", default = last_plan_vars }, function(input)
+    if input == nil then
+      return
+    end
+    last_plan_vars = input
+    vim.cmd("silent! wall")
+    local cmd = "terraform plan -no-color " .. input .. " -out=tfplan > plan.txt 2>&1"
+    local task = require("overseer").new_task({
+      name = "terraform plan → plan.txt [" .. vim.fn.fnamemodify(dir, ":t") .. "]",
+      cmd = { "bash", "-c", cmd },
+      cwd = dir,
+      components = { "default", "unique" },
+    })
+    task:subscribe("on_complete", function(_, status)
+      vim.schedule(function()
+        local lvl = status == "SUCCESS" and vim.log.levels.INFO or vim.log.levels.ERROR
+        vim.notify("terraform plan " .. status:lower() .. " → " .. dir .. "/plan.txt", lvl)
+      end)
+      return true
+    end)
+    task:start()
+    open(task, "list")
+  end)
+end
+
 ---Picker with every target of the Taskfile (including included namespaces).
 function M.pick()
   local root, taskfile = M.root()

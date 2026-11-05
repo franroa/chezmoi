@@ -345,6 +345,9 @@ menu:
       - key: "T"
         desc: "󰍁 Touchpad Toggle"
         cmd: ~/.config/hyprpanel/scripts/touchpad-toggle.sh toggle
+      - key: "9"
+        desc: "󰎠 Workspace 99"
+        cmd: "hyprctl dispatch 'hl.dsp.focus({ workspace = 99 })'"
       - key: "p"
         desc: "󱃾 +platform-live"
         submenu:

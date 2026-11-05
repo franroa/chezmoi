@@ -20,6 +20,7 @@ return {
       { "<leader>or", function() require("functions.taskfile").restart_last() end, desc = "Restart last task" },
       { "<leader>op", function() require("functions.taskfile").pick() end, desc = "Pick Taskfile target" },
       { "<leader>oc", function() require("functions.taskfile").edit_context() end, desc = "Taskfile context (module/region/tier...)" },
+      { "<leader>ot", function() require("functions.taskfile").plan_file() end, desc = "terraform plan -out=tfplan > plan.txt" },
       { "<leader>oC", function() require("functions.taskfile").show_context() end, desc = "Show Taskfile context" },
 
       { "<leader>oht", function() require("functions.helm").template() end, desc = "Template (render to buffer)" },

@@ -86,7 +86,7 @@ function aoen --description "Interactive Jira-API integrated branch creator for 
     echo "🚀 Spawning local isolated environment..."
 
     # 6. Crear el entorno en aoe usando el nombre corto (así no lleva prefijos ni textos largos)
-    aoe add . -w "$session_name" -b
+    aoe add . -w "$session_name" -b --extra-args "--advisor opus"
 
     # 7. MAPEO MÁGICO DE GIT: Forzar a que esta rama local apunte a la rama remota larga
     set -l worktree_path ".aoe-worktrees/$session_name"
